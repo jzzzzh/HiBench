@@ -523,7 +523,7 @@ HiBench includes a range of tasks from basic to advanced levels, specifically co
 - The Fundamental Tasks of Hibench are mainly undertaken by [_Pangjing Wu_](https://github.com/Pangjing-Wu) and _Ziran Liang_.
 - The Code Programming Task and JSON Task are mainly undertaken by _Qi Chen_ and _Ye Jia_.
 - The Paper Task is mainly undertaken by _Xu Yuan_.
-- The Formula Task is mainly undertaken by _Jianchen Tu_.
+- The Formula Task is mainly undertaken by _Jiancheng Tu_.
 
 ## Acknowledge
 We sincerely appreciate [Prof. Hongxia Yang](https://scholar.google.com/citations?user=iJlC5mMAAAAJ&hl=en) for her constructive directions and suggestions.
