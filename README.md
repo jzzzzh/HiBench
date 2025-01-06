@@ -60,14 +60,7 @@ HiBench includes a range of tasks from basic to advanced levels, specifically co
 
 <div align="center">
 <p style="font-size: 1.2em;"><strong>Table 1: </strong>LLM Performance over Fundamental Tasks in HiBench.</p>
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
-</style>
+
 <table class="tg"><thead>
   <tr>
     <th class="tg-c3ow">Model Family</th>
@@ -243,14 +236,7 @@ HiBench includes a range of tasks from basic to advanced levels, specifically co
 </tbody></table>
 <br>
 <p style="font-size: 1.2em;"><strong>Table 2: </strong>LLM Performance over Intermediate Tasks in HiBench.</p>
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
-</style>
+
 <table class="tg"><thead>
   <tr>
     <th class="tg-c3ow" rowspan="2">Model Family</th>
@@ -409,14 +395,7 @@ HiBench includes a range of tasks from basic to advanced levels, specifically co
 
 <br>
 <p style="font-size: 1.2em;"><strong>Table 3: </strong>LLM Performance over Practical Tasks in HiBench</p>
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
-</style>
+
 <table class="tg"><thead>
   <tr>
     <th class="tg-c3ow" rowspan="2">Model Family</th>
