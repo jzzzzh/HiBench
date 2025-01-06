@@ -518,7 +518,7 @@ HiBench includes a range of tasks from basic to advanced levels, specifically co
 
 ## About
 ☑️About the Developers:
-- All developers of Hibench are PhD students of The Hong Kong Polytechnic University 🇭🇰.  
+- All developers of Hibench are PhD/MPhil students of The Hong Kong Polytechnic University 🇭🇰.  
 - Hibench's codebase designer is [_Zhuohang Jiang_](https://github.com/jzzzzh).
 - The Fundamental Tasks of Hibench are mainly undertaken by [_Pangjing Wu_](https://github.com/Pangjing-Wu) and _Ziran Liang_.
 - The Code Programming Task and JSON Task are mainly undertaken by _Qi Chen_ and _Ye Jia_.
