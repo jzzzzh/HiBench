@@ -433,6 +433,16 @@ class HibenchDataLoder(TemplateDataLoader):
             self.data_loader = PaperDataLoder(args)
     def load_data(self):
         return self.data_loader.load_data()
-
+    def save_data(self, data, model_name, args):
+        Task_name = args['Task']
+        SubTask_name = args['SubTask']
+        Save_dir = os.path.join(self.config["Eval"]["SaveDir"], Task_name, SubTask_name, model_name)
+        os.makedirs(Save_dir, exist_ok=True)
+        json_name = '_'.join([f"{key}_{value}" for key, value in args.items()])
+        file_name = f"{json_name}.json"
+        with open(os.path.join(Save_dir, file_name), 'w') as file:
+            json.dump(data, file)
+ 
+        
 if __name__ == '__main__':
     print("This is dataloader.py")
