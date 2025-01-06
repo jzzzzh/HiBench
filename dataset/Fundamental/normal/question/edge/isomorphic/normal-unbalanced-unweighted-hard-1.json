@@ -1,0 +1,506 @@
+[
+    {
+        "question": [
+            {
+                "role": "system",
+                "content": "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
+            },
+            {
+                "role": "user",
+                "content": "Given the hierarchical structure 2 -> 3, 2 -> 1, 2 -> 0 and another hierarchical structure: No edges, please decide whether the given two trees are isomorphic or not. Please return the answer in JSON format directly like {\"answer\": true} or {\"answer\": false} and do not feedback the detailed process."
+            }
+        ],
+        "ref_ans": false,
+        "structure_id": 0
+    },
+    {
+        "question": [
+            {
+                "role": "system",
+                "content": "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
+            },
+            {
+                "role": "user",
+                "content": "Given the hierarchical structure 2 -> 1, 2 -> 3, 2 -> 0 and another hierarchical structure: 2 -(28)-> 1, 2 -(12)-> 3, 2 -(7)-> 0, please decide whether the given two trees are isomorphic or not. Please return the answer in JSON format directly like {\"answer\": true} or {\"answer\": false} and do not feedback the detailed process."
+            }
+        ],
+        "ref_ans": true,
+        "structure_id": 1
+    },
+    {
+        "question": [
+            {
+                "role": "system",
+                "content": "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
+            },
+            {
+                "role": "user",
+                "content": "Given the hierarchical structure 0 -> 2, 0 -> 3, 0 -> 1 and another hierarchical structure: 0 -(11)-> 2, 0 -(19)-> 3, 0 -(10)-> 1, please decide whether the given two trees are isomorphic or not. Please return the answer in JSON format directly like {\"answer\": true} or {\"answer\": false} and do not feedback the detailed process."
+            }
+        ],
+        "ref_ans": true,
+        "structure_id": 2
+    },
+    {
+        "question": [
+            {
+                "role": "system",
+                "content": "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
+            },
+            {
+                "role": "user",
+                "content": "Given the hierarchical structure 1 -> 4, 1 -> 3, 1 -> 2, 1 -> 0 and another hierarchical structure: 1 -(27)-> 4, 1 -(26)-> 3, 1 -(23)-> 2, 1 -(16)-> 0, please decide whether the given two trees are isomorphic or not. Please return the answer in JSON format directly like {\"answer\": true} or {\"answer\": false} and do not feedback the detailed process."
+            }
+        ],
+        "ref_ans": true,
+        "structure_id": 3
+    },
+    {
+        "question": [
+            {
+                "role": "system",
+                "content": "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
+            },
+            {
+                "role": "user",
+                "content": "Given the hierarchical structure 3 -> 2, 3 -> 0, 3 -> 4, 3 -> 1 and another hierarchical structure: 3 -(21)-> 2, 3 -(10)-> 0, 3 -(6)-> 4, 3 -(23)-> 1, please decide whether the given two trees are isomorphic or not. Please return the answer in JSON format directly like {\"answer\": true} or {\"answer\": false} and do not feedback the detailed process."
+            }
+        ],
+        "ref_ans": true,
+        "structure_id": 4
+    },
+    {
+        "question": [
+            {
+                "role": "system",
+                "content": "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
+            },
+            {
+                "role": "user",
+                "content": "Given the hierarchical structure 2 -> 1, 2 -> 4, 2 -> 3, 2 -> 0 and another hierarchical structure: 2 -(12)-> 1, 2 -(22)-> 4, 2 -(3)-> 3, 2 -(7)-> 0, please decide whether the given two trees are isomorphic or not. Please return the answer in JSON format directly like {\"answer\": true} or {\"answer\": false} and do not feedback the detailed process."
+            }
+        ],
+        "ref_ans": true,
+        "structure_id": 5
+    },
+    {
+        "question": [
+            {
+                "role": "system",
+                "content": "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
+            },
+            {
+                "role": "user",
+                "content": "Given the hierarchical structure 4 -> 3, 4 -> 2, 4 -> 0, 4 -> 5, 4 -> 1 and another hierarchical structure: 4 -(25)-> 3, 4 -(17)-> 2, 4 -(20)-> 0, 4 -(1)-> 5, 4 -(29)-> 1, please decide whether the given two trees are isomorphic or not. Please return the answer in JSON format directly like {\"answer\": true} or {\"answer\": false} and do not feedback the detailed process."
+            }
+        ],
+        "ref_ans": true,
+        "structure_id": 6
+    },
+    {
+        "question": [
+            {
+                "role": "system",
+                "content": "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
+            },
+            {
+                "role": "user",
+                "content": "Given the hierarchical structure 4 -> 1, 4 -> 2, 4 -> 0, 4 -> 5, 4 -> 3 and another hierarchical structure: No edges, please decide whether the given two trees are isomorphic or not. Please return the answer in JSON format directly like {\"answer\": true} or {\"answer\": false} and do not feedback the detailed process."
+            }
+        ],
+        "ref_ans": false,
+        "structure_id": 7
+    },
+    {
+        "question": [
+            {
+                "role": "system",
+                "content": "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
+            },
+            {
+                "role": "user",
+                "content": "Given the hierarchical structure 1 -> 4, 1 -> 2, 1 -> 3, 1 -> 5, 1 -> 0 and another hierarchical structure: 1 -(15)-> 4, 1 -(2)-> 2, 1 -(6)-> 3, 1 -(10)-> 5, 1 -(28)-> 0, please decide whether the given two trees are isomorphic or not. Please return the answer in JSON format directly like {\"answer\": true} or {\"answer\": false} and do not feedback the detailed process."
+            }
+        ],
+        "ref_ans": true,
+        "structure_id": 8
+    },
+    {
+        "question": [
+            {
+                "role": "system",
+                "content": "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
+            },
+            {
+                "role": "user",
+                "content": "Given the hierarchical structure 2 -> 1, 2 -> 0 and another hierarchical structure: No edges, please decide whether the given two trees are isomorphic or not. Please return the answer in JSON format directly like {\"answer\": true} or {\"answer\": false} and do not feedback the detailed process."
+            }
+        ],
+        "ref_ans": false,
+        "structure_id": 9
+    },
+    {
+        "question": [
+            {
+                "role": "system",
+                "content": "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
+            },
+            {
+                "role": "user",
+                "content": "Given the hierarchical structure 2 -> 1, 2 -> 0 and another hierarchical structure: No edges, please decide whether the given two trees are isomorphic or not. Please return the answer in JSON format directly like {\"answer\": true} or {\"answer\": false} and do not feedback the detailed process."
+            }
+        ],
+        "ref_ans": false,
+        "structure_id": 10
+    },
+    {
+        "question": [
+            {
+                "role": "system",
+                "content": "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
+            },
+            {
+                "role": "user",
+                "content": "Given the hierarchical structure 1 -> 2, 1 -> 0 and another hierarchical structure: No edges, please decide whether the given two trees are isomorphic or not. Please return the answer in JSON format directly like {\"answer\": true} or {\"answer\": false} and do not feedback the detailed process."
+            }
+        ],
+        "ref_ans": false,
+        "structure_id": 11
+    },
+    {
+        "question": [
+            {
+                "role": "system",
+                "content": "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
+            },
+            {
+                "role": "user",
+                "content": "Given the hierarchical structure 3 -> 2, 3 -> 1, 3 -> 0 and another hierarchical structure: 3 -(16)-> 2, 3 -(26)-> 1, 3 -(29)-> 0, please decide whether the given two trees are isomorphic or not. Please return the answer in JSON format directly like {\"answer\": true} or {\"answer\": false} and do not feedback the detailed process."
+            }
+        ],
+        "ref_ans": true,
+        "structure_id": 12
+    },
+    {
+        "question": [
+            {
+                "role": "system",
+                "content": "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
+            },
+            {
+                "role": "user",
+                "content": "Given the hierarchical structure 1 -> 3, 1 -> 0, 1 -> 2 and another hierarchical structure: 1 -(28)-> 3, 1 -(9)-> 0, 1 -(10)-> 2, please decide whether the given two trees are isomorphic or not. Please return the answer in JSON format directly like {\"answer\": true} or {\"answer\": false} and do not feedback the detailed process."
+            }
+        ],
+        "ref_ans": true,
+        "structure_id": 13
+    },
+    {
+        "question": [
+            {
+                "role": "system",
+                "content": "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
+            },
+            {
+                "role": "user",
+                "content": "Given the hierarchical structure 1 -> 2, 1 -> 0, 1 -> 3 and another hierarchical structure: 1 -(24)-> 2, 1 -(1)-> 0, 1 -(18)-> 3, please decide whether the given two trees are isomorphic or not. Please return the answer in JSON format directly like {\"answer\": true} or {\"answer\": false} and do not feedback the detailed process."
+            }
+        ],
+        "ref_ans": true,
+        "structure_id": 14
+    },
+    {
+        "question": [
+            {
+                "role": "system",
+                "content": "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
+            },
+            {
+                "role": "user",
+                "content": "Given the hierarchical structure 0 -> 4, 0 -> 3, 0 -> 2, 0 -> 1 and another hierarchical structure: 0 -(5)-> 4, 0 -(1)-> 3, 0 -(18)-> 2, 0 -(24)-> 1, please decide whether the given two trees are isomorphic or not. Please return the answer in JSON format directly like {\"answer\": true} or {\"answer\": false} and do not feedback the detailed process."
+            }
+        ],
+        "ref_ans": true,
+        "structure_id": 15
+    },
+    {
+        "question": [
+            {
+                "role": "system",
+                "content": "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
+            },
+            {
+                "role": "user",
+                "content": "Given the hierarchical structure 0 -> 1, 0 -> 2, 0 -> 4, 0 -> 3 and another hierarchical structure: 0 -(5)-> 1, 0 -(21)-> 4, please decide whether the given two trees are isomorphic or not. Please return the answer in JSON format directly like {\"answer\": true} or {\"answer\": false} and do not feedback the detailed process."
+            }
+        ],
+        "ref_ans": false,
+        "structure_id": 16
+    },
+    {
+        "question": [
+            {
+                "role": "system",
+                "content": "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
+            },
+            {
+                "role": "user",
+                "content": "Given the hierarchical structure 4 -> 0, 4 -> 3, 4 -> 2, 4 -> 1 and another hierarchical structure: 4 -(29)-> 0, 4 -(21)-> 2, 4 -(14)-> 1, please decide whether the given two trees are isomorphic or not. Please return the answer in JSON format directly like {\"answer\": true} or {\"answer\": false} and do not feedback the detailed process."
+            }
+        ],
+        "ref_ans": false,
+        "structure_id": 17
+    },
+    {
+        "question": [
+            {
+                "role": "system",
+                "content": "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
+            },
+            {
+                "role": "user",
+                "content": "Given the hierarchical structure 1 -> 3, 3 -> 2, 1 -> 5, 5 -> 4, 5 -> 6, 5 -> 0 and another hierarchical structure: 1 -(17)-> 3, 3 -(9)-> 2, 1 -(20)-> 5, 5 -(5)-> 4, 5 -(24)-> 6, 5 -(23)-> 0, please decide whether the given two trees are isomorphic or not. Please return the answer in JSON format directly like {\"answer\": true} or {\"answer\": false} and do not feedback the detailed process."
+            }
+        ],
+        "ref_ans": true,
+        "structure_id": 18
+    },
+    {
+        "question": [
+            {
+                "role": "system",
+                "content": "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
+            },
+            {
+                "role": "user",
+                "content": "Given the hierarchical structure 3 -> 1, 1 -> 0, 1 -> 4, 1 -> 5, 3 -> 2, 3 -> 6 and another hierarchical structure: No edges, please decide whether the given two trees are isomorphic or not. Please return the answer in JSON format directly like {\"answer\": true} or {\"answer\": false} and do not feedback the detailed process."
+            }
+        ],
+        "ref_ans": false,
+        "structure_id": 19
+    },
+    {
+        "question": [
+            {
+                "role": "system",
+                "content": "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
+            },
+            {
+                "role": "user",
+                "content": "Given the hierarchical structure 2 -> 0, 0 -> 6, 2 -> 1, 2 -> 3, 2 -> 5, 2 -> 4 and another hierarchical structure: 2 -(8)-> 0, 0 -(10)-> 6, 2 -(25)-> 1, 2 -(1)-> 3, 2 -(19)-> 5, 2 -(15)-> 4, please decide whether the given two trees are isomorphic or not. Please return the answer in JSON format directly like {\"answer\": true} or {\"answer\": false} and do not feedback the detailed process."
+            }
+        ],
+        "ref_ans": true,
+        "structure_id": 20
+    },
+    {
+        "question": [
+            {
+                "role": "system",
+                "content": "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
+            },
+            {
+                "role": "user",
+                "content": "Given the hierarchical structure 5 -> 3, 3 -> 7, 3 -> 4, 3 -> 6, 3 -> 8, 5 -> 2, 5 -> 1, 5 -> 0 and another hierarchical structure: 5 -(23)-> 3, 3 -(12)-> 7, 3 -(3)-> 4, 3 -(29)-> 6, 3 -(19)-> 8, 5 -(12)-> 2, 5 -(22)-> 0, please decide whether the given two trees are isomorphic or not. Please return the answer in JSON format directly like {\"answer\": true} or {\"answer\": false} and do not feedback the detailed process."
+            }
+        ],
+        "ref_ans": false,
+        "structure_id": 21
+    },
+    {
+        "question": [
+            {
+                "role": "system",
+                "content": "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
+            },
+            {
+                "role": "user",
+                "content": "Given the hierarchical structure 5 -> 8, 8 -> 1, 5 -> 0, 0 -> 7, 0 -> 3, 5 -> 4, 5 -> 2, 2 -> 6 and another hierarchical structure: 5 -(2)-> 8, 8 -(3)-> 1, 5 -(1)-> 0, 0 -(26)-> 7, 0 -(7)-> 3, 5 -(28)-> 4, 5 -(17)-> 2, 2 -(9)-> 6, please decide whether the given two trees are isomorphic or not. Please return the answer in JSON format directly like {\"answer\": true} or {\"answer\": false} and do not feedback the detailed process."
+            }
+        ],
+        "ref_ans": true,
+        "structure_id": 22
+    },
+    {
+        "question": [
+            {
+                "role": "system",
+                "content": "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
+            },
+            {
+                "role": "user",
+                "content": "Given the hierarchical structure 0 -> 3, 3 -> 4, 3 -> 6, 3 -> 5, 3 -> 1, 3 -> 8, 0 -> 2, 2 -> 7 and another hierarchical structure: 0 -(28)-> 2, 2 -(15)-> 7, please decide whether the given two trees are isomorphic or not. Please return the answer in JSON format directly like {\"answer\": true} or {\"answer\": false} and do not feedback the detailed process."
+            }
+        ],
+        "ref_ans": false,
+        "structure_id": 23
+    },
+    {
+        "question": [
+            {
+                "role": "system",
+                "content": "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
+            },
+            {
+                "role": "user",
+                "content": "Given the hierarchical structure 5 -> 2, 2 -> 1, 5 -> 8, 8 -> 11, 8 -> 12, 8 -> 17, 8 -> 13, 5 -> 23, 23 -> 0, 23 -> 19, 23 -> 22, 23 -> 14, 5 -> 3, 3 -> 4, 3 -> 16, 3 -> 10, 3 -> 24, 3 -> 7, 5 -> 9, 9 -> 20, 9 -> 21, 9 -> 18, 9 -> 6, 9 -> 15 and another hierarchical structure: 5 -(1)-> 2, 2 -(29)-> 1, 5 -(5)-> 8, 8 -(6)-> 11, 8 -(6)-> 12, 8 -(19)-> 17, 8 -(1)-> 13, 5 -(29)-> 23, 23 -(27)-> 0, 23 -(7)-> 22, 23 -(10)-> 14, 5 -(20)-> 3, 3 -(13)-> 4, 3 -(16)-> 16, 3 -(6)-> 10, 3 -(20)-> 24, 3 -(2)-> 7, 5 -(4)-> 9, 9 -(22)-> 20, 9 -(11)-> 21, 9 -(27)-> 18, 9 -(27)-> 6, 9 -(1)-> 15, please decide whether the given two trees are isomorphic or not. Please return the answer in JSON format directly like {\"answer\": true} or {\"answer\": false} and do not feedback the detailed process."
+            }
+        ],
+        "ref_ans": false,
+        "structure_id": 24
+    },
+    {
+        "question": [
+            {
+                "role": "system",
+                "content": "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
+            },
+            {
+                "role": "user",
+                "content": "Given the hierarchical structure 23 -> 3, 23 -> 21, 21 -> 2, 21 -> 7, 21 -> 20, 21 -> 9, 23 -> 5, 5 -> 19, 5 -> 0, 5 -> 14, 5 -> 15, 5 -> 8, 23 -> 10, 10 -> 13, 10 -> 17, 10 -> 4, 10 -> 6, 10 -> 24, 23 -> 18, 18 -> 22, 18 -> 12, 18 -> 16, 18 -> 1, 18 -> 11 and another hierarchical structure: 23 -(29)-> 3, 23 -(4)-> 21, 21 -(21)-> 2, 21 -(6)-> 7, 21 -(22)-> 20, 23 -(14)-> 5, 5 -(1)-> 19, 5 -(28)-> 0, 5 -(6)-> 14, 5 -(21)-> 8, 23 -(18)-> 10, 10 -(3)-> 13, 10 -(26)-> 17, 10 -(5)-> 4, 10 -(8)-> 6, 10 -(1)-> 24, 23 -(25)-> 18, 18 -(21)-> 22, 18 -(7)-> 12, 18 -(16)-> 16, 18 -(26)-> 1, 18 -(10)-> 11, please decide whether the given two trees are isomorphic or not. Please return the answer in JSON format directly like {\"answer\": true} or {\"answer\": false} and do not feedback the detailed process."
+            }
+        ],
+        "ref_ans": false,
+        "structure_id": 25
+    },
+    {
+        "question": [
+            {
+                "role": "system",
+                "content": "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
+            },
+            {
+                "role": "user",
+                "content": "Given the hierarchical structure 24 -> 13, 13 -> 16, 13 -> 7, 13 -> 11, 13 -> 12, 13 -> 20, 24 -> 9, 9 -> 15, 9 -> 4, 9 -> 0, 9 -> 3, 9 -> 10, 24 -> 21, 21 -> 2, 21 -> 19, 24 -> 6, 6 -> 1, 6 -> 22, 6 -> 17, 6 -> 14, 6 -> 18, 24 -> 23, 23 -> 5, 23 -> 8 and another hierarchical structure: No edges, please decide whether the given two trees are isomorphic or not. Please return the answer in JSON format directly like {\"answer\": true} or {\"answer\": false} and do not feedback the detailed process."
+            }
+        ],
+        "ref_ans": false,
+        "structure_id": 26
+    },
+    {
+        "question": [
+            {
+                "role": "system",
+                "content": "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
+            },
+            {
+                "role": "user",
+                "content": "Given the hierarchical structure 12 -> 13, 12 -> 8, 8 -> 2, 12 -> 5, 5 -> 7, 5 -> 0, 12 -> 4, 4 -> 6, 4 -> 1, 4 -> 11, 4 -> 10, 4 -> 3, 4 -> 9 and another hierarchical structure: 12 -(5)-> 13, 12 -(15)-> 8, 8 -(28)-> 2, 12 -(10)-> 5, 5 -(12)-> 7, 5 -(6)-> 0, 12 -(21)-> 4, 4 -(17)-> 1, 4 -(19)-> 11, 4 -(8)-> 10, 4 -(27)-> 3, 4 -(18)-> 9, please decide whether the given two trees are isomorphic or not. Please return the answer in JSON format directly like {\"answer\": true} or {\"answer\": false} and do not feedback the detailed process."
+            }
+        ],
+        "ref_ans": false,
+        "structure_id": 27
+    },
+    {
+        "question": [
+            {
+                "role": "system",
+                "content": "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
+            },
+            {
+                "role": "user",
+                "content": "Given the hierarchical structure 11 -> 7, 7 -> 4, 11 -> 3, 3 -> 8, 3 -> 0, 3 -> 5, 3 -> 1, 11 -> 12, 12 -> 2, 12 -> 9, 12 -> 13, 12 -> 6, 11 -> 10 and another hierarchical structure: 11 -(6)-> 7, 7 -(27)-> 4, 11 -(23)-> 3, 3 -(2)-> 8, 3 -(26)-> 0, 3 -(14)-> 1, 11 -(7)-> 10, please decide whether the given two trees are isomorphic or not. Please return the answer in JSON format directly like {\"answer\": true} or {\"answer\": false} and do not feedback the detailed process."
+            }
+        ],
+        "ref_ans": false,
+        "structure_id": 28
+    },
+    {
+        "question": [
+            {
+                "role": "system",
+                "content": "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
+            },
+            {
+                "role": "user",
+                "content": "Given the hierarchical structure 11 -> 3, 3 -> 6, 3 -> 8, 11 -> 5, 5 -> 0, 5 -> 1, 11 -> 2, 2 -> 7, 2 -> 4, 2 -> 9, 2 -> 13, 2 -> 12, 2 -> 10 and another hierarchical structure: 11 -(11)-> 3, 3 -(11)-> 6, 3 -(12)-> 8, 11 -(12)-> 5, 5 -(8)-> 0, 5 -(3)-> 1, 11 -(20)-> 2, 2 -(2)-> 7, 2 -(1)-> 4, 2 -(17)-> 9, 2 -(2)-> 13, 2 -(18)-> 12, 2 -(1)-> 10, please decide whether the given two trees are isomorphic or not. Please return the answer in JSON format directly like {\"answer\": true} or {\"answer\": false} and do not feedback the detailed process."
+            }
+        ],
+        "ref_ans": true,
+        "structure_id": 29
+    },
+    {
+        "question": [
+            {
+                "role": "system",
+                "content": "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
+            },
+            {
+                "role": "user",
+                "content": "Given the hierarchical structure 14 -> 3, 3 -> 12, 3 -> 22, 3 -> 19, 3 -> 2, 3 -> 20, 14 -> 18, 18 -> 1, 18 -> 8, 14 -> 21, 21 -> 9, 21 -> 4, 21 -> 13, 21 -> 5, 21 -> 15, 21 -> 11, 14 -> 0, 0 -> 6, 0 -> 10, 0 -> 16, 0 -> 7, 0 -> 17 and another hierarchical structure: 14 -(29)-> 3, 3 -(2)-> 12, 3 -(18)-> 22, 3 -(19)-> 19, 3 -(21)-> 2, 3 -(4)-> 20, 14 -(9)-> 18, 18 -(29)-> 1, 18 -(10)-> 8, 14 -(12)-> 21, 21 -(23)-> 9, 21 -(15)-> 4, 21 -(16)-> 13, 21 -(10)-> 5, 21 -(23)-> 15, 21 -(4)-> 11, 14 -(6)-> 0, 0 -(9)-> 6, 0 -(12)-> 10, 0 -(28)-> 16, 0 -(4)-> 7, 0 -(23)-> 17, please decide whether the given two trees are isomorphic or not. Please return the answer in JSON format directly like {\"answer\": true} or {\"answer\": false} and do not feedback the detailed process."
+            }
+        ],
+        "ref_ans": true,
+        "structure_id": 30
+    },
+    {
+        "question": [
+            {
+                "role": "system",
+                "content": "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
+            },
+            {
+                "role": "user",
+                "content": "Given the hierarchical structure 18 -> 11, 18 -> 21, 21 -> 13, 21 -> 12, 21 -> 17, 21 -> 0, 21 -> 2, 21 -> 20, 18 -> 16, 16 -> 15, 16 -> 4, 16 -> 19, 16 -> 10, 16 -> 8, 16 -> 7, 18 -> 22, 22 -> 6, 22 -> 5, 22 -> 14, 22 -> 1, 22 -> 9, 22 -> 3 and another hierarchical structure: No edges, please decide whether the given two trees are isomorphic or not. Please return the answer in JSON format directly like {\"answer\": true} or {\"answer\": false} and do not feedback the detailed process."
+            }
+        ],
+        "ref_ans": false,
+        "structure_id": 31
+    },
+    {
+        "question": [
+            {
+                "role": "system",
+                "content": "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
+            },
+            {
+                "role": "user",
+                "content": "Given the hierarchical structure 17 -> 11, 11 -> 2, 17 -> 22, 17 -> 13, 13 -> 5, 13 -> 12, 13 -> 19, 13 -> 9, 13 -> 4, 17 -> 18, 18 -> 14, 18 -> 3, 18 -> 0, 18 -> 20, 18 -> 10, 18 -> 16, 17 -> 21, 21 -> 1, 21 -> 6, 21 -> 8, 21 -> 15, 21 -> 7 and another hierarchical structure: 17 -(4)-> 11, 11 -(15)-> 2, 17 -(15)-> 22, 17 -(2)-> 13, 13 -(27)-> 5, 13 -(11)-> 12, 13 -(18)-> 19, 13 -(8)-> 9, 13 -(14)-> 4, 17 -(29)-> 18, 18 -(20)-> 14, 18 -(27)-> 3, 18 -(4)-> 0, 18 -(29)-> 20, 18 -(6)-> 10, 18 -(19)-> 16, please decide whether the given two trees are isomorphic or not. Please return the answer in JSON format directly like {\"answer\": true} or {\"answer\": false} and do not feedback the detailed process."
+            }
+        ],
+        "ref_ans": false,
+        "structure_id": 32
+    },
+    {
+        "question": [
+            {
+                "role": "system",
+                "content": "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
+            },
+            {
+                "role": "user",
+                "content": "Given the hierarchical structure 23 -> 25, 25 -> 22, 25 -> 8, 25 -> 24, 23 -> 20, 20 -> 13, 23 -> 15, 15 -> 28, 15 -> 1, 15 -> 5, 15 -> 30, 23 -> 27, 27 -> 4, 27 -> 0, 27 -> 3, 27 -> 12, 27 -> 11, 23 -> 9, 9 -> 29, 9 -> 2, 9 -> 18, 9 -> 10, 9 -> 14, 9 -> 17, 23 -> 16, 16 -> 19, 16 -> 7, 16 -> 6, 16 -> 26, 16 -> 31, 16 -> 21 and another hierarchical structure: 23 -(20)-> 25, 25 -(9)-> 22, 25 -(20)-> 8, 23 -(14)-> 20, 20 -(8)-> 13, 23 -(9)-> 15, 15 -(14)-> 28, 15 -(4)-> 1, 15 -(12)-> 5, 15 -(24)-> 30, 23 -(10)-> 27, 27 -(23)-> 4, 27 -(11)-> 0, 27 -(20)-> 3, 27 -(17)-> 12, 27 -(12)-> 11, 23 -(24)-> 9, 9 -(25)-> 29, 9 -(6)-> 2, 9 -(9)-> 18, 9 -(1)-> 10, 9 -(21)-> 14, 9 -(17)-> 17, 23 -(5)-> 16, 16 -(20)-> 7, 16 -(16)-> 6, 16 -(2)-> 26, 16 -(11)-> 31, 16 -(3)-> 21, please decide whether the given two trees are isomorphic or not. Please return the answer in JSON format directly like {\"answer\": true} or {\"answer\": false} and do not feedback the detailed process."
+            }
+        ],
+        "ref_ans": false,
+        "structure_id": 33
+    },
+    {
+        "question": [
+            {
+                "role": "system",
+                "content": "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
+            },
+            {
+                "role": "user",
+                "content": "Given the hierarchical structure 25 -> 30, 30 -> 3, 30 -> 22, 30 -> 17, 30 -> 19, 25 -> 10, 10 -> 0, 25 -> 31, 31 -> 4, 31 -> 6, 31 -> 13, 31 -> 2, 31 -> 21, 31 -> 14, 25 -> 18, 18 -> 15, 18 -> 8, 18 -> 11, 18 -> 9, 18 -> 24, 25 -> 12, 12 -> 20, 12 -> 7, 12 -> 27, 12 -> 28, 12 -> 26, 12 -> 1, 25 -> 23, 23 -> 16, 23 -> 29, 23 -> 5 and another hierarchical structure: 25 -(9)-> 30, 30 -(22)-> 3, 30 -(19)-> 22, 30 -(7)-> 17, 30 -(19)-> 19, 25 -(9)-> 10, 10 -(10)-> 0, 25 -(9)-> 31, 31 -(13)-> 4, 31 -(25)-> 6, 31 -(25)-> 13, 31 -(26)-> 2, 31 -(2)-> 21, 31 -(4)-> 14, 25 -(10)-> 18, 18 -(21)-> 15, 18 -(10)-> 8, 18 -(3)-> 11, 18 -(11)-> 9, 18 -(1)-> 24, 25 -(24)-> 12, 12 -(13)-> 20, 12 -(28)-> 7, 12 -(12)-> 27, 12 -(25)-> 28, 12 -(13)-> 26, 12 -(20)-> 1, 25 -(2)-> 23, 23 -(5)-> 16, 23 -(28)-> 29, 23 -(29)-> 5, please decide whether the given two trees are isomorphic or not. Please return the answer in JSON format directly like {\"answer\": true} or {\"answer\": false} and do not feedback the detailed process."
+            }
+        ],
+        "ref_ans": true,
+        "structure_id": 34
+    },
+    {
+        "question": [
+            {
+                "role": "system",
+                "content": "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
+            },
+            {
+                "role": "user",
+                "content": "Given the hierarchical structure 9 -> 4, 4 -> 30, 4 -> 28, 4 -> 3, 9 -> 18, 18 -> 10, 18 -> 23, 9 -> 8, 8 -> 0, 8 -> 1, 8 -> 24, 8 -> 22, 8 -> 20, 8 -> 21, 9 -> 11, 11 -> 6, 11 -> 16, 9 -> 29, 29 -> 14, 29 -> 15, 29 -> 19, 29 -> 31, 29 -> 25, 29 -> 17, 9 -> 13, 13 -> 12, 13 -> 5, 13 -> 7, 13 -> 2, 13 -> 26, 13 -> 27 and another hierarchical structure: 9 -(6)-> 4, 4 -(19)-> 30, 4 -(26)-> 28, 4 -(7)-> 3, 9 -(14)-> 18, 18 -(11)-> 10, 18 -(17)-> 23, 9 -(26)-> 8, 8 -(22)-> 0, 8 -(6)-> 1, 8 -(9)-> 24, 8 -(29)-> 22, 8 -(22)-> 20, 8 -(6)-> 21, 9 -(17)-> 11, 11 -(25)-> 6, 11 -(24)-> 16, 9 -(3)-> 29, 29 -(25)-> 14, 29 -(27)-> 15, 29 -(10)-> 19, 29 -(14)-> 31, 29 -(26)-> 25, 29 -(14)-> 17, 9 -(26)-> 13, 13 -(1)-> 12, 13 -(6)-> 5, 13 -(4)-> 7, 13 -(25)-> 2, 13 -(3)-> 26, 13 -(14)-> 27, please decide whether the given two trees are isomorphic or not. Please return the answer in JSON format directly like {\"answer\": true} or {\"answer\": false} and do not feedback the detailed process."
+            }
+        ],
+        "ref_ans": true,
+        "structure_id": 35
+    }
+]

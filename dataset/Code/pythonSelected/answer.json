@@ -1,0 +1,52 @@
+[
+  {
+    "questio_no": 1,
+    "space": "O(1)",
+    "time": "O(n^3)"
+  },
+  {
+    "questio_no": 2,
+    "space": "O(h)",
+    "time": "O(n)"
+  },
+  {
+    "questio_no": 3,
+    "space": "O(1)",
+    "time": "O(n)"
+  },
+  {
+    "questio_no": 4,
+    "space": "O(1)",
+    "time": "O(1)"
+  },
+  {
+    "questio_no": 5,
+    "space": "O(1)",
+    "time": "O(n)"
+  },
+  {
+    "questio_no": 6,
+    "space": "O(m + n)",
+    "time": "O(m * n)"
+  },
+  {
+    "questio_no": 7,
+    "space": "O(1)",
+    "time": "O(n)"
+  },
+  {
+    "questio_no": 8,
+    "space": "O(1)",
+    "time": "O((n + m) * logm)"
+  },
+  {
+    "questio_no": 9,
+    "space": "O(h)",
+    "time": "O(n)"
+  },
+  {
+    "questio_no": 10,
+    "space": "O(26)",
+    "time": "O(m + n + 26^2)"
+  }
+]

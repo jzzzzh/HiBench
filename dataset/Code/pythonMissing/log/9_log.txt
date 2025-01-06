@@ -1,0 +1,2 @@
+Line 3:         if root in (None, p, q):
+Line 9: 

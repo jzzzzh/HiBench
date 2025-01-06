@@ -1,0 +1,2 @@
+Line 1: class Solution(object):
+Line 9:         result, diff = 0, float("inf")

@@ -1,0 +1,2 @@
+Line 3:     vector<int> vowelStrings(vector<string>& words, vector<vector<int>>& queries) {
+Line 15: };

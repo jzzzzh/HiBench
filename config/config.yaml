@@ -1,0 +1,23 @@
+Dataset:
+  Fundamental:
+    Dir: /home/zhuohang/disk/HiBench/HiBench/dataset/Fundamental/
+    TreeType: ['Binary', 'Normal']
+    InputMode: ['Edge', 'Hierarchy']
+    SubTask: ['add_node', 'common_ancestor', 'isomorphic', 'remove_node', 'node_depth', 'leaf', 'root']
+  JSON:
+    Dir: /home/zhuohang/disk/HiBench/HiBench/dataset/JSON/
+    SubTask: ['Task1', 'Task2', 'Task3', 'Task4', 'Task5']
+    Domain: ['University', 'Company']
+  Formula:
+    Dir: /home/zhuohang/disk/HiBench/HiBench/dataset/Formula/
+    SubTask: ['calcuate', 'convert', 'equivalent']
+    Format: ['Infix', 'Prefix', 'Postfix']
+    Mode: ['Simple', 'Medium', 'Hard']
+  Code:
+    Dir: /home/zhuohang/disk/HiBench/HiBench/dataset/Code/
+    SubTask: ['SpaceComplexity', 'TimeComplexity', 'CodeMissing']
+    Domain: ['Python', 'C++']
+  Paper:
+    Dir: /home/zhuohang/disk/HiBench/HiBench/dataset/Paper/
+    SubTask: ['contextual_qa', 'disordered_section', 'outline_extraction']
+    Mode: ['dev', 'test', 'train']

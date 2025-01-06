@@ -1,0 +1,2 @@
+Line 26: 
+Line 4:     def minTotalDistance(self, grid):

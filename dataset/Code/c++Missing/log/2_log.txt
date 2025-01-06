@@ -1,0 +1,2 @@
+Line 25: class Solution2 {
+Line 22:     }

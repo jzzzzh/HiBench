@@ -1,0 +1,2 @@
+Line 11:         coins.emplace_back(1);
+Line 24:         return max_coins[0][coins.size() - 1];

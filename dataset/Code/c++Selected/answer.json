@@ -1,0 +1,52 @@
+[
+  {
+    "questio_no": 1,
+    "space": "O(1)",
+    "time": "O(r - l)"
+  },
+  {
+    "questio_no": 2,
+    "space": "O(1)",
+    "time": "O(n)"
+  },
+  {
+    "questio_no": 3,
+    "space": "O(n)",
+    "time": "O(m * n^2)"
+  },
+  {
+    "questio_no": 4,
+    "space": "O(n)",
+    "time": "O(nlogn)"
+  },
+  {
+    "questio_no": 5,
+    "space": "O(n^2)",
+    "time": "O(n^3)"
+  },
+  {
+    "questio_no": 6,
+    "space": "O(1)",
+    "time": "O(n)"
+  },
+  {
+    "questio_no": 7,
+    "space": "O(1)",
+    "time": "O(n)"
+  },
+  {
+    "questio_no": 8,
+    "space": "O(1)",
+    "time": "O(n)"
+  },
+  {
+    "questio_no": 9,
+    "space": "O(n)",
+    "time": "O(n + q)"
+  },
+  {
+    "questio_no": 10,
+    "space": "O(n)",
+    "time": "O(n * 2^n)"
+  }
+]

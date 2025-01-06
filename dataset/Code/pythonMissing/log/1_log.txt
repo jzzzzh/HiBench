@@ -1,0 +1,2 @@
+Line 20:                         while left < right and nums[left] == nums[left - 1]:
+Line 2: 

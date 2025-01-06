@@ -1,0 +1,2 @@
+Line 2: public:
+Line 9:         return result;

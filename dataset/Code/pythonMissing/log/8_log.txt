@@ -1,0 +1,2 @@
+Line 5:         arr2.sort()
+Line 12:         return result

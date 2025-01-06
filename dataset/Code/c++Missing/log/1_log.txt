@@ -1,0 +1,2 @@
+Line 22:         if (!abbr) {
+Line 20:             }

@@ -1,0 +1,2 @@
+Line 25:         return result;
+Line 3:     int shoppingOffers(vector<int>& price, vector<vector<int>>& special, vector<int>& needs) {

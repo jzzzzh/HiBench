@@ -1,0 +1,2 @@
+Line 4:         double result = 0;
+Line 1: class Solution {

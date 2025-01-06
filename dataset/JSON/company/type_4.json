@@ -1,0 +1,82 @@
+[
+  {
+    "question": "Does Customer Success Team belong to Customer Service Division?",
+    "answer": "True"
+  },
+  {
+    "question": "Does Patricia Thompson belong to Client Relations?",
+    "answer": "True"
+  },
+  {
+    "question": "Does Barbara Johnson belong to Content Marketing?",
+    "answer": "True"
+  },
+  {
+    "question": "Does Sandra Williams belong to Client Relations?",
+    "answer": "True"
+  },
+  {
+    "question": "Does Thomas Jones belong to Client Relations?",
+    "answer": "True"
+  },
+  {
+    "question": "Does Thomas Smith belong to Product Marketing?",
+    "answer": "True"
+  },
+  {
+    "question": "Does Elizabeth Anderson belong to Digital Marketing?",
+    "answer": "True"
+  },
+  {
+    "question": "Does David Gonzalez belong to Digital Marketing?",
+    "answer": "True"
+  },
+  {
+    "question": "Does Client Relations Team belong to Customer Service Division?",
+    "answer": "True"
+  },
+  {
+    "question": "Does Matthew Hernandez belong to Support Center?",
+    "answer": "True"
+  },
+  {
+    "question": "Does Michael Hernandez belong to Richard Davis?",
+    "answer": "False"
+  },
+  {
+    "question": "Does Product Research belong to Jessica Anderson?",
+    "answer": "False"
+  },
+  {
+    "question": "Does Customer Support Team belong to James Hernandez?",
+    "answer": "False"
+  },
+  {
+    "question": "Does Tier 2 Support belong to Sarah Lee?",
+    "answer": "False"
+  },
+  {
+    "question": "Does Mary Perez belong to Barbara Johnson?",
+    "answer": "False"
+  },
+  {
+    "question": "Does David Gonzalez belong to Sandra Williams?",
+    "answer": "False"
+  },
+  {
+    "question": "Does Blog Team belong to Sarah Wilson?",
+    "answer": "False"
+  },
+  {
+    "question": "Does John Lewis belong to James Jones?",
+    "answer": "False"
+  },
+  {
+    "question": "Does Product Marketing belong to PPC Team?",
+    "answer": "False"
+  },
+  {
+    "question": "Does Customer Support Team belong to Product Launch Team?",
+    "answer": "False"
+  }
+]

@@ -1,0 +1,46 @@
+[
+  {
+    "question": "How many Departments does Customer Service Division have?",
+    "answer": 3
+  },
+  {
+    "question": "How many Departments does Marketing Division have?",
+    "answer": 3
+  },
+  {
+    "question": "How many Divisions does Company have?",
+    "answer": 3
+  },
+  {
+    "question": "How many Employees does Idea Generation Team have?",
+    "answer": 10
+  },
+  {
+    "question": "How many Employees does Market Research Team have?",
+    "answer": 7
+  },
+  {
+    "question": "How many Employees does Tier 2 Support have?",
+    "answer": 5
+  },
+  {
+    "question": "How many Employees does Testing & Validation Team have?",
+    "answer": 9
+  },
+  {
+    "question": "How many Teams does Technical Support have?",
+    "answer": 2
+  },
+  {
+    "question": "How many Teams does Digital Marketing have?",
+    "answer": 3
+  },
+  {
+    "question": "How many Teams does Client Relations have?",
+    "answer": 2
+  },
+  {
+    "question": "How many Teams does Prototyping have?",
+    "answer": 2
+  }
+]

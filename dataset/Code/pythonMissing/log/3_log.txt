@@ -1,0 +1,2 @@
+Line 10:             result.append('D' * max(y1-y, 0))
+Line 3:         x, y = 0, 0

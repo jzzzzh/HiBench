@@ -1,0 +1,22 @@
+[
+  {
+    "question": "How many Courses does university have?",
+    "answer": 207
+  },
+  {
+    "question": "How many Departments does university have?",
+    "answer": 13
+  },
+  {
+    "question": "How many Faculties does university have?",
+    "answer": 4
+  },
+  {
+    "question": "How many Lecturers does university have?",
+    "answer": 427
+  },
+  {
+    "question": "How many Students does university have?",
+    "answer": 906
+  }
+]

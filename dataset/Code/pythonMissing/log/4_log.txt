@@ -1,0 +1,2 @@
+Line 1: class Solution(object):
+Line 6:         return min(diff, 1.0-diff) * 360.0

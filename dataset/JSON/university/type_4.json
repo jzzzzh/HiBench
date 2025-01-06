@@ -1,0 +1,82 @@
+[
+  {
+    "question": "Does Savannah Williams belong to Department of Special Education?",
+    "answer": "True"
+  },
+  {
+    "question": "Does Assistant Professor Brooks Long belong to Master of Business Administration?",
+    "answer": "True"
+  },
+  {
+    "question": "Does Aria Cook belong to Department of Special Education?",
+    "answer": "True"
+  },
+  {
+    "question": "Does Educational Psychology belong to Department of Pediatrics?",
+    "answer": "True"
+  },
+  {
+    "question": "Does Aria Young belong to Department of Educational Psychology?",
+    "answer": "True"
+  },
+  {
+    "question": "Does Quantum Physics belong to Department of Surgery?",
+    "answer": "True"
+  },
+  {
+    "question": "Does Associate Professor Josiah Williams belong to Master of Business Administration?",
+    "answer": "True"
+  },
+  {
+    "question": "Does Jade Roberts belong to Department of Civil Engineering?",
+    "answer": "True"
+  },
+  {
+    "question": "Does Leilani Ezra belong to Department of Educational Psychology?",
+    "answer": "True"
+  },
+  {
+    "question": "Does Biochemistry belong to Department of Pediatrics?",
+    "answer": "True"
+  },
+  {
+    "question": "Does Camila Levi belong to Faculty of Engineering?",
+    "answer": "False"
+  },
+  {
+    "question": "Does Assistant Professor Brooks Long belong to Master of Business Administration?",
+    "answer": "False"
+  },
+  {
+    "question": "Does Assistant Professor Isaiah Bailey teaches Professor Caleb Hill?",
+    "answer": "False"
+  },
+  {
+    "question": "Does Mila Garcia belong to Assistant Professor Oliver Robinson?",
+    "answer": "False"
+  },
+  {
+    "question": "Does Professor Luke Thomas belong to Scarlett Jose?",
+    "answer": "False"
+  },
+  {
+    "question": "Does Associate Professor Beau Hill belong to Lecturer Amir Morgan?",
+    "answer": "False"
+  },
+  {
+    "question": "Does Assistant Professor Angel Evans belong to Madeline Martinez?",
+    "answer": "False"
+  },
+  {
+    "question": "Does Camila Easton belong to Ellie Patel?",
+    "answer": "False"
+  },
+  {
+    "question": "Does Iris Oliver belong to Kinsley Liam?",
+    "answer": "False"
+  },
+  {
+    "question": "Does Zoe King belong to Caroline Kai?",
+    "answer": "False"
+  }
+]

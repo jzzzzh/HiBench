@@ -1,0 +1,87 @@
+Fundamental:
+  SystemTemplate: "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
+  OutputFormatTemplate: "Please return the answer in JSON format directly like <OUTPUTFORMATE>  and do not feedback the detailed process."
+  Task:
+    add_node:
+      PromptTemplate: "Given a hierarchical structure <TREE>, add a node to the tree."
+      OutputFormatTemplate: "{\"answer\": 1}"
+    common_ancestor:
+      PromptTemplate: "Given a hierarchical structure, "
+      OutputFormatTemplate: "{\"answer\": 1}"
+    isomorphic:
+      PromptTemplate: "Given two hierarchical structures, "
+      OutputFormatTemplate: "{\"answer\": 1}"
+    remove_node:
+      PrefixPromptTemplate: "Given a hierarchical structure, "
+      OutputFormatTemplate: "{\"answer\": 1}"
+    node_depth:
+      PromptTemplate: "Given a hierarchical structure, "
+      OutputFormatTemplate: "{\"answer\": 1}"
+    leaf:
+      PromptTemplate: "Given a hierarchical structure, "
+      OutputFormatTemplate: "{\"answer\": 1}"
+    root:
+      PromptTemplate: "Given a hierarchical structure, "
+      OutputFormatTemplate: "{\"answer\": 1}"
+
+JSON:
+  SystemTemplate: "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
+  OutputFormatTemplate: "Please return the answer in JSON format directly like <OUTPUTFORMATE>  and do not feedback the detailed process."
+  Task:
+    Task1:
+      PromptTemplate: "Given a JSON object <JSON>, <QUESTION>."
+      OutputFormatTemplate: "{\"answer\": 1}"
+    Task2:
+      PromptTemplate: "Given a JSON object <JSON>, <QUESTION>."
+      OutputFormatTemplate: "{\"answer\": \"Employees\"}"
+    Task3:
+      PromptTemplate: "Given a JSON object <JSON>, <QUESTION>."
+      OutputFormatTemplate: "{\"answer\": 1}"
+    Task4:
+      PromptTemplate: "Given a JSON object <JSON>, <QUESTION>."
+      OutputFormatTemplate: "{\"answer\": \"True\"}"
+    Task5:
+      PromptTemplate: "Given a JSON object <JSON>, <QUESTION>."
+      OutputFormatTemplate: "{\"answer\": \"XXX\"}"
+
+Formula:
+  SystemTemplate: "As an AI agent, you are tasked with performing mathematical reasoning to assist in solving complex mathematical problems."
+  OutputFormatTemplate: "Please return the answer in JSON format directly like <OUTPUTFORMATE>  and do not feedback the detailed process."
+  Task:
+    Calculation:
+      PromptTemplate: "Given a mathematical formula <FORMULA>, calculate its result."
+      OutputFormatTemplate: "{\"answer\": 1}"
+    Convert:
+      PromptTemplate: "Given a mathematical <FORMAT1> formula <FORMULA>, convert it to <FORMAT2> notation."
+      OutputFormatTemplate: "{\"answer\": 319 * 924.20 * ( ( 460 + 352.48 ) + 98 )}"
+    Equation:
+      PromptTemplate: "Given two mathematical formulas <FORMULA1> and <FORMULA2>, determine if they are equivalent."
+      OutputFormatTemplate: "{\"answer\": \"True\"}"
+
+Code:
+  SystemTemplate: "As an AI agent, you are tasked with performing code reasoning to assist in understanding and analyzing complex code snippets."
+  OutputFormatTemplate: "Please return the answer in JSON format directly like <OUTPUTFORMATE>  and do not feedback the detailed process."
+  Task:
+    SpaceComplexity:
+      PromptTemplate: "Given a code snippet <CODE>, calculate its space complexity."
+      OutputFormatTemplate: "{\"answer\":  O(1)}"
+    TimeComplexity:
+      PromptTemplate: "Given a code snippet <CODE>, calculate its time complexity."
+      OutputFormatTemplate: "{\"answer\":  O(n)}"
+    CodeMissing:
+      PromptTemplate: "Given a code snippet <CODE>, please find and write the missing code."
+      OutputFormatTemplate: "{\"answer\": \"Line 10: result.append('D' * max(y1-y, 0))\"}"
+
+Paper:
+  SystemTemplate: "As an AI agent, you are tasked with performing paper reasoning to assist in understanding and analyzing complex academic papers."
+  OutputFormatTemplate: "Please return the answer in JSON format directly like <OUTPUTFORMATE>  and do not feedback the detailed process."
+  Task:
+    contextual_qa:
+      PromptTemplate: "<QUESTION>"
+      OutputFormatTemplate: "{\"answer\": \"XXX\"}"
+    disordered_section:
+      PromptTemplate: "<QUESTION>"
+      OutputFormatTemplate: "{\"answer\": \"XXX\"}"
+    outline_extraction:
+      PromptTemplate: "<QUESTION>"
+      OutputFormatTemplate: "{\"answer\": \"XXX\"}"
