@@ -182,7 +182,7 @@ class LLMModel:
             outputs = outputs[:, inputs['input_ids'].shape[1]:]
             return self.tokenizer.decode(outputs[0], skip_special_tokens=True)
         
-    def get_response(self, system_setting = "use english", prompt = "Who are you?", check_response=True, max_steps=3, template="json"):
+    def get_response(self, system_setting = "use english", prompt = "Who are you?", check_response=True, max_steps=1, template="json"):
         if check_response:
             checker = Checker()
             step = 0

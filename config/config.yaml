@@ -21,3 +21,6 @@ Dataset:
     Dir: /home/zhuohang/disk/HiBench/HiBench/dataset/Paper/
     SubTask: ['contextual_qa', 'disordered_section', 'outline_extraction']
     Mode: ['dev', 'test', 'train']
+
+Eval:
+  SaveDir: /home/zhuohang/disk/HiBench/HiBench/eval/
