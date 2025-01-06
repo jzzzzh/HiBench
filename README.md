@@ -527,3 +527,7 @@ HiBench includes a range of tasks from basic to advanced levels, specifically co
 
 ## Acknowledge
 We sincerely appreciate [Prof. Hongxia Yang](https://scholar.google.com/citations?user=iJlC5mMAAAAJ&hl=en) for her constructive directions and suggestions.
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=jzzzzh/HiBench&type=Date)](https://star-history.com/#jzzzzh/HiBench&Date)
