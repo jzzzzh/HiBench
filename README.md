@@ -47,6 +47,10 @@ HiBench includes a range of tasks from basic to advanced levels, specifically co
 </div>
 
 
+## Quick Start
+```
+python ./launch.py
+```
 
 ## Result
 <div align="center">
@@ -527,6 +531,9 @@ HiBench includes a range of tasks from basic to advanced levels, specifically co
 
 ## Acknowledge
 We sincerely appreciate [Prof. Hongxia Yang](https://scholar.google.com/citations?user=iJlC5mMAAAAJ&hl=en) for her constructive directions and suggestions.
+
+## Citation
+If you find our work valuable and it has contributed to your research or projects, we kindly request that you cite our paper. Your recognition is a driving force for our continuous improvement and innovation🤗.
 
 ## Star History
 
