@@ -35,6 +35,7 @@ class LLMModel:
         self.model_list = ["meta-llama/Meta-Llama-3.1-8B-Instruct", "meta-llama/Llama-3.2-1B-Instruct","meta-llama/Llama-3.2-3B-Instruct", "Qwen/Qwen2.5-0.5B-Instruct", "Qwen/Qwen2.5-1.5B-Instruct", "Qwen/Qwen2.5-3B-Instruct", "Qwen/Qwen2.5-7B-Instruct", "Qwen/Qwen2.5-14B-Instruct",  "Qwen/Qwen2.5-32B-Instruct"]
         self.Large_language_model_list = ["Qwen/Qwen2.5-72B-Instruct", "meta-llama/Llama-3.1-70B-Instruct", "meta-llama/Llama-3.1-405B-Instruct"]
         self.openai_list = ["gpt-3.5-turbo", "gpt-3.5-turbo-davinci", "gpt-3.5-turbo-davinci-codex", "gpt-3.5-turbo-davinci-instruct", "gpt-3.5-turbo-davinci-codex-instruct", "gpt-3.5-turbo-davinci-codex-instruct-turbo", "gpt-4o", "gpt-4o-mini", "gpt-4-turbo"]
+        self.old_model_list = ["THUDM/glm-4-9b-chat", "01-ai/Yi-1.5-9B-Chat","baichuan-inc/Baichuan-7B", "baichuan-inc/Baichuan2-7B-Chat", "microsoft/Phi-3.5-mini-instruct", "internlm/internlm2_5-7b-chat"]
         self.api_key = api_key
         self.device = "cuda"
         print(f"Loading model: {model_id}")
@@ -50,10 +51,11 @@ class LLMModel:
                 self.pipeline.tokenizer.eos_token_id,
                 self.pipeline.tokenizer.convert_tokens_to_ids("<|eot_id|>")
             ]
-        elif model_id == "THUDM/glm-4-9b-chat":
-            self.tokenizer = AutoTokenizer.from_pretrained("THUDM/glm-4-9b-chat", trust_remote_code=True)
+        elif model_id in self.old_model_list:
+            # print("Loading old model")
+            self.tokenizer = AutoTokenizer.from_pretrained(model_id, trust_remote_code=True)
             self.model = AutoModelForCausalLM.from_pretrained(
-                "THUDM/glm-4-9b-chat",
+                model_id,
                 torch_dtype=torch.bfloat16,
                 low_cpu_mem_usage=True,
                 trust_remote_code=True
@@ -157,28 +159,29 @@ class LLMModel:
             outputs = self.pipeline(
             messages,
             max_new_tokens=256,
-            # eos_token_id=self.terminators,
-            # do_sample=True,
-            # temperature=0.6,
-            # top_p=0.9,
-            # pad_token_id = self.pipeline.tokenizer.eos_token_id
             )
         return outputs[0]["generated_text"][-1]["content"]
 
-    def run_glm(self, query, system_setting):
-        inputs = self.tokenizer.apply_chat_template(
-            [
-            {"role": "system", "content": system_setting},
-            {"role": "user", "content": query}
-            ],
-            add_generation_prompt=True,
-            tokenize=True,
-            return_tensors="pt",
-            return_dict=True
-        )
+    def run_old_model(self, query, system_setting):
+        if self.model_id == "baichuan-inc/Baichuan-7B":
+            inputs = self.tokenizer(f'{system_setting}{query}', return_tensors='pt')
+        else:
+            inputs = self.tokenizer.apply_chat_template(
+                [
+                {"role": "system", "content": system_setting},
+                {"role": "user", "content": query}
+                ],
+                add_generation_prompt=True,
+                tokenize=True,
+                return_tensors="pt",
+                return_dict=True
+            )
         inputs = inputs.to(self.device)
+        # print("-----------------")
+        # print(inputs)
         with torch.no_grad():
             outputs = self.model.generate(**inputs, **self.gen_kwargs)
+            # print(outputs)
             outputs = outputs[:, inputs['input_ids'].shape[1]:]
             return self.tokenizer.decode(outputs[0], skip_special_tokens=True)
         
@@ -206,8 +209,9 @@ class LLMModel:
                 elif self.model_id in self.Large_language_model_list:
                     
                     ans = self.call_api(system_setting, prompt, api_platform="fireworks")
-                elif self.model_id == "THUDM/glm-4-9b-chat":
-                    ans = self.run_glm(prompt, system_setting)
+                elif self.model_id in self.old_model_list:
+                    
+                    ans = self.run_old_model(prompt, system_setting)
                 else:
                     print(f"Warning: The model_id '{self.model_id}' is not in the Large language model list.")
                     exit(1)
@@ -216,7 +220,12 @@ class LLMModel:
     
 if __name__ == "__main__":
     # model_id = "THUDM/glm-4-9b-chat"
-    model_id = "Qwen/Qwen2.5-0.5B-Instruct"
+    # model_id = "01-ai/Yi-1.5-9B-Chat"
+    # model_id = "baichuan-inc/Baichuan-7B"
+    # model_id = "baichuan-inc/Baichuan2-7B-Chat"
+    # model_id = "microsoft/Phi-3.5-mini-instruct"
+    model_id = "internlm/internlm2_5-7b-chat"
+    # model_id = "Qwen/Qwen2.5-0.5B-Instruct"
     # model_id = "meta-llama/Meta-Llama-3.1-8B-Instruct"
     # model_id = "Qwen/Qwen2.5-72B-Instruct"
     system_setting = "You are a helpful assistant."
