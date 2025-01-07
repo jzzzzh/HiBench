@@ -1,6 +1,6 @@
 # 👋HiBench: Challenging LLMs Capability on Hierarchical Structure Understanding
 <div align="center">
-Zhuohang Jiang†, Pangjing Wu, Ziran Liang†, Xu Yuan†, Qi Chen†,
+Zhuohang Jiang†, Pangjing Wu†, Ziran Liang†, Xu Yuan†, Qi Chen†,
 Ye Jia†, Jiancheng Tu†
 
 </div>  
