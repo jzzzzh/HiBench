@@ -1,6 +1,16 @@
 # 👋HiBench: Challenging LLMs Capability on Hierarchical Structure Understanding
+<div align="center">
+Zhuohang Jiang†, Pangjing Wu, Ziran Liang†, Xu Yuan†, Qi Chen†,
+Ye Jia†, Jiancheng Tu†
 
+</div>  
+<div align="center"><span style="font-size: smaller;">
+<br>†: joint first author & equal contribution
+*: corresponding author</br>
+</span>
+</div>
 
+<br>
 <div align="center">
 
 [![Powered by](https://img.shields.io/badge/Powered_by-Pytorch-EE4C2C?logo=pytorch)](https://pytorch.org/) 
@@ -51,6 +61,14 @@ HiBench includes a range of tasks from basic to advanced levels, specifically co
 </div>
 </div>
 
+
+## Features under developing
+This repository has completed evaluating Qwen Family, Llama Family, GPT Family and ChatGLM model.
+
+However, more LLMs are currently being evaluated for improved our experiment.Moreover, we will increase more Benchmark Dataset to evaluating LLMs ability of Hierarchical understanding. Updates will be rolled out frequently. 
+
+- [ ] Tested on HiBench for Phi, InternLM, Yi and baichuan.
+- [ ] Check all datasets and add binary data sets
 
 ## Quick Start
 ```
