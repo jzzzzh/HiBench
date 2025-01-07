@@ -28,7 +28,7 @@ Ye Jia†, Jiancheng Tu†
 [![LLM](https://img.shields.io/badge/Model-InternLM-002B56?logo=)](https://huggingface.co/internlm) 
 [![LLM](https://img.shields.io/badge/Model-Yi-006600?logo=)](https://huggingface.co/01-ai) 
 [![LLM](https://img.shields.io/badge/Model-Baichuan-FF9E0F?logo=)](https://github.com/baichuan-inc/Baichuan2/) 
-
+[![LLM](https://img.shields.io/badge/Model-Mistral-FECC00?logo=)](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3) 
 
 
 </div>
@@ -70,8 +70,8 @@ However, more LLMs are currently being evaluated for improved our experiment.Mor
 - [ ] Tested on HiBench for Phi[![LLM](https://img.shields.io/badge/Model-Phi-0854C1?logo=)](https://huggingface.co/microsoft/Phi-3.5-mini-instruct) , InternLM
 [![LLM](https://img.shields.io/badge/Model-InternLM-002B56?logo=)](https://huggingface.co/internlm) , Yi 
 [![LLM](https://img.shields.io/badge/Model-Yi-006600?logo=)](https://huggingface.co/01-ai) 
-and baichuan
-[![LLM](https://img.shields.io/badge/Model-Baichuan-FF9E0F?logo=)](https://github.com/baichuan-inc/Baichuan2/).
+,baichuan
+[![LLM](https://img.shields.io/badge/Model-Baichuan-FF9E0F?logo=)](https://github.com/baichuan-inc/Baichuan2/), and Mistral[![LLM](https://img.shields.io/badge/Model-Mistral-FECC00?logo=)](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3).
 
 - [ ] Check all datasets and add binary datasets
 
