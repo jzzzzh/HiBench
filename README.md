@@ -23,7 +23,8 @@ Ye Jia†, Jiancheng Tu†
 [![LLM](https://img.shields.io/badge/Model-Qwen-FF6A00?logo=alibabadotcom)](https://github.com/QwenLM/Qwen) 
 [![LLM](https://img.shields.io/badge/Model-ChatGLM-3FA9F5?logo=)](https://github.com/THUDM/ChatGLM-6B) 
 [![LLM](https://img.shields.io/badge/Model-Openai-412991?logo=openai)](https://openai.com/) 
-┃
+
+
 [![LLM](https://img.shields.io/badge/Model-Phi-0854C1?logo=)](https://huggingface.co/microsoft/Phi-3.5-mini-instruct) 
 [![LLM](https://img.shields.io/badge/Model-InternLM-002B56?logo=)](https://huggingface.co/internlm) 
 [![LLM](https://img.shields.io/badge/Model-Yi-006600?logo=)](https://huggingface.co/01-ai) 
