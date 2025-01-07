@@ -67,7 +67,12 @@ This repository has completed evaluating Qwen Family, Llama Family, GPT Family a
 
 However, more LLMs are currently being evaluated for improved our experiment.Moreover, we will increase more Benchmark Dataset to evaluating LLMs ability of Hierarchical understanding. Updates will be rolled out frequently. 
 
-- [ ] Tested on HiBench for Phi, InternLM, Yi and baichuan.
+- [ ] Tested on HiBench for Phi[![LLM](https://img.shields.io/badge/Model-Phi-0854C1?logo=)](https://huggingface.co/microsoft/Phi-3.5-mini-instruct) , InternLM
+[![LLM](https://img.shields.io/badge/Model-InternLM-002B56?logo=)](https://huggingface.co/internlm) , Yi 
+[![LLM](https://img.shields.io/badge/Model-Yi-006600?logo=)](https://huggingface.co/01-ai) 
+and baichuan
+[![LLM](https://img.shields.io/badge/Model-Baichuan-FF9E0F?logo=)](https://github.com/baichuan-inc/Baichuan2/).
+
 - [ ] Check all datasets and add binary data sets
 
 ## Quick Start
