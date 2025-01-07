@@ -73,7 +73,7 @@ However, more LLMs are currently being evaluated for improved our experiment.Mor
 and baichuan
 [![LLM](https://img.shields.io/badge/Model-Baichuan-FF9E0F?logo=)](https://github.com/baichuan-inc/Baichuan2/).
 
-- [ ] Check all datasets and add binary data sets
+- [ ] Check all datasets and add binary datasets
 
 ## Quick Start
 ```
