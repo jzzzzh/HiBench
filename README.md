@@ -1,6 +1,16 @@
 # 👋HiBench: Challenging LLMs Capability on Hierarchical Structure Understanding
+<div align="center">
+Zhuohang Jiang†, Pangjing Wu†, Ziran Liang†, Xu Yuan†, Qi Chen†,
+Ye Jia†, Jiancheng Tu†
 
+</div>  
+<div align="center"><span style="font-size: smaller;">
+<br>†: joint first author & equal contribution
+*: corresponding author</br>
+</span>
+</div>
 
+<br>
 <div align="center">
 
 [![Powered by](https://img.shields.io/badge/Powered_by-Pytorch-EE4C2C?logo=pytorch)](https://pytorch.org/) 
@@ -14,6 +24,12 @@
 [![LLM](https://img.shields.io/badge/Model-ChatGLM-3FA9F5?logo=)](https://github.com/THUDM/ChatGLM-6B) 
 [![LLM](https://img.shields.io/badge/Model-Openai-412991?logo=openai)](https://openai.com/) 
 
+
+[![LLM](https://img.shields.io/badge/Model-Phi-0854C1?logo=)](https://huggingface.co/microsoft/Phi-3.5-mini-instruct) 
+[![LLM](https://img.shields.io/badge/Model-InternLM-002B56?logo=)](https://huggingface.co/internlm) 
+[![LLM](https://img.shields.io/badge/Model-Yi-006600?logo=)](https://huggingface.co/01-ai) 
+[![LLM](https://img.shields.io/badge/Model-Baichuan-FF9E0F?logo=)](https://github.com/baichuan-inc/Baichuan2/) 
+[![LLM](https://img.shields.io/badge/Model-Mistral-FECC00?logo=)](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3) 
 
 
 </div>
@@ -47,6 +63,23 @@ HiBench includes a range of tasks from basic to advanced levels, specifically co
 </div>
 
 
+## Features under developing
+This repository has completed evaluating Qwen Family, Llama Family, GPT Family and ChatGLM model.
+
+However, more LLMs are currently being evaluated for improved our experiment.Moreover, we will increase more Benchmark Dataset to evaluating LLMs ability of Hierarchical understanding. Updates will be rolled out frequently. 
+
+- [ ] Tested on HiBench for Phi[![LLM](https://img.shields.io/badge/Model-Phi-0854C1?logo=)](https://huggingface.co/microsoft/Phi-3.5-mini-instruct) , InternLM
+[![LLM](https://img.shields.io/badge/Model-InternLM-002B56?logo=)](https://huggingface.co/internlm) , Yi 
+[![LLM](https://img.shields.io/badge/Model-Yi-006600?logo=)](https://huggingface.co/01-ai) 
+,baichuan
+[![LLM](https://img.shields.io/badge/Model-Baichuan-FF9E0F?logo=)](https://github.com/baichuan-inc/Baichuan2/), and Mistral[![LLM](https://img.shields.io/badge/Model-Mistral-FECC00?logo=)](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3).
+
+- [ ] Check all datasets and add binary datasets
+
+## Quick Start
+```
+python ./launch.py
+```
 
 ## Result
 <div align="center">
@@ -527,6 +560,9 @@ HiBench includes a range of tasks from basic to advanced levels, specifically co
 
 ## Acknowledge
 We sincerely appreciate [Prof. Hongxia Yang](https://scholar.google.com/citations?user=iJlC5mMAAAAJ&hl=en) for her constructive directions and suggestions.
+
+## Citation
+If you find our work valuable and it has contributed to your research or projects, we kindly request that you cite our paper. Your recognition is a driving force for our continuous improvement and innovation🤗.
 
 ## Star History
 
