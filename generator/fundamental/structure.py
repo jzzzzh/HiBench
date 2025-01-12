@@ -156,7 +156,7 @@ def generate_normal_tree(N, M, MAX_D = 2, directed = True, balanced = False, shu
             # print("maxDegree", maxDegree)
             degree = random.randint(minDegree, maxDegree)
             if balanced:
-                degree = min((N - node_count)//len(current_level), MAX_D)
+                degree = min(N - node_count//len(current_level), MAX_D)
                 degree = min(degree, N - node_count)
             # if shuffled:
             #     children = random.sample(, degree)
@@ -286,11 +286,11 @@ if __name__ == "__main__":
     from literalizer import edge_presentation, hierarchy_presentation
     generator = Generator()
     scales = {
-        "easy": {"D": [2], "L": [2]},
-        "medium": {"D": [2], "L": [3]},
-        "hard": {"D": [2], "L": [4]},
+        "easy": {"D": [3], "L": [3]},
+        "medium": {"D": [4], "L": [3]},
+        "hard": {"D": [5], "L": [2]},
     }
-    for difficulty, dataset in generator(2, scales, balance=True, weights=[1, 10], binary=True):
+    for difficulty, dataset in generator(2, scales, balance=True, weights=[1, 10], binary=False):
         print(difficulty)
         for (N, M, MAX_D), graphs in dataset.items():
             print(f"N={N}, M={M}, MAX_D={MAX_D}")
