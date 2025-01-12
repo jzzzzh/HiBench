@@ -20,14 +20,7 @@ norm_generation_args = [
         'weights': None,
         'binary': False,
         'scales': norm_scales
-    },
-    {
-        'num': NUM_PER_CATEGORY,
-        'balance': True,
-        'weights': None,
-        'binary': False,
-        'scales': norm_scales
-    },
+    }
 ]
 
 binary_generation_args = [

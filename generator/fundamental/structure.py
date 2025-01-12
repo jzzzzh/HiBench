@@ -156,7 +156,7 @@ def generate_normal_tree(N, M, MAX_D = 2, directed = True, balanced = False, shu
             # print("maxDegree", maxDegree)
             degree = random.randint(minDegree, maxDegree)
             if balanced:
-                degree = min(N - node_count//len(current_level), MAX_D)
+                degree = min((N - node_count)//len(current_level), MAX_D)
                 degree = min(degree, N - node_count)
             # if shuffled:
             #     children = random.sample(, degree)
@@ -186,107 +186,87 @@ def generate_normal_tree(N, M, MAX_D = 2, directed = True, balanced = False, shu
     return G
 
 
-def generate_binary_tree(N, M, MAX_D = 2, directed = True, balanced = False, shuffled = False, weight_func: Callable = lambda:None, seed = None):
+def generate_binary_tree(N, M, MAX_D=2, directed=True, balanced=False, shuffled=False, weight_func: Callable = lambda: None, seed=None):
     '''
-    generate and return a nx.Graph or nx.DiGraph
+    Generate and return a nx.Graph or nx.DiGraph.
 
     Parameters
     ----------
-    N: number of nodes
+    N: int
+        Number of nodes.
 
-    M: number of levels
+    M: int
+        Number of levels.
 
-    MAX_D: max number of node degree
+    MAX_D: int
+        Maximum number of node degree (must be 2 for binary tree).
 
-    directed: True for directed Tree, False for undirected Tree
+    directed: bool
+        True for directed tree, False for undirected tree.
 
-    balanced: True for balanced Tree, False for unbalanced Tree
+    balanced: bool
+        True for balanced tree, False for unbalanced tree.
 
-    shuffled: True for shuffled Tree, False for unshuffled Tree
+    shuffled: bool
+        True for shuffled node indices, False for sequential indices.
 
-    weight_func: random weight generator, a function with no input and one single number output as weight of an edge, default return None
+    weight_func: Callable
+        Random weight generator, a function with no input and one single number output as weight of an edge, default returns None.
 
-    seed: random seed
+    seed: int or None
+        Random seed.
+    '''
+    if balanced and N < 2**(M - 1):
+        new_N = random.choice(range(2**(M - 1), 2**M))
+        print(f"Insufficient nodes {N} to generate a balanced tree with the given {M} levels, resetting N to {new_N}.")
+        N = new_N
 
-    ''' 
     if MAX_D != 2:
-        raise ValueError("MAX_D must be 2.")
+        raise ValueError("MAX_D must be 2 for a binary tree.")
     if MAX_D < 0 or N < 0 or M < 0:
-        raise ValueError("MAX_D, N or M less than 0.")
-    if max_nodes_in_tree(M, MAX_D) < N:
-        raise ValueError("Node number larger than max node number in tree.")
-    
+        raise ValueError("MAX_D, N, or M cannot be negative.")
     if seed is not None:
         random.seed(seed)
 
     G = nx.DiGraph() if directed else nx.Graph()
-    G.add_node(0)  # add root node
+    G.add_node(0)
     remain_node_list = list(range(0, N))
+
     if shuffled:
         random.shuffle(remain_node_list)
-        # print(remain_node_list)
-    # current_level = [0]
+
     current_level = [remain_node_list[0]]
     node_count = 1
-    
+
     for layer_num in range(M):
         if node_count >= N:
             break
         next_level = []
-        # print(f"current_level{current_level}")
-        current_level_num = len(current_level)-1
-        next_level_num = 0
-        for idx, parent in enumerate(current_level):
-            my_N, my_K, my_M, my_T, my_P, my_Q, my_MAXD = N, node_count, M, layer_num + 1, current_level_num, next_level_num, MAX_D
-            minDegree = get_min_degree(my_N, my_K, my_M, my_T, my_P, my_Q, my_MAXD)
-            maxDegree = get_max_degree(my_N, my_K, my_M, my_T, my_P, my_Q, my_MAXD)
-            minDegree = min(minDegree, N - node_count)
-            minDegree = min(minDegree, MAX_D)
-            # print("minDegree", minDegree)
-            # print("maxDegree", maxDegree)
-            degree = random.randint(minDegree, maxDegree)
+        current_level_num = len(current_level)
+
+        for parent in current_level:
+            if node_count >= N:
+                break
             if balanced:
-                degree = min(N - node_count//len(current_level), MAX_D)
-                degree = min(degree, N - node_count)
-            # if shuffled:
-            #     children = random.sample(, degree)
-            # else:
-            # children = random.sample(range(node_count, node_count + degree), degree)
-            # print(remain_node_list[node_count:node_count + degree], degree)
-            left_child_assigned, right_child_assigned = False, False
-            children = random.sample(remain_node_list[node_count:node_count + degree], degree)
-            # print("children", children)
+                if layer_num < M - 1:
+                    degree = MAX_D
+                else:
+                    degree = min(MAX_D, N - node_count)
+            else:
+                degree = random.randint(1, min(MAX_D, N - node_count))
+            degree = min(degree, len(remain_node_list) - node_count)
+            children = random.sample(remain_node_list[node_count:], degree)
             for child in children:
-                if node_count < N and child < N:
+                if node_count < N:
                     G.add_node(child)
                     G.add_edge(parent, child)
-                    # print(f"add edge {parent} -> {child}")
                     weight = weight_func()
                     if weight is not None:
                         G[parent][child]['weight'] = weight
-                    if not left_child_assigned and not right_child_assigned:
-                        side = random.choice(['left', 'right'])
-                        G[parent][child][side] = True
-                        if side == 'left':
-                            left_child_assigned = True
-                        else:
-                            right_child_assigned = True
-                    elif left_child_assigned and not right_child_assigned:
-                        G[parent][child]['right'] = True
-                        right_child_assigned = True
-                    elif not left_child_assigned and right_child_assigned:
-                        G[parent][child]['left'] = True
-                        left_child_assigned = True
-                    else:
-                        raise RuntimeError('Unexpected condition: More than two child nodes assigned.')
                     next_level.append(child)
                     node_count += 1
-                    next_level_num += 1
-            current_level_num-=1
-
         current_level = next_level
+
     if node_count < N:
-        print("*"*20)
-        warnings.warn(f"Node number {N} not reached.")
-        print("*"*20)
+        print(f"Only {node_count} nodes were constructed for {M} level, fewer than requested {N}.")
     return G
