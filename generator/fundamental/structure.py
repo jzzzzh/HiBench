@@ -288,7 +288,7 @@ if __name__ == "__main__":
     scales = {
         "easy": {"D": [2], "L": [2]},
         "medium": {"D": [2], "L": [3]},
-        "hard": {"D": [2], "L": [8]},
+        "hard": {"D": [2], "L": [4]},
     }
     for difficulty, dataset in generator(2, scales, balance=True, weights=[1, 10], binary=True):
         print(difficulty)
