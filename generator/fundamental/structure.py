@@ -288,9 +288,9 @@ if __name__ == "__main__":
     scales = {
         "easy": {"D": [3], "L": [3]},
         "medium": {"D": [4], "L": [3]},
-        "hard": {"D": [5], "L": [2]},
+        "hard": {"D": [5], "L": [5]},
     }
-    for difficulty, dataset in generator(2, scales, balance=True, weights=[1, 10], binary=False):
+    for difficulty, dataset in generator(2, scales, balance=False, weights=[1, 10], binary=False):
         print(difficulty)
         for (N, M, MAX_D), graphs in dataset.items():
             print(f"N={N}, M={M}, MAX_D={MAX_D}")
