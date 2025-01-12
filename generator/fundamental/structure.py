@@ -242,7 +242,7 @@ def generate_binary_tree(N, M, MAX_D=2, directed=True, balanced=False, shuffled=
         if node_count >= N:
             break
         next_level = []
-        current_level_num = len(current_level)
+        current_level_num = len(current_level)-1
 
         for parent in current_level:
             if node_count >= N:
@@ -270,3 +270,22 @@ def generate_binary_tree(N, M, MAX_D=2, directed=True, balanced=False, shuffled=
     if node_count < N:
         print(f"Only {node_count} nodes were constructed for {M} level, fewer than requested {N}.")
     return G
+
+
+if __name__ == "__main__":
+    from literalizer import edge_presentation, hierarchy_presentation
+    generator = Generator()
+    scales = {
+        "easy": {"D": [2], "L": [2]},
+        "medium": {"D": [2], "L": [3]},
+        "hard": {"D": [2], "L": [4]},
+    }
+    for difficulty, dataset in generator(2, scales, balance=True, weights=[1, 10], binary=True):
+        print(difficulty)
+        for (N, M, MAX_D), graphs in dataset.items():
+            print(f"N={N}, M={M}, MAX_D={MAX_D}")
+            for graph in graphs:
+                print(edge_presentation(graph))
+                print(hierarchy_presentation(graph))
+                print()
+        print()

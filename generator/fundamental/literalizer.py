@@ -33,7 +33,8 @@ def hierarchy_presentation(graph, node=None, prefix="", visited=None, is_last=Tr
 
     # If the node has already been visited, mark it as a duplicate
     if node in visited:
-        return f"{prefix}{'`-- ' if not is_root else ''}{node} (duplicate)\n"
+        # return f"{prefix}{'`-- ' if not is_root else ''}{node} (duplicate)\n"
+        return ""
 
     # Mark the current node as visited
     visited.add(node)
