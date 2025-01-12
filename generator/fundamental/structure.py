@@ -243,19 +243,27 @@ def generate_binary_tree(N, M, MAX_D=2, directed=True, balanced=False, shuffled=
             break
         next_level = []
         current_level_num = len(current_level)-1
-
+        next_level_num = 0
         for parent in current_level:
             if node_count >= N:
                 break
+            my_N, my_K, my_M, my_T, my_P, my_Q, my_MAXD = N, node_count, M, layer_num + 1, current_level_num, next_level_num, MAX_D
+            minDegree = get_min_degree(my_N, my_K, my_M, my_T, my_P, my_Q, my_MAXD)
+            maxDegree = get_max_degree(my_N, my_K, my_M, my_T, my_P, my_Q, my_MAXD)
+            minDegree = min(minDegree, N - node_count)
+            minDegree = min(minDegree, MAX_D)
+            degree = random.randint(minDegree, maxDegree)
             if balanced:
                 if layer_num < M - 1:
                     degree = MAX_D
                 else:
                     degree = min(MAX_D, N - node_count)
-            else:
-                degree = random.randint(1, min(MAX_D, N - node_count))
+            # print(f"minDegree: {minDegree}, maxDegree: {maxDegree}, degree: {degree}")
+            # else:
+            #     degree = random.randint(1, min(MAX_D, N - node_count))
             degree = min(degree, len(remain_node_list) - node_count)
-            children = random.sample(remain_node_list[node_count:], degree)
+
+            children = random.sample(remain_node_list[node_count: node_count + degree], degree)
             for child in children:
                 if node_count < N:
                     G.add_node(child)
@@ -265,6 +273,8 @@ def generate_binary_tree(N, M, MAX_D=2, directed=True, balanced=False, shuffled=
                         G[parent][child]['weight'] = weight
                     next_level.append(child)
                     node_count += 1
+                    next_level_num += 1
+            current_level_num -= 1
         current_level = next_level
 
     if node_count < N:
@@ -278,14 +288,14 @@ if __name__ == "__main__":
     scales = {
         "easy": {"D": [2], "L": [2]},
         "medium": {"D": [2], "L": [3]},
-        "hard": {"D": [2], "L": [4]},
+        "hard": {"D": [2], "L": [8]},
     }
     for difficulty, dataset in generator(2, scales, balance=True, weights=[1, 10], binary=True):
         print(difficulty)
         for (N, M, MAX_D), graphs in dataset.items():
             print(f"N={N}, M={M}, MAX_D={MAX_D}")
             for graph in graphs:
-                print(edge_presentation(graph))
+                # print(edge_presentation(graph))
                 print(hierarchy_presentation(graph))
                 print()
         print()
