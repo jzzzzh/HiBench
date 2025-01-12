@@ -40,14 +40,14 @@ def hierarchy_presentation(graph, node=None, prefix="", visited=None, is_last=Tr
     visited.add(node)
 
     # Build the current node's representation
-    result = f"{prefix}{'' if is_root else ('`-- ' if is_last else '|-- ')}{node}\n"
+    result = f"{prefix}{'   ' if is_root else ('`-- ' if is_last else '|-- ')}{node}\n"
 
     # Get children of the current node
     children = list(graph.successors(node))
     for i, child in enumerate(children):
         child_is_last = (i == len(children) - 1)
         # Adjust the prefix for the child nodes
-        child_prefix = prefix + ("    " if is_last and not is_root else "|   ")
+        child_prefix = prefix + ("    " if is_last else "|   ")
         # Recursively process child nodes
         result += hierarchy_presentation(graph, node=child, prefix=child_prefix, visited=visited, is_last=child_is_last, is_root=False)
     
