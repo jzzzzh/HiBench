@@ -262,7 +262,8 @@ def generate_binary_tree(N, M, MAX_D=2, directed=True, balanced=False, shuffled=
             # else:
             #     degree = random.randint(1, min(MAX_D, N - node_count))
             degree = min(degree, len(remain_node_list) - node_count)
-
+            
+            left_child_assigned, right_child_assigned = False, False
             children = random.sample(remain_node_list[node_count: node_count + degree], degree)
             for child in children:
                 if node_count < N:
@@ -271,31 +272,45 @@ def generate_binary_tree(N, M, MAX_D=2, directed=True, balanced=False, shuffled=
                     weight = weight_func()
                     if weight is not None:
                         G[parent][child]['weight'] = weight
+                    if not left_child_assigned and not right_child_assigned:
+                        side = random.choice(['left', 'right'])
+                        G[parent][child][side] = True
+                        if side == 'left':
+                            left_child_assigned = True
+                        else:
+                            right_child_assigned = True
+                    elif left_child_assigned and not right_child_assigned:
+                        G[parent][child]['right'] = True
+                        right_child_assigned = True
+                    elif not left_child_assigned and right_child_assigned:
+                        G[parent][child]['left'] = True
+                        left_child_assigned = True
+                    else:
+                        raise RuntimeError('Unexpected condition: More than two child nodes assigned.')
                     next_level.append(child)
                     node_count += 1
                     next_level_num += 1
-            current_level_num -= 1
+            current_level_num-=1
         current_level = next_level
-
     if node_count < N:
         print(f"Only {node_count} nodes were constructed for {M} level, fewer than requested {N}.")
     return G
 
 
 if __name__ == "__main__":
-    from literalizer import edge_presentation, hierarchy_presentation
+    from literalizer import edge_presentation, binary_edge_presentation, binary_hierarchy_presentation, hierarchy_presentation
     generator = Generator()
     scales = {
-        "easy": {"D": [3], "L": [3]},
-        "medium": {"D": [4], "L": [3]},
-        "hard": {"D": [5], "L": [5]},
+        "easy": {"D": [2], "L": [3]},
+        "medium": {"D": [2], "L": [3]},
+        "hard": {"D": [2], "L": [5]},
     }
-    for difficulty, dataset in generator(2, scales, balance=False, weights=[1, 10], binary=False):
+    for difficulty, dataset in generator(1, scales, balance=True, weights=[1, 10], binary=True):
         print(difficulty)
         for (N, M, MAX_D), graphs in dataset.items():
             print(f"N={N}, M={M}, MAX_D={MAX_D}")
             for graph in graphs:
                 # print(edge_presentation(graph))
-                print(hierarchy_presentation(graph))
+                print(binary_edge_presentation(graph))
                 print()
         print()
