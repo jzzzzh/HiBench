@@ -28,6 +28,7 @@ class FundamentalPromptGenerator(PromptGenerator):
         super().__init__()
         self.dataset_name = 'Fundamental'
         self.sub_task = SubTask
+    
     def generate(self, data):
         SystemTemplate = self.config['Fundamental']['SystemTemplate']
         OutputFormatTemplate = self.config['Fundamental']['OutputFormatTemplate']
@@ -54,7 +55,7 @@ class FundamentalPromptGenerator(PromptGenerator):
         return SystemPrompt, UserPrompt, TrueAnswer
 
 
-class FundumantalDataLoader(TemplateDataLoader):
+class FundamentalDataLoader(TemplateDataLoader):
     def __init__(self, SubTask, TreeType, InputMode):
         super().__init__()
         self.dataset_name = 'Fundamental'

@@ -1,28 +1,50 @@
 Fundamental:
   SystemTemplate: "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
-  OutputFormatTemplate: "Please return the answer in JSON format directly like <OUTPUTFORMATE>  and do not feedback the detailed process."
+  OutputFormatTemplate: "Please return the answer in JSON format directly like <OUTPUTFORMATE> and do not feedback the detailed process."
   Task:
-    add_node:
-      PromptTemplate: "Given a hierarchical structure <TREE>, add a node to the tree."
-      OutputFormatTemplate: "{\"answer\": 1}"
-    common_ancestor:
-      PromptTemplate: "Given a hierarchical structure, "
-      OutputFormatTemplate: "{\"answer\": 1}"
-    isomorphic:
-      PromptTemplate: "Given two hierarchical structures, "
-      OutputFormatTemplate: "{\"answer\": 1}"
-    remove_node:
-      PrefixPromptTemplate: "Given a hierarchical structure, "
-      OutputFormatTemplate: "{\"answer\": 1}"
-    node_depth:
-      PromptTemplate: "Given a hierarchical structure, "
-      OutputFormatTemplate: "{\"answer\": 1}"
-    leaf:
-      PromptTemplate: "Given a hierarchical structure, "
-      OutputFormatTemplate: "{\"answer\": 1}"
-    root:
-      PromptTemplate: "Given a hierarchical structure, "
-      OutputFormatTemplate: "{\"answer\": 1}"
+    Normal:
+      add_node:
+        PromptTemplate: "Given the hierarchical structure <STRUCTURE>, <QUESTION>."
+        OutputFormatTemplate: "{\"answer\": <new structure>} following the input structure format,"
+      common_ancestor:
+        PromptTemplate: "Given the hierarchical structure <STRUCTURE>, <QUESTION>"
+        OutputFormatTemplate: "{\"answer\": 1}, where 1 is the node ID,"
+      all_ancestor: null
+      all_children: null
+      isomorphic:
+        PromptTemplate: "Given the hierarchical structure <STRUCTURE_#0>, <QUESTION>"
+        OutputFormatTemplate: "{\"answer\": true} if it is isomorphic, or {\"answer\": false} if it is not,"
+      remove_node:
+        PrefixPromptTemplate: "Given the hierarchical structure <STRUCTURE>, <QUESTION>"
+        OutputFormatTemplate: "{\"answer\": <new structure>} following the input structure format,"
+      node_depth:
+        PromptTemplate: "Given the hierarchical structure <STRUCTURE>, <QUESTION>"
+        OutputFormatTemplate: "{\"answer\": 1}, where 1 is the node's depth,"
+      leaf:
+        PromptTemplate: "Given the hierarchical structure <STRUCTURE>, <QUESTION>"
+        OutputFormatTemplate: "{\"answer\": true} if it is leaf node, or {\"answer\": false} if it is not,"
+      root:
+        PromptTemplate: "Given the hierarchical structure <STRUCTURE>, <QUESTION>"
+        OutputFormatTemplate: "{\"answer\": 1}, where 1 is the node ID,"
+    Binary:
+      Balance: 
+        PromptTemplate: "Given the binary tree-liked hierarchical structure <STRUCTURE>, <QUESTION>"
+        OutputFormatTemplate: "{\"answer\": true} if it is a balance binary tree, or {\"answer\": false} if it is not,"
+      PrefixTraversal:
+        PromptTemplate: "Given the binary tree-liked hierarchical structure <STRUCTURE>, <QUESTION>"
+        OutputFormatTemplate: "{\"answer\": 1, 2, 3}, where 1, 2, and 3 are the node ID in prefix traversal order and split by comma,"
+      InfixTraversal:
+        PromptTemplate: "Given the binary tree-liked hierarchical structure <STRUCTURE>, <QUESTION>"
+        OutputFormatTemplate: "{\"answer\": 1, 2, 3}, where 1, 2, and 3 are the node ID in infix traversal order and split by comma,"
+      PostfixTraversal:
+        PromptTemplate: "Given the binary tree-liked hierarchical structure <STRUCTURE>, <QUESTION>"
+        OutputFormatTemplate: "{\"answer\": 1, 2, 3}, where 1, 2, and 3 are the node ID in postfix traversal order and split by comma,"
+      TraversalOrderVerification:
+        PromptTemplate: "Given the binary tree-liked hierarchical structure <STRUCTURE>, <QUESTION>"
+        OutputFormatTemplate: "{\"answer\": preorder} if it is the preorder, {\"answer\": inorder} if it is the inorder, and {\"answer\": postorder} if it is the postorder."
+      MirrorTree:
+        PromptTemplate: "Given the binary tree-liked hierarchical structure <STRUCTURE>, <QUESTION>"
+        OutputFormatTemplate: "{\"answer\": <new structure>} following the input structure format,"
 
 JSON:
   SystemTemplate: "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
