@@ -45,4 +45,4 @@ def Logo():
 
 if __name__ == '__main__':
     Logo()
-    # main()
+    main()
