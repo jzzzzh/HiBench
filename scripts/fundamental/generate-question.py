@@ -16,7 +16,7 @@ from generator.fundamental.literalizer import *
 
 def generate_normal_qa(structures) -> List[Dict[str, Any]]:
     datasets = list()
-    question_generators = [root_qa, leaf_qa, isomorphic_qa, node_depth_qa, add_node_qa, remove_node_qa, common_ancestor_qa]
+    question_generators = [root_qa, all_ancestor_qa, all_children_qa, leaf_qa, isomorphic_qa, node_depth_qa, add_node_qa, remove_node_qa, common_ancestor_qa]
     count = 0
     for structure_args, structure_list in structures.items():
         for structure in structure_list:

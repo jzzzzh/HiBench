@@ -7,14 +7,22 @@ Fundamental:
         PromptTemplate: "Given the hierarchical structure <STRUCTURE>, <QUESTION>."
         OutputFormatTemplate: "{\"answer\": <new structure>} following the input structure format,"
         OneshotExamplePrompt: "Here is one example."
-      FewshotExamplePrompt: "Here are a few examples."
+        FewshotExamplePrompt: "Here are a few examples."
+      all_ancestor: 
+        PromptTemplate: "Given the hierarchical structure <STRUCTURE>, <QUESTION>"
+        OutputFormatTemplate: "{\"answer\": 1, 2, 3}, where 1, 2, and 3 are the node ID of ancestors and split by comma, if there is no ancestors, please return {\"answer\": None}"
+        OneshotExamplePrompt: "Here is one example."
+        FewshotExamplePrompt: "Here are a few examples."
+      all_children:
+        PromptTemplate: "Given the hierarchical structure <STRUCTURE>, <QUESTION>"
+        OutputFormatTemplate: "{\"answer\": 1, 2, 3}, where 1, 2, and 3 are the node ID of children nodes and split by comma, if there is no children nodes, please return {\"answer\": None}"
+        OneshotExamplePrompt: "Here is one example."
+        FewshotExamplePrompt: "Here are a few examples."
       common_ancestor:
         PromptTemplate: "Given the hierarchical structure <STRUCTURE>, <QUESTION>"
         OutputFormatTemplate: "{\"answer\": 1}, where 1 is the node ID,"
         OneshotExamplePrompt: "Here is one example."
         FewshotExamplePrompt: "Here are a few examples."
-      all_ancestor: null
-      all_children: null
       isomorphic:
         PromptTemplate: "Given the hierarchical structure <STRUCTURE_#0>, <QUESTION>"
         OutputFormatTemplate: "{\"answer\": true} if it is isomorphic, or {\"answer\": false} if it is not,"
@@ -43,7 +51,8 @@ Fundamental:
     Binary:
       Balance: 
         PromptTemplate: "Given the binary tree-liked hierarchical structure <STRUCTURE>, <QUESTION>"
-        OutputFormatTemplate: "{\"answer\": true} if it is a balance binary tree, or {\"answer\": false} if it is not,"
+        OutputFormaOneshotExamplePrompt: "Here is one example."
+        FewshotExamplePrompt: "Here are a few examples."tTemplate: "{\"answer\": true} if it is a balance binary tree, or {\"answer\": false} if it is not,"
         OneshotExamplePrompt: "Here is one example."
         FewshotExamplePrompt: "Here are a few examples."
       PrefixTraversal:
@@ -66,7 +75,8 @@ Fundamental:
         OutputFormatTemplate: "{\"answer\": preorder} if it is the preorder, {\"answer\": inorder} if it is the inorder, and {\"answer\": postorder} if it is the postorder."
         OneshotExamplePrompt: "Here is one example."
         FewshotExamplePrompt: "Here are a few examples."
-      MirrorTree:
+      MirrorTree:OneshotExamplePrompt: "Here is one example."
+        FewshotExamplePrompt: "Here are a few examples."
         PromptTemplate: "Given the binary tree-liked hierarchical structure <STRUCTURE>, <QUESTION>"
         OutputFormatTemplate: "{\"answer\": <new structure>} following the input structure format,"
         OneshotExamplePrompt: "Here is one example."

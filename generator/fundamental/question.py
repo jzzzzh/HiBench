@@ -14,6 +14,21 @@ def add_node_qa(G):
         'add_node_A_H': hierarchy_presentation(ref_ans),
     }
     
+def all_ancestor_qa(G):
+    q_node = random.sample(list(G.nodes), 1)[0]
+    ref_ans = all_ancestor(G, q_node)
+    return {
+        'all_ancestor_Q': f'please find out all the ancestor of node {q_node}.',
+        'all_ancestor_A': ', '.join(map(str, ref_ans)) if ref_ans else 'None'
+    }
+    
+def all_children_qa(G):
+    q_node = random.sample(list(G.nodes), 1)[0]
+    ref_ans = all_children(G, q_node)
+    return {
+        'all_children_Q': f'please find out all the children of node {q_node}.',
+        'all_children_A': ', '.join(map(str, ref_ans)) if ref_ans else 'None'
+    }
     
 def common_ancestor_qa(tree):
     q_nodes = random.sample(list(tree.nodes), 2)
