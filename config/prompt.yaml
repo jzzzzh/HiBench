@@ -6,45 +6,72 @@ Fundamental:
       add_node:
         PromptTemplate: "Given the hierarchical structure <STRUCTURE>, <QUESTION>."
         OutputFormatTemplate: "{\"answer\": <new structure>} following the input structure format,"
+        OneshotExamplePrompt: "Here is one example."
+      FewshotExamplePrompt: "Here are a few examples."
       common_ancestor:
         PromptTemplate: "Given the hierarchical structure <STRUCTURE>, <QUESTION>"
         OutputFormatTemplate: "{\"answer\": 1}, where 1 is the node ID,"
+        OneshotExamplePrompt: "Here is one example."
+        FewshotExamplePrompt: "Here are a few examples."
       all_ancestor: null
       all_children: null
       isomorphic:
         PromptTemplate: "Given the hierarchical structure <STRUCTURE_#0>, <QUESTION>"
         OutputFormatTemplate: "{\"answer\": true} if it is isomorphic, or {\"answer\": false} if it is not,"
+        OneshotExamplePrompt: "Here is one example."
+        FewshotExamplePrompt: "Here are a few examples."
       remove_node:
         PrefixPromptTemplate: "Given the hierarchical structure <STRUCTURE>, <QUESTION>"
         OutputFormatTemplate: "{\"answer\": <new structure>} following the input structure format,"
+        OneshotExamplePrompt: "Here is one example."
+        FewshotExamplePrompt: "Here are a few examples."
       node_depth:
         PromptTemplate: "Given the hierarchical structure <STRUCTURE>, <QUESTION>"
         OutputFormatTemplate: "{\"answer\": 1}, where 1 is the node's depth,"
+        OneshotExamplePrompt: "Here is one example."
+        FewshotExamplePrompt: "Here are a few examples."
       leaf:
         PromptTemplate: "Given the hierarchical structure <STRUCTURE>, <QUESTION>"
         OutputFormatTemplate: "{\"answer\": true} if it is leaf node, or {\"answer\": false} if it is not,"
+        OneshotExamplePrompt: "Here is one example."
+        FewshotExamplePrompt: "Here are a few examples."
       root:
         PromptTemplate: "Given the hierarchical structure <STRUCTURE>, <QUESTION>"
         OutputFormatTemplate: "{\"answer\": 1}, where 1 is the node ID,"
+        OneshotExamplePrompt: "Here is one example."
+        FewshotExamplePrompt: "Here are a few examples."
     Binary:
       Balance: 
         PromptTemplate: "Given the binary tree-liked hierarchical structure <STRUCTURE>, <QUESTION>"
         OutputFormatTemplate: "{\"answer\": true} if it is a balance binary tree, or {\"answer\": false} if it is not,"
+        OneshotExamplePrompt: "Here is one example."
+        FewshotExamplePrompt: "Here are a few examples."
       PrefixTraversal:
         PromptTemplate: "Given the binary tree-liked hierarchical structure <STRUCTURE>, <QUESTION>"
         OutputFormatTemplate: "{\"answer\": 1, 2, 3}, where 1, 2, and 3 are the node ID in prefix traversal order and split by comma,"
+        OneshotExamplePrompt: "Here is one example."
+        FewshotExamplePrompt: "Here are a few examples."
       InfixTraversal:
         PromptTemplate: "Given the binary tree-liked hierarchical structure <STRUCTURE>, <QUESTION>"
         OutputFormatTemplate: "{\"answer\": 1, 2, 3}, where 1, 2, and 3 are the node ID in infix traversal order and split by comma,"
+        OneshotExamplePrompt: "Here is one example."
+        FewshotExamplePrompt: "Here are a few examples."
       PostfixTraversal:
         PromptTemplate: "Given the binary tree-liked hierarchical structure <STRUCTURE>, <QUESTION>"
         OutputFormatTemplate: "{\"answer\": 1, 2, 3}, where 1, 2, and 3 are the node ID in postfix traversal order and split by comma,"
+        OneshotExamplePrompt: "Here is one example."
+        FewshotExamplePrompt: "Here are a few examples."
       TraversalOrderVerification:
         PromptTemplate: "Given the binary tree-liked hierarchical structure <STRUCTURE>, <QUESTION>"
         OutputFormatTemplate: "{\"answer\": preorder} if it is the preorder, {\"answer\": inorder} if it is the inorder, and {\"answer\": postorder} if it is the postorder."
+        OneshotExamplePrompt: "Here is one example."
+        FewshotExamplePrompt: "Here are a few examples."
       MirrorTree:
         PromptTemplate: "Given the binary tree-liked hierarchical structure <STRUCTURE>, <QUESTION>"
         OutputFormatTemplate: "{\"answer\": <new structure>} following the input structure format,"
+        OneshotExamplePrompt: "Here is one example."
+        FewshotExamplePrompt: "Here are a few examples."
+
 
 JSON:
   SystemTemplate: "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
@@ -53,18 +80,28 @@ JSON:
     Task1:
       PromptTemplate: "Given a JSON object <JSON>, <QUESTION>."
       OutputFormatTemplate: "{\"answer\": 1}"
+      OneshotExamplePrompt: "Here is one example."
+      FewshotExamplePrompt: "Here are a few examples."
     Task2:
       PromptTemplate: "Given a JSON object <JSON>, <QUESTION>."
       OutputFormatTemplate: "{\"answer\": \"Employees\"}"
+      OneshotExamplePrompt: "Here is one example."
+      FewshotExamplePrompt: "Here are a few examples."
     Task3:
       PromptTemplate: "Given a JSON object <JSON>, <QUESTION>."
       OutputFormatTemplate: "{\"answer\": 1}"
+      OneshotExamplePrompt: "Here is one example."
+      FewshotExamplePrompt: "Here are a few examples."
     Task4:
       PromptTemplate: "Given a JSON object <JSON>, <QUESTION>."
       OutputFormatTemplate: "{\"answer\": \"True\"}"
+      OneshotExamplePrompt: "Here is one example."
+      FewshotExamplePrompt: "Here are a few examples."
     Task5:
       PromptTemplate: "Given a JSON object <JSON>, <QUESTION>."
       OutputFormatTemplate: "{\"answer\": \"XXX\"}"
+      OneshotExamplePrompt: "Here is one example."
+      FewshotExamplePrompt: "Here are a few examples."
 
 Formula:
   SystemTemplate: "As an AI agent, you are tasked with performing mathematical reasoning to assist in solving complex mathematical problems."
@@ -73,12 +110,18 @@ Formula:
     Calculation:
       PromptTemplate: "Given a mathematical formula <FORMULA>, calculate its result."
       OutputFormatTemplate: "{\"answer\": 1}"
+      OneshotExamplePrompt: "Here is one example."
+      FewshotExamplePrompt: "Here are a few examples."
     Convert:
       PromptTemplate: "Given a mathematical <FORMAT1> formula <FORMULA>, convert it to <FORMAT2> notation."
       OutputFormatTemplate: "{\"answer\": 319 * 924.20 * ( ( 460 + 352.48 ) + 98 )}"
+      OneshotExamplePrompt: "Here is one example."
+      FewshotExamplePrompt: "Here are a few examples."
     Equation:
       PromptTemplate: "Given two mathematical formulas <FORMULA1> and <FORMULA2>, determine if they are equivalent."
       OutputFormatTemplate: "{\"answer\": \"True\"}"
+      OneshotExamplePrompt: "Here is one example."
+      FewshotExamplePrompt: "Here are a few examples."
 
 Code:
   SystemTemplate: "As an AI agent, you are tasked with performing code reasoning to assist in understanding and analyzing complex code snippets."
@@ -87,12 +130,18 @@ Code:
     SpaceComplexity:
       PromptTemplate: "Given a code snippet <CODE>, calculate its space complexity."
       OutputFormatTemplate: "{\"answer\":  O(1)}"
+      OneshotExamplePrompt: "Here is one example."
+      FewshotExamplePrompt: "Here are a few examples."
     TimeComplexity:
       PromptTemplate: "Given a code snippet <CODE>, calculate its time complexity."
       OutputFormatTemplate: "{\"answer\":  O(n)}"
+      OneshotExamplePrompt: "Here is one example."
+      FewshotExamplePrompt: "Here are a few examples."
     CodeMissing:
       PromptTemplate: "Given a code snippet <CODE>, please find and write the missing code."
       OutputFormatTemplate: "{\"answer\": \"Line 10: result.append('D' * max(y1-y, 0))\"}"
+      OneshotExamplePrompt: "Here is one example."
+      FewshotExamplePrompt: "Here are a few examples."
 
 Paper:
   SystemTemplate: "As an AI agent, you are tasked with performing paper reasoning to assist in understanding and analyzing complex academic papers."
@@ -101,9 +150,15 @@ Paper:
     contextual_qa:
       PromptTemplate: "<QUESTION>"
       OutputFormatTemplate: "{\"answer\": \"XXX\"}"
+      OneshotExamplePrompt: "Here is one example."
+      FewshotExamplePrompt: "Here are a few examples."
     disordered_section:
       PromptTemplate: "<QUESTION>"
       OutputFormatTemplate: "{\"answer\": \"XXX\"}"
+      OneshotExamplePrompt: "Here is one example."
+      FewshotExamplePrompt: "Here are a few examples."
     outline_extraction:
       PromptTemplate: "<QUESTION>"
       OutputFormatTemplate: "{\"answer\": \"XXX\"}"
+      OneshotExamplePrompt: "Here is one example."
+      FewshotExamplePrompt: "Here are a few examples."

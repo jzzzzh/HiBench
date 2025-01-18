@@ -4,8 +4,8 @@ from tqdm import tqdm
 import os
 def main():
 
-    EvalList = [{'Task':'Code', 'SubTask': 'CodeMissing', 'type': 'c++'},
-                {'Task':'Code', 'SubTask': 'SpaceComplexity', 'type': 'python'}]
+    EvalList = [{'Task':'Code', 'SubTask': 'CodeMissing', 'type': 'c++', 'ExampleType':'OneShot'},
+                {'Task':'Code', 'SubTask': 'SpaceComplexity', 'type': 'python', 'ExampleType':'FewShot'}]
     # EvalList = [{'Task':'Code', 'SubTask': 'CodeMissing', 'type': 'c++'},
     #             {'Task': 'JSON', 'SubTask': 'type_1', 'Domain': 'university'},
     #             {'Task': 'Formula', 'SubTask': 'convert', 'Mode': 'Simple', 'format1':'Infix', 'format2':'Postfix'},
@@ -30,7 +30,18 @@ def main():
             Hibenchdataloader.save_data(data, model_name=model, args=Eval)
             
 
-    
+
+def Logo():
+    text=(
+        "\033[91m    __  ___ ____                  __  \033[0m\n"
+        "\033[92m   / / / (_) __ )___  ____  _____/ /_ \033[0m\n"
+        "\033[93m  / /_/ / / __  / _ \/ __ \/ ___/ __ \\ \033[0m\n"
+        "\033[94m / __  / / /_/ /  __/ / / / /__/ / / / \033[0m\n"
+        "\033[95m/_/ /_/_/_____/\___/_/ /_/\___/_/ /_/  \033[0m"
+    )
+    print(text)
+
+
 if __name__ == '__main__':
-    os.execl('/bin/bash', '/bin/bash', '-c', './Hibench.sh')
-    main()
+    Logo()
+    # main()

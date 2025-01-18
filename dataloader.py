@@ -2,13 +2,15 @@ import json
 import os
 import yaml
 import csv
-
+from datetime import datetime
 class TemplateDataLoader:
     def __init__(self):
         config_path = os.path.join(os.path.dirname(__file__), 'config/config.yaml')
         with open(config_path, 'r') as file:
             self.config = yaml.safe_load(file)
-
+        prompt_config_path = os.path.join(os.path.dirname(__file__), 'config/prompt.yaml')
+        with open(prompt_config_path, 'r') as file:
+            self.prompt_config = yaml.safe_load(file)
     def load_data(self):
         pass
 
@@ -56,14 +58,20 @@ class FundamentalPromptGenerator(PromptGenerator):
 
 
 class FundamentalDataLoader(TemplateDataLoader):
-    def __init__(self, SubTask, TreeType, InputMode):
+    def __init__(self, args):
         super().__init__()
         self.dataset_name = 'Fundamental'
         self.dataset_dir = self.config['Dataset']['Fundamental']['Dir']
-        self.data_generator = FundamentalPromptGenerator(SubTask)
-        self.sub_task = SubTask
-        self.tree_type = TreeType
-        self.input_mode = InputMode
+        self.data_generator = FundamentalPromptGenerator(args["SubTask"])
+        self.sub_task = args["SubTask"]
+        self.tree_type = args["TreeType"]
+        self.input_mode = args["InputMode"]
+        if 'ExampleType' in args:
+            self.example_type = args['ExampleType']
+        else:
+            self.example_type = "None"
+        # TODO: Implement subtasks
+        # self.dict = {"add_node":"add_node", "common_ancestor":"common_ancestor", "isomorphic":"isomorphic", "remove_node":"remove_node", "node_depth":"node_depth", "leaf":"leaf", "root":"root"}
 
     def load_data(self):
         # TODO: Implement input_mode
@@ -74,6 +82,15 @@ class FundamentalDataLoader(TemplateDataLoader):
         #     print(SystemPrompt)
         #     print(UserPrompt)
         #     print(TrueAnswer)
+        #     if example_type == "OneShot":
+        #       ExamplePrompt = self.prompt_config['Fundamental']['Task'][f'{self.dict[self.sub_task]}']['OneshotExamplePrompt']                
+        #       UserPrompt = ExamplePrompt + UserPrompt
+        #     elif example_type == "FewShot":
+        #       ExamplePrompt = self.prompt_config['Fundamental']['Task'][f'{self.dict[self.sub_task]}']['FewshotExamplePrompt']
+        #       UserPrompt = ExamplePrompt + UserPrompt
+        #     elif example_type == "ZeroShot" or example_type == "None":
+        #         pass
+        pass
         return 
 
 class JSONPromptGenerator(PromptGenerator):
@@ -91,29 +108,29 @@ class JSONPromptGenerator(PromptGenerator):
             PromptTemplate = PromptTemplate.replace('<QUESTION>', data['question'])
             TrueAnswer = data['true_answer']
         elif self.sub_task == 'type_2':
-            OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['JSON']['Task']['Task1']['OutputFormatTemplate'])
+            OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['JSON']['Task']['Task2']['OutputFormatTemplate'])
             PromptTemplate = self.config['JSON']['Task']['Task2']['PromptTemplate']
             PromptTemplate = PromptTemplate.replace('<JSON>', json.dumps(data['json']))
             PromptTemplate = PromptTemplate.replace('<QUESTION>', data['question'])
             TrueAnswer = data['true_answer']
         elif self.sub_task == 'type_3':
-            OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['JSON']['Task']['Task1']['OutputFormatTemplate'])
+            OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['JSON']['Task']['Task3']['OutputFormatTemplate'])
             PromptTemplate = self.config['JSON']['Task']['Task3']['PromptTemplate']
             PromptTemplate = PromptTemplate.replace('<JSON>', json.dumps(data['json']))
             PromptTemplate = PromptTemplate.replace('<QUESTION>', data['question'])
             TrueAnswer = data['true_answer']
         elif self.sub_task == 'type_4':
-            OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['JSON']['Task']['Task1']['OutputFormatTemplate'])
+            OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['JSON']['Task']['Task4']['OutputFormatTemplate'])
             PromptTemplate = self.config['JSON']['Task']['Task4']['PromptTemplate']
             PromptTemplate = PromptTemplate.replace('<JSON>', json.dumps(data['json']))
             PromptTemplate = PromptTemplate.replace('<QUESTION>', data['question'])
             TrueAnswer = data['true_answer']
         elif self.sub_task == 'type_5':
-            OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['JSON']['Task']['Task1']['OutputFormatTemplate'])
+            OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['JSON']['Task']['Task5']['OutputFormatTemplate'])
             PromptTemplate = self.config['JSON']['Task']['Task5']['PromptTemplate']
             PromptTemplate = PromptTemplate.replace('<JSON>', json.dumps(data['json']))
             PromptTemplate = PromptTemplate.replace('<QUESTION>', data['question'])
-            TrueAnswer = data['true_answer']
+            TrueAnswer = data['true_answer']            
         SystemPrompt = SystemTemplate
         UserPrompt = PromptTemplate + OutputFormatTemplate
         return SystemPrompt, UserPrompt, TrueAnswer
@@ -129,6 +146,11 @@ class JSONDataLoader(TemplateDataLoader):
         self.data_generator = JSONPromptGenerator(SubTask)
         self.sub_task = SubTask
         self.domain = Domain
+        self.dict = {"type_1":"Task1", "type_2":"Task2", "type_3":"Task3", "type_4":"Task4", "type_5":"Task5"}
+        if 'ExampleType' in args:
+            self.example_type = args['ExampleType']
+        else:
+            self.example_type = "None"
         self.data = []
     def load_data(self):
         ans_json_file = os.path.join(self.dataset_dir, f"{self.domain}/{self.sub_task}.json")
@@ -143,6 +165,14 @@ class JSONDataLoader(TemplateDataLoader):
             input_data['question'] = data['question']
             input_data['true_answer'] = data['answer']
             SystemPrompt, UserPrompt, TrueAnswer = self.data_generator.generate(input_data)
+            if self.example_type == "OneShot":
+                ExamplePrompt = self.prompt_config['JSON']['Task'][f'{self.dict[self.sub_task]}']['OneshotExamplePrompt']                
+                UserPrompt = ExamplePrompt + UserPrompt
+            elif self.example_type == "FewShot":
+                ExamplePrompt = self.prompt_config['JSON']['Task'][f'{self.dict[self.sub_task]}']['FewshotExamplePrompt']
+                UserPrompt = ExamplePrompt + UserPrompt
+            elif self.example_type == "ZeroShot" or self.example_type == "None":
+                pass
             self.data.append({'SystemPrompt': SystemPrompt, 'UserPrompt': UserPrompt, 'TrueAnswer': TrueAnswer})
         return self.data
     def get_data(self):
@@ -198,12 +228,16 @@ class FormulaDataLoader(TemplateDataLoader):
             self.format2 = args['format2']
         elif SubTask == 'calculate':
             self.format = args['format']
-
+        self.dict = {"calculate":"Calculation", "convert":"Convert", "equivalent":"Equation"}
+        if 'ExampleType' in args:
+            self.example_type = args['ExampleType']
+        else:
+            self.example_type = "None"
+        
         self.Mode = Mode
         self.data = []
     
     def load_data(self):
-
         if self.sub_task == 'calculate':
             ans_json_file = os.path.join(self.dataset_dir, f"{self.sub_task}/{self.format}_{self.Mode}.csv")
             with open(ans_json_file, 'r') as file:
@@ -215,6 +249,14 @@ class FormulaDataLoader(TemplateDataLoader):
                 input_data['formula'] = data['Formula']
                 input_data['true_answer'] = data['Result']
                 SystemPrompt, UserPrompt, TrueAnswer = self.data_generator.generate(input_data)
+                if self.example_type == "OneShot":
+                    ExamplePrompt = self.prompt_config['Formula']['Task'][f'{self.dict[self.sub_task]}']['OneshotExamplePrompt']                
+                    UserPrompt = ExamplePrompt + UserPrompt
+                elif self.example_type == "FewShot":
+                    ExamplePrompt = self.prompt_config['Formula']['Task'][f'{self.dict[self.sub_task]}']['FewshotExamplePrompt']
+                    UserPrompt = ExamplePrompt + UserPrompt
+                elif self.example_type == "ZeroShot" or self.example_type == "None":
+                    pass
                 self.data.append({'SystemPrompt': SystemPrompt, 'UserPrompt': UserPrompt, 'TrueAnswer': TrueAnswer})
         elif self.sub_task == 'convert':
             ans_json_file = os.path.join(self.dataset_dir, f"{self.sub_task}/{self.format1}_{self.format2}_{self.Mode}.csv")
@@ -228,6 +270,14 @@ class FormulaDataLoader(TemplateDataLoader):
                 input_data['format1'] = self.format1
                 input_data['format2'] = self.format2
                 SystemPrompt, UserPrompt, TrueAnswer = self.data_generator.generate(input_data)
+                if self.example_type == "OneShot":
+                    ExamplePrompt = self.prompt_config['Formula']['Task'][f'{self.dict[self.sub_task]}']['OneshotExamplePrompt']                
+                    UserPrompt = ExamplePrompt + UserPrompt
+                elif self.example_type == "FewShot":
+                    ExamplePrompt = self.prompt_config['Formula']['Task'][f'{self.dict[self.sub_task]}']['FewshotExamplePrompt']
+                    UserPrompt = ExamplePrompt + UserPrompt
+                elif self.example_type == "ZeroShot" or self.example_type == "None":
+                    pass
                 self.data.append({'SystemPrompt': SystemPrompt, 'UserPrompt': UserPrompt, 'TrueAnswer': TrueAnswer})
         elif self.sub_task == 'equivalent':
             if self.format1 != self.format2:
@@ -245,6 +295,14 @@ class FormulaDataLoader(TemplateDataLoader):
                 input_data['format2'] = self.format2
                 input_data['true_answer'] = data['Is_Equivalent']
                 SystemPrompt, UserPrompt, TrueAnswer = self.data_generator.generate(input_data)
+                if self.example_type == "OneShot":
+                    ExamplePrompt = self.prompt_config['Formula']['Task'][f'{self.dict[self.sub_task]}']['OneshotExamplePrompt']                
+                    UserPrompt = ExamplePrompt + UserPrompt
+                elif self.example_type == "FewShot":
+                    ExamplePrompt = self.prompt_config['Formula']['Task'][f'{self.dict[self.sub_task]}']['FewshotExamplePrompt']
+                    UserPrompt = ExamplePrompt + UserPrompt
+                elif self.example_type == "ZeroShot" or self.example_type == "None":
+                    pass
                 self.data.append({'SystemPrompt': SystemPrompt, 'UserPrompt': UserPrompt, 'TrueAnswer': TrueAnswer})
         return self.data
     
@@ -255,7 +313,7 @@ class FormulaDataLoader(TemplateDataLoader):
 
 
 class CodePromptGenerator(PromptGenerator):
-    def __inHibenchdataloaderit__(self, SubTask):
+    def __init__(self, SubTask):
         super().__init__()
         self.dataset_name = 'Code'
         self.sub_task = SubTask
@@ -292,8 +350,13 @@ class CodeDataLoader(TemplateDataLoader):
         self.data_generator = CodePromptGenerator(SubTask)
         self.sub_task = SubTask
         self.Domain = Domain
+        self.dict = {"SpaceComplexity":"SpaceComplexity", "TimeComplexity":"TimeComplexity", "CodeMissing":"CodeMissing"}
         self.data = []
-    
+        if 'ExampleType' in args:
+            self.example_type = args['ExampleType']
+        else:
+            self.example_type = "None"
+
     def load_data(self):
         if self.sub_task == 'SpaceComplexity' or self.sub_task == 'TimeComplexity':
             ans_json_file = os.path.join(self.dataset_dir, f"{self.Domain}Selected/answer.json")
@@ -314,6 +377,14 @@ class CodeDataLoader(TemplateDataLoader):
                 elif self.sub_task == 'TimeComplexity':
                     input_data['true_answer'] = data['time']
                 SystemPrompt, UserPrompt, TrueAnswer = self.data_generator.generate(input_data)
+                if self.example_type == "OneShot":
+                    ExamplePrompt = self.prompt_config['Code']['Task'][f'{self.dict[self.sub_task]}']['OneshotExamplePrompt']                
+                    UserPrompt = ExamplePrompt + UserPrompt
+                elif self.example_type == "FewShot":
+                    ExamplePrompt = self.prompt_config['Code']['Task'][f'{self.dict[self.sub_task]}']['FewshotExamplePrompt']
+                    UserPrompt = ExamplePrompt + UserPrompt
+                elif self.example_type == "ZeroShot" or self.example_type == "None":
+                    pass
                 self.data.append({'SystemPrompt': SystemPrompt, 'UserPrompt': UserPrompt, 'TrueAnswer': TrueAnswer})
         elif self.sub_task == 'CodeMissing':
             code_dir = os.path.join(self.dataset_dir, f"{self.Domain}Missing/code")
@@ -332,6 +403,14 @@ class CodeDataLoader(TemplateDataLoader):
                 input_data['code'] = code
                 input_data['true_answer'] = ans
                 SystemPrompt, UserPrompt, TrueAnswer = self.data_generator.generate(input_data)
+                if self.example_type == "OneShot":
+                    ExamplePrompt = self.prompt_config['Code']['Task'][f'{self.dict[self.sub_task]}']['OneshotExamplePrompt']                
+                    UserPrompt = ExamplePrompt + UserPrompt
+                elif self.example_type == "FewShot":
+                    ExamplePrompt = self.prompt_config['Code']['Task'][f'{self.dict[self.sub_task]}']['FewshotExamplePrompt']
+                    UserPrompt = ExamplePrompt + UserPrompt
+                elif self.example_type == "ZeroShot" or self.example_type == "None":
+                    pass
                 self.data.append({'SystemPrompt': SystemPrompt, 'UserPrompt': UserPrompt, 'TrueAnswer': TrueAnswer})
         return self.data
     
@@ -380,7 +459,11 @@ class PaperDataLoder(TemplateDataLoader):
         self.sub_task = SubTask
         self.Mode = Mode
         self.data = []
-    
+        if 'ExampleType' in args:
+            self.example_type = args['ExampleType']
+        else:
+            self.example_type = "None"
+        self.dict = {"contextual_qa":"contextual_qa", "disordered_section":"disordered_section", "outline_extraction":"outline_extraction"}
     def load_data(self):
         if self.sub_task == 'contextual_qa':
             ans_json_file = os.path.join(self.dataset_dir, f"contextual_qa/{self.Mode}.json")
@@ -391,6 +474,14 @@ class PaperDataLoder(TemplateDataLoader):
                 input_data['question'] = data['question']
                 input_data['true_answer'] = "{answer:"+ str(data['answer']['references']) +"}"
                 SystemPrompt, UserPrompt, TrueAnswer = self.data_generator.generate(input_data)
+                if self.example_type == "OneShot":
+                    ExamplePrompt = self.prompt_config['Paper']['Task'][f'{self.dict[self.sub_task]}']['OneshotExamplePrompt']                
+                    UserPrompt = ExamplePrompt + UserPrompt
+                elif self.example_type == "FewShot":
+                    ExamplePrompt = self.prompt_config['Paper']['Task'][f'{self.dict[self.sub_task]}']['FewshotExamplePrompt']
+                    UserPrompt = ExamplePrompt + UserPrompt
+                elif self.example_type == "ZeroShot" or self.example_type == "None":
+                    pass
                 self.data.append({'SystemPrompt': SystemPrompt, 'UserPrompt': UserPrompt, 'TrueAnswer': TrueAnswer})
         elif self.sub_task == 'disordered_section':
             ans_json_file = os.path.join(self.dataset_dir, f"disordered_section/{self.Mode}.json")
@@ -401,6 +492,14 @@ class PaperDataLoder(TemplateDataLoader):
                 input_data['question'] = data['question']
                 input_data['true_answer'] = "{answer:"+str(data['answer']['references'])+"}"
                 SystemPrompt, UserPrompt, TrueAnswer = self.data_generator.generate(input_data)
+                if self.example_type == "OneShot":
+                    ExamplePrompt = self.prompt_config['Paper']['Task'][f'{self.dict[self.sub_task]}']['OneshotExamplePrompt']                
+                    UserPrompt = ExamplePrompt + UserPrompt
+                elif self.example_type == "FewShot":
+                    ExamplePrompt = self.prompt_config['Paper']['Task'][f'{self.dict[self.sub_task]}']['FewshotExamplePrompt']
+                    UserPrompt = ExamplePrompt + UserPrompt
+                elif self.example_type == "ZeroShot" or self.example_type == "None":
+                    pass
                 self.data.append({'SystemPrompt': SystemPrompt, 'UserPrompt': UserPrompt, 'TrueAnswer': TrueAnswer})
         elif self.sub_task == 'outline_extraction':
             ans_json_file = os.path.join(self.dataset_dir, f"outline_extraction/{self.Mode}.json")
@@ -411,8 +510,17 @@ class PaperDataLoder(TemplateDataLoader):
                 input_data['question'] = data['question']
                 input_data['true_answer'] = "{answer:"+ str(data['answer']['references']) + "}"
                 SystemPrompt, UserPrompt, TrueAnswer = self.data_generator.generate(input_data)
+                if self.example_type == "OneShot":
+                    ExamplePrompt = self.prompt_config['Paper']['Task'][f'{self.dict[self.sub_task]}']['OneshotExamplePrompt']                
+                    UserPrompt = ExamplePrompt + UserPrompt
+                elif self.example_type == "FewShot":
+                    ExamplePrompt = self.prompt_config['Paper']['Task'][f'{self.dict[self.sub_task]}']['FewshotExamplePrompt']
+                    UserPrompt = ExamplePrompt + UserPrompt
+                elif self.example_type == "ZeroShot" or self.example_type == "None":
+                    pass
                 self.data.append({'SystemPrompt': SystemPrompt, 'UserPrompt': UserPrompt, 'TrueAnswer': TrueAnswer})
-        return self.data
+        return self.data       
+        
     
     def get_data(self):
         return self.data
@@ -429,9 +537,10 @@ class HibenchDataLoder(TemplateDataLoader):
         elif Task == "JSON":
             self.data_loader = JSONDataLoader(args)
         elif Task == "Formula":
-            self.data_loader = FormulaDataLoader(args) 
+            self.data_loader = FormulaDataLoader(args)
         elif Task == "Paper":
             self.data_loader = PaperDataLoder(args)
+
     def load_data(self):
         return self.data_loader.load_data()
     def save_data(self, data, model_name, args):
@@ -440,10 +549,23 @@ class HibenchDataLoder(TemplateDataLoader):
         Save_dir = os.path.join(self.config["Eval"]["SaveDir"], Task_name, SubTask_name, model_name)
         os.makedirs(Save_dir, exist_ok=True)
         json_name = '_'.join([f"{key}_{value}" for key, value in args.items()])
-        file_name = f"{json_name}.json"
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        file_name = f"{json_name}_{timestamp}.json"
+        # file_name = f"{json_name}.json"
         with open(os.path.join(Save_dir, file_name), 'w') as file:
             json.dump(data, file)
  
-        
+
+def test_dataloader():
+    # args = {'Task':'Code', 'SubTask': 'SpaceComplexity', 'type': 'python', 'ExampleType':'OneShot'}
+    # args = {'Task': 'JSON', 'SubTask': 'type_1', 'Domain': 'university', 'ExampleType':'OneShot'}
+    args = {'Task': 'Formula', 'SubTask': 'convert', 'Mode': 'Simple', 'format1':'Infix', 'format2':'Postfix', 'ExampleType':'FewShot'}
+    # args = {'Task': 'Paper', 'SubTask': 'contextual_qa', 'Mode': 'dev', 'ExampleType':'OneShot'}
+    data_loader = HibenchDataLoder(args)
+    data = data_loader.load_data()
+    print(data)
+
+
 if __name__ == '__main__':
     print("This is dataloader.py")
+    test_dataloader()
