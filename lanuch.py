@@ -1,7 +1,9 @@
 from dataloader import *
 from call_llms import *
 from tqdm import tqdm
+import os
 def main():
+
     EvalList = [{'Task':'Code', 'SubTask': 'CodeMissing', 'type': 'c++'},
                 {'Task':'Code', 'SubTask': 'SpaceComplexity', 'type': 'python'}]
     # EvalList = [{'Task':'Code', 'SubTask': 'CodeMissing', 'type': 'c++'},
@@ -30,4 +32,5 @@ def main():
 
     
 if __name__ == '__main__':
+    os.execl('/bin/bash', '/bin/bash', '-c', './Hibench.sh')
     main()
