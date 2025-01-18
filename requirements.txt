@@ -1,0 +1,17 @@
+huggingface_hub==0.26.5
+networkx==3.2.1
+networkx==3.3
+numpy==2.2.1
+openai==1.59.8
+pandas==2.2.3
+python-dotenv==1.0.1
+PyYAML==6.0.1
+PyYAML==6.0.2
+regex==2024.4.28
+regex==2024.7.24
+Requests==2.32.3
+torch==2.2.0+cu121
+torch==2.4.1+cu121
+tqdm==4.66.2
+tqdm==4.66.5
+transformers==4.47.0

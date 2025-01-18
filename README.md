@@ -77,6 +77,13 @@ However, more LLMs are currently being evaluated for improved our experiment.Mor
 - [ ] Check all datasets and add binary datasets
 
 ## Quick Start
+### Install HiBench
+```
+conda cretate -n HiBench python=3.11
+conda activate HiBench
+pip install -r requirements.txt
+```
+### Evaluation HiBench
 ```
 python ./launch.py
 ```
