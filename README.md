@@ -558,8 +558,8 @@ python ./launch.py
 - The Paper Task is mainly undertaken by _Xu Yuan_.
 - The Formula Task is mainly undertaken by _Jiancheng Tu_.
 
-## Acknowledge
-We sincerely appreciate [Prof. Hongxia Yang](https://scholar.google.com/citations?user=iJlC5mMAAAAJ&hl=en) for her constructive directions and suggestions.
+<!-- ## Acknowledge
+We sincerely appreciate [Prof. Hongxia Yang](https://scholar.google.com/citations?user=iJlC5mMAAAAJ&hl=en) for her constructive directions and suggestions. -->
 
 ## Citation
 If you find our work valuable and it has contributed to your research or projects, we kindly request that you cite our paper. Your recognition is a driving force for our continuous improvement and innovation🤗.

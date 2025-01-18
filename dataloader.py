@@ -255,7 +255,7 @@ class FormulaDataLoader(TemplateDataLoader):
 
 
 class CodePromptGenerator(PromptGenerator):
-    def __init__(self, SubTask):
+    def __inHibenchdataloaderit__(self, SubTask):
         super().__init__()
         self.dataset_name = 'Code'
         self.sub_task = SubTask
