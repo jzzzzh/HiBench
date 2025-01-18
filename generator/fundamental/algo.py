@@ -1,4 +1,5 @@
 import random
+from typing import List
 
 import networkx as nx
 
@@ -32,6 +33,14 @@ def add_node(G, node, parent) -> nx.Graph:
     G_result.add_node(node)
     G_result.add_edge(parent, node)
     return G_result
+
+
+def all_ancestor(G, node) -> List[str]:
+    return (list(G.predecessors(node)))
+
+
+def all_children(G, node):
+    return list(G.successors(node))
 
 
 def remove_node(G, node) -> nx.Graph:

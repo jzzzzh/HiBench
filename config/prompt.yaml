@@ -6,11 +6,15 @@ Fundamental:
       add_node:
         PromptTemplate: "Given the hierarchical structure <STRUCTURE>, <QUESTION>."
         OutputFormatTemplate: "{\"answer\": <new structure>} following the input structure format,"
+      all_ancestor: 
+        PromptTemplate: "Given the hierarchical structure <STRUCTURE>, <QUESTION>"
+        OutputFormatTemplate: "{\"answer\": 1, 2, 3}, where 1, 2, and 3 are the node ID of ancestors and split by comma, if there is no ancestors, please return {\"answer\": None}"
+      all_children:
+        PromptTemplate: "Given the hierarchical structure <STRUCTURE>, <QUESTION>"
+        OutputFormatTemplate: "{\"answer\": 1, 2, 3}, where 1, 2, and 3 are the node ID of children nodes and split by comma, if there is no children nodes, please return {\"answer\": None}"
       common_ancestor:
         PromptTemplate: "Given the hierarchical structure <STRUCTURE>, <QUESTION>"
         OutputFormatTemplate: "{\"answer\": 1}, where 1 is the node ID,"
-      all_ancestor: null
-      all_children: null
       isomorphic:
         PromptTemplate: "Given the hierarchical structure <STRUCTURE_#0>, <QUESTION>"
         OutputFormatTemplate: "{\"answer\": true} if it is isomorphic, or {\"answer\": false} if it is not,"
