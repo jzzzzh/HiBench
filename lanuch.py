@@ -40,8 +40,10 @@ def Logo():
         "\033[94m / __  / / /_/ /  __/ / / / /__/ / / / \033[0m\n"
         "\033[95m/_/ /_/_/_____/\___/_/ /_/\___/_/ /_/  \033[0m"
     )
-    print(text)
-
+    columns = os.get_terminal_size().columns
+    for line in text.split('\n'):
+        print(line.center(columns))
+    print("\n"*3)
 
 if __name__ == '__main__':
     Logo()
