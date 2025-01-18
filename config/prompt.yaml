@@ -51,8 +51,7 @@ Fundamental:
     Binary:
       Balance: 
         PromptTemplate: "Given the binary tree-liked hierarchical structure <STRUCTURE>, <QUESTION>"
-        OutputFormaOneshotExamplePrompt: "Here is one example."
-        FewshotExamplePrompt: "Here are a few examples."tTemplate: "{\"answer\": true} if it is a balance binary tree, or {\"answer\": false} if it is not,"
+        OutputFormatTemplate: "{\"answer\": true} if it is a balance binary tree, or {\"answer\": false} if it is not,"
         OneshotExamplePrompt: "Here is one example."
         FewshotExamplePrompt: "Here are a few examples."
       PrefixTraversal:
@@ -158,7 +157,8 @@ Paper:
   OutputFormatTemplate: "Please return the answer in JSON format directly like <OUTPUTFORMATE>  and do not feedback the detailed process."
   Task:
     contextual_qa:
-      PromptTemplate: "<QUESTION>"
+      PromptTemplate: "<QUESTION>"OneshotExamplePrompt: "Here is one example."
+        FewshotExamplePrompt: "Here are a few examples."
       OutputFormatTemplate: "{\"answer\": \"XXX\"}"
       OneshotExamplePrompt: "Here is one example."
       FewshotExamplePrompt: "Here are a few examples."

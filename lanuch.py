@@ -5,7 +5,8 @@ import os
 def main():
 
     EvalList = [{'Task':'Code', 'SubTask': 'CodeMissing', 'type': 'c++', 'ExampleType':'OneShot'},
-                {'Task':'Code', 'SubTask': 'SpaceComplexity', 'type': 'python', 'ExampleType':'FewShot'}]
+                {'Task':'Code', 'SubTask': 'SpaceComplexity', 'type': 'python', 'ExampleType':'FewShot'},
+                {'Task':'Code', 'SubTask': 'TimeComplexity', 'type': 'java', 'ExampleType':'ZeroShot'}]
     # EvalList = [{'Task':'Code', 'SubTask': 'CodeMissing', 'type': 'c++'},
     #             {'Task': 'JSON', 'SubTask': 'type_1', 'Domain': 'university'},
     #             {'Task': 'Formula', 'SubTask': 'convert', 'Mode': 'Simple', 'format1':'Infix', 'format2':'Postfix'},
