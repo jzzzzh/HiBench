@@ -1,13 +1,50 @@
+import heapq
+
+
 class Solution(object):
-    def alphabetBoardPath(self, target):
-        x, y = 0, 0
-        result = []
-        for c in target:
-            y1, x1 = divmod(ord(c)-ord('a'), 5)
-            result.append('U' * max(y-y1, 0))
-            result.append('L' * max(x-x1, 0))
-            result.append('R' * max(x1-x, 0))
-            result.append('D' * max(y1-y, 0))
-            result.append('!')
-            x, y = x1, y1
-        return "".join(result)
+    # @param {integer} n
+    # @return {integer}
+    def nthUglyNumber(self, n):
+        ugly_number = 0
+
+        heap = []
+        heapq.heappush(heap, 1)
+        for _ in xrange(n):
+            ugly_number = heapq.heappop(heap)
+            if ugly_number % 2 == 0:
+                heapq.heappush(heap, ugly_number * 2)
+            elif ugly_number % 3 == 0:
+                heapq.heappush(heap, ugly_number * 2)
+                heapq.heappush(heap, ugly_number * 3)
+            else:
+                heapq.heappush(heap, ugly_number * 2)
+                heapq.heappush(heap, ugly_number * 3)
+                heapq.heappush(heap, ugly_number * 5)
+
+        return ugly_number
+
+    def nthUglyNumber2(self, n):
+        ugly = [1]
+        i2 = i3 = i5 = 0
+        while len(ugly) < n:
+            while ugly[i2] * 2 <= ugly[-1]:
+                i2 += 1
+            while ugly[i3] * 3 <= ugly[-1]:
+                i3 += 1
+            while ugly[i5] * 5 <= ugly[-1]:
+                i5 += 1
+            ugly.append(min(ugly[i2] * 2, ugly[i3] * 3, ugly[i5] * 5))
+        return ugly[-1]
+
+    def nthUglyNumber3(self, n):
+        q2, q3, q5 = [2], [3], [5]
+        ugly = 1
+        for u in heapq.merge(q2, q3, q5):
+            if n == 1:
+                return ugly
+            if u > ugly:
+                ugly = u
+                n -= 1
+                q2 += (2 * u,)
+                q3 += (3 * u,)
+                q5 += (5 * u,)

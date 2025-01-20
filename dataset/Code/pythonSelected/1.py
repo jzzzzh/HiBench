@@ -1,28 +1,14 @@
-import collections
-
 class Solution(object):
-    def fourSum(self, nums, target):
-        nums.sort()
-        result = []
-        for i in xrange(len(nums) - 3):
-            if i and nums[i] == nums[i - 1]:
-                continue
-            for j in xrange(i + 1, len(nums) - 2):
-                if j != i + 1 and nums[j] == nums[j - 1]:
-                    continue
-                total = target - nums[i] - nums[j]
-                left, right = j + 1, len(nums) - 1
-                while left < right:
-                    if nums[left] + nums[right] == total:
-                        result.append([nums[i], nums[j], nums[left], nums[right]])
-                        right -= 1
-                        left += 1
-                        while left < right and nums[left] == nums[left - 1]:
-                            left += 1
-                        while left < right and nums[right] == nums[right + 1]:
-                            right -= 1
-                    elif nums[left] + nums[right] > total:
-                        right -= 1
-                    else:
-                        left += 1
-        return result
+    def numberOfRounds(self, startTime, finishTime):
+        """
+        :type startTime: str
+        :type finishTime: str
+        :rtype: int
+        """
+        h1, m1 = map(int, startTime.split(":"))
+        h2, m2 = map(int, finishTime.split(":"))
+        start = h1 * 60 + m1
+        finish = h2 * 60 + m2
+        if start > finish:
+            finish += 1440
+        return max(finish // 15 - (start + 15 - 1) // 15, 0)

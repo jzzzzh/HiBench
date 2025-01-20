@@ -1,17 +1,20 @@
+# Time:  O(m * n)
+# Space: O(min(m, n))
+
 class Solution(object):
-    def countQuadruples(self, firstString, secondString):
-        lookup1 = [-1]*26
-        for i in reversed(xrange(len(firstString))):
-            lookup1[ord(firstString[i])-ord('a')] = i
-        lookup2 = [-1]*26
-        for i in xrange(len(secondString)):
-            lookup2[ord(secondString[i])-ord('a')] = i
-        result, diff = 0, float("inf")
-        for i in xrange(26):
-            if lookup1[i] == -1 or lookup2[i] == -1:
-                continue
-            if lookup1[i]-lookup2[i] < diff:
-                diff = lookup1[i]-lookup2[i]
-                result = 0
-            result += int(lookup1[i]-lookup2[i] == diff)
-        return result
+    def maxUncrossedLines(self, A, B):
+        """
+        :type A: List[int]
+        :type B: List[int]
+        :rtype: int
+        """
+        if len(A) < len(B):
+            return self.maxUncrossedLines(B, A)
+
+        dp = [[0 for _ in xrange(len(B)+1)] for _ in xrange(2)]
+        for i in xrange(len(A)):
+            for j in xrange(len(B)):
+                dp[(i+1)%2][j+1] = max(dp[i%2][j] + int(A[i] == B[j]),
+                                       dp[i%2][j+1],
+                                       dp[(i+1)%2][j])
+        return dp[len(A)%2][len(B)]

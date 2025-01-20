@@ -1,11 +1,10 @@
 class Solution(object):
-    def numberOfArithmeticSlices(self, A):
-        res, i = 0, 0
-        while i+2 < len(A):
-            start = i
-            while i+2 < len(A) and A[i+2] + A[i] == 2*A[i+1]:
-                res += i - start + 1
-                i += 1
-            i += 1
-
-        return res
+    # @param {integer} num
+    # @return {boolean}
+    def isUgly(self, num):
+        if num == 0:
+            return False
+        for i in [2, 3, 5]:
+            while num % i == 0:
+                num /= i
+        return num == 1
