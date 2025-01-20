@@ -2,6 +2,8 @@ from dataloader import *
 from call_llms import *
 from tqdm import tqdm
 import os
+import itertools
+import time
 def main():
 
     EvalList = [{'Task':'Code', 'SubTask': 'CodeMissing', 'type': 'c++', 'ExampleType':'OneShot'},
@@ -33,17 +35,23 @@ def main():
 
 
 def Logo():
-    text=(
-        "\033[91m    __  ___ ____                  __  \033[0m\n"
-        "\033[92m   / / / (_) __ )___  ____  _____/ /_ \033[0m\n"
-        "\033[93m  / /_/ / / __  / _ \/ __ \/ ___/ __ \\ \033[0m\n"
-        "\033[94m / __  / / /_/ /  __/ / / / /__/ / / / \033[0m\n"
-        "\033[95m/_/ /_/_/_____/\___/_/ /_/\___/_/ /_/  \033[0m"
+    colors = ["\033[91m", "\033[92m", "\033[93m", "\033[94m", "\033[95m"]
+    text = (
+        "   __  ___ ____                  __  \n"
+        "  / / / (_) __ )___  ____  _____/ /_ \n"
+        "  / /_/ / / __  / _ \/ __ \/ ___/ __ \\ \n"
+        " / __  / / /_/ /  __/ / / / /__/ / / / \n"
+        "/_/ /_/_/_____/\___/_/ /_/\___/_/ /_/  "
     )
     columns = os.get_terminal_size().columns
-    for line in text.split('\n'):
-        print(line.center(columns))
-    print("\n"*3)
+
+    for i, color in enumerate(itertools.cycle(colors)):
+        if i >= 10:
+            break
+        os.system('clear')
+        for line in text.split('\n'):
+            print(f"{color}{line.center(columns)}\033[0m")
+        time.sleep(0.5)
 
 if __name__ == '__main__':
     Logo()
