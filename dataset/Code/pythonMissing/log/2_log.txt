@@ -1,2 +1,0 @@
-Line 4:         self.left = None
-Line 2:     def __init__(self, x):

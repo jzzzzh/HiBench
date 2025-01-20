@@ -1,52 +1,502 @@
 [
-  {
-    "questio_no": 1,
-    "space": "O(1)",
-    "time": "O(r - l)"
-  },
-  {
-    "questio_no": 2,
-    "space": "O(1)",
-    "time": "O(n)"
-  },
-  {
-    "questio_no": 3,
-    "space": "O(n)",
-    "time": "O(m * n^2)"
-  },
-  {
-    "questio_no": 4,
-    "space": "O(n)",
-    "time": "O(nlogn)"
-  },
-  {
-    "questio_no": 5,
-    "space": "O(n^2)",
-    "time": "O(n^3)"
-  },
-  {
-    "questio_no": 6,
-    "space": "O(1)",
-    "time": "O(n)"
-  },
-  {
-    "questio_no": 7,
-    "space": "O(1)",
-    "time": "O(n)"
-  },
-  {
-    "questio_no": 8,
-    "space": "O(1)",
-    "time": "O(n)"
-  },
-  {
-    "questio_no": 9,
-    "space": "O(n)",
-    "time": "O(n + q)"
-  },
-  {
-    "questio_no": 10,
-    "space": "O(n)",
-    "time": "O(n * 2^n)"
-  }
+    {
+        "question_no": 1,
+        "time complexity": "O(m * n)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 2,
+        "time complexity": "O(n)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 3,
+        "time complexity": "O(n)",
+        "space": "O(n)"
+    },
+    {
+        "question_no": 4,
+        "time complexity": "O(sqrt(n))",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 5,
+        "time complexity": "O(n^3 * 4^n) = O(1), n = 4",
+        "space": "O(n^2) = O(1)"
+    },
+    {
+        "question_no": 6,
+        "time complexity": "O(n^2)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 7,
+        "time complexity": "O(n^2)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 8,
+        "time complexity": "O(n^2), n is the number of disctinct A[i]",
+        "space": "O(n)"
+    },
+    {
+        "question_no": 9,
+        "time complexity": "O(n^2)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 10,
+        "time complexity": "O(1)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 11,
+        "time complexity": "O(n^2)",
+        "space": "O(n^2)"
+    },
+    {
+        "question_no": 12,
+        "time complexity": "O(n^3)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 13,
+        "time complexity": "O(1)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 14,
+        "time complexity": "O(r - l)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 15,
+        "time complexity": "O(1)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 16,
+        "time complexity": "O(nlogn), n is the number of total emails, and the max length of email is 320, p.s. {64}@{255}",
+        "space": "O(n)"
+    },
+    {
+        "question_no": 17,
+        "time complexity": "O(n)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 18,
+        "time complexity": "O(n * d * l), l is the average string length",
+        "space": "O(n)"
+    },
+    {
+        "question_no": 19,
+        "time complexity": "O(1)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 20,
+        "time complexity": "O(n)",
+        "space": "O(n)"
+    },
+    {
+        "question_no": 21,
+        "time complexity": "O(n)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 22,
+        "time complexity": "O(n)",
+        "space": "O(h)"
+    },
+    {
+        "question_no": 23,
+        "time complexity": "O(n)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 24,
+        "time complexity": "O(n + logk)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 25,
+        "time complexity": "O(1)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 26,
+        "time complexity": "O(m + n)",
+        "space": "O(m + n)"
+    },
+    {
+        "question_no": 27,
+        "time complexity": "O(n)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 28,
+        "time complexity": "O(m + n)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 29,
+        "time complexity": "O(n)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 30,
+        "time complexity": "O(n)",
+        "space": "O(n)"
+    },
+    {
+        "question_no": 31,
+        "time complexity": "O(n^3)",
+        "space": "O(n)"
+    },
+    {
+        "question_no": 32,
+        "time complexity": "O(n)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 33,
+        "time complexity": "O(n)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 34,
+        "time complexity": "O(nlogn)",
+        "space": "O(n)"
+    },
+    {
+        "question_no": 35,
+        "time complexity": "O(1)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 36,
+        "time complexity": "O(nlogn)",
+        "space": "O(n)"
+    },
+    {
+        "question_no": 37,
+        "time complexity": "O(1)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 38,
+        "time complexity": "O(n)",
+        "space": "O(|V|+|E|) = O(26 + 26^2) = O(1)"
+    },
+    {
+        "question_no": 39,
+        "time complexity": "O(|V| * |E|)",
+        "space": "O(|V| + |E|)"
+    },
+    {
+        "question_no": 40,
+        "time complexity": "O(n)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 41,
+        "time complexity": "O(n)",
+        "space": "O(h)"
+    },
+    {
+        "question_no": 42,
+        "time complexity": "O(n)",
+        "space": "O(n)"
+    },
+    {
+        "question_no": 43,
+        "time complexity": "O(n + e)",
+        "space": "O(n + e)"
+    },
+    {
+        "question_no": 44,
+        "time complexity": "O(p + r * n), p is the count of all the possible paths in graph,",
+        "space": "O(n)"
+    },
+    {
+        "question_no": 45,
+        "time complexity": "O(n * 4^n / n^(3/2)) ~= sum of Catalan numbers from 1 .. N",
+        "space": "O(n * 4^n / n^(3/2)) ~= sum of Catalan numbers from 1 .. N"
+    },
+    {
+        "question_no": 46,
+        "time complexity": "O(m * n^2)",
+        "space": "O(n)"
+    },
+    {
+        "question_no": 47,
+        "time complexity": "O(n)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 48,
+        "time complexity": "O(n)",
+        "space": "O(n)"
+    },
+    {
+        "question_no": 49,
+        "time complexity": "O(logn)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 50,
+        "time complexity": "O(n)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 51,
+        "time complexity": "O(n)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 52,
+        "time complexity": "O(nlogn + qlogn)",
+        "space": "O(n)"
+    },
+    {
+        "question_no": 53,
+        "time complexity": "O(n^4)",
+        "space": "O(n^2)"
+    },
+    {
+        "question_no": 54,
+        "time complexity": "O(nlogr), r is the max position",
+        "space": "O(r)"
+    },
+    {
+        "question_no": 55,
+        "time complexity": "O(n)",
+        "space": "O(h)"
+    },
+    {
+        "question_no": 56,
+        "time complexity": "O(n^3)",
+        "space": "O(n^3)"
+    },
+    {
+        "question_no": 57,
+        "time complexity": "O(9^2 * 2^9)",
+        "space": "O(9 * 2^9)"
+    },
+    {
+        "question_no": 58,
+        "time complexity": "O(1)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 59,
+        "time complexity": "O(n)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 60,
+        "time complexity": "O(n)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 61,
+        "time complexity": "O(nlogn)",
+        "space": "O(n)"
+    },
+    {
+        "question_no": 62,
+        "time complexity": "O(nlogn)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 63,
+        "time complexity": "O(n)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 64,
+        "time complexity": "O(n)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 65,
+        "time complexity": "O(nlogr), r = max(nums)",
+        "space": "O(logr)"
+    },
+    {
+        "question_no": 66,
+        "time complexity": "O(n)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 67,
+        "time complexity": "O(n)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 68,
+        "time complexity": "O(n)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 69,
+        "time complexity": "O(logn)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 70,
+        "time complexity": "O(n)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 71,
+        "time complexity": "O(nlogn)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 72,
+        "time complexity": "O(sqrt(r) + n * (logr + pi(sqrt(r))) + klogn) = O(sqrt(r) + n * (logr + sqrt(r)/log(sqrt(r))) + klogn), m is max(k for _, k in queries), pi(n) = number of primes in a range [1, n] = O(n/logn) by prime number theorem, see https",
+        "space": "O(sqrt(r) + n)"
+    },
+    {
+        "question_no": 73,
+        "time complexity": "O(n^2)",
+        "space": "O(n * d)"
+    },
+    {
+        "question_no": 74,
+        "time complexity": "O(n)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 75,
+        "time complexity": "O(n * q)",
+        "space": "O(n)"
+    },
+    {
+        "question_no": 76,
+        "time complexity": "O(klogk)",
+        "space": "O(k)"
+    },
+    {
+        "question_no": 77,
+        "time complexity": "O(logn)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 78,
+        "time complexity": "O(n)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 79,
+        "time complexity": "O(n + klogk)",
+        "space": "O(k)"
+    },
+    {
+        "question_no": 80,
+        "time complexity": "O(r), r is the range size of the integers",
+        "space": "O(r)"
+    },
+    {
+        "question_no": 81,
+        "time complexity": "O(n^2)",
+        "space": "O(n)"
+    },
+    {
+        "question_no": 82,
+        "time complexity": "O(n) ~ O(n^2), O(n) on average",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 83,
+        "time complexity": "O(m * n)",
+        "space": "O(m * n)"
+    },
+    {
+        "question_no": 84,
+        "time complexity": "O(nlogn)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 85,
+        "time complexity": "O(n)",
+        "space": "O(n)"
+    },
+    {
+        "question_no": 86,
+        "time complexity": "O(1)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 87,
+        "time complexity": "O(nlogn)",
+        "space": "O(n)"
+    },
+    {
+        "question_no": 88,
+        "time complexity": "O(n)",
+        "space": "O(h)"
+    },
+    {
+        "question_no": 89,
+        "time complexity": "O(n)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 90,
+        "time complexity": "O(n)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 91,
+        "time complexity": "O(n)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 92,
+        "time complexity": "O(nlogn)",
+        "space": "O(n)"
+    },
+    {
+        "question_no": 93,
+        "time complexity": "O(m + n)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 94,
+        "time complexity": "O(nlogn)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 95,
+        "time complexity": "O(n)",
+        "space": "O(h)"
+    },
+    {
+        "question_no": 96,
+        "time complexity": "O(1)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 97,
+        "time complexity": "O(n)",
+        "space": "O(n)"
+    },
+    {
+        "question_no": 98,
+        "time complexity": "O(logn)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 99,
+        "time complexity": "O(n)",
+        "space": "O(1)"
+    },
+    {
+        "question_no": 100,
+        "time complexity": "O(n)",
+        "space": "O(1)"
+    }
 ]

@@ -1,28 +1,17 @@
 class Solution {
 public:
-    int minDistance(vector<int>& houses, int k) {
-        sort(begin(houses), end(houses));
-        vector<int> prefix(houses.size() + 1);
-        for (int i = 0; i < houses.size(); ++i) {
-            prefix[i + 1] = prefix[i] + houses[i];
-        }
-        vector<int> dp(houses.size());
-        for (int j = 0; j < houses.size(); ++j) {
-            dp[j] = cost(prefix, 0, j);
-        }
-        for (int m = 1; m < k; ++m) {
-            for (int j = houses.size() - 1; j >= 0; --j) {
-                for (int i = m; i <= j; ++i) {
-                    dp[j] = min(dp[j], dp[i - 1] + cost(prefix, i, j));
-                }
-            }
-        }
-        return dp.back();
-    }
-
-private:
-    int cost(const vector<int>& prefix, int i, int j) {
-        return (prefix[j + 1] - prefix[(i + j + 1) / 2]) -
-               (prefix[(i + j) / 2 + 1] - prefix[i]);
-    }
+bool find132pattern(vector<int>& nums) {
+int ak = numeric_limits<int>::min();
+vector<int> stk;
+for (int i = size(nums) - 1; i >= 0; --i) {
+if (nums[i] < ak) {
+return true;
+}
+while (!empty(stk) && stk.back() < nums[i]) {
+ak = stk.back(), stk.pop_back();
+}
+stk.emplace_back(nums[i]);
+}
+return false;
+}
 };

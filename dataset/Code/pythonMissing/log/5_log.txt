@@ -1,2 +1,0 @@
-Line 5:             start = i
-Line 8:                 i += 1

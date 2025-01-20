@@ -1,2 +1,0 @@
-Line 23:                         return True
-Line 16:                     if j not in cnt1:
