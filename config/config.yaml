@@ -12,7 +12,9 @@ Dataset:
     Dir: ./dataset/Formula/
     SubTask: ['calcuate', 'convert', 'equivalent']
     Format: ['Infix', 'Prefix', 'Postfix']
-    Mode: ['Simple', 'Medium', 'Hard']
+    Symbol_Mode: ['easy', 'medium', 'hard']
+    Value_Mode: ['easy', 'medium', 'hard']
+    Length_Mode: ['easy', 'medium', 'hard']
   Code:
     Dir: ./dataset/Code/
     SubTask: ['SpaceComplexity', 'TimeComplexity', 'CodeMissing']

@@ -313,7 +313,9 @@ class FormulaDataLoader(TemplateDataLoader):
     def __init__(self, args):
         super().__init__()
         SubTask = args['SubTask']
-        Mode = args['Mode']
+        Symbol_Mode = args['Symbol_Mode']
+        Value_Mode = args['Value_Mode']
+        Length_Mode = args['Length_Mode']
         self.dataset_name = 'Formula'
         self.dataset_dir = self.config['Dataset']['Formula']['Dir']
         self.data_generator = FormulaPromptGenerator(SubTask)
@@ -332,12 +334,12 @@ class FormulaDataLoader(TemplateDataLoader):
         else:
             self.example_type = "None"
         
-        self.Mode = Mode
+        self.Mode = f"_symbol_{Symbol_Mode}_value_{Value_Mode}_length_{Length_Mode}"
         self.data = []
     
     def load_data(self):
         if self.sub_task == 'calculate':
-            ans_json_file = os.path.join(self.dataset_dir, f"{self.sub_task}/{self.format}_{self.Mode}.csv")
+            ans_json_file = os.path.join(self.dataset_dir, f"{self.sub_task}/{self.format}{self.Mode}.csv")
             with open(ans_json_file, 'r') as file:
                 reader = csv.DictReader(file)
                 train_data = [row for row in reader]
@@ -357,7 +359,7 @@ class FormulaDataLoader(TemplateDataLoader):
                     pass
                 self.data.append({'SystemPrompt': SystemPrompt, 'UserPrompt': UserPrompt, 'TrueAnswer': TrueAnswer})
         elif self.sub_task == 'convert':
-            ans_json_file = os.path.join(self.dataset_dir, f"{self.sub_task}/{self.format1}_{self.format2}_{self.Mode}.csv")
+            ans_json_file = os.path.join(self.dataset_dir, f"{self.sub_task}/{self.format1}2{self.format2}{self.Mode}.csv")
             with open(ans_json_file, 'r') as file:
                 reader = csv.DictReader(file)
                 train_data = [row for row in reader]
@@ -379,9 +381,9 @@ class FormulaDataLoader(TemplateDataLoader):
                 self.data.append({'SystemPrompt': SystemPrompt, 'UserPrompt': UserPrompt, 'TrueAnswer': TrueAnswer})
         elif self.sub_task == 'equivalent':
             if self.format1 != self.format2:
-                ans_json_file = os.path.join(self.dataset_dir, f"{self.sub_task}/{self.Mode}_Equivalent_{self.format1}_{self.format2}.csv")
+                ans_json_file = os.path.join(self.dataset_dir, f"{self.sub_task}/{self.format1}Eq2{self.format2}{self.Mode}.csv")
             if  self.format1 == self.format2:
-                ans_json_file = os.path.join(self.dataset_dir, f"{self.sub_task}/{self.Mode}_Equivalent_{self.format1}.csv")
+                ans_json_file = os.path.join(self.dataset_dir, f"{self.sub_task}/{self.format1}Eq2{self.format1}{self.Mode}.csv")
             with open(ans_json_file, 'r') as file:
                 reader = csv.DictReader(file)
                 train_data = [row for row in reader]
@@ -660,9 +662,9 @@ class HibenchDataLoder(TemplateDataLoader):
 def test_dataloader():
     # args = {'Task':'Code', 'SubTask': 'SpaceComplexity', 'type': 'python', 'ExampleType':'OneShot'}
     # args = {'Task': 'JSON', 'SubTask': 'type_1', 'Domain': 'university', 'ExampleType':'OneShot'}
-    # args = {'Task': 'Formula', 'SubTask': 'convert', 'Mode': 'Simple', 'format1':'Infix', 'format2':'Postfix', 'ExampleType':'FewShot'}
+    args = {'Task': 'Formula', 'SubTask': 'convert', 'Symbol_Mode': 'easy', 'Value_Mode':'easy', 'Length_Mode':'easy', 'format1':'infix', 'format2':'postfix', 'ExampleType':'FewShot'}
     # args = {'Task': 'Paper', 'SubTask': 'contextual_qa', 'Mode': 'dev', 'ExampleType':'OneShot'}
-    args = {'Task': 'Fundamental', 'TreeType': 'binary', 'SubTask': 'infix_traversal', 'InputMode': 'hierarchy', 'balance': 'unbalanced', 'weight':'unweighted', 'difficulty':'easy', 'ExampleType':'FewShot'}
+    # args = {'Task': 'Fundamental', 'TreeType': 'binary', 'SubTask': 'infix_traversal', 'InputMode': 'hierarchy', 'balance': 'unbalanced', 'weight':'unweighted', 'difficulty':'easy', 'ExampleType':'FewShot'}
     data_loader = HibenchDataLoder(args)
     data = data_loader.load_data()
     print(data)

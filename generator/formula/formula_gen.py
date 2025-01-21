@@ -183,11 +183,15 @@ def gen_dataset(symbol_complexity, value_complexity, length, num_samples):
             formula = re.sub(r"\^", "**", formula)
             postfixEq2Prefix = random_change(postfix_list, prefix_list, symbol_complexity, value_complexity)
             postfixEq2Infix = random_change(postfix_list, formula_list, symbol_complexity, value_complexity)
+            postfixEq2postfix = random_change(postfix_list, postfix_list, symbol_complexity, value_complexity)
             prefixEq2Infix = random_change(prefix_list, formula_list, symbol_complexity, value_complexity)
             prefixEq2Postfix = random_change(prefix_list, postfix_list, symbol_complexity, value_complexity)
+            prefixEq2Prefix = random_change(prefix_list, prefix_list, symbol_complexity, value_complexity)
             infixEq2Postfix = random_change(formula_list, postfix_list, symbol_complexity, value_complexity)
             infixEq2Prefix = random_change(formula_list, prefix_list, symbol_complexity, value_complexity)
-            dataset.append((formula, convert_to_string(postfix_list), convert_to_string(prefix_list), eval(formula), postfixEq2Prefix, postfixEq2Infix, prefixEq2Infix, prefixEq2Postfix, infixEq2Postfix, infixEq2Prefix))
+            infixEq2Infix = random_change(formula_list, formula_list, symbol_complexity, value_complexity)
+
+            dataset.append((formula, convert_to_string(postfix_list), convert_to_string(prefix_list), eval(formula), postfixEq2Prefix, postfixEq2Infix,postfixEq2postfix, prefixEq2Infix, prefixEq2Postfix, prefixEq2Prefix, infixEq2Postfix, infixEq2Prefix, infixEq2Infix))
             
         except:
             i -= 1
@@ -224,16 +228,19 @@ def gen_all_datasets():
                 prefix2postfix = []
                 postfixEq2PrefixList = []
                 postfixEq2InfixList = []
+                postfixEq2postfixList = []
                 prefixEq2InfixList = []
                 prefixEq2PostfixList = []
+                prefixEq2PrefixList = []
                 infixEq2PostfixList = []
                 infixEq2PrefixList = []
+                infixEq2InfixList = []
 
                 dataset = gen_dataset(formula_config.formula_config["symbol complexity"][symbol_complexity], 
                                       formula_config.formula_config["value complexity"][value_complexity], 
                                       formula_config.formula_config["length"][length], num_samples)
                 for i, data in enumerate(dataset):
-                    formula, postfix_list, prefix_list, result, postfixEq2Prefix, postfixEq2Infix, prefixEq2Infix, prefixEq2Postfix, infixEq2Postfix, infixEq2Prefix = data         
+                    formula, postfix_list, prefix_list, result, postfixEq2Prefix, postfixEq2Infix,postfixEq2postfix, prefixEq2Infix, prefixEq2Postfix, prefixEq2Prefix, infixEq2Postfix, infixEq2Prefix, infixEq2Infix = data         
                     infix_cal.append([formula, result])
                     postfix_cal.append([postfix_list, result])
                     prefix_cal.append([prefix_list, result])
@@ -245,10 +252,14 @@ def gen_all_datasets():
                     prefix2postfix.append([prefix_list, postfix_list])
                     postfixEq2PrefixList.append(postfixEq2Prefix)
                     postfixEq2InfixList.append(postfixEq2Infix)
+                    postfixEq2postfixList.append(postfixEq2postfix)
                     prefixEq2InfixList.append(prefixEq2Infix)
                     prefixEq2PostfixList.append(prefixEq2Postfix)
+                    prefixEq2PrefixList.append(prefixEq2Prefix)
                     infixEq2PostfixList.append(infixEq2Postfix)
                     infixEq2PrefixList.append(infixEq2Prefix)
+                    infixEq2InfixList.append(infixEq2Infix)
+
                 CalculateColumnNames = ["Formula", "Result"]
                 ConvertColumnNames = ["Formula", "Result"]
                 EqualColumnNames = ["Original","Perturbed","Is_Equivalent"]
@@ -268,10 +279,13 @@ def gen_all_datasets():
                 
                 save_dataset(postfixEq2PrefixList, save_path + f"equivalent/postfixEq2Prefix_symbol_{symbol_complexity}_value_{value_complexity}_length_{length}.csv", EqualColumnNames)
                 save_dataset(postfixEq2InfixList, save_path + f"equivalent/postfixEq2Infix_symbol_{symbol_complexity}_value_{value_complexity}_length_{length}.csv", EqualColumnNames)
+                save_dataset(postfixEq2postfixList, save_path + f"equivalent/postfixEq2postfix_symbol_{symbol_complexity}_value_{value_complexity}_length_{length}.csv", EqualColumnNames)
                 save_dataset(prefixEq2InfixList, save_path + f"equivalent/prefixEq2Infix_symbol_{symbol_complexity}_value_{value_complexity}_length_{length}.csv", EqualColumnNames)
                 save_dataset(prefixEq2PostfixList, save_path + f"equivalent/prefixEq2Postfix_symbol_{symbol_complexity}_value_{value_complexity}_length_{length}.csv", EqualColumnNames)
+                save_dataset(prefixEq2PrefixList, save_path + f"equivalent/prefixEq2Prefix_symbol_{symbol_complexity}_value_{value_complexity}_length_{length}.csv", EqualColumnNames)
                 save_dataset(infixEq2PostfixList, save_path + f"equivalent/infixEq2Postfix_symbol_{symbol_complexity}_value_{value_complexity}_length_{length}.csv", EqualColumnNames)
                 save_dataset(infixEq2PrefixList, save_path + f"equivalent/infixEq2Prefix_symbol_{symbol_complexity}_value_{value_complexity}_length_{length}.csv", EqualColumnNames)
+                save_dataset(infixEq2InfixList, save_path + f"equivalent/infixEq2Infix_symbol_{symbol_complexity}_value_{value_complexity}_length_{length}.csv", EqualColumnNames)
 
                 
 
@@ -280,26 +294,3 @@ def gen_all_datasets():
 
 if __name__ == "__main__":
     gen_all_datasets()
-    # test random_change
-    # symbol_complexity = ["+", "-", "*", "/", "^", "(", ")"]
-    # value_complexity = [i for i in range(10)]
-    # length = 10
-    # formula, formula_list = generate_formula(symbol_complexity, value_complexity, length)
-    # postfix_list = infix_to_postfix(formula_list)
-    # prefix_list = infix_to_prefix(formula_list)
-    # print(formula)
-    # print(formula_list)
-    # print(postfix_list)
-    # print(prefix_list)
-    # postfixEq2Prefix = random_change(postfix_list, prefix_list, symbol_complexity, value_complexity)
-    # postfixEq2Infix = random_change(postfix_list, formula_list, symbol_complexity, value_complexity)
-    # prefixEq2Infix = random_change(prefix_list, formula_list, symbol_complexity, value_complexity)
-    # prefixEq2Postfix = random_change(prefix_list, postfix_list, symbol_complexity, value_complexity)
-    # infixEq2Postfix = random_change(formula_list, postfix_list, symbol_complexity, value_complexity)
-    # infixEq2Prefix = random_change(formula_list, prefix_list, symbol_complexity, value_complexity)
-    # print(postfixEq2Prefix)
-    # print(postfixEq2Infix)
-    # print(prefixEq2Infix)
-    # print(prefixEq2Postfix)
-    # print(infixEq2Postfix)
-    # print(infixEq2Prefix)
