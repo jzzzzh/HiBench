@@ -30,7 +30,7 @@ Fundamental:
         FewshotExamplePrompt: "Here are a few examples."
       remove_node:
         PrefixPromptTemplate: "Given the hierarchical structure <STRUCTURE>, <QUESTION>"
-        OutputFormatTemplate: "{\"answer\": <new structure>} following the input structure format,"
+        OutputFormatTemplate: "{\"answer\": <new structure>} following the input structure format, if there are no edges, please return {\"answer\": No edges}"
         OneshotExamplePrompt: "Here is one example."
         FewshotExamplePrompt: "Here are a few examples."
       node_depth:

@@ -7,7 +7,7 @@
         ],
         "id": 0,
         "edge_presentation": "0 -(R)-> 1",
-        "hierarchy_presentation": "   0\n    `-(R)-1\n",
+        "hierarchy_presentation": "   0\n    `-(R)-1",
         "balance_Q": "determine whether it is a balanced tree?",
         "balance_A": true,
         "prefix_traversal_Q": "generate the traversal sequence in infix order (inorder), where the nodes are visited in the order: left subtree, root, and right subtree.",
@@ -24,7 +24,7 @@
         "traversal_order_verification_A": "inorder",
         "mirror_tree_Q": "generate the mirror image of the tree, where the left and right children of all nodes are swapped.",
         "mirror_tree_A_E": "0 -(L)-> 1",
-        "mirror_tree_A_H": "   0\n    `-(L)-1\n"
+        "mirror_tree_A_H": "   0\n    `-(L)-1"
     },
     {
         "structure_args": [
@@ -34,7 +34,7 @@
         ],
         "id": 1,
         "edge_presentation": "1 -(R)-> 0",
-        "hierarchy_presentation": "   1\n    `-(R)-0\n",
+        "hierarchy_presentation": "   1\n    `-(R)-0",
         "balance_Q": "determine whether it is a balanced tree?",
         "balance_A": true,
         "prefix_traversal_Q": "generate the traversal sequence in infix order (inorder), where the nodes are visited in the order: left subtree, root, and right subtree.",
@@ -51,7 +51,7 @@
         "traversal_order_verification_A": "inorder",
         "mirror_tree_Q": "generate the mirror image of the tree, where the left and right children of all nodes are swapped.",
         "mirror_tree_A_E": "1 -(L)-> 0",
-        "mirror_tree_A_H": "   1\n    `-(L)-0\n"
+        "mirror_tree_A_H": "   1\n    `-(L)-0"
     },
     {
         "structure_args": [
@@ -61,7 +61,7 @@
         ],
         "id": 2,
         "edge_presentation": "1 -(L)-> 0",
-        "hierarchy_presentation": "   1\n    `-(L)-0\n",
+        "hierarchy_presentation": "   1\n    `-(L)-0",
         "balance_Q": "determine whether it is a balanced tree?",
         "balance_A": true,
         "prefix_traversal_Q": "generate the traversal sequence in infix order (inorder), where the nodes are visited in the order: left subtree, root, and right subtree.",
@@ -75,10 +75,10 @@
             1
         ],
         "traversal_order_verification_Q": "and a traversal sequence [0, 1], verify if it is the preorder, inorder, and postorder consistent with the tree.",
-        "traversal_order_verification_A": "inorder",
+        "traversal_order_verification_A": "postorder",
         "mirror_tree_Q": "generate the mirror image of the tree, where the left and right children of all nodes are swapped.",
         "mirror_tree_A_E": "1 -(R)-> 0",
-        "mirror_tree_A_H": "   1\n    `-(R)-0\n"
+        "mirror_tree_A_H": "   1\n    `-(R)-0"
     },
     {
         "structure_args": [
@@ -88,7 +88,7 @@
         ],
         "id": 3,
         "edge_presentation": "0 -(R)-> 1, 0 -(L)-> 2",
-        "hierarchy_presentation": "   0\n    |-(R)-1\n    `-(L)-2\n",
+        "hierarchy_presentation": "   0\n    |-(R)-1\n    `-(L)-2",
         "balance_Q": "determine whether it is a balanced tree?",
         "balance_A": true,
         "prefix_traversal_Q": "generate the traversal sequence in infix order (inorder), where the nodes are visited in the order: left subtree, root, and right subtree.",
@@ -103,11 +103,11 @@
             1,
             0
         ],
-        "traversal_order_verification_Q": "and a traversal sequence [2, 1, 0], verify if it is the preorder, inorder, and postorder consistent with the tree.",
-        "traversal_order_verification_A": "postorder",
+        "traversal_order_verification_Q": "and a traversal sequence [2, 0, 1], verify if it is the preorder, inorder, and postorder consistent with the tree.",
+        "traversal_order_verification_A": "inorder",
         "mirror_tree_Q": "generate the mirror image of the tree, where the left and right children of all nodes are swapped.",
         "mirror_tree_A_E": "0 -(L)-> 1, 0 -(R)-> 2",
-        "mirror_tree_A_H": "   0\n    |-(L)-1\n    `-(R)-2\n"
+        "mirror_tree_A_H": "   0\n    |-(L)-1\n    `-(R)-2"
     },
     {
         "structure_args": [
@@ -117,7 +117,7 @@
         ],
         "id": 4,
         "edge_presentation": "2 -(L)-> 1, 2 -(R)-> 0",
-        "hierarchy_presentation": "   2\n    |-(L)-1\n    `-(R)-0\n",
+        "hierarchy_presentation": "   2\n    |-(L)-1\n    `-(R)-0",
         "balance_Q": "determine whether it is a balanced tree?",
         "balance_A": true,
         "prefix_traversal_Q": "generate the traversal sequence in infix order (inorder), where the nodes are visited in the order: left subtree, root, and right subtree.",
@@ -136,7 +136,7 @@
         "traversal_order_verification_A": "postorder",
         "mirror_tree_Q": "generate the mirror image of the tree, where the left and right children of all nodes are swapped.",
         "mirror_tree_A_E": "2 -(R)-> 1, 2 -(L)-> 0",
-        "mirror_tree_A_H": "   2\n    |-(R)-1\n    `-(L)-0\n"
+        "mirror_tree_A_H": "   2\n    |-(R)-1\n    `-(L)-0"
     },
     {
         "structure_args": [
@@ -146,7 +146,7 @@
         ],
         "id": 5,
         "edge_presentation": "1 -(R)-> 0, 1 -(L)-> 2",
-        "hierarchy_presentation": "   1\n    |-(R)-0\n    `-(L)-2\n",
+        "hierarchy_presentation": "   1\n    |-(R)-0\n    `-(L)-2",
         "balance_Q": "determine whether it is a balanced tree?",
         "balance_A": true,
         "prefix_traversal_Q": "generate the traversal sequence in infix order (inorder), where the nodes are visited in the order: left subtree, root, and right subtree.",
@@ -161,11 +161,11 @@
             0,
             1
         ],
-        "traversal_order_verification_Q": "and a traversal sequence [2, 0, 1], verify if it is the preorder, inorder, and postorder consistent with the tree.",
-        "traversal_order_verification_A": "postorder",
+        "traversal_order_verification_Q": "and a traversal sequence [2, 1, 0], verify if it is the preorder, inorder, and postorder consistent with the tree.",
+        "traversal_order_verification_A": "inorder",
         "mirror_tree_Q": "generate the mirror image of the tree, where the left and right children of all nodes are swapped.",
         "mirror_tree_A_E": "1 -(L)-> 0, 1 -(R)-> 2",
-        "mirror_tree_A_H": "   1\n    |-(L)-0\n    `-(R)-2\n"
+        "mirror_tree_A_H": "   1\n    |-(L)-0\n    `-(R)-2"
     },
     {
         "structure_args": [
@@ -175,7 +175,7 @@
         ],
         "id": 6,
         "edge_presentation": "3 -(L)-> 2, 2 -(R)-> 0, 3 -(R)-> 1",
-        "hierarchy_presentation": "   3\n    |-(L)-2\n    |   `-(R)-0\n    `-(R)-1\n",
+        "hierarchy_presentation": "   3\n    |-(L)-2\n    |   `-(R)-0\n    `-(R)-1",
         "balance_Q": "determine whether it is a balanced tree?",
         "balance_A": true,
         "prefix_traversal_Q": "generate the traversal sequence in infix order (inorder), where the nodes are visited in the order: left subtree, root, and right subtree.",
@@ -192,11 +192,11 @@
             1,
             3
         ],
-        "traversal_order_verification_Q": "and a traversal sequence [3, 2, 0, 1], verify if it is the preorder, inorder, and postorder consistent with the tree.",
-        "traversal_order_verification_A": "preorder",
+        "traversal_order_verification_Q": "and a traversal sequence [2, 0, 3, 1], verify if it is the preorder, inorder, and postorder consistent with the tree.",
+        "traversal_order_verification_A": "inorder",
         "mirror_tree_Q": "generate the mirror image of the tree, where the left and right children of all nodes are swapped.",
         "mirror_tree_A_E": "3 -(R)-> 2, 2 -(L)-> 0, 3 -(L)-> 1",
-        "mirror_tree_A_H": "   3\n    |-(R)-2\n    |   `-(L)-0\n    `-(L)-1\n"
+        "mirror_tree_A_H": "   3\n    |-(R)-2\n    |   `-(L)-0\n    `-(L)-1"
     },
     {
         "structure_args": [
@@ -206,7 +206,7 @@
         ],
         "id": 7,
         "edge_presentation": "3 -(L)-> 2, 2 -(L)-> 0, 3 -(R)-> 1",
-        "hierarchy_presentation": "   3\n    |-(L)-2\n    |   `-(L)-0\n    `-(R)-1\n",
+        "hierarchy_presentation": "   3\n    |-(L)-2\n    |   `-(L)-0\n    `-(R)-1",
         "balance_Q": "determine whether it is a balanced tree?",
         "balance_A": true,
         "prefix_traversal_Q": "generate the traversal sequence in infix order (inorder), where the nodes are visited in the order: left subtree, root, and right subtree.",
@@ -223,11 +223,11 @@
             1,
             3
         ],
-        "traversal_order_verification_Q": "and a traversal sequence [3, 2, 0, 1], verify if it is the preorder, inorder, and postorder consistent with the tree.",
-        "traversal_order_verification_A": "preorder",
+        "traversal_order_verification_Q": "and a traversal sequence [0, 2, 1, 3], verify if it is the preorder, inorder, and postorder consistent with the tree.",
+        "traversal_order_verification_A": "postorder",
         "mirror_tree_Q": "generate the mirror image of the tree, where the left and right children of all nodes are swapped.",
         "mirror_tree_A_E": "3 -(R)-> 2, 2 -(R)-> 0, 3 -(L)-> 1",
-        "mirror_tree_A_H": "   3\n    |-(R)-2\n    |   `-(R)-0\n    `-(L)-1\n"
+        "mirror_tree_A_H": "   3\n    |-(R)-2\n    |   `-(R)-0\n    `-(L)-1"
     },
     {
         "structure_args": [
@@ -237,7 +237,7 @@
         ],
         "id": 8,
         "edge_presentation": "2 -(L)-> 3, 2 -(R)-> 0, 0 -(R)-> 1",
-        "hierarchy_presentation": "   2\n    |-(L)-3\n    `-(R)-0\n        `-(R)-1\n",
+        "hierarchy_presentation": "   2\n    |-(L)-3\n    `-(R)-0\n        `-(R)-1",
         "balance_Q": "determine whether it is a balanced tree?",
         "balance_A": true,
         "prefix_traversal_Q": "generate the traversal sequence in infix order (inorder), where the nodes are visited in the order: left subtree, root, and right subtree.",
@@ -254,11 +254,11 @@
             0,
             2
         ],
-        "traversal_order_verification_Q": "and a traversal sequence [3, 1, 0, 2], verify if it is the preorder, inorder, and postorder consistent with the tree.",
-        "traversal_order_verification_A": "postorder",
+        "traversal_order_verification_Q": "and a traversal sequence [2, 3, 0, 1], verify if it is the preorder, inorder, and postorder consistent with the tree.",
+        "traversal_order_verification_A": "preorder",
         "mirror_tree_Q": "generate the mirror image of the tree, where the left and right children of all nodes are swapped.",
         "mirror_tree_A_E": "2 -(R)-> 3, 2 -(L)-> 0, 0 -(L)-> 1",
-        "mirror_tree_A_H": "   2\n    |-(R)-3\n    `-(L)-0\n        `-(L)-1\n"
+        "mirror_tree_A_H": "   2\n    |-(R)-3\n    `-(L)-0\n        `-(L)-1"
     },
     {
         "structure_args": [
@@ -268,7 +268,7 @@
         ],
         "id": 9,
         "edge_presentation": "4 -(L)-> 3, 3 -(R)-> 2, 4 -(R)-> 1, 1 -(L)-> 0",
-        "hierarchy_presentation": "   4\n    |-(L)-3\n    |   `-(R)-2\n    `-(R)-1\n        `-(L)-0\n",
+        "hierarchy_presentation": "   4\n    |-(L)-3\n    |   `-(R)-2\n    `-(R)-1\n        `-(L)-0",
         "balance_Q": "determine whether it is a balanced tree?",
         "balance_A": true,
         "prefix_traversal_Q": "generate the traversal sequence in infix order (inorder), where the nodes are visited in the order: left subtree, root, and right subtree.",
@@ -291,7 +291,7 @@
         "traversal_order_verification_A": "preorder",
         "mirror_tree_Q": "generate the mirror image of the tree, where the left and right children of all nodes are swapped.",
         "mirror_tree_A_E": "4 -(R)-> 3, 3 -(L)-> 2, 4 -(L)-> 1, 1 -(R)-> 0",
-        "mirror_tree_A_H": "   4\n    |-(R)-3\n    |   `-(L)-2\n    `-(L)-1\n        `-(R)-0\n"
+        "mirror_tree_A_H": "   4\n    |-(R)-3\n    |   `-(L)-2\n    `-(L)-1\n        `-(R)-0"
     },
     {
         "structure_args": [
@@ -301,7 +301,7 @@
         ],
         "id": 10,
         "edge_presentation": "1 -(L)-> 3, 1 -(R)-> 4, 4 -(R)-> 0, 4 -(L)-> 2",
-        "hierarchy_presentation": "   1\n    |-(L)-3\n    `-(R)-4\n        |-(R)-0\n        `-(L)-2\n",
+        "hierarchy_presentation": "   1\n    |-(L)-3\n    `-(R)-4\n        |-(R)-0\n        `-(L)-2",
         "balance_Q": "determine whether it is a balanced tree?",
         "balance_A": true,
         "prefix_traversal_Q": "generate the traversal sequence in infix order (inorder), where the nodes are visited in the order: left subtree, root, and right subtree.",
@@ -324,7 +324,7 @@
         "traversal_order_verification_A": "inorder",
         "mirror_tree_Q": "generate the mirror image of the tree, where the left and right children of all nodes are swapped.",
         "mirror_tree_A_E": "1 -(R)-> 3, 1 -(L)-> 4, 4 -(L)-> 0, 4 -(R)-> 2",
-        "mirror_tree_A_H": "   1\n    |-(R)-3\n    `-(L)-4\n        |-(L)-0\n        `-(R)-2\n"
+        "mirror_tree_A_H": "   1\n    |-(R)-3\n    `-(L)-4\n        |-(L)-0\n        `-(R)-2"
     },
     {
         "structure_args": [
@@ -334,7 +334,7 @@
         ],
         "id": 11,
         "edge_presentation": "4 -(L)-> 2, 2 -(R)-> 3, 4 -(R)-> 0, 0 -(L)-> 1",
-        "hierarchy_presentation": "   4\n    |-(L)-2\n    |   `-(R)-3\n    `-(R)-0\n        `-(L)-1\n",
+        "hierarchy_presentation": "   4\n    |-(L)-2\n    |   `-(R)-3\n    `-(R)-0\n        `-(L)-1",
         "balance_Q": "determine whether it is a balanced tree?",
         "balance_A": true,
         "prefix_traversal_Q": "generate the traversal sequence in infix order (inorder), where the nodes are visited in the order: left subtree, root, and right subtree.",
@@ -357,7 +357,7 @@
         "traversal_order_verification_A": "postorder",
         "mirror_tree_Q": "generate the mirror image of the tree, where the left and right children of all nodes are swapped.",
         "mirror_tree_A_E": "4 -(R)-> 2, 2 -(L)-> 3, 4 -(L)-> 0, 0 -(R)-> 1",
-        "mirror_tree_A_H": "   4\n    |-(R)-2\n    |   `-(L)-3\n    `-(L)-0\n        `-(R)-1\n"
+        "mirror_tree_A_H": "   4\n    |-(R)-2\n    |   `-(L)-3\n    `-(L)-0\n        `-(R)-1"
     },
     {
         "structure_args": [
@@ -367,7 +367,7 @@
         ],
         "id": 12,
         "edge_presentation": "3 -(L)-> 2, 2 -(L)-> 5, 2 -(R)-> 0, 3 -(R)-> 1, 1 -(R)-> 4",
-        "hierarchy_presentation": "   3\n    |-(L)-2\n    |   |-(L)-5\n    |   `-(R)-0\n    `-(R)-1\n        `-(R)-4\n",
+        "hierarchy_presentation": "   3\n    |-(L)-2\n    |   |-(L)-5\n    |   `-(R)-0\n    `-(R)-1\n        `-(R)-4",
         "balance_Q": "determine whether it is a balanced tree?",
         "balance_A": true,
         "prefix_traversal_Q": "generate the traversal sequence in infix order (inorder), where the nodes are visited in the order: left subtree, root, and right subtree.",
@@ -388,11 +388,11 @@
             1,
             3
         ],
-        "traversal_order_verification_Q": "and a traversal sequence [3, 2, 5, 0, 1, 4], verify if it is the preorder, inorder, and postorder consistent with the tree.",
-        "traversal_order_verification_A": "preorder",
+        "traversal_order_verification_Q": "and a traversal sequence [5, 2, 0, 3, 1, 4], verify if it is the preorder, inorder, and postorder consistent with the tree.",
+        "traversal_order_verification_A": "inorder",
         "mirror_tree_Q": "generate the mirror image of the tree, where the left and right children of all nodes are swapped.",
         "mirror_tree_A_E": "3 -(R)-> 2, 2 -(R)-> 5, 2 -(L)-> 0, 3 -(L)-> 1, 1 -(L)-> 4",
-        "mirror_tree_A_H": "   3\n    |-(R)-2\n    |   |-(R)-5\n    |   `-(L)-0\n    `-(L)-1\n        `-(L)-4\n"
+        "mirror_tree_A_H": "   3\n    |-(R)-2\n    |   |-(R)-5\n    |   `-(L)-0\n    `-(L)-1\n        `-(L)-4"
     },
     {
         "structure_args": [
@@ -402,7 +402,7 @@
         ],
         "id": 13,
         "edge_presentation": "5 -(R)-> 0, 0 -(L)-> 3, 0 -(R)-> 2, 5 -(L)-> 1, 1 -(R)-> 4",
-        "hierarchy_presentation": "   5\n    |-(R)-0\n    |   |-(L)-3\n    |   `-(R)-2\n    `-(L)-1\n        `-(R)-4\n",
+        "hierarchy_presentation": "   5\n    |-(R)-0\n    |   |-(L)-3\n    |   `-(R)-2\n    `-(L)-1\n        `-(R)-4",
         "balance_Q": "determine whether it is a balanced tree?",
         "balance_A": true,
         "prefix_traversal_Q": "generate the traversal sequence in infix order (inorder), where the nodes are visited in the order: left subtree, root, and right subtree.",
@@ -427,7 +427,7 @@
         "traversal_order_verification_A": "postorder",
         "mirror_tree_Q": "generate the mirror image of the tree, where the left and right children of all nodes are swapped.",
         "mirror_tree_A_E": "5 -(L)-> 0, 0 -(R)-> 3, 0 -(L)-> 2, 5 -(R)-> 1, 1 -(L)-> 4",
-        "mirror_tree_A_H": "   5\n    |-(L)-0\n    |   |-(R)-3\n    |   `-(L)-2\n    `-(R)-1\n        `-(L)-4\n"
+        "mirror_tree_A_H": "   5\n    |-(L)-0\n    |   |-(R)-3\n    |   `-(L)-2\n    `-(R)-1\n        `-(L)-4"
     },
     {
         "structure_args": [
@@ -437,7 +437,7 @@
         ],
         "id": 14,
         "edge_presentation": "2 -(L)-> 0, 0 -(L)-> 4, 2 -(R)-> 1, 1 -(L)-> 3, 1 -(R)-> 5",
-        "hierarchy_presentation": "   2\n    |-(L)-0\n    |   `-(L)-4\n    `-(R)-1\n        |-(L)-3\n        `-(R)-5\n",
+        "hierarchy_presentation": "   2\n    |-(L)-0\n    |   `-(L)-4\n    `-(R)-1\n        |-(L)-3\n        `-(R)-5",
         "balance_Q": "determine whether it is a balanced tree?",
         "balance_A": true,
         "prefix_traversal_Q": "generate the traversal sequence in infix order (inorder), where the nodes are visited in the order: left subtree, root, and right subtree.",
@@ -462,7 +462,7 @@
         "traversal_order_verification_A": "postorder",
         "mirror_tree_Q": "generate the mirror image of the tree, where the left and right children of all nodes are swapped.",
         "mirror_tree_A_E": "2 -(R)-> 0, 0 -(R)-> 4, 2 -(L)-> 1, 1 -(R)-> 3, 1 -(L)-> 5",
-        "mirror_tree_A_H": "   2\n    |-(R)-0\n    |   `-(R)-4\n    `-(L)-1\n        |-(R)-3\n        `-(L)-5\n"
+        "mirror_tree_A_H": "   2\n    |-(R)-0\n    |   `-(R)-4\n    `-(L)-1\n        |-(R)-3\n        `-(L)-5"
     },
     {
         "structure_args": [
@@ -472,7 +472,7 @@
         ],
         "id": 15,
         "edge_presentation": "4 -(L)-> 3, 3 -(L)-> 0, 0 -(R)-> 1, 3 -(R)-> 2, 4 -(R)-> 5",
-        "hierarchy_presentation": "   4\n    |-(L)-3\n    |   |-(L)-0\n    |   |   `-(R)-1\n    |   `-(R)-2\n    `-(R)-5\n",
+        "hierarchy_presentation": "   4\n    |-(L)-3\n    |   |-(L)-0\n    |   |   `-(R)-1\n    |   `-(R)-2\n    `-(R)-5",
         "balance_Q": "determine whether it is a balanced tree?",
         "balance_A": false,
         "prefix_traversal_Q": "generate the traversal sequence in infix order (inorder), where the nodes are visited in the order: left subtree, root, and right subtree.",
@@ -493,11 +493,11 @@
             5,
             4
         ],
-        "traversal_order_verification_Q": "and a traversal sequence [1, 0, 2, 3, 5, 4], verify if it is the preorder, inorder, and postorder consistent with the tree.",
-        "traversal_order_verification_A": "postorder",
+        "traversal_order_verification_Q": "and a traversal sequence [4, 3, 0, 1, 2, 5], verify if it is the preorder, inorder, and postorder consistent with the tree.",
+        "traversal_order_verification_A": "preorder",
         "mirror_tree_Q": "generate the mirror image of the tree, where the left and right children of all nodes are swapped.",
         "mirror_tree_A_E": "4 -(R)-> 3, 3 -(R)-> 0, 0 -(L)-> 1, 3 -(L)-> 2, 4 -(L)-> 5",
-        "mirror_tree_A_H": "   4\n    |-(R)-3\n    |   |-(R)-0\n    |   |   `-(L)-1\n    |   `-(L)-2\n    `-(L)-5\n"
+        "mirror_tree_A_H": "   4\n    |-(R)-3\n    |   |-(R)-0\n    |   |   `-(L)-1\n    |   `-(L)-2\n    `-(L)-5"
     },
     {
         "structure_args": [
@@ -507,7 +507,7 @@
         ],
         "id": 16,
         "edge_presentation": "0 -(L)-> 4, 4 -(R)-> 5, 4 -(L)-> 1, 1 -(L)-> 3, 1 -(R)-> 2",
-        "hierarchy_presentation": "   0\n    `-(L)-4\n        |-(R)-5\n        `-(L)-1\n            |-(L)-3\n            `-(R)-2\n",
+        "hierarchy_presentation": "   0\n    `-(L)-4\n        |-(R)-5\n        `-(L)-1\n            |-(L)-3\n            `-(R)-2",
         "balance_Q": "determine whether it is a balanced tree?",
         "balance_A": false,
         "prefix_traversal_Q": "generate the traversal sequence in infix order (inorder), where the nodes are visited in the order: left subtree, root, and right subtree.",
@@ -532,7 +532,7 @@
         "traversal_order_verification_A": "inorder",
         "mirror_tree_Q": "generate the mirror image of the tree, where the left and right children of all nodes are swapped.",
         "mirror_tree_A_E": "0 -(R)-> 4, 4 -(L)-> 5, 4 -(R)-> 1, 1 -(R)-> 3, 1 -(L)-> 2",
-        "mirror_tree_A_H": "   0\n    `-(R)-4\n        |-(L)-5\n        `-(R)-1\n            |-(R)-3\n            `-(L)-2\n"
+        "mirror_tree_A_H": "   0\n    `-(R)-4\n        |-(L)-5\n        `-(R)-1\n            |-(R)-3\n            `-(L)-2"
     },
     {
         "structure_args": [
@@ -542,7 +542,7 @@
         ],
         "id": 17,
         "edge_presentation": "1 -(R)-> 5, 1 -(L)-> 3, 3 -(R)-> 4, 3 -(L)-> 2, 2 -(L)-> 0",
-        "hierarchy_presentation": "   1\n    |-(R)-5\n    `-(L)-3\n        |-(R)-4\n        `-(L)-2\n            `-(L)-0\n",
+        "hierarchy_presentation": "   1\n    |-(R)-5\n    `-(L)-3\n        |-(R)-4\n        `-(L)-2\n            `-(L)-0",
         "balance_Q": "determine whether it is a balanced tree?",
         "balance_A": false,
         "prefix_traversal_Q": "generate the traversal sequence in infix order (inorder), where the nodes are visited in the order: left subtree, root, and right subtree.",
@@ -563,11 +563,11 @@
             5,
             1
         ],
-        "traversal_order_verification_Q": "and a traversal sequence [0, 2, 3, 4, 1, 5], verify if it is the preorder, inorder, and postorder consistent with the tree.",
-        "traversal_order_verification_A": "inorder",
+        "traversal_order_verification_Q": "and a traversal sequence [1, 3, 2, 0, 4, 5], verify if it is the preorder, inorder, and postorder consistent with the tree.",
+        "traversal_order_verification_A": "preorder",
         "mirror_tree_Q": "generate the mirror image of the tree, where the left and right children of all nodes are swapped.",
         "mirror_tree_A_E": "1 -(L)-> 5, 1 -(R)-> 3, 3 -(L)-> 4, 3 -(R)-> 2, 2 -(R)-> 0",
-        "mirror_tree_A_H": "   1\n    |-(L)-5\n    `-(R)-3\n        |-(L)-4\n        `-(R)-2\n            `-(R)-0\n"
+        "mirror_tree_A_H": "   1\n    |-(L)-5\n    `-(R)-3\n        |-(L)-4\n        `-(R)-2\n            `-(R)-0"
     },
     {
         "structure_args": [
@@ -577,7 +577,7 @@
         ],
         "id": 18,
         "edge_presentation": "7 -(R)-> 3, 3 -(R)-> 9, 9 -(L)-> 2, 3 -(L)-> 4, 7 -(L)-> 8, 8 -(R)-> 6, 6 -(R)-> 0, 6 -(L)-> 1, 8 -(L)-> 5",
-        "hierarchy_presentation": "   7\n    |-(R)-3\n    |   |-(R)-9\n    |   |   `-(L)-2\n    |   `-(L)-4\n    `-(L)-8\n        |-(R)-6\n        |   |-(R)-0\n        |   `-(L)-1\n        `-(L)-5\n",
+        "hierarchy_presentation": "   7\n    |-(R)-3\n    |   |-(R)-9\n    |   |   `-(L)-2\n    |   `-(L)-4\n    `-(L)-8\n        |-(R)-6\n        |   |-(R)-0\n        |   `-(L)-1\n        `-(L)-5",
         "balance_Q": "determine whether it is a balanced tree?",
         "balance_A": true,
         "prefix_traversal_Q": "generate the traversal sequence in infix order (inorder), where the nodes are visited in the order: left subtree, root, and right subtree.",
@@ -606,11 +606,11 @@
             3,
             7
         ],
-        "traversal_order_verification_Q": "and a traversal sequence [5, 1, 0, 6, 8, 4, 2, 9, 3, 7], verify if it is the preorder, inorder, and postorder consistent with the tree.",
-        "traversal_order_verification_A": "postorder",
+        "traversal_order_verification_Q": "and a traversal sequence [7, 8, 5, 6, 1, 0, 3, 4, 9, 2], verify if it is the preorder, inorder, and postorder consistent with the tree.",
+        "traversal_order_verification_A": "preorder",
         "mirror_tree_Q": "generate the mirror image of the tree, where the left and right children of all nodes are swapped.",
         "mirror_tree_A_E": "7 -(L)-> 3, 3 -(L)-> 9, 9 -(R)-> 2, 3 -(R)-> 4, 7 -(R)-> 8, 8 -(L)-> 6, 6 -(L)-> 0, 6 -(R)-> 1, 8 -(R)-> 5",
-        "mirror_tree_A_H": "   7\n    |-(L)-3\n    |   |-(L)-9\n    |   |   `-(R)-2\n    |   `-(R)-4\n    `-(R)-8\n        |-(L)-6\n        |   |-(L)-0\n        |   `-(R)-1\n        `-(R)-5\n"
+        "mirror_tree_A_H": "   7\n    |-(L)-3\n    |   |-(L)-9\n    |   |   `-(R)-2\n    |   `-(R)-4\n    `-(R)-8\n        |-(L)-6\n        |   |-(L)-0\n        |   `-(R)-1\n        `-(R)-5"
     },
     {
         "structure_args": [
@@ -620,7 +620,7 @@
         ],
         "id": 19,
         "edge_presentation": "8 -(L)-> 9, 9 -(L)-> 6, 6 -(L)-> 5, 6 -(R)-> 7, 9 -(R)-> 1, 1 -(R)-> 2, 8 -(R)-> 0, 0 -(R)-> 3, 3 -(R)-> 4",
-        "hierarchy_presentation": "   8\n    |-(L)-9\n    |   |-(L)-6\n    |   |   |-(L)-5\n    |   |   `-(R)-7\n    |   `-(R)-1\n    |       `-(R)-2\n    `-(R)-0\n        `-(R)-3\n            `-(R)-4\n",
+        "hierarchy_presentation": "   8\n    |-(L)-9\n    |   |-(L)-6\n    |   |   |-(L)-5\n    |   |   `-(R)-7\n    |   `-(R)-1\n    |       `-(R)-2\n    `-(R)-0\n        `-(R)-3\n            `-(R)-4",
         "balance_Q": "determine whether it is a balanced tree?",
         "balance_A": false,
         "prefix_traversal_Q": "generate the traversal sequence in infix order (inorder), where the nodes are visited in the order: left subtree, root, and right subtree.",
@@ -653,7 +653,7 @@
         "traversal_order_verification_A": "inorder",
         "mirror_tree_Q": "generate the mirror image of the tree, where the left and right children of all nodes are swapped.",
         "mirror_tree_A_E": "8 -(R)-> 9, 9 -(R)-> 6, 6 -(R)-> 5, 6 -(L)-> 7, 9 -(L)-> 1, 1 -(L)-> 2, 8 -(L)-> 0, 0 -(L)-> 3, 3 -(L)-> 4",
-        "mirror_tree_A_H": "   8\n    |-(R)-9\n    |   |-(R)-6\n    |   |   |-(R)-5\n    |   |   `-(L)-7\n    |   `-(L)-1\n    |       `-(L)-2\n    `-(L)-0\n        `-(L)-3\n            `-(L)-4\n"
+        "mirror_tree_A_H": "   8\n    |-(R)-9\n    |   |-(R)-6\n    |   |   |-(R)-5\n    |   |   `-(L)-7\n    |   `-(L)-1\n    |       `-(L)-2\n    `-(L)-0\n        `-(L)-3\n            `-(L)-4"
     },
     {
         "structure_args": [
@@ -663,7 +663,7 @@
         ],
         "id": 20,
         "edge_presentation": "6 -(L)-> 7, 7 -(R)-> 3, 3 -(L)-> 5, 3 -(R)-> 8, 7 -(L)-> 1, 1 -(R)-> 4, 6 -(R)-> 9, 9 -(R)-> 2, 2 -(R)-> 0",
-        "hierarchy_presentation": "   6\n    |-(L)-7\n    |   |-(R)-3\n    |   |   |-(L)-5\n    |   |   `-(R)-8\n    |   `-(L)-1\n    |       `-(R)-4\n    `-(R)-9\n        `-(R)-2\n            `-(R)-0\n",
+        "hierarchy_presentation": "   6\n    |-(L)-7\n    |   |-(R)-3\n    |   |   |-(L)-5\n    |   |   `-(R)-8\n    |   `-(L)-1\n    |       `-(R)-4\n    `-(R)-9\n        `-(R)-2\n            `-(R)-0",
         "balance_Q": "determine whether it is a balanced tree?",
         "balance_A": false,
         "prefix_traversal_Q": "generate the traversal sequence in infix order (inorder), where the nodes are visited in the order: left subtree, root, and right subtree.",
@@ -692,11 +692,11 @@
             9,
             6
         ],
-        "traversal_order_verification_Q": "and a traversal sequence [4, 1, 5, 8, 3, 7, 0, 2, 9, 6], verify if it is the preorder, inorder, and postorder consistent with the tree.",
-        "traversal_order_verification_A": "postorder",
+        "traversal_order_verification_Q": "and a traversal sequence [6, 7, 1, 4, 3, 5, 8, 9, 2, 0], verify if it is the preorder, inorder, and postorder consistent with the tree.",
+        "traversal_order_verification_A": "preorder",
         "mirror_tree_Q": "generate the mirror image of the tree, where the left and right children of all nodes are swapped.",
         "mirror_tree_A_E": "6 -(R)-> 7, 7 -(L)-> 3, 3 -(R)-> 5, 3 -(L)-> 8, 7 -(R)-> 1, 1 -(L)-> 4, 6 -(L)-> 9, 9 -(L)-> 2, 2 -(L)-> 0",
-        "mirror_tree_A_H": "   6\n    |-(R)-7\n    |   |-(L)-3\n    |   |   |-(R)-5\n    |   |   `-(L)-8\n    |   `-(R)-1\n    |       `-(L)-4\n    `-(L)-9\n        `-(L)-2\n            `-(L)-0\n"
+        "mirror_tree_A_H": "   6\n    |-(R)-7\n    |   |-(L)-3\n    |   |   |-(R)-5\n    |   |   `-(L)-8\n    |   `-(R)-1\n    |       `-(L)-4\n    `-(L)-9\n        `-(L)-2\n            `-(L)-0"
     },
     {
         "structure_args": [
@@ -706,7 +706,7 @@
         ],
         "id": 21,
         "edge_presentation": "1 -(R)-> 7, 7 -(R)-> 6, 6 -(R)-> 4, 6 -(L)-> 3, 1 -(L)-> 0, 0 -(L)-> 9, 9 -(R)-> 8, 9 -(L)-> 10, 0 -(R)-> 2, 2 -(R)-> 5",
-        "hierarchy_presentation": "   1\n    |-(R)-7\n    |   `-(R)-6\n    |       |-(R)-4\n    |       `-(L)-3\n    `-(L)-0\n        |-(L)-9\n        |   |-(R)-8\n        |   `-(L)-10\n        `-(R)-2\n            `-(R)-5\n",
+        "hierarchy_presentation": "   1\n    |-(R)-7\n    |   `-(R)-6\n    |       |-(R)-4\n    |       `-(L)-3\n    `-(L)-0\n        |-(L)-9\n        |   |-(R)-8\n        |   `-(L)-10\n        `-(R)-2\n            `-(R)-5",
         "balance_Q": "determine whether it is a balanced tree?",
         "balance_A": false,
         "prefix_traversal_Q": "generate the traversal sequence in infix order (inorder), where the nodes are visited in the order: left subtree, root, and right subtree.",
@@ -737,11 +737,11 @@
             7,
             1
         ],
-        "traversal_order_verification_Q": "and a traversal sequence [10, 8, 9, 5, 2, 0, 3, 4, 6, 7, 1], verify if it is the preorder, inorder, and postorder consistent with the tree.",
-        "traversal_order_verification_A": "postorder",
+        "traversal_order_verification_Q": "and a traversal sequence [1, 0, 9, 10, 8, 2, 5, 7, 6, 3, 4], verify if it is the preorder, inorder, and postorder consistent with the tree.",
+        "traversal_order_verification_A": "preorder",
         "mirror_tree_Q": "generate the mirror image of the tree, where the left and right children of all nodes are swapped.",
         "mirror_tree_A_E": "1 -(L)-> 7, 7 -(L)-> 6, 6 -(L)-> 4, 6 -(R)-> 3, 1 -(R)-> 0, 0 -(R)-> 9, 9 -(L)-> 8, 9 -(R)-> 10, 0 -(L)-> 2, 2 -(L)-> 5",
-        "mirror_tree_A_H": "   1\n    |-(L)-7\n    |   `-(L)-6\n    |       |-(L)-4\n    |       `-(R)-3\n    `-(R)-0\n        |-(R)-9\n        |   |-(L)-8\n        |   `-(R)-10\n        `-(L)-2\n            `-(L)-5\n"
+        "mirror_tree_A_H": "   1\n    |-(L)-7\n    |   `-(L)-6\n    |       |-(L)-4\n    |       `-(R)-3\n    `-(R)-0\n        |-(R)-9\n        |   |-(L)-8\n        |   `-(R)-10\n        `-(L)-2\n            `-(L)-5"
     },
     {
         "structure_args": [
@@ -751,7 +751,7 @@
         ],
         "id": 22,
         "edge_presentation": "8 -(L)-> 3, 3 -(R)-> 7, 7 -(R)-> 0, 7 -(L)-> 10, 8 -(R)-> 6, 6 -(L)-> 9, 9 -(L)-> 5, 6 -(R)-> 2, 2 -(L)-> 4, 2 -(R)-> 1",
-        "hierarchy_presentation": "   8\n    |-(L)-3\n    |   `-(R)-7\n    |       |-(R)-0\n    |       `-(L)-10\n    `-(R)-6\n        |-(L)-9\n        |   `-(L)-5\n        `-(R)-2\n            |-(L)-4\n            `-(R)-1\n",
+        "hierarchy_presentation": "   8\n    |-(L)-3\n    |   `-(R)-7\n    |       |-(R)-0\n    |       `-(L)-10\n    `-(R)-6\n        |-(L)-9\n        |   `-(L)-5\n        `-(R)-2\n            |-(L)-4\n            `-(R)-1",
         "balance_Q": "determine whether it is a balanced tree?",
         "balance_A": false,
         "prefix_traversal_Q": "generate the traversal sequence in infix order (inorder), where the nodes are visited in the order: left subtree, root, and right subtree.",
@@ -782,11 +782,11 @@
             6,
             8
         ],
-        "traversal_order_verification_Q": "and a traversal sequence [8, 3, 7, 10, 0, 6, 9, 5, 2, 4, 1], verify if it is the preorder, inorder, and postorder consistent with the tree.",
-        "traversal_order_verification_A": "preorder",
+        "traversal_order_verification_Q": "and a traversal sequence [3, 10, 7, 0, 8, 5, 9, 6, 4, 2, 1], verify if it is the preorder, inorder, and postorder consistent with the tree.",
+        "traversal_order_verification_A": "inorder",
         "mirror_tree_Q": "generate the mirror image of the tree, where the left and right children of all nodes are swapped.",
         "mirror_tree_A_E": "8 -(R)-> 3, 3 -(L)-> 7, 7 -(L)-> 0, 7 -(R)-> 10, 8 -(L)-> 6, 6 -(R)-> 9, 9 -(R)-> 5, 6 -(L)-> 2, 2 -(R)-> 4, 2 -(L)-> 1",
-        "mirror_tree_A_H": "   8\n    |-(R)-3\n    |   `-(L)-7\n    |       |-(L)-0\n    |       `-(R)-10\n    `-(L)-6\n        |-(R)-9\n        |   `-(R)-5\n        `-(L)-2\n            |-(R)-4\n            `-(L)-1\n"
+        "mirror_tree_A_H": "   8\n    |-(R)-3\n    |   `-(L)-7\n    |       |-(L)-0\n    |       `-(R)-10\n    `-(L)-6\n        |-(R)-9\n        |   `-(R)-5\n        `-(L)-2\n            |-(R)-4\n            `-(L)-1"
     },
     {
         "structure_args": [
@@ -796,7 +796,7 @@
         ],
         "id": 23,
         "edge_presentation": "2 -(L)-> 8, 8 -(R)-> 1, 8 -(L)-> 4, 4 -(R)-> 9, 4 -(L)-> 6, 2 -(R)-> 7, 7 -(R)-> 0, 7 -(L)-> 5, 5 -(R)-> 3, 5 -(L)-> 10",
-        "hierarchy_presentation": "   2\n    |-(L)-8\n    |   |-(R)-1\n    |   `-(L)-4\n    |       |-(R)-9\n    |       `-(L)-6\n    `-(R)-7\n        |-(R)-0\n        `-(L)-5\n            |-(R)-3\n            `-(L)-10\n",
+        "hierarchy_presentation": "   2\n    |-(L)-8\n    |   |-(R)-1\n    |   `-(L)-4\n    |       |-(R)-9\n    |       `-(L)-6\n    `-(R)-7\n        |-(R)-0\n        `-(L)-5\n            |-(R)-3\n            `-(L)-10",
         "balance_Q": "determine whether it is a balanced tree?",
         "balance_A": true,
         "prefix_traversal_Q": "generate the traversal sequence in infix order (inorder), where the nodes are visited in the order: left subtree, root, and right subtree.",
@@ -831,6 +831,6 @@
         "traversal_order_verification_A": "inorder",
         "mirror_tree_Q": "generate the mirror image of the tree, where the left and right children of all nodes are swapped.",
         "mirror_tree_A_E": "2 -(R)-> 8, 8 -(L)-> 1, 8 -(R)-> 4, 4 -(L)-> 9, 4 -(R)-> 6, 2 -(L)-> 7, 7 -(L)-> 0, 7 -(R)-> 5, 5 -(L)-> 3, 5 -(R)-> 10",
-        "mirror_tree_A_H": "   2\n    |-(R)-8\n    |   |-(L)-1\n    |   `-(R)-4\n    |       |-(L)-9\n    |       `-(R)-6\n    `-(L)-7\n        |-(L)-0\n        `-(R)-5\n            |-(L)-3\n            `-(R)-10\n"
+        "mirror_tree_A_H": "   2\n    |-(R)-8\n    |   |-(L)-1\n    |   `-(R)-4\n    |       |-(L)-9\n    |       `-(R)-6\n    `-(L)-7\n        |-(L)-0\n        `-(R)-5\n            |-(L)-3\n            `-(R)-10"
     }
 ]
