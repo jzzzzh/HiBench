@@ -150,8 +150,6 @@ def convert_to_string(formula_list):
     formula = ""
     for i in range(len(formula_list)):
         formula += formula_list[i]
-        if i < len(formula_list) - 1:
-            formula += " "
     return formula
 
 def random_change(formula_list1, formula_list2, symbol_complexity, value_complexity):
@@ -189,7 +187,7 @@ def gen_dataset(symbol_complexity, value_complexity, length, num_samples):
             prefixEq2Postfix = random_change(prefix_list, postfix_list, symbol_complexity, value_complexity)
             infixEq2Postfix = random_change(formula_list, postfix_list, symbol_complexity, value_complexity)
             infixEq2Prefix = random_change(formula_list, prefix_list, symbol_complexity, value_complexity)
-            dataset.append((formula, convert_to_string(postfix_list), convert_to_string(prefix_list), eval(formula)), postfixEq2Prefix, postfixEq2Infix, prefixEq2Infix, prefixEq2Postfix, infixEq2Postfix, infixEq2Prefix)
+            dataset.append((formula, convert_to_string(postfix_list), convert_to_string(prefix_list), eval(formula), postfixEq2Prefix, postfixEq2Infix, prefixEq2Infix, prefixEq2Postfix, infixEq2Postfix, infixEq2Prefix))
             
         except:
             i -= 1
@@ -282,3 +280,26 @@ def gen_all_datasets():
 
 if __name__ == "__main__":
     gen_all_datasets()
+    # test random_change
+    # symbol_complexity = ["+", "-", "*", "/", "^", "(", ")"]
+    # value_complexity = [i for i in range(10)]
+    # length = 10
+    # formula, formula_list = generate_formula(symbol_complexity, value_complexity, length)
+    # postfix_list = infix_to_postfix(formula_list)
+    # prefix_list = infix_to_prefix(formula_list)
+    # print(formula)
+    # print(formula_list)
+    # print(postfix_list)
+    # print(prefix_list)
+    # postfixEq2Prefix = random_change(postfix_list, prefix_list, symbol_complexity, value_complexity)
+    # postfixEq2Infix = random_change(postfix_list, formula_list, symbol_complexity, value_complexity)
+    # prefixEq2Infix = random_change(prefix_list, formula_list, symbol_complexity, value_complexity)
+    # prefixEq2Postfix = random_change(prefix_list, postfix_list, symbol_complexity, value_complexity)
+    # infixEq2Postfix = random_change(formula_list, postfix_list, symbol_complexity, value_complexity)
+    # infixEq2Prefix = random_change(formula_list, prefix_list, symbol_complexity, value_complexity)
+    # print(postfixEq2Prefix)
+    # print(postfixEq2Infix)
+    # print(prefixEq2Infix)
+    # print(prefixEq2Postfix)
+    # print(infixEq2Postfix)
+    # print(infixEq2Prefix)
