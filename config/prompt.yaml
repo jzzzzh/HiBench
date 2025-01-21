@@ -4,7 +4,7 @@ Fundamental:
   Task:
     Normal:
       add_node:
-        PromptTemplate: "Given the hierarchical structure <STRUCTURE>, <QUESTION>."
+        PromptTemplate: "Given the hierarchical structure <STRUCTURE>, <QUESTION>"
         OutputFormatTemplate: "{\"answer\": <new structure>} following the input structure format,"
         OneshotExamplePrompt: "Here is one example."
         FewshotExamplePrompt: "Here are a few examples."
@@ -74,8 +74,7 @@ Fundamental:
         OutputFormatTemplate: "{\"answer\": preorder} if it is the preorder, {\"answer\": inorder} if it is the inorder, and {\"answer\": postorder} if it is the postorder."
         OneshotExamplePrompt: "Here is one example."
         FewshotExamplePrompt: "Here are a few examples."
-      MirrorTree:OneshotExamplePrompt: "Here is one example."
-        FewshotExamplePrompt: "Here are a few examples."
+      MirrorTree:
         PromptTemplate: "Given the binary tree-liked hierarchical structure <STRUCTURE>, <QUESTION>"
         OutputFormatTemplate: "{\"answer\": <new structure>} following the input structure format,"
         OneshotExamplePrompt: "Here is one example."
@@ -157,8 +156,7 @@ Paper:
   OutputFormatTemplate: "Please return the answer in JSON format directly like <OUTPUTFORMATE>  and do not feedback the detailed process."
   Task:
     contextual_qa:
-      PromptTemplate: "<QUESTION>"OneshotExamplePrompt: "Here is one example."
-        FewshotExamplePrompt: "Here are a few examples."
+      PromptTemplate: "<QUESTION>"
       OutputFormatTemplate: "{\"answer\": \"XXX\"}"
       OneshotExamplePrompt: "Here is one example."
       FewshotExamplePrompt: "Here are a few examples."

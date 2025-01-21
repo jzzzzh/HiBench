@@ -2,7 +2,7 @@ Dataset:
   Fundamental:
     Dir: ./dataset/Fundamental/
     TreeType: ['Binary', 'Normal']
-    InputMode: ['Edge', 'Hierarchy']
+    InputMode: ['edge', 'hierarchy']
     SubTask: ['add_node', 'common_ancestor', 'isomorphic', 'remove_node', 'node_depth', 'leaf', 'root']
   JSON:
     Dir: ./dataset/JSON/
