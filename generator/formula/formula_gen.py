@@ -155,20 +155,29 @@ def convert_to_string(formula_list):
     return formula
 
 def random_change(formula_list1, formula_list2, symbol_complexity, value_complexity):
+    tmp1 = formula_list1.copy()
+    tmp2 = formula_list2.copy()
     if random.choice([True, False]):
         flag = False
         index = random.randint(0, len(formula_list1) - 1)
         while formula_list1[index] == "(" or formula_list1[index] == ")":
             index = random.randint(0, len(formula_list1) - 1)
         if formula_list1[index].isdigit() or formula_list1[index][1:].isdigit():
-            formula_list1[index] = str(random.choice(value_complexity))
+            original = formula_list1[index]
+            new = random.choice(value_complexity)
+            while new == original:
+                new = random.choice(value_complexity)
+            tmp1[index] = str(new)
         else:
-            formula_list1[index] = random.choice([s for s in symbol_complexity if s not in ["(", ")"]])
-
-        return [convert_to_string(formula_list1), convert_to_string(formula_list2), flag]
+            original = formula_list1[index]
+            new = random.choice([s for s in symbol_complexity if s not in ["(", ")"]])
+            while new == original:
+                new = random.choice([s for s in symbol_complexity if s not in ["(", ")"]])
+            tmp1[index] = new
+        return [convert_to_string(tmp1), convert_to_string(formula_list2), flag]
     else:
         flag = True
-        return [convert_to_string(formula_list1), convert_to_string(formula_list2), flag]
+        return [convert_to_string(tmp1), convert_to_string(formula_list2), flag]
 
 
 
