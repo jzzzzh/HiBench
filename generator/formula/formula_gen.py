@@ -150,6 +150,8 @@ def convert_to_string(formula_list):
     formula = ""
     for i in range(len(formula_list)):
         formula += formula_list[i]
+        if i < len(formula_list) - 1:
+            formula += " "
     return formula
 
 def random_change(formula_list1, formula_list2, symbol_complexity, value_complexity):
@@ -194,7 +196,7 @@ def gen_dataset(symbol_complexity, value_complexity, length, num_samples):
             ans = eval(formula)
             if abs(ans) < 10**6:
                 ans = round(ans, 2)
-                dataset.append((formula, convert_to_string(postfix_list), convert_to_string(prefix_list), ans, postfixEq2Prefix, postfixEq2Infix,postfixEq2postfix, prefixEq2Infix, prefixEq2Postfix, prefixEq2Prefix, infixEq2Postfix, infixEq2Prefix, infixEq2Infix))
+                dataset.append((convert_to_string(formula_list), convert_to_string(postfix_list), convert_to_string(prefix_list), ans, postfixEq2Prefix, postfixEq2Infix,postfixEq2postfix, prefixEq2Infix, prefixEq2Postfix, prefixEq2Prefix, infixEq2Postfix, infixEq2Prefix, infixEq2Infix))
                 i += 1
         except:
             i = i
