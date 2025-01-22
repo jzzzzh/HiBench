@@ -175,7 +175,8 @@ def random_change(formula_list1, formula_list2, symbol_complexity, value_complex
 
 def gen_dataset(symbol_complexity, value_complexity, length, num_samples):
     dataset = []
-    for i in range(num_samples):
+    i = 0
+    while i < num_samples: 
         formula, formula_list = generate_formula(symbol_complexity, value_complexity, length)
         postfix_list = infix_to_postfix(formula_list)
         prefix_list = infix_to_prefix(formula_list)
@@ -191,14 +192,12 @@ def gen_dataset(symbol_complexity, value_complexity, length, num_samples):
             infixEq2Prefix = random_change(formula_list, prefix_list, symbol_complexity, value_complexity)
             infixEq2Infix = random_change(formula_list, formula_list, symbol_complexity, value_complexity)
             ans = eval(formula)
-            if abs(ans) > 10**6:
-                i -= 1
-                continue
-            ans = round(ans, 2)
-            dataset.append((formula, convert_to_string(postfix_list), convert_to_string(prefix_list), ans, postfixEq2Prefix, postfixEq2Infix,postfixEq2postfix, prefixEq2Infix, prefixEq2Postfix, prefixEq2Prefix, infixEq2Postfix, infixEq2Prefix, infixEq2Infix))
-            
+            if abs(ans) < 10**6:
+                ans = round(ans, 2)
+                dataset.append((formula, convert_to_string(postfix_list), convert_to_string(prefix_list), ans, postfixEq2Prefix, postfixEq2Infix,postfixEq2postfix, prefixEq2Infix, prefixEq2Postfix, prefixEq2Prefix, infixEq2Postfix, infixEq2Prefix, infixEq2Infix))
+                i += 1
         except:
-            i -= 1
+            i = i
 
     return dataset
 
