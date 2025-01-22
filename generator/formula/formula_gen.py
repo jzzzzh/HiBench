@@ -190,8 +190,12 @@ def gen_dataset(symbol_complexity, value_complexity, length, num_samples):
             infixEq2Postfix = random_change(formula_list, postfix_list, symbol_complexity, value_complexity)
             infixEq2Prefix = random_change(formula_list, prefix_list, symbol_complexity, value_complexity)
             infixEq2Infix = random_change(formula_list, formula_list, symbol_complexity, value_complexity)
-
-            dataset.append((formula, convert_to_string(postfix_list), convert_to_string(prefix_list), eval(formula), postfixEq2Prefix, postfixEq2Infix,postfixEq2postfix, prefixEq2Infix, prefixEq2Postfix, prefixEq2Prefix, infixEq2Postfix, infixEq2Prefix, infixEq2Infix))
+            ans = eval(formula)
+            if abs(ans) > 10**6:
+                i -= 1
+                continue
+            ans = round(ans, 2)
+            dataset.append((formula, convert_to_string(postfix_list), convert_to_string(prefix_list), ans, postfixEq2Prefix, postfixEq2Infix,postfixEq2postfix, prefixEq2Infix, prefixEq2Postfix, prefixEq2Prefix, infixEq2Postfix, infixEq2Prefix, infixEq2Infix))
             
         except:
             i -= 1
