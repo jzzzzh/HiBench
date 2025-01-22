@@ -20,5 +20,6 @@ formula_config = {
         "medium": 10,
         "hard": 15,
     },
+    "dataset_size": 100,
 }
 
