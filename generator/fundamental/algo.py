@@ -36,11 +36,17 @@ def add_node(G, node, parent) -> nx.Graph:
 
 
 def all_ancestor(G, node) -> List[str]:
-    return (list(G.predecessors(node)))
+    ancestors = set(G.predecessors(node))
+    for ancestor in list(ancestors):
+        ancestors.update(all_ancestor(G, ancestor))
+    return ancestors
 
 
 def all_children(G, node):
-    return list(G.successors(node))
+    successors = set(G.successors(node))
+    for successor in list(successors):
+        successors.update(all_ancestor(G, successor))
+    return successors
 
 
 def remove_node(G, node) -> nx.Graph:
