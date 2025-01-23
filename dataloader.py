@@ -12,6 +12,8 @@ class TemplateDataLoader:
         prompt_config_path = os.path.join(os.path.dirname(__file__), 'config/prompt.yaml')
         with open(prompt_config_path, 'r') as file:
             self.prompt_config = yaml.safe_load(file)
+        self.fewshot_example_prompt = self.prompt_config['FewshotExamplePrompt']
+        self.oneshot_example_prompt = self.prompt_config['OneshotExamplePrompt']
     def load_data(self):
         pass
 
@@ -177,10 +179,20 @@ class FundamentalDataLoader(TemplateDataLoader):
             for data in dataset:
                 SystemPrompt, UserPrompt, TrueAnswer = self.data_generator.generate(data)
                 if self.example_type == "OneShot":
-                    ExamplePrompt = self.prompt_config['Fundamental']['Task'][self.tree_type.capitalize()][f'{self.sub_task}']['OneshotExamplePrompt']
+                    one_shot_question = self.prompt_config['Fundamental']['Task'][self.tree_type.capitalize()][f'{self.sub_task}']['Example']['Question1']
+                    one_shot_anwsers = self.prompt_config['Fundamental']['Task'][self.tree_type.capitalize()][f'{self.sub_task}']['Example']['Answer1']
+                    ExamplePrompt = self.oneshot_example_prompt.replace('<QUESTION1>', one_shot_question).replace('<ANSWER1>', one_shot_anwsers)
                     UserPrompt = ExamplePrompt + '\n' + UserPrompt
                 elif self.example_type == "FewShot":
-                    ExamplePrompt = self.prompt_config['Fundamental']['Task'][self.tree_type.capitalize()][f'{self.sub_task}']['FewshotExamplePrompt']
+                    few_shot_question1 = self.prompt_config['Fundamental']['Task'][self.tree_type.capitalize()][f'{self.sub_task}']['Example']['Question1']
+                    few_shot_anwsers1 = self.prompt_config['Fundamental']['Task'][self.tree_type.capitalize()][f'{self.sub_task}']['Example']['Answer1']
+                    few_shot_question2 = self.prompt_config['Fundamental']['Task'][self.tree_type.capitalize()][f'{self.sub_task}']['Example']['Question2']
+                    few_shot_anwsers2 = self.prompt_config['Fundamental']['Task'][self.tree_type.capitalize()][f'{self.sub_task}']['Example']['Answer2']
+                    few_shot_question3 = self.prompt_config['Fundamental']['Task'][self.tree_type.capitalize()][f'{self.sub_task}']['Example']['Question3']
+                    few_shot_anwsers3 = self.prompt_config['Fundamental']['Task'][self.tree_type.capitalize()][f'{self.sub_task}']['Example']['Answer3']
+                    ExamplePrompt = self.fewshot_example_prompt.replace('<QUESTION1>', few_shot_question1).replace('<ANSWER1>', few_shot_anwsers1)
+                    ExamplePrompt = ExamplePrompt.replace('<QUESTION2>', few_shot_question2).replace('<ANSWER2>', few_shot_anwsers2)
+                    ExamplePrompt = ExamplePrompt.replace('<QUESTION3>', few_shot_question3).replace('<ANSWER3>', few_shot_anwsers3)
                     UserPrompt = ExamplePrompt + '\n' + UserPrompt
                 elif self.example_type == "ZeroShot" or self.example_type == "None":
                     pass
@@ -264,10 +276,20 @@ class JSONDataLoader(TemplateDataLoader):
             input_data['true_answer'] = data['answer']
             SystemPrompt, UserPrompt, TrueAnswer = self.data_generator.generate(input_data)
             if self.example_type == "OneShot":
-                ExamplePrompt = self.prompt_config['JSON']['Task'][f'{self.dict[self.sub_task]}']['OneshotExamplePrompt']                
+                one_shot_question = self.prompt_config['JSON']['Task'][f'{self.dict[self.sub_task]}']['Example']['Question1']
+                one_shot_anwsers = self.prompt_config['JSON']['Task'][f'{self.dict[self.sub_task]}']['Example']['Answer1']
+                ExamplePrompt = self.oneshot_example_prompt.replace('<QUESTION1>', one_shot_question).replace('<ANSWER1>', one_shot_anwsers)          
                 UserPrompt = ExamplePrompt + UserPrompt
             elif self.example_type == "FewShot":
-                ExamplePrompt = self.prompt_config['JSON']['Task'][f'{self.dict[self.sub_task]}']['FewshotExamplePrompt']
+                few_shot_question1 = self.prompt_config['JSON']['Task'][f'{self.dict[self.sub_task]}']['Example']['Question1']
+                few_shot_anwsers1 = self.prompt_config['JSON']['Task'][f'{self.dict[self.sub_task]}']['Example']['Answer1']
+                few_shot_question2 = self.prompt_config['JSON']['Task'][f'{self.dict[self.sub_task]}']['Example']['Question2']
+                few_shot_anwsers2 = self.prompt_config['JSON']['Task'][f'{self.dict[self.sub_task]}']['Example']['Answer2']
+                few_shot_question3 = self.prompt_config['JSON']['Task'][f'{self.dict[self.sub_task]}']['Example']['Question3']
+                few_shot_anwsers3 = self.prompt_config['JSON']['Task'][f'{self.dict[self.sub_task]}']['Example']['Answer3']
+                ExamplePrompt = self.fewshot_example_prompt.replace('<QUESTION1>', few_shot_question1).replace('<ANSWER1>', few_shot_anwsers1)
+                ExamplePrompt = ExamplePrompt.replace('<QUESTION2>', few_shot_question2).replace('<ANSWER2>', few_shot_anwsers2)
+                ExamplePrompt = ExamplePrompt.replace('<QUESTION3>', few_shot_question3).replace('<ANSWER3>', few_shot_anwsers3)
                 UserPrompt = ExamplePrompt + UserPrompt
             elif self.example_type == "ZeroShot" or self.example_type == "None":
                 pass
@@ -350,10 +372,20 @@ class FormulaDataLoader(TemplateDataLoader):
                 input_data['true_answer'] = data['Result']
                 SystemPrompt, UserPrompt, TrueAnswer = self.data_generator.generate(input_data)
                 if self.example_type == "OneShot":
-                    ExamplePrompt = self.prompt_config['Formula']['Task'][f'{self.dict[self.sub_task]}']['OneshotExamplePrompt']                
+                    one_shot_question = self.prompt_config['Formula']['Task'][f'{self.dict[self.sub_task]}']['Example']['Question1']
+                    one_shot_anwsers = self.prompt_config['Formula']['Task'][f'{self.dict[self.sub_task]}']['Example']['Answer1']
+                    ExamplePrompt = self.oneshot_example_prompt.replace('<QUESTION1>', one_shot_question).replace('<ANSWER1>', one_shot_anwsers)
                     UserPrompt = ExamplePrompt + UserPrompt
                 elif self.example_type == "FewShot":
-                    ExamplePrompt = self.prompt_config['Formula']['Task'][f'{self.dict[self.sub_task]}']['FewshotExamplePrompt']
+                    few_shot_question1 = self.prompt_config['Formula']['Task'][f'{self.dict[self.sub_task]}']['Example']['Question1']
+                    few_shot_anwsers1 = self.prompt_config['Formula']['Task'][f'{self.dict[self.sub_task]}']['Example']['Answer1']
+                    few_shot_question2 = self.prompt_config['Formula']['Task'][f'{self.dict[self.sub_task]}']['Example']['Question2']
+                    few_shot_anwsers2 = self.prompt_config['Formula']['Task'][f'{self.dict[self.sub_task]}']['Example']['Answer2']  
+                    few_shot_question3 = self.prompt_config['Formula']['Task'][f'{self.dict[self.sub_task]}']['Example']['Question3']
+                    few_shot_anwsers3 = self.prompt_config['Formula']['Task'][f'{self.dict[self.sub_task]}']['Example']['Answer3']
+                    ExamplePrompt = self.fewshot_example_prompt.replace('<QUESTION1>', few_shot_question1).replace('<ANSWER1>', few_shot_anwsers1)
+                    ExamplePrompt = ExamplePrompt.replace('<QUESTION2>', few_shot_question2).replace('<ANSWER2>', few_shot_anwsers2)
+                    ExamplePrompt = ExamplePrompt.replace('<QUESTION3>', few_shot_question3).replace('<ANSWER3>', few_shot_anwsers3)
                     UserPrompt = ExamplePrompt + UserPrompt
                 elif self.example_type == "ZeroShot" or self.example_type == "None":
                     pass
@@ -371,10 +403,20 @@ class FormulaDataLoader(TemplateDataLoader):
                 input_data['format2'] = self.format2
                 SystemPrompt, UserPrompt, TrueAnswer = self.data_generator.generate(input_data)
                 if self.example_type == "OneShot":
-                    ExamplePrompt = self.prompt_config['Formula']['Task'][f'{self.dict[self.sub_task]}']['OneshotExamplePrompt']                
+                    one_shot_question = self.prompt_config['Formula']['Task'][f'{self.dict[self.sub_task]}']['Example']['Question1']
+                    one_shot_anwsers = self.prompt_config['Formula']['Task'][f'{self.dict[self.sub_task]}']['Example']['Answer1']
+                    ExamplePrompt = self.oneshot_example_prompt.replace('<QUESTION1>', one_shot_question).replace('<ANSWER1>', one_shot_anwsers)
                     UserPrompt = ExamplePrompt + UserPrompt
                 elif self.example_type == "FewShot":
-                    ExamplePrompt = self.prompt_config['Formula']['Task'][f'{self.dict[self.sub_task]}']['FewshotExamplePrompt']
+                    few_shot_question1 = self.prompt_config['Formula']['Task'][f'{self.dict[self.sub_task]}']['Example']['Question1']
+                    few_shot_anwsers1 = self.prompt_config['Formula']['Task'][f'{self.dict[self.sub_task]}']['Example']['Answer1']
+                    few_shot_question2 = self.prompt_config['Formula']['Task'][f'{self.dict[self.sub_task]}']['Example']['Question2']
+                    few_shot_anwsers2 = self.prompt_config['Formula']['Task'][f'{self.dict[self.sub_task]}']['Example']['Answer2']  
+                    few_shot_question3 = self.prompt_config['Formula']['Task'][f'{self.dict[self.sub_task]}']['Example']['Question3']
+                    few_shot_anwsers3 = self.prompt_config['Formula']['Task'][f'{self.dict[self.sub_task]}']['Example']['Answer3']
+                    ExamplePrompt = self.fewshot_example_prompt.replace('<QUESTION1>', few_shot_question1).replace('<ANSWER1>', few_shot_anwsers1)
+                    ExamplePrompt = ExamplePrompt.replace('<QUESTION2>', few_shot_question2).replace('<ANSWER2>', few_shot_anwsers2)
+                    ExamplePrompt = ExamplePrompt.replace('<QUESTION3>', few_shot_question3).replace('<ANSWER3>', few_shot_anwsers3)
                     UserPrompt = ExamplePrompt + UserPrompt
                 elif self.example_type == "ZeroShot" or self.example_type == "None":
                     pass
@@ -396,10 +438,20 @@ class FormulaDataLoader(TemplateDataLoader):
                 input_data['true_answer'] = data['Is_Equivalent']
                 SystemPrompt, UserPrompt, TrueAnswer = self.data_generator.generate(input_data)
                 if self.example_type == "OneShot":
-                    ExamplePrompt = self.prompt_config['Formula']['Task'][f'{self.dict[self.sub_task]}']['OneshotExamplePrompt']                
+                    one_shot_question = self.prompt_config['Formula']['Task'][f'{self.dict[self.sub_task]}']['Example']['Question1']
+                    one_shot_anwsers = self.prompt_config['Formula']['Task'][f'{self.dict[self.sub_task]}']['Example']['Answer1']
+                    ExamplePrompt = self.oneshot_example_prompt.replace('<QUESTION1>', one_shot_question).replace('<ANSWER1>', one_shot_anwsers)
                     UserPrompt = ExamplePrompt + UserPrompt
                 elif self.example_type == "FewShot":
-                    ExamplePrompt = self.prompt_config['Formula']['Task'][f'{self.dict[self.sub_task]}']['FewshotExamplePrompt']
+                    few_shot_question1 = self.prompt_config['Formula']['Task'][f'{self.dict[self.sub_task]}']['Example']['Question1']
+                    few_shot_anwsers1 = self.prompt_config['Formula']['Task'][f'{self.dict[self.sub_task]}']['Example']['Answer1']
+                    few_shot_question2 = self.prompt_config['Formula']['Task'][f'{self.dict[self.sub_task]}']['Example']['Question2']
+                    few_shot_anwsers2 = self.prompt_config['Formula']['Task'][f'{self.dict[self.sub_task]}']['Example']['Answer2']  
+                    few_shot_question3 = self.prompt_config['Formula']['Task'][f'{self.dict[self.sub_task]}']['Example']['Question3']
+                    few_shot_anwsers3 = self.prompt_config['Formula']['Task'][f'{self.dict[self.sub_task]}']['Example']['Answer3']
+                    ExamplePrompt = self.fewshot_example_prompt.replace('<QUESTION1>', few_shot_question1).replace('<ANSWER1>', few_shot_anwsers1)
+                    ExamplePrompt = ExamplePrompt.replace('<QUESTION2>', few_shot_question2).replace('<ANSWER2>', few_shot_anwsers2)
+                    ExamplePrompt = ExamplePrompt.replace('<QUESTION3>', few_shot_question3).replace('<ANSWER3>', few_shot_anwsers3)
                     UserPrompt = ExamplePrompt + UserPrompt
                 elif self.example_type == "ZeroShot" or self.example_type == "None":
                     pass
@@ -478,10 +530,20 @@ class CodeDataLoader(TemplateDataLoader):
                     input_data['true_answer'] = data['time']
                 SystemPrompt, UserPrompt, TrueAnswer = self.data_generator.generate(input_data)
                 if self.example_type == "OneShot":
-                    ExamplePrompt = self.prompt_config['Code']['Task'][f'{self.dict[self.sub_task]}']['OneshotExamplePrompt']                
+                    one_shot_question = self.prompt_config['Code']['Task'][f'{self.dict[self.sub_task]}']['Example']['Question1']
+                    one_shot_anwsers = self.prompt_config['Code']['Task'][f'{self.dict[self.sub_task]}']['Example']['Answer1']
+                    ExamplePrompt = self.oneshot_example_prompt.replace('<QUESTION1>', one_shot_question).replace('<ANSWER1>', one_shot_anwsers)         
                     UserPrompt = ExamplePrompt + UserPrompt
                 elif self.example_type == "FewShot":
-                    ExamplePrompt = self.prompt_config['Code']['Task'][f'{self.dict[self.sub_task]}']['FewshotExamplePrompt']
+                    few_shot_question1 = self.prompt_config['Code']['Task'][f'{self.dict[self.sub_task]}']['Example']['Question1']
+                    few_shot_anwsers1 = self.prompt_config['Code']['Task'][f'{self.dict[self.sub_task]}']['Example']['Answer1']
+                    few_shot_question2 = self.prompt_config['Code']['Task'][f'{self.dict[self.sub_task]}']['Example']['Question2']
+                    few_shot_anwsers2 = self.prompt_config['Code']['Task'][f'{self.dict[self.sub_task]}']['Example']['Answer2']
+                    few_shot_question3 = self.prompt_config['Code']['Task'][f'{self.dict[self.sub_task]}']['Example']['Question3']
+                    few_shot_anwsers3 = self.prompt_config['Code']['Task'][f'{self.dict[self.sub_task]}']['Example']['Answer3']
+                    ExamplePrompt = self.fewshot_example_prompt.replace('<QUESTION1>', few_shot_question1).replace('<ANSWER1>', few_shot_anwsers1)
+                    ExamplePrompt = ExamplePrompt.replace('<QUESTION2>', few_shot_question2).replace('<ANSWER2>', few_shot_anwsers2)
+                    ExamplePrompt = ExamplePrompt.replace('<QUESTION3>', few_shot_question3).replace('<ANSWER3>', few_shot_anwsers3)
                     UserPrompt = ExamplePrompt + UserPrompt
                 elif self.example_type == "ZeroShot" or self.example_type == "None":
                     pass
@@ -504,10 +566,20 @@ class CodeDataLoader(TemplateDataLoader):
                 input_data['true_answer'] = ans
                 SystemPrompt, UserPrompt, TrueAnswer = self.data_generator.generate(input_data)
                 if self.example_type == "OneShot":
-                    ExamplePrompt = self.prompt_config['Code']['Task'][f'{self.dict[self.sub_task]}']['OneshotExamplePrompt']                
+                    one_shot_question = self.prompt_config['Code']['Task'][f'{self.dict[self.sub_task]}']['Example']['Question1']
+                    one_shot_anwsers = self.prompt_config['Code']['Task'][f'{self.dict[self.sub_task]}']['Example']['Answer1']
+                    ExamplePrompt = self.oneshot_example_prompt.replace('<QUESTION1>', one_shot_question).replace('<ANSWER1>', one_shot_anwsers)         
                     UserPrompt = ExamplePrompt + UserPrompt
                 elif self.example_type == "FewShot":
-                    ExamplePrompt = self.prompt_config['Code']['Task'][f'{self.dict[self.sub_task]}']['FewshotExamplePrompt']
+                    few_shot_question1 = self.prompt_config['Code']['Task'][f'{self.dict[self.sub_task]}']['Example']['Question1']
+                    few_shot_anwsers1 = self.prompt_config['Code']['Task'][f'{self.dict[self.sub_task]}']['Example']['Answer1']
+                    few_shot_question2 = self.prompt_config['Code']['Task'][f'{self.dict[self.sub_task]}']['Example']['Question2']
+                    few_shot_anwsers2 = self.prompt_config['Code']['Task'][f'{self.dict[self.sub_task]}']['Example']['Answer2']
+                    few_shot_question3 = self.prompt_config['Code']['Task'][f'{self.dict[self.sub_task]}']['Example']['Question3']
+                    few_shot_anwsers3 = self.prompt_config['Code']['Task'][f'{self.dict[self.sub_task]}']['Example']['Answer3']
+                    ExamplePrompt = self.fewshot_example_prompt.replace('<QUESTION1>', few_shot_question1).replace('<ANSWER1>', few_shot_anwsers1)
+                    ExamplePrompt = ExamplePrompt.replace('<QUESTION2>', few_shot_question2).replace('<ANSWER2>', few_shot_anwsers2)
+                    ExamplePrompt = ExamplePrompt.replace('<QUESTION3>', few_shot_question3).replace('<ANSWER3>', few_shot_anwsers3)
                     UserPrompt = ExamplePrompt + UserPrompt
                 elif self.example_type == "ZeroShot" or self.example_type == "None":
                     pass
@@ -575,10 +647,20 @@ class PaperDataLoder(TemplateDataLoader):
                 input_data['true_answer'] = "{answer:"+ str(data['answer']['references']) +"}"
                 SystemPrompt, UserPrompt, TrueAnswer = self.data_generator.generate(input_data)
                 if self.example_type == "OneShot":
-                    ExamplePrompt = self.prompt_config['Paper']['Task'][f'{self.dict[self.sub_task]}']['OneshotExamplePrompt']                
+                    one_shot_question = self.prompt_config['Paper']['Task'][f'{self.dict[self.sub_task]}']['Example']['Question1']
+                    one_shot_anwsers = self.prompt_config['Paper']['Task'][f'{self.dict[self.sub_task]}']['Example']['Answer1']
+                    ExamplePrompt = self.oneshot_example_prompt.replace('<QUESTION1>', one_shot_question).replace('<ANSWER1>', one_shot_anwsers)           
                     UserPrompt = ExamplePrompt + UserPrompt
                 elif self.example_type == "FewShot":
-                    ExamplePrompt = self.prompt_config['Paper']['Task'][f'{self.dict[self.sub_task]}']['FewshotExamplePrompt']
+                    few_shot_question1 = self.prompt_config['Paper']['Task'][f'{self.dict[self.sub_task]}']['Example']['Question1']
+                    few_shot_anwsers1 = self.prompt_config['Paper']['Task'][f'{self.dict[self.sub_task]}']['Example']['Answer1']
+                    few_shot_question2 = self.prompt_config['Paper']['Task'][f'{self.dict[self.sub_task]}']['Example']['Question2']
+                    few_shot_anwsers2 = self.prompt_config['Paper']['Task'][f'{self.dict[self.sub_task]}']['Example']['Answer2']
+                    few_shot_question3 = self.prompt_config['Paper']['Task'][f'{self.dict[self.sub_task]}']['Example']['Question3']
+                    few_shot_anwsers3 = self.prompt_config['Paper']['Task'][f'{self.dict[self.sub_task]}']['Example']['Answer3']
+                    ExamplePrompt = self.fewshot_example_prompt.replace('<QUESTION1>', few_shot_question1).replace('<ANSWER1>', few_shot_anwsers1)
+                    ExamplePrompt = ExamplePrompt.replace('<QUESTION2>', few_shot_question2).replace('<ANSWER2>', few_shot_anwsers2)
+                    ExamplePrompt = ExamplePrompt.replace('<QUESTION3>', few_shot_question3).replace('<ANSWER3>', few_shot_anwsers3)
                     UserPrompt = ExamplePrompt + UserPrompt
                 elif self.example_type == "ZeroShot" or self.example_type == "None":
                     pass
@@ -593,10 +675,20 @@ class PaperDataLoder(TemplateDataLoader):
                 input_data['true_answer'] = "{answer:"+str(data['answer']['references'])+"}"
                 SystemPrompt, UserPrompt, TrueAnswer = self.data_generator.generate(input_data)
                 if self.example_type == "OneShot":
-                    ExamplePrompt = self.prompt_config['Paper']['Task'][f'{self.dict[self.sub_task]}']['OneshotExamplePrompt']                
+                    one_shot_question = self.prompt_config['Paper']['Task'][f'{self.dict[self.sub_task]}']['Example']['Question1']
+                    one_shot_anwsers = self.prompt_config['Paper']['Task'][f'{self.dict[self.sub_task]}']['Example']['Answer1']
+                    ExamplePrompt = self.oneshot_example_prompt.replace('<QUESTION1>', one_shot_question).replace('<ANSWER1>', one_shot_anwsers)           
                     UserPrompt = ExamplePrompt + UserPrompt
                 elif self.example_type == "FewShot":
-                    ExamplePrompt = self.prompt_config['Paper']['Task'][f'{self.dict[self.sub_task]}']['FewshotExamplePrompt']
+                    few_shot_question1 = self.prompt_config['Paper']['Task'][f'{self.dict[self.sub_task]}']['Example']['Question1']
+                    few_shot_anwsers1 = self.prompt_config['Paper']['Task'][f'{self.dict[self.sub_task]}']['Example']['Answer1']
+                    few_shot_question2 = self.prompt_config['Paper']['Task'][f'{self.dict[self.sub_task]}']['Example']['Question2']
+                    few_shot_anwsers2 = self.prompt_config['Paper']['Task'][f'{self.dict[self.sub_task]}']['Example']['Answer2']
+                    few_shot_question3 = self.prompt_config['Paper']['Task'][f'{self.dict[self.sub_task]}']['Example']['Question3']
+                    few_shot_anwsers3 = self.prompt_config['Paper']['Task'][f'{self.dict[self.sub_task]}']['Example']['Answer3']
+                    ExamplePrompt = self.fewshot_example_prompt.replace('<QUESTION1>', few_shot_question1).replace('<ANSWER1>', few_shot_anwsers1)
+                    ExamplePrompt = ExamplePrompt.replace('<QUESTION2>', few_shot_question2).replace('<ANSWER2>', few_shot_anwsers2)
+                    ExamplePrompt = ExamplePrompt.replace('<QUESTION3>', few_shot_question3).replace('<ANSWER3>', few_shot_anwsers3)
                     UserPrompt = ExamplePrompt + UserPrompt
                 elif self.example_type == "ZeroShot" or self.example_type == "None":
                     pass
@@ -611,10 +703,20 @@ class PaperDataLoder(TemplateDataLoader):
                 input_data['true_answer'] = "{answer:"+ str(data['answer']['references']) + "}"
                 SystemPrompt, UserPrompt, TrueAnswer = self.data_generator.generate(input_data)
                 if self.example_type == "OneShot":
-                    ExamplePrompt = self.prompt_config['Paper']['Task'][f'{self.dict[self.sub_task]}']['OneshotExamplePrompt']                
+                    one_shot_question = self.prompt_config['Paper']['Task'][f'{self.dict[self.sub_task]}']['Example']['Question1']
+                    one_shot_anwsers = self.prompt_config['Paper']['Task'][f'{self.dict[self.sub_task]}']['Example']['Answer1']
+                    ExamplePrompt = self.oneshot_example_prompt.replace('<QUESTION1>', one_shot_question).replace('<ANSWER1>', one_shot_anwsers)           
                     UserPrompt = ExamplePrompt + UserPrompt
                 elif self.example_type == "FewShot":
-                    ExamplePrompt = self.prompt_config['Paper']['Task'][f'{self.dict[self.sub_task]}']['FewshotExamplePrompt']
+                    few_shot_question1 = self.prompt_config['Paper']['Task'][f'{self.dict[self.sub_task]}']['Example']['Question1']
+                    few_shot_anwsers1 = self.prompt_config['Paper']['Task'][f'{self.dict[self.sub_task]}']['Example']['Answer1']
+                    few_shot_question2 = self.prompt_config['Paper']['Task'][f'{self.dict[self.sub_task]}']['Example']['Question2']
+                    few_shot_anwsers2 = self.prompt_config['Paper']['Task'][f'{self.dict[self.sub_task]}']['Example']['Answer2']
+                    few_shot_question3 = self.prompt_config['Paper']['Task'][f'{self.dict[self.sub_task]}']['Example']['Question3']
+                    few_shot_anwsers3 = self.prompt_config['Paper']['Task'][f'{self.dict[self.sub_task]}']['Example']['Answer3']
+                    ExamplePrompt = self.fewshot_example_prompt.replace('<QUESTION1>', few_shot_question1).replace('<ANSWER1>', few_shot_anwsers1)
+                    ExamplePrompt = ExamplePrompt.replace('<QUESTION2>', few_shot_question2).replace('<ANSWER2>', few_shot_anwsers2)
+                    ExamplePrompt = ExamplePrompt.replace('<QUESTION3>', few_shot_question3).replace('<ANSWER3>', few_shot_anwsers3)
                     UserPrompt = ExamplePrompt + UserPrompt
                 elif self.example_type == "ZeroShot" or self.example_type == "None":
                     pass
@@ -660,14 +762,14 @@ class HibenchDataLoder(TemplateDataLoader):
  
 
 def test_dataloader():
-    # args = {'Task':'Code', 'SubTask': 'SpaceComplexity', 'type': 'python', 'ExampleType':'OneShot'}
+    args = {'Task':'Code', 'SubTask': 'SpaceComplexity', 'type': 'python', 'ExampleType':'OneShot'}
     # args = {'Task': 'JSON', 'SubTask': 'type_1', 'Domain': 'university', 'ExampleType':'OneShot'}
-    args = {'Task': 'Formula', 'SubTask': 'convert', 'Symbol_Mode': 'easy', 'Value_Mode':'easy', 'Length_Mode':'easy', 'format1':'infix', 'format2':'postfix', 'ExampleType':'FewShot'}
+    # args = {'Task': 'Formula', 'SubTask': 'convert', 'Symbol_Mode': 'easy', 'Value_Mode':'easy', 'Length_Mode':'easy', 'format1':'infix', 'format2':'postfix', 'ExampleType':'FewShot'}
     # args = {'Task': 'Paper', 'SubTask': 'contextual_qa', 'Mode': 'dev', 'ExampleType':'OneShot'}
     # args = {'Task': 'Fundamental', 'TreeType': 'binary', 'SubTask': 'infix_traversal', 'InputMode': 'hierarchy', 'balance': 'unbalanced', 'weight':'unweighted', 'difficulty':'easy', 'ExampleType':'FewShot'}
     data_loader = HibenchDataLoder(args)
     data = data_loader.load_data()
-    print(data)
+    print(data[0])
 
 
 if __name__ == '__main__':
