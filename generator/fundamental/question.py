@@ -101,8 +101,8 @@ def prefix_traversal_qa(G):
 def infix_traversal_qa(G):
     ref_ans = infix_traversal(G)
     return {
-        'prefix_traversal_Q': f'generate the traversal sequence in infix order (inorder), where the nodes are visited in the order: left subtree, root, and right subtree.',
-        'prefix_traversal_A': ref_ans,
+        'infix_traversal_Q': f'generate the traversal sequence in infix order (inorder), where the nodes are visited in the order: left subtree, root, and right subtree.',
+        'infix_traversal_A': ref_ans,
     }
     
 def postfix_traversal_qa(G):

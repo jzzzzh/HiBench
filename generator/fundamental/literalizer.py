@@ -45,6 +45,9 @@ def hierarchy_presentation(graph, node=None, prefix="", visited=None, is_last=Tr
         if node is None:
             raise ValueError("The graph has no root; it may not be a valid tree.")
 
+    if len(graph.edges()) == 0:
+        return "No edges"
+    
     # If the node has already been visited, mark it as a duplicate
     if node in visited:
         # return f"{prefix}{'`-- ' if not is_root else ''}{node} (duplicate)\n"
@@ -65,6 +68,8 @@ def hierarchy_presentation(graph, node=None, prefix="", visited=None, is_last=Tr
         # Recursively process child nodes
         result += hierarchy_presentation(graph, node=child, prefix=child_prefix, visited=visited, is_last=child_is_last, is_root=False)
     
+    if node == find_root(graph):
+        result = result.rstrip()
     return result
 
 
@@ -77,6 +82,9 @@ def binary_hierarchy_presentation(graph, parent=None, node=None, prefix="", visi
         if node is None:
             raise ValueError("The graph has no root; it may not be a valid tree.")
 
+    if len(graph.edges()) == 0:
+        return "No edges"
+    
     # Mark the current node as visited
     visited.add(node)
 
@@ -99,5 +107,8 @@ def binary_hierarchy_presentation(graph, parent=None, node=None, prefix="", visi
         child_prefix = prefix + ("    " if is_last else "|   ")
         # Recursively process child nodes
         result += binary_hierarchy_presentation(graph, parent=node, node=child, prefix=child_prefix, visited=visited, is_last=child_is_last, is_root=False)
+    
+    if node == find_root(graph):
+        result = result.rstrip()
     
     return result

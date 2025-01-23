@@ -1,2 +1,0 @@
-Line 12:         }
-Line 5:         vector<int> prefix(houses.size() + 1);

@@ -10,6 +10,11 @@ import regex as re
 import warnings
 os.environ['PYTORCH_CUDA_ALLOC_CONF'] = 'expandable_segments:True'
 
+def read_hf_token():
+    with open(".hfkey", "r") as f:
+        token = f.read()
+    return token
+
 class Checker:
     def __init__(self) -> None:
         pass
@@ -44,7 +49,8 @@ class LLMModel:
             hf_home = os.getenv("HF_HOME")
             model_path = os.path.join(hf_home, f"models--{company_name}--{model_name}") if hf_home else None
             if company_name == "meta-llama" and (hf_home is None or not os.path.exists(model_path)):
-                login()   
+                login(token=read_hf_token())
+                # login(token="")   
                 print(f"Downloading model: {model_id}")
             self.pipeline = transformers.pipeline("text-generation", model=model_id, model_kwargs={"torch_dtype": torch.bfloat16}, device_map="auto",)
             self.terminators = [
@@ -225,9 +231,9 @@ if __name__ == "__main__":
     # model_id = "baichuan-inc/Baichuan2-7B-Chat"
     # model_id = "microsoft/Phi-3.5-mini-instruct"
     # model_id = "internlm/internlm2_5-7b-chat"
-    model_id = "mistralai/Mistral-7B-Instruct-v0.3"
+    # model_id = "mistralai/Mistral-7B-Instruct-v0.3"
     # model_id = "Qwen/Qwen2.5-0.5B-Instruct"
-    # model_id = "meta-llama/Meta-Llama-3.1-8B-Instruct"
+    model_id = "meta-llama/Meta-Llama-3.1-8B-Instruct"
     # model_id = "Qwen/Qwen2.5-72B-Instruct"
     system_setting = "You are a helpful assistant."
     prompt = "please introduction the China? "

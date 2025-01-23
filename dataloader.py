@@ -1,3 +1,4 @@
+import glob
 import json
 import os
 import yaml
@@ -25,73 +26,170 @@ class PromptGenerator:
         pass    
 
 
-class FundamentalPromptGenerator(PromptGenerator):
-    def __init__(self, SubTask):
+class FundamentalNormalPromptGenerator(PromptGenerator):
+    def __init__(self, SubTask, InputMode):
         super().__init__()
         self.dataset_name = 'Fundamental'
         self.sub_task = SubTask
+        self.input_mode = InputMode
     
     def generate(self, data):
         SystemTemplate = self.config['Fundamental']['SystemTemplate']
         OutputFormatTemplate = self.config['Fundamental']['OutputFormatTemplate']
-        # TODO: Implement subtasks
-        if self.sub_task == 'add_node':
-            OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['Fundamental']['Task']['add_node']['OutputFormatTemplate'])
-            PromptTemplate = self.config['Fundamental']['Task']['add_node']['PromptTemplate']
-            PromptTemplate = PromptTemplate.replace('<TREE>', data['tree'])
-            TrueAnswer = data['true_answer']
-        elif self.sub_task == 'common_ancestor':
-            pass
+        if self.sub_task == 'leaf':
+            OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['Fundamental']['Task']['Normal']['leaf']['OutputFormatTemplate'])
+            PromptTemplate = self.config['Fundamental']['Task']['Normal']['leaf']['PromptTemplate']
+            PromptTemplate = PromptTemplate.replace('<STRUCTURE>', data[f'{self.input_mode.lower()}_presentation'])
+            PromptTemplate = PromptTemplate.replace('<QUESTION>', data['leaf_Q'])
+            TrueAnswer = data[f'leaf_A']
+        elif self.sub_task == 'all_ancestor':
+            OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['Fundamental']['Task']['Normal']['all_ancestor']['OutputFormatTemplate'])
+            PromptTemplate = self.config['Fundamental']['Task']['Normal']['all_ancestor']['PromptTemplate']
+            PromptTemplate = PromptTemplate.replace('<STRUCTURE>', data[f'{self.input_mode.lower()}_presentation'])
+            PromptTemplate = PromptTemplate.replace('<QUESTION>', data['all_ancestor_Q'])
+            TrueAnswer = data[f'all_ancestor_A']
+        elif self.sub_task == 'all_children':
+            OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['Fundamental']['Task']['Normal']['all_children']['OutputFormatTemplate'])
+            PromptTemplate = self.config['Fundamental']['Task']['Normal']['all_children']['PromptTemplate']
+            PromptTemplate = PromptTemplate.replace('<STRUCTURE>', data[f'{self.input_mode.lower()}_presentation'])
+            PromptTemplate = PromptTemplate.replace('<QUESTION>', data['all_children_Q'])
+            TrueAnswer = data[f'all_children_A']
         elif self.sub_task == 'isomorphic':
-            pass
-        elif self.sub_task == 'remove_node':
-            pass
+            OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['Fundamental']['Task']['Normal']['isomorphic']['OutputFormatTemplate'])
+            PromptTemplate = self.config['Fundamental']['Task']['Normal']['isomorphic']['PromptTemplate']
+            PromptTemplate = PromptTemplate.replace('<STRUCTURE>', data[f'{self.input_mode.lower()}_presentation'])
+            PromptTemplate = PromptTemplate.replace('<QUESTION>', data[f'isomorphic_Q_{self.input_mode[0].upper()}'])
+            TrueAnswer = data[f'isomorphic_A']
         elif self.sub_task == 'node_depth':
-            pass
-        elif self.sub_task == 'leaf':
-            pass
-        elif self.sub_task == 'root':
-            pass
+            OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['Fundamental']['Task']['Normal']['node_depth']['OutputFormatTemplate'])
+            PromptTemplate = self.config['Fundamental']['Task']['Normal']['node_depth']['PromptTemplate']
+            PromptTemplate = PromptTemplate.replace('<STRUCTURE>', data[f'{self.input_mode.lower()}_presentation'])
+            PromptTemplate = PromptTemplate.replace('<QUESTION>', data['node_depth_Q'])
+            TrueAnswer = data[f'node_depth_A']
+        elif self.sub_task == 'add_node':
+            OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['Fundamental']['Task']['Normal']['add_node']['OutputFormatTemplate'])
+            PromptTemplate = self.config['Fundamental']['Task']['Normal']['add_node']['PromptTemplate']
+            PromptTemplate = PromptTemplate.replace('<STRUCTURE>', data[f'{self.input_mode.lower()}_presentation'])
+            PromptTemplate = PromptTemplate.replace('<QUESTION>', data['add_node_Q'])
+            TrueAnswer = data[f'add_node_A_{self.input_mode[0].upper()}']
+        elif self.sub_task == 'remove_node':
+            OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['Fundamental']['Task']['Normal']['remove_node']['OutputFormatTemplate'])
+            PromptTemplate = self.config['Fundamental']['Task']['Normal']['remove_node']['PromptTemplate']
+            PromptTemplate = PromptTemplate.replace('<STRUCTURE>', data[f'{self.input_mode.lower()}_presentation'])
+            PromptTemplate = PromptTemplate.replace('<QUESTION>', data['remove_node_Q'])
+            TrueAnswer = data[f'remove_node_A_{self.input_mode[0].upper()}']
+        elif self.sub_task == 'common_ancestor':
+            OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['Fundamental']['Task']['Normal']['common_ancestor']['OutputFormatTemplate'])
+            PromptTemplate = self.config['Fundamental']['Task']['Normal']['common_ancestor']['PromptTemplate']
+            PromptTemplate = PromptTemplate.replace('<STRUCTURE>', data[f'{self.input_mode.lower()}_presentation'])
+            PromptTemplate = PromptTemplate.replace('<QUESTION>', data['common_ancestor_Q'])
+            TrueAnswer = data[f'common_ancestor_A']
+        else:
+            raise ValueError(f'unknown subtask {self.sub_task}')
         SystemPrompt = SystemTemplate
-        UserPrompt = PromptTemplate + OutputFormatTemplate
+        UserPrompt = PromptTemplate + '\n' + OutputFormatTemplate
+        return SystemPrompt, UserPrompt, TrueAnswer
+    
+
+class FundamentalBinaryPromptGenerator(PromptGenerator):
+    def __init__(self, SubTask, InputMode):
+        super().__init__()
+        self.dataset_name = 'Fundamental'
+        self.sub_task = SubTask
+        self.input_mode = InputMode
+    
+    def generate(self, data):
+        SystemTemplate = self.config['Fundamental']['SystemTemplate']
+        OutputFormatTemplate = self.config['Fundamental']['OutputFormatTemplate']
+        if self.sub_task == 'balance':
+            OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['Fundamental']['Task']['Binary']['balance']['OutputFormatTemplate'])
+            PromptTemplate = self.config['Fundamental']['Task']['Binary']['balance']['PromptTemplate']
+            PromptTemplate = PromptTemplate.replace('<STRUCTURE>', data[f'{self.input_mode.lower()}_presentation'])
+            PromptTemplate = PromptTemplate.replace('<QUESTION>', data['balance_Q'])
+            TrueAnswer = data[f'balance_A']
+        elif self.sub_task == 'prefix_traversal':
+            OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['Fundamental']['Task']['Binary']['prefix_traversal']['OutputFormatTemplate'])
+            PromptTemplate = self.config['Fundamental']['Task']['Binary']['prefix_traversal']['PromptTemplate']
+            PromptTemplate = PromptTemplate.replace('<STRUCTURE>', data[f'{self.input_mode.lower()}_presentation'])
+            PromptTemplate = PromptTemplate.replace('<QUESTION>', data['prefix_traversal_Q'])
+            TrueAnswer = data[f'prefix_traversal_A']
+        elif self.sub_task == 'infix_traversal':
+            OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['Fundamental']['Task']['Binary']['infix_traversal']['OutputFormatTemplate'])
+            PromptTemplate = self.config['Fundamental']['Task']['Binary']['infix_traversal']['PromptTemplate']
+            PromptTemplate = PromptTemplate.replace('<STRUCTURE>', data[f'{self.input_mode.lower()}_presentation'])
+            PromptTemplate = PromptTemplate.replace('<QUESTION>', data['infix_traversal_Q'])
+            TrueAnswer = data[f'infix_traversal_A']
+        elif self.sub_task == 'postfix_traversal':
+            OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['Fundamental']['Task']['Binary']['postfix_traversal']['OutputFormatTemplate'])
+            PromptTemplate = self.config['Fundamental']['Task']['Binary']['postfix_traversal']['PromptTemplate']
+            PromptTemplate = PromptTemplate.replace('<STRUCTURE>', data[f'{self.input_mode.lower()}_presentation'])
+            PromptTemplate = PromptTemplate.replace('<QUESTION>', data['postfix_traversal_Q'])
+            TrueAnswer = data[f'postfix_traversal_A']
+        elif self.sub_task == 'traversal_order_verification':
+            OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['Fundamental']['Task']['Binary']['traversal_order_verification']['OutputFormatTemplate'])
+            PromptTemplate = self.config['Fundamental']['Task']['Binary']['traversal_order_verification']['PromptTemplate']
+            PromptTemplate = PromptTemplate.replace('<STRUCTURE>', data[f'{self.input_mode.lower()}_presentation'])
+            PromptTemplate = PromptTemplate.replace('<QUESTION>', data['traversal_order_verification_Q'])
+            TrueAnswer = data[f'traversal_order_verification_A']
+        elif self.sub_task == 'mirror_tree':
+            OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['Fundamental']['Task']['Binary']['mirror_tree']['OutputFormatTemplate'])
+            PromptTemplate = self.config['Fundamental']['Task']['Binary']['mirror_tree']['PromptTemplate']
+            PromptTemplate = PromptTemplate.replace('<STRUCTURE>', data[f'{self.input_mode.lower()}_presentation'])
+            PromptTemplate = PromptTemplate.replace('<QUESTION>', data['mirror_tree_Q'])
+            TrueAnswer = data[f'mirror_tree_A_{self.input_mode[0].upper()}']
+        else:
+            raise ValueError(f'unknown subtask {self.sub_task}')
+        SystemPrompt = SystemTemplate
+        UserPrompt = PromptTemplate + '\n' + OutputFormatTemplate
         return SystemPrompt, UserPrompt, TrueAnswer
 
 
 class FundamentalDataLoader(TemplateDataLoader):
     def __init__(self, args):
         super().__init__()
+        self.args = args
         self.dataset_name = 'Fundamental'
-        self.dataset_dir = self.config['Dataset']['Fundamental']['Dir']
-        self.data_generator = FundamentalPromptGenerator(args["SubTask"])
+        self.tree_type = args['TreeType'] # 'normal' or 'binary'
+        self.dataset_dir = os.path.join(self.config['Dataset']['Fundamental']['Dir'], self.tree_type.lower())
         self.sub_task = args["SubTask"]
-        self.tree_type = args["TreeType"]
-        self.input_mode = args["InputMode"]
+        self.balance = args['Balance']
+        self.weight = args['Weight']
+        self.difficulty = args['Difficulty']
+        if self.tree_type.capitalize() == 'Normal':
+            self.data_generator = FundamentalNormalPromptGenerator(args["SubTask"], args["InputMode"])
+        else:
+            self.data_generator = FundamentalBinaryPromptGenerator(args["SubTask"], args["InputMode"])
         if 'ExampleType' in args:
             self.example_type = args['ExampleType']
         else:
             self.example_type = "None"
-        # TODO: Implement subtasks
-        # self.dict = {"add_node":"add_node", "common_ancestor":"common_ancestor", "isomorphic":"isomorphic", "remove_node":"remove_node", "node_depth":"node_depth", "leaf":"leaf", "root":"root"}
-
+        self.data = list()
+        
     def load_data(self):
-        # TODO: Implement input_mode
-        # with open(os.path.join(self.dataset_dir, f"{self.tree_type}_{self.Input_mode}.json"), 'r') as file:
-        #     train_data = json.load(file)
-        # for data in train_data:
-        #     SystemPrompt, UserPrompt, TrueAnswer = self.data_generator.generate(data)
-        #     print(SystemPrompt)
-        #     print(UserPrompt)
-        #     print(TrueAnswer)
-        #     if example_type == "OneShot":
-        #       ExamplePrompt = self.prompt_config['Fundamental']['Task'][f'{self.dict[self.sub_task]}']['OneshotExamplePrompt']                
-        #       UserPrompt = ExamplePrompt + UserPrompt
-        #     elif example_type == "FewShot":
-        #       ExamplePrompt = self.prompt_config['Fundamental']['Task'][f'{self.dict[self.sub_task]}']['FewshotExamplePrompt']
-        #       UserPrompt = ExamplePrompt + UserPrompt
-        #     elif example_type == "ZeroShot" or example_type == "None":
-        #         pass
-        pass
-        return 
+        dataset_path  = os.path.join(self.dataset_dir, f"{self.balance}-{self.weight}-{self.difficulty}*.json")
+        dataset_paths = glob.glob(dataset_path)
+        if not dataset_paths:
+            print(f'warning: no dataset found for {dataset_path}')
+            return self.data
+        for path in dataset_paths:
+            with open(path, 'r') as f:
+                dataset = json.load(f)
+            for data in dataset:
+                SystemPrompt, UserPrompt, TrueAnswer = self.data_generator.generate(data)
+                if self.example_type == "OneShot":
+                    ExamplePrompt = self.prompt_config['Fundamental']['Task'][self.tree_type.capitalize()][f'{self.sub_task}']['OneshotExamplePrompt']
+                    UserPrompt = ExamplePrompt + '\n' + UserPrompt
+                elif self.example_type == "FewShot":
+                    ExamplePrompt = self.prompt_config['Fundamental']['Task'][self.tree_type.capitalize()][f'{self.sub_task}']['FewshotExamplePrompt']
+                    UserPrompt = ExamplePrompt + '\n' + UserPrompt
+                elif self.example_type == "ZeroShot" or self.example_type == "None":
+                    pass
+                self.data.append({'SystemPrompt': SystemPrompt, 'UserPrompt': UserPrompt, 'TrueAnswer': TrueAnswer})
+        return self.data
+    def get_data(self):
+        return self.data
+    def length(self):
+        return len(self.data)
 
 class JSONPromptGenerator(PromptGenerator):
     def __init__(self, SubTask):
@@ -215,7 +313,9 @@ class FormulaDataLoader(TemplateDataLoader):
     def __init__(self, args):
         super().__init__()
         SubTask = args['SubTask']
-        Mode = args['Mode']
+        Symbol_Mode = args['Symbol_Mode']
+        Value_Mode = args['Value_Mode']
+        Length_Mode = args['Length_Mode']
         self.dataset_name = 'Formula'
         self.dataset_dir = self.config['Dataset']['Formula']['Dir']
         self.data_generator = FormulaPromptGenerator(SubTask)
@@ -234,12 +334,12 @@ class FormulaDataLoader(TemplateDataLoader):
         else:
             self.example_type = "None"
         
-        self.Mode = Mode
+        self.Mode = f"_symbol_{Symbol_Mode}_value_{Value_Mode}_length_{Length_Mode}"
         self.data = []
     
     def load_data(self):
         if self.sub_task == 'calculate':
-            ans_json_file = os.path.join(self.dataset_dir, f"{self.sub_task}/{self.format}_{self.Mode}.csv")
+            ans_json_file = os.path.join(self.dataset_dir, f"{self.sub_task}/{self.format}{self.Mode}.csv")
             with open(ans_json_file, 'r') as file:
                 reader = csv.DictReader(file)
                 train_data = [row for row in reader]
@@ -259,7 +359,7 @@ class FormulaDataLoader(TemplateDataLoader):
                     pass
                 self.data.append({'SystemPrompt': SystemPrompt, 'UserPrompt': UserPrompt, 'TrueAnswer': TrueAnswer})
         elif self.sub_task == 'convert':
-            ans_json_file = os.path.join(self.dataset_dir, f"{self.sub_task}/{self.format1}_{self.format2}_{self.Mode}.csv")
+            ans_json_file = os.path.join(self.dataset_dir, f"{self.sub_task}/{self.format1}2{self.format2}{self.Mode}.csv")
             with open(ans_json_file, 'r') as file:
                 reader = csv.DictReader(file)
                 train_data = [row for row in reader]
@@ -281,9 +381,9 @@ class FormulaDataLoader(TemplateDataLoader):
                 self.data.append({'SystemPrompt': SystemPrompt, 'UserPrompt': UserPrompt, 'TrueAnswer': TrueAnswer})
         elif self.sub_task == 'equivalent':
             if self.format1 != self.format2:
-                ans_json_file = os.path.join(self.dataset_dir, f"{self.sub_task}/{self.Mode}_Equivalent_{self.format1}_{self.format2}.csv")
+                ans_json_file = os.path.join(self.dataset_dir, f"{self.sub_task}/{self.format1}Eq2{self.format2}{self.Mode}.csv")
             if  self.format1 == self.format2:
-                ans_json_file = os.path.join(self.dataset_dir, f"{self.sub_task}/{self.Mode}_Equivalent_{self.format1}.csv")
+                ans_json_file = os.path.join(self.dataset_dir, f"{self.sub_task}/{self.format1}Eq2{self.format1}{self.Mode}.csv")
             with open(ans_json_file, 'r') as file:
                 reader = csv.DictReader(file)
                 train_data = [row for row in reader]
@@ -532,7 +632,9 @@ class HibenchDataLoder(TemplateDataLoader):
     def __init__(self, args):
         super().__init__()
         Task = args['Task']
-        if Task == "Code":
+        if Task == "Fundamental":
+            self.data_loader = FundamentalDataLoader(args)
+        elif Task == "Code":
             self.data_loader = CodeDataLoader(args)
         elif Task == "JSON":
             self.data_loader = JSONDataLoader(args)
@@ -543,6 +645,7 @@ class HibenchDataLoder(TemplateDataLoader):
 
     def load_data(self):
         return self.data_loader.load_data()
+    
     def save_data(self, data, model_name, args):
         Task_name = args['Task']
         SubTask_name = args['SubTask']
@@ -553,14 +656,15 @@ class HibenchDataLoder(TemplateDataLoader):
         file_name = f"{json_name}_{timestamp}.json"
         # file_name = f"{json_name}.json"
         with open(os.path.join(Save_dir, file_name), 'w') as file:
-            json.dump(data, file)
+            json.dump(data, file, indent=4)
  
 
 def test_dataloader():
     # args = {'Task':'Code', 'SubTask': 'SpaceComplexity', 'type': 'python', 'ExampleType':'OneShot'}
     # args = {'Task': 'JSON', 'SubTask': 'type_1', 'Domain': 'university', 'ExampleType':'OneShot'}
-    args = {'Task': 'Formula', 'SubTask': 'convert', 'Mode': 'Simple', 'format1':'Infix', 'format2':'Postfix', 'ExampleType':'FewShot'}
+    args = {'Task': 'Formula', 'SubTask': 'convert', 'Symbol_Mode': 'easy', 'Value_Mode':'easy', 'Length_Mode':'easy', 'format1':'infix', 'format2':'postfix', 'ExampleType':'FewShot'}
     # args = {'Task': 'Paper', 'SubTask': 'contextual_qa', 'Mode': 'dev', 'ExampleType':'OneShot'}
+    # args = {'Task': 'Fundamental', 'TreeType': 'binary', 'SubTask': 'infix_traversal', 'InputMode': 'hierarchy', 'balance': 'unbalanced', 'weight':'unweighted', 'difficulty':'easy', 'ExampleType':'FewShot'}
     data_loader = HibenchDataLoder(args)
     data = data_loader.load_data()
     print(data)

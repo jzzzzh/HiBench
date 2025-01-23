@@ -1,30 +1,35 @@
 class Solution {
 public:
-    string abbreviateProduct(int left, int right) {
-        static const int PREFIX_LEN = 5;
-        static const int SUFFIX_LEN = 5;
-        static const int64_t MOD = pow(10, PREFIX_LEN + SUFFIX_LEN);
+vector<vector<int>> updateMatrix(vector<vector<int>>& matrix) {
+for (int i = 0; i < matrix.size(); ++i) {
+for (int j = 0; j < matrix[i].size(); ++j) {
+if (!matrix[i][j]) {
+continue;
+}
+matrix[i][j] = numeric_limits<int>::max();
+if (i > 0 && matrix[i - 1][j] != numeric_limits<int>::max()) {
+matrix[i][j] = min(matrix[i][j], matrix[i - 1][j] + 1);
+}
+if (j > 0 && matrix[i][j - 1] != numeric_limits<int>::max()) {
+matrix[i][j] = min(matrix[i][j], matrix[i][j - 1] + 1);
+}
+}
+}
 
-        int64_t curr = 1, zeros = 0;
-        bool abbr = false;
-        double decimal = 0.0;
-        for (int64_t i = left; i <= right; ++i, curr %= MOD) {
-            curr *= i;
-            decimal += log10(i);
-            while (curr % 10 == 0) {
-                curr /= 10;
-                ++zeros;
-            }            
-            if (curr >= MOD) {
-                abbr = true;
-            }
-        }  
-        if (!abbr) {
-            return to_string(curr) + "e" + to_string(zeros);
-        }
-        decimal -= int(decimal);
-        const auto& prefix = to_string(static_cast<int>(pow(10, decimal + (PREFIX_LEN - 1))));
-        const auto& suffix = to_string(curr % static_cast<int>(pow(10, SUFFIX_LEN)));
-        return prefix + "..." + string(SUFFIX_LEN - size(suffix), '0') + suffix + "e" + to_string(zeros);
-    }
+for (int i = matrix.size() - 1; i >= 0; --i) {
+for (int j = matrix[i].size() - 1; j >= 0; --j) {
+if (!matrix[i][j]) {
+continue;
+}
+if (i < matrix.size() - 1 && matrix[i + 1][j] != numeric_limits<int>::max()) {
+matrix[i][j] = min(matrix[i][j], matrix[i + 1][j] + 1);
+}
+if (j < matrix[i].size() - 1 && matrix[i][j + 1] != numeric_limits<int>::max()) {
+matrix[i][j] = min(matrix[i][j], matrix[i][j + 1] + 1);
+}
+}
+}
+
+return matrix;
+}
 };

@@ -1,49 +1,80 @@
+import itertools
+import time
+import os
+
 from dataloader import *
 from call_llms import *
 from tqdm import tqdm
-import os
+
+
 def main():
 
-    EvalList = [{'Task':'Code', 'SubTask': 'CodeMissing', 'type': 'c++', 'ExampleType':'OneShot'},
-                {'Task':'Code', 'SubTask': 'SpaceComplexity', 'type': 'python', 'ExampleType':'FewShot'},
-                {'Task':'Code', 'SubTask': 'TimeComplexity', 'type': 'java', 'ExampleType':'ZeroShot'}]
+    # EvalList = [{'Task':'Code', 'SubTask': 'CodeMissing', 'type': 'c++', 'ExampleType':'OneShot'},
+    #             {'Task':'Code', 'SubTask': 'SpaceComplexity', 'type': 'python', 'ExampleType':'FewShot'},
+    #             {'Task':'Code', 'SubTask': 'TimeComplexity', 'type': 'java', 'ExampleType':'ZeroShot'}]
     # EvalList = [{'Task':'Code', 'SubTask': 'CodeMissing', 'type': 'c++'},
     #             {'Task': 'JSON', 'SubTask': 'type_1', 'Domain': 'university'},
     #             {'Task': 'Formula', 'SubTask': 'convert', 'Mode': 'Simple', 'format1':'Infix', 'format2':'Postfix'},
     #             {'Task': 'Formula', 'SubTask': 'convert', 'Mode': 'Simple', 'format1':'Infix', 'format2':'Prefix'},
     #             {'Task': 'Paper', 'SubTask': 'contextual_qa', 'Mode': 'dev'}]
+    EvalListList = [{
+        'Task': 'Fundamental',
+        'SubTask': {
+            'Fundamental': ['add_node', 'all_ancestor', 'all_children', 'common_ancestor', 'isomorphic', 'remove_node', 'node_depth', 'leaf', 'root'],
+            'Binary': ['balance', 'prefix_traversal', 'infix_traversal', 'postfix_traversal', 'traversal_order_verification', 'mirror_tree']
+        },
+        'Difficulty': ['easy', 'medium', 'hard'],
+        'TreeType': ['Binary', 'Normal'],
+        'Balance': ['balanced', 'unbalanced'],
+        'Weight': ['weighted', 'unweighted'],
+        'InputMode': ['edge', 'hierarchy']
+    }
+    ]
+    EvalList =[{'Task': 'Fundamental', 'SubTask':'add_node', 'Difficulty': 'easy', 'TreeType':'Normal', 'Balance':'unbalanced', 'Weight':'unweighted', 'InputMode': 'hierarchy'},
+               {'Task': 'Fundamental', 'SubTask':'all_ancestor', 'Difficulty': 'easy', 'TreeType':'Normal', 'Balance':'unbalanced', 'Weight':'unweighted', 'InputMode': 'hierarchy'},
+               {'Task': 'Fundamental', 'SubTask':'all_children', 'Difficulty': 'easy', 'TreeType':'Normal', 'Balance':'unbalanced', 'Weight':'unweighted', 'InputMode': 'hierarchy'},
+               {'Task': 'Fundamental', 'SubTask':'balance', 'Difficulty': 'easy', 'TreeType':'Binary', 'Balance':'unbalanced', 'Weight':'unweighted', 'InputMode': 'hierarchy'},
+               {'Task': 'Fundamental', 'SubTask':'prefix_traversal', 'Difficulty': 'easy', 'TreeType':'Binary', 'Balance':'unbalanced', 'Weight':'unweighted', 'InputMode': 'hierarchy'},
+               {'Task': 'Fundamental', 'SubTask':'infix_traversal', 'Difficulty': 'easy', 'TreeType':'Binary', 'Balance':'unbalanced', 'Weight':'unweighted', 'InputMode': 'hierarchy'},
+               ]
     
-    model_list = ["Qwen/Qwen2.5-0.5B-Instruct", "meta-llama/Meta-Llama-3.1-8B-Instruct"]
+    
+    model_list = ["Qwen/Qwen2.5-0.5B-Instruct"] #, "meta-llama/Meta-Llama-3.1-8B-Instruct"]
     for model in model_list:
-        print(model)
+        print(f"Starting model: {model}")
         llm = LLMModel(model, api_key=None)
         for Eval in EvalList:
-            print(Eval)
+            print(f"Processing task: {Eval}")
             Hibenchdataloader = HibenchDataLoder(Eval)
             data = Hibenchdataloader.load_data()
             for i in tqdm(range(len(data))):
                 SystemPrompt = data[i]['SystemPrompt']
                 UserPrompt = data[i]['UserPrompt']
                 TrueAnswer = data[i]['TrueAnswer']
-                # prompt = data[i]['prompt']
                 ans = llm.get_response(SystemPrompt, UserPrompt)
                 data[i]['response'] = ans
             Hibenchdataloader.save_data(data, model_name=model, args=Eval)
+            print(f"Completed task: {Eval}")
             
 
-
 def Logo():
-    text=(
-        "\033[91m    __  ___ ____                  __  \033[0m\n"
-        "\033[92m   / / / (_) __ )___  ____  _____/ /_ \033[0m\n"
-        "\033[93m  / /_/ / / __  / _ \/ __ \/ ___/ __ \\ \033[0m\n"
-        "\033[94m / __  / / /_/ /  __/ / / / /__/ / / / \033[0m\n"
-        "\033[95m/_/ /_/_/_____/\___/_/ /_/\___/_/ /_/  \033[0m"
+    colors = ["\033[91m", "\033[92m", "\033[93m", "\033[94m", "\033[95m"]
+    text = (
+        "   __  ___ ____                  __  \n"
+        "  / / / (_) __ )___  ____  _____/ /_ \n"
+        "  / /_/ / / __  / _ \/ __ \/ ___/ __ \\ \n"
+        " / __  / / /_/ /  __/ / / / /__/ / / / \n"
+        "/_/ /_/_/_____/\___/_/ /_/\___/_/ /_/  "
     )
     columns = os.get_terminal_size().columns
-    for line in text.split('\n'):
-        print(line.center(columns))
-    print("\n"*3)
+
+    for i, color in enumerate(itertools.cycle(colors)):
+        if i >= 10:
+            break
+        os.system('clear')
+        for line in text.split('\n'):
+            print(f"{color}{line.center(columns)}\033[0m")
+        time.sleep(0.5)
 
 if __name__ == '__main__':
     Logo()

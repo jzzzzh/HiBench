@@ -2,8 +2,13 @@ Dataset:
   Fundamental:
     Dir: ./dataset/Fundamental/
     TreeType: ['Binary', 'Normal']
-    InputMode: ['Edge', 'Hierarchy']
-    SubTask: ['add_node', 'common_ancestor', 'isomorphic', 'remove_node', 'node_depth', 'leaf', 'root']
+    InputMode: ['edge', 'hierarchy']
+    Difficulty: ['easy', 'medium', 'hard']
+    Balance: ['balanced', 'unbalanced']
+    Weight: ['weighted', 'unweighted']
+    SubTask: 
+      Normal: ['add_node', 'all_ancestor', 'all_children', 'common_ancestor', 'isomorphic', 'remove_node', 'node_depth', 'leaf', 'root']
+      Binary: ['balance', 'prefix_traversal', 'infix_traversal', 'postfix_traversal', 'traversal_order_verification', 'mirror_tree']
   JSON:
     Dir: ./dataset/JSON/
     SubTask: ['Task1', 'Task2', 'Task3', 'Task4', 'Task5']
@@ -12,7 +17,9 @@ Dataset:
     Dir: ./dataset/Formula/
     SubTask: ['calcuate', 'convert', 'equivalent']
     Format: ['Infix', 'Prefix', 'Postfix']
-    Mode: ['Simple', 'Medium', 'Hard']
+    Symbol_Mode: ['easy', 'medium', 'hard']
+    Value_Mode: ['easy', 'medium', 'hard']
+    Length_Mode: ['easy', 'medium', 'hard']
   Code:
     Dir: ./dataset/Code/
     SubTask: ['SpaceComplexity', 'TimeComplexity', 'CodeMissing']

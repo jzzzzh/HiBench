@@ -1,28 +1,16 @@
 class Solution {
 public:
-    int shoppingOffers(vector<int>& price, vector<vector<int>>& special, vector<int>& needs) {
-        return shoppingOffersHelper(price, special, needs, 0);
-    }
-
-private:
-    int shoppingOffersHelper(const vector<int>& price, const vector<vector<int>>& special, vector<int>& needs, int i) {
-        if (i == special.size()) {
-            return inner_product(price.begin(), price.end(), needs.begin(), 0);
-        }
-
-        int result = shoppingOffersHelper(price, special, needs, i + 1);
-
-        for (int j = 0; j < needs.size(); ++j) {
-            needs[j] -= special[i][j];
-        }
-        if (all_of(needs.begin(), needs.end(), [](int i) { return i >= 0; })) {
-            result = min(result, special[i].back() + shoppingOffersHelper(price, special, needs, i));
-        }
-        for (int j = 0; j < needs.size(); ++j) {
-            needs[j] += special[i][j];
-        }
-
-        return result;
-    }
+int maxA(int N) {
+if (N < 7) {
+return N;
+}
+if (N == 10) {  // the following rule doesn't hold when N = 10
+return 20;
+}
+auto n = N / 5 + 1;  // n3 + n4 increases one every 5 keys
+auto n3 = 5 * n - N - 1;
+auto n4 = n - n3;
+return pow(3, n3) * pow(4, n4);
+}
 };
 

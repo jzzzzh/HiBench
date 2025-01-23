@@ -4,7 +4,7 @@ Fundamental:
   Task:
     Normal:
       add_node:
-        PromptTemplate: "Given the hierarchical structure <STRUCTURE>, <QUESTION>."
+        PromptTemplate: "Given the hierarchical structure <STRUCTURE>, <QUESTION>"
         OutputFormatTemplate: "{\"answer\": <new structure>} following the input structure format,"
         OneshotExamplePrompt: "Here is one example."
         FewshotExamplePrompt: "Here are a few examples."
@@ -30,7 +30,7 @@ Fundamental:
         FewshotExamplePrompt: "Here are a few examples."
       remove_node:
         PrefixPromptTemplate: "Given the hierarchical structure <STRUCTURE>, <QUESTION>"
-        OutputFormatTemplate: "{\"answer\": <new structure>} following the input structure format,"
+        OutputFormatTemplate: "{\"answer\": <new structure>} following the input structure format, if there are no edges, please return {\"answer\": No edges}"
         OneshotExamplePrompt: "Here is one example."
         FewshotExamplePrompt: "Here are a few examples."
       node_depth:
@@ -49,33 +49,32 @@ Fundamental:
         OneshotExamplePrompt: "Here is one example."
         FewshotExamplePrompt: "Here are a few examples."
     Binary:
-      Balance: 
+      balance: 
         PromptTemplate: "Given the binary tree-liked hierarchical structure <STRUCTURE>, <QUESTION>"
         OutputFormatTemplate: "{\"answer\": true} if it is a balance binary tree, or {\"answer\": false} if it is not,"
         OneshotExamplePrompt: "Here is one example."
         FewshotExamplePrompt: "Here are a few examples."
-      PrefixTraversal:
+      prefix_traversal:
         PromptTemplate: "Given the binary tree-liked hierarchical structure <STRUCTURE>, <QUESTION>"
         OutputFormatTemplate: "{\"answer\": 1, 2, 3}, where 1, 2, and 3 are the node ID in prefix traversal order and split by comma,"
         OneshotExamplePrompt: "Here is one example."
         FewshotExamplePrompt: "Here are a few examples."
-      InfixTraversal:
+      infix_traversal:
         PromptTemplate: "Given the binary tree-liked hierarchical structure <STRUCTURE>, <QUESTION>"
         OutputFormatTemplate: "{\"answer\": 1, 2, 3}, where 1, 2, and 3 are the node ID in infix traversal order and split by comma,"
         OneshotExamplePrompt: "Here is one example."
         FewshotExamplePrompt: "Here are a few examples."
-      PostfixTraversal:
+      postfix_traversal:
         PromptTemplate: "Given the binary tree-liked hierarchical structure <STRUCTURE>, <QUESTION>"
         OutputFormatTemplate: "{\"answer\": 1, 2, 3}, where 1, 2, and 3 are the node ID in postfix traversal order and split by comma,"
         OneshotExamplePrompt: "Here is one example."
         FewshotExamplePrompt: "Here are a few examples."
-      TraversalOrderVerification:
+      traversal_order_verification:
         PromptTemplate: "Given the binary tree-liked hierarchical structure <STRUCTURE>, <QUESTION>"
         OutputFormatTemplate: "{\"answer\": preorder} if it is the preorder, {\"answer\": inorder} if it is the inorder, and {\"answer\": postorder} if it is the postorder."
         OneshotExamplePrompt: "Here is one example."
         FewshotExamplePrompt: "Here are a few examples."
-      MirrorTree:OneshotExamplePrompt: "Here is one example."
-        FewshotExamplePrompt: "Here are a few examples."
+      mirror_tree:
         PromptTemplate: "Given the binary tree-liked hierarchical structure <STRUCTURE>, <QUESTION>"
         OutputFormatTemplate: "{\"answer\": <new structure>} following the input structure format,"
         OneshotExamplePrompt: "Here is one example."
@@ -207,8 +206,7 @@ Paper:
   OutputFormatTemplate: "Please return the answer in JSON format directly like <OUTPUTFORMATE>  and do not feedback the detailed process."
   Task:
     contextual_qa:
-      PromptTemplate: "<QUESTION>"OneshotExamplePrompt: "Here is one example."
-        FewshotExamplePrompt: "Here are a few examples."
+      PromptTemplate: "<QUESTION>"
       OutputFormatTemplate: "{\"answer\": \"XXX\"}"
       OneshotExamplePrompt: "Here is one example."
       FewshotExamplePrompt: "Here are a few examples."
