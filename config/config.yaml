@@ -3,7 +3,12 @@ Dataset:
     Dir: ./dataset/Fundamental/
     TreeType: ['Binary', 'Normal']
     InputMode: ['edge', 'hierarchy']
-    SubTask: ['add_node', 'common_ancestor', 'isomorphic', 'remove_node', 'node_depth', 'leaf', 'root']
+    Difficulty: ['easy', 'medium', 'hard']
+    Balance: ['balanced', 'unbalanced']
+    Weight: ['weighted', 'unweighted']
+    SubTask: 
+      Normal: ['add_node', 'all_ancestor', 'all_children', 'common_ancestor', 'isomorphic', 'remove_node', 'node_depth', 'leaf', 'root']
+      Binary: ['balance', 'prefix_traversal', 'infix_traversal', 'postfix_traversal', 'traversal_order_verification', 'mirror_tree']
   JSON:
     Dir: ./dataset/JSON/
     SubTask: ['Task1', 'Task2', 'Task3', 'Task4', 'Task5']
