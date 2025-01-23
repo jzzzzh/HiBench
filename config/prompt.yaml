@@ -260,7 +260,8 @@ Code:
       Example: 
           Question1: "class Solution(object):
     def sum(self, num1, num2):
-        return num1+num2"
+        return num1+num2
+        What is the Space Complexity?"
           Answer1: "O(1)"
           Question2: "class Solution(object):
     def addBinary(self, a, b):
@@ -275,7 +276,8 @@ Code:
             result += str(val)
         if carry:
             result += str(carry)
-        return result[::-1]"
+        return result[::-1]
+        What is the Space Complexity?"
           Answer2: "O(1)"
           Question3: "class Solution2(object):
     def arrayPairSum(self, nums):
@@ -283,7 +285,8 @@ Code:
         result = 0
         for i in xrange(0, len(nums), 2):
             result += nums[i]
-        return result"
+        return result
+        What is the Space Complexity?"
           Answer3: "O(1)"
     TimeComplexity:
       PromptTemplate: "Given a code snippet <CODE>, calculate its time complexity."
@@ -291,7 +294,8 @@ Code:
       Example: 
           Question1: "class Solution(object):
     def sum(self, num1, num2):
-        return num1+num2"
+        return num1+num2
+        What is the Time Complexity?"
           Answer1: "O(1)"
           Question2: "class Solution(object):
     def addBinary(self, a, b):
@@ -306,7 +310,8 @@ Code:
             result += str(val)
         if carry:
             result += str(carry)
-        return result[::-1]"
+        return result[::-1]
+        What is the Time Complexity?"
           Answer2: "O(n)"
           Question3: "class Solution2(object):
     def arrayPairSum(self, nums):
@@ -314,7 +319,8 @@ Code:
         result = 0
         for i in xrange(0, len(nums), 2):
             result += nums[i]
-        return result"
+        return result
+        What is the Time Complexity?"
           Answer3: "O(nlogn)"
     CodeMissing:
       PromptTemplate: "Given a code snippet <CODE>, please find and write the missing code."
