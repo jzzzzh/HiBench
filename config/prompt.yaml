@@ -1,3 +1,5 @@
+OneshotExamplePrompt: "Here is one example.The input is <QUESTION1>, the answer is <ANSWER1>."
+FewshotExamplePrompt: "Here are a few examples. The input is <QUESTION1>, the answer is <ANSWER1>. The input is <QUESTION2>, the answer is <ANSWER2>. The input is <QUESTION3>, the answer is <ANSWER3>."
 Fundamental:
   SystemTemplate: "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
   OutputFormatTemplate: "Please return the answer in JSON format directly like <OUTPUTFORMATE> and do not feedback the detailed process."
@@ -318,5 +320,3 @@ Paper:
           Question3: "Q3"
           Answer3: "A3"
 
-OneshotExamplePrompt: "Here is one example.The input is <QUESTION1>, the answer is <ANSWER1>."
-FewshotExamplePrompt: "Here are a few examples. The input is <QUESTION1>, the answer is <ANSWER1>. The input is <QUESTION2>, the answer is <ANSWER2>. The input is <QUESTION3>, the answer is <ANSWER3>."
