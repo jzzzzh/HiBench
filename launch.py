@@ -17,10 +17,10 @@ def main():
     #             {'Task': 'Formula', 'SubTask': 'convert', 'Mode': 'Simple', 'format1':'Infix', 'format2':'Postfix'},
     #             {'Task': 'Formula', 'SubTask': 'convert', 'Mode': 'Simple', 'format1':'Infix', 'format2':'Prefix'},
     #             {'Task': 'Paper', 'SubTask': 'contextual_qa', 'Mode': 'dev'}]
-    EvalListList = [{
+    fundamental_parameter = {
         'Task': 'Fundamental',
         'SubTask': {
-            'Fundamental': ['add_node', 'all_ancestor', 'all_children', 'common_ancestor', 'isomorphic', 'remove_node', 'node_depth', 'leaf', 'root'],
+            'Normal': ['add_node', 'all_ancestor', 'all_children', 'common_ancestor', 'isomorphic', 'remove_node', 'node_depth', 'leaf', 'root'],
             'Binary': ['balance', 'prefix_traversal', 'infix_traversal', 'postfix_traversal', 'traversal_order_verification', 'mirror_tree']
         },
         'Difficulty': ['easy', 'medium', 'hard'],
@@ -29,19 +29,20 @@ def main():
         'Weight': ['weighted', 'unweighted'],
         'InputMode': ['edge', 'hierarchy']
     }
-    ]
-    EvalList =[{'Task': 'Fundamental', 'SubTask':'add_node', 'Difficulty': 'easy', 'TreeType':'Normal', 'Balance':'unbalanced', 'Weight':'unweighted', 'InputMode': 'hierarchy'},
-               {'Task': 'Fundamental', 'SubTask':'all_ancestor', 'Difficulty': 'easy', 'TreeType':'Normal', 'Balance':'unbalanced', 'Weight':'unweighted', 'InputMode': 'hierarchy'},
-               {'Task': 'Fundamental', 'SubTask':'all_children', 'Difficulty': 'easy', 'TreeType':'Normal', 'Balance':'unbalanced', 'Weight':'unweighted', 'InputMode': 'hierarchy'},
-               {'Task': 'Fundamental', 'SubTask':'balance', 'Difficulty': 'easy', 'TreeType':'Binary', 'Balance':'unbalanced', 'Weight':'unweighted', 'InputMode': 'hierarchy'},
-               {'Task': 'Fundamental', 'SubTask':'prefix_traversal', 'Difficulty': 'easy', 'TreeType':'Binary', 'Balance':'unbalanced', 'Weight':'unweighted', 'InputMode': 'hierarchy'},
-               {'Task': 'Fundamental', 'SubTask':'infix_traversal', 'Difficulty': 'easy', 'TreeType':'Binary', 'Balance':'unbalanced', 'Weight':'unweighted', 'InputMode': 'hierarchy'},
-               ]
     
-    
-    model_list = ["Qwen/Qwen2.5-0.5B-Instruct"] #, "meta-llama/Meta-Llama-3.1-8B-Instruct"]
+    EvalList = list()
+    for tree_type in ['Normal', 'Binary']:
+        for subtask in fundamental_parameter['SubTask'][tree_type]:
+            for difficulty in fundamental_parameter['Difficulty']:
+                for input_mode in fundamental_parameter['InputMode']:
+                    if tree_type == 'Binary':
+                        for balance in fundamental_parameter['Balance']:
+                            EvalList.append({'Task': 'Fundamental', 'SubTask':subtask, 'Difficulty': difficulty, 'TreeType':tree_type, 'Balance':balance, 'Weight':'unweighted', 'InputMode': input_mode})
+                    else:
+                        EvalList.append({'Task': 'Fundamental', 'SubTask':subtask, 'Difficulty': difficulty, 'TreeType':tree_type, 'Balance':'unbalanced', 'Weight':'unweighted', 'InputMode': input_mode})
+
+    model_list = ["meta-llama/Meta-Llama-3.1-8B-Instruct"] # ["Qwen/Qwen2.5-0.5B-Instruct"] #, "meta-llama/Meta-Llama-3.1-8B-Instruct"]
     for model in model_list:
-        print(f"Starting model: {model}")
         llm = LLMModel(model, api_key=None)
         for Eval in EvalList:
             print(f"Processing task: {Eval}")
@@ -69,13 +70,13 @@ def Logo():
     columns = os.get_terminal_size().columns
 
     for i, color in enumerate(itertools.cycle(colors)):
-        if i >= 10:
+        if i >= 50:
             break
         os.system('clear')
         for line in text.split('\n'):
             print(f"{color}{line.center(columns)}\033[0m")
-        time.sleep(0.5)
+        time.sleep(0.1)
 
 if __name__ == '__main__':
-    Logo()
+    # Logo()
     main()
