@@ -5,11 +5,6 @@ class FundamentalEvaluator(BasicEvaluator):
     
     def __init__(self, key = 'answer', strip_symbols = '\'"'):
         super().__init__(key, strip_symbols)
-    
-    def __call__(self, task, source, target, *arg, **kwarg):
-        eval_func = getattr(self, task)
-        ret = eval_func(source, target, *arg, **kwarg)
-        return ret
         
     def add_node(self, source, target, represent_mode, sep: str = ',', remove_blank: bool = True):
         if represent_mode == 'edge':

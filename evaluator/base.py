@@ -24,6 +24,12 @@ class BasicEvaluator(object):
         self.strip_symbols = list(strip_symbols)
         
     
+    def __call__(self, task, source, target, *args, **kwargs):
+        eval_func = getattr(self, task)
+        ret = eval_func(source, target, *args, **kwargs)
+        return ret
+    
+    
     def string_match(self, source: str, target: str) -> bool:
         source = source.lower()
         target = target.lower()
