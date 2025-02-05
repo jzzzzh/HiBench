@@ -56,7 +56,7 @@ Fundamental:
           Question3: "Q3"
           Answer3: "A3"
       remove_node:
-        PrefixPromptTemplate: "Given the hierarchical structure <STRUCTURE>, <QUESTION>"
+        PromptTemplate: "Given the hierarchical structure <STRUCTURE>, <QUESTION>"
         OutputFormatTemplate: "{\"answer\": <new structure>} following the input structure format, if there are no edges, please return {\"answer\": No edges}"
         Example: 
           Question1: "Q1"
