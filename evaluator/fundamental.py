@@ -11,8 +11,11 @@ class FundamentalEvaluator(BasicEvaluator):
         ret = eval_func(source, target, *arg, **kwarg)
         return ret
         
-    def add_node(self, source, target):
-        pass
+    def add_node(self, source, target, represent_mode, sep: str = ',', remove_blank: bool = True):
+        if represent_mode == 'edge':
+            return self.list_match(source, target, sep, remove_blank)
+        else:
+            return self.hierarchical_structure_match(source, target)
     
     def all_ancestor(self, source, target, sep: str = ',', remove_blank: bool = True):
         if target == 'None':
@@ -32,8 +35,14 @@ class FundamentalEvaluator(BasicEvaluator):
     def isomorphic(self, source, target):
         return self.bool_match(source, target)
     
-    def remove_node(self, source, target):
-        pass
+    def remove_node(self, source, target, represent_mode, sep: str = ',', remove_blank: bool = True):
+        if target == 'No edges':
+            return self.string_match(source, target)
+        else:
+            if represent_mode == 'edge':
+                return self.list_match(source, target, sep, remove_blank)
+            else:
+                return self.hierarchical_structure_match(source, target)
     
     def node_depth(self, source, target):
         return self.string_match(source, target)
@@ -47,17 +56,20 @@ class FundamentalEvaluator(BasicEvaluator):
     def balance(self, source, target):
         return self.bool_match(source, target)
     
-    def prefix_traversal(self, source, target):
-        pass
+    def prefix_traversal(self, source, target, sep: str = ',', remove_blank: bool = True):
+        return self.list_match(source, target, sep, remove_blank)
     
-    def infix_traversal(self, source, target):
-        pass
+    def infix_traversal(self, source, target, sep: str = ',', remove_blank: bool = True):
+        return self.list_match(source, target, sep, remove_blank)
     
-    def postfix_traversal(self, source, target):
-        pass
+    def postfix_traversal(self, source, target, sep: str = ',', remove_blank: bool = True):
+        return self.list_match(source, target, sep, remove_blank)
     
     def traversal_order_verification(self, source, target):
         return self.string_match(source, target)
     
-    def mirror_tree(self, source, target):
-        pass
+    def mirror_tree(self, source, target, represent_mode, sep: str = ',', remove_blank: bool = True):
+        if represent_mode == 'edge':
+            return self.list_match(source, target, sep, remove_blank)
+        else:
+            return self.hierarchical_structure_match(source, target)
