@@ -1,3 +1,4 @@
+import abc
 import re
 import os
 import json
@@ -7,23 +8,8 @@ results_folder = f"./task_basic/normal/results"
 # results_folder = f"task_basic/normal/results/test"
 
 
-def extract_string_from_dict(string: str, key: str) -> str:
-    pattern = (
-        r'"?' + re.escape(key) + r'"?\s*[:=]\s*'  # Match the key with optional quotes, followed by ':' or '='
-        r'(?:'  # Non-capturing group to handle the value
-        r'"([^"]*)"'  # Match everything inside double quotes
-        r'|'  # OR
-        r'([^}\]]*)'  # Match unquoted values up to a closing brace or bracket
-        r')'
-    )
-    match = re.search(pattern, string)
-    if not match:
-        return None
-    
-    ret = match.group(1) or match.group(2)
-    if not ret:
-        return None
-    return ret.strip()
+
+
 
 
 def string_match(source: str, target: str) -> bool:
@@ -33,12 +19,11 @@ def string_match(source: str, target: str) -> bool:
     target = re.sub(r'\s+', ' ', target)
     source = re.sub(r'[^a-zA-Z0-9]', '', source)
     target = re.sub(r'[^a-zA-Z0-9]', '', target)
-    if target is None or target == '':
-        return False
-    if target == source: # or target in source or source in target:
+    if target == source or target in source:
         return True
     else:
         return False
+
 
 def calculate_accuracy(results_folder):
     for root, _, files in os.walk(results_folder):
@@ -56,7 +41,7 @@ def calculate_accuracy(results_folder):
                 for question in data:
                     total_questions += 1
                     ans = str(question.get("llm-answer"))
-                    ans = extract_string_from_dict(ans, 'answer')
+                    ans = extract_answer(ans, 'answer')
                     ans = str(ans)
                     print(ans)
                     ref_ans = str(question.get("ref_ans"))
@@ -72,6 +57,10 @@ def calculate_accuracy(results_folder):
                     f.write(f"Accuracy: {accuracy:.2%}\n")
 
                 print(f"Accuracy for {input_path} calculated and saved to {output_path}.")
+
+
+
+
 
 
 if __name__ == '__main__':
