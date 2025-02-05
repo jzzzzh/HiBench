@@ -79,8 +79,8 @@ def leaf_qa(G):
 def root_qa(G):
     ref_ans = find_root(G)
     return {
-        'leaf_Q': f'which node is the root?',
-        'leaf_A': ref_ans,
+        'root_Q': f'which node is the root?',
+        'root_A': ref_ans,
     }
     
     
