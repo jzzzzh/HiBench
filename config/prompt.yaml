@@ -258,69 +258,75 @@ Code:
       PromptTemplate: "Given a code snippet <CODE>, calculate its space complexity."
       OutputFormatTemplate: "{\"answer\":  O(1)}"
       Example: 
-          Question1: "class Solution(object):
-    def sum(self, num1, num2):
-        return num1+num2
-        What is the Space Complexity?"
+          Question1: |
+            class Solution(object):
+              def sum(self, num1, num2):
+                  return num1+num2
+            What is the Space Complexity?
           Answer1: "O(1)"
-          Question2: "class Solution(object):
-    def addBinary(self, a, b):
-        result, carry, val = "", 0, 0
-        for i in xrange(max(len(a), len(b))):
-            val = carry
-            if i < len(a):
-                val += int(a[-(i + 1)])
-            if i < len(b):
-                val += int(b[-(i + 1)])
-            carry, val = divmod(val, 2)
-            result += str(val)
-        if carry:
-            result += str(carry)
-        return result[::-1]
-        What is the Space Complexity?"
+          Question2: |
+            class Solution(object):
+              def addBinary(self, a, b):
+                  result, carry, val = "", 0, 0
+                  for i in xrange(max(len(a), len(b))):
+                      val = carry
+                      if i < len(a):
+                          val += int(a[-(i + 1)])
+                      if i < len(b):
+                          val += int(b[-(i + 1)])
+                      carry, val = divmod(val, 2)
+                      result += str(val)
+                  if carry:
+                      result += str(carry)
+                  return result[::-1]
+            What is the Space Complexity?
           Answer2: "O(1)"
-          Question3: "class Solution2(object):
-    def arrayPairSum(self, nums):
-        nums.sort()
-        result = 0
-        for i in xrange(0, len(nums), 2):
-            result += nums[i]
-        return result
-        What is the Space Complexity?"
+          Question3: |
+            class Solution2(object):
+              def arrayPairSum(self, nums):
+                  nums.sort()
+                  result = 0
+                  for i in xrange(0, len(nums), 2):
+                      result += nums[i]
+                  return result
+            What is the Space Complexity?
           Answer3: "O(1)"
     TimeComplexity:
       PromptTemplate: "Given a code snippet <CODE>, calculate its time complexity."
       OutputFormatTemplate: "{\"answer\":  O(n)}"
       Example: 
-          Question1: "class Solution(object):
-    def sum(self, num1, num2):
-        return num1+num2
-        What is the Time Complexity?"
+          Question1: |
+            class Solution(object):
+              def sum(self, num1, num2):
+                  return num1+num2
+            What is the Time Complexity?
           Answer1: "O(1)"
-          Question2: "class Solution(object):
-    def addBinary(self, a, b):
-        result, carry, val = "", 0, 0
-        for i in xrange(max(len(a), len(b))):
-            val = carry
-            if i < len(a):
-                val += int(a[-(i + 1)])
-            if i < len(b):
-                val += int(b[-(i + 1)])
-            carry, val = divmod(val, 2)
-            result += str(val)
-        if carry:
-            result += str(carry)
-        return result[::-1]
-        What is the Time Complexity?"
+          Question2: |
+            class Solution(object):
+              def addBinary(self, a, b):
+                  result, carry, val = "", 0, 0
+                  for i in xrange(max(len(a), len(b))):
+                      val = carry
+                      if i < len(a):
+                          val += int(a[-(i + 1)])
+                      if i < len(b):
+                          val += int(b[-(i + 1)])
+                      carry, val = divmod(val, 2)
+                      result += str(val)
+                  if carry:
+                      result += str(carry)
+                  return result[::-1]
+            What is the Time Complexity?
           Answer2: "O(n)"
-          Question3: "class Solution2(object):
-    def arrayPairSum(self, nums):
-        nums.sort()
-        result = 0
-        for i in xrange(0, len(nums), 2):
-            result += nums[i]
-        return result
-        What is the Time Complexity?"
+          Question3: |
+            class Solution2(object):
+              def arrayPairSum(self, nums):
+                  nums.sort()
+                  result = 0
+                  for i in xrange(0, len(nums), 2):
+                      result += nums[i]
+                  return result
+            What is the Time Complexity?
           Answer3: "O(nlogn)"
     CodeMissing:
       PromptTemplate: "Given a code snippet <CODE>, please find and write the missing code."
