@@ -29,6 +29,17 @@ class BasicEvaluator(object):
         ret = eval_func(source, target, *args, **kwargs)
         return ret
     
+    def number_match(self, source: str, target: str) -> bool:
+        source = source.lower()
+        target = target.lower()
+        source = self._extract_answer(source)
+        source = self._refine_answer(source)
+        if source is None:
+            return False
+        if target == str(source):
+            return True
+        else:
+            return False
     
     def string_match(self, source: str, target: str) -> bool:
         source = source.lower()
@@ -197,5 +208,11 @@ if __name__ == '__main__':
     target = " apple "
     sep = ', '
     assert evaluator.list_match(source, target, sep) == True
+
+    # Test Case 15: Number match
+    source = "{ answer : 12345 }"
+    target = "12345"
+    assert evaluator.number_match(source, target) == True
     
+
     print('all cases passed!')
