@@ -196,10 +196,12 @@ class ArgumentGenerator:
 
 def main():
     argument_generator = ArgumentGenerator()
-    EvalList = argument_generator.generate_all_eval(Task_list = ['Fundamental', 'Code', 'JSON', 'Formula'], ExampleType='ZeroShot')
+    Fundamental_EvalList = argument_generator.generate_all_eval(Task_list = ['Fundamental'])
+    Other_EvalList = argument_generator.generate_all_eval(Task_list = ['Code', 'JSON', 'Formula'], ExampleType='ZeroShot')
+    EvalList = Fundamental_EvalList + Other_EvalList
     # model_list = ["meta-llama/Meta-Llama-3.1-8B-Instruct"] # ["Qwen/Qwen2.5-0.5B-Instruct"] #, "meta-llama/Meta-Llama-3.1-8B-Instruct"]
-    # model_list = ["meta-llama/Meta-Llama-3.1-8B-Instruct", "meta-llama/Llama-3.2-1B-Instruct","meta-llama/Llama-3.2-3B-Instruct", "Qwen/Qwen2.5-0.5B-Instruct", "Qwen/Qwen2.5-1.5B-Instruct", "Qwen/Qwen2.5-3B-Instruct", "Qwen/Qwen2.5-7B-Instruct"]
-    model_list = ["Qwen/Qwen2.5-0.5B-Instruct"]
+    model_list = ["meta-llama/Meta-Llama-3.1-8B-Instruct", "meta-llama/Llama-3.2-1B-Instruct","meta-llama/Llama-3.2-3B-Instruct", "Qwen/Qwen2.5-0.5B-Instruct", "Qwen/Qwen2.5-1.5B-Instruct", "Qwen/Qwen2.5-3B-Instruct", "Qwen/Qwen2.5-7B-Instruct"]
+    # model_list = ["Qwen/Qwen2.5-0.5B-Instruct"]
     
     for model in model_list:
         llm = LLMModel(model, api_key=None)
@@ -226,22 +228,24 @@ def main():
 def Logo():
     colors = ["\033[91m", "\033[92m", "\033[93m", "\033[94m", "\033[95m"]
     text = (
-        "   __  ___ ____                  __  \n"
-        "  / / / (_) __ )___  ____  _____/ /_ \n"
+        "    __  ___ ____                  __  \n"
+        "   / / / (_) __ )___  ____  _____/ /_ \n"
         "  / /_/ / / __  / _ \/ __ \/ ___/ __ \\ \n"
         " / __  / / /_/ /  __/ / / / /__/ / / / \n"
         "/_/ /_/_/_____/\___/_/ /_/\___/_/ /_/  "
     )
-    columns = os.get_terminal_size().columns
-
-    for i, color in enumerate(itertools.cycle(colors)):
-        if i >= 50:
-            break
-        os.system('clear')
-        for line in text.split('\n'):
-            print(f"{color}{line.center(columns)}\033[0m")
-        time.sleep(0.1)
+    # columns = os.get_terminal_size().columns
+    for line in text.split('\n'):
+        print(f"{line}")
+    # for i, color in enumerate(itertools.cycle(colors)):
+    #     if i >= 50:
+    #         break
+    #     os.system('clear')
+    #     for line in text.split('\n'):
+    #         # print(f"{color}{line.center(columns)}\033[0m")
+    #         print(f"{color}{line}\033[0m")
+    #     time.sleep(0.1)
 
 if __name__ == '__main__':
-    # Logo()
+    Logo()
     main()
