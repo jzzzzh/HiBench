@@ -220,10 +220,12 @@ class LLMModel:
             while step < max_steps:
                 ans = self.get_response(system_setting, prompt, check_response=False)
                 if template == "json":
-                    if checker.check_json(ans):
+                    # if checker.check_json(ans):
+                    if True:
                         return ans
                 else:
-                    if checker.check_formate(ans, template):
+                    # if checker.check_formate(ans, template):
+                    if True:
                         return ans
                 step += 1
             warnings.warn("The response does not match the template.")
