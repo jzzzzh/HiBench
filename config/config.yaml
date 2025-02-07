@@ -24,10 +24,11 @@ Dataset:
     Dir: ./dataset/Code/
     SubTask: ['SpaceComplexity', 'TimeComplexity', 'CodeMissing']
     Domain: ['Python', 'C++']
+    
   Paper:
     Dir: ./dataset/Paper/
     SubTask: ['contextual_qa', 'disordered_section', 'outline_extraction']
     Mode: ['dev', 'test', 'train']
 
 Eval:
-  SaveDir: ./eval/
+  SaveDir: ./Results/

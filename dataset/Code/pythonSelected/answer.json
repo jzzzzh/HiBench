@@ -1,503 +1,503 @@
 [
     {
-      "questio_no": 1,
+      "question_no": 1,
       "space": "O(1)",
-      "time": "O(1)"
+      "time complexity": "O(1)"
     },
     {
-      "questio_no": 2,
+      "question_no": 2,
       "space": "O(2^p)",
       "time": "O(n * 2^p)"
     },
     {
-      "questio_no": 3,
+      "question_no": 3,
       "space": "O(1)",
-      "time": "O(n)"
+      "time complexity": "O(n)"
     },
     {
-      "questio_no": 4,
+      "question_no": 4,
       "space": "O(1)",
-      "time": "O(logn)"
+      "time complexity": "O(logn)"
     },
     {
-      "questio_no": 5,
+      "question_no": 5,
       "space": "O(1)",
-      "time": "O(logn)"
+      "time complexity": "O(logn)"
     },
     {
-      "questio_no": 6,
+      "question_no": 6,
       "space": "O(m + n)",
-      "time": "O(m + n)"
+      "time complexity": "O(m + n)"
     },
     {
-      "questio_no": 7,
+      "question_no": 7,
       "space": "O(min(m, n))",
-      "time": "O(m * n)"
+      "time complexity": "O(m * n)"
     },
     {
-      "questio_no": 8,
+      "question_no": 8,
       "space": "O(25 * l * n)",
-      "time": "O(25 * l * (n + q))"
+      "time complexity": "O(25 * l * (n + q))"
     },
     {
-      "questio_no": 9,
+      "question_no": 9,
       "space": "O(4^n / n^(3/2))",
-      "time": "O(4^n / n^(3/2))"
+      "time complexity": "O(4^n / n^(3/2))"
     },
     {
-      "questio_no": 10,
+      "question_no": 10,
       "space": "O(1)",
-      "time": "O(n)"
+      "time complexity": "O(n)"
     },    
     {
-        "questio_no": 11,
+        "question_no": 11,
         "space": "O(1)",
-        "time": "O(n)"
+        "time complexity": "O(n)"
       },
       {
-        "questio_no": 12,
+        "question_no": 12,
         "space": "O(n * l)",
-        "time": "O(n * l)"
+        "time complexity": "O(n * l)"
       },
       {
-        "questio_no": 13,
+        "question_no": 13,
         "space": "O(1)",
-        "time": "O(n)"
+        "time complexity": "O(n)"
       },
       {
-        "questio_no": 14,
+        "question_no": 14,
         "space": "O(n)",
-        "time": "O(n)"
+        "time complexity": "O(n)"
       },
       {
-        "questio_no": 15,
+        "question_no": 15,
         "space": "O(n)",
-        "time": "O(n)"
+        "time complexity": "O(n)"
       },
       {
-        "questio_no": 16,
+        "question_no": 16,
         "space": "O(m + n)",
-        "time": "O(m * n)"
+        "time complexity": "O(m * n)"
       },
       {
-        "questio_no": 17,
+        "question_no": 17,
         "space": "O(m * n * 2^(m * n))",
-        "time": "O(m * n * 2^(m * n))"
+        "time complexity": "O(m * n * 2^(m * n))"
       },
       {
-        "questio_no": 18,
+        "question_no": 18,
         "space": "O(1)",
-        "time": "O(m + n)"
+        "time complexity": "O(m + n)"
       },
       {
-        "questio_no": 19,
+        "question_no": 19,
         "space": "O(1)",
-        "time": "O(n)"
+        "time complexity": "O(n)"
       },
       {
-        "questio_no": 20,
+        "question_no": 20,
         "space": "O(n^2)",
-        "time": "O(n^2)"
+        "time complexity": "O(n^2)"
       },
       {
-        "questio_no": 21,
+        "question_no": 21,
         "space": "O(k)",
-        "time": "O(n)"
+        "time complexity": "O(n)"
       },
       {
-        "questio_no": 22,
+        "question_no": 22,
         "space": "O(h)",
-        "time": "O(n)"
+        "time complexity": "O(n)"
       },
       {
-        "questio_no": 23,
+        "question_no": 23,
         "space": "O(n)",
-        "time": "O(n)"
+        "time complexity": "O(n)"
       },
       {
-        "questio_no": 24,
+        "question_no": 24,
         "space": "O(1)",
-        "time": "O(n)"
+        "time complexity": "O(n)"
       },
       {
-        "questio_no": 25,
+        "question_no": 25,
         "space": "O(1)",
-        "time": "O(n)"
+        "time complexity": "O(n)"
       },
       {
-        "questio_no": 26,
+        "question_no": 26,
         "space": "O(|V| + |E|)",
-        "time": "O(|V| + |E|)"
+        "time complexity": "O(|V| + |E|)"
       },
       {
-        "questio_no": 27,
+        "question_no": 27,
         "space": "O(1)",
-        "time": "O(1)"
+        "time complexity": "O(1)"
       },
       {
-        "questio_no": 28,
+        "question_no": 28,
         "space": "O(1)",
-        "time": "O(n)"
+        "time complexity": "O(n)"
       },
       {
-        "questio_no": 29,
+        "question_no": 29,
         "space": "O(1)",
-        "time": "O(n)"
+        "time complexity": "O(n)"
       },
       {
-        "questio_no": 30,
+        "question_no": 30,
         "space": "O(1)",
-        "time": "O(n)"
+        "time complexity": "O(n)"
       },  
       {
-        "questio_no": 31,
+        "question_no": 31,
         "space": "O(n)",
-        "time": "O(n^2)"
+        "time complexity": "O(n^2)"
       },
       {
-        "questio_no": 32,
+        "question_no": 32,
         "space": "O(1)",
-        "time": "O(n)"
+        "time complexity": "O(n)"
       },
       {
-        "questio_no": 33,
+        "question_no": 33,
         "space": "O(1)",
-        "time": "O(n)"
+        "time complexity": "O(n)"
       },
       {
-        "questio_no": 34,
+        "question_no": 34,
         "space": "O(n)",
-        "time": "O(n)"
+        "time complexity": "O(n)"
       },
       {
-        "questio_no": 35,
+        "question_no": 35,
         "space": "O(1)",
-        "time": "O(n)"
+        "time complexity": "O(n)"
       },
       {
-        "questio_no": 36,
+        "question_no": 36,
         "space": "O(1)",
-        "time": "O(logn)"
+        "time complexity": "O(logn)"
       },
       {
-        "questio_no": 37,
+        "question_no": 37,
         "space": "O(n)",
-        "time": "O(n^2)"
+        "time complexity": "O(n^2)"
       },
       {
-        "questio_no": 38,
+        "question_no": 38,
         "space": "O(1)",
-        "time": "O(1)"
+        "time complexity": "O(1)"
       },
       {
-        "questio_no": 39,
+        "question_no": 39,
         "space": "O(9)",
-        "time": "O(9^2)"
+        "time complexity": "O(9^2)"
       },
       {
-        "questio_no": 40,
+        "question_no": 40,
         "space": "O(1)",
-        "time": "O(1)"
+        "time complexity": "O(1)"
       },    
       {
-        "questio_no": 41,
+        "question_no": 41,
         "space": "O(1)",
-        "time": "O(n^2)"
+        "time complexity": "O(n^2)"
       },
       {
-        "questio_no": 42,
+        "question_no": 42,
         "space": "O(1)",
-        "time": "O(n)"
+        "time complexity": "O(n)"
       },
       {
-        "questio_no": 43,
+        "question_no": 43,
         "space": "O(1)",
-        "time": "O(n)"
+        "time complexity": "O(n)"
       },
       {
-        "questio_no": 44,
+        "question_no": 44,
         "space": "O(1)",
-        "time": "O(n)"
+        "time complexity": "O(n)"
       },
       {
-        "questio_no": 45,
+        "question_no": 45,
         "space": "O(1)",
-        "time": "O(n)"
+        "time complexity": "O(n)"
       },
       {
-        "questio_no": 46,
+        "question_no": 46,
         "space": "O(n)",
-        "time": "O(n)"
+        "time complexity": "O(n)"
       },
       {
-        "questio_no": 47,
+        "question_no": 47,
         "space": "O(1)",
-        "time": "O(1)"
+        "time complexity": "O(1)"
       },
       {
-        "questio_no": 48,
+        "question_no": 48,
         "space": "O(n)",
-        "time": "O(n)"
+        "time complexity": "O(n)"
       },
       {
-        "questio_no": 49,
+        "question_no": 49,
         "space": "O(n * l)",
-        "time": "O(10! * n * l)"
+        "time complexity": "O(10! * n * l)"
       },
       {
-        "questio_no": 50,
+        "question_no": 50,
         "space": "O(1)",
-        "time": "O(n)"
+        "time complexity": "O(n)"
       },   
       {
-        "questio_no": 51,
+        "question_no": 51,
         "space": "O(1)",
-        "time": "O(n)"
+        "time complexity": "O(n)"
       },
       {
-        "questio_no": 52,
+        "question_no": 52,
         "space": "O(1)",
-        "time": "O(n * l)"
+        "time complexity": "O(n * l)"
       },
       {
-        "questio_no": 53,
+        "question_no": 53,
         "space": "O(n)",
-        "time": "O(nlogn)"
+        "time complexity": "O(nlogn)"
       },
       {
-        "questio_no": 54,
+        "question_no": 54,
         "space": "O(1)",
-        "time": "O(logn)"
+        "time complexity": "O(logn)"
       },
       {
-        "questio_no": 55,
+        "question_no": 55,
         "space": "O(1)",
-        "time": "O(n)"
+        "time complexity": "O(n)"
       },
       {
-        "questio_no": 56,
+        "question_no": 56,
         "space": "O(w)",
-        "time": "O(n)"
+        "time complexity": "O(n)"
       },
       {
-        "questio_no":57,
+        "question_no":57,
         "space": "O(1)",
-        "time": "O(n)"
+        "time complexity": "O(n)"
       },
       {
-        "questio_no": 58,
+        "question_no": 58,
         "space": "O(1)",
-        "time": "O(n)"
+        "time complexity": "O(n)"
       },
       {
-        "questio_no": 59,
+        "question_no": 59,
         "space": "O(1)",
-        "time": "O(1)"
+        "time complexity": "O(1)"
       },
       {
-        "questio_no": 60,
+        "question_no": 60,
         "space": "O(k)",
-        "time": "O(n + k)"
+        "time complexity": "O(n + k)"
       },
       {
-        "questio_no": 61,
+        "question_no": 61,
         "space": "O(g)",
-        "time": "O(m * n)"
+        "time complexity": "O(m * n)"
       },
       {
-        "questio_no": 62,
+        "question_no": 62,
         "space": "O(1)",
-        "time": "O(logn)"
+        "time complexity": "O(logn)"
       },
       {
-        "questio_no": 63,
+        "question_no": 63,
         "space": "O(1)",
-        "time": "O(sqrt(n))"
+        "time complexity": "O(sqrt(n))"
       },
       {
-        "questio_no": 64,
+        "question_no": 64,
         "space": "O(1)",
-        "time": "O(logn/logm)"
+        "time complexity": "O(logn/logm)"
       },
       {
-        "questio_no": 65,
+        "question_no": 65,
         "space": "O(1)",
-        "time": "O(n)"
+        "time complexity": "O(n)"
       },
       {
-        "questio_no": 66,
+        "question_no": 66,
         "space": "O(1)",
-        "time": "O(n)"
+        "time complexity": "O(n)"
       },
       {
-        "questio_no": 67,
+        "question_no": 67,
         "space": "O(n)",
-        "time": "O(nlogn)"
+        "time complexity": "O(nlogn)"
       },
       {
-        "questio_no": 68,
+        "question_no": 68,
         "space": "O(1)",
-        "time": "O(n)"
+        "time complexity": "O(n)"
       },
       {
-        "questio_no": 69,
+        "question_no": 69,
         "space": "O(1)",
-        "time": "O(n)"
+        "time complexity": "O(n)"
       },
       {
-        "questio_no": 70,
+        "question_no": 70,
         "space": "O(n)",
-        "time": "O(n)"
+        "time complexity": "O(n)"
       }, 
       {
-        "questio_no": 71,
+        "question_no": 71,
         "space": "O(|V|)",
-        "time": "O(|V| + |E|)"
+        "time complexity": "O(|V| + |E|)"
       },
       {
-        "questio_no": 72,
+        "question_no": 72,
         "space": "O(|V|)",
-        "time": "O(|V| + |E|)"
+        "time complexity": "O(|V| + |E|)"
       },
       {
-        "questio_no": 73,
+        "question_no": 73,
         "space": "O(1)",
-        "time": "O(m * n)"
+        "time complexity": "O(m * n)"
       },
       {
-        "questio_no": 74,
+        "question_no": 74,
         "space": "O(n)",
-        "time": "O(n)"
+        "time complexity": "O(n)"
       },
       {
-        "questio_no": 75,
+        "question_no": 75,
         "space": "O(n)",
-        "time": "O(nlogn)"
+        "time complexity": "O(nlogn)"
       },
       {
-        "questio_no": 76,
+        "question_no": 76,
         "space": "O(n)",
-        "time": "O(nlogn)"
+        "time complexity": "O(nlogn)"
       },
       {
-        "questio_no": 77,
+        "question_no": 77,
         "space": "O(1)",
-        "time": "O(n)"
+        "time complexity": "O(n)"
       },
       {
-        "questio_no": 78,
+        "question_no": 78,
         "space": "O(1)",
-        "time": "O(n)"
+        "time complexity": "O(n)"
       },
       {
-        "questio_no": 79,
+        "question_no": 79,
         "space": "O(1)",
-        "time": "O(m + n) ~ O(m * n)"
+        "time complexity": "O(m + n) ~ O(m * n)"
       },
       {
-        "questio_no": 80,
+        "question_no": 80,
         "space": "O(1)",
-        "time": "O(n)"
+        "time complexity": "O(n)"
       },    
       {
-        "questio_no": 81,
+        "question_no": 81,
         "space": "O(n * l)",
-        "time": "O(n * l) ~ O(n^2 * l^2)"
+        "time complexity": "O(n * l) ~ O(n^2 * l^2)"
       },
       {
-        "questio_no": 82,
+        "question_no": 82,
         "space": "O(n^2)",
-        "time": "O(n * l^2 + n * r)"
+        "time complexity": "O(n * l^2 + n * r)"
       },
       {
-        "questio_no": 83,
+        "question_no": 83,
         "space": "O(n)",
-        "time": "O(n * l^2)"
+        "time complexity": "O(n * l^2)"
       },
       {
-        "questio_no": 84,
+        "question_no": 84,
         "space": "O(w * l)",
-        "time": "O(b^(d/2))"
+        "time complexity": "O(b^(d/2))"
       },
       {
-        "questio_no": 85,
+        "question_no": 85,
         "space": "O(b^(d/2))",
-        "time": "O(w * l)"
+        "time complexity": "O(w * l)"
       },
       {
-        "questio_no": 86,
+        "question_no": 86,
         "space": "O(n + c)",
-        "time": "O(n * C(n - 1, c - 1))"
+        "time complexity": "O(n * C(n - 1, c - 1))"
       },
       {
-        "questio_no": 87,
+        "question_no": 87,
         "space": "O(c)",
-        "time": "O(n)"
+        "time complexity": "O(n)"
       },
       {
-        "questio_no": 88,
+        "question_no": 88,
         "space": "O(t)",
-        "time": "O(m * n * 4 * 3^(h - 1)) ~= O(m * n * 3^h)"
+        "time complexity": "O(m * n * 4 * 3^(h - 1)) ~= O(m * n * 3^h)"
       },
       {
-        "questio_no": 89,
+        "question_no": 89,
         "space": "O(l)",
-        "time": "O(m * n * 4 * 3^(l - 1)) ~= O(m * n * 3^l)"
+        "time complexity": "O(m * n * 4 * 3^(l - 1)) ~= O(m * n * 3^l)"
       },
       {
-        "questio_no": 90,
+        "question_no": 90,
         "space": "O(n^2)",
-        "time": "O(n^2 * n!)"
+        "time complexity": "O(n^2 * n!)"
       },  
       {
-        "questio_no": 91,
+        "question_no": 91,
         "space": "O(1)",
-        "time": "O(m + n)"
+        "time complexity": "O(m + n)"
       },
       {
-        "questio_no": 92,
+        "question_no": 92,
         "space": "O(n)",
-        "time": "O(n * (logn)^2)"
+        "time complexity": "O(n * (logn)^2)"
       },
       {
-        "questio_no": 93,
+        "question_no": 93,
         "space": "O(1)",
-        "time": "O(1)"
+        "time complexity": "O(1)"
       },
       {
-        "questio_no": 94,
+        "question_no": 94,
         "space": "O(n)",
-        "time": "O(n + q)"
+        "time complexity": "O(n + q)"
       },
       {
-        "questio_no": 95,
+        "question_no": 95,
         "space": "O(n)",
-        "time": "O((n + q) * logn)"
+        "time complexity": "O((n + q) * logn)"
       },
       {
-        "questio_no": 96,
+        "question_no": 96,
         "space": "O(q)",
-        "time": "O(n + qlogq)"
+        "time complexity": "O(n + qlogq)"
       },
       {
-        "questio_no": 97,
+        "question_no": 97,
         "space": "O(1)",
-        "time": "O(n)"
+        "time complexity": "O(n)"
       },
       {
-        "questio_no": 98,
+        "question_no": 98,
         "space": "O(1)",
-        "time": "O(n * m)"
+        "time complexity": "O(n * m)"
       },
       {
-        "questio_no": 99,
+        "question_no": 99,
         "space": "O(k)",
-        "time": "O(n)"
+        "time complexity": "O(n)"
       },
       {
-        "questio_no": 100,
+        "question_no": 100,
         "space": "O((b+h) * h!*(b+h-1)!/(b-1)!)",
-        "time": "O((b+h)^2 * h!*(b+h-1)!/(b-1)!)"
+        "time complexity": "O((b+h)^2 * h!*(b+h-1)!/(b-1)!)"
       }
   ]
   

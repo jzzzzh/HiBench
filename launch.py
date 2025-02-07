@@ -27,7 +27,8 @@ def main():
         'TreeType': ['Binary', 'Normal'],
         'Balance': ['balanced', 'unbalanced'],
         'Weight': ['weighted', 'unweighted'],
-        'InputMode': ['edge', 'hierarchy']
+        'InputMode': ['edge', 'hierarchy'],
+        'ExampleType': ['ZeroShot', 'FewShot', 'OneShot']
     }
     
     EvalList = list()
@@ -35,13 +36,16 @@ def main():
         for subtask in fundamental_parameter['SubTask'][tree_type]:
             for difficulty in fundamental_parameter['Difficulty']:
                 for input_mode in fundamental_parameter['InputMode']:
-                    if tree_type == 'Binary':
-                        for balance in fundamental_parameter['Balance']:
-                            EvalList.append({'Task': 'Fundamental', 'SubTask':subtask, 'Difficulty': difficulty, 'TreeType':tree_type, 'Balance':balance, 'Weight':'unweighted', 'InputMode': input_mode})
-                    else:
-                        EvalList.append({'Task': 'Fundamental', 'SubTask':subtask, 'Difficulty': difficulty, 'TreeType':tree_type, 'Balance':'unbalanced', 'Weight':'unweighted', 'InputMode': input_mode})
+                    for example_type in fundamental_parameter['ExampleType']:
+                        if tree_type == 'Binary':
+                            for balance in fundamental_parameter['Balance']:
+                                EvalList.append({'Task': 'Fundamental', 'SubTask':subtask, 'Difficulty': difficulty, 'TreeType':tree_type, 'Balance':balance, 'Weight':'unweighted', 'InputMode': input_mode, 'ExampleType': example_type})
+                        else:
+                            EvalList.append({'Task': 'Fundamental', 'SubTask':subtask, 'Difficulty': difficulty, 'TreeType':tree_type, 'Balance':'unbalanced', 'Weight':'unweighted', 'InputMode': input_mode, 'ExampleType': example_type})
 
-    model_list = ["meta-llama/Meta-Llama-3.1-8B-Instruct"] # ["Qwen/Qwen2.5-0.5B-Instruct"] #, "meta-llama/Meta-Llama-3.1-8B-Instruct"]
+    # model_list = ["meta-llama/Meta-Llama-3.1-8B-Instruct"] # ["Qwen/Qwen2.5-0.5B-Instruct"] #, "meta-llama/Meta-Llama-3.1-8B-Instruct"]
+    # model_list = ["meta-llama/Meta-Llama-3.1-8B-Instruct", "meta-llama/Llama-3.2-1B-Instruct","meta-llama/Llama-3.2-3B-Instruct", "Qwen/Qwen2.5-0.5B-Instruct", "Qwen/Qwen2.5-1.5B-Instruct", "Qwen/Qwen2.5-3B-Instruct", "Qwen/Qwen2.5-7B-Instruct"]
+    model_list = ["Qwen/Qwen2.5-0.5B-Instruct"]
     for model in model_list:
         llm = LLMModel(model, api_key=None)
         for Eval in EvalList:

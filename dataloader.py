@@ -515,7 +515,7 @@ class CodeDataLoader(TemplateDataLoader):
             with open(ans_json_file, 'r') as file:
                 train_data = json.load(file)
             for data in train_data:
-                code_num = data['questio_no']
+                code_num = data['question_no']
                 if self.Domain == 'c++':
                     code_dir = os.path.join(self.dataset_dir, f"{self.Domain}Selected/{code_num}.cpp")
                 elif self.Domain == 'python':
@@ -527,7 +527,7 @@ class CodeDataLoader(TemplateDataLoader):
                 if self.sub_task == 'SpaceComplexity':
                     input_data['true_answer'] = data['space']
                 elif self.sub_task == 'TimeComplexity':
-                    input_data['true_answer'] = data['time']
+                    input_data['true_answer'] = data['time complexity']
                 SystemPrompt, UserPrompt, TrueAnswer = self.data_generator.generate(input_data)
                 if self.example_type == "OneShot":
                     one_shot_question = self.prompt_config['Code']['Task'][f'{self.dict[self.sub_task]}']['Example']['Question1']
@@ -762,7 +762,7 @@ class HibenchDataLoder(TemplateDataLoader):
  
 
 def test_dataloader():
-    args = {'Task':'Code', 'SubTask': 'SpaceComplexity', 'type': 'python', 'ExampleType':'OneShot'}
+    args = {'Task':'Code', 'SubTask': 'SpaceComplexity', 'type': 'c++', 'ExampleType':'OneShot'}
     # args = {'Task': 'JSON', 'SubTask': 'type_1', 'Domain': 'university', 'ExampleType':'OneShot'}
     # args = {'Task': 'Formula', 'SubTask': 'convert', 'Symbol_Mode': 'easy', 'Value_Mode':'easy', 'Length_Mode':'easy', 'format1':'infix', 'format2':'postfix', 'ExampleType':'FewShot'}
     # args = {'Task': 'Paper', 'SubTask': 'contextual_qa', 'Mode': 'dev', 'ExampleType':'OneShot'}
