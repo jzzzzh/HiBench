@@ -3,6 +3,7 @@ import torch
 from huggingface_hub import login
 import os
 import openai
+from openai import AzureOpenAI  
 import requests
 import json
 from transformers import AutoModelForCausalLM, AutoTokenizer
@@ -35,13 +36,14 @@ class Checker:
         
 
 class LLMModel:
-    def __init__(self, model_id, api_key=None):
+    def __init__(self, model_id, api_key=None, endpoint=None):
         self.model_id = model_id
         self.model_list = ["meta-llama/Meta-Llama-3.1-8B-Instruct", "meta-llama/Llama-3.2-1B-Instruct","meta-llama/Llama-3.2-3B-Instruct", "Qwen/Qwen2.5-0.5B-Instruct", "Qwen/Qwen2.5-1.5B-Instruct", "Qwen/Qwen2.5-3B-Instruct", "Qwen/Qwen2.5-7B-Instruct", "Qwen/Qwen2.5-14B-Instruct",  "Qwen/Qwen2.5-32B-Instruct"]
         self.Large_language_model_list = ["Qwen/Qwen2.5-72B-Instruct", "meta-llama/Llama-3.1-70B-Instruct", "meta-llama/Llama-3.1-405B-Instruct"]
         self.openai_list = ["gpt-3.5-turbo", "gpt-3.5-turbo-davinci", "gpt-3.5-turbo-davinci-codex", "gpt-3.5-turbo-davinci-instruct", "gpt-3.5-turbo-davinci-codex-instruct", "gpt-3.5-turbo-davinci-codex-instruct-turbo", "gpt-4o", "gpt-4o-mini", "gpt-4-turbo"]
         self.old_model_list = ["THUDM/glm-4-9b-chat", "01-ai/Yi-1.5-9B-Chat","baichuan-inc/Baichuan-7B", "baichuan-inc/Baichuan2-7B-Chat", "microsoft/Phi-3.5-mini-instruct", "internlm/internlm2_5-7b-chat","mistralai/Mistral-7B-Instruct-v0.3"]
         self.api_key = api_key
+        self.endpoint = endpoint
         self.device = "cuda"
         print(f"Loading model: {model_id}")
         if model_id in self.model_list:
@@ -110,23 +112,43 @@ class LLMModel:
                 print(f"Error: {response.status_code} - {response.text}")                         
     
     def call_openai_api(self, system_setting, prompt):
-        openai_model_list = ["gpt-3.5-turbo", "gpt-3.5-turbo-davinci", "gpt-3.5-turbo-davinci-codex", "gpt-3.5-turbo-davinci-instruct", "gpt-3.5-turbo-davinci-codex-instruct", "gpt-3.5-turbo-davinci-codex-instruct-turbo", "gpt-4o", "gpt-4o-mini", "gpt-4-turbo"]
+        openai_model_list = ["gpt-3.5-turbo", "gpt-3.5-turbo-davinci", "gpt-3.5-turbo-davinci-codex", "gpt-3.5-turbo-davinci-instruct", "gpt-3.5-turbo-davinci-codex-instruct", "gpt-3.5-turbo-davinci-codex-instruct-turbo", "gpt-4", "gpt-4o", "gpt-4o-mini", "gpt-4-turbo"]
         if self.model_id not in openai_model_list:
             print(f"Warning: The model_id '{self.model_id}' is not in the OpenAI model list.")
             exit(1)
         if self.api_key is None:
             print("Error: Please provide the OpenAI API key.")
-        openai.api_key = self.api_key
+        
+        model_map = {
+            "gpt-3.5-turbo" : "gpt-35-turbo",
+        }
+        model_engine = model_map[self.model_id] if self.model_id in model_map else self.model_id
+        endpoint = os.getenv("ENDPOINT_URL", self.endpoint)  
+        deployment = os.getenv("DEPLOYMENT_NAME", model_engine)  
+        subscription_key = os.getenv("AZURE_OPENAI_API_KEY", self.api_key)  
 
-        # chatgpt response
-        res1 = openai.ChatCompletion.create(
-                    model=model_id,
-                    messages=[
+        # 使用基于密钥的身份验证初始化 Azure OpenAI 服务客户端    
+        client = AzureOpenAI(  
+            azure_endpoint=endpoint,  
+            api_key=subscription_key,  
+            api_version="2024-02-01",
+        )
+
+        res1 = client.chat.completions.create(  
+            model=deployment,
+            messages=[
                             {"role": "system", "content": system_setting},
                             {"role": "user", "content": prompt},
-                        ]
-                    )
-
+                        ],
+            max_tokens=4096,  
+            temperature=0.7,  
+            top_p=0.95,  
+            frequency_penalty=0,  
+            presence_penalty=0,
+            stop=None,  
+            stream=False
+        )
+        
         return res1['choices'][0]['message']['content'].strip('\n')
     
     def call_api(self, system_setting, prompt, api_platform="fireworks"):
