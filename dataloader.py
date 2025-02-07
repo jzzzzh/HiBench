@@ -365,7 +365,7 @@ class FormulaDataLoader(TemplateDataLoader):
             with open(ans_json_file, 'r') as file:
                 reader = csv.DictReader(file)
                 train_data = [row for row in reader]
-            print(train_data[0])
+            # print(train_data[0])
             for data in train_data:
                 input_data = {}
                 input_data['formula'] = data['Formula']
@@ -527,7 +527,7 @@ class CodeDataLoader(TemplateDataLoader):
                 if self.sub_task == 'SpaceComplexity':
                     input_data['true_answer'] = data['space']
                 elif self.sub_task == 'TimeComplexity':
-                    input_data['true_answer'] = data['time complexity']
+                    input_data['true_answer'] = data['time']
                 SystemPrompt, UserPrompt, TrueAnswer = self.data_generator.generate(input_data)
                 if self.example_type == "OneShot":
                     one_shot_question = self.prompt_config['Code']['Task'][f'{self.dict[self.sub_task]}']['Example']['Question1']
@@ -763,8 +763,11 @@ class HibenchDataLoder(TemplateDataLoader):
 
 def test_dataloader():
     # args = {'Task':'Code', 'SubTask': 'SpaceComplexity', 'type': 'c++', 'ExampleType':'OneShot'}
-    args = {'Task': 'JSON', 'SubTask': 'type_1', 'Domain': 'university', 'ExampleType':'OneShot'}
+    # args = {'Task': 'JSON', 'SubTask': 'type_1', 'Domain': 'university', 'ExampleType':'OneShot'}
+    # args = {'Task': 'Fundamental', 'SubTask': 'root', 'Difficulty': 'easy', 'TreeType': 'Normal', 'Balance': 'unbalanced', 'Weight': 'unweighted', 'InputMode': 'edge', 'ExampleType': 'ZeroShot'}
     # args = {'Task': 'Formula', 'SubTask': 'convert', 'Symbol_Mode': 'easy', 'Value_Mode':'easy', 'Length_Mode':'easy', 'format1':'infix', 'format2':'postfix', 'ExampleType':'FewShot'}
+    args = {'Task': 'Formula', 'SubTask': 'equivalent', 'Symbol_Mode': 'easy', 'Value_Mode':'easy', 'Length_Mode':'easy', 'format1':'infix', 'format2':'postfix', 'ExampleType':'FewShot'}
+    # args = {'Task': 'Formula', 'SubTask': 'calculate', 'Symbol_Mode': 'easy', 'Value_Mode':'easy', 'Length_Mode':'easy', 'format':'infix', 'ExampleType':'FewShot'}
     # args = {'Task': 'Paper', 'SubTask': 'contextual_qa', 'Mode': 'dev', 'ExampleType':'OneShot'}
     # args = {'Task': 'Fundamental', 'TreeType': 'binary', 'SubTask': 'infix_traversal', 'InputMode': 'hierarchy', 'balance': 'unbalanced', 'weight':'unweighted', 'difficulty':'easy', 'ExampleType':'FewShot'}
     data_loader = HibenchDataLoder(args)
