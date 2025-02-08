@@ -1,0 +1,16 @@
+{
+    "University": "International University",
+    "Faculties": [
+        {
+            "Faculty Name": "Faculty of Business",
+            "Departments": [
+                {
+                    "Department Name": "Department of Accounting"
+                },
+                {
+                    "Department Name": "Department of Finance"
+                }
+            ]
+        }
+    ]
+}

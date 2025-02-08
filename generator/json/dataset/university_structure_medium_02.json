@@ -1,0 +1,56 @@
+{
+    "University": "City University",
+    "Faculties": [
+        {
+            "Faculty Name": "Faculty of Business",
+            "Departments": [
+                {
+                    "Department Name": "Department of Marketing"
+                },
+                {
+                    "Department Name": "Department of Accounting"
+                },
+                {
+                    "Department Name": "Department of Accounting"
+                },
+                {
+                    "Department Name": "Department of Accounting"
+                }
+            ]
+        },
+        {
+            "Faculty Name": "Faculty of Engineering",
+            "Departments": [
+                {
+                    "Department Name": "Department of Computer Engineering"
+                },
+                {
+                    "Department Name": "Department of Chemical Engineering"
+                },
+                {
+                    "Department Name": "Department of Mechanical Engineering"
+                },
+                {
+                    "Department Name": "Department of Electrical Engineering"
+                }
+            ]
+        },
+        {
+            "Faculty Name": "Faculty of Medicine",
+            "Departments": [
+                {
+                    "Department Name": "Department of Anatomy"
+                },
+                {
+                    "Department Name": "Department of Pediatrics"
+                },
+                {
+                    "Department Name": "Department of Surgery"
+                },
+                {
+                    "Department Name": "Department of Physiology"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,82 @@
+[
+    {
+        "question": "Which level does the node Surgical Procedures in?",
+        "answer": "Courses"
+    },
+    {
+        "question": "Which level does the node Landscape Architecture in?",
+        "answer": "Courses"
+    },
+    {
+        "question": "Which level does the node Marketing Principles in?",
+        "answer": "Courses"
+    },
+    {
+        "question": "Which level does the node Modern Art in?",
+        "answer": "Courses"
+    },
+    {
+        "question": "Which level does the node Department of Literature in?",
+        "answer": "Departments"
+    },
+    {
+        "question": "Which level does the node Department of Linguistics in?",
+        "answer": "Departments"
+    },
+    {
+        "question": "Which level does the node Faculty of Arts in?",
+        "answer": "Faculties"
+    },
+    {
+        "question": "Which level does the node Associate Professor Lucas Cooper in?",
+        "answer": "Lecturers"
+    },
+    {
+        "question": "Which level does the node Assistant Professor Jackson Hughes in?",
+        "answer": "Lecturers"
+    },
+    {
+        "question": "Which level does the node Professor Isaac Morris in?",
+        "answer": "Lecturers"
+    },
+    {
+        "question": "Which level does the node Professor Christian Price in?",
+        "answer": "Lecturers"
+    },
+    {
+        "question": "Which level does the node Associate Professor Everett Scott in?",
+        "answer": "Lecturers"
+    },
+    {
+        "question": "Which level does the node Associate Professor Luca Davis in?",
+        "answer": "Lecturers"
+    },
+    {
+        "question": "Which level does the node Bachelor of Arts in?",
+        "answer": "Programs"
+    },
+    {
+        "question": "Which level does the node Bachelor of Science in?",
+        "answer": "Programs"
+    },
+    {
+        "question": "Which level does the node Master of Science in?",
+        "answer": "Programs"
+    },
+    {
+        "question": "Which level does the node Lyla Julian in?",
+        "answer": "Students"
+    },
+    {
+        "question": "Which level does the node Brooklyn Luka in?",
+        "answer": "Students"
+    },
+    {
+        "question": "Which level does the node Camila William in?",
+        "answer": "Students"
+    },
+    {
+        "question": "Which level does the node Maeve Maverick in?",
+        "answer": "Students"
+    }
+]

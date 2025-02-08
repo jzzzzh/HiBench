@@ -1,0 +1,22 @@
+[
+    {
+        "question": "How many Departments does Faculty of Arts have?",
+        "answer": 6
+    },
+    {
+        "question": "How many Departments does Faculty of Business have?",
+        "answer": 5
+    },
+    {
+        "question": "How many Departments does Faculty of Medicine have?",
+        "answer": 5
+    },
+    {
+        "question": "How many Departments does Faculty of Architecture have?",
+        "answer": 6
+    },
+    {
+        "question": "How many Faculties does National College have?",
+        "answer": 5
+    }
+]

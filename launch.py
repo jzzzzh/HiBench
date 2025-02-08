@@ -14,8 +14,7 @@ class ArgumentGenerator:
         fundamental_parameter = {
             'Task': 'Fundamental',
             'SubTask': {
-                # 'Normal': ['add_node', 'all_ancestor', 'all_children', 'common_ancestor', 'isomorphic', 'remove_node', 'node_depth', 'leaf', 'root'],
-                'Normal': ['add_node', 'all_ancestor', 'all_children', 'common_ancestor', 'isomorphic', 'remove_node', 'node_depth', 'leaf'],
+                'Normal': ['add_node', 'all_ancestor', 'all_children', 'common_ancestor', 'isomorphic', 'remove_node', 'node_depth', 'leaf', 'root'],
                 'Binary': ['balance', 'prefix_traversal', 'infix_traversal', 'postfix_traversal', 'traversal_order_verification', 'mirror_tree']
             },
             'Difficulty': ['easy', 'medium', 'hard'],

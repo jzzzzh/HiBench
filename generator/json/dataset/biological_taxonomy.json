@@ -1,0 +1,80 @@
+{
+    "Biological Taxonomy": [
+        {
+            "Kingdom": "Plantae",
+            "Phyla": [
+                {
+                    "Phylum": "Anthocerotophyta",
+                    "Classes": []
+                },
+                {
+                    "Phylum": "Pteridophyta",
+                    "Classes": []
+                },
+                {
+                    "Phylum": "Pinophyta",
+                    "Classes": []
+                },
+                {
+                    "Phylum": "Bryophyta",
+                    "Classes": []
+                }
+            ]
+        },
+        {
+            "Kingdom": "Bacteria",
+            "Phyla": [
+                {
+                    "Phylum": "Actinobacteria",
+                    "Classes": []
+                },
+                {
+                    "Phylum": "Proteobacteria",
+                    "Classes": [
+                        {
+                            "Class": "Betaproteobacteria",
+                            "Orders": []
+                        },
+                        {
+                            "Class": "Deltaproteobacteria",
+                            "Orders": []
+                        },
+                        {
+                            "Class": "Epsilonproteobacteria",
+                            "Orders": []
+                        },
+                        {
+                            "Class": "Alphaproteobacteria",
+                            "Orders": [
+                                {
+                                    "Order": "Rhizobiales",
+                                    "Families": []
+                                },
+                                {
+                                    "Order": "Sphingomonadales",
+                                    "Families": []
+                                },
+                                {
+                                    "Order": "Caulobacterales",
+                                    "Families": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Phylum": "Cyanobacteria",
+                    "Classes": []
+                },
+                {
+                    "Phylum": "Firmicutes",
+                    "Classes": []
+                },
+                {
+                    "Phylum": "Bacteroidetes",
+                    "Classes": []
+                }
+            ]
+        }
+    ]
+}

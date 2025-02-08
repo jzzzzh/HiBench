@@ -1,0 +1,1150 @@
+{
+    "Company": "Vertex Solutions",
+    "Divisions": [
+        {
+            "Division Name": "Marketing Division",
+            "Departments": [
+                {
+                    "Department Name": "Product Marketing",
+                    "Teams": [
+                        {
+                            "Team Name": "Market Research Team",
+                            "Employees": [
+                                {
+                                    "Name": "Thomas Smith",
+                                    "Employee ID": "171338",
+                                    "Role": "Research Scientist"
+                                },
+                                {
+                                    "Name": "William Wilson",
+                                    "Employee ID": "611452",
+                                    "Role": "Sales Representative"
+                                },
+                                {
+                                    "Name": "Richard Lewis",
+                                    "Employee ID": "330270",
+                                    "Role": "Accountant"
+                                },
+                                {
+                                    "Name": "James Jones",
+                                    "Employee ID": "234244",
+                                    "Role": "Financial Analyst"
+                                },
+                                {
+                                    "Name": "Linda Perez",
+                                    "Employee ID": "041631",
+                                    "Role": "Manager"
+                                },
+                                {
+                                    "Name": "James Williams",
+                                    "Employee ID": "030323",
+                                    "Role": "Support Engineer"
+                                },
+                                {
+                                    "Name": "Michael Perez",
+                                    "Employee ID": "001903",
+                                    "Role": "Manager"
+                                }
+                            ]
+                        },
+                        {
+                            "Team Name": "Product Launch Team",
+                            "Employees": [
+                                {
+                                    "Name": "Daniel Miller",
+                                    "Employee ID": "796163",
+                                    "Role": "HR Specialist"
+                                },
+                                {
+                                    "Name": "Patricia Gonzalez",
+                                    "Employee ID": "470756",
+                                    "Role": "Data Analyst"
+                                },
+                                {
+                                    "Name": "Jessica Anderson",
+                                    "Employee ID": "094768",
+                                    "Role": "Business Analyst"
+                                },
+                                {
+                                    "Name": "Betty Thomas",
+                                    "Employee ID": "192753",
+                                    "Role": "Sales Representative"
+                                },
+                                {
+                                    "Name": "William Thomas",
+                                    "Employee ID": "161284",
+                                    "Role": "Customer Success Manager"
+                                },
+                                {
+                                    "Name": "Christopher Robinson",
+                                    "Employee ID": "436421",
+                                    "Role": "Research Scientist"
+                                },
+                                {
+                                    "Name": "Karen Clark",
+                                    "Employee ID": "909719",
+                                    "Role": "Data Analyst"
+                                },
+                                {
+                                    "Name": "Joseph Martin",
+                                    "Employee ID": "063227",
+                                    "Role": "Content Writer"
+                                },
+                                {
+                                    "Name": "Matthew Anderson",
+                                    "Employee ID": "042226",
+                                    "Role": "Legal Advisor"
+                                },
+                                {
+                                    "Name": "Karen Jones",
+                                    "Employee ID": "487555",
+                                    "Role": "Support Engineer"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Department Name": "Content Marketing",
+                    "Teams": [
+                        {
+                            "Team Name": "Video Content Team",
+                            "Employees": [
+                                {
+                                    "Name": "Thomas Jones",
+                                    "Employee ID": "764817",
+                                    "Role": "Sales Representative"
+                                },
+                                {
+                                    "Name": "Robert Clark",
+                                    "Employee ID": "691731",
+                                    "Role": "Sales Representative"
+                                },
+                                {
+                                    "Name": "Susan Harris",
+                                    "Employee ID": "016640",
+                                    "Role": "Business Analyst"
+                                },
+                                {
+                                    "Name": "William Gonzalez",
+                                    "Employee ID": "246533",
+                                    "Role": "Legal Advisor"
+                                },
+                                {
+                                    "Name": "Mary Sanchez",
+                                    "Employee ID": "398781",
+                                    "Role": "Research Scientist"
+                                },
+                                {
+                                    "Name": "Barbara Johnson",
+                                    "Employee ID": "169905",
+                                    "Role": "Business Analyst"
+                                },
+                                {
+                                    "Name": "Lisa Harris",
+                                    "Employee ID": "262066",
+                                    "Role": "HR Specialist"
+                                },
+                                {
+                                    "Name": "Linda Miller",
+                                    "Employee ID": "143674",
+                                    "Role": "Legal Advisor"
+                                },
+                                {
+                                    "Name": "William Brown",
+                                    "Employee ID": "606234",
+                                    "Role": "Sales Representative"
+                                },
+                                {
+                                    "Name": "Daniel Ramirez",
+                                    "Employee ID": "619184",
+                                    "Role": "System Administrator"
+                                },
+                                {
+                                    "Name": "Lisa Lee",
+                                    "Employee ID": "907694",
+                                    "Role": "Graphic Designer"
+                                },
+                                {
+                                    "Name": "Richard Hernandez",
+                                    "Employee ID": "703368",
+                                    "Role": "Senior Developer"
+                                }
+                            ]
+                        },
+                        {
+                            "Team Name": "Blog Team",
+                            "Employees": [
+                                {
+                                    "Name": "Patricia Garcia",
+                                    "Employee ID": "265693",
+                                    "Role": "Sales Representative"
+                                },
+                                {
+                                    "Name": "Linda Anderson",
+                                    "Employee ID": "041368",
+                                    "Role": "Graphic Designer"
+                                },
+                                {
+                                    "Name": "Donald Hernandez",
+                                    "Employee ID": "160456",
+                                    "Role": "Accountant"
+                                },
+                                {
+                                    "Name": "Thomas Miller",
+                                    "Employee ID": "983643",
+                                    "Role": "Support Engineer"
+                                },
+                                {
+                                    "Name": "Betty Gonzalez",
+                                    "Employee ID": "581306",
+                                    "Role": "Financial Analyst"
+                                },
+                                {
+                                    "Name": "Jessica Lopez",
+                                    "Employee ID": "640181",
+                                    "Role": "Sales Representative"
+                                },
+                                {
+                                    "Name": "John Lewis",
+                                    "Employee ID": "172126",
+                                    "Role": "HR Specialist"
+                                },
+                                {
+                                    "Name": "Nancy Ramirez",
+                                    "Employee ID": "133382",
+                                    "Role": "Graphic Designer"
+                                },
+                                {
+                                    "Name": "Patricia Thomas",
+                                    "Employee ID": "662721",
+                                    "Role": "Business Analyst"
+                                },
+                                {
+                                    "Name": "Lisa Perez",
+                                    "Employee ID": "073911",
+                                    "Role": "HR Specialist"
+                                },
+                                {
+                                    "Name": "Charles Sanchez",
+                                    "Employee ID": "579244",
+                                    "Role": "Graphic Designer"
+                                },
+                                {
+                                    "Name": "Donald Hernandez",
+                                    "Employee ID": "111998",
+                                    "Role": "Support Engineer"
+                                },
+                                {
+                                    "Name": "Joseph Wilson",
+                                    "Employee ID": "654678",
+                                    "Role": "Senior Developer"
+                                },
+                                {
+                                    "Name": "Susan Perez",
+                                    "Employee ID": "382163",
+                                    "Role": "Sales Representative"
+                                },
+                                {
+                                    "Name": "Jessica Anderson",
+                                    "Employee ID": "117828",
+                                    "Role": "DevOps Engineer"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Department Name": "Digital Marketing",
+                    "Teams": [
+                        {
+                            "Team Name": "PPC Team",
+                            "Employees": [
+                                {
+                                    "Name": "David Gonzalez",
+                                    "Employee ID": "154891",
+                                    "Role": "Legal Advisor"
+                                },
+                                {
+                                    "Name": "Sarah White",
+                                    "Employee ID": "164817",
+                                    "Role": "Graphic Designer"
+                                },
+                                {
+                                    "Name": "Christopher Lewis",
+                                    "Employee ID": "153584",
+                                    "Role": "Senior Developer"
+                                },
+                                {
+                                    "Name": "Jennifer Martinez",
+                                    "Employee ID": "781813",
+                                    "Role": "Customer Success Manager"
+                                },
+                                {
+                                    "Name": "Richard Davis",
+                                    "Employee ID": "044400",
+                                    "Role": "DevOps Engineer"
+                                },
+                                {
+                                    "Name": "David Harris",
+                                    "Employee ID": "186861",
+                                    "Role": "HR Specialist"
+                                },
+                                {
+                                    "Name": "David Brown",
+                                    "Employee ID": "965535",
+                                    "Role": "System Administrator"
+                                },
+                                {
+                                    "Name": "Elizabeth Perez",
+                                    "Employee ID": "773301",
+                                    "Role": "Product Manager"
+                                },
+                                {
+                                    "Name": "Linda Harris",
+                                    "Employee ID": "151852",
+                                    "Role": "Manager"
+                                },
+                                {
+                                    "Name": "Charles Taylor",
+                                    "Employee ID": "463256",
+                                    "Role": "Product Manager"
+                                }
+                            ]
+                        },
+                        {
+                            "Team Name": "SEO Team",
+                            "Employees": [
+                                {
+                                    "Name": "Robert Johnson",
+                                    "Employee ID": "053903",
+                                    "Role": "Marketing Coordinator"
+                                },
+                                {
+                                    "Name": "Mary Perez",
+                                    "Employee ID": "539230",
+                                    "Role": "Data Analyst"
+                                },
+                                {
+                                    "Name": "Joseph Clark",
+                                    "Employee ID": "532606",
+                                    "Role": "Sales Representative"
+                                },
+                                {
+                                    "Name": "Daniel Johnson",
+                                    "Employee ID": "645040",
+                                    "Role": "HR Specialist"
+                                },
+                                {
+                                    "Name": "Elizabeth Thomas",
+                                    "Employee ID": "148136",
+                                    "Role": "Content Writer"
+                                },
+                                {
+                                    "Name": "Susan Wilson",
+                                    "Employee ID": "100093",
+                                    "Role": "Support Engineer"
+                                },
+                                {
+                                    "Name": "Susan Brown",
+                                    "Employee ID": "478310",
+                                    "Role": "Marketing Coordinator"
+                                },
+                                {
+                                    "Name": "Elizabeth Smith",
+                                    "Employee ID": "092732",
+                                    "Role": "Financial Analyst"
+                                },
+                                {
+                                    "Name": "William Lopez",
+                                    "Employee ID": "473544",
+                                    "Role": "Financial Analyst"
+                                },
+                                {
+                                    "Name": "Mary Davis",
+                                    "Employee ID": "001565",
+                                    "Role": "Business Analyst"
+                                }
+                            ]
+                        },
+                        {
+                            "Team Name": "Social Media Team",
+                            "Employees": [
+                                {
+                                    "Name": "James Williams",
+                                    "Employee ID": "494893",
+                                    "Role": "Customer Success Manager"
+                                },
+                                {
+                                    "Name": "Nancy Davis",
+                                    "Employee ID": "085068",
+                                    "Role": "Legal Advisor"
+                                },
+                                {
+                                    "Name": "Sarah Ramirez",
+                                    "Employee ID": "746505",
+                                    "Role": "Legal Advisor"
+                                },
+                                {
+                                    "Name": "Linda Smith",
+                                    "Employee ID": "900558",
+                                    "Role": "Business Analyst"
+                                },
+                                {
+                                    "Name": "Elizabeth Anderson",
+                                    "Employee ID": "466241",
+                                    "Role": "QA Engineer"
+                                },
+                                {
+                                    "Name": "Margaret Miller",
+                                    "Employee ID": "090489",
+                                    "Role": "Customer Success Manager"
+                                },
+                                {
+                                    "Name": "John Garcia",
+                                    "Employee ID": "812973",
+                                    "Role": "Sales Representative"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Division Name": "Customer Service Division",
+            "Departments": [
+                {
+                    "Department Name": "Client Relations",
+                    "Teams": [
+                        {
+                            "Team Name": "Account Management Team",
+                            "Employees": [
+                                {
+                                    "Name": "Joseph Sanchez",
+                                    "Employee ID": "477907",
+                                    "Role": "Junior Developer"
+                                },
+                                {
+                                    "Name": "Thomas Jones",
+                                    "Employee ID": "031964",
+                                    "Role": "Business Analyst"
+                                },
+                                {
+                                    "Name": "Lisa Brown",
+                                    "Employee ID": "624849",
+                                    "Role": "Product Manager"
+                                },
+                                {
+                                    "Name": "Barbara Brown",
+                                    "Employee ID": "011252",
+                                    "Role": "Support Engineer"
+                                },
+                                {
+                                    "Name": "John Wilson",
+                                    "Employee ID": "715152",
+                                    "Role": "Manager"
+                                },
+                                {
+                                    "Name": "Charles Williams",
+                                    "Employee ID": "770271",
+                                    "Role": "System Administrator"
+                                },
+                                {
+                                    "Name": "Nancy Davis",
+                                    "Employee ID": "429807",
+                                    "Role": "Research Scientist"
+                                },
+                                {
+                                    "Name": "Charles Rodriguez",
+                                    "Employee ID": "358045",
+                                    "Role": "Content Writer"
+                                },
+                                {
+                                    "Name": "Donald Lewis",
+                                    "Employee ID": "853112",
+                                    "Role": "HR Specialist"
+                                },
+                                {
+                                    "Name": "Richard Wilson",
+                                    "Employee ID": "525885",
+                                    "Role": "Product Manager"
+                                }
+                            ]
+                        },
+                        {
+                            "Team Name": "Customer Success Team",
+                            "Employees": [
+                                {
+                                    "Name": "Christopher Perez",
+                                    "Employee ID": "238972",
+                                    "Role": "HR Specialist"
+                                },
+                                {
+                                    "Name": "Betty Ramirez",
+                                    "Employee ID": "229376",
+                                    "Role": "HR Specialist"
+                                },
+                                {
+                                    "Name": "Sandra Williams",
+                                    "Employee ID": "241378",
+                                    "Role": "Financial Analyst"
+                                },
+                                {
+                                    "Name": "David Gonzalez",
+                                    "Employee ID": "804497",
+                                    "Role": "Junior Developer"
+                                },
+                                {
+                                    "Name": "Patricia Thompson",
+                                    "Employee ID": "811277",
+                                    "Role": "QA Engineer"
+                                },
+                                {
+                                    "Name": "Robert Lewis",
+                                    "Employee ID": "902075",
+                                    "Role": "Manager"
+                                },
+                                {
+                                    "Name": "Joseph Rodriguez",
+                                    "Employee ID": "033571",
+                                    "Role": "QA Engineer"
+                                },
+                                {
+                                    "Name": "Lisa Hernandez",
+                                    "Employee ID": "857251",
+                                    "Role": "Customer Success Manager"
+                                },
+                                {
+                                    "Name": "Sandra White",
+                                    "Employee ID": "346149",
+                                    "Role": "HR Specialist"
+                                },
+                                {
+                                    "Name": "Lisa Brown",
+                                    "Employee ID": "429004",
+                                    "Role": "Financial Analyst"
+                                },
+                                {
+                                    "Name": "David Thomas",
+                                    "Employee ID": "523227",
+                                    "Role": "Support Engineer"
+                                },
+                                {
+                                    "Name": "Linda Martin",
+                                    "Employee ID": "350204",
+                                    "Role": "Junior Developer"
+                                },
+                                {
+                                    "Name": "Margaret Moore",
+                                    "Employee ID": "413993",
+                                    "Role": "HR Specialist"
+                                },
+                                {
+                                    "Name": "Linda Lewis",
+                                    "Employee ID": "843614",
+                                    "Role": "HR Specialist"
+                                },
+                                {
+                                    "Name": "Jessica Lopez",
+                                    "Employee ID": "531197",
+                                    "Role": "DevOps Engineer"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Department Name": "Support Center",
+                    "Teams": [
+                        {
+                            "Team Name": "Client Relations Team",
+                            "Employees": [
+                                {
+                                    "Name": "Donald Gonzalez",
+                                    "Employee ID": "620461",
+                                    "Role": "Manager"
+                                },
+                                {
+                                    "Name": "Barbara Thompson",
+                                    "Employee ID": "173846",
+                                    "Role": "Customer Success Manager"
+                                },
+                                {
+                                    "Name": "Margaret Clark",
+                                    "Employee ID": "034311",
+                                    "Role": "Graphic Designer"
+                                },
+                                {
+                                    "Name": "David Sanchez",
+                                    "Employee ID": "214246",
+                                    "Role": "Junior Developer"
+                                },
+                                {
+                                    "Name": "John Lee",
+                                    "Employee ID": "932850",
+                                    "Role": "Marketing Coordinator"
+                                },
+                                {
+                                    "Name": "Karen Jones",
+                                    "Employee ID": "174366",
+                                    "Role": "Graphic Designer"
+                                },
+                                {
+                                    "Name": "Sarah Harris",
+                                    "Employee ID": "899585",
+                                    "Role": "Manager"
+                                },
+                                {
+                                    "Name": "Lisa Anderson",
+                                    "Employee ID": "634187",
+                                    "Role": "DevOps Engineer"
+                                },
+                                {
+                                    "Name": "Anthony Perez",
+                                    "Employee ID": "746062",
+                                    "Role": "Data Analyst"
+                                },
+                                {
+                                    "Name": "Jennifer Perez",
+                                    "Employee ID": "871452",
+                                    "Role": "Data Analyst"
+                                },
+                                {
+                                    "Name": "Donald Ramirez",
+                                    "Employee ID": "265302",
+                                    "Role": "QA Engineer"
+                                }
+                            ]
+                        },
+                        {
+                            "Team Name": "Customer Support Team",
+                            "Employees": [
+                                {
+                                    "Name": "Sarah Sanchez",
+                                    "Employee ID": "989295",
+                                    "Role": "Data Analyst"
+                                },
+                                {
+                                    "Name": "Thomas Martin",
+                                    "Employee ID": "854440",
+                                    "Role": "Manager"
+                                },
+                                {
+                                    "Name": "Betty Johnson",
+                                    "Employee ID": "136498",
+                                    "Role": "Senior Developer"
+                                },
+                                {
+                                    "Name": "Jessica Brown",
+                                    "Employee ID": "739549",
+                                    "Role": "Support Engineer"
+                                },
+                                {
+                                    "Name": "Matthew Hernandez",
+                                    "Employee ID": "751465",
+                                    "Role": "Customer Success Manager"
+                                },
+                                {
+                                    "Name": "Linda Thompson",
+                                    "Employee ID": "056440",
+                                    "Role": "DevOps Engineer"
+                                },
+                                {
+                                    "Name": "Richard Martin",
+                                    "Employee ID": "165215",
+                                    "Role": "Content Writer"
+                                },
+                                {
+                                    "Name": "Jennifer White",
+                                    "Employee ID": "213825",
+                                    "Role": "Sales Representative"
+                                },
+                                {
+                                    "Name": "Robert Johnson",
+                                    "Employee ID": "053760",
+                                    "Role": "Senior Developer"
+                                },
+                                {
+                                    "Name": "Matthew Miller",
+                                    "Employee ID": "706268",
+                                    "Role": "Legal Advisor"
+                                },
+                                {
+                                    "Name": "Charles Moore",
+                                    "Employee ID": "115200",
+                                    "Role": "Support Engineer"
+                                },
+                                {
+                                    "Name": "Sarah Moore",
+                                    "Employee ID": "735159",
+                                    "Role": "Marketing Coordinator"
+                                },
+                                {
+                                    "Name": "Jessica Thompson",
+                                    "Employee ID": "368589",
+                                    "Role": "Support Engineer"
+                                },
+                                {
+                                    "Name": "Jessica Jones",
+                                    "Employee ID": "791188",
+                                    "Role": "Marketing Coordinator"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Department Name": "Technical Support",
+                    "Teams": [
+                        {
+                            "Team Name": "Tier 1 Support",
+                            "Employees": [
+                                {
+                                    "Name": "Jessica White",
+                                    "Employee ID": "401343",
+                                    "Role": "Junior Developer"
+                                },
+                                {
+                                    "Name": "Linda Sanchez",
+                                    "Employee ID": "957740",
+                                    "Role": "Sales Representative"
+                                },
+                                {
+                                    "Name": "David Rodriguez",
+                                    "Employee ID": "535170",
+                                    "Role": "Data Analyst"
+                                },
+                                {
+                                    "Name": "Karen Smith",
+                                    "Employee ID": "124437",
+                                    "Role": "Customer Success Manager"
+                                },
+                                {
+                                    "Name": "Christopher Garcia",
+                                    "Employee ID": "563434",
+                                    "Role": "System Administrator"
+                                },
+                                {
+                                    "Name": "Karen Davis",
+                                    "Employee ID": "196165",
+                                    "Role": "Product Manager"
+                                },
+                                {
+                                    "Name": "Michael Gonzalez",
+                                    "Employee ID": "216597",
+                                    "Role": "Manager"
+                                },
+                                {
+                                    "Name": "Daniel Miller",
+                                    "Employee ID": "636577",
+                                    "Role": "Financial Analyst"
+                                },
+                                {
+                                    "Name": "Richard Taylor",
+                                    "Employee ID": "468538",
+                                    "Role": "DevOps Engineer"
+                                },
+                                {
+                                    "Name": "Jennifer Lewis",
+                                    "Employee ID": "553859",
+                                    "Role": "Research Scientist"
+                                },
+                                {
+                                    "Name": "Elizabeth Robinson",
+                                    "Employee ID": "742901",
+                                    "Role": "QA Engineer"
+                                },
+                                {
+                                    "Name": "David Gonzalez",
+                                    "Employee ID": "143685",
+                                    "Role": "Support Engineer"
+                                },
+                                {
+                                    "Name": "Joseph Williams",
+                                    "Employee ID": "171016",
+                                    "Role": "System Administrator"
+                                },
+                                {
+                                    "Name": "Thomas Harris",
+                                    "Employee ID": "725353",
+                                    "Role": "Marketing Coordinator"
+                                },
+                                {
+                                    "Name": "Richard Taylor",
+                                    "Employee ID": "951728",
+                                    "Role": "Research Scientist"
+                                }
+                            ]
+                        },
+                        {
+                            "Team Name": "Tier 2 Support",
+                            "Employees": [
+                                {
+                                    "Name": "Charles Davis",
+                                    "Employee ID": "276695",
+                                    "Role": "Data Analyst"
+                                },
+                                {
+                                    "Name": "Lisa Martinez",
+                                    "Employee ID": "411218",
+                                    "Role": "Content Writer"
+                                },
+                                {
+                                    "Name": "Anthony Johnson",
+                                    "Employee ID": "345435",
+                                    "Role": "Business Analyst"
+                                },
+                                {
+                                    "Name": "Sarah Thomas",
+                                    "Employee ID": "011186",
+                                    "Role": "System Administrator"
+                                },
+                                {
+                                    "Name": "Richard Martin",
+                                    "Employee ID": "865685",
+                                    "Role": "QA Engineer"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Division Name": "Research & Development Division",
+            "Departments": [
+                {
+                    "Department Name": "Innovation Lab",
+                    "Teams": [
+                        {
+                            "Team Name": "Prototype Development Team",
+                            "Employees": [
+                                {
+                                    "Name": "Linda Smith",
+                                    "Employee ID": "639070",
+                                    "Role": "Legal Advisor"
+                                },
+                                {
+                                    "Name": "Patricia Lopez",
+                                    "Employee ID": "614504",
+                                    "Role": "Junior Developer"
+                                },
+                                {
+                                    "Name": "Barbara Hernandez",
+                                    "Employee ID": "867489",
+                                    "Role": "System Administrator"
+                                },
+                                {
+                                    "Name": "Sarah Lee",
+                                    "Employee ID": "285460",
+                                    "Role": "Support Engineer"
+                                },
+                                {
+                                    "Name": "William Garcia",
+                                    "Employee ID": "114908",
+                                    "Role": "Legal Advisor"
+                                },
+                                {
+                                    "Name": "Margaret Taylor",
+                                    "Employee ID": "973477",
+                                    "Role": "Sales Representative"
+                                },
+                                {
+                                    "Name": "Margaret Lopez",
+                                    "Employee ID": "499641",
+                                    "Role": "DevOps Engineer"
+                                },
+                                {
+                                    "Name": "Patricia Robinson",
+                                    "Employee ID": "139770",
+                                    "Role": "Financial Analyst"
+                                },
+                                {
+                                    "Name": "William Perez",
+                                    "Employee ID": "417418",
+                                    "Role": "Business Analyst"
+                                }
+                            ]
+                        },
+                        {
+                            "Team Name": "Idea Generation Team",
+                            "Employees": [
+                                {
+                                    "Name": "Thomas Thomas",
+                                    "Employee ID": "061256",
+                                    "Role": "Support Engineer"
+                                },
+                                {
+                                    "Name": "Mary Miller",
+                                    "Employee ID": "196073",
+                                    "Role": "QA Engineer"
+                                },
+                                {
+                                    "Name": "Sandra Martin",
+                                    "Employee ID": "188647",
+                                    "Role": "QA Engineer"
+                                },
+                                {
+                                    "Name": "Michael Hernandez",
+                                    "Employee ID": "944025",
+                                    "Role": "Graphic Designer"
+                                },
+                                {
+                                    "Name": "John Gonzalez",
+                                    "Employee ID": "437179",
+                                    "Role": "Senior Developer"
+                                },
+                                {
+                                    "Name": "Margaret Harris",
+                                    "Employee ID": "089617",
+                                    "Role": "Marketing Coordinator"
+                                },
+                                {
+                                    "Name": "Joseph Lopez",
+                                    "Employee ID": "084429",
+                                    "Role": "Research Scientist"
+                                },
+                                {
+                                    "Name": "Sarah Jackson",
+                                    "Employee ID": "522844",
+                                    "Role": "Junior Developer"
+                                },
+                                {
+                                    "Name": "Matthew Miller",
+                                    "Employee ID": "140897",
+                                    "Role": "Accountant"
+                                },
+                                {
+                                    "Name": "Sarah Perez",
+                                    "Employee ID": "595190",
+                                    "Role": "Support Engineer"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Department Name": "Prototyping",
+                    "Teams": [
+                        {
+                            "Team Name": "Testing & Validation Team",
+                            "Employees": [
+                                {
+                                    "Name": "Joseph Miller",
+                                    "Employee ID": "469468",
+                                    "Role": "Research Scientist"
+                                },
+                                {
+                                    "Name": "James Smith",
+                                    "Employee ID": "633569",
+                                    "Role": "Business Analyst"
+                                },
+                                {
+                                    "Name": "Anthony Harris",
+                                    "Employee ID": "821344",
+                                    "Role": "DevOps Engineer"
+                                },
+                                {
+                                    "Name": "Christopher Garcia",
+                                    "Employee ID": "562827",
+                                    "Role": "QA Engineer"
+                                },
+                                {
+                                    "Name": "Betty Williams",
+                                    "Employee ID": "587249",
+                                    "Role": "Financial Analyst"
+                                },
+                                {
+                                    "Name": "Lisa Wilson",
+                                    "Employee ID": "470218",
+                                    "Role": "Accountant"
+                                },
+                                {
+                                    "Name": "James Hernandez",
+                                    "Employee ID": "415330",
+                                    "Role": "Product Manager"
+                                },
+                                {
+                                    "Name": "Joseph Lee",
+                                    "Employee ID": "354872",
+                                    "Role": "Support Engineer"
+                                },
+                                {
+                                    "Name": "Karen Garcia",
+                                    "Employee ID": "838589",
+                                    "Role": "Business Analyst"
+                                }
+                            ]
+                        },
+                        {
+                            "Team Name": "Rapid Prototyping Team",
+                            "Employees": [
+                                {
+                                    "Name": "Anthony Davis",
+                                    "Employee ID": "468429",
+                                    "Role": "Financial Analyst"
+                                },
+                                {
+                                    "Name": "Michael Ramirez",
+                                    "Employee ID": "253480",
+                                    "Role": "Data Analyst"
+                                },
+                                {
+                                    "Name": "Donald Thompson",
+                                    "Employee ID": "099210",
+                                    "Role": "HR Specialist"
+                                },
+                                {
+                                    "Name": "Thomas Clark",
+                                    "Employee ID": "293594",
+                                    "Role": "Manager"
+                                },
+                                {
+                                    "Name": "Charles Lee",
+                                    "Employee ID": "319933",
+                                    "Role": "Graphic Designer"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Department Name": "Product Research",
+                    "Teams": [
+                        {
+                            "Team Name": "Market Analysis Team",
+                            "Employees": [
+                                {
+                                    "Name": "Karen Lewis",
+                                    "Employee ID": "525071",
+                                    "Role": "Accountant"
+                                },
+                                {
+                                    "Name": "Sarah Perez",
+                                    "Employee ID": "739420",
+                                    "Role": "Support Engineer"
+                                },
+                                {
+                                    "Name": "Christopher Moore",
+                                    "Employee ID": "691334",
+                                    "Role": "Product Manager"
+                                },
+                                {
+                                    "Name": "Linda Harris",
+                                    "Employee ID": "877048",
+                                    "Role": "HR Specialist"
+                                },
+                                {
+                                    "Name": "Barbara Robinson",
+                                    "Employee ID": "424262",
+                                    "Role": "Content Writer"
+                                },
+                                {
+                                    "Name": "Jessica White",
+                                    "Employee ID": "831848",
+                                    "Role": "Financial Analyst"
+                                },
+                                {
+                                    "Name": "John Lewis",
+                                    "Employee ID": "589505",
+                                    "Role": "Senior Developer"
+                                },
+                                {
+                                    "Name": "Sarah Wilson",
+                                    "Employee ID": "964342",
+                                    "Role": "Content Writer"
+                                },
+                                {
+                                    "Name": "Richard Thompson",
+                                    "Employee ID": "355960",
+                                    "Role": "Accountant"
+                                },
+                                {
+                                    "Name": "Richard Gonzalez",
+                                    "Employee ID": "638297",
+                                    "Role": "Research Scientist"
+                                },
+                                {
+                                    "Name": "Matthew Rodriguez",
+                                    "Employee ID": "085953",
+                                    "Role": "System Administrator"
+                                },
+                                {
+                                    "Name": "David Anderson",
+                                    "Employee ID": "010185",
+                                    "Role": "Customer Success Manager"
+                                }
+                            ]
+                        },
+                        {
+                            "Team Name": "User Research Team",
+                            "Employees": [
+                                {
+                                    "Name": "Christopher Gonzalez",
+                                    "Employee ID": "022752",
+                                    "Role": "Business Analyst"
+                                },
+                                {
+                                    "Name": "Jennifer Robinson",
+                                    "Employee ID": "444773",
+                                    "Role": "Senior Developer"
+                                },
+                                {
+                                    "Name": "Lisa Smith",
+                                    "Employee ID": "736646",
+                                    "Role": "Content Writer"
+                                },
+                                {
+                                    "Name": "Matthew Gonzalez",
+                                    "Employee ID": "197574",
+                                    "Role": "Data Analyst"
+                                },
+                                {
+                                    "Name": "Barbara Lopez",
+                                    "Employee ID": "832373",
+                                    "Role": "QA Engineer"
+                                },
+                                {
+                                    "Name": "John White",
+                                    "Employee ID": "569454",
+                                    "Role": "HR Specialist"
+                                },
+                                {
+                                    "Name": "John Garcia",
+                                    "Employee ID": "320640",
+                                    "Role": "Financial Analyst"
+                                },
+                                {
+                                    "Name": "Sarah Williams",
+                                    "Employee ID": "197483",
+                                    "Role": "HR Specialist"
+                                },
+                                {
+                                    "Name": "Charles Martin",
+                                    "Employee ID": "499383",
+                                    "Role": "System Administrator"
+                                },
+                                {
+                                    "Name": "Linda Garcia",
+                                    "Employee ID": "026764",
+                                    "Role": "Sales Representative"
+                                },
+                                {
+                                    "Name": "Richard Robinson",
+                                    "Employee ID": "418347",
+                                    "Role": "Marketing Coordinator"
+                                },
+                                {
+                                    "Name": "Donald Martinez",
+                                    "Employee ID": "476243",
+                                    "Role": "Customer Success Manager"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

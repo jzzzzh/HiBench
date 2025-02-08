@@ -310,7 +310,7 @@ Code:
                       if i < len(a):
                           val += int(a[-(i + 1)])
                       if i < len(b):
-                 性凉。          val += int(b[-(i + 1)])
+                          val += int(b[-(i + 1)])
                       carry, val = divmod(val, 2)
                       result += str(val)
                   if carry:

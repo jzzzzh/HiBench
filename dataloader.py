@@ -44,6 +44,12 @@ class FundamentalNormalPromptGenerator(PromptGenerator):
             PromptTemplate = PromptTemplate.replace('<STRUCTURE>', data[f'{self.input_mode.lower()}_presentation'])
             PromptTemplate = PromptTemplate.replace('<QUESTION>', data['leaf_Q'])
             TrueAnswer = data[f'leaf_A']
+        elif self.sub_task == 'root':
+            OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['Fundamental']['Task']['Normal']['root']['OutputFormatTemplate'])
+            PromptTemplate = self.config['Fundamental']['Task']['Normal']['root']['PromptTemplate']
+            PromptTemplate = PromptTemplate.replace('<STRUCTURE>', data[f'{self.input_mode.lower()}_presentation'])
+            PromptTemplate = PromptTemplate.replace('<QUESTION>', data['root_Q'])
+            TrueAnswer = data[f'root_A']
         elif self.sub_task == 'all_ancestor':
             OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['Fundamental']['Task']['Normal']['all_ancestor']['OutputFormatTemplate'])
             PromptTemplate = self.config['Fundamental']['Task']['Normal']['all_ancestor']['PromptTemplate']
