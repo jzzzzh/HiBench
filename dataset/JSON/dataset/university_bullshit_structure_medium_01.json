@@ -1,0 +1,76 @@
+{
+    "University": "Xv92Lk3",
+    "Faculties": [
+        {
+            "Faculty Name": "Fc9Sc1",
+            "Departments": [
+                {
+                    "Department Name": "Dp5Mt2",
+                    "Programs": [
+                        {
+                            "Program Name": "Bs0Ar7",
+                            "Courses": [
+                                {
+                                    "Course Name": "Sr3Pd6",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Ap9 Le8o Mo4e",
+                                            "Title": "Ap9"
+                                        },
+                                        {
+                                            "Name": "Ap9 Li8m Sm7t",
+                                            "Title": "Ap9"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Course Name": "Fa8Ac9",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "As2P Ow6n Sm7t",
+                                            "Title": "As2P"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "Students": [
+                                {
+                                    "Name": "So7a Ga7c",
+                                    "Student ID": "25204069"
+                                }
+                            ]
+                        },
+                        {
+                            "Program Name": "Be9En3",
+                            "Courses": [
+                                {
+                                    "Course Name": "At4Th9",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Lc3 No7h Sm7t",
+                                            "Title": "Lc3"
+                                        },
+                                        {
+                                            "Name": "Lc3 Ma9o Mi8l",
+                                            "Title": "Lc3"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "Students": [
+                                {
+                                    "Name": "Is3e He3z",
+                                    "Student ID": "88899295"
+                                },
+                                {
+                                    "Name": "So7a Mo4e",
+                                    "Student ID": "78965469"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

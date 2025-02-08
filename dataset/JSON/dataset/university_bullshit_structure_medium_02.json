@@ -1,0 +1,70 @@
+{
+    "University": "Ct6Un2",
+    "Faculties": [
+        {
+            "Faculty Name": "Fc0Lw3",
+            "Departments": [
+                {
+                    "Department Name": "Dp0El5"
+                },
+                {
+                    "Department Name": "Dp0El5"
+                },
+                {
+                    "Department Name": "Dp0El5"
+                },
+                {
+                    "Department Name": "Dp0El5"
+                }
+            ]
+        },
+        {
+            "Faculty Name": "Fc2En9",
+            "Departments": [
+                {
+                    "Department Name": "Dp2El9"
+                },
+                {
+                    "Department Name": "Dp6Ch2"
+                },
+                {
+                    "Department Name": "Dp6Ch2"
+                },
+                {
+                    "Department Name": "Dp7Me4"
+                }
+            ]
+        },
+        {
+            "Faculty Name": "Fc7Ed6",
+            "Departments": [
+                {
+                    "Department Name": "Dp8Cs3"
+                },
+                {
+                    "Department Name": "Dp5Et8"
+                },
+                {
+                    "Department Name": "Dp3He2"
+                },
+                {
+                    "Department Name": "Dp8Cs3"
+                }
+            ]
+        },
+        {
+            "Faculty Name": "Fc7Ed6",
+            "Departments": [
+                {
+                    "Department Name": "Dp5Et8"
+                },
+                {
+                    "Department Name": "Dp9Ep7"
+                },
+                {
+                    "Department Name": "Dp8Cs3"
+                }
+            ]
+        }
+    ]
+}

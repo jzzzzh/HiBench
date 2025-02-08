@@ -1,0 +1,58 @@
+[
+    {
+        "question": "How many Courses does Master of Science have?",
+        "answer": 1
+    },
+    {
+        "question": "How many Courses does Bachelor of Arts have?",
+        "answer": 2
+    },
+    {
+        "question": "How many Courses does Bachelor of Science have?",
+        "answer": 2
+    },
+    {
+        "question": "How many Departments does Faculty of Arts have?",
+        "answer": 1
+    },
+    {
+        "question": "How many Faculties does Tech Institute have?",
+        "answer": 2
+    },
+    {
+        "question": "How many Lecturers does Marketing Principles have?",
+        "answer": 2
+    },
+    {
+        "question": "How many Lecturers does Landscape Architecture have?",
+        "answer": 1
+    },
+    {
+        "question": "How many Lecturers does Modern Art have?",
+        "answer": 1
+    },
+    {
+        "question": "How many Lecturers does Surgical Procedures have?",
+        "answer": 1
+    },
+    {
+        "question": "How many Programs does Department of Literature have?",
+        "answer": 2
+    },
+    {
+        "question": "How many Programs does Department of Linguistics have?",
+        "answer": 1
+    },
+    {
+        "question": "How many Students does Bachelor of Science have?",
+        "answer": 2
+    },
+    {
+        "question": "How many Students does Master of Science have?",
+        "answer": 1
+    },
+    {
+        "question": "How many Students does Bachelor of Arts have?",
+        "answer": 1
+    }
+]

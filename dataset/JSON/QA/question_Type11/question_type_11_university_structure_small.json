@@ -1,0 +1,10 @@
+[
+    {
+        "question": "If someone wants to go from the department 'Department of Accounting' to the department 'Department of Finance', what path should they take?",
+        "answer": "Department of Accounting \u2192 Faculty of Business \u2192 Department of Finance"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Finance' to the department 'Department of Accounting', what path should they take?",
+        "answer": "Department of Finance \u2192 Faculty of Business \u2192 Department of Accounting"
+    }
+]
