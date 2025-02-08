@@ -1,0 +1,162 @@
+[
+    {
+        "question": "If someone wants to go from the department 'Department of Management' to the department 'Department of Marketing', what path should they take?",
+        "answer": "Department of Management \u2192 Faculty of Business \u2192 Department of Marketing"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Finance' to the department 'Department of Management', what path should they take?",
+        "answer": "Department of Finance \u2192 Faculty of Business \u2192 Department of Management"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Surgery' to the department 'Department of Anatomy', what path should they take?",
+        "answer": "Department of Surgery \u2192 Faculty of Medicine \u2192 Department of Anatomy"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Interior Design' to the department 'Department of Urban Planning', what path should they take?",
+        "answer": "Department of Interior Design \u2192 Faculty of Architecture \u2192 Department of Urban Planning"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Surgery' to the department 'Department of Physiology', what path should they take?",
+        "answer": "Department of Surgery \u2192 Faculty of Medicine \u2192 Department of Physiology"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Linguistics' to the department 'Department of Visual Arts', what path should they take?",
+        "answer": "Department of Linguistics \u2192 Faculty of Arts \u2192 Department of Visual Arts"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Literature' to the department 'Department of Visual Arts', what path should they take?",
+        "answer": "Department of Literature \u2192 Faculty of Arts \u2192 Department of Visual Arts"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Pediatrics' to the department 'Department of Surgery', what path should they take?",
+        "answer": "Department of Pediatrics \u2192 Faculty of Medicine \u2192 Department of Surgery"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Visual Arts' to the department 'Department of Philosophy', what path should they take?",
+        "answer": "Department of Visual Arts \u2192 Faculty of Arts \u2192 Department of Philosophy"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Visual Arts' to the department 'Department of Linguistics', what path should they take?",
+        "answer": "Department of Visual Arts \u2192 Faculty of Arts \u2192 Department of Linguistics"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Philosophy' to the department 'Department of History', what path should they take?",
+        "answer": "Department of Philosophy \u2192 Faculty of Arts \u2192 Department of History"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Visual Arts' to the department 'Department of History', what path should they take?",
+        "answer": "Department of Visual Arts \u2192 Faculty of Arts \u2192 Department of History"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Marketing' to the department 'Department of Finance', what path should they take?",
+        "answer": "Department of Marketing \u2192 Faculty of Business \u2192 Department of Finance"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Finance' to the department 'Department of Marketing', what path should they take?",
+        "answer": "Department of Finance \u2192 Faculty of Business \u2192 Department of Marketing"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Literature' to the department 'Department of Linguistics', what path should they take?",
+        "answer": "Department of Literature \u2192 Faculty of Arts \u2192 Department of Linguistics"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Marketing' to the department 'Department of Management', what path should they take?",
+        "answer": "Department of Marketing \u2192 Faculty of Business \u2192 Department of Management"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Anatomy' to the department 'Department of Physiology', what path should they take?",
+        "answer": "Department of Anatomy \u2192 Faculty of Medicine \u2192 Department of Physiology"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of History' to the department 'Department of Literature', what path should they take?",
+        "answer": "Department of History \u2192 Faculty of Arts \u2192 Department of Literature"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of History' to the department 'Department of Visual Arts', what path should they take?",
+        "answer": "Department of History \u2192 Faculty of Arts \u2192 Department of Visual Arts"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Historic Preservation' to the department 'Department of Urban Planning', what path should they take?",
+        "answer": "Department of Historic Preservation \u2192 Faculty of Architecture \u2192 Department of Urban Planning"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Anatomy' to the department 'Department of Pediatrics', what path should they take?",
+        "answer": "Department of Anatomy \u2192 Faculty of Medicine \u2192 Department of Pediatrics"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Physiology' to the department 'Department of Pediatrics', what path should they take?",
+        "answer": "Department of Physiology \u2192 Faculty of Medicine \u2192 Department of Pediatrics"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Interior Design' to the department 'Department of Historic Preservation', what path should they take?",
+        "answer": "Department of Interior Design \u2192 Faculty of Architecture \u2192 Department of Historic Preservation"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Pediatrics' to the department 'Department of Physiology', what path should they take?",
+        "answer": "Department of Pediatrics \u2192 Faculty of Medicine \u2192 Department of Physiology"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Management' to the department 'Department of Finance', what path should they take?",
+        "answer": "Department of Management \u2192 Faculty of Business \u2192 Department of Finance"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Historic Preservation' to the department 'Department of Interior Design', what path should they take?",
+        "answer": "Department of Historic Preservation \u2192 Faculty of Architecture \u2192 Department of Interior Design"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Literature' to the department 'Department of History', what path should they take?",
+        "answer": "Department of Literature \u2192 Faculty of Arts \u2192 Department of History"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Visual Arts' to the department 'Department of Literature', what path should they take?",
+        "answer": "Department of Visual Arts \u2192 Faculty of Arts \u2192 Department of Literature"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Physiology' to the department 'Department of Anatomy', what path should they take?",
+        "answer": "Department of Physiology \u2192 Faculty of Medicine \u2192 Department of Anatomy"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Linguistics' to the department 'Department of History', what path should they take?",
+        "answer": "Department of Linguistics \u2192 Faculty of Arts \u2192 Department of History"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Literature' to the department 'Department of Philosophy', what path should they take?",
+        "answer": "Department of Literature \u2192 Faculty of Arts \u2192 Department of Philosophy"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Anatomy' to the department 'Department of Surgery', what path should they take?",
+        "answer": "Department of Anatomy \u2192 Faculty of Medicine \u2192 Department of Surgery"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Urban Planning' to the department 'Department of Interior Design', what path should they take?",
+        "answer": "Department of Urban Planning \u2192 Faculty of Architecture \u2192 Department of Interior Design"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Linguistics' to the department 'Department of Philosophy', what path should they take?",
+        "answer": "Department of Linguistics \u2192 Faculty of Arts \u2192 Department of Philosophy"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Philosophy' to the department 'Department of Visual Arts', what path should they take?",
+        "answer": "Department of Philosophy \u2192 Faculty of Arts \u2192 Department of Visual Arts"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Urban Planning' to the department 'Department of Historic Preservation', what path should they take?",
+        "answer": "Department of Urban Planning \u2192 Faculty of Architecture \u2192 Department of Historic Preservation"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of History' to the department 'Department of Philosophy', what path should they take?",
+        "answer": "Department of History \u2192 Faculty of Arts \u2192 Department of Philosophy"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Linguistics' to the department 'Department of Literature', what path should they take?",
+        "answer": "Department of Linguistics \u2192 Faculty of Arts \u2192 Department of Literature"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Surgery' to the department 'Department of Pediatrics', what path should they take?",
+        "answer": "Department of Surgery \u2192 Faculty of Medicine \u2192 Department of Pediatrics"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Pediatrics' to the department 'Department of Anatomy', what path should they take?",
+        "answer": "Department of Pediatrics \u2192 Faculty of Medicine \u2192 Department of Anatomy"
+    }
+]

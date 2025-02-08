@@ -20,41 +20,41 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 project_root = os.path.dirname(current_dir)  
 sys.path.append(project_root)
 
-import qa.new_type_1 as type_1
-import qa.new_type_2 as type_2
-import qa.new_type_3 as type_3
-import qa.new_type_4 as type_4
-import qa.new_type_5 as type_5
-import qa.new_type_6 as type_6
-import qa.new_type_7 as type_7
-import qa.new_type_8 as type_8
-import qa.new_type_9 as type_9
-import qa.new_type_10 as type_10
-import qa.new_type_11 as type_11
+import qa.child_count as type_1
+import qa.node_depth as type_2
+import qa.level_count as type_3
+import qa.node_relationship as type_4
+import qa.node_attribute as type_5
+import qa.level_nodes as type_6
+import qa.path_down_to_up as type_7
+import qa.path_up_to_down as type_8
+import qa.shared_ancestor_same_level as type_9
+import qa.shared_ancestor_diff_level as type_10
+import qa.path_between_nodes as type_11
 
 def generate_question_answer(scenario: str, question_type: int, with_answer: bool = True, layer_index: int = None):
     if question_type == 1:
-        return type_1.gen_anwser_type_1(scenario=scenario, with_answer=with_answer, layer_index=layer_index)
+        return type_1.gen_anwser_child_count(scenario=scenario, with_answer=with_answer, layer_index=layer_index)
     elif question_type == 2:
-        return type_2.gen_anwser_type_2(scenario=scenario, with_answer=with_answer, layer_index=layer_index)
+        return type_2.gen_anwser_node_depth(scenario=scenario, with_answer=with_answer, layer_index=layer_index)
     elif question_type == 3:
-        return type_3.gen_anwser_type_3(scenario=scenario, with_answer=with_answer, layer_index=layer_index)
+        return type_3.gen_anwser_level_count(scenario=scenario, with_answer=with_answer, layer_index=layer_index)
     elif question_type == 4:
-        return type_4.gen_answer_type_4(scenario, with_answer=with_answer)
+        return type_4.gen_answer_node_relationship(scenario, with_answer=with_answer)
     elif question_type == 5:
-        return type_5.gen_answer_type_5(scenario, with_answer=with_answer)
+        return type_5.gen_answer_node_attribute(scenario, with_answer=with_answer)
     elif question_type == 6:
-        return type_6.gen_answer_type_6(scenario, with_answer=with_answer)
+        return type_6.gen_answer_level_nodes(scenario, with_answer=with_answer)
     elif question_type == 7:
-        return type_7.gen_answer_type_7(scenario, with_answer=with_answer)
+        return type_7.gen_answer_path_down_to_up(scenario, with_answer=with_answer)
     elif question_type == 8:
-        return type_8.gen_answer_type_8(scenario, with_answer=with_answer)
+        return type_8.gen_answer_path_up_to_down(scenario, with_answer=with_answer)
     elif question_type == 9:
-        return type_9.gen_answer_type_9(scenario, with_answer=with_answer)
+        return type_9.gen_answer_shared_ancestor_same_level(scenario, with_answer=with_answer)
     elif question_type == 10:
-        return type_10.gen_answer_type_10(scenario, with_answer=with_answer)
+        return type_10.gen_answer_shared_ancestor_diff_level(scenario, with_answer=with_answer)
     elif question_type == 11:
-        return type_11.gen_answer_type_11(scenario, with_answer=with_answer)
+        return type_11.gen_answer_path_between_nodes(scenario, with_answer=with_answer)
     else:
         raise ValueError("Invalid question type")
 
@@ -109,12 +109,29 @@ def is_duplicate_question(questions_answers: list, new_question: str) -> bool:
     """Check if a question already exists in the list"""
     return any(qa["question"] == new_question for qa in questions_answers)
 
+def get_question_type_name(question_type: int) -> str:
+    """Get descriptive name for question type"""
+    type_names = {
+        1: "child_count",
+        2: "node_depth",
+        3: "level_count",
+        4: "node_relationship",
+        5: "node_attribute",
+        6: "level_nodes",
+        7: "path_down_to_up",
+        8: "path_up_to_down",
+        9: "shared_ancestor_same_level",
+        10: "shared_ancestor_diff_level",
+        11: "path_between_nodes"
+    }
+    return type_names.get(question_type, f"type_{question_type}")
+
 def generate_test_data_set(scenario: str, with_answer: bool = True, number_of_questions: int = 40):
     """Generate test dataset based on scenario's available layers"""
     # Get the absolute paths
     current_dir = os.path.dirname(os.path.abspath(__file__))
     project_root = os.path.dirname(current_dir)
-    base_path = os.path.join(project_root, "task_json", "Test_dataset")  # Changed path to include task_json
+    base_path = os.path.join(project_root, "task_json", "Test_dataset")
     
     logging.debug(f"Starting dataset generation for scenario: {scenario}")
     valid_scenarios = [
@@ -159,13 +176,14 @@ def generate_test_data_set(scenario: str, with_answer: bool = True, number_of_qu
 
     for question_type in valid_question_types:
         logging.debug(f"Processing question type: {question_type}")
-        # Create question type directory
-        question_type_path = os.path.join(base_path, f"question_Type{question_type}")
+        # Create question type directory using descriptive name
+        question_type_name = get_question_type_name(question_type)
+        question_type_path = os.path.join(base_path, question_type_name)
         os.makedirs(question_type_path, exist_ok=True)
         logging.debug(f"Created question type directory: {question_type_path}")
 
-        # Create file path
-        file_name = os.path.join(question_type_path, f"question_type_{question_type}_{scenario}.json")
+        # Create file path with descriptive name
+        file_name = os.path.join(question_type_path, f"{question_type_name}_{scenario}.json")
         logging.debug(f"Will save to file: {file_name}")
         questions_answers = []
         
@@ -366,7 +384,7 @@ def generate_dataset_report():
     
     # Collect statistics
     for question_type in range(1, 12):
-        type_dir = os.path.join(base_path, f"question_Type{question_type}")
+        type_dir = os.path.join(base_path, get_question_type_name(question_type))
         if not os.path.exists(type_dir):
             continue
             

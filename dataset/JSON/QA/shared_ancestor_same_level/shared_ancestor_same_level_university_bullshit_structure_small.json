@@ -1,0 +1,26 @@
+[
+    {
+        "question": "What is the closest shared faculty between the departments 'Dp8Ch3' and 'Dp5Mt2'?",
+        "answer": "Fc9Sc1"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Dp8Ch3' and 'Dp4Ph9'?",
+        "answer": "Fc9Sc1"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Dp5Mt2' and 'Dp4Ph9'?",
+        "answer": "Fc9Sc1"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Dp5Mt2' and 'Dp8Ch3'?",
+        "answer": "Fc9Sc1"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Dp4Ph9' and 'Dp5Mt2'?",
+        "answer": "Fc9Sc1"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Dp4Ph9' and 'Dp8Ch3'?",
+        "answer": "Fc9Sc1"
+    }
+]

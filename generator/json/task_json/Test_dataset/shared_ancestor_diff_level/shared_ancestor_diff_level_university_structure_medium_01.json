@@ -1,0 +1,162 @@
+[
+    {
+        "question": "What is the closest shared faculty between the program 'Master of Science' and the department 'Department of Literature'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared program between the name 'Associate Professor Everett Scott' and the course 'Marketing Principles'?",
+        "answer": "Bachelor of Arts"
+    },
+    {
+        "question": "What is the closest shared faculty between the department 'Department of Literature' and the program 'Bachelor of Arts'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared department between the course 'Surgical Procedures' and the program 'Bachelor of Science'?",
+        "answer": "Department of Literature"
+    },
+    {
+        "question": "What is the closest shared faculty between the name 'Assistant Professor Jackson Hughes' and the department 'Department of Linguistics'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared department between the name 'Maeve Maverick' and the program 'Bachelor of Science'?",
+        "answer": "Department of Literature"
+    },
+    {
+        "question": "What is the closest shared faculty between the name 'Maeve Maverick' and the program 'Master of Science'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared faculty between the department 'Department of Literature' and the program 'Master of Science'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared faculty between the name 'Associate Professor Lucas Cooper' and the department 'Department of Literature'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared faculty between the department 'Department of Linguistics' and the name 'Lyla Julian'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared department between the name 'Associate Professor Lucas Cooper' and the name 'Camila William'?",
+        "answer": "Department of Literature"
+    },
+    {
+        "question": "What is the closest shared department between the program 'Bachelor of Science' and the name 'Lyla Julian'?",
+        "answer": "Department of Literature"
+    },
+    {
+        "question": "What is the closest shared faculty between the program 'Master of Science' and the department 'Department of Linguistics'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared faculty between the department 'Department of Linguistics' and the name 'Professor Isaac Morris'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared faculty between the department 'Department of Linguistics' and the program 'Bachelor of Science'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared faculty between the program 'Master of Science' and the name 'Associate Professor Lucas Cooper'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared department between the name 'Associate Professor Michael Reed' and the course 'Landscape Architecture'?",
+        "answer": "Department of Literature"
+    },
+    {
+        "question": "What is the closest shared faculty between the department 'Department of Literature' and the course 'Modern Art'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared program between the name 'Professor Isaac Morris' and the course 'Modern Art'?",
+        "answer": "Master of Science"
+    },
+    {
+        "question": "What is the closest shared faculty between the department 'Department of Literature' and the course 'Surgical Procedures'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared faculty between the name 'Professor Christian Price' and the department 'Department of Linguistics'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared faculty between the department 'Department of Literature' and the name 'Lyla Julian'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared program between the name 'Professor Christian Price' and the name 'Lyla Julian'?",
+        "answer": "Bachelor of Science"
+    },
+    {
+        "question": "What is the closest shared faculty between the program 'Bachelor of Science' and the department 'Department of Linguistics'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared faculty between the department 'Department of Linguistics' and the name 'Maeve Maverick'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared faculty between the name 'Associate Professor Michael Reed' and the department 'Department of Literature'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared faculty between the department 'Department of Linguistics' and the program 'Bachelor of Arts'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared faculty between the name 'Camila William' and the program 'Master of Science'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared department between the name 'Assistant Professor Jackson Hughes' and the name 'Maeve Maverick'?",
+        "answer": "Department of Literature"
+    },
+    {
+        "question": "What is the closest shared faculty between the department 'Department of Literature' and the name 'Associate Professor Michael Reed'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared faculty between the name 'Associate Professor Everett Scott' and the department 'Department of Linguistics'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared faculty between the name 'Associate Professor Everett Scott' and the course 'Modern Art'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared faculty between the department 'Department of Linguistics' and the program 'Master of Science'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared faculty between the name 'Professor Isaac Morris' and the program 'Bachelor of Arts'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared department between the course 'Surgical Procedures' and the name 'Associate Professor Luca Davis'?",
+        "answer": "Department of Literature"
+    },
+    {
+        "question": "What is the closest shared faculty between the name 'Associate Professor Everett Scott' and the name 'Brooklyn Luka'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared faculty between the course 'Modern Art' and the name 'Associate Professor Everett Scott'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared department between the name 'Lyla Julian' and the program 'Bachelor of Science'?",
+        "answer": "Department of Literature"
+    },
+    {
+        "question": "What is the closest shared faculty between the name 'Assistant Professor Jackson Hughes' and the department 'Department of Literature'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared faculty between the department 'Department of Literature' and the name 'Associate Professor Lucas Cooper'?",
+        "answer": "Faculty of Arts"
+    }
+]

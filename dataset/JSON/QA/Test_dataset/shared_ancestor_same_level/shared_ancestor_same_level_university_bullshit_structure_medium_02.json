@@ -1,0 +1,74 @@
+[
+    {
+        "question": "What is the closest shared faculty between the departments 'Dp9Ep7' and 'Dp5Et8'?",
+        "answer": "Fc7Ed6"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Dp8Cs3' and 'Dp9Ep7'?",
+        "answer": "Fc7Ed6"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Dp6Ch2' and 'Dp7Me4'?",
+        "answer": "Fc2En9"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Dp3He2' and 'Dp8Cs3'?",
+        "answer": "Fc7Ed6"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Dp8Cs3' and 'Dp3He2'?",
+        "answer": "Fc7Ed6"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Dp8Cs3' and 'Dp5Et8'?",
+        "answer": "Fc7Ed6"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Dp3He2' and 'Dp9Ep7'?",
+        "answer": "Fc7Ed6"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Dp5Et8' and 'Dp9Ep7'?",
+        "answer": "Fc7Ed6"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Dp7Me4' and 'Dp6Ch2'?",
+        "answer": "Fc2En9"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Dp2El9' and 'Dp6Ch2'?",
+        "answer": "Fc2En9"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Dp3He2' and 'Dp5Et8'?",
+        "answer": "Fc7Ed6"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Dp5Et8' and 'Dp8Cs3'?",
+        "answer": "Fc7Ed6"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Dp9Ep7' and 'Dp3He2'?",
+        "answer": "Fc7Ed6"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Dp9Ep7' and 'Dp8Cs3'?",
+        "answer": "Fc7Ed6"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Dp7Me4' and 'Dp2El9'?",
+        "answer": "Fc2En9"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Dp6Ch2' and 'Dp2El9'?",
+        "answer": "Fc2En9"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Dp5Et8' and 'Dp3He2'?",
+        "answer": "Fc7Ed6"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Dp2El9' and 'Dp7Me4'?",
+        "answer": "Fc2En9"
+    }
+]

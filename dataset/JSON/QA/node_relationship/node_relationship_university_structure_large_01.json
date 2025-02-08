@@ -1,0 +1,162 @@
+[
+    {
+        "question": "Does Financial Accounting belong to Assistant Professor Luka Kim?",
+        "answer": false
+    },
+    {
+        "question": "Does Sofia Parker belong to Lecturer Elijah Phillips?",
+        "answer": false
+    },
+    {
+        "question": "Does Assistant Professor Rowan Carter belong to Maria Caleb?",
+        "answer": false
+    },
+    {
+        "question": "Does Sofia Parker belong to Savannah William?",
+        "answer": false
+    },
+    {
+        "question": "Does Bachelor of Science belong to Biochemistry?",
+        "answer": false
+    },
+    {
+        "question": "Does Faculty of Medicine belong to Lecturer Matthew Ward?",
+        "answer": false
+    },
+    {
+        "question": "Does Allison Clark belong to Professor Liam Clark?",
+        "answer": false
+    },
+    {
+        "question": "Does Assistant Professor Rowan Carter belong to Lecturer Nathan Sanders?",
+        "answer": false
+    },
+    {
+        "question": "Does Allison Nolan belong to Lecturer Nathan Sanders?",
+        "answer": false
+    },
+    {
+        "question": "Does Bachelor of Arts belong to Bachelor of Business Administration?",
+        "answer": false
+    },
+    {
+        "question": "Does Lecturer Elijah Phillips belong to Assistant Professor Rowan Carter?",
+        "answer": false
+    },
+    {
+        "question": "Does Civil Engineering Basics belong to Department of Physics?",
+        "answer": false
+    },
+    {
+        "question": "Does Mia Wood belong to Assistant Professor Rowan Carter?",
+        "answer": false
+    },
+    {
+        "question": "Does Mia Wood belong to Allison Nolan?",
+        "answer": false
+    },
+    {
+        "question": "Does Assistant Professor Logan Walker belong to Professor Liam Clark?",
+        "answer": false
+    },
+    {
+        "question": "Does Ella Allen belong to Biochemistry?",
+        "answer": false
+    },
+    {
+        "question": "Does Isabella Turner belong to Department of Pharmacology?",
+        "answer": false
+    },
+    {
+        "question": "Does Savannah William belong to Professor Jordan Chavez?",
+        "answer": false
+    },
+    {
+        "question": "Does Assistant Professor Rowan Carter belong to Ella Allen?",
+        "answer": false
+    },
+    {
+        "question": "Does Bachelor of Science belong to Department of Chemistry?",
+        "answer": false
+    },
+    {
+        "question": "Does Professor Liam Clark belong to Bachelor of Arts?",
+        "answer": true
+    },
+    {
+        "question": "Does Assistant Professor Nolan Clark belong to Master of Business Administration?",
+        "answer": true
+    },
+    {
+        "question": "Does Assistant Professor Logan Walker belong to Master of Business Administration?",
+        "answer": true
+    },
+    {
+        "question": "Does Lecturer Andrew Murphy belong to Master of Business Administration?",
+        "answer": true
+    },
+    {
+        "question": "Does Assistant Professor Everett Green belong to Bachelor of Business Administration?",
+        "answer": true
+    },
+    {
+        "question": "Does Introduction to Programming belong to Department of Physics?",
+        "answer": true
+    },
+    {
+        "question": "Does Financial Accounting belong to Department of Physics?",
+        "answer": true
+    },
+    {
+        "question": "Does Isabella Turner belong to Department of Pediatrics?",
+        "answer": true
+    },
+    {
+        "question": "Does Professor Jordan Chavez belong to Master of Engineering?",
+        "answer": true
+    },
+    {
+        "question": "Does Professor Josiah Watson belong to Master of Business Administration?",
+        "answer": true
+    },
+    {
+        "question": "Does Environmental Science belong to Department of Pharmacology?",
+        "answer": true
+    },
+    {
+        "question": "Does Professor Nathan Sanchez belong to Master of Engineering?",
+        "answer": true
+    },
+    {
+        "question": "Does Bachelor of Arts belong to Faculty of Medicine?",
+        "answer": true
+    },
+    {
+        "question": "Does Lecturer Gael Garcia belong to Master of Engineering?",
+        "answer": true
+    },
+    {
+        "question": "Does Maria Caleb belong to Department of Chemistry?",
+        "answer": true
+    },
+    {
+        "question": "Does Urban Design belong to Department of Physics?",
+        "answer": true
+    },
+    {
+        "question": "Does Professor Anthony Watson belong to Master of Business Administration?",
+        "answer": true
+    },
+    {
+        "question": "Does Urban Design belong to Department of Chemistry?",
+        "answer": true
+    },
+    {
+        "question": "Does Data Structures belong to Department of Pharmacology?",
+        "answer": true
+    },
+    {
+        "question": "Does Sofia Parker belong to Department of Pediatrics?",
+        "answer": true
+    }
+]

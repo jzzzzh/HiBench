@@ -1,0 +1,102 @@
+[
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Physiology' and 'Department of Anatomy'?",
+        "answer": "Faculty of Medicine"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Electrical Engineering' and 'Department of Chemical Engineering'?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Surgery' and 'Department of Physiology'?",
+        "answer": "Faculty of Medicine"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Mechanical Engineering' and 'Department of Chemical Engineering'?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Surgery' and 'Department of Anatomy'?",
+        "answer": "Faculty of Medicine"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Computer Engineering' and 'Department of Electrical Engineering'?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Accounting' and 'Department of Marketing'?",
+        "answer": "Faculty of Business"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Physiology' and 'Department of Pediatrics'?",
+        "answer": "Faculty of Medicine"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Anatomy' and 'Department of Surgery'?",
+        "answer": "Faculty of Medicine"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Chemical Engineering' and 'Department of Computer Engineering'?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Chemical Engineering' and 'Department of Mechanical Engineering'?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Mechanical Engineering' and 'Department of Computer Engineering'?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Surgery' and 'Department of Pediatrics'?",
+        "answer": "Faculty of Medicine"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Pediatrics' and 'Department of Surgery'?",
+        "answer": "Faculty of Medicine"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Anatomy' and 'Department of Pediatrics'?",
+        "answer": "Faculty of Medicine"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Computer Engineering' and 'Department of Chemical Engineering'?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Anatomy' and 'Department of Physiology'?",
+        "answer": "Faculty of Medicine"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Electrical Engineering' and 'Department of Mechanical Engineering'?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Electrical Engineering' and 'Department of Computer Engineering'?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Physiology' and 'Department of Surgery'?",
+        "answer": "Faculty of Medicine"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Pediatrics' and 'Department of Physiology'?",
+        "answer": "Faculty of Medicine"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Chemical Engineering' and 'Department of Electrical Engineering'?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Mechanical Engineering' and 'Department of Electrical Engineering'?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Marketing' and 'Department of Accounting'?",
+        "answer": "Faculty of Business"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Computer Engineering' and 'Department of Mechanical Engineering'?",
+        "answer": "Faculty of Engineering"
+    }
+]

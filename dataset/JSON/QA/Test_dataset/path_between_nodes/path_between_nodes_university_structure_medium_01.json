@@ -1,0 +1,162 @@
+[
+    {
+        "question": "If someone wants to go from the name 'Professor Isaac Morris' to the faculty 'Faculty of Arts', what path should they take?",
+        "answer": "Professor Isaac Morris \u2192 Modern Art \u2192 Master of Science \u2192 Department of Linguistics \u2192 Faculty of Arts"
+    },
+    {
+        "question": "If someone wants to go from the name 'Maeve Maverick' to the name 'Professor Christian Price', what path should they take?",
+        "answer": "Maeve Maverick \u2192 Bachelor of Science \u2192 Surgical Procedures \u2192 Professor Christian Price"
+    },
+    {
+        "question": "If someone wants to go from the name 'Professor Isaac Morris' to the program 'Bachelor of Science', what path should they take?",
+        "answer": "Professor Isaac Morris \u2192 Modern Art \u2192 Master of Science \u2192 Department of Linguistics \u2192 Faculty of Arts \u2192 Department of Literature \u2192 Bachelor of Science"
+    },
+    {
+        "question": "If someone wants to go from the name 'Lyla Julian' to the department 'Department of Literature', what path should they take?",
+        "answer": "Lyla Julian \u2192 Bachelor of Science \u2192 Department of Literature"
+    },
+    {
+        "question": "If someone wants to go from the program 'Bachelor of Arts' to the program 'Bachelor of Science', what path should they take?",
+        "answer": "Bachelor of Arts \u2192 Department of Literature \u2192 Bachelor of Science"
+    },
+    {
+        "question": "If someone wants to go from the name 'Maeve Maverick' to the program 'Master of Science', what path should they take?",
+        "answer": "Maeve Maverick \u2192 Bachelor of Science \u2192 Department of Literature \u2192 Faculty of Arts \u2192 Department of Linguistics \u2192 Master of Science"
+    },
+    {
+        "question": "If someone wants to go from the name 'Assistant Professor Jackson Hughes' to the name 'Associate Professor Luca Davis', what path should they take?",
+        "answer": "Assistant Professor Jackson Hughes \u2192 Marketing Principles \u2192 Bachelor of Arts \u2192 Landscape Architecture \u2192 Associate Professor Luca Davis"
+    },
+    {
+        "question": "If someone wants to go from the name 'Maeve Maverick' to the name 'Brooklyn Luka', what path should they take?",
+        "answer": "Maeve Maverick \u2192 Bachelor of Science \u2192 Department of Literature \u2192 Faculty of Arts \u2192 Department of Linguistics \u2192 Master of Science \u2192 Brooklyn Luka"
+    },
+    {
+        "question": "If someone wants to go from the name 'Associate Professor Michael Reed' to the course 'Marketing Principles', what path should they take?",
+        "answer": "Associate Professor Michael Reed \u2192 Landscape Architecture \u2192 Bachelor of Arts \u2192 Marketing Principles"
+    },
+    {
+        "question": "If someone wants to go from the name 'Lyla Julian' to the course 'Surgical Procedures', what path should they take?",
+        "answer": "Lyla Julian \u2192 Bachelor of Science \u2192 Surgical Procedures"
+    },
+    {
+        "question": "If someone wants to go from the name 'Lyla Julian' to the name 'Associate Professor Everett Scott', what path should they take?",
+        "answer": "Lyla Julian \u2192 Bachelor of Science \u2192 Department of Literature \u2192 Bachelor of Arts \u2192 Marketing Principles \u2192 Associate Professor Everett Scott"
+    },
+    {
+        "question": "If someone wants to go from the name 'Maeve Maverick' to the course 'Modern Art', what path should they take?",
+        "answer": "Maeve Maverick \u2192 Bachelor of Science \u2192 Department of Literature \u2192 Faculty of Arts \u2192 Department of Linguistics \u2192 Master of Science \u2192 Modern Art"
+    },
+    {
+        "question": "If someone wants to go from the name 'Camila William' to the name 'Associate Professor Lucas Cooper', what path should they take?",
+        "answer": "Camila William \u2192 Bachelor of Arts \u2192 Landscape Architecture \u2192 Associate Professor Lucas Cooper"
+    },
+    {
+        "question": "If someone wants to go from the name 'Camila William' to the name 'Assistant Professor Jackson Hughes', what path should they take?",
+        "answer": "Camila William \u2192 Bachelor of Arts \u2192 Marketing Principles \u2192 Assistant Professor Jackson Hughes"
+    },
+    {
+        "question": "If someone wants to go from the course 'Modern Art' to the name 'Associate Professor Luca Davis', what path should they take?",
+        "answer": "Modern Art \u2192 Master of Science \u2192 Department of Linguistics \u2192 Faculty of Arts \u2192 Department of Literature \u2192 Bachelor of Arts \u2192 Landscape Architecture \u2192 Associate Professor Luca Davis"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Literature' to the name 'Camila William', what path should they take?",
+        "answer": "Department of Literature \u2192 Bachelor of Arts \u2192 Camila William"
+    },
+    {
+        "question": "If someone wants to go from the name 'Associate Professor Everett Scott' to the name 'Associate Professor Luca Davis', what path should they take?",
+        "answer": "Associate Professor Everett Scott \u2192 Marketing Principles \u2192 Bachelor of Arts \u2192 Landscape Architecture \u2192 Associate Professor Luca Davis"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Literature' to the name 'Professor Christian Price', what path should they take?",
+        "answer": "Department of Literature \u2192 Bachelor of Science \u2192 Surgical Procedures \u2192 Professor Christian Price"
+    },
+    {
+        "question": "If someone wants to go from the name 'Professor Christian Price' to the name 'Assistant Professor Jackson Hughes', what path should they take?",
+        "answer": "Professor Christian Price \u2192 Surgical Procedures \u2192 Bachelor of Science \u2192 Department of Literature \u2192 Bachelor of Arts \u2192 Marketing Principles \u2192 Assistant Professor Jackson Hughes"
+    },
+    {
+        "question": "If someone wants to go from the name 'Assistant Professor Jackson Hughes' to the name 'Associate Professor Lucas Cooper', what path should they take?",
+        "answer": "Assistant Professor Jackson Hughes \u2192 Marketing Principles \u2192 Bachelor of Arts \u2192 Landscape Architecture \u2192 Associate Professor Lucas Cooper"
+    },
+    {
+        "question": "If someone wants to go from the program 'Master of Science' to the course 'Landscape Architecture', what path should they take?",
+        "answer": "Master of Science \u2192 Department of Linguistics \u2192 Faculty of Arts \u2192 Department of Literature \u2192 Bachelor of Arts \u2192 Landscape Architecture"
+    },
+    {
+        "question": "If someone wants to go from the program 'Bachelor of Arts' to the course 'Surgical Procedures', what path should they take?",
+        "answer": "Bachelor of Arts \u2192 Department of Literature \u2192 Bachelor of Science \u2192 Surgical Procedures"
+    },
+    {
+        "question": "If someone wants to go from the name 'Camila William' to the name 'Lyla Julian', what path should they take?",
+        "answer": "Camila William \u2192 Bachelor of Arts \u2192 Department of Literature \u2192 Bachelor of Science \u2192 Lyla Julian"
+    },
+    {
+        "question": "If someone wants to go from the name 'Brooklyn Luka' to the name 'Associate Professor Luca Davis', what path should they take?",
+        "answer": "Brooklyn Luka \u2192 Master of Science \u2192 Department of Linguistics \u2192 Faculty of Arts \u2192 Department of Literature \u2192 Bachelor of Arts \u2192 Landscape Architecture \u2192 Associate Professor Luca Davis"
+    },
+    {
+        "question": "If someone wants to go from the name 'Professor Isaac Morris' to the name 'Associate Professor Lucas Cooper', what path should they take?",
+        "answer": "Professor Isaac Morris \u2192 Modern Art \u2192 Master of Science \u2192 Department of Linguistics \u2192 Faculty of Arts \u2192 Department of Literature \u2192 Bachelor of Arts \u2192 Landscape Architecture \u2192 Associate Professor Lucas Cooper"
+    },
+    {
+        "question": "If someone wants to go from the course 'Surgical Procedures' to the name 'Associate Professor Luca Davis', what path should they take?",
+        "answer": "Surgical Procedures \u2192 Bachelor of Science \u2192 Department of Literature \u2192 Bachelor of Arts \u2192 Landscape Architecture \u2192 Associate Professor Luca Davis"
+    },
+    {
+        "question": "If someone wants to go from the name 'Associate Professor Michael Reed' to the program 'Bachelor of Science', what path should they take?",
+        "answer": "Associate Professor Michael Reed \u2192 Landscape Architecture \u2192 Bachelor of Arts \u2192 Department of Literature \u2192 Bachelor of Science"
+    },
+    {
+        "question": "If someone wants to go from the name 'Associate Professor Michael Reed' to the name 'Brooklyn Luka', what path should they take?",
+        "answer": "Associate Professor Michael Reed \u2192 Landscape Architecture \u2192 Bachelor of Arts \u2192 Department of Literature \u2192 Faculty of Arts \u2192 Department of Linguistics \u2192 Master of Science \u2192 Brooklyn Luka"
+    },
+    {
+        "question": "If someone wants to go from the program 'Bachelor of Science' to the program 'Bachelor of Arts', what path should they take?",
+        "answer": "Bachelor of Science \u2192 Department of Literature \u2192 Bachelor of Arts"
+    },
+    {
+        "question": "If someone wants to go from the program 'Bachelor of Science' to the name 'Associate Professor Lucas Cooper', what path should they take?",
+        "answer": "Bachelor of Science \u2192 Department of Literature \u2192 Bachelor of Arts \u2192 Landscape Architecture \u2192 Associate Professor Lucas Cooper"
+    },
+    {
+        "question": "If someone wants to go from the name 'Professor Christian Price' to the name 'Brooklyn Luka', what path should they take?",
+        "answer": "Professor Christian Price \u2192 Surgical Procedures \u2192 Bachelor of Science \u2192 Department of Literature \u2192 Faculty of Arts \u2192 Department of Linguistics \u2192 Master of Science \u2192 Brooklyn Luka"
+    },
+    {
+        "question": "If someone wants to go from the name 'Lyla Julian' to the name 'Associate Professor Michael Reed', what path should they take?",
+        "answer": "Lyla Julian \u2192 Bachelor of Science \u2192 Department of Literature \u2192 Bachelor of Arts \u2192 Landscape Architecture \u2192 Associate Professor Michael Reed"
+    },
+    {
+        "question": "If someone wants to go from the name 'Lyla Julian' to the name 'Maeve Maverick', what path should they take?",
+        "answer": "Lyla Julian \u2192 Bachelor of Science \u2192 Maeve Maverick"
+    },
+    {
+        "question": "If someone wants to go from the name 'Professor Christian Price' to the name 'Associate Professor Luca Davis', what path should they take?",
+        "answer": "Professor Christian Price \u2192 Surgical Procedures \u2192 Bachelor of Science \u2192 Department of Literature \u2192 Bachelor of Arts \u2192 Landscape Architecture \u2192 Associate Professor Luca Davis"
+    },
+    {
+        "question": "If someone wants to go from the name 'Assistant Professor Jackson Hughes' to the name 'Camila William', what path should they take?",
+        "answer": "Assistant Professor Jackson Hughes \u2192 Marketing Principles \u2192 Bachelor of Arts \u2192 Camila William"
+    },
+    {
+        "question": "If someone wants to go from the name 'Professor Isaac Morris' to the program 'Bachelor of Arts', what path should they take?",
+        "answer": "Professor Isaac Morris \u2192 Modern Art \u2192 Master of Science \u2192 Department of Linguistics \u2192 Faculty of Arts \u2192 Department of Literature \u2192 Bachelor of Arts"
+    },
+    {
+        "question": "If someone wants to go from the program 'Bachelor of Science' to the course 'Marketing Principles', what path should they take?",
+        "answer": "Bachelor of Science \u2192 Department of Literature \u2192 Bachelor of Arts \u2192 Marketing Principles"
+    },
+    {
+        "question": "If someone wants to go from the course 'Surgical Procedures' to the name 'Associate Professor Michael Reed', what path should they take?",
+        "answer": "Surgical Procedures \u2192 Bachelor of Science \u2192 Department of Literature \u2192 Bachelor of Arts \u2192 Landscape Architecture \u2192 Associate Professor Michael Reed"
+    },
+    {
+        "question": "If someone wants to go from the name 'Brooklyn Luka' to the name 'Maeve Maverick', what path should they take?",
+        "answer": "Brooklyn Luka \u2192 Master of Science \u2192 Department of Linguistics \u2192 Faculty of Arts \u2192 Department of Literature \u2192 Bachelor of Science \u2192 Maeve Maverick"
+    },
+    {
+        "question": "If someone wants to go from the name 'Associate Professor Michael Reed' to the name 'Maeve Maverick', what path should they take?",
+        "answer": "Associate Professor Michael Reed \u2192 Landscape Architecture \u2192 Bachelor of Arts \u2192 Department of Literature \u2192 Bachelor of Science \u2192 Maeve Maverick"
+    }
+]

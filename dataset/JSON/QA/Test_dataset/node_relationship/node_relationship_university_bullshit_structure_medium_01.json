@@ -1,0 +1,134 @@
+[
+    {
+        "question": "Does Sr3Pd6 belong to At4Th9?",
+        "answer": false
+    },
+    {
+        "question": "Does Dp5Mt2 belong to Fc9Sc1?",
+        "answer": false
+    },
+    {
+        "question": "Does Dp5Mt2 belong to At4Th9?",
+        "answer": false
+    },
+    {
+        "question": "Does Is3e He3z belong to At4Th9?",
+        "answer": false
+    },
+    {
+        "question": "Does Is3e He3z belong to Be9En3?",
+        "answer": false
+    },
+    {
+        "question": "Does Be9En3 belong to Ap9 Le8o Mo4e?",
+        "answer": false
+    },
+    {
+        "question": "Does Dp5Mt2 belong to Lc3 Ma9o Mi8l?",
+        "answer": false
+    },
+    {
+        "question": "Does Bs0Ar7 belong to Fc9Sc1?",
+        "answer": true
+    },
+    {
+        "question": "Does Ap9 Li8m Sm7t belong to Fa8Ac9?",
+        "answer": false
+    },
+    {
+        "question": "Does Is3e He3z belong to Fa8Ac9?",
+        "answer": false
+    },
+    {
+        "question": "Does Fa8Ac9 belong to Dp5Mt2?",
+        "answer": true
+    },
+    {
+        "question": "Does Bs0Ar7 belong to Ap9 Le8o Mo4e?",
+        "answer": false
+    },
+    {
+        "question": "Does Ap9 Le8o Mo4e belong to Ap9 Li8m Sm7t?",
+        "answer": false
+    },
+    {
+        "question": "Does At4Th9 belong to Fc9Sc1?",
+        "answer": false
+    },
+    {
+        "question": "Does Ap9 Li8m Sm7t belong to At4Th9?",
+        "answer": false
+    },
+    {
+        "question": "Does Lc3 Ma9o Mi8l belong to Is3e He3z?",
+        "answer": false
+    },
+    {
+        "question": "Does At4Th9 belong to Dp5Mt2?",
+        "answer": true
+    },
+    {
+        "question": "Does Fa8Ac9 belong to So7a Ga7c?",
+        "answer": false
+    },
+    {
+        "question": "Does Lc3 Ma9o Mi8l belong to Ap9 Le8o Mo4e?",
+        "answer": false
+    },
+    {
+        "question": "Does Be9En3 belong to Fc9Sc1?",
+        "answer": true
+    },
+    {
+        "question": "Does As2P Ow6n Sm7t belong to Lc3 No7h Sm7t?",
+        "answer": false
+    },
+    {
+        "question": "Does Is3e He3z belong to As2P Ow6n Sm7t?",
+        "answer": false
+    },
+    {
+        "question": "Does Be9En3 belong to At4Th9?",
+        "answer": false
+    },
+    {
+        "question": "Does Dp5Mt2 belong to Be9En3?",
+        "answer": false
+    },
+    {
+        "question": "Does Sr3Pd6 belong to Dp5Mt2?",
+        "answer": true
+    },
+    {
+        "question": "Does Ap9 Li8m Sm7t belong to Bs0Ar7?",
+        "answer": true
+    },
+    {
+        "question": "Does Lc3 Ma9o Mi8l belong to Be9En3?",
+        "answer": true
+    },
+    {
+        "question": "Does Ap9 Le8o Mo4e belong to Bs0Ar7?",
+        "answer": true
+    },
+    {
+        "question": "Does Is3e He3z belong to Dp5Mt2?",
+        "answer": true
+    },
+    {
+        "question": "Does So7a Mo4e belong to Dp5Mt2?",
+        "answer": true
+    },
+    {
+        "question": "Does As2P Ow6n Sm7t belong to Bs0Ar7?",
+        "answer": true
+    },
+    {
+        "question": "Does Lc3 No7h Sm7t belong to Be9En3?",
+        "answer": true
+    },
+    {
+        "question": "Does So7a Ga7c belong to Dp5Mt2?",
+        "answer": true
+    }
+]

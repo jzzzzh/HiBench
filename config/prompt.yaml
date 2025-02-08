@@ -161,7 +161,7 @@ Fundamental:
 
 JSON:
   SystemTemplate: "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
-  OutputFormatTemplate: "Please return the answer in JSON format directly like <OUTPUTFORMATE>  and do not feedback the detailed process."
+  OutputFormatTemplate: "Please return the answer in JSON format directly like <OUTPUTFORMATE> and do not feedback the detailed process."
   Task:
     Task1:
       PromptTemplate: "Given a JSON object <JSON>, <QUESTION>."
@@ -213,6 +213,66 @@ JSON:
           Answer2: "{\"answer\": 4}"
           Question3: "Given a JSON object {'Name': Peter, 'Animals':['cat':{'Name': 'a'}, 'dog':{'Name': 'c', 'Age': 3}, 'fish':{'Name': 'e', 'Age': 4}, 'bird':{'Name': 'h', 'Age': 5}]}.What is the name of the bird?"
           Answer3: "{\"answer\": h}"
+    Task6:
+      PromptTemplate: "Given a JSON object <JSON>, <QUESTION>."
+      OutputFormatTemplate: "{\"answer\": [\"Faculty of Science\", \"Faculty of Arts\"]}"
+      Example:
+          Question1: "What are the names of the departments in the university?"
+          Answer1: "{\"answer\": [\"Computer Science\", \"Mathematics\", \"Physics\"]}"
+          Question2: "What are the names of the faculties in the university?"
+          Answer2: "{\"answer\": [\"Faculty of Science\", \"Faculty of Arts\"]}"
+          Question3: "What are the names of the programs in the Computer Science department?"
+          Answer3: "{\"answer\": [\"Software Engineering\", \"Data Science\", \"Cybersecurity\"]}"
+    Task7:
+      PromptTemplate: "Given a JSON object <JSON>, <QUESTION>."
+      OutputFormatTemplate: "{\"answer\": \"Student -> Program -> Department -> Faculty\"}"
+      Example:
+          Question1: "If a student needs to find their faculty, what path should they take?"
+          Answer1: "{\"answer\": \"Student -> Program -> Department -> Faculty\"}"
+          Question2: "If a lecturer needs to find their faculty, what path should they take?"
+          Answer2: "{\"answer\": \"Lecturer -> Department -> Faculty\"}"
+          Question3: "If a student needs to find their department, what path should they take?"
+          Answer3: "{\"answer\": \"Student -> Program -> Department\"}"
+    Task8:
+      PromptTemplate: "Given a JSON object <JSON>, <QUESTION>."
+      OutputFormatTemplate: "{\"answer\": \"Faculty -> Department -> Program -> Student\"}"
+      Example:
+          Question1: "If the faculty needs to find a student, what path should they take?"
+          Answer1: "{\"answer\": \"Faculty -> Department -> Program -> Student\"}"
+          Question2: "If a department needs to find a student, what path should they take?"
+          Answer2: "{\"answer\": \"Department -> Program -> Student\"}"
+          Question3: "If a program needs to find a student, what path should they take?"
+          Answer3: "{\"answer\": \"Program -> Student\"}"
+    Task9:
+      PromptTemplate: "Given a JSON object <JSON>, <QUESTION>."
+      OutputFormatTemplate: "{\"answer\": \"Faculty of Science\"}"
+      Example:
+          Question1: "What is the closest shared faculty between Computer Science and Mathematics departments?"
+          Answer1: "{\"answer\": \"Faculty of Science\"}"
+          Question2: "What is the closest shared department between Software Engineering and Data Science programs?"
+          Answer2: "{\"answer\": \"Computer Science\"}"
+          Question3: "What is the closest shared program between John and Mary?"
+          Answer3: "{\"answer\": \"Software Engineering\"}"
+    Task10:
+      PromptTemplate: "Given a JSON object <JSON>, <QUESTION>."
+      OutputFormatTemplate: "{\"answer\": \"Faculty of Science\"}"
+      Example:
+          Question1: "What is the closest shared faculty between Dr. Smith and the Software Engineering program?"
+          Answer1: "{\"answer\": \"Faculty of Science\"}"
+          Question2: "What is the closest shared department between John and Dr. Smith?"
+          Answer2: "{\"answer\": \"Computer Science\"}"
+          Question3: "What is the closest shared faculty between a student in Software Engineering and the Mathematics department?"
+          Answer3: "{\"answer\": \"Faculty of Science\"}"
+    Task11:
+      PromptTemplate: "Given a JSON object <JSON>, <QUESTION>."
+      OutputFormatTemplate: "{\"answer\": \"Student -> Program -> Department -> Faculty -> Department -> Program -> Student\"}"
+      Example:
+          Question1: "What is the path between student John and student Mary?"
+          Answer1: "{\"answer\": \"John -> Software Engineering -> Computer Science -> Faculty of Science -> Mathematics -> Data Science -> Mary\"}"
+          Question2: "What is the path between Dr. Smith and Dr. Jones?"
+          Answer2: "{\"answer\": \"Dr. Smith -> Computer Science -> Faculty of Science -> Physics -> Dr. Jones\"}"
+          Question3: "What is the path between the Software Engineering program and the Data Science program?"
+          Answer3: "{\"answer\": \"Software Engineering -> Computer Science -> Data Science\"}"
 
 Formula:
   SystemTemplate: "As an AI agent, you are tasked with performing mathematical reasoning to assist in solving complex mathematical problems."
@@ -310,7 +370,7 @@ Code:
                       if i < len(a):
                           val += int(a[-(i + 1)])
                       if i < len(b):
-                 性凉。          val += int(b[-(i + 1)])
+                          val += int(b[-(i + 1)])
                       carry, val = divmod(val, 2)
                       result += str(val)
                   if carry:

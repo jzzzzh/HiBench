@@ -1,0 +1,162 @@
+[
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Management' and 'Department of Marketing'?",
+        "answer": "Faculty of Business"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of History' and 'Department of Philosophy'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Linguistics' and 'Department of History'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of History' and 'Department of Literature'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Management' and 'Department of Finance'?",
+        "answer": "Faculty of Business"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Marketing' and 'Department of Management'?",
+        "answer": "Faculty of Business"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Surgery' and 'Department of Pediatrics'?",
+        "answer": "Faculty of Medicine"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Urban Planning' and 'Department of Interior Design'?",
+        "answer": "Faculty of Architecture"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Marketing' and 'Department of Finance'?",
+        "answer": "Faculty of Business"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Philosophy' and 'Department of History'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Physiology' and 'Department of Anatomy'?",
+        "answer": "Faculty of Medicine"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Finance' and 'Department of Management'?",
+        "answer": "Faculty of Business"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Linguistics' and 'Department of Visual Arts'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Pediatrics' and 'Department of Anatomy'?",
+        "answer": "Faculty of Medicine"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Visual Arts' and 'Department of Philosophy'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Anatomy' and 'Department of Pediatrics'?",
+        "answer": "Faculty of Medicine"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Pediatrics' and 'Department of Physiology'?",
+        "answer": "Faculty of Medicine"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Literature' and 'Department of Linguistics'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Anatomy' and 'Department of Physiology'?",
+        "answer": "Faculty of Medicine"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Historic Preservation' and 'Department of Urban Planning'?",
+        "answer": "Faculty of Architecture"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of History' and 'Department of Visual Arts'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Visual Arts' and 'Department of History'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Urban Planning' and 'Department of Historic Preservation'?",
+        "answer": "Faculty of Architecture"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Pediatrics' and 'Department of Surgery'?",
+        "answer": "Faculty of Medicine"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Interior Design' and 'Department of Urban Planning'?",
+        "answer": "Faculty of Architecture"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Linguistics' and 'Department of Literature'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Anatomy' and 'Department of Surgery'?",
+        "answer": "Faculty of Medicine"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Literature' and 'Department of History'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Physiology' and 'Department of Surgery'?",
+        "answer": "Faculty of Medicine"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Interior Design' and 'Department of Historic Preservation'?",
+        "answer": "Faculty of Architecture"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Visual Arts' and 'Department of Literature'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Physiology' and 'Department of Pediatrics'?",
+        "answer": "Faculty of Medicine"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Historic Preservation' and 'Department of Interior Design'?",
+        "answer": "Faculty of Architecture"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Philosophy' and 'Department of Linguistics'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Surgery' and 'Department of Physiology'?",
+        "answer": "Faculty of Medicine"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Surgery' and 'Department of Anatomy'?",
+        "answer": "Faculty of Medicine"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Philosophy' and 'Department of Visual Arts'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Visual Arts' and 'Department of Linguistics'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Literature' and 'Department of Visual Arts'?",
+        "answer": "Faculty of Arts"
+    },
+    {
+        "question": "What is the closest shared faculty between the departments 'Department of Philosophy' and 'Department of Literature'?",
+        "answer": "Faculty of Arts"
+    }
+]

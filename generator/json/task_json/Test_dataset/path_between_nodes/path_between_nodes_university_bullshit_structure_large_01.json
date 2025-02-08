@@ -1,0 +1,162 @@
+[
+    {
+        "question": "If someone wants to go from the course 'Qn1Ph7' to the name 'Ol4v He3z', what path should they take?",
+        "answer": "Qn1Ph7 \u2192 Bs0Ar7 \u2192 Dp4Ph9 \u2192 Ms9Ar3 \u2192 Ol4v He3z"
+    },
+    {
+        "question": "If someone wants to go from the name 'Ol4v He3z' to the name 'Pr7 He0y Mi8l', what path should they take?",
+        "answer": "Ol4v He3z \u2192 Ms9Ar3 \u2192 Dp4Ph9 \u2192 Bs0Ar7 \u2192 Ma6Ar4 \u2192 Pr7 He0y Mi8l"
+    },
+    {
+        "question": "If someone wants to go from the name 'Pr7 He0y Mi8l' to the course 'Es9Sc3', what path should they take?",
+        "answer": "Pr7 He0y Mi8l \u2192 Ma6Ar4 \u2192 Bs0Ar7 \u2192 Dp4Ph9 \u2192 Ms9Ar3 \u2192 Es9Sc3"
+    },
+    {
+        "question": "If someone wants to go from the name 'As2P Ol2r An5e' to the name 'As2P Be2n Th0s', what path should they take?",
+        "answer": "As2P Ol2r An5e \u2192 Es9Sc3 \u2192 Ms9Ar3 \u2192 Dp4Ph9 \u2192 Bs0Ar7 \u2192 Qn1Ph7 \u2192 As2P Be2n Th0s"
+    },
+    {
+        "question": "If someone wants to go from the name 'Ap9 No7h Mi8l' to the name 'As2P Be2n Th0s', what path should they take?",
+        "answer": "Ap9 No7h Mi8l \u2192 Fa8Ac9 \u2192 Ms9Ar3 \u2192 Dp4Ph9 \u2192 Bs0Ar7 \u2192 Qn1Ph7 \u2192 As2P Be2n Th0s"
+    },
+    {
+        "question": "If someone wants to go from the course 'Es9Sc3' to the course 'Fa8Ac9', what path should they take?",
+        "answer": "Es9Sc3 \u2192 Ms9Ar3 \u2192 Fa8Ac9"
+    },
+    {
+        "question": "If someone wants to go from the name 'Ol4v He3z' to the program 'Bs0Ar7', what path should they take?",
+        "answer": "Ol4v He3z \u2192 Ms9Ar3 \u2192 Dp4Ph9 \u2192 Bs0Ar7"
+    },
+    {
+        "question": "If someone wants to go from the program 'Bs0Ar7' to the name 'Is3e Da4s', what path should they take?",
+        "answer": "Bs0Ar7 \u2192 Dp4Ph9 \u2192 Ms9Ar3 \u2192 Is3e Da4s"
+    },
+    {
+        "question": "If someone wants to go from the program 'Ms9Ar3' to the name 'As2P Se1n Sm7t', what path should they take?",
+        "answer": "Ms9Ar3 \u2192 Dp4Ph9 \u2192 Bs0Ar7 \u2192 Ma6Ar4 \u2192 As2P Se1n Sm7t"
+    },
+    {
+        "question": "If someone wants to go from the name 'As2P Be2n Th0s' to the name 'Pr7 Lu4s Th0s', what path should they take?",
+        "answer": "As2P Be2n Th0s \u2192 Qn1Ph7 \u2192 Bs0Ar7 \u2192 Ma6Ar4 \u2192 Pr7 Lu4s Th0s"
+    },
+    {
+        "question": "If someone wants to go from the program 'Bs0Ar7' to the name 'Pr7 He0y Mi8l', what path should they take?",
+        "answer": "Bs0Ar7 \u2192 Ma6Ar4 \u2192 Pr7 He0y Mi8l"
+    },
+    {
+        "question": "If someone wants to go from the department 'Dp4Ph9' to the name 'Ha7p Wi2n', what path should they take?",
+        "answer": "Dp4Ph9 \u2192 Bs0Ar7 \u2192 Ha7p Wi2n"
+    },
+    {
+        "question": "If someone wants to go from the program 'Ms9Ar3' to the name 'Pr7 Wi3m Ta6r', what path should they take?",
+        "answer": "Ms9Ar3 \u2192 Dp4Ph9 \u2192 Bs0Ar7 \u2192 Ma6Ar4 \u2192 Pr7 Wi3m Ta6r"
+    },
+    {
+        "question": "If someone wants to go from the name 'Pr7 Ma9o Mi8l' to the course 'Fa8Ac9', what path should they take?",
+        "answer": "Pr7 Ma9o Mi8l \u2192 Ep4Ps7 \u2192 Bs0Ar7 \u2192 Dp4Ph9 \u2192 Ms9Ar3 \u2192 Fa8Ac9"
+    },
+    {
+        "question": "If someone wants to go from the name 'Lc3 Ja3s Mi8l' to the course 'Ma6Ar4', what path should they take?",
+        "answer": "Lc3 Ja3s Mi8l \u2192 Es9Sc3 \u2192 Ms9Ar3 \u2192 Dp4Ph9 \u2192 Bs0Ar7 \u2192 Ma6Ar4"
+    },
+    {
+        "question": "If someone wants to go from the course 'Ep4Ps7' to the name 'Vi1t Mi0l', what path should they take?",
+        "answer": "Ep4Ps7 \u2192 Bs0Ar7 \u2192 Vi1t Mi0l"
+    },
+    {
+        "question": "If someone wants to go from the course 'Fa8Ac9' to the name 'As2P Se1n Sm7t', what path should they take?",
+        "answer": "Fa8Ac9 \u2192 Ms9Ar3 \u2192 Dp4Ph9 \u2192 Bs0Ar7 \u2192 Ma6Ar4 \u2192 As2P Se1n Sm7t"
+    },
+    {
+        "question": "If someone wants to go from the name 'Pr7 Ma9o Mi8l' to the name 'As2P Ol2r An5e', what path should they take?",
+        "answer": "Pr7 Ma9o Mi8l \u2192 Ep4Ps7 \u2192 Bs0Ar7 \u2192 Dp4Ph9 \u2192 Ms9Ar3 \u2192 Es9Sc3 \u2192 As2P Ol2r An5e"
+    },
+    {
+        "question": "If someone wants to go from the name 'Pr7 Wi3m Ta6r' to the name 'Lc3 Ja3s Mi8l', what path should they take?",
+        "answer": "Pr7 Wi3m Ta6r \u2192 Ma6Ar4 \u2192 Bs0Ar7 \u2192 Dp4Ph9 \u2192 Ms9Ar3 \u2192 Es9Sc3 \u2192 Lc3 Ja3s Mi8l"
+    },
+    {
+        "question": "If someone wants to go from the name 'Is3e Da4s' to the course 'Fa8Ac9', what path should they take?",
+        "answer": "Is3e Da4s \u2192 Ms9Ar3 \u2192 Fa8Ac9"
+    },
+    {
+        "question": "If someone wants to go from the name 'Ap9 No7h Mi8l' to the name 'Pr7 Lu4s Th0s', what path should they take?",
+        "answer": "Ap9 No7h Mi8l \u2192 Fa8Ac9 \u2192 Ms9Ar3 \u2192 Dp4Ph9 \u2192 Bs0Ar7 \u2192 Ma6Ar4 \u2192 Pr7 Lu4s Th0s"
+    },
+    {
+        "question": "If someone wants to go from the faculty 'Fc9Sc1' to the name 'Pr7 Lu4s Th0s', what path should they take?",
+        "answer": "Fc9Sc1 \u2192 Dp4Ph9 \u2192 Bs0Ar7 \u2192 Ma6Ar4 \u2192 Pr7 Lu4s Th0s"
+    },
+    {
+        "question": "If someone wants to go from the course 'Es9Sc3' to the name 'Pr7 Lu4s Th0s', what path should they take?",
+        "answer": "Es9Sc3 \u2192 Ms9Ar3 \u2192 Dp4Ph9 \u2192 Bs0Ar7 \u2192 Ma6Ar4 \u2192 Pr7 Lu4s Th0s"
+    },
+    {
+        "question": "If someone wants to go from the name 'Pr7 He0y Mi8l' to the name 'As2P Be2n Th0s', what path should they take?",
+        "answer": "Pr7 He0y Mi8l \u2192 Ma6Ar4 \u2192 Bs0Ar7 \u2192 Qn1Ph7 \u2192 As2P Be2n Th0s"
+    },
+    {
+        "question": "If someone wants to go from the department 'Dp4Ph9' to the course 'Qn1Ph7', what path should they take?",
+        "answer": "Dp4Ph9 \u2192 Bs0Ar7 \u2192 Qn1Ph7"
+    },
+    {
+        "question": "If someone wants to go from the name 'Ap9 El6j Mo4e' to the name 'Pr7 Ez5a Mi8l', what path should they take?",
+        "answer": "Ap9 El6j Mo4e \u2192 Ma6Ar4 \u2192 Bs0Ar7 \u2192 Qn1Ph7 \u2192 Pr7 Ez5a Mi8l"
+    },
+    {
+        "question": "If someone wants to go from the course 'Es9Sc3' to the name 'So2a Ta0r', what path should they take?",
+        "answer": "Es9Sc3 \u2192 Ms9Ar3 \u2192 So2a Ta0r"
+    },
+    {
+        "question": "If someone wants to go from the name 'As2P Se1n Sm7t' to the name 'As2P Be2n Th0s', what path should they take?",
+        "answer": "As2P Se1n Sm7t \u2192 Ma6Ar4 \u2192 Bs0Ar7 \u2192 Qn1Ph7 \u2192 As2P Be2n Th0s"
+    },
+    {
+        "question": "If someone wants to go from the faculty 'Fc9Sc1' to the name 'Pr7 Wi3m Ta6r', what path should they take?",
+        "answer": "Fc9Sc1 \u2192 Dp4Ph9 \u2192 Bs0Ar7 \u2192 Ma6Ar4 \u2192 Pr7 Wi3m Ta6r"
+    },
+    {
+        "question": "If someone wants to go from the course 'Fa8Ac9' to the name 'Lc3 Ja3s Mi8l', what path should they take?",
+        "answer": "Fa8Ac9 \u2192 Ms9Ar3 \u2192 Es9Sc3 \u2192 Lc3 Ja3s Mi8l"
+    },
+    {
+        "question": "If someone wants to go from the name 'Pr7 Lu4s Th0s' to the department 'Dp4Ph9', what path should they take?",
+        "answer": "Pr7 Lu4s Th0s \u2192 Ma6Ar4 \u2192 Bs0Ar7 \u2192 Dp4Ph9"
+    },
+    {
+        "question": "If someone wants to go from the course 'Ep4Ps7' to the name 'As2P Se1n Sm7t', what path should they take?",
+        "answer": "Ep4Ps7 \u2192 Bs0Ar7 \u2192 Ma6Ar4 \u2192 As2P Se1n Sm7t"
+    },
+    {
+        "question": "If someone wants to go from the name 'Ha7p Wi2n' to the name 'Pr7 Lu4s Th0s', what path should they take?",
+        "answer": "Ha7p Wi2n \u2192 Bs0Ar7 \u2192 Ma6Ar4 \u2192 Pr7 Lu4s Th0s"
+    },
+    {
+        "question": "If someone wants to go from the name 'Pr7 Lu4s Th0s' to the name 'Pr7 He0y Mi8l', what path should they take?",
+        "answer": "Pr7 Lu4s Th0s \u2192 Ma6Ar4 \u2192 Pr7 He0y Mi8l"
+    },
+    {
+        "question": "If someone wants to go from the name 'Pr7 Ma9o Mi8l' to the course 'Qn1Ph7', what path should they take?",
+        "answer": "Pr7 Ma9o Mi8l \u2192 Ep4Ps7 \u2192 Bs0Ar7 \u2192 Qn1Ph7"
+    },
+    {
+        "question": "If someone wants to go from the name 'Pr7 Da4l He9z' to the name 'As2P Be2n Th0s', what path should they take?",
+        "answer": "Pr7 Da4l He9z \u2192 Es9Sc3 \u2192 Ms9Ar3 \u2192 Dp4Ph9 \u2192 Bs0Ar7 \u2192 Qn1Ph7 \u2192 As2P Be2n Th0s"
+    },
+    {
+        "question": "If someone wants to go from the name 'As2P Be2n Th0s' to the name 'Is3e Da4s', what path should they take?",
+        "answer": "As2P Be2n Th0s \u2192 Qn1Ph7 \u2192 Bs0Ar7 \u2192 Dp4Ph9 \u2192 Ms9Ar3 \u2192 Is3e Da4s"
+    },
+    {
+        "question": "If someone wants to go from the name 'Pr7 Wi3m Ta6r' to the name 'Pr7 Lu4s Th0s', what path should they take?",
+        "answer": "Pr7 Wi3m Ta6r \u2192 Ma6Ar4 \u2192 Pr7 Lu4s Th0s"
+    },
+    {
+        "question": "If someone wants to go from the name 'Pr7 Ez5a Mi8l' to the name 'Is3e Da4s', what path should they take?",
+        "answer": "Pr7 Ez5a Mi8l \u2192 Qn1Ph7 \u2192 Bs0Ar7 \u2192 Dp4Ph9 \u2192 Ms9Ar3 \u2192 Is3e Da4s"
+    },
+    {
+        "question": "If someone wants to go from the name 'Pr7 Ez5a Mi8l' to the course 'Es9Sc3', what path should they take?",
+        "answer": "Pr7 Ez5a Mi8l \u2192 Qn1Ph7 \u2192 Bs0Ar7 \u2192 Dp4Ph9 \u2192 Ms9Ar3 \u2192 Es9Sc3"
+    }
+]

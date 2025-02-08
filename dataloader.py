@@ -208,41 +208,79 @@ class JSONPromptGenerator(PromptGenerator):
         super().__init__()
         self.dataset_name = 'JSON'
         self.sub_task = SubTask
+        
     def generate(self, data):
         SystemTemplate = self.config['JSON']['SystemTemplate']
         OutputFormatTemplate = self.config['JSON']['OutputFormatTemplate']
-        if self.sub_task == 'type_1':
-            OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['JSON']['Task']['Task1']['OutputFormatTemplate'])
-            PromptTemplate = self.config['JSON']['Task']['Task1']['PromptTemplate']
-            PromptTemplate = PromptTemplate.replace('<JSON>', json.dumps(data['json']))
-            PromptTemplate = PromptTemplate.replace('<QUESTION>', data['question'])
-            TrueAnswer = data['true_answer']
-        elif self.sub_task == 'type_2':
-            OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['JSON']['Task']['Task2']['OutputFormatTemplate'])
-            PromptTemplate = self.config['JSON']['Task']['Task2']['PromptTemplate']
-            PromptTemplate = PromptTemplate.replace('<JSON>', json.dumps(data['json']))
-            PromptTemplate = PromptTemplate.replace('<QUESTION>', data['question'])
-            TrueAnswer = data['true_answer']
-        elif self.sub_task == 'type_3':
-            OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['JSON']['Task']['Task3']['OutputFormatTemplate'])
-            PromptTemplate = self.config['JSON']['Task']['Task3']['PromptTemplate']
-            PromptTemplate = PromptTemplate.replace('<JSON>', json.dumps(data['json']))
-            PromptTemplate = PromptTemplate.replace('<QUESTION>', data['question'])
-            TrueAnswer = data['true_answer']
-        elif self.sub_task == 'type_4':
-            OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['JSON']['Task']['Task4']['OutputFormatTemplate'])
-            PromptTemplate = self.config['JSON']['Task']['Task4']['PromptTemplate']
-            PromptTemplate = PromptTemplate.replace('<JSON>', json.dumps(data['json']))
-            PromptTemplate = PromptTemplate.replace('<QUESTION>', data['question'])
-            TrueAnswer = data['true_answer']
-        elif self.sub_task == 'type_5':
-            OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['JSON']['Task']['Task5']['OutputFormatTemplate'])
-            PromptTemplate = self.config['JSON']['Task']['Task5']['PromptTemplate']
-            PromptTemplate = PromptTemplate.replace('<JSON>', json.dumps(data['json']))
-            PromptTemplate = PromptTemplate.replace('<QUESTION>', data['question'])
-            TrueAnswer = data['true_answer']            
+        
+        # Map subtasks to their config task numbers and templates
+        task_templates = {
+            'child_count': {
+                'task': 'Task1',
+                'prompt': "Given the hierarchical structure, answer the following question about counting children nodes: {question}"
+            },
+            'node_depth': {
+                'task': 'Task2',
+                'prompt': "Given the hierarchical structure, answer the following question about node depth: {question}"
+            },
+            'level_count': {
+                'task': 'Task3',
+                'prompt': "Given the hierarchical structure, answer the following question about counting nodes at a level: {question}"
+            },
+            'node_relationship': {
+                'task': 'Task4',
+                'prompt': "Given the hierarchical structure, answer the following question about node relationships: {question}"
+            },
+            'node_attribute': {
+                'task': 'Task5',
+                'prompt': "Given the hierarchical structure, answer the following question about node attributes: {question}"
+            },
+            'level_nodes': {
+                'task': 'Task6',
+                'prompt': "Given the hierarchical structure, answer the following question about nodes at a specific level: {question}"
+            },
+            'path_down_to_up': {
+                'task': 'Task7',
+                'prompt': "Given the hierarchical structure, answer the following question about paths from lower to higher levels: {question}"
+            },
+            'path_up_to_down': {
+                'task': 'Task8',
+                'prompt': "Given the hierarchical structure, answer the following question about paths from higher to lower levels: {question}"
+            },
+            'shared_ancestor_same_level': {
+                'task': 'Task9',
+                'prompt': "Given the hierarchical structure, answer the following question about common ancestors of nodes at the same level: {question}"
+            },
+            'shared_ancestor_diff_level': {
+                'task': 'Task10',
+                'prompt': "Given the hierarchical structure, answer the following question about common ancestors of nodes at different levels: {question}"
+            },
+            'path_between_nodes': {
+                'task': 'Task11',
+                'prompt': "Given the hierarchical structure, answer the following question about paths between any two nodes: {question}"
+            }
+        }
+
+        if self.sub_task not in task_templates:
+            raise ValueError(f"Unknown subtask: {self.sub_task}")
+            
+        template = task_templates[self.sub_task]
+        task_id = template['task']
+        
+        # Set output format from config
+        OutputFormatTemplate = OutputFormatTemplate.replace(
+            '<OUTPUTFORMATE>', 
+            self.config['JSON']['Task'][task_id]['OutputFormatTemplate']
+        )
+        
+        # Build prompt from template
+        PromptTemplate = self.config['JSON']['Task'][task_id]['PromptTemplate']
+        PromptTemplate = PromptTemplate.replace('<QUESTION>', data['question'])
+        
         SystemPrompt = SystemTemplate
         UserPrompt = PromptTemplate + OutputFormatTemplate
+        TrueAnswer = data['true_answer']
+        
         return SystemPrompt, UserPrompt, TrueAnswer
 
 
@@ -250,51 +288,89 @@ class JSONDataLoader(TemplateDataLoader):
     def __init__(self, args):
         super().__init__()
         self.dataset_name = 'JSON'
-        SubTask = args['SubTask']
-        Domain = args['Domain']
-        self.dataset_dir = self.config['Dataset']['JSON']['Dir']
-        self.data_generator = JSONPromptGenerator(SubTask)
-        self.sub_task = SubTask
-        self.domain = Domain
-        self.dict = {"type_1":"Task1", "type_2":"Task2", "type_3":"Task3", "type_4":"Task4", "type_5":"Task5"}
+        self.sub_task = args['SubTask']
+        self.domain = args['Domain']
+        # Update the dataset directory to point to dataset/JSON in project root
+        self.dataset_dir = os.path.join(
+            os.path.dirname(__file__),
+            "dataset",
+            "JSON"
+        )
+        self.data_generator = JSONPromptGenerator(self.sub_task)
+        
+        # Map descriptive names to task numbers for prompt config
+        self.task_map = {
+            "child_count": "Task1",
+            "node_depth": "Task2", 
+            "level_count": "Task3",
+            "node_relationship": "Task4",
+            "node_attribute": "Task5",
+            "level_nodes": "Task6",
+            "path_down_to_up": "Task7",
+            "path_up_to_down": "Task8",
+            "shared_ancestor_same_level": "Task9",
+            "shared_ancestor_diff_level": "Task10",
+            "path_between_nodes": "Task11"
+        }
+
         if 'ExampleType' in args:
             self.example_type = args['ExampleType']
         else:
             self.example_type = "None"
         self.data = []
+
     def load_data(self):
-        ans_json_file = os.path.join(self.dataset_dir, f"{self.domain}/{self.sub_task}.json")
-        json_file = os.path.join(self.dataset_dir, f"{self.domain}_structure.json")
-        with open(json_file, 'r') as file:
-            reference_data = json.load(file)
-        with open(ans_json_file, 'r') as file:
+        # Load from dataset/JSON/QA directory
+        test_dataset_path = os.path.join(
+            self.dataset_dir,
+            "QA",
+            self.sub_task,
+            f"{self.sub_task}_{self.domain}.json"
+        )
+
+        if not os.path.exists(test_dataset_path):
+            print(f"Warning: No dataset found at {test_dataset_path}")
+            return self.data
+
+        with open(test_dataset_path, 'r') as file:
             train_data = json.load(file)
+
         for data in train_data:
             input_data = {}
-            input_data['json'] = reference_data
             input_data['question'] = data['question']
             input_data['true_answer'] = data['answer']
+            
             SystemPrompt, UserPrompt, TrueAnswer = self.data_generator.generate(input_data)
+
             if self.example_type == "OneShot":
-                one_shot_question = self.prompt_config['JSON']['Task'][f'{self.dict[self.sub_task]}']['Example']['Question1']
-                one_shot_anwsers = self.prompt_config['JSON']['Task'][f'{self.dict[self.sub_task]}']['Example']['Answer1']
-                ExamplePrompt = self.oneshot_example_prompt.replace('<QUESTION1>', one_shot_question).replace('<ANSWER1>', one_shot_anwsers)          
+                task_id = self.task_map[self.sub_task]
+                one_shot_question = self.prompt_config['JSON']['Task'][task_id]['Example']['Question1']
+                one_shot_answers = self.prompt_config['JSON']['Task'][task_id]['Example']['Answer1']
+                ExamplePrompt = self.oneshot_example_prompt.replace('<QUESTION1>', one_shot_question).replace('<ANSWER1>', one_shot_answers)
                 UserPrompt = ExamplePrompt + UserPrompt
+
             elif self.example_type == "FewShot":
-                few_shot_question1 = self.prompt_config['JSON']['Task'][f'{self.dict[self.sub_task]}']['Example']['Question1']
-                few_shot_anwsers1 = self.prompt_config['JSON']['Task'][f'{self.dict[self.sub_task]}']['Example']['Answer1']
-                few_shot_question2 = self.prompt_config['JSON']['Task'][f'{self.dict[self.sub_task]}']['Example']['Question2']
-                few_shot_anwsers2 = self.prompt_config['JSON']['Task'][f'{self.dict[self.sub_task]}']['Example']['Answer2']
-                few_shot_question3 = self.prompt_config['JSON']['Task'][f'{self.dict[self.sub_task]}']['Example']['Question3']
-                few_shot_anwsers3 = self.prompt_config['JSON']['Task'][f'{self.dict[self.sub_task]}']['Example']['Answer3']
-                ExamplePrompt = self.fewshot_example_prompt.replace('<QUESTION1>', few_shot_question1).replace('<ANSWER1>', few_shot_anwsers1)
-                ExamplePrompt = ExamplePrompt.replace('<QUESTION2>', few_shot_question2).replace('<ANSWER2>', few_shot_anwsers2)
-                ExamplePrompt = ExamplePrompt.replace('<QUESTION3>', few_shot_question3).replace('<ANSWER3>', few_shot_anwsers3)
+                task_id = self.task_map[self.sub_task]
+                few_shot_question1 = self.prompt_config['JSON']['Task'][task_id]['Example']['Question1']
+                few_shot_answers1 = self.prompt_config['JSON']['Task'][task_id]['Example']['Answer1']
+                few_shot_question2 = self.prompt_config['JSON']['Task'][task_id]['Example']['Question2']
+                few_shot_answers2 = self.prompt_config['JSON']['Task'][task_id]['Example']['Answer2']
+                few_shot_question3 = self.prompt_config['JSON']['Task'][task_id]['Example']['Question3']
+                few_shot_answers3 = self.prompt_config['JSON']['Task'][task_id]['Example']['Answer3']
+                
+                ExamplePrompt = self.fewshot_example_prompt.replace('<QUESTION1>', few_shot_question1).replace('<ANSWER1>', few_shot_answers1)
+                ExamplePrompt = ExamplePrompt.replace('<QUESTION2>', few_shot_question2).replace('<ANSWER2>', few_shot_answers2)
+                ExamplePrompt = ExamplePrompt.replace('<QUESTION3>', few_shot_question3).replace('<ANSWER3>', few_shot_answers3)
                 UserPrompt = ExamplePrompt + UserPrompt
-            elif self.example_type == "ZeroShot" or self.example_type == "None":
-                pass
-            self.data.append({'SystemPrompt': SystemPrompt, 'UserPrompt': UserPrompt, 'TrueAnswer': TrueAnswer})
+
+            self.data.append({
+                'SystemPrompt': SystemPrompt,
+                'UserPrompt': UserPrompt,
+                'TrueAnswer': TrueAnswer
+            })
+
         return self.data
+
     def get_data(self):
         return self.data
     def length(self):
@@ -762,17 +838,36 @@ class HibenchDataLoder(TemplateDataLoader):
  
 
 def test_dataloader():
-    # args = {'Task':'Code', 'SubTask': 'SpaceComplexity', 'type': 'c++', 'ExampleType':'OneShot'}
-    # args = {'Task': 'JSON', 'SubTask': 'type_1', 'Domain': 'university', 'ExampleType':'OneShot'}
+        # args = {'Task':'Code', 'SubTask': 'SpaceComplexity', 'type': 'c++', 'ExampleType':'OneShot'}
+    #args = {'Task': 'JSON', 'SubTask': 'type_1', 'Domain': 'university', 'ExampleType':'OneShot'}
     # args = {'Task': 'Fundamental', 'SubTask': 'root', 'Difficulty': 'easy', 'TreeType': 'Normal', 'Balance': 'unbalanced', 'Weight': 'unweighted', 'InputMode': 'edge', 'ExampleType': 'ZeroShot'}
     # args = {'Task': 'Formula', 'SubTask': 'convert', 'Symbol_Mode': 'easy', 'Value_Mode':'easy', 'Length_Mode':'easy', 'format1':'infix', 'format2':'postfix', 'ExampleType':'FewShot'}
-    args = {'Task': 'Formula', 'SubTask': 'equivalent', 'Symbol_Mode': 'easy', 'Value_Mode':'easy', 'Length_Mode':'easy', 'format1':'infix', 'format2':'postfix', 'ExampleType':'FewShot'}
+    #args = {'Task': 'Formula', 'SubTask': 'equivalent', 'Symbol_Mode': 'easy', 'Value_Mode':'easy', 'Length_Mode':'easy', 'format1':'infix', 'format2':'postfix', 'ExampleType':'FewShot'}
     # args = {'Task': 'Formula', 'SubTask': 'calculate', 'Symbol_Mode': 'easy', 'Value_Mode':'easy', 'Length_Mode':'easy', 'format':'infix', 'ExampleType':'FewShot'}
     # args = {'Task': 'Paper', 'SubTask': 'contextual_qa', 'Mode': 'dev', 'ExampleType':'OneShot'}
     # args = {'Task': 'Fundamental', 'TreeType': 'binary', 'SubTask': 'infix_traversal', 'InputMode': 'hierarchy', 'balance': 'unbalanced', 'weight':'unweighted', 'difficulty':'easy', 'ExampleType':'FewShot'}
-    data_loader = HibenchDataLoder(args)
-    data = data_loader.load_data()
-    print(data[0])
+    #data_loader = HibenchDataLoder(args)
+    #data = data_loader.load_data()
+    #print(data[0])
+    # Test JSON task with descriptive name
+    args = {
+        'Task': 'JSON', 
+        'SubTask': 'path_up_to_down',  # Using descriptive name instead of type_1
+        'Domain': 'university_structure_large_01',  # Match actual filename
+        'ExampleType': 'OneShot'
+    }
+    
+    try:
+        data_loader = HibenchDataLoder(args)
+        data = data_loader.load_data()
+        if data and len(data) > 0:
+            print(f"Successfully loaded {len(data)} items")
+            print("First item sample:")
+            print(json.dumps(data[0], indent=2))
+        else:
+            print("No data loaded")
+    except Exception as e:
+        print(f"Error loading data: {str(e)}")
 
 
 if __name__ == '__main__':

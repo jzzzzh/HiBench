@@ -1,0 +1,26 @@
+[
+    {
+        "question": "How many Courses does university_structure_large_01 have?",
+        "answer": 12
+    },
+    {
+        "question": "How many Departments does university_structure_large_01 have?",
+        "answer": 4
+    },
+    {
+        "question": "How many Faculties does university_structure_large_01 have?",
+        "answer": 2
+    },
+    {
+        "question": "How many Lecturers does university_structure_large_01 have?",
+        "answer": 19
+    },
+    {
+        "question": "How many Programs does university_structure_large_01 have?",
+        "answer": 7
+    },
+    {
+        "question": "How many Students does university_structure_large_01 have?",
+        "answer": 10
+    }
+]

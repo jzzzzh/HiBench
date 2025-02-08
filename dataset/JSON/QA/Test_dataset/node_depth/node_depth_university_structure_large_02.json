@@ -1,0 +1,70 @@
+[
+    {
+        "question": "Which level does the node Department of Marketing in?",
+        "answer": "Departments"
+    },
+    {
+        "question": "Which level does the node Department of Visual Arts in?",
+        "answer": "Departments"
+    },
+    {
+        "question": "Which level does the node Department of Anatomy in?",
+        "answer": "Departments"
+    },
+    {
+        "question": "Which level does the node Department of Linguistics in?",
+        "answer": "Departments"
+    },
+    {
+        "question": "Which level does the node Department of Literature in?",
+        "answer": "Departments"
+    },
+    {
+        "question": "Which level does the node Department of Surgery in?",
+        "answer": "Departments"
+    },
+    {
+        "question": "Which level does the node Department of Pediatrics in?",
+        "answer": "Departments"
+    },
+    {
+        "question": "Which level does the node Department of Philosophy in?",
+        "answer": "Departments"
+    },
+    {
+        "question": "Which level does the node Department of Historic Preservation in?",
+        "answer": "Departments"
+    },
+    {
+        "question": "Which level does the node Department of History in?",
+        "answer": "Departments"
+    },
+    {
+        "question": "Which level does the node Department of Management in?",
+        "answer": "Departments"
+    },
+    {
+        "question": "Which level does the node Department of Interior Design in?",
+        "answer": "Departments"
+    },
+    {
+        "question": "Which level does the node Department of Urban Planning in?",
+        "answer": "Departments"
+    },
+    {
+        "question": "Which level does the node Faculty of Business in?",
+        "answer": "Faculties"
+    },
+    {
+        "question": "Which level does the node Faculty of Medicine in?",
+        "answer": "Faculties"
+    },
+    {
+        "question": "Which level does the node Faculty of Architecture in?",
+        "answer": "Faculties"
+    },
+    {
+        "question": "Which level does the node Faculty of Arts in?",
+        "answer": "Faculties"
+    }
+]

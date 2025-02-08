@@ -1,0 +1,26 @@
+[
+    {
+        "question": "How many Courses does university_bullshit_structure_medium_01 have?",
+        "answer": 3
+    },
+    {
+        "question": "How many Departments does university_bullshit_structure_medium_01 have?",
+        "answer": 1
+    },
+    {
+        "question": "How many Faculties does university_bullshit_structure_medium_01 have?",
+        "answer": 1
+    },
+    {
+        "question": "How many Lecturers does university_bullshit_structure_medium_01 have?",
+        "answer": 5
+    },
+    {
+        "question": "How many Programs does university_bullshit_structure_medium_01 have?",
+        "answer": 2
+    },
+    {
+        "question": "How many Students does university_bullshit_structure_medium_01 have?",
+        "answer": 3
+    }
+]
