@@ -196,12 +196,15 @@ class ArgumentGenerator:
 
 def main():
     argument_generator = ArgumentGenerator()
-    Fundamental_EvalList = argument_generator.generate_all_eval(Task_list = ['Fundamental'])
-    Other_EvalList = argument_generator.generate_all_eval(Task_list = ['Code', 'JSON', 'Formula'], ExampleType='ZeroShot')
-    EvalList = Fundamental_EvalList + Other_EvalList
+    # Fundamental_EvalList = argument_generator.generate_all_eval(Task_list = ['Fundamental'])
+    # Other_EvalList = argument_generator.generate_all_eval(Task_list = ['Code', 'JSON', 'Formula'], ExampleType='ZeroShot')
+    EvalList = argument_generator.generate_all_eval(Task_list = ['Fundamental', 'Code', 'Formula'], ExampleType='ZeroShot')
+    # EvalList = Fundamental_EvalList + Other_EvalList
     # model_list = ["meta-llama/Meta-Llama-3.1-8B-Instruct"] # ["Qwen/Qwen2.5-0.5B-Instruct"] #, "meta-llama/Meta-Llama-3.1-8B-Instruct"]
-    model_list = ["meta-llama/Meta-Llama-3.1-8B-Instruct", "meta-llama/Llama-3.2-1B-Instruct","meta-llama/Llama-3.2-3B-Instruct", "Qwen/Qwen2.5-0.5B-Instruct", "Qwen/Qwen2.5-1.5B-Instruct", "Qwen/Qwen2.5-3B-Instruct", "Qwen/Qwen2.5-7B-Instruct"]
+    # model_list = ["meta-llama/Meta-Llama-3.1-8B-Instruct", "meta-llama/Llama-3.2-1B-Instruct","meta-llama/Llama-3.2-3B-Instruct", "Qwen/Qwen2.5-0.5B-Instruct", "Qwen/Qwen2.5-1.5B-Instruct", "Qwen/Qwen2.5-3B-Instruct", "Qwen/Qwen2.5-7B-Instruct"]
     # model_list = ["Qwen/Qwen2.5-0.5B-Instruct"]
+    # model_list = ["meta-llama/Llama-3.2-1B-Instruct"]
+    model_list = ["meta-llama/Llama-3.2-3B-Instruct"]
     
     for model in model_list:
         llm = LLMModel(model, api_key=None)

@@ -4,4 +4,4 @@ test.py
 .hfkey
 Results/
 nohup.out
-output.txt
+*output*.*
