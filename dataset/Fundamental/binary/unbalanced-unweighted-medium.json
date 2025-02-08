@@ -93,8 +93,8 @@
             2,
             1
         ],
-        "traversal_order_verification_Q": "and a traversal sequence [1, 2, 7, 0, 6, 3, 5, 4], verify if it is the preorder, inorder, and postorder consistent with the tree.",
-        "traversal_order_verification_A": "preorder",
+        "traversal_order_verification_Q": "and a traversal sequence [7, 3, 5, 6, 4, 0, 2, 1], verify if it is the preorder, inorder, and postorder consistent with the tree.",
+        "traversal_order_verification_A": "postorder",
         "mirror_tree_Q": "generate the mirror image of the tree, where the left and right children of all nodes are swapped.",
         "mirror_tree_A_E": "1 -(R)-> 2, 2 -(R)-> 7, 2 -(L)-> 0, 0 -(L)-> 4, 0 -(R)-> 6, 6 -(L)-> 5, 6 -(R)-> 3",
         "mirror_tree_A_H": "   1\n    `-(R)-2\n        |-(R)-7\n        `-(L)-0\n            |-(L)-4\n            `-(R)-6\n                |-(L)-5\n                `-(R)-3"
@@ -143,8 +143,8 @@
             0,
             7
         ],
-        "traversal_order_verification_Q": "and a traversal sequence [7, 0, 5, 1, 2, 6, 3, 4], verify if it is the preorder, inorder, and postorder consistent with the tree.",
-        "traversal_order_verification_A": "inorder",
+        "traversal_order_verification_Q": "and a traversal sequence [5, 1, 6, 4, 3, 2, 0, 7], verify if it is the preorder, inorder, and postorder consistent with the tree.",
+        "traversal_order_verification_A": "postorder",
         "mirror_tree_Q": "generate the mirror image of the tree, where the left and right children of all nodes are swapped.",
         "mirror_tree_A_E": "7 -(L)-> 0, 0 -(L)-> 2, 2 -(L)-> 3, 3 -(R)-> 6, 3 -(L)-> 4, 2 -(R)-> 1, 1 -(R)-> 5",
         "mirror_tree_A_H": "   7\n    `-(L)-0\n        `-(L)-2\n            |-(L)-3\n            |   |-(R)-6\n            |   `-(L)-4\n            `-(R)-1\n                `-(R)-5"
@@ -205,8 +205,8 @@
             7,
             4
         ],
-        "traversal_order_verification_Q": "and a traversal sequence [6, 9, 11, 5, 2, 3, 10, 1, 8, 0, 7, 4], verify if it is the preorder, inorder, and postorder consistent with the tree.",
-        "traversal_order_verification_A": "postorder",
+        "traversal_order_verification_Q": "and a traversal sequence [4, 7, 5, 9, 6, 11, 0, 3, 2, 8, 10, 1], verify if it is the preorder, inorder, and postorder consistent with the tree.",
+        "traversal_order_verification_A": "preorder",
         "mirror_tree_Q": "generate the mirror image of the tree, where the left and right children of all nodes are swapped.",
         "mirror_tree_A_E": "4 -(L)-> 7, 7 -(R)-> 5, 5 -(R)-> 9, 9 -(R)-> 6, 5 -(L)-> 11, 7 -(L)-> 0, 0 -(L)-> 8, 8 -(R)-> 10, 8 -(L)-> 1, 0 -(R)-> 3, 3 -(L)-> 2",
         "mirror_tree_A_H": "   4\n    `-(L)-7\n        |-(R)-5\n        |   |-(R)-9\n        |   |   `-(R)-6\n        |   `-(L)-11\n        `-(L)-0\n            |-(L)-8\n            |   |-(R)-10\n            |   `-(L)-1\n            `-(R)-3\n                `-(L)-2"
@@ -267,8 +267,8 @@
             7,
             10
         ],
-        "traversal_order_verification_Q": "and a traversal sequence [11, 3, 2, 0, 1, 9, 4, 6, 8, 5, 7, 10], verify if it is the preorder, inorder, and postorder consistent with the tree.",
-        "traversal_order_verification_A": "postorder",
+        "traversal_order_verification_Q": "and a traversal sequence [10, 4, 1, 2, 11, 3, 0, 9, 7, 5, 6, 8], verify if it is the preorder, inorder, and postorder consistent with the tree.",
+        "traversal_order_verification_A": "preorder",
         "mirror_tree_Q": "generate the mirror image of the tree, where the left and right children of all nodes are swapped.",
         "mirror_tree_A_E": "10 -(R)-> 4, 4 -(L)-> 9, 4 -(R)-> 1, 1 -(L)-> 0, 1 -(R)-> 2, 2 -(L)-> 3, 2 -(R)-> 11, 10 -(L)-> 7, 7 -(R)-> 5, 5 -(R)-> 6, 5 -(L)-> 8",
         "mirror_tree_A_H": "   10\n    |-(R)-4\n    |   |-(L)-9\n    |   `-(R)-1\n    |       |-(L)-0\n    |       `-(R)-2\n    |           |-(L)-3\n    |           `-(R)-11\n    `-(L)-7\n        `-(R)-5\n            |-(R)-6\n            `-(L)-8"
@@ -329,8 +329,8 @@
             10,
             4
         ],
-        "traversal_order_verification_Q": "and a traversal sequence [5, 9, 3, 11, 8, 1, 10, 7, 0, 6, 2, 4], verify if it is the preorder, inorder, and postorder consistent with the tree.",
-        "traversal_order_verification_A": "inorder",
+        "traversal_order_verification_Q": "and a traversal sequence [5, 3, 9, 8, 1, 11, 7, 6, 0, 2, 10, 4], verify if it is the preorder, inorder, and postorder consistent with the tree.",
+        "traversal_order_verification_A": "postorder",
         "mirror_tree_Q": "generate the mirror image of the tree, where the left and right children of all nodes are swapped.",
         "mirror_tree_A_E": "4 -(R)-> 10, 10 -(R)-> 11, 11 -(R)-> 9, 9 -(L)-> 3, 9 -(R)-> 5, 11 -(L)-> 1, 1 -(R)-> 8, 10 -(L)-> 2, 2 -(R)-> 0, 0 -(R)-> 7, 0 -(L)-> 6",
         "mirror_tree_A_H": "   4\n    `-(R)-10\n        |-(R)-11\n        |   |-(R)-9\n        |   |   |-(L)-3\n        |   |   `-(R)-5\n        |   `-(L)-1\n        |       `-(R)-8\n        `-(L)-2\n            `-(R)-0\n                |-(R)-7\n                `-(L)-6"
@@ -561,8 +561,8 @@
             26,
             2
         ],
-        "traversal_order_verification_Q": "and a traversal sequence [2, 25, 10, 8, 0, 19, 28, 3, 29, 23, 9, 22, 5, 13, 16, 15, 26, 6, 20, 11, 18, 21, 14, 17, 27, 12, 1, 24, 4, 7], verify if it is the preorder, inorder, and postorder consistent with the tree.",
-        "traversal_order_verification_A": "preorder",
+        "traversal_order_verification_Q": "and a traversal sequence [0, 8, 19, 10, 3, 28, 29, 25, 22, 9, 5, 23, 16, 13, 15, 2, 11, 20, 18, 6, 14, 21, 17, 26, 1, 12, 24, 27, 7, 4], verify if it is the preorder, inorder, and postorder consistent with the tree.",
+        "traversal_order_verification_A": "inorder",
         "mirror_tree_Q": "generate the mirror image of the tree, where the left and right children of all nodes are swapped.",
         "mirror_tree_A_E": "2 -(L)-> 26, 26 -(L)-> 27, 27 -(R)-> 12, 12 -(L)-> 24, 12 -(R)-> 1, 27 -(L)-> 4, 4 -(R)-> 7, 26 -(R)-> 6, 6 -(R)-> 20, 20 -(L)-> 18, 20 -(R)-> 11, 6 -(L)-> 21, 21 -(L)-> 17, 21 -(R)-> 14, 2 -(R)-> 25, 25 -(L)-> 23, 23 -(L)-> 13, 13 -(R)-> 16, 13 -(L)-> 15, 23 -(R)-> 9, 9 -(R)-> 22, 9 -(L)-> 5, 25 -(R)-> 10, 10 -(R)-> 8, 8 -(L)-> 19, 8 -(R)-> 0, 10 -(L)-> 28, 28 -(R)-> 3, 28 -(L)-> 29",
         "mirror_tree_A_H": "   2\n    |-(L)-26\n    |   |-(L)-27\n    |   |   |-(R)-12\n    |   |   |   |-(L)-24\n    |   |   |   `-(R)-1\n    |   |   `-(L)-4\n    |   |       `-(R)-7\n    |   `-(R)-6\n    |       |-(R)-20\n    |       |   |-(L)-18\n    |       |   `-(R)-11\n    |       `-(L)-21\n    |           |-(L)-17\n    |           `-(R)-14\n    `-(R)-25\n        |-(L)-23\n        |   |-(L)-13\n        |   |   |-(R)-16\n        |   |   `-(L)-15\n        |   `-(R)-9\n        |       |-(R)-22\n        |       `-(L)-5\n        `-(R)-10\n            |-(R)-8\n            |   |-(L)-19\n            |   `-(R)-0\n            `-(L)-28\n                |-(R)-3\n                `-(L)-29"
@@ -813,8 +813,8 @@
             12,
             9
         ],
-        "traversal_order_verification_Q": "and a traversal sequence [9, 12, 4, 10, 6, 3, 13, 7, 8, 1, 5, 0, 2, 11], verify if it is the preorder, inorder, and postorder consistent with the tree.",
-        "traversal_order_verification_A": "preorder",
+        "traversal_order_verification_Q": "and a traversal sequence [4, 13, 7, 3, 6, 5, 0, 1, 11, 2, 8, 10, 12, 9], verify if it is the preorder, inorder, and postorder consistent with the tree.",
+        "traversal_order_verification_A": "postorder",
         "mirror_tree_Q": "generate the mirror image of the tree, where the left and right children of all nodes are swapped.",
         "mirror_tree_A_E": "9 -(L)-> 12, 12 -(L)-> 10, 10 -(R)-> 6, 6 -(R)-> 3, 3 -(L)-> 7, 3 -(R)-> 13, 10 -(L)-> 8, 8 -(R)-> 1, 1 -(R)-> 5, 1 -(L)-> 0, 8 -(L)-> 2, 2 -(R)-> 11, 12 -(R)-> 4",
         "mirror_tree_A_H": "   9\n    `-(L)-12\n        |-(L)-10\n        |   |-(R)-6\n        |   |   `-(R)-3\n        |   |       |-(L)-7\n        |   |       `-(R)-13\n        |   `-(L)-8\n        |       |-(R)-1\n        |       |   |-(R)-5\n        |       |   `-(L)-0\n        |       `-(L)-2\n        |           `-(R)-11\n        `-(R)-4"
@@ -881,8 +881,8 @@
             0,
             6
         ],
-        "traversal_order_verification_Q": "and a traversal sequence [6, 11, 9, 7, 10, 12, 5, 0, 2, 1, 13, 3, 8, 4], verify if it is the preorder, inorder, and postorder consistent with the tree.",
-        "traversal_order_verification_A": "inorder",
+        "traversal_order_verification_Q": "and a traversal sequence [9, 11, 12, 10, 7, 5, 1, 13, 4, 8, 3, 2, 0, 6], verify if it is the preorder, inorder, and postorder consistent with the tree.",
+        "traversal_order_verification_A": "postorder",
         "mirror_tree_Q": "generate the mirror image of the tree, where the left and right children of all nodes are swapped.",
         "mirror_tree_A_E": "6 -(L)-> 0, 0 -(L)-> 2, 2 -(L)-> 3, 3 -(L)-> 8, 8 -(L)-> 4, 3 -(R)-> 13, 13 -(R)-> 1, 0 -(R)-> 5, 5 -(R)-> 7, 7 -(R)-> 11, 11 -(L)-> 9, 7 -(L)-> 10, 10 -(L)-> 12",
         "mirror_tree_A_H": "   6\n    `-(L)-0\n        |-(L)-2\n        |   `-(L)-3\n        |       |-(L)-8\n        |       |   `-(L)-4\n        |       `-(R)-13\n        |           `-(R)-1\n        `-(R)-5\n            `-(R)-7\n                |-(R)-11\n                |   `-(L)-9\n                `-(L)-10\n                    `-(L)-12"
@@ -1346,8 +1346,8 @@
             37,
             17
         ],
-        "traversal_order_verification_Q": "and a traversal sequence [42, 11, 25, 1, 33, 36, 21, 24, 31, 27, 29, 5, 35, 32, 6, 19, 13, 38, 39, 14, 15, 34, 26, 12, 28, 3, 23, 2, 22, 7, 10, 9, 8, 20, 41, 16, 0, 18, 40, 30, 4, 37, 17], verify if it is the preorder, inorder, and postorder consistent with the tree.",
-        "traversal_order_verification_A": "postorder",
+        "traversal_order_verification_Q": "and a traversal sequence [17, 10, 6, 21, 25, 42, 11, 36, 1, 33, 32, 27, 24, 31, 35, 29, 5, 7, 34, 38, 19, 13, 15, 39, 14, 22, 28, 26, 12, 2, 3, 23, 37, 4, 16, 8, 9, 41, 20, 30, 40, 0, 18], verify if it is the preorder, inorder, and postorder consistent with the tree.",
+        "traversal_order_verification_A": "preorder",
         "mirror_tree_Q": "generate the mirror image of the tree, where the left and right children of all nodes are swapped.",
         "mirror_tree_A_E": "17 -(L)-> 37, 37 -(L)-> 4, 4 -(R)-> 16, 16 -(R)-> 8, 8 -(R)-> 9, 16 -(L)-> 41, 41 -(R)-> 20, 4 -(L)-> 30, 30 -(R)-> 40, 40 -(R)-> 0, 40 -(L)-> 18, 17 -(R)-> 10, 10 -(R)-> 6, 6 -(R)-> 21, 21 -(L)-> 36, 36 -(R)-> 1, 36 -(L)-> 33, 21 -(R)-> 25, 25 -(R)-> 42, 25 -(L)-> 11, 6 -(L)-> 32, 32 -(L)-> 35, 35 -(R)-> 29, 35 -(L)-> 5, 32 -(R)-> 27, 27 -(R)-> 24, 27 -(L)-> 31, 10 -(L)-> 7, 7 -(R)-> 34, 34 -(L)-> 15, 15 -(L)-> 14, 15 -(R)-> 39, 34 -(R)-> 38, 38 -(L)-> 13, 38 -(R)-> 19, 7 -(L)-> 22, 22 -(L)-> 2, 2 -(R)-> 3, 2 -(L)-> 23, 22 -(R)-> 28, 28 -(L)-> 12, 28 -(R)-> 26",
         "mirror_tree_A_H": "   17\n    |-(L)-37\n    |   `-(L)-4\n    |       |-(R)-16\n    |       |   |-(R)-8\n    |       |   |   `-(R)-9\n    |       |   `-(L)-41\n    |       |       `-(R)-20\n    |       `-(L)-30\n    |           `-(R)-40\n    |               |-(R)-0\n    |               `-(L)-18\n    `-(R)-10\n        |-(R)-6\n        |   |-(R)-21\n        |   |   |-(L)-36\n        |   |   |   |-(R)-1\n        |   |   |   `-(L)-33\n        |   |   `-(R)-25\n        |   |       |-(R)-42\n        |   |       `-(L)-11\n        |   `-(L)-32\n        |       |-(L)-35\n        |       |   |-(R)-29\n        |       |   `-(L)-5\n        |       `-(R)-27\n        |           |-(R)-24\n        |           `-(L)-31\n        `-(L)-7\n            |-(R)-34\n            |   |-(L)-15\n            |   |   |-(L)-14\n            |   |   `-(R)-39\n            |   `-(R)-38\n            |       |-(L)-13\n            |       `-(R)-19\n            `-(L)-22\n                |-(L)-2\n                |   |-(R)-3\n                |   `-(L)-23\n                `-(R)-28\n                    |-(L)-12\n                    `-(R)-26"
@@ -1531,8 +1531,8 @@
             3,
             46
         ],
-        "traversal_order_verification_Q": "and a traversal sequence [46, 29, 37, 12, 23, 25, 18, 21, 24, 27, 22, 20, 4, 6, 52, 0, 28, 14, 11, 30, 45, 38, 3, 31, 36, 1, 7, 13, 50, 32, 10, 40, 5, 8, 48, 9, 19, 16, 42, 51, 44, 17, 2, 35, 39, 33, 49, 26, 43, 34, 15, 41, 47], verify if it is the preorder, inorder, and postorder consistent with the tree.",
-        "traversal_order_verification_A": "preorder",
+        "traversal_order_verification_Q": "and a traversal sequence [37, 25, 23, 18, 12, 24, 21, 29, 20, 4, 22, 52, 6, 27, 14, 28, 11, 0, 45, 30, 38, 46, 7, 1, 13, 36, 32, 50, 10, 31, 8, 5, 48, 40, 19, 9, 16, 3, 17, 44, 2, 51, 39, 35, 33, 42, 43, 26, 34, 49, 41, 15, 47], verify if it is the preorder, inorder, and postorder consistent with the tree.",
+        "traversal_order_verification_A": "inorder",
         "mirror_tree_Q": "generate the mirror image of the tree, where the left and right children of all nodes are swapped.",
         "mirror_tree_A_E": "46 -(R)-> 29, 29 -(L)-> 27, 27 -(R)-> 22, 22 -(R)-> 20, 20 -(L)-> 4, 22 -(L)-> 6, 6 -(R)-> 52, 27 -(L)-> 0, 0 -(L)-> 30, 30 -(L)-> 38, 30 -(R)-> 45, 0 -(R)-> 28, 28 -(R)-> 14, 28 -(L)-> 11, 29 -(R)-> 37, 37 -(L)-> 12, 12 -(R)-> 23, 23 -(R)-> 25, 23 -(L)-> 18, 12 -(L)-> 21, 21 -(R)-> 24, 46 -(L)-> 3, 3 -(R)-> 31, 31 -(R)-> 36, 36 -(R)-> 1, 1 -(L)-> 13, 1 -(R)-> 7, 36 -(L)-> 50, 50 -(L)-> 10, 50 -(R)-> 32, 31 -(L)-> 40, 40 -(L)-> 9, 9 -(L)-> 16, 9 -(R)-> 19, 40 -(R)-> 5, 5 -(R)-> 8, 5 -(L)-> 48, 3 -(L)-> 42, 42 -(R)-> 51, 51 -(R)-> 44, 44 -(L)-> 2, 44 -(R)-> 17, 51 -(L)-> 35, 35 -(L)-> 33, 35 -(R)-> 39, 42 -(L)-> 49, 49 -(R)-> 26, 26 -(L)-> 34, 26 -(R)-> 43, 49 -(L)-> 15, 15 -(L)-> 47, 15 -(R)-> 41",
         "mirror_tree_A_H": "   46\n    |-(R)-29\n    |   |-(L)-27\n    |   |   |-(R)-22\n    |   |   |   |-(R)-20\n    |   |   |   |   `-(L)-4\n    |   |   |   `-(L)-6\n    |   |   |       `-(R)-52\n    |   |   `-(L)-0\n    |   |       |-(L)-30\n    |   |       |   |-(L)-38\n    |   |       |   `-(R)-45\n    |   |       `-(R)-28\n    |   |           |-(R)-14\n    |   |           `-(L)-11\n    |   `-(R)-37\n    |       `-(L)-12\n    |           |-(R)-23\n    |           |   |-(R)-25\n    |           |   `-(L)-18\n    |           `-(L)-21\n    |               `-(R)-24\n    `-(L)-3\n        |-(R)-31\n        |   |-(R)-36\n        |   |   |-(R)-1\n        |   |   |   |-(L)-13\n        |   |   |   `-(R)-7\n        |   |   `-(L)-50\n        |   |       |-(L)-10\n        |   |       `-(R)-32\n        |   `-(L)-40\n        |       |-(L)-9\n        |       |   |-(L)-16\n        |       |   `-(R)-19\n        |       `-(R)-5\n        |           |-(R)-8\n        |           `-(L)-48\n        `-(L)-42\n            |-(R)-51\n            |   |-(R)-44\n            |   |   |-(L)-2\n            |   |   `-(R)-17\n            |   `-(L)-35\n            |       |-(L)-33\n            |       `-(R)-39\n            `-(L)-49\n                |-(R)-26\n                |   |-(L)-34\n                |   `-(R)-43\n                `-(L)-15\n                    |-(L)-47\n                    `-(R)-41"
@@ -1716,8 +1716,8 @@
             52,
             24
         ],
-        "traversal_order_verification_Q": "and a traversal sequence [44, 35, 23, 18, 31, 33, 22, 42, 51, 20, 5, 21, 0, 50, 30, 48, 12, 6, 11, 16, 7, 37, 4, 29, 19, 26, 40, 41, 49, 39, 36, 27, 43, 32, 9, 28, 3, 8, 13, 46, 14, 10, 25, 17, 2, 1, 38, 45, 15, 34, 47, 52, 24], verify if it is the preorder, inorder, and postorder consistent with the tree.",
-        "traversal_order_verification_A": "postorder",
+        "traversal_order_verification_Q": "and a traversal sequence [24, 36, 30, 22, 23, 44, 35, 33, 18, 31, 50, 20, 42, 51, 0, 5, 21, 39, 37, 6, 48, 12, 7, 11, 16, 49, 19, 4, 29, 41, 26, 40, 52, 13, 8, 32, 27, 43, 3, 9, 28, 47, 17, 46, 25, 14, 10, 34, 38, 2, 1, 15, 45], verify if it is the preorder, inorder, and postorder consistent with the tree.",
+        "traversal_order_verification_A": "preorder",
         "mirror_tree_Q": "generate the mirror image of the tree, where the left and right children of all nodes are swapped.",
         "mirror_tree_A_E": "24 -(L)-> 52, 52 -(L)-> 47, 47 -(R)-> 17, 17 -(L)-> 25, 25 -(R)-> 14, 25 -(L)-> 10, 17 -(R)-> 46, 47 -(L)-> 34, 34 -(R)-> 38, 38 -(R)-> 2, 38 -(L)-> 1, 34 -(L)-> 15, 15 -(R)-> 45, 52 -(R)-> 13, 13 -(R)-> 8, 8 -(R)-> 32, 32 -(L)-> 43, 32 -(R)-> 27, 8 -(L)-> 3, 3 -(R)-> 9, 3 -(L)-> 28, 24 -(R)-> 36, 36 -(R)-> 30, 30 -(L)-> 50, 50 -(L)-> 0, 0 -(L)-> 21, 0 -(R)-> 5, 50 -(R)-> 20, 20 -(L)-> 51, 20 -(R)-> 42, 30 -(R)-> 22, 22 -(L)-> 33, 33 -(L)-> 31, 33 -(R)-> 18, 22 -(R)-> 23, 23 -(L)-> 35, 23 -(R)-> 44, 36 -(L)-> 39, 39 -(L)-> 49, 49 -(R)-> 19, 19 -(R)-> 4, 19 -(L)-> 29, 49 -(L)-> 41, 41 -(L)-> 40, 41 -(R)-> 26, 39 -(R)-> 37, 37 -(R)-> 6, 6 -(L)-> 12, 6 -(R)-> 48, 37 -(L)-> 7, 7 -(L)-> 16, 7 -(R)-> 11",
         "mirror_tree_A_H": "   24\n    |-(L)-52\n    |   |-(L)-47\n    |   |   |-(R)-17\n    |   |   |   |-(L)-25\n    |   |   |   |   |-(R)-14\n    |   |   |   |   `-(L)-10\n    |   |   |   `-(R)-46\n    |   |   `-(L)-34\n    |   |       |-(R)-38\n    |   |       |   |-(R)-2\n    |   |       |   `-(L)-1\n    |   |       `-(L)-15\n    |   |           `-(R)-45\n    |   `-(R)-13\n    |       `-(R)-8\n    |           |-(R)-32\n    |           |   |-(L)-43\n    |           |   `-(R)-27\n    |           `-(L)-3\n    |               |-(R)-9\n    |               `-(L)-28\n    `-(R)-36\n        |-(R)-30\n        |   |-(L)-50\n        |   |   |-(L)-0\n        |   |   |   |-(L)-21\n        |   |   |   `-(R)-5\n        |   |   `-(R)-20\n        |   |       |-(L)-51\n        |   |       `-(R)-42\n        |   `-(R)-22\n        |       |-(L)-33\n        |       |   |-(L)-31\n        |       |   `-(R)-18\n        |       `-(R)-23\n        |           |-(L)-35\n        |           `-(R)-44\n        `-(L)-39\n            |-(L)-49\n            |   |-(R)-19\n            |   |   |-(R)-4\n            |   |   `-(L)-29\n            |   `-(L)-41\n            |       |-(L)-40\n            |       `-(R)-26\n            `-(R)-37\n                |-(R)-6\n                |   |-(L)-12\n                |   `-(R)-48\n                `-(L)-7\n                    |-(L)-16\n                    `-(R)-11"
@@ -1901,8 +1901,8 @@
             15,
             27
         ],
-        "traversal_order_verification_Q": "and a traversal sequence [49, 24, 9, 46, 6, 42, 17, 19, 37, 26, 18, 31, 0, 50, 48, 11, 22, 4, 51, 25, 36, 5, 27, 38, 12, 10, 33, 45, 28, 34, 13, 32, 39, 2, 43, 20, 16, 8, 15, 30, 40, 21, 14, 3, 23, 44, 1, 7, 52, 29, 41, 35, 47], verify if it is the preorder, inorder, and postorder consistent with the tree.",
-        "traversal_order_verification_A": "inorder",
+        "traversal_order_verification_Q": "and a traversal sequence [49, 24, 46, 42, 6, 9, 19, 26, 37, 0, 31, 18, 17, 11, 4, 22, 25, 5, 36, 51, 48, 50, 38, 10, 12, 45, 34, 28, 33, 32, 2, 39, 20, 8, 16, 43, 13, 30, 21, 40, 23, 3, 14, 1, 52, 7, 41, 47, 35, 29, 44, 15, 27], verify if it is the preorder, inorder, and postorder consistent with the tree.",
+        "traversal_order_verification_A": "postorder",
         "mirror_tree_Q": "generate the mirror image of the tree, where the left and right children of all nodes are swapped.",
         "mirror_tree_A_E": "27 -(R)-> 50, 50 -(R)-> 17, 17 -(L)-> 18, 18 -(L)-> 31, 31 -(L)-> 0, 18 -(R)-> 37, 37 -(R)-> 19, 37 -(L)-> 26, 17 -(R)-> 9, 9 -(R)-> 24, 24 -(R)-> 49, 9 -(L)-> 6, 6 -(L)-> 42, 6 -(R)-> 46, 50 -(L)-> 48, 48 -(L)-> 51, 51 -(L)-> 36, 36 -(L)-> 5, 36 -(R)-> 25, 51 -(R)-> 22, 22 -(R)-> 11, 22 -(L)-> 4, 27 -(L)-> 15, 15 -(L)-> 44, 44 -(R)-> 14, 14 -(L)-> 3, 3 -(L)-> 23, 14 -(R)-> 40, 40 -(L)-> 21, 40 -(R)-> 30, 44 -(L)-> 29, 29 -(L)-> 35, 35 -(L)-> 47, 35 -(R)-> 41, 29 -(R)-> 7, 7 -(L)-> 52, 7 -(R)-> 1, 15 -(R)-> 13, 13 -(L)-> 43, 43 -(L)-> 16, 16 -(L)-> 8, 16 -(R)-> 20, 43 -(R)-> 39, 39 -(L)-> 2, 39 -(R)-> 32, 13 -(R)-> 33, 33 -(R)-> 12, 12 -(R)-> 38, 12 -(L)-> 10, 33 -(L)-> 28, 28 -(R)-> 45, 28 -(L)-> 34",
         "mirror_tree_A_H": "   27\n    |-(R)-50\n    |   |-(R)-17\n    |   |   |-(L)-18\n    |   |   |   |-(L)-31\n    |   |   |   |   `-(L)-0\n    |   |   |   `-(R)-37\n    |   |   |       |-(R)-19\n    |   |   |       `-(L)-26\n    |   |   `-(R)-9\n    |   |       |-(R)-24\n    |   |       |   `-(R)-49\n    |   |       `-(L)-6\n    |   |           |-(L)-42\n    |   |           `-(R)-46\n    |   `-(L)-48\n    |       `-(L)-51\n    |           |-(L)-36\n    |           |   |-(L)-5\n    |           |   `-(R)-25\n    |           `-(R)-22\n    |               |-(R)-11\n    |               `-(L)-4\n    `-(L)-15\n        |-(L)-44\n        |   |-(R)-14\n        |   |   |-(L)-3\n        |   |   |   `-(L)-23\n        |   |   `-(R)-40\n        |   |       |-(L)-21\n        |   |       `-(R)-30\n        |   `-(L)-29\n        |       |-(L)-35\n        |       |   |-(L)-47\n        |       |   `-(R)-41\n        |       `-(R)-7\n        |           |-(L)-52\n        |           `-(R)-1\n        `-(R)-13\n            |-(L)-43\n            |   |-(L)-16\n            |   |   |-(L)-8\n            |   |   `-(R)-20\n            |   `-(R)-39\n            |       |-(L)-2\n            |       `-(R)-32\n            `-(R)-33\n                |-(R)-12\n                |   |-(R)-38\n                |   `-(L)-10\n                `-(L)-28\n                    |-(R)-45\n                    `-(L)-34"
@@ -1960,8 +1960,8 @@
             4,
             9
         ],
-        "traversal_order_verification_Q": "and a traversal sequence [9, 7, 8, 0, 3, 2, 1, 6, 5, 10, 4], verify if it is the preorder, inorder, and postorder consistent with the tree.",
-        "traversal_order_verification_A": "preorder",
+        "traversal_order_verification_Q": "and a traversal sequence [2, 1, 3, 0, 6, 8, 5, 7, 10, 9, 4], verify if it is the preorder, inorder, and postorder consistent with the tree.",
+        "traversal_order_verification_A": "inorder",
         "mirror_tree_Q": "generate the mirror image of the tree, where the left and right children of all nodes are swapped.",
         "mirror_tree_A_E": "9 -(R)-> 7, 7 -(R)-> 8, 8 -(R)-> 0, 0 -(L)-> 6, 0 -(R)-> 3, 3 -(R)-> 2, 2 -(L)-> 1, 8 -(L)-> 5, 7 -(L)-> 10, 9 -(L)-> 4",
         "mirror_tree_A_H": "   9\n    |-(R)-7\n    |   |-(R)-8\n    |   |   |-(R)-0\n    |   |   |   |-(L)-6\n    |   |   |   `-(R)-3\n    |   |   |       `-(R)-2\n    |   |   |           `-(L)-1\n    |   |   `-(L)-5\n    |   `-(L)-10\n    `-(L)-4"
@@ -2019,8 +2019,8 @@
             9,
             5
         ],
-        "traversal_order_verification_Q": "and a traversal sequence [3, 0, 2, 10, 4, 8, 6, 1, 7, 9, 5], verify if it is the preorder, inorder, and postorder consistent with the tree.",
-        "traversal_order_verification_A": "postorder",
+        "traversal_order_verification_Q": "and a traversal sequence [5, 0, 3, 9, 2, 7, 6, 8, 4, 10, 1], verify if it is the preorder, inorder, and postorder consistent with the tree.",
+        "traversal_order_verification_A": "preorder",
         "mirror_tree_Q": "generate the mirror image of the tree, where the left and right children of all nodes are swapped.",
         "mirror_tree_A_E": "5 -(L)-> 9, 9 -(L)-> 7, 7 -(L)-> 1, 7 -(R)-> 6, 6 -(R)-> 8, 8 -(L)-> 4, 4 -(R)-> 10, 9 -(R)-> 2, 5 -(R)-> 0, 0 -(L)-> 3",
         "mirror_tree_A_H": "   5\n    |-(L)-9\n    |   |-(L)-7\n    |   |   |-(L)-1\n    |   |   `-(R)-6\n    |   |       `-(R)-8\n    |   |           `-(L)-4\n    |   |               `-(R)-10\n    |   `-(R)-2\n    `-(R)-0\n        `-(L)-3"
@@ -2078,8 +2078,8 @@
             9,
             6
         ],
-        "traversal_order_verification_Q": "and a traversal sequence [8, 6, 4, 1, 0, 2, 7, 10, 5, 3, 9], verify if it is the preorder, inorder, and postorder consistent with the tree.",
-        "traversal_order_verification_A": "inorder",
+        "traversal_order_verification_Q": "and a traversal sequence [6, 8, 9, 2, 1, 4, 0, 3, 5, 7, 10], verify if it is the preorder, inorder, and postorder consistent with the tree.",
+        "traversal_order_verification_A": "preorder",
         "mirror_tree_Q": "generate the mirror image of the tree, where the left and right children of all nodes are swapped.",
         "mirror_tree_A_E": "6 -(R)-> 8, 6 -(L)-> 9, 9 -(R)-> 2, 2 -(R)-> 1, 1 -(L)-> 0, 1 -(R)-> 4, 2 -(L)-> 3, 3 -(R)-> 5, 5 -(R)-> 7, 7 -(L)-> 10",
         "mirror_tree_A_H": "   6\n    |-(R)-8\n    `-(L)-9\n        `-(R)-2\n            |-(R)-1\n            |   |-(L)-0\n            |   `-(R)-4\n            `-(L)-3\n                `-(R)-5\n                    `-(R)-7\n                        `-(L)-10"
@@ -2292,8 +2292,8 @@
             19,
             20
         ],
-        "traversal_order_verification_Q": "and a traversal sequence [20, 12, 8, 0, 1, 10, 21, 11, 24, 15, 9, 7, 13, 25, 5, 18, 6, 19, 22, 26, 2, 14, 3, 17, 16, 4, 23], verify if it is the preorder, inorder, and postorder consistent with the tree.",
-        "traversal_order_verification_A": "preorder",
+        "traversal_order_verification_Q": "and a traversal sequence [10, 11, 21, 1, 9, 15, 24, 0, 8, 18, 6, 5, 25, 13, 7, 12, 3, 17, 14, 4, 16, 2, 26, 23, 22, 19, 20], verify if it is the preorder, inorder, and postorder consistent with the tree.",
+        "traversal_order_verification_A": "postorder",
         "mirror_tree_Q": "generate the mirror image of the tree, where the left and right children of all nodes are swapped.",
         "mirror_tree_A_E": "20 -(L)-> 19, 19 -(L)-> 22, 22 -(L)-> 23, 22 -(R)-> 26, 26 -(R)-> 2, 2 -(L)-> 16, 16 -(R)-> 4, 2 -(R)-> 14, 14 -(L)-> 17, 14 -(R)-> 3, 20 -(R)-> 12, 12 -(L)-> 7, 7 -(R)-> 13, 13 -(R)-> 25, 25 -(R)-> 5, 5 -(R)-> 18, 5 -(L)-> 6, 12 -(R)-> 8, 8 -(L)-> 0, 0 -(L)-> 24, 24 -(L)-> 15, 15 -(L)-> 9, 0 -(R)-> 1, 1 -(R)-> 10, 1 -(L)-> 21, 21 -(L)-> 11",
         "mirror_tree_A_H": "   20\n    |-(L)-19\n    |   `-(L)-22\n    |       |-(L)-23\n    |       `-(R)-26\n    |           `-(R)-2\n    |               |-(L)-16\n    |               |   `-(R)-4\n    |               `-(R)-14\n    |                   |-(L)-17\n    |                   `-(R)-3\n    `-(R)-12\n        |-(L)-7\n        |   `-(R)-13\n        |       `-(R)-25\n        |           `-(R)-5\n        |               |-(R)-18\n        |               `-(L)-6\n        `-(R)-8\n            `-(L)-0\n                |-(L)-24\n                |   `-(L)-15\n                |       `-(L)-9\n                `-(R)-1\n                    |-(R)-10\n                    `-(L)-21\n                        `-(L)-11"
@@ -2399,8 +2399,8 @@
             25,
             1
         ],
-        "traversal_order_verification_Q": "and a traversal sequence [24, 20, 10, 0, 12, 11, 19, 8, 18, 23, 17, 14, 21, 22, 4, 13, 26, 6, 2, 16, 3, 5, 7, 15, 9, 25, 1], verify if it is the preorder, inorder, and postorder consistent with the tree.",
-        "traversal_order_verification_A": "postorder",
+        "traversal_order_verification_Q": "and a traversal sequence [1, 25, 22, 18, 10, 24, 20, 8, 11, 0, 12, 19, 21, 14, 17, 23, 9, 7, 6, 26, 4, 13, 5, 3, 2, 16, 15], verify if it is the preorder, inorder, and postorder consistent with the tree.",
+        "traversal_order_verification_A": "preorder",
         "mirror_tree_Q": "generate the mirror image of the tree, where the left and right children of all nodes are swapped.",
         "mirror_tree_A_E": "1 -(L)-> 25, 25 -(L)-> 9, 9 -(R)-> 7, 7 -(R)-> 6, 6 -(R)-> 26, 26 -(R)-> 4, 26 -(L)-> 13, 7 -(L)-> 5, 5 -(L)-> 3, 3 -(R)-> 2, 3 -(L)-> 16, 9 -(L)-> 15, 25 -(R)-> 22, 22 -(L)-> 21, 21 -(R)-> 14, 14 -(L)-> 17, 17 -(R)-> 23, 22 -(R)-> 18, 18 -(L)-> 8, 8 -(R)-> 11, 11 -(R)-> 0, 11 -(L)-> 12, 8 -(L)-> 19, 18 -(R)-> 10, 10 -(L)-> 20, 10 -(R)-> 24",
         "mirror_tree_A_H": "   1\n    `-(L)-25\n        |-(L)-9\n        |   |-(R)-7\n        |   |   |-(R)-6\n        |   |   |   `-(R)-26\n        |   |   |       |-(R)-4\n        |   |   |       `-(L)-13\n        |   |   `-(L)-5\n        |   |       `-(L)-3\n        |   |           |-(R)-2\n        |   |           `-(L)-16\n        |   `-(L)-15\n        `-(R)-22\n            |-(L)-21\n            |   `-(R)-14\n            |       `-(L)-17\n            |           `-(R)-23\n            `-(R)-18\n                |-(L)-8\n                |   |-(R)-11\n                |   |   |-(R)-0\n                |   |   `-(L)-12\n                |   `-(L)-19\n                `-(R)-10\n                    |-(L)-20\n                    `-(R)-24"
@@ -2695,8 +2695,8 @@
             13,
             14
         ],
-        "traversal_order_verification_Q": "and a traversal sequence [81, 75, 88, 44, 49, 72, 12, 53, 23, 16, 31, 25, 38, 76, 33, 58, 40, 39, 41, 37, 82, 4, 46, 87, 57, 52, 19, 32, 36, 54, 73, 7, 6, 63, 34, 69, 50, 45, 68, 85, 27, 59, 66, 89, 29, 60, 8, 2, 74, 67, 10, 47, 3, 71, 35, 1, 9, 55, 21, 79, 61, 22, 62, 56, 20, 65, 30, 48, 78, 70, 80, 51, 18, 15, 86, 64, 11, 5, 83, 26, 17, 84, 77, 43, 0, 28, 24, 42, 13, 14], verify if it is the preorder, inorder, and postorder consistent with the tree.",
-        "traversal_order_verification_A": "postorder",
+        "traversal_order_verification_Q": "and a traversal sequence [14, 52, 57, 23, 49, 75, 81, 44, 88, 53, 12, 72, 87, 58, 25, 16, 31, 33, 38, 76, 46, 41, 40, 39, 4, 37, 82, 13, 9, 27, 6, 36, 19, 32, 7, 54, 73, 85, 69, 63, 34, 68, 50, 45, 1, 2, 89, 59, 66, 8, 29, 60, 35, 10, 74, 67, 71, 47, 3, 42, 51, 56, 79, 55, 21, 62, 61, 22, 80, 30, 20, 65, 70, 48, 78, 24, 83, 86, 18, 15, 5, 64, 11, 28, 84, 26, 17, 0, 77, 43], verify if it is the preorder, inorder, and postorder consistent with the tree.",
+        "traversal_order_verification_A": "preorder",
         "mirror_tree_Q": "generate the mirror image of the tree, where the left and right children of all nodes are swapped.",
         "mirror_tree_A_E": "14 -(R)-> 52, 52 -(L)-> 57, 57 -(R)-> 23, 23 -(L)-> 53, 53 -(R)-> 12, 12 -(R)-> 72, 23 -(R)-> 49, 49 -(L)-> 44, 44 -(R)-> 88, 49 -(R)-> 75, 75 -(L)-> 81, 57 -(L)-> 87, 87 -(R)-> 58, 58 -(L)-> 33, 33 -(L)-> 76, 33 -(R)-> 38, 58 -(R)-> 25, 25 -(L)-> 31, 25 -(R)-> 16, 87 -(L)-> 46, 46 -(L)-> 4, 4 -(L)-> 82, 4 -(R)-> 37, 46 -(R)-> 41, 41 -(R)-> 40, 41 -(L)-> 39, 14 -(L)-> 13, 13 -(L)-> 42, 42 -(R)-> 51, 51 -(R)-> 56, 56 -(L)-> 62, 62 -(L)-> 22, 62 -(R)-> 61, 56 -(R)-> 79, 79 -(L)-> 21, 79 -(R)-> 55, 51 -(L)-> 80, 80 -(R)-> 30, 30 -(R)-> 20, 30 -(L)-> 65, 80 -(L)-> 70, 70 -(R)-> 48, 70 -(L)-> 78, 42 -(L)-> 24, 24 -(R)-> 83, 83 -(L)-> 5, 5 -(R)-> 64, 5 -(L)-> 11, 83 -(R)-> 86, 86 -(L)-> 15, 86 -(R)-> 18, 24 -(L)-> 28, 28 -(L)-> 0, 0 -(R)-> 77, 0 -(L)-> 43, 28 -(R)-> 84, 84 -(R)-> 26, 84 -(L)-> 17, 13 -(R)-> 9, 9 -(R)-> 27, 27 -(L)-> 85, 85 -(L)-> 68, 68 -(R)-> 50, 68 -(L)-> 45, 85 -(R)-> 69, 69 -(R)-> 63, 69 -(L)-> 34, 27 -(R)-> 6, 6 -(R)-> 36, 36 -(L)-> 32, 36 -(R)-> 19, 6 -(L)-> 7, 7 -(R)-> 54, 7 -(L)-> 73, 9 -(L)-> 1, 1 -(R)-> 2, 2 -(L)-> 8, 8 -(L)-> 60, 8 -(R)-> 29, 2 -(R)-> 89, 89 -(R)-> 59, 89 -(L)-> 66, 1 -(L)-> 35, 35 -(R)-> 10, 10 -(L)-> 67, 10 -(R)-> 74, 35 -(L)-> 71, 71 -(L)-> 3, 71 -(R)-> 47",
         "mirror_tree_A_H": "   14\n    |-(R)-52\n    |   `-(L)-57\n    |       |-(R)-23\n    |       |   |-(L)-53\n    |       |   |   `-(R)-12\n    |       |   |       `-(R)-72\n    |       |   `-(R)-49\n    |       |       |-(L)-44\n    |       |       |   `-(R)-88\n    |       |       `-(R)-75\n    |       |           `-(L)-81\n    |       `-(L)-87\n    |           |-(R)-58\n    |           |   |-(L)-33\n    |           |   |   |-(L)-76\n    |           |   |   `-(R)-38\n    |           |   `-(R)-25\n    |           |       |-(L)-31\n    |           |       `-(R)-16\n    |           `-(L)-46\n    |               |-(L)-4\n    |               |   |-(L)-82\n    |               |   `-(R)-37\n    |               `-(R)-41\n    |                   |-(R)-40\n    |                   `-(L)-39\n    `-(L)-13\n        |-(L)-42\n        |   |-(R)-51\n        |   |   |-(R)-56\n        |   |   |   |-(L)-62\n        |   |   |   |   |-(L)-22\n        |   |   |   |   `-(R)-61\n        |   |   |   `-(R)-79\n        |   |   |       |-(L)-21\n        |   |   |       `-(R)-55\n        |   |   `-(L)-80\n        |   |       |-(R)-30\n        |   |       |   |-(R)-20\n        |   |       |   `-(L)-65\n        |   |       `-(L)-70\n        |   |           |-(R)-48\n        |   |           `-(L)-78\n        |   `-(L)-24\n        |       |-(R)-83\n        |       |   |-(L)-5\n        |       |   |   |-(R)-64\n        |       |   |   `-(L)-11\n        |       |   `-(R)-86\n        |       |       |-(L)-15\n        |       |       `-(R)-18\n        |       `-(L)-28\n        |           |-(L)-0\n        |           |   |-(R)-77\n        |           |   `-(L)-43\n        |           `-(R)-84\n        |               |-(R)-26\n        |               `-(L)-17\n        `-(R)-9\n            |-(R)-27\n            |   |-(L)-85\n            |   |   |-(L)-68\n            |   |   |   |-(R)-50\n            |   |   |   `-(L)-45\n            |   |   `-(R)-69\n            |   |       |-(R)-63\n            |   |       `-(L)-34\n            |   `-(R)-6\n            |       |-(R)-36\n            |       |   |-(L)-32\n            |       |   `-(R)-19\n            |       `-(L)-7\n            |           |-(R)-54\n            |           `-(L)-73\n            `-(L)-1\n                |-(R)-2\n                |   |-(L)-8\n                |   |   |-(L)-60\n                |   |   `-(R)-29\n                |   `-(R)-89\n                |       |-(R)-59\n                |       `-(L)-66\n                `-(L)-35\n                    |-(R)-10\n                    |   |-(L)-67\n                    |   `-(R)-74\n                    `-(L)-71\n                        |-(L)-3\n                        `-(R)-47"
