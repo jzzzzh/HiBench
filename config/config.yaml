@@ -15,7 +15,7 @@ Dataset:
     Domain: ['University', 'Company']
   Formula:
     Dir: ./dataset/Formula/
-    SubTask: ['calcuate', 'convert', 'equivalent']
+    SubTask: ['calculate', 'convert', 'equivalent']
     Format: ['Infix', 'Prefix', 'Postfix']
     Symbol_Mode: ['easy', 'medium', 'hard']
     Value_Mode: ['easy', 'medium', 'hard']
