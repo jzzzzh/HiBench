@@ -1,0 +1,260 @@
+{
+    "University": "National College",
+    "Faculties": [
+        {
+            "Faculty Name": "Faculty of Science",
+            "Departments": [
+                {
+                    "Department Name": "Department of Physics",
+                    "Programs": [
+                        {
+                            "Program Name": "Bachelor of Business Administration",
+                            "Courses": [
+                                {
+                                    "Course Name": "Educational Psychology",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Professor Cooper Brown",
+                                            "Title": "Professor"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Course Name": "Introduction to Programming",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Lecturer Elijah Phillips",
+                                            "Title": "Lecturer"
+                                        },
+                                        {
+                                            "Name": "Assistant Professor Everett Green",
+                                            "Title": "Assistant Professor"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "Students": [
+                                {
+                                    "Name": "Delilah William",
+                                    "Student ID": "19926142"
+                                }
+                            ]
+                        },
+                        {
+                            "Program Name": "Master of Business Administration",
+                            "Courses": [
+                                {
+                                    "Course Name": "Financial Accounting",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Assistant Professor Logan Walker",
+                                            "Title": "Assistant Professor"
+                                        },
+                                        {
+                                            "Name": "Assistant Professor Rowan Carter",
+                                            "Title": "Assistant Professor"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Course Name": "Urban Design",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Professor Anthony Watson",
+                                            "Title": "Professor"
+                                        },
+                                        {
+                                            "Name": "Lecturer Andrew Murphy",
+                                            "Title": "Lecturer"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "Students": [
+                                {
+                                    "Name": "Ella Allen",
+                                    "Student ID": "83085738"
+                                },
+                                {
+                                    "Name": "Allison Nolan",
+                                    "Student ID": "07148203"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Department Name": "Department of Chemistry",
+                    "Programs": [
+                        {
+                            "Program Name": "Master of Engineering",
+                            "Courses": [
+                                {
+                                    "Course Name": "Urban Design",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Lecturer Gael Garcia",
+                                            "Title": "Lecturer"
+                                        },
+                                        {
+                                            "Name": "Lecturer Nathan Sanders",
+                                            "Title": "Lecturer"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Course Name": "Biochemistry",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Professor Jordan Chavez",
+                                            "Title": "Professor"
+                                        },
+                                        {
+                                            "Name": "Associate Professor Mason Walker",
+                                            "Title": "Associate Professor"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "Students": [
+                                {
+                                    "Name": "Savannah William",
+                                    "Student ID": "48206866"
+                                },
+                                {
+                                    "Name": "Allison Clark",
+                                    "Student ID": "44245441"
+                                }
+                            ]
+                        },
+                        {
+                            "Program Name": "Master of Engineering",
+                            "Courses": [
+                                {
+                                    "Course Name": "Educational Psychology",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Professor Nathan Sanchez",
+                                            "Title": "Professor"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "Students": [
+                                {
+                                    "Name": "Maria Caleb",
+                                    "Student ID": "44816224"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Faculty Name": "Faculty of Medicine",
+            "Departments": [
+                {
+                    "Department Name": "Department of Pharmacology",
+                    "Programs": [
+                        {
+                            "Program Name": "Master of Business Administration",
+                            "Courses": [
+                                {
+                                    "Course Name": "Environmental Science",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Lecturer Matthew Ward",
+                                            "Title": "Lecturer"
+                                        },
+                                        {
+                                            "Name": "Assistant Professor Luka Kim",
+                                            "Title": "Assistant Professor"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Course Name": "Modern Art",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Professor Josiah Watson",
+                                            "Title": "Professor"
+                                        },
+                                        {
+                                            "Name": "Assistant Professor Nolan Clark",
+                                            "Title": "Assistant Professor"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "Students": [
+                                {
+                                    "Name": "Mia Wood",
+                                    "Student ID": "14249223"
+                                }
+                            ]
+                        },
+                        {
+                            "Program Name": "Bachelor of Science",
+                            "Courses": [
+                                {
+                                    "Course Name": "Data Structures",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Associate Professor Walker Castillo",
+                                            "Title": "Associate Professor"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "Students": [
+                                {
+                                    "Name": "Nova Allen",
+                                    "Student ID": "18242092"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Department Name": "Department of Pediatrics",
+                    "Programs": [
+                        {
+                            "Program Name": "Bachelor of Arts",
+                            "Courses": [
+                                {
+                                    "Course Name": "Financial Accounting",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Professor Liam Clark",
+                                            "Title": "Professor"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Course Name": "Civil Engineering Basics",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Professor Micah Wilson",
+                                            "Title": "Professor"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "Students": [
+                                {
+                                    "Name": "Sofia Parker",
+                                    "Student ID": "09564209"
+                                },
+                                {
+                                    "Name": "Isabella Turner",
+                                    "Student ID": "29860693"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
