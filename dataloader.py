@@ -849,8 +849,68 @@ class HibenchDataLoader(TemplateDataLoader):
         with open(save_path, 'w') as file:
             json.dump(data, file, indent=4)
 
+def test_json_dataloader():
+    """Test all JSON question types with different domains and example types"""
+    # Test all JSON question types
+    question_types = [
+        'child_count',
+        'node_depth',
+        'level_count',
+        'node_relationship',
+        'node_attribute',
+        'level_nodes',
+        'path_down_to_up',
+        'path_up_to_down',
+        'shared_ancestor_same_level',
+        'shared_ancestor_diff_level',
+        'path_between_nodes'
+    ]
+    
+    # Test different dataset sizes
+    domains = [
+        'university_structure_large_01',
+        'university_structure_medium_01',
+        'university_bullshit_structure_large_01',
+        'university_bullshit_structure_medium_01'
+    ]
+    
+    # Test different example types
+    example_types = ['OneShot', 'FewShot', 'ZeroShot']
+    
+    print("\nTesting JSON Question Types:")
+    print("=" * 50)
+    
+    for question_type in question_types:
+        print(f"\nTesting question type: {question_type}")
+        print("-" * 30)
+        
+        for domain in domains:
+            print(f"\nDomain: {domain}")
+            
+            for example_type in example_types:
+                args = {
+                    'Task': 'JSON',
+                    'SubTask': question_type,
+                    'Domain': domain,
+                    'ExampleType': example_type
+                }
+                
+                try:
+                    data_loader = HibenchDataLoader(args)
+                    data = data_loader.load_data()
+                    if data and len(data) > 0:
+                        print(f"✓ {example_type}: Successfully loaded {len(data)} items")
+                        if example_type == 'OneShot':  # Show sample for OneShot only to keep output clean
+                            print("Sample question:")
+                            print(json.dumps(data[0], indent=2))
+                    else:
+                        print(f"✗ {example_type}: No data loaded")
+                except Exception as e:
+                    print(f"✗ {example_type}: Error - {str(e)}")
+            print("-" * 30)
+
 def test_dataloader():
-        # args = {'Task':'Code', 'SubTask': 'SpaceComplexity', 'type': 'c++', 'ExampleType':'OneShot'}
+    # args = {'Task':'Code', 'SubTask': 'SpaceComplexity', 'type': 'c++', 'ExampleType':'OneShot'}
     #args = {'Task': 'JSON', 'SubTask': 'type_1', 'Domain': 'university', 'ExampleType':'OneShot'}
     # args = {'Task': 'Fundamental', 'SubTask': 'root', 'Difficulty': 'easy', 'TreeType': 'Normal', 'Balance': 'unbalanced', 'Weight': 'unweighted', 'InputMode': 'edge', 'ExampleType': 'ZeroShot'}
     # args = {'Task': 'Formula', 'SubTask': 'convert', 'Symbol_Mode': 'easy', 'Value_Mode':'easy', 'Length_Mode':'easy', 'format1':'infix', 'format2':'postfix', 'ExampleType':'FewShot'}
@@ -858,30 +918,11 @@ def test_dataloader():
     # args = {'Task': 'Formula', 'SubTask': 'calculate', 'Symbol_Mode': 'easy', 'Value_Mode':'easy', 'Length_Mode':'easy', 'format':'infix', 'ExampleType':'FewShot'}
     # args = {'Task': 'Paper', 'SubTask': 'contextual_qa', 'Mode': 'dev', 'ExampleType':'OneShot'}
     # args = {'Task': 'Fundamental', 'TreeType': 'binary', 'SubTask': 'infix_traversal', 'InputMode': 'hierarchy', 'balance': 'unbalanced', 'weight':'unweighted', 'difficulty':'easy', 'ExampleType':'FewShot'}
-    #data_loader = HibenchDataLoder(args)
-    #data = data_loader.load_data()
-    #print(data[0])
-    # Test JSON task with descriptive name
-    args = {
-        'Task': 'JSON', 
-        'SubTask': 'path_up_to_down',  # Using descriptive name instead of type_1
-        'Domain': 'university_structure_large_01',  # Match actual filename
-        'ExampleType': 'OneShot'
-    }
-    
-    try:
-        data_loader = HibenchDataLoder(args)
-        data = data_loader.load_data()
-        if data and len(data) > 0:
-            print(f"Successfully loaded {len(data)} items")
-            print("First item sample:")
-            print(json.dumps(data[0], indent=2))
-        else:
-            print("No data loaded")
-    except Exception as e:
-        print(f"Error loading data: {str(e)}")
-
+    data_loader = HibenchDataLoder(args)
+    data = data_loader.load_data()
+    print(data[0])
+    test_json_dataset()
 
 if __name__ == '__main__':
     print("This is dataloader.py")
-    test_dataloader()
+    test_json_dataloader()
