@@ -45,7 +45,7 @@ def all_ancestor(G, node) -> List[str]:
 def all_children(G, node):
     successors = set(G.successors(node))
     for successor in list(successors):
-        successors.update(all_ancestor(G, successor))
+        successors.update(all_children(G, successor))
     return successors
 
 

@@ -4,7 +4,7 @@ class FormulaEvaluator(BasicEvaluator):
     def __init__(self, key = 'answer', strip_symbols = '\'"'):
             super().__init__(key, strip_symbols)
     
-    def calcuate(self, source: str, target: str) -> bool:
+    def calculate(self, source: str, target: str) -> bool:
         return self.number_match(source, target)
     
     def convert(self, source: str, target: str) -> bool:

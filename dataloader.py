@@ -44,6 +44,12 @@ class FundamentalNormalPromptGenerator(PromptGenerator):
             PromptTemplate = PromptTemplate.replace('<STRUCTURE>', data[f'{self.input_mode.lower()}_presentation'])
             PromptTemplate = PromptTemplate.replace('<QUESTION>', data['leaf_Q'])
             TrueAnswer = data[f'leaf_A']
+        elif self.sub_task == 'root':
+            OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['Fundamental']['Task']['Normal']['root']['OutputFormatTemplate'])
+            PromptTemplate = self.config['Fundamental']['Task']['Normal']['root']['PromptTemplate']
+            PromptTemplate = PromptTemplate.replace('<STRUCTURE>', data[f'{self.input_mode.lower()}_presentation'])
+            PromptTemplate = PromptTemplate.replace('<QUESTION>', data['root_Q'])
+            TrueAnswer = data[f'root_A']
         elif self.sub_task == 'all_ancestor':
             OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['Fundamental']['Task']['Normal']['all_ancestor']['OutputFormatTemplate'])
             PromptTemplate = self.config['Fundamental']['Task']['Normal']['all_ancestor']['PromptTemplate']
@@ -696,7 +702,7 @@ class PaperPromptGenerator(PromptGenerator):
         return SystemPrompt, UserPrompt, TrueAnswer
 
 
-class PaperDataLoder(TemplateDataLoader):
+class PaperDataLoader(TemplateDataLoader):
     def __init__(self, args):
         super().__init__()
         self.dataset_name = 'Paper'
@@ -806,36 +812,42 @@ class PaperDataLoder(TemplateDataLoader):
         return len(self.data)
 
 
-class HibenchDataLoder(TemplateDataLoader):
+class HibenchDataLoader(TemplateDataLoader):
     def __init__(self, args):
         super().__init__()
-        Task = args['Task']
-        if Task == "Fundamental":
-            self.data_loader = FundamentalDataLoader(args)
-        elif Task == "Code":
-            self.data_loader = CodeDataLoader(args)
-        elif Task == "JSON":
-            self.data_loader = JSONDataLoader(args)
-        elif Task == "Formula":
-            self.data_loader = FormulaDataLoader(args)
-        elif Task == "Paper":
-            self.data_loader = PaperDataLoder(args)
+        self.data_loader = self._get_data_loader(args)
+        self.save_dir = self.config["Eval"]["SaveDir"]
+
+    def _get_data_loader(self, args):
+        loaders = {
+            "Fundamental": FundamentalDataLoader,
+            "Code": CodeDataLoader,
+            "JSON": JSONDataLoader,
+            "Formula": FormulaDataLoader,
+            "Paper": PaperDataLoader,
+        }
+        return loaders.get(args['Task'], None)(args) if args['Task'] in loaders else None
 
     def load_data(self):
-        return self.data_loader.load_data()
-    
+        return self.data_loader.load_data() if self.data_loader else None
+
+    def _get_file_path(self, model_name, args):
+        task, subtask = args['Task'], args['SubTask']
+        base_path = os.path.join(self.save_dir, task, subtask, model_name)
+        json_name = '_'.join(f"{k}_{v}" for k, v in args.items())
+        return base_path, f"{json_name}_*.json"
+
+    def is_data_exist(self, model_name, args):
+        base_path, file_pattern = self._get_file_path(model_name, args)
+        return bool(glob.glob(os.path.join(base_path, file_pattern)))
+
     def save_data(self, data, model_name, args):
-        Task_name = args['Task']
-        SubTask_name = args['SubTask']
-        Save_dir = os.path.join(self.config["Eval"]["SaveDir"], Task_name, SubTask_name, model_name)
-        os.makedirs(Save_dir, exist_ok=True)
-        json_name = '_'.join([f"{key}_{value}" for key, value in args.items()])
+        base_path, file_name = self._get_file_path(model_name, args)
+        os.makedirs(base_path, exist_ok=True)
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        file_name = f"{json_name}_{timestamp}.json"
-        # file_name = f"{json_name}.json"
-        with open(os.path.join(Save_dir, file_name), 'w') as file:
+        save_path = os.path.join(base_path, file_name.replace('_*', f'_{timestamp}'))
+        with open(save_path, 'w') as file:
             json.dump(data, file, indent=4)
- 
 
 def test_dataloader():
         # args = {'Task':'Code', 'SubTask': 'SpaceComplexity', 'type': 'c++', 'ExampleType':'OneShot'}

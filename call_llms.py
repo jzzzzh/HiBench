@@ -36,7 +36,7 @@ class Checker:
         
 
 class LLMModel:
-    def __init__(self, model_id, api_key=None, endpoint=None):
+    def __init__(self, model_id, api_key=None, endpoint=None, device_map='auto'):
         self.model_id = model_id
         self.model_list = ["meta-llama/Meta-Llama-3.1-8B-Instruct", "meta-llama/Llama-3.2-1B-Instruct","meta-llama/Llama-3.2-3B-Instruct", "Qwen/Qwen2.5-0.5B-Instruct", "Qwen/Qwen2.5-1.5B-Instruct", "Qwen/Qwen2.5-3B-Instruct", "Qwen/Qwen2.5-7B-Instruct", "Qwen/Qwen2.5-14B-Instruct",  "Qwen/Qwen2.5-32B-Instruct"]
         self.Large_language_model_list = ["Qwen/Qwen2.5-72B-Instruct", "meta-llama/Llama-3.1-70B-Instruct", "meta-llama/Llama-3.1-405B-Instruct"]
@@ -45,6 +45,7 @@ class LLMModel:
         self.api_key = api_key
         self.endpoint = endpoint
         self.device = "cuda"
+        self.device_map = device_map
         print(f"Loading model: {model_id}")
         if model_id in self.model_list:
             company_name, model_name = model_id.split("/")
@@ -54,7 +55,7 @@ class LLMModel:
                 login(token=read_hf_token())
                 # login(token="")   
                 print(f"Downloading model: {model_id}")
-            self.pipeline = transformers.pipeline("text-generation", model=model_id, model_kwargs={"torch_dtype": torch.bfloat16}, device_map="auto",)
+            self.pipeline = transformers.pipeline("text-generation", model=model_id, model_kwargs={"torch_dtype": torch.bfloat16}, device_map=self.device_map)
             self.terminators = [
                 self.pipeline.tokenizer.eos_token_id,
                 self.pipeline.tokenizer.convert_tokens_to_ids("<|eot_id|>")

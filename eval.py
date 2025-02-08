@@ -1,66 +1,68 @@
-import re
+import glob
 import os
 import json
 
+import yaml
 
-results_folder = f"./task_basic/normal/results"
-# results_folder = f"task_basic/normal/results/test"
-
-
+from evaluator import FundamentalEvaluator, CodeEvaluator, FormulaEvaluator, JsonEvaluator, PaperEvaluator
 
 
-
-
-def string_match(source: str, target: str) -> bool:
-    source = source.lower()
-    target = target.lower()
-    source = re.sub(r'\s+', ' ', source)
-    target = re.sub(r'\s+', ' ', target)
-    source = re.sub(r'[^a-zA-Z0-9]', '', source)
-    target = re.sub(r'[^a-zA-Z0-9]', '', target)
-    if target == source or target in source:
-        return True
+def calculate_accuracy(result_path, task, subtask):
+    if task == 'Fundamental':
+        evaluate = FundamentalEvaluator()
+    elif task == 'Code':
+        evaluate = CodeEvaluator()
+    elif task == 'Formula':
+        evaluate = FormulaEvaluator()
+    elif task == 'JSON':
+        evaluate = JsonEvaluator()
+    elif task == 'Paper':
+        evaluate = PaperEvaluator()
     else:
-        return False
+        raise ValueError(f'unknown task {task}')
 
+    
+    result_path = os.path.join(result_path, task, subtask)
+    files = glob.glob(os.path.join(result_path, '*', '*', '*.json'))
+    for file in files:
+        eval_path = file.replace('.json', '.txt')
+        with open(file, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        total_questions = 0
+        correct_answers = 0
+        for result in data:
+            total_questions += 1
+            answer = str(result.get("response"))
+            ref    = str(result.get("TrueAnswer"))
+            # >>>> Temp adaptation for represent_mode of fundamental tasks.
+            kwargs = dict()
+            if subtask in ['add_node', 'remove_node', 'mirror_tree']:
+                kwargs = dict(represent_mode='edge') if 'InputMode_edge' in file else dict(represent_mode='hierarchy')
+            # <<<< Temp adaptation for represent_mode of fundamental tasks.
+            if evaluate(subtask, source=answer, target=ref, **kwargs):
+                correct_answers += 1
+        accuracy = correct_answers / total_questions if total_questions > 0 else 0
 
-def calculate_accuracy(results_folder):
-    for root, _, files in os.walk(results_folder):
-        for file in files:
-            if file.endswith(".json"):
-                input_path = os.path.join(root, file)
-                output_path = os.path.join(root, os.path.splitext(file)[0] + ".txt")
+        with open(eval_path, "w", encoding="utf-8") as f:
+            f.write(f"Total Questions: {total_questions}\n")
+            f.write(f"Correct Answers: {correct_answers}\n")
+            f.write(f"Accuracy: {accuracy:.2%}\n")
 
-                with open(input_path, "r", encoding="utf-8") as f:
-                    data = json.load(f)
-
-                total_questions = 0
-                correct_answers = 0
-
-                for question in data:
-                    total_questions += 1
-                    ans = str(question.get("llm-answer"))
-                    ans = extract_answer(ans, 'answer')
-                    ans = str(ans)
-                    print(ans)
-                    ref_ans = str(question.get("ref_ans"))
-                    print(ref_ans)
-                    if string_match(ans, ref_ans):
-                        correct_answers += 1
-
-                accuracy = correct_answers / total_questions if total_questions > 0 else 0
-
-                with open(output_path, "w", encoding="utf-8") as f:
-                    f.write(f"Total Questions: {total_questions}\n")
-                    f.write(f"Correct Answers: {correct_answers}\n")
-                    f.write(f"Accuracy: {accuracy:.2%}\n")
-
-                print(f"Accuracy for {input_path} calculated and saved to {output_path}.")
-
-
-
-
-
-
+        print(f"Accuracy for {file} calculated and saved to {eval_path}.")
+        
+        
 if __name__ == '__main__':
-    calculate_accuracy(results_folder)
+    with open('./config/config.yaml', 'r') as file:
+        configs = yaml.safe_load(file)
+    for task in configs['Dataset']:
+        print(f'{task = }')
+        subtasks = configs['Dataset'][task]['SubTask']
+        if isinstance(subtasks, dict):
+            subtasks = sum(subtasks.values(), [])
+        for subtask in subtasks:
+            print(f'{subtask = }')
+            try:
+                calculate_accuracy(configs['Eval']['SaveDir'], task, subtask)
+            except AttributeError as e:
+                print(f'subtask name error: {task} {subtask}')
+                print(e)
