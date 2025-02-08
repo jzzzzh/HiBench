@@ -70,6 +70,8 @@ class BasicEvaluator(object):
         target = target.lower()
         source = self._extract_answer(source)
         source = self._refine_answer(source)
+        if source is None:
+            return False
         if remove_blank:
             source = re.sub(r'\s+', '', source)
             target = re.sub(r'\s+', '', target)
@@ -90,6 +92,8 @@ class BasicEvaluator(object):
         target = target.lower()
         source = self._extract_answer(source)
         source = self._refine_answer(source)
+        if source is None:
+            return False
         return source.strip() == target.strip()
         
     def _extract_answer(self, string: str) -> str:
@@ -117,6 +121,8 @@ class BasicEvaluator(object):
                 return None
 
     def _refine_answer(self, string: str):
+        if string is None:
+            return None
         string = string.lower()
         string = string.strip()
         re.sub(r'\s+', ' ', string)
