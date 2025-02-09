@@ -155,51 +155,52 @@ class ArgumentGenerator:
             EvalList += self.generate_paper_eval(ExampleType=ExampleType)
         return EvalList
     
-    def test_dataloader(self):
+    def test_dataloader(self, Task_list = ['Fundamental', 'Code', 'JSON', 'Formula', 'Paper']):
         logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
         logger = logging.getLogger(__name__)
-        
-        EvalList = self.generate_fundamental_eval()
-        logger.info("check fundamental dataloader")
-        for Eval in tqdm(EvalList):
-            Hibenchdataloader = HibenchDataLoader(Eval)
-            Hibenchdataloader.load_data()
-        logger.info("fundamental pass")
-        
-        EvalList = self.generate_formula_eval()
-        logger.info("check formula dataloader")
-        for Eval in tqdm(EvalList):
-            Hibenchdataloader = HibenchDataLoader(Eval)
-            Hibenchdataloader.load_data()
-        logger.info("formula pass")
-
-        EvalList = self.generate_json_eval()
-        logger.info("check json dataloader")
-        for Eval in tqdm(EvalList):
-            Hibenchdataloader = HibenchDataLoader(Eval)
-            Hibenchdataloader.load_data()
-        logger.info("json pass")
-
-        EvalList = self.generate_code_eval()
-        logger.info("check code dataloader")
-        for Eval in tqdm(EvalList):
-            Hibenchdataloader = HibenchDataLoader(Eval)
-            Hibenchdataloader.load_data()
-        logger.info("code pass")
-
-        EvalList = self.generate_paper_eval()
-        logger.info("check paper dataloader")
-        for Eval in tqdm(EvalList):
-            Hibenchdataloader = HibenchDataLoader(Eval)
-            Hibenchdataloader.load_data()
-        logger.info("paper pass")
+        if 'Fundamental' in Task_list:
+            EvalList = self.generate_fundamental_eval()
+            logger.info("check fundamental dataloader")
+            for Eval in tqdm(EvalList):
+                Hibenchdataloader = HibenchDataLoader(Eval)
+                Hibenchdataloader.load_data()
+            logger.info("fundamental pass")
+        if 'Code' in Task_list:
+            EvalList = self.generate_code_eval()
+            logger.info("check code dataloader")
+            for Eval in tqdm(EvalList):
+                Hibenchdataloader = HibenchDataLoader(Eval)
+                Hibenchdataloader.load_data()
+            logger.info("code pass")
+        if 'JSON' in Task_list:
+            EvalList = self.generate_json_eval()
+            logger.info("check json dataloader")
+            for Eval in tqdm(EvalList):
+                Hibenchdataloader = HibenchDataLoader(Eval)
+                Hibenchdataloader.load_data()
+            logger.info("json pass")
+        if 'Formula' in Task_list:
+            EvalList = self.generate_formula_eval()
+            logger.info("check formula dataloader")
+            for Eval in tqdm(EvalList):
+                Hibenchdataloader = HibenchDataLoader(Eval)
+                Hibenchdataloader.load_data()
+            logger.info("formula pass")
+        if 'Paper' in Task_list:
+            EvalList = self.generate_paper_eval()
+            logger.info("check paper dataloader")
+            for Eval in tqdm(EvalList):
+                Hibenchdataloader = HibenchDataLoader(Eval)
+                Hibenchdataloader.load_data()
+            logger.info("paper pass")
 
 def main():
     argument_generator = ArgumentGenerator()
-    EvalList = argument_generator.generate_all_eval(Task_list = ['Fundamental', 'Code', 'Formula'], ExampleType='ZeroShot')
+    EvalList = argument_generator.generate_all_eval(Task_list = ['Code', 'Formula'], ExampleType='ZeroShot')
     # model_list = ["meta-llama/Meta-Llama-3.1-8B-Instruct"] # ["Qwen/Qwen2.5-0.5B-Instruct"] #, "meta-llama/Meta-Llama-3.1-8B-Instruct"]
     # model_list = ["meta-llama/Meta-Llama-3.1-8B-Instruct", "meta-llama/Llama-3.2-1B-Instruct","meta-llama/Llama-3.2-3B-Instruct", "Qwen/Qwen2.5-0.5B-Instruct", "Qwen/Qwen2.5-1.5B-Instruct", "Qwen/Qwen2.5-3B-Instruct", "Qwen/Qwen2.5-7B-Instruct"]
-    model_list = ["Qwen/Qwen2.5-7B-Instruct"]# , "Qwen/Qwen2.5-0.5B-Instruct", "Qwen/Qwen2.5-1.5B-Instruct", "Qwen/Qwen2.5-3B-Instruct", "Qwen/Qwen2.5-7B-Instruct"]
+    # model_list = ["Qwen/Qwen2.5-7B-Instruct"]# , "Qwen/Qwen2.5-0.5B-Instruct", "Qwen/Qwen2.5-1.5B-Instruct", "Qwen/Qwen2.5-3B-Instruct", "Qwen/Qwen2.5-7B-Instruct"]
+    model_list = ["meta-llama/Meta-Llama-3.1-8B-Instruct"]
     DUPLICATE_CHECK = True
     for model in model_list:
         llm = LLMModel(model, api_key=None, device_map='cuda:0')
@@ -249,3 +250,5 @@ def Logo():
 if __name__ == '__main__':
     Logo()
     main()
+    # argument_generator = ArgumentGenerator()
+    # argument_generator.test_dataloader(Task_list=['JSON'])
