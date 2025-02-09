@@ -251,4 +251,4 @@ if __name__ == '__main__':
     Logo()
     main()
     # argument_generator = ArgumentGenerator()
-    # argument_generator.test_dataloader(Task_list=['JSON'])
+    # argument_generator.test_dataloader(Task_list=['Formula'])
