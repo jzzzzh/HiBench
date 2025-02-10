@@ -291,15 +291,15 @@ def gen_all_datasets():
                 save_dataset(prefix2infix, save_path + f"convert/prefix2infix_symbol_{symbol_complexity}_value_{value_complexity}_length_{length}.csv", ConvertColumnNames)
                 save_dataset(prefix2postfix, save_path + f"convert/prefix2postfix_symbol_{symbol_complexity}_value_{value_complexity}_length_{length}.csv", ConvertColumnNames)
                 
-                save_dataset(postfixEq2PrefixList, save_path + f"equivalent/postfixEq2Prefix_symbol_{symbol_complexity}_value_{value_complexity}_length_{length}.csv", EqualColumnNames)
-                save_dataset(postfixEq2InfixList, save_path + f"equivalent/postfixEq2Infix_symbol_{symbol_complexity}_value_{value_complexity}_length_{length}.csv", EqualColumnNames)
+                save_dataset(postfixEq2PrefixList, save_path + f"equivalent/postfixEq2prefix_symbol_{symbol_complexity}_value_{value_complexity}_length_{length}.csv", EqualColumnNames)
+                save_dataset(postfixEq2InfixList, save_path + f"equivalent/postfixEq2infix_symbol_{symbol_complexity}_value_{value_complexity}_length_{length}.csv", EqualColumnNames)
                 save_dataset(postfixEq2postfixList, save_path + f"equivalent/postfixEq2postfix_symbol_{symbol_complexity}_value_{value_complexity}_length_{length}.csv", EqualColumnNames)
-                save_dataset(prefixEq2InfixList, save_path + f"equivalent/prefixEq2Infix_symbol_{symbol_complexity}_value_{value_complexity}_length_{length}.csv", EqualColumnNames)
-                save_dataset(prefixEq2PostfixList, save_path + f"equivalent/prefixEq2Postfix_symbol_{symbol_complexity}_value_{value_complexity}_length_{length}.csv", EqualColumnNames)
-                save_dataset(prefixEq2PrefixList, save_path + f"equivalent/prefixEq2Prefix_symbol_{symbol_complexity}_value_{value_complexity}_length_{length}.csv", EqualColumnNames)
-                save_dataset(infixEq2PostfixList, save_path + f"equivalent/infixEq2Postfix_symbol_{symbol_complexity}_value_{value_complexity}_length_{length}.csv", EqualColumnNames)
-                save_dataset(infixEq2PrefixList, save_path + f"equivalent/infixEq2Prefix_symbol_{symbol_complexity}_value_{value_complexity}_length_{length}.csv", EqualColumnNames)
-                save_dataset(infixEq2InfixList, save_path + f"equivalent/infixEq2Infix_symbol_{symbol_complexity}_value_{value_complexity}_length_{length}.csv", EqualColumnNames)
+                save_dataset(prefixEq2InfixList, save_path + f"equivalent/prefixEq2infix_symbol_{symbol_complexity}_value_{value_complexity}_length_{length}.csv", EqualColumnNames)
+                save_dataset(prefixEq2PostfixList, save_path + f"equivalent/prefixEq2postfix_symbol_{symbol_complexity}_value_{value_complexity}_length_{length}.csv", EqualColumnNames)
+                save_dataset(prefixEq2PrefixList, save_path + f"equivalent/prefixEq2prefix_symbol_{symbol_complexity}_value_{value_complexity}_length_{length}.csv", EqualColumnNames)
+                save_dataset(infixEq2PostfixList, save_path + f"equivalent/infixEq2postfix_symbol_{symbol_complexity}_value_{value_complexity}_length_{length}.csv", EqualColumnNames)
+                save_dataset(infixEq2PrefixList, save_path + f"equivalent/infixEq2prefix_symbol_{symbol_complexity}_value_{value_complexity}_length_{length}.csv", EqualColumnNames)
+                save_dataset(infixEq2InfixList, save_path + f"equivalent/infixEq2infix_symbol_{symbol_complexity}_value_{value_complexity}_length_{length}.csv", EqualColumnNames)
 
                 
 
