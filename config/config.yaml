@@ -11,8 +11,8 @@ Dataset:
       Binary: ['balance', 'prefix_traversal', 'infix_traversal', 'postfix_traversal', 'traversal_order_verification', 'mirror_tree']
   JSON:
     Dir: ./dataset/JSON/
-    SubTask: ['Task1', 'Task2', 'Task3', 'Task4', 'Task5']
-    Domain: ['University', 'Company']
+    SubTask: ['child_count', 'node_depth', 'level_count', 'node_relationship', 'node_attribute', 'level_nodes', 'path_down_to_up', 'path_up_to_down', 'shared_ancestor_same_level', 'shared_ancestor_diff_level', 'path_between_nodes']
+    Domain: ['university_structure_large_01', 'university_structure_large_02', 'university_structure_medium_01', 'university_structure_medium_02', 'university_structure_small','university_bullshit_structure_large_01', 'university_bullshit_structure_medium_01', 'university_bullshit_structure_large_02', 'university_bullshit_structure_medium_02', 'university_bullshit_structure_small']
   Formula:
     Dir: ./dataset/Formula/
     SubTask: ['calculate', 'convert', 'equivalent']
