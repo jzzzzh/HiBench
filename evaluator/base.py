@@ -46,11 +46,11 @@ class BasicEvaluator(object):
         target = target.lower()
         source = self._extract_answer(source)
         source = self._refine_answer(source)
+        if source is None:
+            return False
         if skip:
             source = re.sub(skip, '', source)
             target = re.sub(skip, '', target)
-        if source is None:
-            return False
         if target == source or target in source:
             return True
         else:
