@@ -41,11 +41,14 @@ class BasicEvaluator(object):
         else:
             return False
     
-    def string_match(self, source: str, target: str) -> bool:
+    def string_match(self, source: str, target: str, skip: str = None) -> bool:
         source = source.lower()
         target = target.lower()
         source = self._extract_answer(source)
         source = self._refine_answer(source)
+        if skip:
+            source = re.sub(skip, '', source)
+            target = re.sub(skip, '', target)
         if source is None:
             return False
         if target == source or target in source:
