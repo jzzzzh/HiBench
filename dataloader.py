@@ -4,6 +4,7 @@ import os
 import yaml
 import csv
 from datetime import datetime
+import random
 class TemplateDataLoader:
     def __init__(self):
         config_path = os.path.join(os.path.dirname(__file__), 'config/config.yaml')
@@ -828,8 +829,13 @@ class HibenchDataLoader(TemplateDataLoader):
         }
         return loaders.get(args['Task'], None)(args) if args['Task'] in loaders else None
 
-    def load_data(self):
-        return self.data_loader.load_data() if self.data_loader else None
+    def load_data(self, num_samples=None):
+        data = self.data_loader.load_data() if self.data_loader else None
+        if num_samples is not None and isinstance(num_samples, int):
+            num_samples = min(num_samples, len(data))
+            random.shuffle(data)
+            return data[:num_samples]
+        return data
 
     def _get_file_path(self, model_name, args):
         task, subtask = args['Task'], args['SubTask']
