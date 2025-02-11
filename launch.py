@@ -63,8 +63,8 @@ class ArgumentGenerator:
     def generate_json_eval(self, ExampleType='ALL', SubTask='ALL', Domain='ALL'):
         json_parameter = {
             'Task': 'JSON',
-            'SubTask': ['type_1', 'type_2', 'type_3', 'type_4', 'type_5'],
-            'Domain': ['university', 'company'],
+            'SubTask': ['child_count', 'node_depth', 'level_count', 'node_relationship', 'node_attribute', 'level_nodes', 'path_down_to_up', 'path_up_to_down', 'shared_ancestor_same_level', 'shared_ancestor_diff_level', 'path_between_nodes'],
+            'Domain': ['university_structure_large_01', 'university_structure_large_02', 'university_structure_medium_01', 'university_structure_medium_02', 'university_structure_small','university_bullshit_structure_large_01', 'university_bullshit_structure_medium_01', 'university_bullshit_structure_large_02', 'university_bullshit_structure_medium_02', 'university_bullshit_structure_small'],
             'ExampleType': ['ZeroShot', 'FewShot', 'OneShot']
         }
         if ExampleType != 'ALL':

@@ -216,78 +216,82 @@ class JSONPromptGenerator(PromptGenerator):
         self.dataset_name = 'JSON'
         self.sub_task = SubTask
         
-    def generate(self, data):
+    def generate(self, structure, data):
         SystemTemplate = self.config['JSON']['SystemTemplate']
         OutputFormatTemplate = self.config['JSON']['OutputFormatTemplate']
-        
-        # Map subtasks to their config task numbers and templates
-        task_templates = {
-            'child_count': {
-                'task': 'Task1',
-                'prompt': "Given the hierarchical structure, answer the following question about counting children nodes: {question}"
-            },
-            'node_depth': {
-                'task': 'Task2',
-                'prompt': "Given the hierarchical structure, answer the following question about node depth: {question}"
-            },
-            'level_count': {
-                'task': 'Task3',
-                'prompt': "Given the hierarchical structure, answer the following question about counting nodes at a level: {question}"
-            },
-            'node_relationship': {
-                'task': 'Task4',
-                'prompt': "Given the hierarchical structure, answer the following question about node relationships: {question}"
-            },
-            'node_attribute': {
-                'task': 'Task5',
-                'prompt': "Given the hierarchical structure, answer the following question about node attributes: {question}"
-            },
-            'level_nodes': {
-                'task': 'Task6',
-                'prompt': "Given the hierarchical structure, answer the following question about nodes at a specific level: {question}"
-            },
-            'path_down_to_up': {
-                'task': 'Task7',
-                'prompt': "Given the hierarchical structure, answer the following question about paths from lower to higher levels: {question}"
-            },
-            'path_up_to_down': {
-                'task': 'Task8',
-                'prompt': "Given the hierarchical structure, answer the following question about paths from higher to lower levels: {question}"
-            },
-            'shared_ancestor_same_level': {
-                'task': 'Task9',
-                'prompt': "Given the hierarchical structure, answer the following question about common ancestors of nodes at the same level: {question}"
-            },
-            'shared_ancestor_diff_level': {
-                'task': 'Task10',
-                'prompt': "Given the hierarchical structure, answer the following question about common ancestors of nodes at different levels: {question}"
-            },
-            'path_between_nodes': {
-                'task': 'Task11',
-                'prompt': "Given the hierarchical structure, answer the following question about paths between any two nodes: {question}"
-            }
-        }
 
-        if self.sub_task not in task_templates:
-            raise ValueError(f"Unknown subtask: {self.sub_task}")
-            
-        template = task_templates[self.sub_task]
-        task_id = template['task']
-        
-        # Set output format from config
-        OutputFormatTemplate = OutputFormatTemplate.replace(
-            '<OUTPUTFORMATE>', 
-            self.config['JSON']['Task'][task_id]['OutputFormatTemplate']
-        )
-        
-        # Build prompt from template
-        PromptTemplate = self.config['JSON']['Task'][task_id]['PromptTemplate']
-        PromptTemplate = PromptTemplate.replace('<QUESTION>', data['question'])
+        # Map subtasks to their config task numbers and templates
+        if self.sub_task == 'child_count':
+            OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['JSON']['Task']['child_count']['OutputFormatTemplate'])
+            PromptTemplate = self.config['JSON']['Task']['child_count']['PromptTemplate']
+            PromptTemplate = PromptTemplate.replace('<JSON>', structure)
+            PromptTemplate = PromptTemplate.replace('<QUESTION>', data['question'])
+            TrueAnswer = data['true_answer']
+        elif self.sub_task == 'node_depth':
+            OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['JSON']['Task']['node_depth']['OutputFormatTemplate'])
+            PromptTemplate = self.config['JSON']['Task']['node_depth']['PromptTemplate']
+            PromptTemplate = PromptTemplate.replace('<JSON>', structure)
+            PromptTemplate = PromptTemplate.replace('<QUESTION>', data['question'])
+            TrueAnswer = data['true_answer']
+        elif self.sub_task == 'level_count':
+            OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['JSON']['Task']['level_count']['OutputFormatTemplate'])
+            PromptTemplate = self.config['JSON']['Task']['level_count']['PromptTemplate']
+            PromptTemplate = PromptTemplate.replace('<JSON>', structure)
+            PromptTemplate = PromptTemplate.replace('<QUESTION>', data['question'])
+            TrueAnswer = data['true_answer']
+        elif self.sub_task == 'node_relationship':
+            OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['JSON']['Task']['node_relationship']['OutputFormatTemplate'])
+            PromptTemplate = self.config['JSON']['Task']['node_relationship']['PromptTemplate']
+            PromptTemplate = PromptTemplate.replace('<JSON>', structure)
+            PromptTemplate = PromptTemplate.replace('<QUESTION>', data['question'])
+            TrueAnswer = data['true_answer']
+        elif self.sub_task == 'node_attribute':
+            OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['JSON']['Task']['node_attribute']['OutputFormatTemplate'])
+            PromptTemplate = self.config['JSON']['Task']['node_attribute']['PromptTemplate']
+            PromptTemplate = PromptTemplate.replace('<JSON>', structure)
+            PromptTemplate = PromptTemplate.replace('<QUESTION>', data['question'])
+            TrueAnswer = data['true_answer']
+        elif self.sub_task == 'level_nodes':
+            OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['JSON']['Task']['level_nodes']['OutputFormatTemplate'])
+            PromptTemplate = self.config['JSON']['Task']['level_nodes']['PromptTemplate']
+            PromptTemplate = PromptTemplate.replace('<JSON>', structure)
+            PromptTemplate = PromptTemplate.replace('<QUESTION>', data['question'])
+            TrueAnswer = data['true_answer']
+        elif self.sub_task == 'path_down_to_up':
+            OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['JSON']['Task']['path_down_to_up']['OutputFormatTemplate'])
+            PromptTemplate = self.config['JSON']['Task']['path_down_to_up']['PromptTemplate']
+            PromptTemplate = PromptTemplate.replace('<JSON>', structure)
+            PromptTemplate = PromptTemplate.replace('<QUESTION>', data['question'])
+            TrueAnswer = data['true_answer']
+        elif self.sub_task == 'path_up_to_down':
+            OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['JSON']['Task']['path_up_to_down']['OutputFormatTemplate'])
+            PromptTemplate = self.config['JSON']['Task']['path_up_to_down']['PromptTemplate']
+            PromptTemplate = PromptTemplate.replace('<JSON>', structure)
+            PromptTemplate = PromptTemplate.replace('<QUESTION>', data['question'])
+            TrueAnswer = data['true_answer']
+        elif self.sub_task == 'shared_ancestor_same_level':
+            OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['JSON']['Task']['shared_ancestor_same_level']['OutputFormatTemplate'])
+            PromptTemplate = self.config['JSON']['Task']['shared_ancestor_same_level']['PromptTemplate']
+            PromptTemplate = PromptTemplate.replace('<JSON>', structure)
+            PromptTemplate = PromptTemplate.replace('<QUESTION>', data['question'])
+            TrueAnswer = data['true_answer']
+        elif self.sub_task == 'shared_ancestor_diff_level':
+            OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['JSON']['Task']['shared_ancestor_diff_level']['OutputFormatTemplate'])
+            PromptTemplate = self.config['JSON']['Task']['shared_ancestor_diff_level']['PromptTemplate']
+            PromptTemplate = PromptTemplate.replace('<JSON>', structure)
+            PromptTemplate = PromptTemplate.replace('<QUESTION>', data['question'])
+            TrueAnswer = data['true_answer']
+        elif self.sub_task == 'path_between_nodes':
+            OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['JSON']['Task']['path_between_nodes']['OutputFormatTemplate'])
+            PromptTemplate = self.config['JSON']['Task']['path_between_nodes']['PromptTemplate']
+            PromptTemplate = PromptTemplate.replace('<JSON>', structure)
+            PromptTemplate = PromptTemplate.replace('<QUESTION>', data['question'])
+            TrueAnswer = data['true_answer']
+        else:
+            raise ValueError(f'unknown subtask {self.sub_task}')
         
         SystemPrompt = SystemTemplate
-        UserPrompt = PromptTemplate + OutputFormatTemplate
-        TrueAnswer = data['true_answer']
-        
+        UserPrompt = PromptTemplate + '\n' + OutputFormatTemplate
         return SystemPrompt, UserPrompt, TrueAnswer
 
 
@@ -306,19 +310,6 @@ class JSONDataLoader(TemplateDataLoader):
         self.data_generator = JSONPromptGenerator(self.sub_task)
         
         # Map descriptive names to task numbers for prompt config
-        self.task_map = {
-            "child_count": "Task1",
-            "node_depth": "Task2", 
-            "level_count": "Task3",
-            "node_relationship": "Task4",
-            "node_attribute": "Task5",
-            "level_nodes": "Task6",
-            "path_down_to_up": "Task7",
-            "path_up_to_down": "Task8",
-            "shared_ancestor_same_level": "Task9",
-            "shared_ancestor_diff_level": "Task10",
-            "path_between_nodes": "Task11"
-        }
 
         if 'ExampleType' in args:
             self.example_type = args['ExampleType']
@@ -328,18 +319,22 @@ class JSONDataLoader(TemplateDataLoader):
 
     def load_data(self):
         # Load from dataset/JSON/QA directory
-        test_dataset_path = os.path.join(
+        dataset_path = os.path.join(
+            self.dataset_dir,
+            "dataset",
+            f"{self.domain}.json"
+        )
+        question_path = os.path.join(
             self.dataset_dir,
             "QA",
             self.sub_task,
             f"{self.sub_task}_{self.domain}.json"
         )
-
-        if not os.path.exists(test_dataset_path):
-            print(f"Warning: No dataset found at {test_dataset_path}")
-            return self.data
-
-        with open(test_dataset_path, 'r') as file:
+        
+        with open(dataset_path, 'r') as file:
+            structure_data = str(json.load(file))
+        
+        with open(question_path, 'r') as file:
             train_data = json.load(file)
 
         for data in train_data:
@@ -347,23 +342,21 @@ class JSONDataLoader(TemplateDataLoader):
             input_data['question'] = data['question']
             input_data['true_answer'] = data['answer']
             
-            SystemPrompt, UserPrompt, TrueAnswer = self.data_generator.generate(input_data)
+            SystemPrompt, UserPrompt, TrueAnswer = self.data_generator.generate(structure_data, input_data)
 
             if self.example_type == "OneShot":
-                task_id = self.task_map[self.sub_task]
-                one_shot_question = self.prompt_config['JSON']['Task'][task_id]['Example']['Question1']
-                one_shot_answers = self.prompt_config['JSON']['Task'][task_id]['Example']['Answer1']
+                one_shot_question = self.prompt_config['JSON']['Task'][self.sub_task]['Example']['Question1']
+                one_shot_answers = self.prompt_config['JSON']['Task'][self.sub_task]['Example']['Answer1']
                 ExamplePrompt = self.oneshot_example_prompt.replace('<QUESTION1>', one_shot_question).replace('<ANSWER1>', one_shot_answers)
                 UserPrompt = ExamplePrompt + UserPrompt
 
             elif self.example_type == "FewShot":
-                task_id = self.task_map[self.sub_task]
-                few_shot_question1 = self.prompt_config['JSON']['Task'][task_id]['Example']['Question1']
-                few_shot_answers1 = self.prompt_config['JSON']['Task'][task_id]['Example']['Answer1']
-                few_shot_question2 = self.prompt_config['JSON']['Task'][task_id]['Example']['Question2']
-                few_shot_answers2 = self.prompt_config['JSON']['Task'][task_id]['Example']['Answer2']
-                few_shot_question3 = self.prompt_config['JSON']['Task'][task_id]['Example']['Question3']
-                few_shot_answers3 = self.prompt_config['JSON']['Task'][task_id]['Example']['Answer3']
+                few_shot_question1 = self.prompt_config['JSON']['Task'][self.sub_task]['Example']['Question1']
+                few_shot_answers1 = self.prompt_config['JSON']['Task'][self.sub_task]['Example']['Answer1']
+                few_shot_question2 = self.prompt_config['JSON']['Task'][self.sub_task]['Example']['Question2']
+                few_shot_answers2 = self.prompt_config['JSON']['Task'][self.sub_task]['Example']['Answer2']
+                few_shot_question3 = self.prompt_config['JSON']['Task'][self.sub_task]['Example']['Question3']
+                few_shot_answers3 = self.prompt_config['JSON']['Task'][self.sub_task]['Example']['Answer3']
                 
                 ExamplePrompt = self.fewshot_example_prompt.replace('<QUESTION1>', few_shot_question1).replace('<ANSWER1>', few_shot_answers1)
                 ExamplePrompt = ExamplePrompt.replace('<QUESTION2>', few_shot_question2).replace('<ANSWER2>', few_shot_answers2)
@@ -686,16 +679,19 @@ class PaperPromptGenerator(PromptGenerator):
         if self.sub_task == 'contextual_qa':
             OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['Paper']['Task']['contextual_qa']['OutputFormatTemplate'])
             PromptTemplate = self.config['Paper']['Task']['contextual_qa']['PromptTemplate']
+            PromptTemplate = PromptTemplate.replace('<JSON>', structure)
             PromptTemplate = PromptTemplate.replace('<QUESTION>', data['question'])
             TrueAnswer = data['true_answer']
         elif self.sub_task == 'disordered_section':
             OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['Paper']['Task']['disordered_section']['OutputFormatTemplate'])
             PromptTemplate = self.config['Paper']['Task']['disordered_section']['PromptTemplate']
+            PromptTemplate = PromptTemplate.replace('<JSON>', structure)
             PromptTemplate = PromptTemplate.replace('<QUESTION>', data['question'])
             TrueAnswer = data['true_answer']
         elif self.sub_task == 'outline_extraction':
             OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['Paper']['Task']['outline_extraction']['OutputFormatTemplate'])
             PromptTemplate = self.config['Paper']['Task']['outline_extraction']['PromptTemplate']
+            PromptTemplate = PromptTemplate.replace('<JSON>', structure)
             PromptTemplate = PromptTemplate.replace('<QUESTION>', data['question'])
             TrueAnswer = data['true_answer']
         SystemPrompt = SystemTemplate
@@ -863,7 +859,6 @@ def test_json_dataloader():
         'node_depth',
         'level_count',
         'node_relationship',
-        'node_attribute',
         'level_nodes',
         'path_down_to_up',
         'path_up_to_down',

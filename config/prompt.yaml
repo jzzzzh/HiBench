@@ -163,8 +163,8 @@ JSON:
   SystemTemplate: "As an AI agent, you are tasked with performing hierarchical structure reasoning to assist in understanding and analyzing complex organizational frameworks."
   OutputFormatTemplate: "Please return the answer in JSON format directly like <OUTPUTFORMATE> and do not feedback the detailed process."
   Task:
-    Task1:
-      PromptTemplate: "Given a JSON object <JSON>, <QUESTION>."
+    child_count:
+      PromptTemplate: "Given a JSON object <JSON>\n <QUESTION>."
       OutputFormatTemplate: "{\"answer\": 1}"
       Example: 
           Question1: "Given a JSON object {'Name': Peter, 'Animals':['cat', 'dog']}.How many animals does Peter have?"
@@ -173,8 +173,8 @@ JSON:
           Answer2: "{\"answer\": 3}"
           Question3: "Given a JSON object {'Name': Peter, 'Animals':['cat', 'dog', 'fish', 'bird']}.How many animals does Peter have?"
           Answer3: "{\"answer\": 4}"
-    Task2:
-      PromptTemplate: "Given a JSON object <JSON>, <QUESTION>."
+    node_depth:
+      PromptTemplate: "Given a JSON object <JSON>\n <QUESTION>."
       OutputFormatTemplate: "{\"answer\": \"Employees\"}"
       Example: 
           Question1: "Given a JSON object {'Name': Peter, 'Animals':['cat', 'dog']}.Which level does the dog in?"
@@ -183,8 +183,8 @@ JSON:
           Answer2: "{\"answer\": Animals}"
           Question3: "Given a JSON object {'Name': Peter, 'Animals':['cat', 'dog', 'fish', 'bird']}.Which level does the Peter in?"
           Answer3: "{\"answer\": Name}"
-    Task3:
-      PromptTemplate: "Given a JSON object <JSON>, <QUESTION>."
+    level_count:
+      PromptTemplate: "Given a JSON object <JSON>\n <QUESTION>."
       OutputFormatTemplate: "{\"answer\": 1}"
       Example: 
           Question1: "Given a JSON object {'Name': Peter, 'Animals':['cat':{'a', 'b'}, 'dog':{'c', 'd'}]}.How many dogs does Peter have?"
@@ -193,8 +193,8 @@ JSON:
           Answer2: "{\"answer\": 3}"
           Question3: "Given a JSON object {'Name': Peter, 'Animals':['cat':{'a', 'b'}, 'dog':{'c', 'd', 'g'}, 'fish':{'e', 'f'}, 'bird':{'h'}]}.How many birds does Peter have?"
           Answer3: "{\"answer\": 1}"
-    Task4:
-      PromptTemplate: "Given a JSON object <JSON>, <QUESTION>."
+    node_relationship:
+      PromptTemplate: "Given a JSON object <JSON>\n <QUESTION>."
       OutputFormatTemplate: "{\"answer\": \"True\"}"
       Example: 
           Question1: "Given a JSON object {'Name': Peter, 'Animals':['cat':{'a', 'b'}, 'dog':{'c', 'd'}]}.Does cat belongs to Peter?"
@@ -203,8 +203,8 @@ JSON:
           Answer2: "{\"answer\": false}"
           Question3: "Given a JSON object {'Name': Peter, 'Animals':['cat':{'a', 'b'}, 'dog':{'c', 'd', 'g'}, 'fish':{'e', 'f'}, 'bird':{'h'}]}.Does h belongs to bird?"
           Answer3: "{\"answer\": true}"
-    Task5:
-      PromptTemplate: "Given a JSON object <JSON>, <QUESTION>."
+    node_attribute:
+      PromptTemplate: "Given a JSON object <JSON>\n <QUESTION>."
       OutputFormatTemplate: "{\"answer\": \"XXX\"}"
       Example: 
           Question1: "Given a JSON object {'Name': Peter, 'Animals':['cat':{'Name': 'a'}, 'dog':{'Name': 'c'}]}.What is the name of the cat?"
@@ -213,8 +213,8 @@ JSON:
           Answer2: "{\"answer\": 4}"
           Question3: "Given a JSON object {'Name': Peter, 'Animals':['cat':{'Name': 'a'}, 'dog':{'Name': 'c', 'Age': 3}, 'fish':{'Name': 'e', 'Age': 4}, 'bird':{'Name': 'h', 'Age': 5}]}.What is the name of the bird?"
           Answer3: "{\"answer\": h}"
-    Task6:
-      PromptTemplate: "Given a JSON object <JSON>, <QUESTION>."
+    level_nodes:
+      PromptTemplate: "Given a JSON object <JSON>\n <QUESTION>."
       OutputFormatTemplate: "{\"answer\": [\"Faculty of Science\", \"Faculty of Arts\"]}"
       Example:
           Question1: "What are the names of the departments in the university?"
@@ -223,8 +223,8 @@ JSON:
           Answer2: "{\"answer\": [\"Faculty of Science\", \"Faculty of Arts\"]}"
           Question3: "What are the names of the programs in the Computer Science department?"
           Answer3: "{\"answer\": [\"Software Engineering\", \"Data Science\", \"Cybersecurity\"]}"
-    Task7:
-      PromptTemplate: "Given a JSON object <JSON>, <QUESTION>."
+    path_down_to_up:
+      PromptTemplate: "Given a JSON object <JSON>\n <QUESTION>."
       OutputFormatTemplate: "{\"answer\": \"Student -> Program -> Department -> Faculty\"}"
       Example:
           Question1: "If a student needs to find their faculty, what path should they take?"
@@ -233,8 +233,8 @@ JSON:
           Answer2: "{\"answer\": \"Lecturer -> Department -> Faculty\"}"
           Question3: "If a student needs to find their department, what path should they take?"
           Answer3: "{\"answer\": \"Student -> Program -> Department\"}"
-    Task8:
-      PromptTemplate: "Given a JSON object <JSON>, <QUESTION>."
+    path_up_to_down:
+      PromptTemplate: "Given a JSON object <JSON>\n <QUESTION>."
       OutputFormatTemplate: "{\"answer\": \"Faculty -> Department -> Program -> Student\"}"
       Example:
           Question1: "If the faculty needs to find a student, what path should they take?"
@@ -243,8 +243,8 @@ JSON:
           Answer2: "{\"answer\": \"Department -> Program -> Student\"}"
           Question3: "If a program needs to find a student, what path should they take?"
           Answer3: "{\"answer\": \"Program -> Student\"}"
-    Task9:
-      PromptTemplate: "Given a JSON object <JSON>, <QUESTION>."
+    shared_ancestor_same_level:
+      PromptTemplate: "Given a JSON object <JSON>\n <QUESTION>."
       OutputFormatTemplate: "{\"answer\": \"Faculty of Science\"}"
       Example:
           Question1: "What is the closest shared faculty between Computer Science and Mathematics departments?"
@@ -253,8 +253,8 @@ JSON:
           Answer2: "{\"answer\": \"Computer Science\"}"
           Question3: "What is the closest shared program between John and Mary?"
           Answer3: "{\"answer\": \"Software Engineering\"}"
-    Task10:
-      PromptTemplate: "Given a JSON object <JSON>, <QUESTION>."
+    shared_ancestor_diff_level:
+      PromptTemplate: "Given a JSON object <JSON>\n <QUESTION>."
       OutputFormatTemplate: "{\"answer\": \"Faculty of Science\"}"
       Example:
           Question1: "What is the closest shared faculty between Dr. Smith and the Software Engineering program?"
@@ -263,8 +263,8 @@ JSON:
           Answer2: "{\"answer\": \"Computer Science\"}"
           Question3: "What is the closest shared faculty between a student in Software Engineering and the Mathematics department?"
           Answer3: "{\"answer\": \"Faculty of Science\"}"
-    Task11:
-      PromptTemplate: "Given a JSON object <JSON>, <QUESTION>."
+    path_between_nodes:
+      PromptTemplate: "Given a JSON object <JSON>\n <QUESTION>."
       OutputFormatTemplate: "{\"answer\": \"Student -> Program -> Department -> Faculty -> Department -> Program -> Student\"}"
       Example:
           Question1: "What is the path between student John and student Mary?"
