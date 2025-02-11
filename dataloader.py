@@ -829,7 +829,7 @@ class HibenchDataLoader(TemplateDataLoader):
         data = self.data_loader.load_data() if self.data_loader else None
         if num_samples is not None and isinstance(num_samples, int):
             num_samples = min(num_samples, len(data))
-            random.shuffle(data)
+            # random.shuffle(data)
             return data[:num_samples]
         return data
 
