@@ -41,10 +41,10 @@ class LLMModel:
         self.model_list = ["meta-llama/Meta-Llama-3.1-8B-Instruct", "meta-llama/Llama-3.2-1B-Instruct","meta-llama/Llama-3.2-3B-Instruct", "Qwen/Qwen2.5-0.5B-Instruct", "Qwen/Qwen2.5-1.5B-Instruct", "Qwen/Qwen2.5-3B-Instruct", "Qwen/Qwen2.5-7B-Instruct", "Qwen/Qwen2.5-14B-Instruct",  "Qwen/Qwen2.5-32B-Instruct"]
         self.Large_language_model_list = ["Qwen/Qwen2.5-72B-Instruct", "meta-llama/Llama-3.1-70B-Instruct", "meta-llama/Llama-3.1-405B-Instruct"]
         self.openai_list = ["gpt-3.5-turbo", "gpt-3.5-turbo-davinci", "gpt-3.5-turbo-davinci-codex", "gpt-3.5-turbo-davinci-instruct", "gpt-3.5-turbo-davinci-codex-instruct", "gpt-3.5-turbo-davinci-codex-instruct-turbo", "gpt-4o", "gpt-4o-mini", "gpt-4-turbo"]
-        self.old_model_list = ["THUDM/glm-4-9b-chat", "01-ai/Yi-1.5-9B-Chat","baichuan-inc/Baichuan-7B", "baichuan-inc/Baichuan2-7B-Chat", "microsoft/Phi-3.5-mini-instruct", "internlm/internlm2_5-7b-chat","mistralai/Mistral-7B-Instruct-v0.3"]
+        self.old_model_list = ["THUDM/glm-4-9b-chat", "01-ai/Yi-1.5-9B-Chat","baichuan-inc/Baichuan-7B", "baichuan-inc/Baichuan2-7B-Chat", "microsoft/Phi-3.5-mini-instruct", "internlm/internlm2_5-7b-chat", "mistralai/Mistral-7B-Instruct-v0.3"]
         self.api_key = api_key
         self.endpoint = endpoint
-        self.device = "cuda"
+        self.device = device_map
         self.device_map = device_map
         print(f"Loading model: {model_id}")
         if model_id in self.model_list:
