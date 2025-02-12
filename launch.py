@@ -2,6 +2,8 @@ import itertools
 import time
 import os
 
+import torch
+
 from dataloader import *
 from call_llms import *
 from tqdm import tqdm
@@ -201,42 +203,51 @@ class ArgumentGenerator:
 
 def main():
     argument_generator = ArgumentGenerator()
-    # EvalList = argument_generator.generate_all_eval(Task_list = ['Fundamental', 'Code', 'Formula'], ExampleType='ZeroShot')
-    EvalList = argument_generator.generate_all_eval(Task_list = ['Paper'], ExampleType='ZeroShot')
+    EvalList = argument_generator.generate_all_eval(Task_list = ['Fundamental', 'Code', 'Formula'], ExampleType='ZeroShot')
+    # EvalList = argument_generator.generate_all_eval(Task_list = ['Paper'], ExampleType='ZeroShot')
     num_samples = 13
+    min_question_num = 7
     need_sample_list = ['Formula']
     # model_list = ["meta-llama/Meta-Llama-3.1-8B-Instruct"] # ["Qwen/Qwen2.5-0.5B-Instruct"] #, "meta-llama/Meta-Llama-3.1-8B-Instruct"]
     # model_list = ["meta-llama/Meta-Llama-3.1-8B-Instruct", "meta-llama/Llama-3.2-1B-Instruct","meta-llama/Llama-3.2-3B-Instruct", "Qwen/Qwen2.5-0.5B-Instruct", "Qwen/Qwen2.5-1.5B-Instruct", "Qwen/Qwen2.5-3B-Instruct", "Qwen/Qwen2.5-7B-Instruct"]
     # model_list = ["Qwen/Qwen2.5-7B-Instruct"]# , "Qwen/Qwen2.5-0.5B-Instruct", "Qwen/Qwen2.5-1.5B-Instruct", "Qwen/Qwen2.5-3B-Instruct", "Qwen/Qwen2.5-7B-Instruct"]
     # model_list = ["meta-llama/Meta-Llama-3.1-8B-Instruct", "meta-llama/Llama-3.2-1B-Instruct","meta-llama/Llama-3.2-3B-Instruct"]
-    model_list = ["internlm/internlm2_5-7b-chat"]
+    model_list = ['internlm/internlm2_5-7b-chat'] # 'microsoft/Phi-3.5-mini-instruct'] # ["baichuan-inc/Baichuan-7B"]
     DUPLICATE_CHECK = True
     for model in model_list:
         llm = LLMModel(model, api_key=None, device_map='cuda:0')
         length = len(EvalList)
         for idx, Eval in enumerate(EvalList):
+            processed_question_num = 0
+            exception_flag = False
             logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
             logger = logging.getLogger(__name__)
             logger.info(f"\033[93mProcessing task: {Eval} | Model: {model} | Progress: {idx}/{length}\033[0m")
-            try:
-                Hibenchdataloader = HibenchDataLoader(Eval)
-                if DUPLICATE_CHECK and Hibenchdataloader.is_data_exist(model, args=Eval):
-                    continue
-                if Eval['Task'] in need_sample_list:
-                    data = Hibenchdataloader.load_data(num_samples=num_samples)
-                else:
-                    data = Hibenchdataloader.load_data()
-                for i in tqdm(range(len(data))):
-                    SystemPrompt = data[i]['SystemPrompt']
-                    UserPrompt = data[i]['UserPrompt']
-                    TrueAnswer = data[i]['TrueAnswer']
-                    ans = llm.get_response(SystemPrompt, UserPrompt)
-                    data[i]['response'] = ans
-                Hibenchdataloader.save_data(data, model_name=model, args=Eval)
-                print(f"Completed task: {Eval}")
-            except Exception as e:
-                print(f"Error: {e}")
+            Hibenchdataloader = HibenchDataLoader(Eval)
+            if DUPLICATE_CHECK and Hibenchdataloader.is_data_exist(model, args=Eval):
                 continue
+            if Eval['Task'] in need_sample_list:
+                data = Hibenchdataloader.load_data(num_samples=num_samples)
+            else:
+                data = Hibenchdataloader.load_data()
+            for i in tqdm(range(len(data))):
+                SystemPrompt = data[i]['SystemPrompt']
+                UserPrompt = data[i]['UserPrompt']
+                TrueAnswer = data[i]['TrueAnswer']
+                try:
+                    ans = llm.get_response(SystemPrompt, UserPrompt)
+                    processed_question_num += 1
+                except torch.OutOfMemoryError as e:
+                    exception_flag = True
+                    print(f"Error: {e}")
+                    continue
+                data[i]['response'] = ans
+            if exception_flag and processed_question_num < min_question_num:
+                continue
+            Hibenchdataloader.save_data(data, model_name=model, args=Eval)
+            print(f"Completed task: {Eval}")
+            
+            
             
 
 
