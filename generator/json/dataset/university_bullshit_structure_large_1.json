@@ -1,0 +1,595 @@
+{
+    "University": "Tg84Jw7",
+    "Faculties": [
+        {
+            "Faculty Name": "Fc0Lw3",
+            "Departments": [
+                {
+                    "Department Name": "Dp7Il4",
+                    "Programs": [
+                        {
+                            "Program Name": "Bs4Sc2",
+                            "Courses": [
+                                {
+                                    "Course Name": "Es9Sc3",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Lc3 No7h Lo7z",
+                                            "Title": "Lc3"
+                                        },
+                                        {
+                                            "Name": "Ap9 Li8m Wi3n",
+                                            "Title": "Ap9"
+                                        },
+                                        {
+                                            "Name": "As2P Li8m Da5s",
+                                            "Title": "As2P"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Course Name": "Ph0Th2",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Ap9 Ja9k Ro4g",
+                                            "Title": "Ap9"
+                                        },
+                                        {
+                                            "Name": "Ap9 Le6v Da5s",
+                                            "Title": "Ap9"
+                                        },
+                                        {
+                                            "Name": "Pr7 Mi7l Ja1n",
+                                            "Title": "Pr7"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Course Name": "Wh8Hs2",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "As2P No7h Lo7z",
+                                            "Title": "As2P"
+                                        },
+                                        {
+                                            "Name": "Ap9 Ja3s Da5s",
+                                            "Title": "Ap9"
+                                        },
+                                        {
+                                            "Name": "Lc3 Ol2r Mo4e",
+                                            "Title": "Lc3"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "Students": [
+                                {
+                                    "Name": "El3h Jo2e",
+                                    "Student ID": "35953063"
+                                },
+                                {
+                                    "Name": "Li2y Wi9s",
+                                    "Student ID": "04084963"
+                                },
+                                {
+                                    "Name": "Ha0l Wi2n",
+                                    "Student ID": "19959646"
+                                }
+                            ]
+                        },
+                        {
+                            "Program Name": "Ms9Ar3",
+                            "Courses": [
+                                {
+                                    "Course Name": "Sr3Pd6",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Lc3 Li8m An5e",
+                                            "Title": "Lc3"
+                                        },
+                                        {
+                                            "Name": "Pr7 El6j Wi3n",
+                                            "Title": "Pr7"
+                                        },
+                                        {
+                                            "Name": "As2P Sa0m Ga0c",
+                                            "Title": "As2P"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Course Name": "Ma6Ar4",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Lc3 Mi7l Mi8l",
+                                            "Title": "Lc3"
+                                        },
+                                        {
+                                            "Name": "Lc3 Ja3s An5e",
+                                            "Title": "Lc3"
+                                        },
+                                        {
+                                            "Name": "Ap9 Be2n Br3n",
+                                            "Title": "Ap9"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Course Name": "Ce1Bc4",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Ap9 Ma9o Mo4e",
+                                            "Title": "Ap9"
+                                        },
+                                        {
+                                            "Name": "Pr7 Ma9o Wi9s",
+                                            "Title": "Pr7"
+                                        },
+                                        {
+                                            "Name": "Lc3 Se1n Wi9s",
+                                            "Title": "Lc3"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "Students": [
+                                {
+                                    "Name": "Ev0n Ma3n",
+                                    "Student ID": "17373131"
+                                },
+                                {
+                                    "Name": "El9r Da4s",
+                                    "Student ID": "39784348"
+                                },
+                                {
+                                    "Name": "Ol4v Da4s",
+                                    "Student ID": "56991271"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Department Name": "Dp8En1",
+                    "Programs": [
+                        {
+                            "Program Name": "Bs0Ar7",
+                            "Courses": [
+                                {
+                                    "Course Name": "Fa8Ac9",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Ap9 Da4l Sm7t",
+                                            "Title": "Ap9"
+                                        },
+                                        {
+                                            "Name": "Ap9 Be2n Ga0c",
+                                            "Title": "Ap9"
+                                        },
+                                        {
+                                            "Name": "Ap9 Wi3m He9z",
+                                            "Title": "Ap9"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Course Name": "Og5Ch0",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "As2P Le8o Ma8n",
+                                            "Title": "As2P"
+                                        },
+                                        {
+                                            "Name": "As2P Ja9k Ja1n",
+                                            "Title": "As2P"
+                                        },
+                                        {
+                                            "Name": "Lc3 Ow6n Lo7z",
+                                            "Title": "Lc3"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Course Name": "La4Ac1",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Pr7 Ja9k Ma1z",
+                                            "Title": "Pr7"
+                                        },
+                                        {
+                                            "Name": "As2P Ma9o Br3n",
+                                            "Title": "As2P"
+                                        },
+                                        {
+                                            "Name": "Ap9 Be2n Wi3n",
+                                            "Title": "Ap9"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "Students": [
+                                {
+                                    "Name": "El3h Th5s",
+                                    "Student ID": "04979494"
+                                },
+                                {
+                                    "Name": "Li2y Ga7c",
+                                    "Student ID": "68645680"
+                                },
+                                {
+                                    "Name": "Ha7p Th5s",
+                                    "Student ID": "10991949"
+                                }
+                            ]
+                        },
+                        {
+                            "Program Name": "Mb5Ad2",
+                            "Courses": [
+                                {
+                                    "Course Name": "Ma6Ar4",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "As2P Ez5a Ga0c",
+                                            "Title": "As2P"
+                                        },
+                                        {
+                                            "Name": "Pr7 El6j Ro4g",
+                                            "Title": "Pr7"
+                                        },
+                                        {
+                                            "Name": "Pr7 El6j Jo6e",
+                                            "Title": "Pr7"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Course Name": "Mc9Ec3",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Pr7 Ma9o Wi3n",
+                                            "Title": "Pr7"
+                                        },
+                                        {
+                                            "Name": "Lc3 Lu4s Da5s",
+                                            "Title": "Lc3"
+                                        },
+                                        {
+                                            "Name": "As2P Li8m Jo2n",
+                                            "Title": "As2P"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Course Name": "Ph0Th2",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Pr7 Be2n Wi9s",
+                                            "Title": "Pr7"
+                                        },
+                                        {
+                                            "Name": "As2P Se1n Br3n",
+                                            "Title": "As2P"
+                                        },
+                                        {
+                                            "Name": "Ap9 No7h Jo6e",
+                                            "Title": "Ap9"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "Students": [
+                                {
+                                    "Name": "Em8l Jo5n",
+                                    "Student ID": "17542986"
+                                },
+                                {
+                                    "Name": "Ch2l Mo4e",
+                                    "Student ID": "49573294"
+                                },
+                                {
+                                    "Name": "Em8l Ja9n",
+                                    "Student ID": "30270167"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Faculty Name": "Fc7Ed6",
+            "Departments": [
+                {
+                    "Department Name": "Dp2Te9",
+                    "Programs": [
+                        {
+                            "Program Name": "Dp8Ph9",
+                            "Courses": [
+                                {
+                                    "Course Name": "Ud0Ds3",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Ap9 He0y Jo2n",
+                                            "Title": "Ap9"
+                                        },
+                                        {
+                                            "Name": "Ap9 Ez5a An5e",
+                                            "Title": "Ap9"
+                                        },
+                                        {
+                                            "Name": "As2P Lu4s Ta6r",
+                                            "Title": "As2P"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Course Name": "Mk6Pl7",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "As2P Ol2r Ta6r",
+                                            "Title": "As2P"
+                                        },
+                                        {
+                                            "Name": "Lc3 Le8o Mi8l",
+                                            "Title": "Lc3"
+                                        },
+                                        {
+                                            "Name": "Lc3 Li8m Jo2n",
+                                            "Title": "Lc3"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Course Name": "Ep4Ps7",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Lc3 Ma9o Wi9s",
+                                            "Title": "Lc3"
+                                        },
+                                        {
+                                            "Name": "Lc3 Ow6n Ja1n",
+                                            "Title": "Lc3"
+                                        },
+                                        {
+                                            "Name": "Ap9 Be2n Jo2n",
+                                            "Title": "Ap9"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "Students": [
+                                {
+                                    "Name": "So7a Jo5n",
+                                    "Student ID": "38567364"
+                                },
+                                {
+                                    "Name": "Sc5t Ma3n",
+                                    "Student ID": "70338245"
+                                },
+                                {
+                                    "Name": "Av5a Go9e",
+                                    "Student ID": "80026353"
+                                }
+                            ]
+                        },
+                        {
+                            "Program Name": "Be9En3",
+                            "Courses": [
+                                {
+                                    "Course Name": "Dt8St5",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Ap9 No7h Mi8l",
+                                            "Title": "Ap9"
+                                        },
+                                        {
+                                            "Name": "As2P Le6v Br3n",
+                                            "Title": "As2P"
+                                        },
+                                        {
+                                            "Name": "Ap9 Le6v Th0s",
+                                            "Title": "Ap9"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Course Name": "Ce1Bc4",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Lc3 Lu4s Br3n",
+                                            "Title": "Lc3"
+                                        },
+                                        {
+                                            "Name": "Ap9 Ja3s Ro4g",
+                                            "Title": "Ap9"
+                                        },
+                                        {
+                                            "Name": "Pr7 He0y Jo2n",
+                                            "Title": "Pr7"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Course Name": "Ce1Bc4",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Ap9 Ja9k Sm7t",
+                                            "Title": "Ap9"
+                                        },
+                                        {
+                                            "Name": "Pr7 Wi3m Ma8n",
+                                            "Title": "Pr7"
+                                        },
+                                        {
+                                            "Name": "Pr7 Li8m Ga0c",
+                                            "Title": "Pr7"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "Students": [
+                                {
+                                    "Name": "Ca6a He3z",
+                                    "Student ID": "80579847"
+                                },
+                                {
+                                    "Name": "Is3e He3z",
+                                    "Student ID": "23221216"
+                                },
+                                {
+                                    "Name": "Mi8a Ta0r",
+                                    "Student ID": "55706173"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Department Name": "Dp8Cs3",
+                    "Programs": [
+                        {
+                            "Program Name": "Me3En7",
+                            "Courses": [
+                                {
+                                    "Course Name": "At4Th9",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "As2P Sa0m Ma1z",
+                                            "Title": "As2P"
+                                        },
+                                        {
+                                            "Name": "Ap9 Da4l Mi8l",
+                                            "Title": "Ap9"
+                                        },
+                                        {
+                                            "Name": "Lc3 No7h Ta6r",
+                                            "Title": "Lc3"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Course Name": "Cn9Lw2",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "As2P El6j Ma1z",
+                                            "Title": "As2P"
+                                        },
+                                        {
+                                            "Name": "As2P Ol2r An5e",
+                                            "Title": "As2P"
+                                        },
+                                        {
+                                            "Name": "As2P Ma9o Ga0c",
+                                            "Title": "As2P"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Course Name": "Dt8St5",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Lc3 Ma9o Jo2n",
+                                            "Title": "Lc3"
+                                        },
+                                        {
+                                            "Name": "As2P He0y Ro4g",
+                                            "Title": "As2P"
+                                        },
+                                        {
+                                            "Name": "Pr7 Ol2r Th0s",
+                                            "Title": "Pr7"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "Students": [
+                                {
+                                    "Name": "Ha0l He3z",
+                                    "Student ID": "15383989"
+                                },
+                                {
+                                    "Name": "Ch2l Mi0l",
+                                    "Student ID": "81332987"
+                                },
+                                {
+                                    "Name": "Li2y Mo4e",
+                                    "Student ID": "04407472"
+                                }
+                            ]
+                        },
+                        {
+                            "Program Name": "Dp8Ph9",
+                            "Courses": [
+                                {
+                                    "Course Name": "Ma6Ar4",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "As2P Sa0m Ga0c",
+                                            "Title": "As2P"
+                                        },
+                                        {
+                                            "Name": "Ap9 Mi7l Ga0c",
+                                            "Title": "Ap9"
+                                        },
+                                        {
+                                            "Name": "Lc3 Se1n Go2e",
+                                            "Title": "Lc3"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Course Name": "Mk6Pl7",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Pr7 Le8o Ma1z",
+                                            "Title": "Pr7"
+                                        },
+                                        {
+                                            "Name": "Lc3 Le8o Ga0c",
+                                            "Title": "Lc3"
+                                        },
+                                        {
+                                            "Name": "Pr7 Ja9k Ro4g",
+                                            "Title": "Pr7"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Course Name": "Ep4Ps7",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Lc3 Be2n Wi9s",
+                                            "Title": "Lc3"
+                                        },
+                                        {
+                                            "Name": "Pr7 Le8o Lo7z",
+                                            "Title": "Pr7"
+                                        },
+                                        {
+                                            "Name": "Pr7 Li8m Sm7t",
+                                            "Title": "Pr7"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "Students": [
+                                {
+                                    "Name": "Ch2l Ma3n",
+                                    "Student ID": "18595578"
+                                },
+                                {
+                                    "Name": "Am9a Go9e",
+                                    "Student ID": "02655977"
+                                },
+                                {
+                                    "Name": "Em8l Mo4e",
+                                    "Student ID": "23605579"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

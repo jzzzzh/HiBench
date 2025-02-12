@@ -1,0 +1,54 @@
+[
+    {
+        "question": "What is the path from Faculty of Engineering down to Financial Accounting?",
+        "answer": "Faculty of Engineering -> Faculty of Engineering -> Department of Electrical Engineering -> Bachelor of Engineering -> Financial Accounting"
+    },
+    {
+        "question": "What is the path from Faculty of Engineering down to Mila Reyes?",
+        "answer": "Faculty of Engineering -> Faculty of Engineering -> Department of Electrical Engineering -> Bachelor of Engineering -> Mila Reyes"
+    },
+    {
+        "question": "What is the path from Faculty of Engineering down to Doctor of Philosophy?",
+        "answer": "Faculty of Engineering -> Faculty of Engineering -> Department of Mechanical Engineering -> Doctor of Philosophy"
+    },
+    {
+        "question": "What is the path from Faculty of Engineering down to World History?",
+        "answer": "Faculty of Engineering -> Faculty of Engineering -> Department of Mechanical Engineering -> Doctor of Philosophy -> World History"
+    },
+    {
+        "question": "What is the path from Faculty of Engineering down to Department of Electrical Engineering?",
+        "answer": "Faculty of Engineering -> Faculty of Engineering -> Department of Electrical Engineering"
+    },
+    {
+        "question": "What is the path from Faculty of Engineering down to Elena Carter?",
+        "answer": "Faculty of Engineering -> Faculty of Engineering -> Department of Mechanical Engineering -> Doctor of Philosophy -> Elena Carter"
+    },
+    {
+        "question": "What is the path from Department of Mechanical Engineering down to Biochemistry?",
+        "answer": "Department of Mechanical Engineering -> Department of Mechanical Engineering -> Doctor of Philosophy -> Biochemistry"
+    },
+    {
+        "question": "What is the path from Bachelor of Engineering down to Financial Accounting?",
+        "answer": "Bachelor of Engineering -> Bachelor of Engineering -> Financial Accounting"
+    },
+    {
+        "question": "What is the path from Faculty of Engineering down to Iris Ortiz?",
+        "answer": "Faculty of Engineering -> Faculty of Engineering -> Department of Mechanical Engineering -> Doctor of Philosophy -> Iris Ortiz"
+    },
+    {
+        "question": "What is the path from Department of Mechanical Engineering down to World History?",
+        "answer": "Department of Mechanical Engineering -> Department of Mechanical Engineering -> Doctor of Philosophy -> World History"
+    },
+    {
+        "question": "What is the path from Department of Mechanical Engineering down to Doctor of Philosophy?",
+        "answer": "Department of Mechanical Engineering -> Department of Mechanical Engineering -> Doctor of Philosophy"
+    },
+    {
+        "question": "What is the path from Faculty of Engineering down to Bachelor of Engineering?",
+        "answer": "Faculty of Engineering -> Faculty of Engineering -> Department of Electrical Engineering -> Bachelor of Engineering"
+    },
+    {
+        "question": "What is the path from Faculty of Engineering down to Department of Mechanical Engineering?",
+        "answer": "Faculty of Engineering -> Faculty of Engineering -> Department of Mechanical Engineering"
+    }
+]

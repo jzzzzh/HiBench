@@ -6,6 +6,7 @@
 import json
 import random
 import os
+import logging
 
 def read_json_file(file_path):
     """Read JSON file and return its contents"""
@@ -19,28 +20,54 @@ def read_json_file(file_path):
     except Exception as e:
         return f"Error: {str(e)}"
 
-def get_nodes_at_level(data, target_level):
-    """Find all node names at a specific level"""
+def get_nodes_at_level(data, target_level, current_level=0):
+    """Get all nodes at a specific level with their names"""
     nodes = []
     
-    def traverse(obj, current_level=0):
-        if isinstance(obj, dict):
-            # Try to get the name of current level
-            for name_key in ['Name', 'Faculty Name', 'Department Name', 'Program Name', 'Course Name']:
-                if name_key in obj:
-                    if current_level == target_level:
-                        nodes.append(obj[name_key])
-                    break
-            
-            # Continue traversing
-            for v in obj.values():
-                traverse(v, current_level + 1)
-                    
-        elif isinstance(obj, list):
-            for item in obj:
-                traverse(item, current_level)
+    # Special handling at the root: if the root contains "Faculties", use that
+    if current_level == 0 and isinstance(data, dict) and "Faculties" in data:
+        return get_nodes_at_level(data["Faculties"], target_level, current_level + 1)
     
-    traverse(data)
+    if current_level == target_level:
+        # Get node name based on level
+        name_keys = {
+            1: 'Faculty Name',
+            2: 'Department Name',
+            3: 'Program Name',
+            4: 'Course Name',
+            5: 'Name'  # For both Lecturers and Students
+        }
+        
+        key = name_keys.get(current_level)
+        if key and key in data:
+            nodes.append(data[key])
+        return nodes
+    
+    # Mapping for nodes in the subtree (starting from Faculty level)
+    subtree_keys = {
+        1: 'Departments',    # For a Faculty node, its children are in "Departments"
+        2: 'Programs',       # For a Department node, its children are in "Programs"
+        3: 'Courses',        # For a Program node, its children are in "Courses"
+        4: ['Lecturers', 'Students']  # For a Course node, its children are in these lists
+    }
+    
+    if isinstance(data, dict):
+        current_key = subtree_keys.get(current_level)
+        if isinstance(current_key, list):
+            for key in current_key:
+                if key in data:
+                    for item in data[key]:
+                        nodes.extend(get_nodes_at_level(item, target_level, current_level + 1))
+        elif current_key and current_key in data:
+            if isinstance(data[current_key], list):
+                for item in data[current_key]:
+                    nodes.extend(get_nodes_at_level(item, target_level, current_level + 1))
+            else:
+                nodes.extend(get_nodes_at_level(data[current_key], target_level, current_level + 1))
+    elif isinstance(data, list):
+        for item in data:
+            nodes.extend(get_nodes_at_level(item, target_level, current_level))
+    
     return nodes
 
 def get_level_name(level):
@@ -54,27 +81,52 @@ def get_level_name(level):
     }
     return level_names.get(level, "units")
 
-def gen_answer_level_nodes(scenario: str, with_answer: bool = True):
-    """Generate questions about names of nodes at a specific level"""
-    file_path = os.path.join(os.path.dirname(__file__), "..", "dataset", f"{scenario}.json")
-    data = read_json_file(file_path)
-    if isinstance(data, str):  # Error occurred
+def gen_answer_level_nodes(scenario: str, with_answer: bool = True, get_available_layers_func=None):
+    """Generate question about listing all nodes at a specific level"""
+    try:
+        # Read the JSON file
+        file_path = os.path.join(
+            os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__)))),
+            "dataset",
+            "JSON",
+            "dataset",
+            f"{scenario}.json"
+        )
+        
+        with open(file_path, 'r') as file:
+            data = json.load(file)
+            
+        # Get available layers for this scenario
+        if get_available_layers_func is None:
+            logging.error("get_available_layers_func not provided")
+            return None, None
+            
+        scenario_info = get_available_layers_func(scenario)
+        if not scenario_info:
+            logging.error(f"No layer information found for scenario: {scenario}")
+            return None, None
+            
+        available_layers = scenario_info["layers"]
+        layer_names = scenario_info["names"]
+        
+        # Randomly select a layer
+        layer_index = random.choice(available_layers)
+            
+        # Get all nodes at the selected level
+        nodes = get_nodes_at_level(data, layer_index)
+        if not nodes:
+            logging.error(f"No nodes found at level {layer_index} for {scenario}")
+            return None, None
+            
+        # Generate question
+        question = f"List all {layer_names[layer_index]} in the {data['University']}."
+        answer = ", ".join(nodes) if with_answer else None
+        
+        return question, answer
+        
+    except Exception as e:
+        logging.error(f"Error in gen_answer_level_nodes: {str(e)}")
         return None, None
-    
-    # Randomly select a level (1 to 3 are most meaningful - faculty, department, program)
-    level = random.randint(1, 3)
-    level_name = get_level_name(level)
-    
-    # Get all nodes at the selected level
-    nodes = get_nodes_at_level(data, level)
-    if not nodes:
-        return None, None
-    
-    # Form question
-    question = f"What are the names of the {level_name} in the {scenario}?"
-    answer = ", ".join(sorted(nodes)) if with_answer else None
-    
-    return question, answer
 
 # Example usage
 if __name__ == "__main__":

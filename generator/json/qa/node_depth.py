@@ -7,6 +7,7 @@
 import json
 import random
 import os
+import logging
 
 
 def read_json_file(file_path):
@@ -169,43 +170,128 @@ def select_random_node_by_layer_index(json_data, layer_index=None):
     return selected_node, info['parent_type'], info['sibling_count'], info['parent_name'], info_layer
 
 
-def gen_anwser_node_depth(scenario: str, layer_index: int = None, with_answer: bool = True):
-    """
-    gen_anwser_node_depth generates questions about the depth/level of a node
-    :param scenario: the scenario of the question
-    :param layer_index: the index of the layer (depth start with 0)
-    :return: question, answer
-    """
-    def gen_question(scenario, layer_index):
+def get_node_depth(data, target_name, current_depth=0):
+    """Find the depth of a specific node in the hierarchy"""
+    if isinstance(data, dict):
+        # Check if this is the target node
+        for name_key in ['Name', 'Faculty Name', 'Department Name', 'Program Name', 'Course Name']:
+            if name_key in data and data[name_key] == target_name:
+                return current_depth
+        
+        # Map level numbers to their container keys
+        level_keys = {
+            0: 'University',
+            1: 'Faculties',
+            2: 'Departments',
+            3: 'Programs',
+            4: 'Courses',
+            5: ['Lecturers', 'Students']
+        }
+        
+        # Search in child nodes
+        for level, keys in level_keys.items():
+            if isinstance(keys, list):
+                for key in keys:
+                    if key in data:
+                        for item in data[key]:
+                            depth = get_node_depth(item, target_name, current_depth + 1)
+                            if depth is not None:
+                                return depth
+            elif keys in data:
+                if isinstance(data[keys], list):
+                    for item in data[keys]:
+                        depth = get_node_depth(item, target_name, current_depth + 1)
+                        if depth is not None:
+                            return depth
+                else:
+                    depth = get_node_depth(data[keys], target_name, current_depth + 1)
+                    if depth is not None:
+                        return depth
+    return None
 
+
+def get_random_node(data, available_layers):
+    """Get a random node from any valid layer"""
+    nodes = []
+    
+    def collect_nodes(obj):
+        if isinstance(obj, dict):
+            # Get node name if it exists
+            for name_key in ['Name', 'Faculty Name', 'Department Name', 'Program Name', 'Course Name']:
+                if name_key in obj:
+                    nodes.append((obj[name_key], name_key))
+                    break
+            
+            # Continue searching in child nodes
+            for value in obj.values():
+                if isinstance(value, (dict, list)):
+                    collect_nodes(value)
+        elif isinstance(obj, list):
+            for item in obj:
+                collect_nodes(item)
+    
+    collect_nodes(data)
+    if nodes:
+        return random.choice(nodes)
+    return None
+
+
+def gen_anwser_node_depth(scenario: str, with_answer: bool = True, layer_index: int = None, get_available_layers_func=None):
+    """Generate question about the depth of a specific node"""
+    try:
+        # Read the JSON file
         file_path = os.path.join(
-        os.path.dirname(__file__), "..", "dataset", f"{scenario}.json")
-        json_data = read_json_file(file_path)
-
-        if isinstance(json_data, str) and not json_data.startswith("Error"):
-            # Specify the layer index (the function will show available layers)
-            _layer_index = layer_index  # Change this to select different layers
-            result = select_random_node_by_layer_index(json_data, _layer_index)
-
-        if isinstance(result, tuple):
-            selected_node, _, _, _, layer_name = result
-            question = f"Which level does the node {selected_node} in?"
-            if with_answer:
-                answer = layer_name
-            else:
-                answer = None
-        else:
-            print(json_data)
-            question, answer = None, None
+            os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__)))),
+            "dataset",
+            "JSON",
+            "dataset",
+            f"{scenario}.json"
+        )
+        
+        with open(file_path, 'r') as file:
+            data = json.load(file)
+            
+        # Get available layers for this scenario
+        if get_available_layers_func is None:
+            logging.error("get_available_layers_func not provided")
+            return None, None
+            
+        scenario_info = get_available_layers_func(scenario)
+        if not scenario_info:
+            logging.error(f"No layer information found for scenario: {scenario}")
+            return None, None
+            
+        available_layers = scenario_info["layers"]
+        layer_names = scenario_info["names"]
+        
+        # Get a random node
+        node_info = get_random_node(data, available_layers)
+        if not node_info:
+            logging.error(f"No suitable nodes found in {scenario}")
+            return None, None
+            
+        node_name, node_type = node_info
+        
+        # Get the depth of the selected node
+        depth = get_node_depth(data, node_name)
+        if depth is None:
+            logging.error(f"Could not determine depth for node {node_name}")
+            return None, None
+            
+        # Generate question
+        question = f"What is the depth of {node_name} in the {data['University']}? (starting from 0)"
+        answer = str(depth) if with_answer else None
         
         return question, answer
         
-    return gen_question(scenario, layer_index)
+    except Exception as e:
+        logging.error(f"Error in gen_anwser_node_depth: {str(e)}")
+        return None, None
 
 
 # Execute the function
 if __name__ == "__main__":
-    question, answer = gen_anwser_node_depth(scenario="company", layer_index=3, with_answer=True)
+    question, answer = gen_anwser_node_depth(scenario="company", with_answer=True)
     print(question, answer)
     """
     Available layers:

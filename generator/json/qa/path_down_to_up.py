@@ -6,6 +6,7 @@
 import json
 import random
 import os
+import logging
 
 def read_json_file(file_path):
     """Read JSON file and return its contents"""
@@ -58,84 +59,141 @@ def get_nodes_with_parent(data):
     traverse(data)
     return nodes
 
-def find_path_up(nodes, start_name, end_name):
-    """Find path from start node up to end node if it exists"""
-    if start_name not in nodes or end_name not in nodes:
-        return None
+def find_path_up(data, node_name, current_path=None):
+    """Find path from a node up to the root"""
+    if current_path is None:
+        current_path = []
         
-    # Only proceed if start node is at least 2 levels lower than end node
-    if nodes[start_name]['level'] - nodes[end_name]['level'] < 2:
-        return None
+    if isinstance(data, dict):
+        # Check if this is the target node
+        for name_key in ['Name', 'Faculty Name', 'Department Name', 'Program Name', 'Course Name']:
+            if name_key in data and data[name_key] == node_name:
+                return current_path + [data]
         
-    path = [start_name]
-    current = start_name
-    
-    while current and current != end_name:
-        parent = nodes[current]['parent']
-        if not parent:
-            return None
-        path.append(parent)
-        if parent == end_name:
-            return path
-        current = parent
-    
+        # Map level numbers to their container keys
+        level_keys = {
+            0: 'University',
+            1: 'Faculties',
+            2: 'Departments',
+            3: 'Programs',
+            4: 'Courses',
+            5: ['Lecturers', 'Students']
+        }
+        
+        # Search in child nodes
+        for level, keys in level_keys.items():
+            if isinstance(keys, list):
+                for key in keys:
+                    if key in data:
+                        for item in data[key]:
+                            path = find_path_up(item, node_name, current_path + [data])
+                            if path:
+                                return path
+            elif keys in data:
+                if isinstance(data[keys], list):
+                    for item in data[keys]:
+                        path = find_path_up(item, node_name, current_path + [data])
+                        if path:
+                            return path
+                else:
+                    path = find_path_up(data[keys], node_name, current_path + [data])
+                    if path:
+                        return path
     return None
 
-def get_nodes_by_level(nodes):
-    """Group nodes by their level"""
-    levels = {}
-    for name, info in nodes.items():
-        level = info['level']
-        if level not in levels:
-            levels[level] = []
-        levels[level].append(name)
-    return levels
+def get_random_leaf_node(data, available_layers):
+    """Get a random leaf node from the hierarchy"""
+    leaf_nodes = []
+    
+    def collect_leaf_nodes(obj):
+        if isinstance(obj, dict):
+            is_leaf = True
+            # Check if this is a leaf node
+            for value in obj.values():
+                if isinstance(value, (dict, list)):
+                    is_leaf = False
+                    break
+                    
+            if is_leaf:
+                for name_key in ['Name', 'Faculty Name', 'Department Name', 'Program Name', 'Course Name']:
+                    if name_key in obj:
+                        leaf_nodes.append((obj[name_key], name_key))
+                        break
+            
+            # Continue searching in child nodes
+            for value in obj.values():
+                if isinstance(value, (dict, list)):
+                    collect_leaf_nodes(value)
+        elif isinstance(obj, list):
+            for item in obj:
+                collect_leaf_nodes(item)
+    
+    collect_leaf_nodes(data)
+    if leaf_nodes:
+        return random.choice(leaf_nodes)
+    return None
 
-def gen_answer_path_down_to_up(scenario: str, with_answer: bool = True):
-    """Generate questions about paths between nodes in different layers"""
-    file_path = os.path.join(os.path.dirname(__file__), "..", "dataset", f"{scenario}.json")
-    data = read_json_file(file_path)
-    
-    if isinstance(data, str):  # Error occurred
+def gen_answer_path_down_to_up(scenario: str, with_answer: bool = True, get_available_layers_func=None):
+    """Generate question about path from a leaf node up to root"""
+    try:
+        # Read the JSON file
+        file_path = os.path.join(
+            os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__)))),
+            "dataset",
+            "JSON",
+            "dataset",
+            f"{scenario}.json"
+        )
+        
+        with open(file_path, 'r') as file:
+            data = json.load(file)
+            
+        # Get available layers for this scenario
+        if get_available_layers_func is None:
+            logging.error("get_available_layers_func not provided")
+            return None, None
+            
+        scenario_info = get_available_layers_func(scenario)
+        if not scenario_info:
+            logging.error(f"No layer information found for scenario: {scenario}")
+            return None, None
+            
+        available_layers = scenario_info["layers"]
+        
+        # Get a random leaf node
+        node_info = get_random_leaf_node(data, available_layers)
+        if not node_info:
+            logging.error(f"Could not find a leaf node in {scenario}")
+            return None, None
+            
+        node_name, _ = node_info
+        
+        # Find path up to root
+        path = find_path_up(data, node_name)
+        if not path:
+            logging.error(f"Could not find path for node {node_name}")
+            return None, None
+            
+        # Generate question
+        question = f"What is the path from {node_name} up to the {data['University']}?"
+        
+        # Generate answer
+        if with_answer:
+            path_names = []
+            for node in reversed(path):
+                for name_key in ['Name', 'Faculty Name', 'Department Name', 'Program Name', 'Course Name']:
+                    if name_key in node:
+                        path_names.append(node[name_key])
+                        break
+            answer = " -> ".join(path_names)
+        else:
+            answer = None
+            
+        return question, answer
+        
+    except Exception as e:
+        logging.error(f"Error in gen_answer_path_down_to_up: {str(e)}")
         return None, None
-    
-    # Get all nodes with their relationships
-    nodes = get_nodes_with_parent(data)
-    if len(nodes) < 2:
-        return None, None
-    
-    # Group nodes by level
-    levels_dict = get_nodes_by_level(nodes)
-    levels = sorted(levels_dict.keys())
-    
-    # Try to find valid path between nodes
-    max_attempts = 100
-    for _ in range(max_attempts):
-        # Select two levels with at least one level between them
-        valid_level_pairs = [(l1, l2) for l1 in levels for l2 in levels if l1 - l2 >= 2]
-        if not valid_level_pairs:
-            continue
-            
-        start_level, end_level = random.choice(valid_level_pairs)
-        
-        # Select random nodes from these levels
-        start_name = random.choice(levels_dict[start_level])
-        end_name = random.choice(levels_dict[end_level])
-        
-        # Find path from start up to end
-        path = find_path_up(nodes, start_name, end_name)
-        
-        if path:
-            start_type = nodes[start_name]['type']
-            end_type = nodes[end_name]['type']
-            
-            # Form question and answer
-            question = f"If someone is at the {start_type} '{start_name}' and needs to find its {end_type} '{end_name}', what path should they take?"
-            answer = " → ".join(path) if with_answer else None
-            
-            return question, answer
-    
-    return None, None
 
 # Example usage
 if __name__ == "__main__":

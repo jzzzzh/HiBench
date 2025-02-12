@@ -1,0 +1,10 @@
+[
+    {
+        "question": "What is the common ancestor of Department of Mechanical Engineering (Department) and Mila Reyes (Name)?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of World History (Course) and Bachelor of Engineering (Program)?",
+        "answer": "Faculty of Engineering"
+    }
+]

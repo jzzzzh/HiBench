@@ -1,0 +1,54 @@
+[
+    {
+        "question": "What is the relationship between ccy1Bvts and o8Nsfchg?",
+        "answer": "ccy1Bvts (program) and o8Nsfchg (program) share a common ancestor: 9fHLBh66"
+    },
+    {
+        "question": "What is the relationship between pbdKmils and 9fHLBh66?",
+        "answer": "pbdKmils (program) and 9fHLBh66 (faculty) share a common ancestor: 9fHLBh66"
+    },
+    {
+        "question": "What is the relationship between YJu9yUFb and hulvZklZ?",
+        "answer": "YJu9yUFb (department) and hulvZklZ (department) share a common ancestor: 9fHLBh66"
+    },
+    {
+        "question": "What is the relationship between pbdKmils and 1vHbmAQN?",
+        "answer": "pbdKmils (program) and 1vHbmAQN (program) share a common ancestor: hulvZklZ"
+    },
+    {
+        "question": "What is the relationship between HpcowccP and pbdKmils?",
+        "answer": "HpcowccP (department) and pbdKmils (program) share a common ancestor: 9fHLBh66"
+    },
+    {
+        "question": "What is the relationship between fH1KjPad and YJu9yUFb?",
+        "answer": "fH1KjPad (program) and YJu9yUFb (department) share a common ancestor: 9fHLBh66"
+    },
+    {
+        "question": "What is the relationship between yoaqleP9 and 97IplS1j?",
+        "answer": "yoaqleP9 (program) and 97IplS1j (program) share a common ancestor: 9fHLBh66"
+    },
+    {
+        "question": "What is the relationship between yoaqleP9 and ccy1Bvts?",
+        "answer": "yoaqleP9 (program) and ccy1Bvts (program) share a common ancestor: 9fHLBh66"
+    },
+    {
+        "question": "What is the relationship between 9fHLBh66 and fH1KjPad?",
+        "answer": "9fHLBh66 (faculty) and fH1KjPad (program) share a common ancestor: 9fHLBh66"
+    },
+    {
+        "question": "What is the relationship between YJu9yUFb and yoaqleP9?",
+        "answer": "YJu9yUFb (department) and yoaqleP9 (program) share a common ancestor: 9fHLBh66"
+    },
+    {
+        "question": "What is the relationship between yoaqleP9 and YJu9yUFb?",
+        "answer": "yoaqleP9 (program) and YJu9yUFb (department) share a common ancestor: 9fHLBh66"
+    },
+    {
+        "question": "What is the relationship between yoaqleP9 and 1vHbmAQN?",
+        "answer": "yoaqleP9 (program) and 1vHbmAQN (program) share a common ancestor: 9fHLBh66"
+    },
+    {
+        "question": "What is the relationship between HpcowccP and 1vHbmAQN?",
+        "answer": "HpcowccP (department) and 1vHbmAQN (program) share a common ancestor: 9fHLBh66"
+    }
+]
