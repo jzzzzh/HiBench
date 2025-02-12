@@ -1,5 +1,6 @@
 [
     {
+<<<<<<< HEAD
         "question": "What is the common ancestor of City University and Department of Mechanical Engineering?",
         "answer": "City University"
     },
@@ -50,5 +51,13 @@
     {
         "question": "What is the common ancestor of Doctor of Philosophy and Lecturer Sebastian Rivera?",
         "answer": "Doctor of Philosophy"
+=======
+        "question": "What is the common ancestor of Department of Mechanical Engineering (Department) and Mila Reyes (Name)?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of World History (Course) and Bachelor of Engineering (Program)?",
+        "answer": "Faculty of Engineering"
+>>>>>>> origin/main
     }
 ]

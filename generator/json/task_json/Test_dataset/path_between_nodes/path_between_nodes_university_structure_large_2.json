@@ -1,5 +1,6 @@
 [
     {
+<<<<<<< HEAD
         "question": "If someone wants to go from the program 'Bachelor of Arts' to the department 'Department of Aerospace Engineering', what path should they take?",
         "answer": "Bachelor of Arts \u2192 Department of Civil Engineering \u2192 Faculty of Engineering \u2192 Department of Aerospace Engineering"
     },
@@ -50,5 +51,57 @@
     {
         "question": "If someone wants to go from the faculty 'Faculty of Engineering' to the program 'Bachelor of Arts', what path should they take?",
         "answer": "Faculty of Engineering \u2192 Department of Civil Engineering \u2192 Bachelor of Arts"
+=======
+        "question": "If someone wants to go from the program 'Master of Engineering' to the department 'Department of Mechanical Engineering', what path should they take?",
+        "answer": "Master of Engineering \u2192 Department of Aerospace Engineering \u2192 Faculty of Engineering \u2192 Department of Mechanical Engineering"
+    },
+    {
+        "question": "If someone wants to go from the program 'Bachelor of Arts' to the program 'Master of Science', what path should they take?",
+        "answer": "Bachelor of Arts \u2192 Department of Civil Engineering \u2192 Master of Science"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Civil Engineering' to the program 'Master of Engineering', what path should they take?",
+        "answer": "Department of Civil Engineering \u2192 Faculty of Engineering \u2192 Department of Aerospace Engineering \u2192 Master of Engineering"
+    },
+    {
+        "question": "If someone wants to go from the program 'Master of Science' to the program 'Master of Arts', what path should they take?",
+        "answer": "Master of Science \u2192 Department of Civil Engineering \u2192 Faculty of Engineering \u2192 Department of Labor Law \u2192 Master of Arts"
+    },
+    {
+        "question": "If someone wants to go from the program 'Master of Science' to the program 'Bachelor of Science', what path should they take?",
+        "answer": "Master of Science \u2192 Department of Civil Engineering \u2192 Faculty of Engineering \u2192 Department of Mechanical Engineering \u2192 Bachelor of Science"
+    },
+    {
+        "question": "If someone wants to go from the program 'Doctor of Philosophy' to the program 'Bachelor of Science', what path should they take?",
+        "answer": "Doctor of Philosophy \u2192 Department of Chemical Engineering \u2192 Faculty of Engineering \u2192 Department of Mechanical Engineering \u2192 Bachelor of Science"
+    },
+    {
+        "question": "If someone wants to go from the program 'Doctor of Philosophy' to the program 'Bachelor of Business Administration', what path should they take?",
+        "answer": "Doctor of Philosophy \u2192 Department of Chemical Engineering \u2192 Faculty of Engineering \u2192 Department of Aerospace Engineering \u2192 Bachelor of Business Administration"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Chemical Engineering' to the department 'Department of Labor Law', what path should they take?",
+        "answer": "Department of Chemical Engineering \u2192 Faculty of Engineering \u2192 Department of Labor Law"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Labor Law' to the program 'Master of Science', what path should they take?",
+        "answer": "Department of Labor Law \u2192 Faculty of Engineering \u2192 Department of Civil Engineering \u2192 Master of Science"
+    },
+    {
+        "question": "If someone wants to go from the program 'Bachelor of Science' to the program 'Master of Arts', what path should they take?",
+        "answer": "Bachelor of Science \u2192 Department of Mechanical Engineering \u2192 Faculty of Engineering \u2192 Department of Labor Law \u2192 Master of Arts"
+    },
+    {
+        "question": "If someone wants to go from the program 'Master of Engineering' to the department 'Department of Chemical Engineering', what path should they take?",
+        "answer": "Master of Engineering \u2192 Department of Aerospace Engineering \u2192 Faculty of Engineering \u2192 Department of Chemical Engineering"
+    },
+    {
+        "question": "If someone wants to go from the program 'Bachelor of Science' to the department 'Department of Chemical Engineering', what path should they take?",
+        "answer": "Bachelor of Science \u2192 Department of Mechanical Engineering \u2192 Faculty of Engineering \u2192 Department of Chemical Engineering"
+    },
+    {
+        "question": "If someone wants to go from the program 'Bachelor of Engineering' to the department 'Department of Mechanical Engineering', what path should they take?",
+        "answer": "Bachelor of Engineering \u2192 Department of Aerospace Engineering \u2192 Faculty of Engineering \u2192 Department of Mechanical Engineering"
+>>>>>>> origin/main
     }
 ]

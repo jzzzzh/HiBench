@@ -4,7 +4,15 @@
         "answer": "3"
     },
     {
+<<<<<<< HEAD
         "question": "What is the depth of Lecturer Sebastian Rivera in the City University? (starting from 0)",
+=======
+        "question": "What is the depth of Doctor of Philosophy in the City University? (starting from 0)",
+        "answer": "3"
+    },
+    {
+        "question": "What is the depth of Lecturer Elijah Brown in the City University? (starting from 0)",
+>>>>>>> origin/main
         "answer": "5"
     },
     {
@@ -12,7 +20,7 @@
         "answer": "4"
     },
     {
-        "question": "What is the depth of Lecturer Elijah Brown in the City University? (starting from 0)",
+        "question": "What is the depth of Lecturer Sebastian Rivera in the City University? (starting from 0)",
         "answer": "5"
     },
     {
@@ -20,6 +28,7 @@
         "answer": "4"
     },
     {
+<<<<<<< HEAD
         "question": "What is the depth of Department of Mechanical Engineering in the City University? (starting from 0)",
         "answer": "2"
     },
@@ -30,6 +39,10 @@
     {
         "question": "What is the depth of Department of Electrical Engineering in the City University? (starting from 0)",
         "answer": "2"
+=======
+        "question": "What is the depth of World History in the City University? (starting from 0)",
+        "answer": "4"
+>>>>>>> origin/main
     },
     {
         "question": "What is the depth of Faculty of Engineering in the City University? (starting from 0)",
@@ -44,11 +57,24 @@
         "answer": "4"
     },
     {
+<<<<<<< HEAD
         "question": "What is the depth of Iris Ortiz in the City University? (starting from 0)",
         "answer": "4"
     },
     {
         "question": "What is the depth of Doctor of Philosophy in the City University? (starting from 0)",
         "answer": "3"
+=======
+        "question": "What is the depth of Department of Electrical Engineering in the City University? (starting from 0)",
+        "answer": "2"
+    },
+    {
+        "question": "What is the depth of Financial Accounting in the City University? (starting from 0)",
+        "answer": "4"
+    },
+    {
+        "question": "What is the depth of Associate Professor Jordan Baker in the City University? (starting from 0)",
+        "answer": "5"
+>>>>>>> origin/main
     }
 ]

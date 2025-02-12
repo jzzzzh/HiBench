@@ -1,21 +1,51 @@
 [
     {
+<<<<<<< HEAD
         "question": "What is the Name of the lecturer Associate Professor who is in Biochemistry in Doctor of Philosophy in Department of Mechanical Engineering in Faculty of Engineering in City University?",
         "answer": "Associate Professor Jordan Baker"
     },
     {
         "question": "What is the Title of the lecturer Associate Professor Jordan Baker who is in Biochemistry in Doctor of Philosophy in Department of Mechanical Engineering in Faculty of Engineering in City University?",
         "answer": "Associate Professor"
+=======
+        "question": "What is the Student ID of the student Iris Ortiz who is in Doctor of Philosophy in Department of Mechanical Engineering in Faculty of Engineering in City University?",
+        "answer": "87593586"
+    },
+    {
+        "question": "What is the Title of the lecturer Lecturer Elijah Brown who is in Financial Accounting in Bachelor of Engineering in Department of Electrical Engineering in Faculty of Engineering in City University?",
+        "answer": "Lecturer"
+    },
+    {
+        "question": "What is the Name of the student 10679883 who is in Doctor of Philosophy in Department of Mechanical Engineering in Faculty of Engineering in City University?",
+        "answer": "Elena Carter"
+    },
+    {
+        "question": "What is the Name of the student 50165258 who is in Bachelor of Engineering in Department of Electrical Engineering in Faculty of Engineering in City University?",
+        "answer": "Mila Reyes"
+    },
+    {
+        "question": "What is the Student ID of the student Mila Reyes who is in Bachelor of Engineering in Department of Electrical Engineering in Faculty of Engineering in City University?",
+        "answer": "50165258"
+    },
+    {
+        "question": "What is the Name of the lecturer Lecturer who is in World History in Doctor of Philosophy in Department of Mechanical Engineering in Faculty of Engineering in City University?",
+        "answer": "Lecturer Sebastian Rivera"
+>>>>>>> origin/main
     },
     {
         "question": "What is the Name of the lecturer Lecturer who is in Financial Accounting in Bachelor of Engineering in Department of Electrical Engineering in Faculty of Engineering in City University?",
         "answer": "Lecturer Elijah Brown"
     },
     {
+        "question": "What is the Name of the lecturer Associate Professor who is in Biochemistry in Doctor of Philosophy in Department of Mechanical Engineering in Faculty of Engineering in City University?",
+        "answer": "Associate Professor Jordan Baker"
+    },
+    {
         "question": "What is the Name of the student 87593586 who is in Doctor of Philosophy in Department of Mechanical Engineering in Faculty of Engineering in City University?",
         "answer": "Iris Ortiz"
     },
     {
+<<<<<<< HEAD
         "question": "What is the Name of the student 50165258 who is in Bachelor of Engineering in Department of Electrical Engineering in Faculty of Engineering in City University?",
         "answer": "Mila Reyes"
     },
@@ -46,5 +76,13 @@
     {
         "question": "What is the Student ID of the student Iris Ortiz who is in Doctor of Philosophy in Department of Mechanical Engineering in Faculty of Engineering in City University?",
         "answer": "87593586"
+=======
+        "question": "What is the Title of the lecturer Lecturer Sebastian Rivera who is in World History in Doctor of Philosophy in Department of Mechanical Engineering in Faculty of Engineering in City University?",
+        "answer": "Lecturer"
+    },
+    {
+        "question": "What is the Student ID of the student Elena Carter who is in Doctor of Philosophy in Department of Mechanical Engineering in Faculty of Engineering in City University?",
+        "answer": "10679883"
+>>>>>>> origin/main
     }
 ]

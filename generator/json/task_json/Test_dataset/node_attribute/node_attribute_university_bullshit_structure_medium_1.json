@@ -1,17 +1,27 @@
 [
     {
+<<<<<<< HEAD
         "question": "What is the Name of the lecturer 4bEFlICO who is in 4TupuOZp in m7GU0Kal in HFQcs6vc in XCgkWsrU in lmqKvj0m?",
         "answer": "ujkVtW7z"
     },
     {
         "question": "What is the Name of the student TZ7NhF9C who is in m7GU0Kal in HFQcs6vc in XCgkWsrU in lmqKvj0m?",
         "answer": "kd8iLssX"
+=======
+        "question": "What is the Name of the lecturer dANvssnJ who is in 1EsbG2Hy in m7GU0Kal in HFQcs6vc in XCgkWsrU in lmqKvj0m?",
+        "answer": "0qRli6yq"
+>>>>>>> origin/main
     },
     {
-        "question": "What is the Student ID of the student K1xIPGN8 who is in m7GU0Kal in HFQcs6vc in XCgkWsrU in lmqKvj0m?",
-        "answer": "27bKs0wQ"
+        "question": "What is the Student ID of the student gPM94KHF who is in 71QV2RZN in eeFex1L5 in XCgkWsrU in lmqKvj0m?",
+        "answer": "378GIio2"
     },
     {
+        "question": "What is the Title of the lecturer ujkVtW7z who is in 4TupuOZp in m7GU0Kal in HFQcs6vc in XCgkWsrU in lmqKvj0m?",
+        "answer": "4bEFlICO"
+    },
+    {
+<<<<<<< HEAD
         "question": "What is the Name of the lecturer E1HtiCUo who is in 50zn6Nh4 in 71QV2RZN in eeFex1L5 in XCgkWsrU in lmqKvj0m?",
         "answer": "y5GiriZT"
     },
@@ -36,15 +46,49 @@
         "answer": "378GIio2"
     },
     {
+=======
+>>>>>>> origin/main
         "question": "What is the Student ID of the student kd8iLssX who is in m7GU0Kal in HFQcs6vc in XCgkWsrU in lmqKvj0m?",
         "answer": "TZ7NhF9C"
     },
     {
+<<<<<<< HEAD
+=======
+        "question": "What is the Student ID of the student K1xIPGN8 who is in m7GU0Kal in HFQcs6vc in XCgkWsrU in lmqKvj0m?",
+        "answer": "27bKs0wQ"
+    },
+    {
+>>>>>>> origin/main
         "question": "What is the Name of the student 378GIio2 who is in 71QV2RZN in eeFex1L5 in XCgkWsrU in lmqKvj0m?",
         "answer": "gPM94KHF"
     },
     {
+<<<<<<< HEAD
         "question": "What is the Name of the lecturer dANvssnJ who is in 1EsbG2Hy in m7GU0Kal in HFQcs6vc in XCgkWsrU in lmqKvj0m?",
         "answer": "0qRli6yq"
+=======
+        "question": "What is the Name of the student 27bKs0wQ who is in m7GU0Kal in HFQcs6vc in XCgkWsrU in lmqKvj0m?",
+        "answer": "K1xIPGN8"
+    },
+    {
+        "question": "What is the Name of the lecturer E1HtiCUo who is in 50zn6Nh4 in 71QV2RZN in eeFex1L5 in XCgkWsrU in lmqKvj0m?",
+        "answer": "y5GiriZT"
+    },
+    {
+        "question": "What is the Title of the lecturer y5GiriZT who is in 50zn6Nh4 in 71QV2RZN in eeFex1L5 in XCgkWsrU in lmqKvj0m?",
+        "answer": "E1HtiCUo"
+    },
+    {
+        "question": "What is the Name of the student TZ7NhF9C who is in m7GU0Kal in HFQcs6vc in XCgkWsrU in lmqKvj0m?",
+        "answer": "kd8iLssX"
+    },
+    {
+        "question": "What is the Title of the lecturer 0qRli6yq who is in 1EsbG2Hy in m7GU0Kal in HFQcs6vc in XCgkWsrU in lmqKvj0m?",
+        "answer": "dANvssnJ"
+    },
+    {
+        "question": "What is the Name of the lecturer 4bEFlICO who is in 4TupuOZp in m7GU0Kal in HFQcs6vc in XCgkWsrU in lmqKvj0m?",
+        "answer": "ujkVtW7z"
+>>>>>>> origin/main
     }
 ]

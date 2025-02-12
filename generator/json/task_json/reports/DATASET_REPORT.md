@@ -7,25 +7,25 @@ Generated on: 2025-02-12 22:57:11
 | Question Type | Scenario | Number of Questions |
 |--------------|----------|-------------------|
 | child_count | university_structure_small | 3 |
-| child_count | university_bullshit_structure_medium_1 | 11 |
+| child_count | university_bullshit_structure_medium_1 | 10 |
 | child_count | university_structure_medium_1 | 11 |
 | child_count | university_bullshit_structure_large_2 | 7 |
 | child_count | university_bullshit_structure_small | 3 |
 | child_count | university_structure_large_2 | 7 |
-| child_count | university_structure_large_1 | 11 |
+| child_count | university_structure_large_1 | 10 |
 | child_count | university_bullshit_structure_medium_2 | 4 |
 | child_count | university_structure_medium_2 | 4 |
-| child_count | university_bullshit_structure_large_1 | 11 |
+| child_count | university_bullshit_structure_large_1 | 10 |
 | node_depth | university_bullshit_structure_medium_1 | 13 |
 | node_depth | university_bullshit_structure_small | 6 |
 | node_depth | university_bullshit_structure_large_1 | 13 |
-| node_depth | university_structure_large_2 | 13 |
+| node_depth | university_structure_large_2 | 12 |
 | node_depth | university_structure_medium_2 | 10 |
 | node_depth | university_structure_large_1 | 13 |
 | node_depth | university_structure_medium_1 | 13 |
 | node_depth | university_structure_small | 6 |
 | node_depth | university_bullshit_structure_large_2 | 13 |
-| node_depth | university_bullshit_structure_medium_2 | 11 |
+| node_depth | university_bullshit_structure_medium_2 | 10 |
 | level_count | university_structure_small | 2 |
 | level_count | university_bullshit_structure_large_2 | 2 |
 | level_count | university_structure_large_1 | 2 |
@@ -46,8 +46,8 @@ Generated on: 2025-02-12 22:57:11
 | node_relationship | university_structure_medium_1 | 13 |
 | node_relationship | university_structure_large_1 | 13 |
 | node_relationship | university_structure_small | 13 |
-| node_attribute | university_structure_medium_1 | 12 |
-| node_attribute | university_structure_large_1 | 12 |
+| node_attribute | university_structure_medium_1 | 9 |
+| node_attribute | university_structure_large_1 | 11 |
 | node_attribute | university_bullshit_structure_medium_1 | 12 |
 | node_attribute | university_bullshit_structure_large_2 | 6 |
 | node_attribute | university_bullshit_structure_large_1 | 12 |
@@ -140,7 +140,7 @@ Total number of questions: 999
 
 | Question Type | Total Questions |
 |--------------|----------------|
-| child_count | 72 |
+| child_count | 69 |
 | level_count | 20 |
 | level_nodes | 22 |
 | node_attribute | 70 |

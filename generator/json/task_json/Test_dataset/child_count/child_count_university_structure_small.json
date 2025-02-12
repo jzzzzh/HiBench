@@ -1,13 +1,23 @@
 [
     {
-        "question": "How many Programs are there in Department of Chemical Engineering?",
-        "answer": "2"
-    },
-    {
+<<<<<<< HEAD
+=======
         "question": "How many Programs are there in Department of Electrical Engineering?",
         "answer": "1"
     },
     {
+>>>>>>> origin/main
+        "question": "How many Programs are there in Department of Chemical Engineering?",
+        "answer": "2"
+    },
+    {
+<<<<<<< HEAD
+        "question": "How many Programs are there in Department of Electrical Engineering?",
+        "answer": "1"
+    },
+    {
+=======
+>>>>>>> origin/main
         "question": "How many Departments are there in Faculty of Engineering?",
         "answer": "2"
     }

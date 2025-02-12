@@ -1,13 +1,33 @@
 [
     {
+<<<<<<< HEAD
         "question": "What is the common ancestor of Department of Mechanical Engineering and Department of Electrical Engineering?",
         "answer": "Faculty of Engineering"
     },
     {
+=======
+        "question": "What is the common ancestor of Associate Professor Jordan Baker and Lecturer Sebastian Rivera?",
+        "answer": "Doctor of Philosophy"
+    },
+    {
+        "question": "What is the common ancestor of Mila Reyes and World History?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of World History and Mila Reyes?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Lecturer Sebastian Rivera and Associate Professor Jordan Baker?",
+        "answer": "Doctor of Philosophy"
+    },
+    {
+>>>>>>> origin/main
         "question": "What is the common ancestor of Bachelor of Engineering and Doctor of Philosophy?",
         "answer": "Faculty of Engineering"
     },
     {
+<<<<<<< HEAD
         "question": "What is the common ancestor of Financial Accounting and Elena Carter?",
         "answer": "Faculty of Engineering"
     },
@@ -49,6 +69,37 @@
     },
     {
         "question": "What is the common ancestor of Iris Ortiz and World History?",
+=======
+        "question": "What is the common ancestor of Elena Carter and Financial Accounting?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Department of Mechanical Engineering and Department of Electrical Engineering?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Iris Ortiz and Elena Carter?",
+>>>>>>> origin/main
+        "answer": "Doctor of Philosophy"
+    },
+    {
+        "question": "What is the common ancestor of Lecturer Elijah Brown and Lecturer Sebastian Rivera?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Doctor of Philosophy and Bachelor of Engineering?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Mila Reyes and Iris Ortiz?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Iris Ortiz and Financial Accounting?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of World History and Biochemistry?",
         "answer": "Doctor of Philosophy"
     }
 ]

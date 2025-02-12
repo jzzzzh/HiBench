@@ -1,9 +1,53 @@
 [
     {
+<<<<<<< HEAD
+=======
+        "question": "What is the relationship between Department of Mechanical Engineering and Financial Accounting?",
+        "answer": "Department of Mechanical Engineering (department) and Financial Accounting (course) share a common ancestor: Faculty of Engineering"
+    },
+    {
+        "question": "What is the relationship between Associate Professor Jordan Baker and Iris Ortiz?",
+        "answer": "Associate Professor Jordan Baker (name) and Iris Ortiz (name) share a common ancestor: Doctor of Philosophy"
+    },
+    {
+        "question": "What is the relationship between Bachelor of Engineering and Department of Mechanical Engineering?",
+        "answer": "Bachelor of Engineering (program) and Department of Mechanical Engineering (department) share a common ancestor: Faculty of Engineering"
+    },
+    {
+        "question": "What is the relationship between Doctor of Philosophy and Financial Accounting?",
+        "answer": "Doctor of Philosophy (program) and Financial Accounting (course) share a common ancestor: Faculty of Engineering"
+    },
+    {
+        "question": "What is the relationship between Biochemistry and Lecturer Elijah Brown?",
+        "answer": "Biochemistry (course) and Lecturer Elijah Brown (name) share a common ancestor: Faculty of Engineering"
+    },
+    {
+        "question": "What is the relationship between Iris Ortiz and Lecturer Elijah Brown?",
+        "answer": "Iris Ortiz (name) and Lecturer Elijah Brown (name) share a common ancestor: Faculty of Engineering"
+    },
+    {
+        "question": "What is the relationship between Elena Carter and Financial Accounting?",
+        "answer": "Elena Carter (name) and Financial Accounting (course) share a common ancestor: Faculty of Engineering"
+    },
+    {
+        "question": "What is the relationship between Elena Carter and Bachelor of Engineering?",
+        "answer": "Elena Carter (name) and Bachelor of Engineering (program) share a common ancestor: Faculty of Engineering"
+    },
+    {
+        "question": "What is the relationship between Lecturer Sebastian Rivera and Financial Accounting?",
+        "answer": "Lecturer Sebastian Rivera (name) and Financial Accounting (course) share a common ancestor: Faculty of Engineering"
+    },
+    {
+        "question": "What is the relationship between Mila Reyes and Department of Electrical Engineering?",
+        "answer": "Mila Reyes (name) and Department of Electrical Engineering (department) share a common ancestor: Department of Electrical Engineering"
+    },
+    {
+>>>>>>> origin/main
         "question": "What is the relationship between Associate Professor Jordan Baker and Lecturer Sebastian Rivera?",
         "answer": "Associate Professor Jordan Baker (name) and Lecturer Sebastian Rivera (name) share a common ancestor: Doctor of Philosophy"
     },
     {
+<<<<<<< HEAD
         "question": "What is the relationship between Mila Reyes and Doctor of Philosophy?",
         "answer": "Mila Reyes (name) and Doctor of Philosophy (program) share a common ancestor: Faculty of Engineering"
     },
@@ -50,5 +94,13 @@
     {
         "question": "What is the relationship between Faculty of Engineering and Associate Professor Jordan Baker?",
         "answer": "Faculty of Engineering (faculty) and Associate Professor Jordan Baker (name) share a common ancestor: Faculty of Engineering"
+=======
+        "question": "What is the relationship between Biochemistry and Mila Reyes?",
+        "answer": "Biochemistry (course) and Mila Reyes (name) share a common ancestor: Faculty of Engineering"
+    },
+    {
+        "question": "What is the relationship between Lecturer Elijah Brown and Faculty of Engineering?",
+        "answer": "Lecturer Elijah Brown (name) and Faculty of Engineering (faculty) share a common ancestor: Faculty of Engineering"
+>>>>>>> origin/main
     }
 ]

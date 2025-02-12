@@ -1,5 +1,6 @@
 [
     {
+<<<<<<< HEAD
         "question": "What is the common ancestor of 4qMs8IKh and rDVTXEo0?",
         "answer": "0uA0OvrC"
     },
@@ -49,6 +50,25 @@
     },
     {
         "question": "What is the common ancestor of 0uA0OvrC and rDVTXEo0?",
+=======
+        "question": "What is the common ancestor of 4qMs8IKh (Department) and VEZiQqMw (Name)?",
+        "answer": "0uA0OvrC"
+    },
+    {
+        "question": "What is the common ancestor of aPkmwYuZ (Program) and rDVTXEo0 (Name)?",
+        "answer": "0uA0OvrC"
+    },
+    {
+        "question": "What is the common ancestor of aPkmwYuZ (Program) and CCXyVyLw (Course)?",
+        "answer": "0uA0OvrC"
+    },
+    {
+        "question": "What is the common ancestor of T3VqTl8U (Course) and hy44QVkq (Program)?",
+        "answer": "0uA0OvrC"
+    },
+    {
+        "question": "What is the common ancestor of hy44QVkq (Program) and 4qMs8IKh (Department)?",
+>>>>>>> origin/main
         "answer": "0uA0OvrC"
     }
 ]

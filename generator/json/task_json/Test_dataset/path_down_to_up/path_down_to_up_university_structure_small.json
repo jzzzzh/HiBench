@@ -2,13 +2,23 @@
     {
         "question": "What is the path from Bachelor of Engineering up to the City University?",
         "answer": "Bachelor of Engineering -> Department of Electrical Engineering -> Faculty of Engineering"
-    },
-    {
-        "question": "What is the path from Master of Science up to the City University?",
-        "answer": "Master of Science -> Department of Chemical Engineering -> Faculty of Engineering"
+<<<<<<< HEAD
+=======
     },
     {
         "question": "What is the path from Bachelor of Science up to the City University?",
         "answer": "Bachelor of Science -> Department of Chemical Engineering -> Faculty of Engineering"
+>>>>>>> origin/main
+    },
+    {
+        "question": "What is the path from Master of Science up to the City University?",
+        "answer": "Master of Science -> Department of Chemical Engineering -> Faculty of Engineering"
+<<<<<<< HEAD
+    },
+    {
+        "question": "What is the path from Bachelor of Science up to the City University?",
+        "answer": "Bachelor of Science -> Department of Chemical Engineering -> Faculty of Engineering"
+=======
+>>>>>>> origin/main
     }
 ]
