@@ -1,0 +1,73 @@
+{
+    "University": "DiNtnbut",
+    "Faculties": [
+        {
+            "Faculty Name": "0uA0OvrC",
+            "Departments": [
+                {
+                    "Department Name": "4qMs8IKh",
+                    "Programs": [
+                        {
+                            "Program Name": "aPkmwYuZ",
+                            "Courses": [
+                                {
+                                    "Course Name": "T3VqTl8U",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "TTJBxEMN",
+                                            "Title": "HKk8YxdJ"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "Students": [
+                                {
+                                    "Name": "QxLgi0KL",
+                                    "Student ID": "QXoCBU1y"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Department Name": "wIzBTNMa",
+                    "Programs": [
+                        {
+                            "Program Name": "hy44QVkq",
+                            "Courses": [
+                                {
+                                    "Course Name": "CCXyVyLw",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "ZFyEOdN1",
+                                            "Title": "GaSLF20K"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Course Name": "RhIyMUpy",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "DDn73D5P",
+                                            "Title": "S7eYka9p"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "Students": [
+                                {
+                                    "Name": "VEZiQqMw",
+                                    "Student ID": "mT82hD3z"
+                                },
+                                {
+                                    "Name": "rDVTXEo0",
+                                    "Student ID": "8PcqwJHm"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

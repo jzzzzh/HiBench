@@ -1,0 +1,54 @@
+[
+    {
+        "question": "What is the relationship between Department of Computer Engineering and Bachelor of Business Administration?",
+        "answer": "Department of Computer Engineering (department) and Bachelor of Business Administration (program) share a common ancestor: Faculty of Engineering"
+    },
+    {
+        "question": "What is the relationship between Department of Mechanical Engineering and Bachelor of Science?",
+        "answer": "Department of Mechanical Engineering (department) and Bachelor of Science (program) share a common ancestor: Faculty of Engineering"
+    },
+    {
+        "question": "What is the relationship between Department of Mechanical Engineering and Bachelor of Engineering?",
+        "answer": "Department of Mechanical Engineering (department) and Bachelor of Engineering (program) share a common ancestor: Faculty of Engineering"
+    },
+    {
+        "question": "What is the relationship between Bachelor of Science and Faculty of Engineering?",
+        "answer": "Bachelor of Science (program) and Faculty of Engineering (faculty) share a common ancestor: Faculty of Engineering"
+    },
+    {
+        "question": "What is the relationship between Department of Computer Engineering and Bachelor of Engineering?",
+        "answer": "Department of Computer Engineering (department) and Bachelor of Engineering (program) share a common ancestor: Faculty of Engineering"
+    },
+    {
+        "question": "What is the relationship between Master of Science and Faculty of Engineering?",
+        "answer": "Master of Science (program) and Faculty of Engineering (faculty) share a common ancestor: Faculty of Engineering"
+    },
+    {
+        "question": "What is the relationship between Master of Science and Department of Mechanical Engineering?",
+        "answer": "Master of Science (program) and Department of Mechanical Engineering (department) share a common ancestor: Department of Mechanical Engineering"
+    },
+    {
+        "question": "What is the relationship between Department of Electrical Engineering and Master of Business Administration?",
+        "answer": "Department of Electrical Engineering (department) and Master of Business Administration (program) share a common ancestor: Faculty of Engineering"
+    },
+    {
+        "question": "What is the relationship between Faculty of Engineering and Bachelor of Science?",
+        "answer": "Faculty of Engineering (faculty) and Bachelor of Science (program) share a common ancestor: Faculty of Engineering"
+    },
+    {
+        "question": "What is the relationship between Bachelor of Business Administration and Faculty of Engineering?",
+        "answer": "Bachelor of Business Administration (program) and Faculty of Engineering (faculty) share a common ancestor: Faculty of Engineering"
+    },
+    {
+        "question": "What is the relationship between Bachelor of Business Administration and Bachelor of Engineering?",
+        "answer": "Bachelor of Business Administration (program) and Bachelor of Engineering (program) share a common ancestor: Faculty of Engineering"
+    },
+    {
+        "question": "What is the relationship between Master of Business Administration and Master of Science?",
+        "answer": "Master of Business Administration (program) and Master of Science (program) share a common ancestor: Faculty of Engineering"
+    },
+    {
+        "question": "What is the relationship between Master of Business Administration and Bachelor of Science?",
+        "answer": "Master of Business Administration (program) and Bachelor of Science (program) share a common ancestor: Department of Computer Engineering"
+    }
+]

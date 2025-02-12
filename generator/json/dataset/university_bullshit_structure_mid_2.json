@@ -1,0 +1,297 @@
+{
+    "University": "Int9Un8",
+    "Faculties": [
+        {
+            "Faculty Name": "Fc2En9",
+            "Departments": [
+                {
+                    "Department Name": "Dp5Cm7",
+                    "Programs": [
+                        {
+                            "Program Name": "Mb5Ad2"
+                        },
+                        {
+                            "Program Name": "Me3En7"
+                        },
+                        {
+                            "Program Name": "Be9En3"
+                        },
+                        {
+                            "Program Name": "Bs4Sc2"
+                        }
+                    ]
+                },
+                {
+                    "Department Name": "Dp2El9",
+                    "Programs": [
+                        {
+                            "Program Name": "Bb2Ad5"
+                        },
+                        {
+                            "Program Name": "Bs4Sc2"
+                        },
+                        {
+                            "Program Name": "Ms6Sc8"
+                        },
+                        {
+                            "Program Name": "Be9En3"
+                        }
+                    ]
+                },
+                {
+                    "Department Name": "Dp9Id7",
+                    "Programs": [
+                        {
+                            "Program Name": "Bs4Sc2"
+                        },
+                        {
+                            "Program Name": "Ms6Sc8"
+                        },
+                        {
+                            "Program Name": "Bs4Sc2"
+                        },
+                        {
+                            "Program Name": "Be9En3"
+                        }
+                    ]
+                },
+                {
+                    "Department Name": "Dp6Ch2",
+                    "Programs": [
+                        {
+                            "Program Name": "Me3En7"
+                        },
+                        {
+                            "Program Name": "Bs4Sc2"
+                        },
+                        {
+                            "Program Name": "Be9En3"
+                        },
+                        {
+                            "Program Name": "Ms6Sc8"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Faculty Name": "Fc4Ar7",
+            "Departments": [
+                {
+                    "Department Name": "Dp0Ph7",
+                    "Programs": [
+                        {
+                            "Program Name": "Ms6Sc8"
+                        },
+                        {
+                            "Program Name": "Bs0Ar7"
+                        },
+                        {
+                            "Program Name": "Bs0Ar7"
+                        },
+                        {
+                            "Program Name": "Mb5Ad2"
+                        }
+                    ]
+                },
+                {
+                    "Department Name": "Dp2Lg8",
+                    "Programs": [
+                        {
+                            "Program Name": "Be9En3"
+                        },
+                        {
+                            "Program Name": "Mb5Ad2"
+                        },
+                        {
+                            "Program Name": "Dp8Ph9"
+                        },
+                        {
+                            "Program Name": "Mb5Ad2"
+                        }
+                    ]
+                },
+                {
+                    "Department Name": "Dp1Pa9",
+                    "Programs": [
+                        {
+                            "Program Name": "Dp8Ph9"
+                        },
+                        {
+                            "Program Name": "Be9En3"
+                        },
+                        {
+                            "Program Name": "Bs4Sc2"
+                        },
+                        {
+                            "Program Name": "Mb5Ad2"
+                        }
+                    ]
+                },
+                {
+                    "Department Name": "Dp3Es7",
+                    "Programs": [
+                        {
+                            "Program Name": "Me3En7"
+                        },
+                        {
+                            "Program Name": "Me3En7"
+                        },
+                        {
+                            "Program Name": "Ms9Ar3"
+                        },
+                        {
+                            "Program Name": "Ms6Sc8"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Faculty Name": "Fc9Sc1",
+            "Departments": [
+                {
+                    "Department Name": "Dp4Ph9",
+                    "Programs": [
+                        {
+                            "Program Name": "Be9En3"
+                        },
+                        {
+                            "Program Name": "Bs0Ar7"
+                        },
+                        {
+                            "Program Name": "Bs4Sc2"
+                        },
+                        {
+                            "Program Name": "Ms9Ar3"
+                        }
+                    ]
+                },
+                {
+                    "Department Name": "Dp1By6",
+                    "Programs": [
+                        {
+                            "Program Name": "Ms9Ar3"
+                        },
+                        {
+                            "Program Name": "Mb5Ad2"
+                        },
+                        {
+                            "Program Name": "Bb2Ad5"
+                        },
+                        {
+                            "Program Name": "Bs0Ar7"
+                        }
+                    ]
+                },
+                {
+                    "Department Name": "Dp8Ch3",
+                    "Programs": [
+                        {
+                            "Program Name": "Bs4Sc2"
+                        },
+                        {
+                            "Program Name": "Bs0Ar7"
+                        },
+                        {
+                            "Program Name": "Ms9Ar3"
+                        },
+                        {
+                            "Program Name": "Bs0Ar7"
+                        }
+                    ]
+                },
+                {
+                    "Department Name": "Dp3Es7",
+                    "Programs": [
+                        {
+                            "Program Name": "Dp8Ph9"
+                        },
+                        {
+                            "Program Name": "Bs0Ar7"
+                        },
+                        {
+                            "Program Name": "Be9En3"
+                        },
+                        {
+                            "Program Name": "Ms6Sc8"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Faculty Name": "Fc3Ar8",
+            "Departments": [
+                {
+                    "Department Name": "Dp3Sa5",
+                    "Programs": [
+                        {
+                            "Program Name": "Bb2Ad5"
+                        },
+                        {
+                            "Program Name": "Ms6Sc8"
+                        },
+                        {
+                            "Program Name": "Me3En7"
+                        },
+                        {
+                            "Program Name": "Ms9Ar3"
+                        }
+                    ]
+                },
+                {
+                    "Department Name": "Dp8Bd3",
+                    "Programs": [
+                        {
+                            "Program Name": "Bs4Sc2"
+                        },
+                        {
+                            "Program Name": "Be9En3"
+                        },
+                        {
+                            "Program Name": "Dp8Ph9"
+                        },
+                        {
+                            "Program Name": "Be9En3"
+                        }
+                    ]
+                },
+                {
+                    "Department Name": "Dp7Pa6",
+                    "Programs": [
+                        {
+                            "Program Name": "Dp8Ph9"
+                        },
+                        {
+                            "Program Name": "Bb2Ad5"
+                        },
+                        {
+                            "Program Name": "Bs4Sc2"
+                        },
+                        {
+                            "Program Name": "Ms6Sc8"
+                        }
+                    ]
+                },
+                {
+                    "Department Name": "Dp6La0",
+                    "Programs": [
+                        {
+                            "Program Name": "Mb5Ad2"
+                        },
+                        {
+                            "Program Name": "Ms9Ar3"
+                        },
+                        {
+                            "Program Name": "Bb2Ad5"
+                        },
+                        {
+                            "Program Name": "Bb2Ad5"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,46 @@
+{
+    "University": "City University",
+    "Faculties": [
+        {
+            "Faculty Name": "Faculty of Engineering",
+            "Departments": [
+                {
+                    "Department Name": "Department of Electrical Engineering",
+                    "Programs": [
+                        {
+                            "Program Name": "Bachelor of Engineering"
+                        },
+                        {
+                            "Program Name": "Doctor of Philosophy"
+                        }
+                    ]
+                },
+                {
+                    "Department Name": "Department of Mechanical Engineering",
+                    "Programs": [
+                        {
+                            "Program Name": "Master of Science"
+                        },
+                        {
+                            "Program Name": "Bachelor of Business Administration"
+                        }
+                    ]
+                },
+                {
+                    "Department Name": "Department of Computer Engineering",
+                    "Programs": [
+                        {
+                            "Program Name": "Bachelor of Science"
+                        },
+                        {
+                            "Program Name": "Master of Business Administration"
+                        },
+                        {
+                            "Program Name": "Master of Science"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -7,6 +7,7 @@ To do
 import json
 import random
 import os
+import logging
 
 def read_json_file(file_path):
     """Read JSON file and return its contents"""
@@ -104,25 +105,174 @@ def select_two_random_nodes(json_data):
 
     return node1, node2, belongs_to
 
-def gen_answer_node_relationship(scenario: str, with_answer: bool = True):
-    """Generate questions about whether one node belongs to another"""
-    file_path = os.path.join(
-        os.path.dirname(__file__), "..", "dataset", f"{scenario}.json")
-    json_data = read_json_file(file_path)
+def find_relationship(data, node1_name, node2_name):
+    """Find the relationship between two nodes"""
+    def find_path_to_node(data, target_name, current_path=None):
+        if current_path is None:
+            current_path = []
+            
+        if isinstance(data, dict):
+            # Check if this is the target node
+            for name_key in ['Name', 'Faculty Name', 'Department Name', 'Program Name', 'Course Name']:
+                if name_key in data and data[name_key] == target_name:
+                    return current_path + [data]
+            
+            # Map level numbers to their container keys
+            level_keys = {
+                0: 'University',
+                1: 'Faculties',
+                2: 'Departments',
+                3: 'Programs',
+                4: 'Courses',
+                5: ['Lecturers', 'Students']
+            }
+            
+            # Search in child nodes
+            for level, keys in level_keys.items():
+                if isinstance(keys, list):
+                    for key in keys:
+                        if key in data:
+                            for item in data[key]:
+                                path = find_path_to_node(item, target_name, current_path + [data])
+                                if path:
+                                    return path
+                elif keys in data:
+                    if isinstance(data[keys], list):
+                        for item in data[keys]:
+                            path = find_path_to_node(item, target_name, current_path + [data])
+                            if path:
+                                return path
+                    else:
+                        path = find_path_to_node(data[keys], target_name, current_path + [data])
+                        if path:
+                            return path
+        return None
 
-    if isinstance(json_data, str) and not json_data.startswith("Error"):
-        result = select_two_random_nodes(json_data)
-        
-        if isinstance(result, tuple):
-            node1, node2, belongs_to = result
-            question = f"Does {node2} belong to {node1}?"
-            if with_answer:
-                answer = belongs_to
-            else:
-                answer = None
-            return question, answer
+    # Find paths to both nodes
+    path1 = find_path_to_node(data, node1_name)
+    path2 = find_path_to_node(data, node2_name)
     
-    return None, None
+    if not path1 or not path2:
+        return None
+        
+    # Find common ancestor
+    common_ancestor = None
+    for node1, node2 in zip(path1, path2):
+        if node1 == node2:
+            common_ancestor = node1
+        else:
+            break
+            
+    if not common_ancestor:
+        return None
+        
+    # Determine relationship based on paths
+    def get_node_type(node):
+        for key in ['Faculty Name', 'Department Name', 'Program Name', 'Course Name', 'Name']:
+            if key in node:
+                return key.replace(' Name', '').lower()
+        return None
+        
+    node1_type = get_node_type(path1[-1])
+    node2_type = get_node_type(path2[-1])
+    
+    return {
+        'node1_type': node1_type,
+        'node2_type': node2_type,
+        'common_ancestor': common_ancestor,
+        'path1': path1,
+        'path2': path2
+    }
+
+def get_random_nodes(data, available_layers):
+    """Get two random nodes from the hierarchy"""
+    nodes = []
+    
+    def collect_nodes(obj):
+        if isinstance(obj, dict):
+            # Get node name if it exists
+            for name_key in ['Name', 'Faculty Name', 'Department Name', 'Program Name', 'Course Name']:
+                if name_key in obj:
+                    nodes.append((obj[name_key], name_key))
+                    break
+            
+            # Continue searching in child nodes
+            for value in obj.values():
+                if isinstance(value, (dict, list)):
+                    collect_nodes(value)
+        elif isinstance(obj, list):
+            for item in obj:
+                collect_nodes(item)
+    
+    collect_nodes(data)
+    if len(nodes) < 2:
+        return None
+        
+    return random.sample(nodes, 2)
+
+def gen_answer_node_relationship(scenario: str, with_answer: bool = True, get_available_layers_func=None):
+    """Generate question about relationship between two nodes"""
+    try:
+        # Read the JSON file
+        file_path = os.path.join(
+            os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__)))),
+            "dataset",
+            "JSON",
+            "dataset",
+            f"{scenario}.json"
+        )
+        
+        with open(file_path, 'r') as file:
+            data = json.load(file)
+            
+        # Get available layers for this scenario
+        if get_available_layers_func is None:
+            logging.error("get_available_layers_func not provided")
+            return None, None
+            
+        scenario_info = get_available_layers_func(scenario)
+        if not scenario_info:
+            logging.error(f"No layer information found for scenario: {scenario}")
+            return None, None
+            
+        available_layers = scenario_info["layers"]
+        
+        # Get two random nodes
+        nodes = get_random_nodes(data, available_layers)
+        if not nodes:
+            logging.error(f"Could not find enough nodes in {scenario}")
+            return None, None
+            
+        node1_name, _ = nodes[0]
+        node2_name, _ = nodes[1]
+        
+        # Find relationship between nodes
+        relationship = find_relationship(data, node1_name, node2_name)
+        if not relationship:
+            logging.error(f"Could not determine relationship between nodes")
+            return None, None
+            
+        # Generate question
+        question = f"What is the relationship between {node1_name} and {node2_name}?"
+        
+        # Generate answer
+        if with_answer:
+            common_ancestor_name = None
+            for name_key in ['Name', 'Faculty Name', 'Department Name', 'Program Name', 'Course Name']:
+                if name_key in relationship['common_ancestor']:
+                    common_ancestor_name = relationship['common_ancestor'][name_key]
+                    break
+                    
+            answer = (f"{node1_name} ({relationship['node1_type']}) and {node2_name} "
+                     f"({relationship['node2_type']}) share a common ancestor: {common_ancestor_name}")
+        else:
+            answer = None
+            
+        return question, answer
+        
+    except Exception as e:
+        logging.error(f"Error in gen_answer_node_relationship: {str(e)}")
+        return None, None
 
 if __name__ == "__main__":
     count = 0

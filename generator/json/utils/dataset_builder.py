@@ -33,30 +33,35 @@ import qa.shared_ancestor_diff_level as type_10
 import qa.path_between_nodes as type_11
 
 def generate_question_answer(scenario: str, question_type: int, with_answer: bool = True, layer_index: int = None):
-    if question_type == 1:
-        return type_1.gen_anwser_child_count(scenario=scenario, with_answer=with_answer, layer_index=layer_index)
-    elif question_type == 2:
-        return type_2.gen_anwser_node_depth(scenario=scenario, with_answer=with_answer, layer_index=layer_index)
-    elif question_type == 3:
-        return type_3.gen_anwser_level_count(scenario=scenario, with_answer=with_answer, layer_index=layer_index)
-    elif question_type == 4:
-        return type_4.gen_answer_node_relationship(scenario, with_answer=with_answer)
-    elif question_type == 5:
-        return type_5.gen_answer_node_attribute(scenario, with_answer=with_answer)
-    elif question_type == 6:
-        return type_6.gen_answer_level_nodes(scenario, with_answer=with_answer)
-    elif question_type == 7:
-        return type_7.gen_answer_path_down_to_up(scenario, with_answer=with_answer)
-    elif question_type == 8:
-        return type_8.gen_answer_path_up_to_down(scenario, with_answer=with_answer)
-    elif question_type == 9:
-        return type_9.gen_answer_shared_ancestor_same_level(scenario, with_answer=with_answer)
-    elif question_type == 10:
-        return type_10.gen_answer_shared_ancestor_diff_level(scenario, with_answer=with_answer)
-    elif question_type == 11:
-        return type_11.gen_answer_path_between_nodes(scenario, with_answer=with_answer)
-    else:
-        raise ValueError("Invalid question type")
+    try:
+        if question_type == 1:
+            return type_1.gen_anwser_child_count(scenario=scenario, with_answer=with_answer, layer_index=layer_index, get_available_layers_func=get_available_layers)
+        elif question_type == 2:
+            return type_2.gen_anwser_node_depth(scenario=scenario, with_answer=with_answer, layer_index=layer_index, get_available_layers_func=get_available_layers)
+        elif question_type == 3:
+            return type_3.gen_anwser_level_count(scenario=scenario, with_answer=with_answer, layer_index=layer_index, get_available_layers_func=get_available_layers)
+        elif question_type == 4:
+            return type_4.gen_answer_node_relationship(scenario, with_answer=with_answer, get_available_layers_func=get_available_layers)
+        elif question_type == 5:
+            return type_5.gen_answer_node_attribute(scenario, with_answer=with_answer, get_available_layers_func=get_available_layers)
+        elif question_type == 6:
+            return type_6.gen_answer_level_nodes(scenario, with_answer=with_answer, get_available_layers_func=get_available_layers)
+        elif question_type == 7:
+            return type_7.gen_answer_path_down_to_up(scenario, with_answer=with_answer, get_available_layers_func=get_available_layers)
+        elif question_type == 8:
+            return type_8.gen_answer_path_up_to_down(scenario, with_answer=with_answer, get_available_layers_func=get_available_layers)
+        elif question_type == 9:
+            return type_9.gen_answer_shared_ancestor_same_level(scenario, with_answer=with_answer, get_available_layers_func=get_available_layers)
+        elif question_type == 10:
+            return type_10.gen_answer_shared_ancestor_diff_level(scenario, with_answer=with_answer, get_available_layers_func=get_available_layers)
+        elif question_type == 11:
+            return type_11.gen_answer_path_between_nodes(scenario, with_answer=with_answer, get_available_layers_func=get_available_layers)
+        else:
+            logging.error(f"Invalid question type: {question_type}")
+            return None, None
+    except Exception as e:
+        logging.error(f"Error generating question type {question_type} for scenario {scenario}: {str(e)}")
+        return None, None
 
 def get_available_layers(scenario: str):
     """Get available layers for each scenario"""
@@ -65,19 +70,19 @@ def get_available_layers(scenario: str):
             "layers": [0, 1, 2],
             "names": ["Faculty", "Department", "Program"]
         },
-        "university_structure_medium_01": {
+        "university_structure_medium_1": {
             "layers": [0, 1, 2, 3, 4, 5],
             "names": ["Faculty", "Department", "Program", "Course", "Lecturer", "Student"]
         },
-        "university_structure_medium_02": {
-            "layers": [0, 1, 2],
+        "university_structure_medium_2": {
+            "layers": [0, 1, 2,4],
             "names": ["Faculty", "Department", "Program"]
         },
-        "university_structure_large_01": {
+        "university_structure_large_1": {
             "layers": [0, 1, 2, 3, 4, 5],
             "names": ["Faculty", "Department", "Program", "Course", "Lecturer", "Student"]
         },
-        "university_structure_large_02": {
+        "university_structure_large_2": {
             "layers": [0, 1, 2],
             "names": ["Faculty", "Department", "Program"]
         },
@@ -86,23 +91,29 @@ def get_available_layers(scenario: str):
             "layers": [0, 1, 2],
             "names": ["Faculty", "Department", "Program"]
         },
-        "university_bullshit_structure_medium_01": {
+        "university_bullshit_structure_medium_1": {
             "layers": [0, 1, 2, 3, 4, 5],
             "names": ["Faculty", "Department", "Program", "Course", "Lecturer", "Student"]
         },
-        "university_bullshit_structure_medium_02": {
+        "university_bullshit_structure_medium_2": {
             "layers": [0, 1, 2],
             "names": ["Faculty", "Department", "Program"]
         },
-        "university_bullshit_structure_large_01": {
+        "university_bullshit_structure_large_1": {
             "layers": [0, 1, 2, 3, 4, 5],
             "names": ["Faculty", "Department", "Program", "Course", "Lecturer", "Student"]
         },
-        "university_bullshit_structure_large_02": {
+        "university_bullshit_structure_large_2": {
             "layers": [0, 1, 2],
             "names": ["Faculty", "Department", "Program"]
         }
     }
+    
+    if scenario not in layers:
+        logging.error(f"No layer information found for scenario: {scenario}")
+        return None
+        
+    logging.info(f"Found layers for {scenario}: {layers[scenario]}")
     return layers.get(scenario)
 
 def is_duplicate_question(questions_answers: list, new_question: str) -> bool:
@@ -128,30 +139,16 @@ def get_question_type_name(question_type: int) -> str:
 
 def generate_test_data_set(scenario: str, with_answer: bool = True, number_of_questions: int = 40):
     """Generate test dataset based on scenario's available layers"""
-    # Get the absolute paths
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    project_root = os.path.dirname(current_dir)
-    base_path = os.path.join(project_root, "task_json", "Test_dataset")
+    logging.info(f"Starting generation for scenario: {scenario}")
     
-    logging.debug(f"Starting dataset generation for scenario: {scenario}")
-    valid_scenarios = [
-        "university_structure_small",
-        "university_structure_medium_01",
-        "university_structure_medium_02",
-        "university_structure_large_01",
-        "university_structure_large_02",
-        "university_bullshit_structure_small",
-        "university_bullshit_structure_medium_01",
-        "university_bullshit_structure_medium_02",
-        "university_bullshit_structure_large_01",
-        "university_bullshit_structure_large_02"
-    ]
+    # Update output paths for generated QA pairs
+    base_path = os.path.join(
+        os.path.dirname(__file__),  # generator/json/utils
+        "..",                       # generator/json
+        "task_json",                # generator/json/task_json
+        "Test_dataset"              # generator/json/task_json/Test_dataset
+    )
     
-    if scenario not in valid_scenarios:
-        error_msg = f"Invalid scenario name: {scenario}"
-        logging.error(error_msg)
-        raise ValueError(error_msg)
-
     # Get available layers for this scenario
     scenario_info = get_available_layers(scenario)
     if not scenario_info:
@@ -171,13 +168,45 @@ def generate_test_data_set(scenario: str, with_answer: bool = True, number_of_qu
     total_operations = len(valid_question_types) * number_of_questions
     progress_bar = tqdm(total=total_operations, desc=f"Generating dataset for {scenario}")
 
-    MAX_DUPLICATE_TRIES = 50  # Maximum attempts to generate a non-duplicate question
-    MAX_NULL_TRIES = 50       # Maximum attempts to generate a non-null question
+    MAX_DUPLICATE_TRIES = 10  # Maximum attempts to generate a non-duplicate question
+    MAX_NULL_TRIES = 10      # Maximum attempts to generate a non-null question
 
     for question_type in valid_question_types:
-        logging.debug(f"Processing question type: {question_type}")
-        # Create question type directory using descriptive name
         question_type_name = get_question_type_name(question_type)
+        logging.info(f"Generating {question_type_name} questions for {scenario}")
+        
+        questions_answers = []
+        duplicate_count = 0
+        null_count = 0
+
+        for _ in range(number_of_questions):
+            # Try to generate a valid, non-duplicate question
+            for attempt in range(MAX_DUPLICATE_TRIES):
+                # Try to generate a non-null question
+                for null_attempt in range(MAX_NULL_TRIES):
+                    question, answer = generate_question_answer(scenario, question_type, with_answer)
+                    if question is not None and answer is not None:
+                        break
+                    null_count += 1
+                    logging.debug(f"Null attempt {null_attempt} for {question_type_name}")
+                
+                if question is None or answer is None:
+                    logging.error(f"Failed to generate valid question for type {question_type_name}")
+                    break
+                
+                if not is_duplicate_question(questions_answers, question):
+                    questions_answers.append({"question": question, "answer": answer})
+                    break
+                duplicate_count += 1
+                
+            progress_bar.update(1)
+        
+        # Log statistics for this question type
+        logging.info(f"Generated {len(questions_answers)} questions for {question_type_name}")
+        logging.info(f"Duplicate attempts: {duplicate_count}")
+        logging.info(f"Null attempts: {null_count}")
+
+        # Create question type directory using descriptive name
         question_type_path = os.path.join(base_path, question_type_name)
         os.makedirs(question_type_path, exist_ok=True)
         logging.debug(f"Created question type directory: {question_type_path}")
@@ -185,166 +214,6 @@ def generate_test_data_set(scenario: str, with_answer: bool = True, number_of_qu
         # Create file path with descriptive name
         file_name = os.path.join(question_type_path, f"{question_type_name}_{scenario}.json")
         logging.debug(f"Will save to file: {file_name}")
-        questions_answers = []
-        
-        # For layer-specific questions (types 1-3)
-        if question_type in [1, 2, 3]:
-            logging.debug(f"Processing layer-specific questions for type {question_type}")
-            questions_per_layer = number_of_questions // len(layers)
-            for layer_index in layers:
-                logging.debug(f"Processing layer {layer_index}")
-                generated_count = 0
-                duplicate_tries = 0
-                null_tries = 0
-                
-                while (generated_count < questions_per_layer and 
-                       duplicate_tries < MAX_DUPLICATE_TRIES and
-                       null_tries < MAX_NULL_TRIES):
-                    question, answer = generate_question_answer(
-                        scenario=scenario,
-                        question_type=question_type,
-                        with_answer=with_answer,
-                        layer_index=layer_index
-                    )
-                    
-                    # Skip if question or answer is None
-                    if question is None or answer is None:
-                        warning_msg = f"Skipping null question-answer pair for type {question_type}, layer {layer_index}"
-                        logging.warning(warning_msg)
-                        null_tries += 1
-                        continue
-                    
-                    # Skip if question is duplicate
-                    if is_duplicate_question(questions_answers, question):
-                        logging.debug(f"Skipping duplicate question: {question[:50]}...")
-                        duplicate_tries += 1
-                        continue
-                        
-                    questions_answers.append({
-                        "question": question,
-                        "answer": answer
-                    })
-                    generated_count += 1
-                    duplicate_tries = 0
-                    null_tries = 0
-                
-                if duplicate_tries >= MAX_DUPLICATE_TRIES or null_tries >= MAX_NULL_TRIES:
-                    logging.warning(f"Reached maximum tries for type {question_type}, layer {layer_index}. "
-                                  f"Generated {generated_count}/{questions_per_layer} questions.")
-                    # Write what we have so far
-                    if generated_count > 0:
-                        progress_bar.update(questions_per_layer - generated_count)  # Update progress bar for skipped questions
-            
-            # For remaining questions
-            remaining_questions = number_of_questions % len(layers)
-            if remaining_questions > 0:
-                generated_count = 0
-                duplicate_tries = 0
-                null_tries = 0
-                
-                while (generated_count < remaining_questions and 
-                       duplicate_tries and
-                       null_tries < MAX_NULL_TRIES):
-                    question, answer = generate_question_answer(
-                        scenario=scenario,
-                        question_type=question_type,
-                        with_answer=with_answer,
-                        layer_index=layers[0]
-                    )
-                    
-                    # Skip if question or answer is None
-                    if question is None or answer is None:
-                        warning_msg = f"Skipping null question-answer pair for type {question_type}, layer {layers[0]}"
-                        logging.warning(warning_msg)
-                        null_tries += 1
-                        continue
-                    
-                    # Skip if question is duplicate
-                    if is_duplicate_question(questions_answers, question):
-                        logging.debug(f"Skipping duplicate question: {question[:50]}...")
-                        duplicate_tries += 1
-                        continue
-                        
-                    questions_answers.append({
-                        "question": question,
-                        "answer": answer
-                    })
-                    generated_count += 1
-                    duplicate_tries = 0
-                    null_tries = 0
-                
-                if duplicate_tries >= MAX_DUPLICATE_TRIES or null_tries >= MAX_NULL_TRIES:
-                    logging.warning(f"Reached maximum tries for remaining questions of type {question_type}. "
-                                  f"Generated {generated_count}/{remaining_questions} questions.")
-                    if generated_count > 0:
-                        progress_bar.update(remaining_questions - generated_count)
-        
-        # For non-layer-specific questions (types 4-11)
-        else:
-            logging.debug(f"Processing non-layer-specific questions for type {question_type}")
-            generated_count = 0
-            true_count = 0
-            false_count = 0
-            target_true = number_of_questions // 2
-            target_false = number_of_questions - target_true
-            duplicate_tries = 0
-            null_tries = 0
-            
-            while (generated_count < number_of_questions and 
-                   duplicate_tries < MAX_DUPLICATE_TRIES and
-                   null_tries < MAX_NULL_TRIES):
-                question, answer = generate_question_answer(
-                    scenario=scenario,
-                    question_type=question_type,
-                    with_answer=with_answer
-                )
-                
-                # Skip if question or answer is None
-                if question is None or answer is None:
-                    warning_msg = f"Skipping null question-answer pair for type {question_type}"
-                    logging.warning(warning_msg)
-                    null_tries += 1
-                    continue
-                
-                # Skip if question is duplicate
-                if is_duplicate_question(questions_answers, question):
-                    logging.debug(f"Skipping duplicate question: {question[:50]}...")
-                    duplicate_tries += 1
-                    continue
-                
-                # For type 4, ensure balanced True/False answers
-                if question_type == 4:
-                    if answer is True and true_count < target_true:
-                        questions_answers.append({"question": question, "answer": answer})
-                        true_count += 1
-                        generated_count += 1
-                        duplicate_tries = 0
-                        null_tries = 0
-                        progress_bar.update(1)
-                        logging.debug(f"Added True answer. Current True count: {true_count}/{target_true}")
-                    elif answer is False and false_count < target_false:
-                        questions_answers.append({"question": question, "answer": answer})
-                        false_count += 1
-                        generated_count += 1
-                        duplicate_tries = 0
-                        null_tries = 0
-                        progress_bar.update(1)
-                        logging.debug(f"Added False answer. Current False count: {false_count}/{target_false}")
-                    # If we get an answer we don't need, just continue trying
-                    continue
-                else:
-                    questions_answers.append({"question": question, "answer": answer})
-                    generated_count += 1
-                    duplicate_tries = 0
-                    null_tries = 0
-                    progress_bar.update(1)
-            
-            if duplicate_tries >= MAX_DUPLICATE_TRIES or null_tries >= MAX_NULL_TRIES:
-                logging.warning(f"Reached maximum tries for type {question_type}. "
-                              f"Generated {generated_count}/{number_of_questions} questions. "
-                              f"True/False ratio - True: {true_count}/{target_true}, False: {false_count}/{target_false}")
-                if generated_count > 0:
-                    progress_bar.update(number_of_questions - generated_count)
         
         # Write all questions to a single file, even if incomplete
         if questions_answers:  # Only write if we have some questions
@@ -361,166 +230,275 @@ def generate_test_data_set(scenario: str, with_answer: bool = True, number_of_qu
     progress_bar.close()
     logging.debug(f"Completed dataset generation for scenario: {scenario}")
 
+def verify_dataset_alignment(scenarios):
+    """Verify that normal and bullshit datasets have matching structures"""
+    logging.info("Verifying dataset alignment...")
+    
+    # Get absolute path to project root (HiBench directory)
+    current_file = os.path.abspath(__file__)
+    project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(current_file))))
+    
+    logging.info(f"Project root path: {project_root}")
+
+    # Update scenario pairs to match actual file names
+    scenario_pairs = {
+        'structure_medium_1': {
+            'normal': 'university_structure_medium_1',
+            'bullshit': 'university_bullshit_structure_medium_1'
+        },
+        'structure_medium_2': {
+            'normal': 'university_structure_medium_2',
+            'bullshit': 'university_bullshit_structure_medium_2'
+        },
+        'structure_large_1': {
+            'normal': 'university_structure_large_1',
+            'bullshit': 'university_bullshit_structure_large_1'
+        },
+        'structure_large_2': {
+            'normal': 'university_structure_large_2',
+            'bullshit': 'university_bullshit_structure_large_2'
+        },
+        'structure_small': {
+            'normal': 'university_structure_small',
+            'bullshit': 'university_bullshit_structure_small'
+        }
+    }
+
+    alignment_report = {}
+    is_aligned = True
+
+    for base_name, pair in scenario_pairs.items():
+        # Construct absolute paths
+        normal_path = os.path.join(
+            project_root,
+            "dataset",
+            "JSON",
+            "dataset",
+            f"{pair['normal']}.json"
+        )
+        bullshit_path = os.path.join(
+            project_root,
+            "dataset",
+            "JSON",
+            "dataset",
+            f"{pair['bullshit']}.json"
+        )
+
+        logging.info(f"Checking normal file: {normal_path}")
+        logging.info(f"Checking bullshit file: {bullshit_path}")
+
+        # Verify file existence before trying to open
+        if not os.path.exists(normal_path):
+            error_msg = f"Normal file not found: {normal_path}"
+            logging.error(error_msg)
+            alignment_report[base_name] = {
+                'normal_file': pair['normal'],
+                'bullshit_file': pair['bullshit'],
+                'error': error_msg
+            }
+            is_aligned = False
+            continue
+
+        if not os.path.exists(bullshit_path):
+            error_msg = f"Bullshit file not found: {bullshit_path}"
+            logging.error(error_msg)
+            alignment_report[base_name] = {
+                'normal_file': pair['normal'],
+                'bullshit_file': pair['bullshit'],
+                'error': error_msg
+            }
+            is_aligned = False
+            continue
+
+        try:
+            with open(normal_path, 'r', encoding='utf-8') as f:
+                normal_data = json.load(f)
+            with open(bullshit_path, 'r', encoding='utf-8') as f:
+                bullshit_data = json.load(f)
+
+            # Compare structure lengths
+            normal_length = len(normal_data)
+            bullshit_length = len(bullshit_data)
+            
+            alignment_report[base_name] = {
+                'normal_file': pair['normal'],
+                'bullshit_file': pair['bullshit'],
+                'normal_length': normal_length,
+                'bullshit_length': bullshit_length,
+                'is_aligned': normal_length == bullshit_length,
+                'error': None
+            }
+
+            if normal_length != bullshit_length:
+                is_aligned = False
+                error_msg = f"Length mismatch: normal={normal_length}, bullshit={bullshit_length}"
+                alignment_report[base_name]['error'] = error_msg
+                logging.error(f"Dataset alignment error for {base_name}: {error_msg}")
+
+        except Exception as e:
+            is_aligned = False
+            error_msg = f"Error comparing datasets: {str(e)}"
+            alignment_report[base_name] = {
+                'normal_file': pair['normal'],
+                'bullshit_file': pair['bullshit'],
+                'error': error_msg
+            }
+            logging.error(f"Dataset verification error for {base_name}: {error_msg}")
+
+    return is_aligned, alignment_report
+
 def generate_dataset_report():
     """Generate a Markdown report describing the dataset demographics"""
-    # Get the absolute paths
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    project_root = os.path.dirname(current_dir)
-    base_path = os.path.join(project_root, "task_json", "Test_dataset")  # Changed path to include task_json
-    report_dir = os.path.join(project_root, "task_json", "reports")      # Changed path to include task_json
+    report_dir = os.path.join(
+        os.path.dirname(__file__),
+        "..",
+        "task_json",
+        "reports"
+    )
     report_path = os.path.join(report_dir, "DATASET_REPORT.md")
     
     # Ensure directories exist
-    os.makedirs(base_path, exist_ok=True)
     os.makedirs(report_dir, exist_ok=True)
     
+    # Initialize statistics dictionary
     stats = {
         "total_questions": 0,
         "by_question_type": defaultdict(int),
         "by_scenario": defaultdict(int),
-        "type_4_true_false": {"true": 0, "false": 0},
-        "questions_per_file": defaultdict(list)
+        "detailed_stats": defaultdict(lambda: defaultdict(int))  # scenario -> question_type -> count
     }
     
+    # Get test dataset directory
+    test_dataset_dir = os.path.join(
+        os.path.dirname(__file__),
+        "..",
+        "task_json",
+        "Test_dataset"
+    )
+
     # Collect statistics
-    for question_type in range(1, 12):
-        type_dir = os.path.join(base_path, get_question_type_name(question_type))
-        if not os.path.exists(type_dir):
-            continue
-            
-        for file_name in os.listdir(type_dir):
-            if not file_name.endswith('.json'):
-                continue
-                
-            file_path = os.path.join(type_dir, file_name)
-            scenario = file_name.split('_')[-1].replace('.json', '')
-            
-            with open(file_path, 'r') as f:
-                questions = json.load(f)
-                
-                stats["questions_per_file"][file_name] = len(questions)
-                stats["total_questions"] += len(questions)
-                stats["by_question_type"][question_type] += len(questions)
-                stats["by_scenario"][scenario] += len(questions)
-                
-                # Special handling for Type 4 (True/False distribution)
-                if question_type == 4:
-                    for qa in questions:
-                        if qa["answer"]:
-                            stats["type_4_true_false"]["true"] += 1
-                        else:
-                            stats["type_4_true_false"]["false"] += 1
+    question_types = [
+        'child_count', 'node_depth', 'level_count', 'node_relationship',
+        'node_attribute', 'level_nodes', 'path_down_to_up', 'path_up_to_down',
+        'shared_ancestor_same_level', 'shared_ancestor_diff_level', 'path_between_nodes'
+    ]
 
     # Generate Markdown report
     with open(report_path, 'w') as f:
         f.write("# Dataset Demographics Report\n\n")
         f.write(f"Generated on: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
-        
-        # Overall statistics
-        f.write("## Overall Statistics\n\n")
-        f.write(f"- Total number of questions: {stats['total_questions']}\n")
-        f.write(f"- Number of question types: {len(stats['by_question_type'])}\n")
-        f.write(f"- Number of scenarios: {len(stats['by_scenario'])}\n\n")
-        
-        # Question type distribution
-        f.write("## Distribution by Question Type\n\n")
-        f.write("| Question Type | Number of Questions |\n")
-        f.write("|--------------|-------------------|\n")
-        for qtype, count in sorted(stats["by_question_type"].items()):
-            f.write(f"| Type {qtype} | {count} |\n")
-        f.write("\n")
-        
-        # Scenario distribution
-        f.write("## Distribution by Scenario\n\n")
-        f.write("| Scenario | Number of Questions |\n")
-        f.write("|----------|-------------------|\n")
+
+        # Collect and write detailed statistics
+        f.write("## Detailed Statistics by Question Type and Scenario\n\n")
+        f.write("| Question Type | Scenario | Number of Questions |\n")
+        f.write("|--------------|----------|-------------------|\n")
+
+        for question_type in question_types:
+            question_type_dir = os.path.join(test_dataset_dir, question_type)
+            if not os.path.exists(question_type_dir):
+                continue
+
+            for file_name in os.listdir(question_type_dir):
+                if not file_name.endswith('.json'):
+                    continue
+
+                file_path = os.path.join(question_type_dir, file_name)
+                try:
+                    with open(file_path, 'r', encoding='utf-8') as json_file:
+                        questions = json.load(json_file)
+                        num_questions = len(questions)
+                        
+                        # Extract scenario name from file name
+                        scenario = file_name.replace(f"{question_type}_", "").replace(".json", "")
+                        
+                        # Update statistics
+                        stats["total_questions"] += num_questions
+                        stats["by_question_type"][question_type] += num_questions
+                        stats["by_scenario"][scenario] += num_questions
+                        stats["detailed_stats"][scenario][question_type] = num_questions
+                        
+                        # Write to report
+                        f.write(f"| {question_type} | {scenario} | {num_questions} |\n")
+                except Exception as e:
+                    logging.error(f"Error processing file {file_path}: {str(e)}")
+
+        # Write summary statistics
+        f.write("\n## Summary Statistics\n\n")
+        f.write(f"Total number of questions: {stats['total_questions']}\n\n")
+
+        # Questions by scenario
+        f.write("### Questions by Scenario\n\n")
+        f.write("| Scenario | Total Questions |\n")
+        f.write("|----------|----------------|\n")
         for scenario, count in sorted(stats["by_scenario"].items()):
             f.write(f"| {scenario} | {count} |\n")
-        f.write("\n")
-        
-        # Type 4 True/False distribution
-        f.write("## Type 4 (True/False) Distribution\n\n")
-        total_type4 = stats["type_4_true_false"]["true"] + stats["type_4_true_false"]["false"]
-        if total_type4 > 0:
-            true_percent = (stats["type_4_true_false"]["true"] / total_type4) * 100
-            false_percent = (stats["type_4_true_false"]["false"] / total_type4) * 100
-            f.write(f"- True answers: {stats['type_4_true_false']['true']} ({true_percent:.1f}%)\n")
-            f.write(f"- False answers: {stats['type_4_true_false']['false']} ({false_percent:.1f}%)\n\n")
-        
-        # Detailed file statistics
-        f.write("## Questions per File\n\n")
-        f.write("| File Name | Number of Questions |\n")
-        f.write("|-----------|-------------------|\n")
-        for file_name, count in sorted(stats["questions_per_file"].items()):
-            f.write(f"| {file_name} | {count} |\n")
+
+        # Questions by type
+        f.write("\n### Questions by Type\n\n")
+        f.write("| Question Type | Total Questions |\n")
+        f.write("|--------------|----------------|\n")
+        for qtype, count in sorted(stats["by_question_type"].items()):
+            f.write(f"| {qtype} | {count} |\n")
 
     logging.info(f"Dataset report generated: {report_path}")
 
+def ensure_directory_structure():
+    """Ensure all required directories exist"""
+    current_file = os.path.abspath(__file__)
+    project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(current_file))))
+    
+    required_dirs = [
+        os.path.join(project_root, "dataset", "JSON", "dataset"),
+        os.path.join(project_root, "generator", "json", "task_json", "Test_dataset"),
+        os.path.join(project_root, "generator", "json", "task_json", "reports")
+    ]
+
+    for directory in required_dirs:
+        if not os.path.exists(directory):
+            logging.info(f"Creating directory: {directory}")
+            os.makedirs(directory, exist_ok=True)
+
+    return project_root
+
 if __name__ == "__main__":
     logging.info("Starting dataset generation process")
-    # List of all scenarios
-    scenarios = [
-        "university_structure_small",
-        "university_structure_medium_01",
-        "university_structure_medium_02",
-        "university_structure_large_01",
-        "university_structure_large_02",
-        "university_bullshit_structure_small",
-        "university_bullshit_structure_medium_01",
-        "university_bullshit_structure_medium_02",
-        "university_bullshit_structure_large_01",
-        "university_bullshit_structure_large_02"
-    ]
-    #generate_test_data_set("university_bullshit_structure_medium_02", True)
+    
+    # Ensure directory structure exists
+    project_root = ensure_directory_structure()
+    logging.info(f"Project root: {project_root}")
+    
+    # First verify dataset alignment
+    is_aligned, alignment_report = verify_dataset_alignment([])
+    if not is_aligned:
+        logging.error("Dataset alignment check failed. See report for details.")
+        logging.error("Alignment report:")
+        for base_name, info in alignment_report.items():
+            if info.get('error'):
+                logging.error(f"{base_name}: {info['error']}")
+        sys.exit(1)
+
+    logging.info("Dataset alignment check passed. Proceeding with generation...")
+
+    # Update scenario question counts to match actual file names
+    scenario_question_counts = {
+        "university_structure_medium_1": 13,
+        "university_bullshit_structure_medium_1": 13,
+        "university_structure_medium_2": 13,
+        "university_bullshit_structure_medium_2": 13,
+        "university_structure_large_1": 13,
+        "university_bullshit_structure_large_1": 13,
+        "university_structure_large_2": 13,
+        "university_bullshit_structure_large_2": 13,
+        "university_structure_small": 13,
+        "university_bullshit_structure_small": 13
+    }
+
     # Generate datasets for each scenario
+    scenarios = list(scenario_question_counts.keys())
     for scenario in scenarios:
-        generate_test_data_set(scenario, True)
+        question_count = scenario_question_counts[scenario]
+        generate_test_data_set(scenario, True, question_count)
     
     # Generate report after creating all datasets
     generate_dataset_report()
     logging.info("Completed all dataset generation")
-
-"""
-Layer Structure for University Scenarios:
-
-university_structure_small:
-- Layers: 3
-- Structure:
-  0: Faculty
-  1: Department
-  2: Program
-
-university_structure_medium_01:
-- Layers: 6
-- Structure:
-  0: Faculty
-  1: Department
-  2: Program
-  3: Course
-  4: Lecturer
-  5: Student
-
-university_structure_medium_02:
-- Layers: 3
-- Structure:
-  0: Faculty
-  1: Department
-  2: Program
-
-university_structure_large_01:
-- Layers: 6
-- Structure:
-  0: Faculty
-  1: Department
-  2: Program
-  3: Course
-  4: Lecturer
-  5: Student
-
-university_structure_large_02:
-- Layers: 3
-- Structure:
-  0: Faculty
-  1: Department
-  2: Program
-"""
