@@ -1,0 +1,595 @@
+{
+    "University": "Global University",
+    "Faculties": [
+        {
+            "Faculty Name": "Faculty of Law",
+            "Departments": [
+                {
+                    "Department Name": "Department of Environmental Law",
+                    "Programs": [
+                        {
+                            "Program Name": "Bachelor of Arts",
+                            "Courses": [
+                                {
+                                    "Course Name": "Philosophical Theories",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Lecturer Gael Turner",
+                                            "Title": "Lecturer"
+                                        },
+                                        {
+                                            "Name": "Lecturer Jackson Scott",
+                                            "Title": "Lecturer"
+                                        },
+                                        {
+                                            "Name": "Lecturer Beau Roberts",
+                                            "Title": "Lecturer"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Course Name": "Landscape Architecture",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Associate Professor Christopher Scott",
+                                            "Title": "Associate Professor"
+                                        },
+                                        {
+                                            "Name": "Professor Luka Kelly",
+                                            "Title": "Professor"
+                                        },
+                                        {
+                                            "Name": "Assistant Professor Ryan Wood",
+                                            "Title": "Assistant Professor"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Course Name": "Surgical Procedures",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Assistant Professor Liam Hill",
+                                            "Title": "Assistant Professor"
+                                        },
+                                        {
+                                            "Name": "Assistant Professor Michael Watson",
+                                            "Title": "Assistant Professor"
+                                        },
+                                        {
+                                            "Name": "Lecturer Nathan Cox",
+                                            "Title": "Lecturer"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "Students": [
+                                {
+                                    "Name": "Lillian Stewart",
+                                    "Student ID": "29958243"
+                                },
+                                {
+                                    "Name": "Willow Morgan",
+                                    "Student ID": "35169090"
+                                },
+                                {
+                                    "Name": "Maya Maverick",
+                                    "Student ID": "67258737"
+                                }
+                            ]
+                        },
+                        {
+                            "Program Name": "Bachelor of Science",
+                            "Courses": [
+                                {
+                                    "Course Name": "Financial Accounting",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Lecturer Miles Peterson",
+                                            "Title": "Lecturer"
+                                        },
+                                        {
+                                            "Name": "Assistant Professor Hudson Patel",
+                                            "Title": "Assistant Professor"
+                                        },
+                                        {
+                                            "Name": "Professor Christopher Cook",
+                                            "Title": "Professor"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Course Name": "Philosophical Theories",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Lecturer Bennett Allen",
+                                            "Title": "Lecturer"
+                                        },
+                                        {
+                                            "Name": "Professor Cooper Rodriguez",
+                                            "Title": "Professor"
+                                        },
+                                        {
+                                            "Name": "Professor Asher Sanchez",
+                                            "Title": "Professor"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Course Name": "Modern Art",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Professor Josiah Roberts",
+                                            "Title": "Professor"
+                                        },
+                                        {
+                                            "Name": "Lecturer Ezekiel Adams",
+                                            "Title": "Lecturer"
+                                        },
+                                        {
+                                            "Name": "Associate Professor Samuel Sanchez",
+                                            "Title": "Associate Professor"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "Students": [
+                                {
+                                    "Name": "Savannah Thompson",
+                                    "Student ID": "86812216"
+                                },
+                                {
+                                    "Name": "Zoe Wilson",
+                                    "Student ID": "06784105"
+                                },
+                                {
+                                    "Name": "Clara Roman",
+                                    "Student ID": "69434756"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Department Name": "Department of Intellectual Property Law",
+                    "Programs": [
+                        {
+                            "Program Name": "Bachelor of Arts",
+                            "Courses": [
+                                {
+                                    "Course Name": "Landscape Architecture",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Professor Jayden Green",
+                                            "Title": "Professor"
+                                        },
+                                        {
+                                            "Name": "Professor Luke Castillo",
+                                            "Title": "Professor"
+                                        },
+                                        {
+                                            "Name": "Professor James Hill",
+                                            "Title": "Professor"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Course Name": "Educational Psychology",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Lecturer Brooks Stewart",
+                                            "Title": "Lecturer"
+                                        },
+                                        {
+                                            "Name": "Associate Professor Luke Rodriguez",
+                                            "Title": "Associate Professor"
+                                        },
+                                        {
+                                            "Name": "Associate Professor Robert Kelly",
+                                            "Title": "Associate Professor"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Course Name": "Constitutional Law",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Professor Roman Torres",
+                                            "Title": "Professor"
+                                        },
+                                        {
+                                            "Name": "Associate Professor Benjamin Alvarez",
+                                            "Title": "Associate Professor"
+                                        },
+                                        {
+                                            "Name": "Lecturer Noah Roberts",
+                                            "Title": "Lecturer"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "Students": [
+                                {
+                                    "Name": "Liliana Johnson",
+                                    "Student ID": "40788793"
+                                },
+                                {
+                                    "Name": "Stella Martin",
+                                    "Student ID": "90669359"
+                                },
+                                {
+                                    "Name": "Mila Scott",
+                                    "Student ID": "20922757"
+                                }
+                            ]
+                        },
+                        {
+                            "Program Name": "Master of Business Administration",
+                            "Courses": [
+                                {
+                                    "Course Name": "Landscape Architecture",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Associate Professor Gabriel Carter",
+                                            "Title": "Associate Professor"
+                                        },
+                                        {
+                                            "Name": "Professor William Cox",
+                                            "Title": "Professor"
+                                        },
+                                        {
+                                            "Name": "Assistant Professor Charles Young",
+                                            "Title": "Assistant Professor"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Course Name": "Organic Chemistry",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Associate Professor Axel Kelly",
+                                            "Title": "Associate Professor"
+                                        },
+                                        {
+                                            "Name": "Lecturer Thiago Edwards",
+                                            "Title": "Lecturer"
+                                        },
+                                        {
+                                            "Name": "Lecturer Leo Johnson",
+                                            "Title": "Lecturer"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Course Name": "Introduction to Programming",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Professor Asher Harris",
+                                            "Title": "Professor"
+                                        },
+                                        {
+                                            "Name": "Associate Professor Amir Jones",
+                                            "Title": "Associate Professor"
+                                        },
+                                        {
+                                            "Name": "Professor Maverick Peterson",
+                                            "Title": "Professor"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "Students": [
+                                {
+                                    "Name": "Isabella Phillips",
+                                    "Student ID": "75044104"
+                                },
+                                {
+                                    "Name": "Charlotte Roberts",
+                                    "Student ID": "11695579"
+                                },
+                                {
+                                    "Name": "Jade Beau",
+                                    "Student ID": "43817497"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Faculty Name": "Faculty of Arts",
+            "Departments": [
+                {
+                    "Department Name": "Department of Literature",
+                    "Programs": [
+                        {
+                            "Program Name": "Master of Business Administration",
+                            "Courses": [
+                                {
+                                    "Course Name": "Quantum Physics",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Assistant Professor Nathan Ortiz",
+                                            "Title": "Assistant Professor"
+                                        },
+                                        {
+                                            "Name": "Associate Professor Ethan Robinson",
+                                            "Title": "Associate Professor"
+                                        },
+                                        {
+                                            "Name": "Lecturer Jose Williams",
+                                            "Title": "Lecturer"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Course Name": "World History",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Lecturer Jordan Ramirez",
+                                            "Title": "Lecturer"
+                                        },
+                                        {
+                                            "Name": "Associate Professor Jackson James",
+                                            "Title": "Associate Professor"
+                                        },
+                                        {
+                                            "Name": "Lecturer Elijah Turner",
+                                            "Title": "Lecturer"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Course Name": "Microeconomics",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Professor Andrew Reed",
+                                            "Title": "Professor"
+                                        },
+                                        {
+                                            "Name": "Associate Professor Micah Clark",
+                                            "Title": "Associate Professor"
+                                        },
+                                        {
+                                            "Name": "Lecturer Waylon Garcia",
+                                            "Title": "Lecturer"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "Students": [
+                                {
+                                    "Name": "Anna Peterson",
+                                    "Student ID": "11881252"
+                                },
+                                {
+                                    "Name": "Victoria Nolan",
+                                    "Student ID": "10500411"
+                                },
+                                {
+                                    "Name": "Gabriella Thomas",
+                                    "Student ID": "75284038"
+                                }
+                            ]
+                        },
+                        {
+                            "Program Name": "Master of Business Administration",
+                            "Courses": [
+                                {
+                                    "Course Name": "Organic Chemistry",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Associate Professor Ezekiel Hughes",
+                                            "Title": "Associate Professor"
+                                        },
+                                        {
+                                            "Name": "Assistant Professor Silas Stewart",
+                                            "Title": "Assistant Professor"
+                                        },
+                                        {
+                                            "Name": "Assistant Professor Adrian Campbell",
+                                            "Title": "Assistant Professor"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Course Name": "Organic Chemistry",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Associate Professor Angel Watson",
+                                            "Title": "Associate Professor"
+                                        },
+                                        {
+                                            "Name": "Lecturer Sebastian Mitchell",
+                                            "Title": "Lecturer"
+                                        },
+                                        {
+                                            "Name": "Lecturer Kai Turner",
+                                            "Title": "Lecturer"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Course Name": "Biochemistry",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Lecturer Isaiah Cruz",
+                                            "Title": "Lecturer"
+                                        },
+                                        {
+                                            "Name": "Professor Luka Roberts",
+                                            "Title": "Professor"
+                                        },
+                                        {
+                                            "Name": "Associate Professor Luca Richardson",
+                                            "Title": "Associate Professor"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "Students": [
+                                {
+                                    "Name": "Grace Reyes",
+                                    "Student ID": "04333065"
+                                },
+                                {
+                                    "Name": "Ava Joseph",
+                                    "Student ID": "94332225"
+                                },
+                                {
+                                    "Name": "Ava Diaz",
+                                    "Student ID": "41161925"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Department Name": "Department of Performing Arts",
+                    "Programs": [
+                        {
+                            "Program Name": "Bachelor of Science",
+                            "Courses": [
+                                {
+                                    "Course Name": "Data Structures",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Assistant Professor Isaiah Reed",
+                                            "Title": "Assistant Professor"
+                                        },
+                                        {
+                                            "Name": "Associate Professor Lincoln Stewart",
+                                            "Title": "Associate Professor"
+                                        },
+                                        {
+                                            "Name": "Assistant Professor Jordan Gomez",
+                                            "Title": "Assistant Professor"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Course Name": "Biochemistry",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Lecturer Ezekiel Morales",
+                                            "Title": "Lecturer"
+                                        },
+                                        {
+                                            "Name": "Lecturer Theodore Wood",
+                                            "Title": "Lecturer"
+                                        },
+                                        {
+                                            "Name": "Assistant Professor Carter Evans",
+                                            "Title": "Assistant Professor"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Course Name": "Financial Accounting",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Assistant Professor Roman Wright",
+                                            "Title": "Assistant Professor"
+                                        },
+                                        {
+                                            "Name": "Associate Professor Maverick Anderson",
+                                            "Title": "Associate Professor"
+                                        },
+                                        {
+                                            "Name": "Professor Jackson Ramirez",
+                                            "Title": "Professor"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "Students": [
+                                {
+                                    "Name": "Leilani Carter",
+                                    "Student ID": "97843334"
+                                },
+                                {
+                                    "Name": "Maria Gonzales",
+                                    "Student ID": "08757923"
+                                },
+                                {
+                                    "Name": "Hailey Aiden",
+                                    "Student ID": "48867500"
+                                }
+                            ]
+                        },
+                        {
+                            "Program Name": "Master of Engineering",
+                            "Courses": [
+                                {
+                                    "Course Name": "Quantum Physics",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Professor Anthony Brown",
+                                            "Title": "Professor"
+                                        },
+                                        {
+                                            "Name": "Lecturer Alexander Diaz",
+                                            "Title": "Lecturer"
+                                        },
+                                        {
+                                            "Name": "Lecturer Anthony Price",
+                                            "Title": "Lecturer"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Course Name": "Environmental Science",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Associate Professor Nathan Peterson",
+                                            "Title": "Associate Professor"
+                                        },
+                                        {
+                                            "Name": "Assistant Professor Parker Gonzales",
+                                            "Title": "Assistant Professor"
+                                        },
+                                        {
+                                            "Name": "Lecturer Asher Gutierrez",
+                                            "Title": "Lecturer"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Course Name": "Introduction to Programming",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Lecturer Anthony Davis",
+                                            "Title": "Lecturer"
+                                        },
+                                        {
+                                            "Name": "Assistant Professor Axel Robinson",
+                                            "Title": "Assistant Professor"
+                                        },
+                                        {
+                                            "Name": "Assistant Professor Santiago Thompson",
+                                            "Title": "Assistant Professor"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "Students": [
+                                {
+                                    "Name": "Sadie Roman",
+                                    "Student ID": "43082993"
+                                },
+                                {
+                                    "Name": "Aria Nguyen",
+                                    "Student ID": "32565044"
+                                },
+                                {
+                                    "Name": "Gabriella Everett",
+                                    "Student ID": "10818853"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+[
+    {
+        "question": "What is the relationship between Bachelor of Engineering and Master of Engineering?",
+        "answer": "Bachelor of Engineering (program) and Master of Engineering (program) share a common ancestor: Department of Aerospace Engineering"
+    },
+    {
+        "question": "What is the relationship between Bachelor of Science and Master of Science?",
+        "answer": "Bachelor of Science (program) and Master of Science (program) share a common ancestor: Faculty of Engineering"
+    },
+    {
+        "question": "What is the relationship between Master of Science and Bachelor of Arts?",
+        "answer": "Master of Science (program) and Bachelor of Arts (program) share a common ancestor: Department of Civil Engineering"
+    },
+    {
+        "question": "What is the relationship between Master of Engineering and Bachelor of Science?",
+        "answer": "Master of Engineering (program) and Bachelor of Science (program) share a common ancestor: Faculty of Engineering"
+    },
+    {
+        "question": "What is the relationship between Doctor of Philosophy and Bachelor of Business Administration?",
+        "answer": "Doctor of Philosophy (program) and Bachelor of Business Administration (program) share a common ancestor: Faculty of Engineering"
+    },
+    {
+        "question": "What is the relationship between Doctor of Philosophy and Department of Mechanical Engineering?",
+        "answer": "Doctor of Philosophy (program) and Department of Mechanical Engineering (department) share a common ancestor: Faculty of Engineering"
+    },
+    {
+        "question": "What is the relationship between Master of Engineering and Department of Environmental Law?",
+        "answer": "Master of Engineering (program) and Department of Environmental Law (department) share a common ancestor: Faculty of Engineering"
+    },
+    {
+        "question": "What is the relationship between Bachelor of Science and Faculty of Engineering?",
+        "answer": "Bachelor of Science (program) and Faculty of Engineering (faculty) share a common ancestor: Faculty of Engineering"
+    },
+    {
+        "question": "What is the relationship between Master of Science and Doctor of Philosophy?",
+        "answer": "Master of Science (program) and Doctor of Philosophy (program) share a common ancestor: Faculty of Engineering"
+    },
+    {
+        "question": "What is the relationship between Department of Labor Law and Doctor of Philosophy?",
+        "answer": "Department of Labor Law (department) and Doctor of Philosophy (program) share a common ancestor: Faculty of Engineering"
+    },
+    {
+        "question": "What is the relationship between Department of Aerospace Engineering and Department of Mechanical Engineering?",
+        "answer": "Department of Aerospace Engineering (department) and Department of Mechanical Engineering (department) share a common ancestor: Faculty of Engineering"
+    },
+    {
+        "question": "What is the relationship between Bachelor of Arts and Bachelor of Arts?",
+        "answer": "Bachelor of Arts (program) and Bachelor of Arts (program) share a common ancestor: Bachelor of Arts"
+    },
+    {
+        "question": "What is the relationship between Department of Labor Law and Master of Science?",
+        "answer": "Department of Labor Law (department) and Master of Science (program) share a common ancestor: Faculty of Engineering"
+    }
+]

@@ -6,6 +6,7 @@
 import json
 import random
 import os
+import logging
 
 def read_json_file(file_path):
     """Read JSON file and return its contents"""
@@ -108,39 +109,61 @@ def find_path_between_nodes(nodes, start_name, end_name):
     final_path.extend(reversed(reverse_path))
     return final_path
 
-def gen_answer_path_between_nodes(scenario: str, with_answer: bool = True):
-    """Generate questions about paths between any two nodes"""
-    file_path = os.path.join(os.path.dirname(__file__), "..", "dataset", f"{scenario}.json")
-    data = read_json_file(file_path)
-    
-    if isinstance(data, str):  # Error occurred
-        return None, None
-    
-    # Get all nodes with their relationships
-    nodes = get_nodes_with_relationships(data)
-    if len(nodes) < 2:
-        return None, None
-    
-    # Try to find valid node pairs
-    max_attempts = 100
-    for _ in range(max_attempts):
-        # Select two different nodes
-        node1_name, node2_name = random.sample(list(nodes.keys()), 2)
+def gen_answer_path_between_nodes(scenario: str, with_answer: bool = True, get_available_layers_func=None):
+    """Generate question about path between any two nodes"""
+    try:
+        # Read the JSON file
+        file_path = os.path.join(
+            os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__)))),
+            "dataset",
+            "JSON",
+            "dataset",
+            f"{scenario}.json"
+        )
         
-        # Find path between nodes
-        path = find_path_between_nodes(nodes, node1_name, node2_name)
+        with open(file_path, 'r') as file:
+            data = json.load(file)
+            
+        # Get available layers for this scenario
+        if get_available_layers_func is None:
+            logging.error("get_available_layers_func not provided")
+            return None, None
+            
+        scenario_info = get_available_layers_func(scenario)
+        if not scenario_info:
+            logging.error(f"No layer information found for scenario: {scenario}")
+            return None, None
+            
+        available_layers = scenario_info["layers"]
         
-        if path and len(path) > 2:  # Ensure path has at least one intermediate node
-            node1_type = nodes[node1_name]['type']
-            node2_type = nodes[node2_name]['type']
+        # Get all nodes with their relationships
+        nodes = get_nodes_with_relationships(data)
+        if len(nodes) < 2:
+            return None, None
+        
+        # Try to find valid node pairs
+        max_attempts = 100
+        for _ in range(max_attempts):
+            # Select two different nodes
+            node1_name, node2_name = random.sample(list(nodes.keys()), 2)
             
-            # Form question and answer
-            question = f"If someone wants to go from the {node1_type} '{node1_name}' to the {node2_type} '{node2_name}', what path should they take?"
-            answer = " → ".join(path) if with_answer else None
+            # Find path between nodes
+            path = find_path_between_nodes(nodes, node1_name, node2_name)
             
-            return question, answer
-    
-    return None, None
+            if path and len(path) > 2:  # Ensure path has at least one intermediate node
+                node1_type = nodes[node1_name]['type']
+                node2_type = nodes[node2_name]['type']
+                
+                # Form question and answer
+                question = f"If someone wants to go from the {node1_type} '{node1_name}' to the {node2_type} '{node2_name}', what path should they take?"
+                answer = " → ".join(path) if with_answer else None
+                
+                return question, answer
+        
+        return None, None
+    except Exception as e:
+        logging.error(f"Error in gen_answer_path_between_nodes: {str(e)}")
+        return None, None
 
 # Example usage
 if __name__ == "__main__":
