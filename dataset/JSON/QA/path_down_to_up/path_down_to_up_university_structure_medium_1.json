@@ -1,23 +1,23 @@
 [
     {
-        "question": "What is the path from Lecturer Sebastian Rivera up to the City University?",
-        "answer": "Lecturer Sebastian Rivera -> World History -> Doctor of Philosophy -> Department of Mechanical Engineering -> Faculty of Engineering"
-    },
-    {
-        "question": "What is the path from Associate Professor Jordan Baker up to the City University?",
-        "answer": "Associate Professor Jordan Baker -> Biochemistry -> Doctor of Philosophy -> Department of Mechanical Engineering -> Faculty of Engineering"
-    },
-    {
-        "question": "What is the path from Iris Ortiz up to the City University?",
-        "answer": "Iris Ortiz -> Doctor of Philosophy -> Department of Mechanical Engineering -> Faculty of Engineering"
+        "question": "What is the path from Mila Reyes up to the City University?",
+        "answer": "Mila Reyes -> Bachelor of Engineering -> Department of Electrical Engineering -> Faculty of Engineering"
     },
     {
         "question": "What is the path from Elena Carter up to the City University?",
         "answer": "Elena Carter -> Doctor of Philosophy -> Department of Mechanical Engineering -> Faculty of Engineering"
     },
     {
-        "question": "What is the path from Mila Reyes up to the City University?",
-        "answer": "Mila Reyes -> Bachelor of Engineering -> Department of Electrical Engineering -> Faculty of Engineering"
+        "question": "What is the path from Iris Ortiz up to the City University?",
+        "answer": "Iris Ortiz -> Doctor of Philosophy -> Department of Mechanical Engineering -> Faculty of Engineering"
+    },
+    {
+        "question": "What is the path from Lecturer Sebastian Rivera up to the City University?",
+        "answer": "Lecturer Sebastian Rivera -> World History -> Doctor of Philosophy -> Department of Mechanical Engineering -> Faculty of Engineering"
+    },
+    {
+        "question": "What is the path from Associate Professor Jordan Baker up to the City University?",
+        "answer": "Associate Professor Jordan Baker -> Biochemistry -> Doctor of Philosophy -> Department of Mechanical Engineering -> Faculty of Engineering"
     },
     {
         "question": "What is the path from Lecturer Elijah Brown up to the City University?",

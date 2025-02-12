@@ -1,0 +1,54 @@
+[
+    {
+        "question": "What is the path from CFLmbmCC down to SSyPQcsG?",
+        "answer": "CFLmbmCC -> SSyPQcsG"
+    },
+    {
+        "question": "What is the path from WeSSKoaz down to Wk2SV8oJ?",
+        "answer": "WeSSKoaz -> BFWN6dPo -> Wk2SV8oJ"
+    },
+    {
+        "question": "What is the path from WeSSKoaz down to BFWN6dPo?",
+        "answer": "WeSSKoaz -> BFWN6dPo"
+    },
+    {
+        "question": "What is the path from WeSSKoaz down to SSyPQcsG?",
+        "answer": "WeSSKoaz -> BFWN6dPo -> CFLmbmCC -> SSyPQcsG"
+    },
+    {
+        "question": "What is the path from BFWN6dPo down to qQ2YAsqr?",
+        "answer": "BFWN6dPo -> CFLmbmCC -> qQ2YAsqr"
+    },
+    {
+        "question": "What is the path from CFLmbmCC down to qQ2YAsqr?",
+        "answer": "CFLmbmCC -> qQ2YAsqr"
+    },
+    {
+        "question": "What is the path from WeSSKoaz down to pz8dGiR8?",
+        "answer": "WeSSKoaz -> BFWN6dPo -> Wk2SV8oJ -> pz8dGiR8"
+    },
+    {
+        "question": "What is the path from Wk2SV8oJ down to pz8dGiR8?",
+        "answer": "Wk2SV8oJ -> pz8dGiR8"
+    },
+    {
+        "question": "What is the path from BFWN6dPo down to pz8dGiR8?",
+        "answer": "BFWN6dPo -> Wk2SV8oJ -> pz8dGiR8"
+    },
+    {
+        "question": "What is the path from BFWN6dPo down to CFLmbmCC?",
+        "answer": "BFWN6dPo -> CFLmbmCC"
+    },
+    {
+        "question": "What is the path from WeSSKoaz down to CFLmbmCC?",
+        "answer": "WeSSKoaz -> BFWN6dPo -> CFLmbmCC"
+    },
+    {
+        "question": "What is the path from BFWN6dPo down to Wk2SV8oJ?",
+        "answer": "BFWN6dPo -> Wk2SV8oJ"
+    },
+    {
+        "question": "What is the path from BFWN6dPo down to SSyPQcsG?",
+        "answer": "BFWN6dPo -> CFLmbmCC -> SSyPQcsG"
+    }
+]

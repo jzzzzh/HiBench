@@ -1,34 +1,54 @@
 [
     {
-        "question": "What is the common ancestor of eeFex1L5 (Department) and 4TupuOZp (Course)?",
+        "question": "What is the common ancestor of 71QV2RZN and kd8iLssX?",
         "answer": "XCgkWsrU"
     },
     {
-        "question": "What is the common ancestor of HFQcs6vc (Department) and 71QV2RZN (Program)?",
+        "question": "What is the common ancestor of lmqKvj0m and 71QV2RZN?",
+        "answer": "lmqKvj0m"
+    },
+    {
+        "question": "What is the common ancestor of HFQcs6vc and y5GiriZT?",
         "answer": "XCgkWsrU"
     },
     {
-        "question": "What is the common ancestor of 71QV2RZN (Program) and kd8iLssX (Name)?",
+        "question": "What is the common ancestor of lmqKvj0m and 0qRli6yq?",
+        "answer": "lmqKvj0m"
+    },
+    {
+        "question": "What is the common ancestor of XCgkWsrU and ujkVtW7z?",
         "answer": "XCgkWsrU"
     },
     {
-        "question": "What is the common ancestor of HFQcs6vc (Department) and 50zn6Nh4 (Course)?",
+        "question": "What is the common ancestor of XCgkWsrU and m7GU0Kal?",
         "answer": "XCgkWsrU"
     },
     {
-        "question": "What is the common ancestor of 4TupuOZp (Course) and eeFex1L5 (Department)?",
+        "question": "What is the common ancestor of lmqKvj0m and ujkVtW7z?",
+        "answer": "lmqKvj0m"
+    },
+    {
+        "question": "What is the common ancestor of HFQcs6vc and 0qRli6yq?",
+        "answer": "HFQcs6vc"
+    },
+    {
+        "question": "What is the common ancestor of HFQcs6vc and ujkVtW7z?",
+        "answer": "HFQcs6vc"
+    },
+    {
+        "question": "What is the common ancestor of XCgkWsrU and eeFex1L5?",
         "answer": "XCgkWsrU"
     },
     {
-        "question": "What is the common ancestor of gPM94KHF (Name) and m7GU0Kal (Program)?",
+        "question": "What is the common ancestor of HFQcs6vc and 71QV2RZN?",
         "answer": "XCgkWsrU"
     },
     {
-        "question": "What is the common ancestor of kd8iLssX (Name) and eeFex1L5 (Department)?",
-        "answer": "XCgkWsrU"
+        "question": "What is the common ancestor of lmqKvj0m and gPM94KHF?",
+        "answer": "lmqKvj0m"
     },
     {
-        "question": "What is the common ancestor of 71QV2RZN (Program) and HFQcs6vc (Department)?",
+        "question": "What is the common ancestor of m7GU0Kal and gPM94KHF?",
         "answer": "XCgkWsrU"
     }
 ]

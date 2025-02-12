@@ -1,54 +1,54 @@
 [
     {
-        "question": "If someone wants to go from the program 'ccy1Bvts' to the program '97IplS1j', what path should they take?",
-        "answer": "ccy1Bvts \u2192 hulvZklZ \u2192 9fHLBh66 \u2192 YJu9yUFb \u2192 97IplS1j"
+        "question": "If someone wants to go from the program 'yoaqleP9' to the department 'YJu9yUFb', what path should they take?",
+        "answer": "yoaqleP9 \u2192 HpcowccP \u2192 9fHLBh66 \u2192 YJu9yUFb"
     },
     {
-        "question": "If someone wants to go from the department 'YJu9yUFb' to the department 'HpcowccP', what path should they take?",
-        "answer": "YJu9yUFb \u2192 9fHLBh66 \u2192 HpcowccP"
+        "question": "If someone wants to go from the program 'pbdKmils' to the program 'fH1KjPad', what path should they take?",
+        "answer": "pbdKmils \u2192 hulvZklZ \u2192 9fHLBh66 \u2192 HpcowccP \u2192 fH1KjPad"
     },
     {
-        "question": "If someone wants to go from the program 'o8Nsfchg' to the program 'fH1KjPad', what path should they take?",
-        "answer": "o8Nsfchg \u2192 YJu9yUFb \u2192 9fHLBh66 \u2192 HpcowccP \u2192 fH1KjPad"
+        "question": "If someone wants to go from the program 'yoaqleP9' to the program '1vHbmAQN', what path should they take?",
+        "answer": "yoaqleP9 \u2192 HpcowccP \u2192 9fHLBh66 \u2192 hulvZklZ \u2192 1vHbmAQN"
     },
     {
-        "question": "If someone wants to go from the department 'HpcowccP' to the program 'ccy1Bvts', what path should they take?",
-        "answer": "HpcowccP \u2192 9fHLBh66 \u2192 hulvZklZ \u2192 ccy1Bvts"
+        "question": "If someone wants to go from the program '97IplS1j' to the department 'HpcowccP', what path should they take?",
+        "answer": "97IplS1j \u2192 YJu9yUFb \u2192 9fHLBh66 \u2192 HpcowccP"
     },
     {
-        "question": "If someone wants to go from the program 'pbdKmils' to the faculty '9fHLBh66', what path should they take?",
-        "answer": "pbdKmils \u2192 hulvZklZ \u2192 9fHLBh66"
+        "question": "If someone wants to go from the faculty '9fHLBh66' to the program 'yoaqleP9', what path should they take?",
+        "answer": "9fHLBh66 \u2192 HpcowccP \u2192 yoaqleP9"
     },
     {
-        "question": "If someone wants to go from the program '97IplS1j' to the program 'fH1KjPad', what path should they take?",
-        "answer": "97IplS1j \u2192 YJu9yUFb \u2192 9fHLBh66 \u2192 HpcowccP \u2192 fH1KjPad"
+        "question": "If someone wants to go from the program 'pbdKmils' to the program '1vHbmAQN', what path should they take?",
+        "answer": "pbdKmils \u2192 hulvZklZ \u2192 1vHbmAQN"
     },
     {
-        "question": "If someone wants to go from the department 'HpcowccP' to the program '97IplS1j', what path should they take?",
-        "answer": "HpcowccP \u2192 9fHLBh66 \u2192 YJu9yUFb \u2192 97IplS1j"
+        "question": "If someone wants to go from the program 'yoaqleP9' to the program 'fH1KjPad', what path should they take?",
+        "answer": "yoaqleP9 \u2192 HpcowccP \u2192 fH1KjPad"
     },
     {
-        "question": "If someone wants to go from the program 'pbdKmils' to the department 'HpcowccP', what path should they take?",
-        "answer": "pbdKmils \u2192 hulvZklZ \u2192 9fHLBh66 \u2192 HpcowccP"
-    },
-    {
-        "question": "If someone wants to go from the program '1vHbmAQN' to the program 'yoaqleP9', what path should they take?",
-        "answer": "1vHbmAQN \u2192 hulvZklZ \u2192 9fHLBh66 \u2192 HpcowccP \u2192 yoaqleP9"
-    },
-    {
-        "question": "If someone wants to go from the department 'HpcowccP' to the department 'hulvZklZ', what path should they take?",
-        "answer": "HpcowccP \u2192 9fHLBh66 \u2192 hulvZklZ"
-    },
-    {
-        "question": "If someone wants to go from the program '97IplS1j' to the program 'o8Nsfchg', what path should they take?",
-        "answer": "97IplS1j \u2192 YJu9yUFb \u2192 o8Nsfchg"
+        "question": "If someone wants to go from the faculty '9fHLBh66' to the program 'ccy1Bvts', what path should they take?",
+        "answer": "9fHLBh66 \u2192 hulvZklZ \u2192 ccy1Bvts"
     },
     {
         "question": "If someone wants to go from the program 'yoaqleP9' to the program 'ccy1Bvts', what path should they take?",
         "answer": "yoaqleP9 \u2192 HpcowccP \u2192 9fHLBh66 \u2192 hulvZklZ \u2192 ccy1Bvts"
     },
     {
-        "question": "If someone wants to go from the program 'pbdKmils' to the program '1vHbmAQN', what path should they take?",
-        "answer": "pbdKmils \u2192 hulvZklZ \u2192 1vHbmAQN"
+        "question": "If someone wants to go from the program '1vHbmAQN' to the program 'pbdKmils', what path should they take?",
+        "answer": "1vHbmAQN \u2192 hulvZklZ \u2192 pbdKmils"
+    },
+    {
+        "question": "If someone wants to go from the program '97IplS1j' to the department 'hulvZklZ', what path should they take?",
+        "answer": "97IplS1j \u2192 YJu9yUFb \u2192 9fHLBh66 \u2192 hulvZklZ"
+    },
+    {
+        "question": "If someone wants to go from the program 'yoaqleP9' to the program 'pbdKmils', what path should they take?",
+        "answer": "yoaqleP9 \u2192 HpcowccP \u2192 9fHLBh66 \u2192 hulvZklZ \u2192 pbdKmils"
+    },
+    {
+        "question": "If someone wants to go from the faculty '9fHLBh66' to the program 'pbdKmils', what path should they take?",
+        "answer": "9fHLBh66 \u2192 hulvZklZ \u2192 pbdKmils"
     }
 ]

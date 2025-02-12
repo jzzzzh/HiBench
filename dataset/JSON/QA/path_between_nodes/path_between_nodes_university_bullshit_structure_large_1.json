@@ -1,54 +1,54 @@
 [
     {
-        "question": "If someone wants to go from the name 'VEZiQqMw' to the name 'ZFyEOdN1', what path should they take?",
-        "answer": "VEZiQqMw \u2192 hy44QVkq \u2192 CCXyVyLw \u2192 ZFyEOdN1"
+        "question": "If someone wants to go from the name 'TTJBxEMN' to the faculty '0uA0OvrC', what path should they take?",
+        "answer": "TTJBxEMN \u2192 T3VqTl8U \u2192 aPkmwYuZ \u2192 4qMs8IKh \u2192 0uA0OvrC"
     },
     {
-        "question": "If someone wants to go from the name 'QxLgi0KL' to the department '4qMs8IKh', what path should they take?",
-        "answer": "QxLgi0KL \u2192 aPkmwYuZ \u2192 4qMs8IKh"
+        "question": "If someone wants to go from the name 'DDn73D5P' to the department 'wIzBTNMa', what path should they take?",
+        "answer": "DDn73D5P \u2192 RhIyMUpy \u2192 hy44QVkq \u2192 wIzBTNMa"
     },
     {
-        "question": "If someone wants to go from the name 'QxLgi0KL' to the name 'rDVTXEo0', what path should they take?",
-        "answer": "QxLgi0KL \u2192 aPkmwYuZ \u2192 4qMs8IKh \u2192 0uA0OvrC \u2192 wIzBTNMa \u2192 hy44QVkq \u2192 rDVTXEo0"
+        "question": "If someone wants to go from the department '4qMs8IKh' to the name 'rDVTXEo0', what path should they take?",
+        "answer": "4qMs8IKh \u2192 0uA0OvrC \u2192 wIzBTNMa \u2192 hy44QVkq \u2192 rDVTXEo0"
     },
     {
-        "question": "If someone wants to go from the course 'CCXyVyLw' to the course 'T3VqTl8U', what path should they take?",
-        "answer": "CCXyVyLw \u2192 hy44QVkq \u2192 wIzBTNMa \u2192 0uA0OvrC \u2192 4qMs8IKh \u2192 aPkmwYuZ \u2192 T3VqTl8U"
+        "question": "If someone wants to go from the course 'RhIyMUpy' to the faculty '0uA0OvrC', what path should they take?",
+        "answer": "RhIyMUpy \u2192 hy44QVkq \u2192 wIzBTNMa \u2192 0uA0OvrC"
     },
     {
-        "question": "If someone wants to go from the program 'hy44QVkq' to the name 'DDn73D5P', what path should they take?",
-        "answer": "hy44QVkq \u2192 RhIyMUpy \u2192 DDn73D5P"
+        "question": "If someone wants to go from the course 'T3VqTl8U' to the course 'RhIyMUpy', what path should they take?",
+        "answer": "T3VqTl8U \u2192 aPkmwYuZ \u2192 4qMs8IKh \u2192 0uA0OvrC \u2192 wIzBTNMa \u2192 hy44QVkq \u2192 RhIyMUpy"
+    },
+    {
+        "question": "If someone wants to go from the name 'TTJBxEMN' to the course 'CCXyVyLw', what path should they take?",
+        "answer": "TTJBxEMN \u2192 T3VqTl8U \u2192 aPkmwYuZ \u2192 4qMs8IKh \u2192 0uA0OvrC \u2192 wIzBTNMa \u2192 hy44QVkq \u2192 CCXyVyLw"
+    },
+    {
+        "question": "If someone wants to go from the course 'T3VqTl8U' to the name 'DDn73D5P', what path should they take?",
+        "answer": "T3VqTl8U \u2192 aPkmwYuZ \u2192 4qMs8IKh \u2192 0uA0OvrC \u2192 wIzBTNMa \u2192 hy44QVkq \u2192 RhIyMUpy \u2192 DDn73D5P"
     },
     {
         "question": "If someone wants to go from the name 'VEZiQqMw' to the course 'CCXyVyLw', what path should they take?",
         "answer": "VEZiQqMw \u2192 hy44QVkq \u2192 CCXyVyLw"
     },
     {
-        "question": "If someone wants to go from the name 'DDn73D5P' to the name 'rDVTXEo0', what path should they take?",
-        "answer": "DDn73D5P \u2192 RhIyMUpy \u2192 hy44QVkq \u2192 rDVTXEo0"
+        "question": "If someone wants to go from the name 'DDn73D5P' to the course 'T3VqTl8U', what path should they take?",
+        "answer": "DDn73D5P \u2192 RhIyMUpy \u2192 hy44QVkq \u2192 wIzBTNMa \u2192 0uA0OvrC \u2192 4qMs8IKh \u2192 aPkmwYuZ \u2192 T3VqTl8U"
     },
     {
-        "question": "If someone wants to go from the department 'wIzBTNMa' to the name 'rDVTXEo0', what path should they take?",
-        "answer": "wIzBTNMa \u2192 hy44QVkq \u2192 rDVTXEo0"
+        "question": "If someone wants to go from the name 'QxLgi0KL' to the name 'VEZiQqMw', what path should they take?",
+        "answer": "QxLgi0KL \u2192 aPkmwYuZ \u2192 4qMs8IKh \u2192 0uA0OvrC \u2192 wIzBTNMa \u2192 hy44QVkq \u2192 VEZiQqMw"
     },
     {
-        "question": "If someone wants to go from the faculty '0uA0OvrC' to the name 'TTJBxEMN', what path should they take?",
-        "answer": "0uA0OvrC \u2192 4qMs8IKh \u2192 aPkmwYuZ \u2192 T3VqTl8U \u2192 TTJBxEMN"
+        "question": "If someone wants to go from the program 'aPkmwYuZ' to the name 'VEZiQqMw', what path should they take?",
+        "answer": "aPkmwYuZ \u2192 4qMs8IKh \u2192 0uA0OvrC \u2192 wIzBTNMa \u2192 hy44QVkq \u2192 VEZiQqMw"
     },
     {
-        "question": "If someone wants to go from the name 'rDVTXEo0' to the name 'TTJBxEMN', what path should they take?",
-        "answer": "rDVTXEo0 \u2192 hy44QVkq \u2192 wIzBTNMa \u2192 0uA0OvrC \u2192 4qMs8IKh \u2192 aPkmwYuZ \u2192 T3VqTl8U \u2192 TTJBxEMN"
+        "question": "If someone wants to go from the course 'RhIyMUpy' to the program 'aPkmwYuZ', what path should they take?",
+        "answer": "RhIyMUpy \u2192 hy44QVkq \u2192 wIzBTNMa \u2192 0uA0OvrC \u2192 4qMs8IKh \u2192 aPkmwYuZ"
     },
     {
-        "question": "If someone wants to go from the course 'RhIyMUpy' to the department 'wIzBTNMa', what path should they take?",
-        "answer": "RhIyMUpy \u2192 hy44QVkq \u2192 wIzBTNMa"
-    },
-    {
-        "question": "If someone wants to go from the name 'TTJBxEMN' to the department 'wIzBTNMa', what path should they take?",
-        "answer": "TTJBxEMN \u2192 T3VqTl8U \u2192 aPkmwYuZ \u2192 4qMs8IKh \u2192 0uA0OvrC \u2192 wIzBTNMa"
-    },
-    {
-        "question": "If someone wants to go from the name 'rDVTXEo0' to the course 'T3VqTl8U', what path should they take?",
-        "answer": "rDVTXEo0 \u2192 hy44QVkq \u2192 wIzBTNMa \u2192 0uA0OvrC \u2192 4qMs8IKh \u2192 aPkmwYuZ \u2192 T3VqTl8U"
+        "question": "If someone wants to go from the faculty '0uA0OvrC' to the name 'rDVTXEo0', what path should they take?",
+        "answer": "0uA0OvrC \u2192 wIzBTNMa \u2192 hy44QVkq \u2192 rDVTXEo0"
     }
 ]

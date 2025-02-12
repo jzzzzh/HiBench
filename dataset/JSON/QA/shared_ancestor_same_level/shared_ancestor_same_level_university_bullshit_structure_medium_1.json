@@ -1,14 +1,22 @@
 [
     {
-        "question": "What is the common ancestor of ujkVtW7z and y5GiriZT?",
-        "answer": "XCgkWsrU"
-    },
-    {
-        "question": "What is the common ancestor of 0qRli6yq and ujkVtW7z?",
+        "question": "What is the common ancestor of K1xIPGN8 and 1EsbG2Hy?",
         "answer": "m7GU0Kal"
     },
     {
-        "question": "What is the common ancestor of 71QV2RZN and m7GU0Kal?",
+        "question": "What is the common ancestor of 4TupuOZp and kd8iLssX?",
+        "answer": "m7GU0Kal"
+    },
+    {
+        "question": "What is the common ancestor of gPM94KHF and 50zn6Nh4?",
+        "answer": "71QV2RZN"
+    },
+    {
+        "question": "What is the common ancestor of 4TupuOZp and 50zn6Nh4?",
+        "answer": "XCgkWsrU"
+    },
+    {
+        "question": "What is the common ancestor of HFQcs6vc and eeFex1L5?",
         "answer": "XCgkWsrU"
     },
     {
@@ -16,19 +24,19 @@
         "answer": "XCgkWsrU"
     },
     {
-        "question": "What is the common ancestor of eeFex1L5 and HFQcs6vc?",
+        "question": "What is the common ancestor of 71QV2RZN and m7GU0Kal?",
         "answer": "XCgkWsrU"
     },
     {
-        "question": "What is the common ancestor of 50zn6Nh4 and gPM94KHF?",
-        "answer": "71QV2RZN"
+        "question": "What is the common ancestor of kd8iLssX and 4TupuOZp?",
+        "answer": "m7GU0Kal"
     },
     {
-        "question": "What is the common ancestor of HFQcs6vc and eeFex1L5?",
+        "question": "What is the common ancestor of y5GiriZT and ujkVtW7z?",
         "answer": "XCgkWsrU"
     },
     {
-        "question": "What is the common ancestor of gPM94KHF and kd8iLssX?",
+        "question": "What is the common ancestor of 0qRli6yq and y5GiriZT?",
         "answer": "XCgkWsrU"
     },
     {
@@ -36,19 +44,11 @@
         "answer": "XCgkWsrU"
     },
     {
-        "question": "What is the common ancestor of K1xIPGN8 and 50zn6Nh4?",
+        "question": "What is the common ancestor of eeFex1L5 and HFQcs6vc?",
         "answer": "XCgkWsrU"
     },
     {
-        "question": "What is the common ancestor of y5GiriZT and ujkVtW7z?",
-        "answer": "XCgkWsrU"
-    },
-    {
-        "question": "What is the common ancestor of kd8iLssX and 50zn6Nh4?",
-        "answer": "XCgkWsrU"
-    },
-    {
-        "question": "What is the common ancestor of 0qRli6yq and y5GiriZT?",
+        "question": "What is the common ancestor of K1xIPGN8 and gPM94KHF?",
         "answer": "XCgkWsrU"
     }
 ]

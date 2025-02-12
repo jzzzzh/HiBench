@@ -1,14 +1,18 @@
 [
     {
-        "question": "What is the depth of Bachelor of Engineering in the City University? (starting from 0)",
-        "answer": "3"
-    },
-    {
         "question": "What is the depth of Bachelor of Arts in the City University? (starting from 0)",
         "answer": "3"
     },
     {
-        "question": "What is the depth of Master of Science in the City University? (starting from 0)",
+        "question": "What is the depth of Department of Mechanical Engineering in the City University? (starting from 0)",
+        "answer": "2"
+    },
+    {
+        "question": "What is the depth of Department of Environmental Law in the City University? (starting from 0)",
+        "answer": "2"
+    },
+    {
+        "question": "What is the depth of Bachelor of Engineering in the City University? (starting from 0)",
         "answer": "3"
     },
     {
@@ -16,23 +20,7 @@
         "answer": "3"
     },
     {
-        "question": "What is the depth of Bachelor of Business Administration in the City University? (starting from 0)",
-        "answer": "3"
-    },
-    {
-        "question": "What is the depth of Department of Environmental Law in the City University? (starting from 0)",
-        "answer": "2"
-    },
-    {
-        "question": "What is the depth of Bachelor of Science in the City University? (starting from 0)",
-        "answer": "3"
-    },
-    {
-        "question": "What is the depth of Master of Engineering in the City University? (starting from 0)",
-        "answer": "3"
-    },
-    {
-        "question": "What is the depth of Department of Chemical Engineering in the City University? (starting from 0)",
+        "question": "What is the depth of Department of Civil Engineering in the City University? (starting from 0)",
         "answer": "2"
     },
     {
@@ -40,11 +28,27 @@
         "answer": "1"
     },
     {
-        "question": "What is the depth of Department of Civil Engineering in the City University? (starting from 0)",
+        "question": "What is the depth of Department of Aerospace Engineering in the City University? (starting from 0)",
         "answer": "2"
     },
     {
-        "question": "What is the depth of Department of Mechanical Engineering in the City University? (starting from 0)",
+        "question": "What is the depth of Master of Science in the City University? (starting from 0)",
+        "answer": "3"
+    },
+    {
+        "question": "What is the depth of Master of Engineering in the City University? (starting from 0)",
+        "answer": "3"
+    },
+    {
+        "question": "What is the depth of Bachelor of Science in the City University? (starting from 0)",
+        "answer": "3"
+    },
+    {
+        "question": "What is the depth of Department of Labor Law in the City University? (starting from 0)",
         "answer": "2"
+    },
+    {
+        "question": "What is the depth of Master of Arts in the City University? (starting from 0)",
+        "answer": "3"
     }
 ]

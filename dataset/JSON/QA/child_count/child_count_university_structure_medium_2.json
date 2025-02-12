@@ -1,15 +1,15 @@
 [
     {
-        "question": "How many Departments are there in Faculty of Engineering?",
-        "answer": "3"
+        "question": "How many Programs are there in Department of Electrical Engineering?",
+        "answer": "2"
     },
     {
         "question": "How many Programs are there in Department of Mechanical Engineering?",
         "answer": "2"
     },
     {
-        "question": "How many Programs are there in Department of Electrical Engineering?",
-        "answer": "2"
+        "question": "How many Departments are there in Faculty of Engineering?",
+        "answer": "3"
     },
     {
         "question": "How many Programs are there in Department of Computer Engineering?",

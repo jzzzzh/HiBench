@@ -1,0 +1,54 @@
+[
+    {
+        "question": "What is the path from Faculty of Engineering down to Doctor of Philosophy?",
+        "answer": "Faculty of Engineering -> Department of Chemical Engineering -> Doctor of Philosophy"
+    },
+    {
+        "question": "What is the path from Department of Civil Engineering down to Bachelor of Arts?",
+        "answer": "Department of Civil Engineering -> Bachelor of Arts"
+    },
+    {
+        "question": "What is the path from Faculty of Engineering down to Bachelor of Arts?",
+        "answer": "Faculty of Engineering -> Department of Environmental Law -> Bachelor of Arts"
+    },
+    {
+        "question": "What is the path from City University down to Bachelor of Science?",
+        "answer": "City University -> Faculty of Engineering -> Department of Aerospace Engineering -> Bachelor of Science"
+    },
+    {
+        "question": "What is the path from Faculty of Engineering down to Bachelor of Engineering?",
+        "answer": "Faculty of Engineering -> Department of Aerospace Engineering -> Bachelor of Engineering"
+    },
+    {
+        "question": "What is the path from Department of Labor Law down to Doctor of Philosophy?",
+        "answer": "Department of Labor Law -> Doctor of Philosophy"
+    },
+    {
+        "question": "What is the path from City University down to Bachelor of Arts?",
+        "answer": "City University -> Faculty of Engineering -> Department of Aerospace Engineering -> Bachelor of Arts"
+    },
+    {
+        "question": "What is the path from Department of Aerospace Engineering down to Doctor of Philosophy?",
+        "answer": "Department of Aerospace Engineering -> Doctor of Philosophy"
+    },
+    {
+        "question": "What is the path from City University down to Master of Engineering?",
+        "answer": "City University -> Faculty of Engineering -> Department of Labor Law -> Master of Engineering"
+    },
+    {
+        "question": "What is the path from Faculty of Engineering down to Master of Arts?",
+        "answer": "Faculty of Engineering -> Department of Labor Law -> Master of Arts"
+    },
+    {
+        "question": "What is the path from Department of Labor Law down to Master of Arts?",
+        "answer": "Department of Labor Law -> Master of Arts"
+    },
+    {
+        "question": "What is the path from Faculty of Engineering down to Master of Science?",
+        "answer": "Faculty of Engineering -> Department of Environmental Law -> Master of Science"
+    },
+    {
+        "question": "What is the path from Faculty of Engineering down to Department of Civil Engineering?",
+        "answer": "Faculty of Engineering -> Department of Civil Engineering"
+    }
+]

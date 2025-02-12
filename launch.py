@@ -66,9 +66,10 @@ class ArgumentGenerator:
         json_parameter = {
             'Task': 'JSON',
             'SubTask': ['child_count', 'node_depth', 'level_count', 'node_relationship', 'node_attribute', 'level_nodes', 'path_down_to_up', 'path_up_to_down', 'shared_ancestor_same_level', 'shared_ancestor_diff_level', 'path_between_nodes'],
-            'Domain': ['university_structure_large_01', 'university_structure_large_02', 'university_structure_medium_01', 'university_structure_medium_02', 'university_structure_small','university_bullshit_structure_large_01', 'university_bullshit_structure_medium_01', 'university_bullshit_structure_large_02', 'university_bullshit_structure_medium_02', 'university_bullshit_structure_small'],
+            'Domain': ['university_structure_large_1', 'university_structure_large_2', 'university_structure_medium_1', 'university_structure_medium_2', 'university_structure_small','university_bullshit_structure_large_1', 'university_bullshit_structure_medium_1', 'university_bullshit_structure_large_2', 'university_bullshit_structure_medium_2', 'university_bullshit_structure_small'],
             'ExampleType': ['ZeroShot', 'FewShot', 'OneShot']
         }
+        # small_subtask = ['path_down_to_up', 'path_up_to_down', 'shared_ancestor_same_level', 'shared_ancestor_diff_level']
         if ExampleType != 'ALL':
             json_parameter['ExampleType'] = [ExampleType]
         if SubTask != 'ALL':
@@ -79,6 +80,8 @@ class ArgumentGenerator:
         for subtask in json_parameter['SubTask']:
             for domain in json_parameter['Domain']:
                 for example_type in json_parameter['ExampleType']:
+                    # if subtask in small_subtask and ('2' in domain or 'small' in domain):
+                        # continue
                     EvalList.append({'Task': 'JSON', 'SubTask':subtask, 'Domain': domain, 'ExampleType': example_type})
         return EvalList
 
@@ -173,16 +176,18 @@ class ArgumentGenerator:
             logger.info("check code dataloader")
             for Eval in tqdm(EvalList):
                 Hibenchdataloader = HibenchDataLoader(Eval)
-                Hibenchdataloader.load_data(num_samples=num_samples)
-                assert len(data) == num_samples
+                data = Hibenchdataloader.load_data(num_samples=num_samples)
+                if num_samples is not None:
+                    assert len(data) == num_samples
             logger.info("code pass")
         if 'JSON' in Task_list:
             EvalList = self.generate_json_eval()
             logger.info("check json dataloader")
             for Eval in tqdm(EvalList):
                 Hibenchdataloader = HibenchDataLoader(Eval)
-                Hibenchdataloader.load_data(num_samples=num_samples)
-                assert len(data) == num_samples
+                data = Hibenchdataloader.load_data(num_samples=num_samples)
+                if num_samples is not None:
+                    assert len(data) == num_samples
             logger.info("json pass")
         if 'Formula' in Task_list:
             EvalList = self.generate_formula_eval()
@@ -190,20 +195,22 @@ class ArgumentGenerator:
             for Eval in tqdm(EvalList):
                 Hibenchdataloader = HibenchDataLoader(Eval)
                 data = Hibenchdataloader.load_data(num_samples=num_samples)
-                assert len(data) == num_samples
+                if num_samples is not None:
+                    assert len(data) == num_samples
             logger.info("formula pass")
         if 'Paper' in Task_list:
             EvalList = self.generate_paper_eval()
             logger.info("check paper dataloader")
             for Eval in tqdm(EvalList):
                 Hibenchdataloader = HibenchDataLoader(Eval)
-                Hibenchdataloader.load_data(num_samples=num_samples)
-                assert len(data) == num_samples
+                data = Hibenchdataloader.load_data(num_samples=num_samples)
+                if num_samples is not None:
+                    assert len(data) == num_samples
             logger.info("paper pass")
 
 def main():
     argument_generator = ArgumentGenerator()
-    EvalList = argument_generator.generate_all_eval(Task_list = ['Fundamental', 'Code', 'Formula'], ExampleType='ZeroShot')
+    EvalList = argument_generator.generate_all_eval(Task_list = ['JSON'], ExampleType='ZeroShot')
     # EvalList = argument_generator.generate_all_eval(Task_list = ['Paper'], ExampleType='ZeroShot')
     num_samples = 13
     min_question_num = 7
@@ -211,8 +218,8 @@ def main():
     # model_list = ["meta-llama/Meta-Llama-3.1-8B-Instruct"] # ["Qwen/Qwen2.5-0.5B-Instruct"] #, "meta-llama/Meta-Llama-3.1-8B-Instruct"]
     # model_list = ["meta-llama/Meta-Llama-3.1-8B-Instruct", "meta-llama/Llama-3.2-1B-Instruct","meta-llama/Llama-3.2-3B-Instruct", "Qwen/Qwen2.5-0.5B-Instruct", "Qwen/Qwen2.5-1.5B-Instruct", "Qwen/Qwen2.5-3B-Instruct", "Qwen/Qwen2.5-7B-Instruct"]
     # model_list = ["Qwen/Qwen2.5-7B-Instruct"]# , "Qwen/Qwen2.5-0.5B-Instruct", "Qwen/Qwen2.5-1.5B-Instruct", "Qwen/Qwen2.5-3B-Instruct", "Qwen/Qwen2.5-7B-Instruct"]
-    # model_list = ["meta-llama/Meta-Llama-3.1-8B-Instruct", "meta-llama/Llama-3.2-1B-Instruct","meta-llama/Llama-3.2-3B-Instruct"]
-    model_list = ['internlm/internlm2_5-7b-chat'] # 'microsoft/Phi-3.5-mini-instruct'] # ["baichuan-inc/Baichuan-7B"]
+    model_list = ["meta-llama/Meta-Llama-3.1-8B-Instruct", "meta-llama/Llama-3.2-1B-Instruct","meta-llama/Llama-3.2-3B-Instruct", "THUDM/glm-4-9b-chat", "01-ai/Yi-1.5-9B-Chat"]
+    # model_list = ['internlm/internlm2_5-7b-chat'] # 'microsoft/Phi-3.5-mini-instruct'] # ["baichuan-inc/Baichuan-7B"]
     DUPLICATE_CHECK = True
     for model in model_list:
         llm = LLMModel(model, api_key=None, device_map='cuda:0')
@@ -277,4 +284,4 @@ if __name__ == '__main__':
     Logo()
     main()
     # argument_generator = ArgumentGenerator()
-    # argument_generator.test_dataloader(Task_list=['Formula'], num_samples=1)
+    # argument_generator.test_dataloader(Task_list=['JSON'], num_samples=1)

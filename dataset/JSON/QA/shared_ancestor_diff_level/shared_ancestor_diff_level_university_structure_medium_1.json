@@ -1,30 +1,54 @@
 [
     {
-        "question": "What is the common ancestor of Mila Reyes (Name) and Department of Mechanical Engineering (Department)?",
+        "question": "What is the common ancestor of City University and Bachelor of Engineering?",
+        "answer": "City University"
+    },
+    {
+        "question": "What is the common ancestor of Department of Mechanical Engineering and Lecturer Elijah Brown?",
         "answer": "Faculty of Engineering"
     },
     {
-        "question": "What is the common ancestor of Bachelor of Engineering (Program) and World History (Course)?",
+        "question": "What is the common ancestor of Department of Electrical Engineering and Doctor of Philosophy?",
         "answer": "Faculty of Engineering"
     },
     {
-        "question": "What is the common ancestor of Department of Electrical Engineering (Department) and Doctor of Philosophy (Program)?",
+        "question": "What is the common ancestor of Faculty of Engineering and Bachelor of Engineering?",
         "answer": "Faculty of Engineering"
     },
     {
-        "question": "What is the common ancestor of Doctor of Philosophy (Program) and Mila Reyes (Name)?",
+        "question": "What is the common ancestor of Faculty of Engineering and Associate Professor Jordan Baker?",
         "answer": "Faculty of Engineering"
     },
     {
-        "question": "What is the common ancestor of Department of Electrical Engineering (Department) and Elena Carter (Name)?",
+        "question": "What is the common ancestor of Department of Electrical Engineering and Mila Reyes?",
+        "answer": "Department of Electrical Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Department of Electrical Engineering and Lecturer Elijah Brown?",
+        "answer": "Department of Electrical Engineering"
+    },
+    {
+        "question": "What is the common ancestor of City University and World History?",
+        "answer": "City University"
+    },
+    {
+        "question": "What is the common ancestor of Faculty of Engineering and Doctor of Philosophy?",
         "answer": "Faculty of Engineering"
     },
     {
-        "question": "What is the common ancestor of Iris Ortiz (Name) and Department of Electrical Engineering (Department)?",
+        "question": "What is the common ancestor of Faculty of Engineering and World History?",
         "answer": "Faculty of Engineering"
     },
     {
-        "question": "What is the common ancestor of Mila Reyes (Name) and Doctor of Philosophy (Program)?",
+        "question": "What is the common ancestor of Bachelor of Engineering and Lecturer Elijah Brown?",
+        "answer": "Bachelor of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Faculty of Engineering and Department of Electrical Engineering?",
         "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of City University and Lecturer Sebastian Rivera?",
+        "answer": "City University"
     }
 ]

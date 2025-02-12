@@ -1,0 +1,54 @@
+[
+    {
+        "question": "What is the common ancestor of Department of Electrical Engineering and Department of Mechanical Engineering?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Bachelor of Business Administration and Master of Science?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Doctor of Philosophy and Master of Science?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Department of Mechanical Engineering and Department of Electrical Engineering?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Master of Science and Bachelor of Science?",
+        "answer": "Department of Computer Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Master of Science and Bachelor of Engineering?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Department of Computer Engineering and Department of Mechanical Engineering?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Bachelor of Science and Doctor of Philosophy?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Bachelor of Business Administration and Bachelor of Science?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Department of Computer Engineering and Department of Electrical Engineering?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Department of Mechanical Engineering and Department of Computer Engineering?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Doctor of Philosophy and Master of Business Administration?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Master of Science and Doctor of Philosophy?",
+        "answer": "Faculty of Engineering"
+    }
+]
