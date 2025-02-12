@@ -1,0 +1,54 @@
+[
+    {
+        "question": "What is the common ancestor of Doctor of Philosophy and Bachelor of Engineering?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Department of Mechanical Engineering and Department of Electrical Engineering?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Department of Electrical Engineering and Department of Mechanical Engineering?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Biochemistry and Elena Carter?",
+        "answer": "Doctor of Philosophy"
+    },
+    {
+        "question": "What is the common ancestor of Iris Ortiz and Biochemistry?",
+        "answer": "Doctor of Philosophy"
+    },
+    {
+        "question": "What is the common ancestor of Lecturer Elijah Brown and Associate Professor Jordan Baker?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Mila Reyes and Elena Carter?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Financial Accounting and Mila Reyes?",
+        "answer": "Bachelor of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Associate Professor Jordan Baker and Lecturer Sebastian Rivera?",
+        "answer": "Doctor of Philosophy"
+    },
+    {
+        "question": "What is the common ancestor of Bachelor of Engineering and Doctor of Philosophy?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of World History and Biochemistry?",
+        "answer": "Doctor of Philosophy"
+    },
+    {
+        "question": "What is the common ancestor of Lecturer Sebastian Rivera and Associate Professor Jordan Baker?",
+        "answer": "Doctor of Philosophy"
+    },
+    {
+        "question": "What is the common ancestor of Iris Ortiz and Elena Carter?",
+        "answer": "Doctor of Philosophy"
+    }
+]
