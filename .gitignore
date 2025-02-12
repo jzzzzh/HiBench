@@ -5,4 +5,5 @@ test.py
 Results/
 nohup.out
 *output*.*
+*temp*.*
 GLM
