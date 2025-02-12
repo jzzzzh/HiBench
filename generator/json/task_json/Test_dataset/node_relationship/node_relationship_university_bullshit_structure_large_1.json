@@ -1,54 +1,107 @@
 [
     {
-        "question": "What is the relationship between aPkmwYuZ and QxLgi0KL?",
-        "answer": "aPkmwYuZ (program) and QxLgi0KL (name) share a common ancestor: aPkmwYuZ"
-    },
-    {
-        "question": "What is the relationship between 0uA0OvrC and VEZiQqMw?",
-        "answer": "0uA0OvrC (faculty) and VEZiQqMw (name) share a common ancestor: 0uA0OvrC"
-    },
-    {
-        "question": "What is the relationship between VEZiQqMw and RhIyMUpy?",
-        "answer": "VEZiQqMw (name) and RhIyMUpy (course) share a common ancestor: hy44QVkq"
-    },
-    {
-        "question": "What is the relationship between CCXyVyLw and rDVTXEo0?",
-        "answer": "CCXyVyLw (course) and rDVTXEo0 (name) share a common ancestor: hy44QVkq"
-    },
-    {
-        "question": "What is the relationship between 4qMs8IKh and hy44QVkq?",
-        "answer": "4qMs8IKh (department) and hy44QVkq (program) share a common ancestor: 0uA0OvrC"
-    },
-    {
-        "question": "What is the relationship between aPkmwYuZ and CCXyVyLw?",
-        "answer": "aPkmwYuZ (program) and CCXyVyLw (course) share a common ancestor: 0uA0OvrC"
-    },
-    {
-        "question": "What is the relationship between TTJBxEMN and rDVTXEo0?",
-        "answer": "TTJBxEMN (name) and rDVTXEo0 (name) share a common ancestor: 0uA0OvrC"
-    },
-    {
-        "question": "What is the relationship between ZFyEOdN1 and 0uA0OvrC?",
-        "answer": "ZFyEOdN1 (name) and 0uA0OvrC (faculty) share a common ancestor: 0uA0OvrC"
-    },
-    {
-        "question": "What is the relationship between 4qMs8IKh and VEZiQqMw?",
-        "answer": "4qMs8IKh (department) and VEZiQqMw (name) share a common ancestor: 0uA0OvrC"
-    },
-    {
-        "question": "What is the relationship between aPkmwYuZ and T3VqTl8U?",
-        "answer": "aPkmwYuZ (program) and T3VqTl8U (course) share a common ancestor: aPkmwYuZ"
-    },
-    {
-        "question": "What is the relationship between wIzBTNMa and T3VqTl8U?",
-        "answer": "wIzBTNMa (department) and T3VqTl8U (course) share a common ancestor: 0uA0OvrC"
-    },
-    {
-        "question": "What is the relationship between TTJBxEMN and RhIyMUpy?",
-        "answer": "TTJBxEMN (name) and RhIyMUpy (course) share a common ancestor: 0uA0OvrC"
+<<<<<<< HEAD
+        "question": "What is the relationship between T3VqTl8U and wIzBTNMa?",
+        "answer": "T3VqTl8U (course) and wIzBTNMa (department) share a common ancestor: 0uA0OvrC"
     },
     {
         "question": "What is the relationship between 0uA0OvrC and 4qMs8IKh?",
         "answer": "0uA0OvrC (faculty) and 4qMs8IKh (department) share a common ancestor: 0uA0OvrC"
+    },
+    {
+        "question": "What is the relationship between QxLgi0KL and T3VqTl8U?",
+        "answer": "QxLgi0KL (name) and T3VqTl8U (course) share a common ancestor: aPkmwYuZ"
+    },
+    {
+        "question": "What is the relationship between CCXyVyLw and 4qMs8IKh?",
+        "answer": "CCXyVyLw (course) and 4qMs8IKh (department) share a common ancestor: 0uA0OvrC"
+    },
+    {
+        "question": "What is the relationship between QxLgi0KL and aPkmwYuZ?",
+        "answer": "QxLgi0KL (name) and aPkmwYuZ (program) share a common ancestor: aPkmwYuZ"
+    },
+    {
+        "question": "What is the relationship between TTJBxEMN and T3VqTl8U?",
+        "answer": "TTJBxEMN (name) and T3VqTl8U (course) share a common ancestor: T3VqTl8U"
+    },
+    {
+        "question": "What is the relationship between hy44QVkq and 0uA0OvrC?",
+        "answer": "hy44QVkq (program) and 0uA0OvrC (faculty) share a common ancestor: 0uA0OvrC"
+    },
+    {
+        "question": "What is the relationship between 0uA0OvrC and QxLgi0KL?",
+        "answer": "0uA0OvrC (faculty) and QxLgi0KL (name) share a common ancestor: 0uA0OvrC"
+    },
+    {
+        "question": "What is the relationship between rDVTXEo0 and DDn73D5P?",
+        "answer": "rDVTXEo0 (name) and DDn73D5P (name) share a common ancestor: hy44QVkq"
+    },
+    {
+        "question": "What is the relationship between hy44QVkq and rDVTXEo0?",
+        "answer": "hy44QVkq (program) and rDVTXEo0 (name) share a common ancestor: hy44QVkq"
+    },
+    {
+        "question": "What is the relationship between T3VqTl8U and QxLgi0KL?",
+        "answer": "T3VqTl8U (course) and QxLgi0KL (name) share a common ancestor: aPkmwYuZ"
+    },
+    {
+        "question": "What is the relationship between rDVTXEo0 and 0uA0OvrC?",
+        "answer": "rDVTXEo0 (name) and 0uA0OvrC (faculty) share a common ancestor: 0uA0OvrC"
+    },
+    {
+        "question": "What is the relationship between wIzBTNMa and aPkmwYuZ?",
+        "answer": "wIzBTNMa (department) and aPkmwYuZ (program) share a common ancestor: 0uA0OvrC"
+=======
+        "question": "What is the relationship between T3VqTl8U and hy44QVkq?",
+        "answer": "T3VqTl8U (course) and hy44QVkq (program) share a common ancestor: 0uA0OvrC"
+    },
+    {
+        "question": "What is the relationship between DDn73D5P and CCXyVyLw?",
+        "answer": "DDn73D5P (name) and CCXyVyLw (course) share a common ancestor: hy44QVkq"
+    },
+    {
+        "question": "What is the relationship between 4qMs8IKh and DDn73D5P?",
+        "answer": "4qMs8IKh (department) and DDn73D5P (name) share a common ancestor: 0uA0OvrC"
+    },
+    {
+        "question": "What is the relationship between 0uA0OvrC and DDn73D5P?",
+        "answer": "0uA0OvrC (faculty) and DDn73D5P (name) share a common ancestor: 0uA0OvrC"
+    },
+    {
+        "question": "What is the relationship between 0uA0OvrC and CCXyVyLw?",
+        "answer": "0uA0OvrC (faculty) and CCXyVyLw (course) share a common ancestor: 0uA0OvrC"
+    },
+    {
+        "question": "What is the relationship between TTJBxEMN and T3VqTl8U?",
+        "answer": "TTJBxEMN (name) and T3VqTl8U (course) share a common ancestor: T3VqTl8U"
+    },
+    {
+        "question": "What is the relationship between wIzBTNMa and ZFyEOdN1?",
+        "answer": "wIzBTNMa (department) and ZFyEOdN1 (name) share a common ancestor: wIzBTNMa"
+    },
+    {
+        "question": "What is the relationship between TTJBxEMN and CCXyVyLw?",
+        "answer": "TTJBxEMN (name) and CCXyVyLw (course) share a common ancestor: 0uA0OvrC"
+    },
+    {
+        "question": "What is the relationship between QxLgi0KL and DDn73D5P?",
+        "answer": "QxLgi0KL (name) and DDn73D5P (name) share a common ancestor: 0uA0OvrC"
+    },
+    {
+        "question": "What is the relationship between hy44QVkq and CCXyVyLw?",
+        "answer": "hy44QVkq (program) and CCXyVyLw (course) share a common ancestor: hy44QVkq"
+    },
+    {
+        "question": "What is the relationship between hy44QVkq and 4qMs8IKh?",
+        "answer": "hy44QVkq (program) and 4qMs8IKh (department) share a common ancestor: 0uA0OvrC"
+    },
+    {
+        "question": "What is the relationship between wIzBTNMa and CCXyVyLw?",
+        "answer": "wIzBTNMa (department) and CCXyVyLw (course) share a common ancestor: wIzBTNMa"
+    },
+    {
+        "question": "What is the relationship between CCXyVyLw and TTJBxEMN?",
+        "answer": "CCXyVyLw (course) and TTJBxEMN (name) share a common ancestor: 0uA0OvrC"
+>>>>>>> origin/main
     }
 ]

@@ -5,4 +5,9 @@ test.py
 Results/
 nohup.out
 *output*.*
+*temp*.*
 GLM
+
+dataset/JSON/QA/.DS_Store
+
+dataset_builder_debug.log

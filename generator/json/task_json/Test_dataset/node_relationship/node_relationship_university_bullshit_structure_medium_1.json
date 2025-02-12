@@ -1,54 +1,104 @@
 [
     {
-        "question": "What is the relationship between 50zn6Nh4 and XCgkWsrU?",
-        "answer": "50zn6Nh4 (course) and XCgkWsrU (faculty) share a common ancestor: XCgkWsrU"
+<<<<<<< HEAD
+        "question": "What is the relationship between 4TupuOZp and XCgkWsrU?",
+        "answer": "4TupuOZp (course) and XCgkWsrU (faculty) share a common ancestor: XCgkWsrU"
     },
     {
-        "question": "What is the relationship between 0qRli6yq and y5GiriZT?",
-        "answer": "0qRli6yq (name) and y5GiriZT (name) share a common ancestor: XCgkWsrU"
+        "question": "What is the relationship between eeFex1L5 and 0qRli6yq?",
+        "answer": "eeFex1L5 (department) and 0qRli6yq (name) share a common ancestor: XCgkWsrU"
     },
     {
-        "question": "What is the relationship between 0qRli6yq and 4TupuOZp?",
-        "answer": "0qRli6yq (name) and 4TupuOZp (course) share a common ancestor: m7GU0Kal"
+        "question": "What is the relationship between 0qRli6yq and K1xIPGN8?",
+        "answer": "0qRli6yq (name) and K1xIPGN8 (name) share a common ancestor: m7GU0Kal"
     },
     {
-        "question": "What is the relationship between kd8iLssX and 50zn6Nh4?",
-        "answer": "kd8iLssX (name) and 50zn6Nh4 (course) share a common ancestor: XCgkWsrU"
+        "question": "What is the relationship between ujkVtW7z and eeFex1L5?",
+        "answer": "ujkVtW7z (name) and eeFex1L5 (department) share a common ancestor: XCgkWsrU"
     },
     {
-        "question": "What is the relationship between 1EsbG2Hy and XCgkWsrU?",
-        "answer": "1EsbG2Hy (course) and XCgkWsrU (faculty) share a common ancestor: XCgkWsrU"
+        "question": "What is the relationship between m7GU0Kal and eeFex1L5?",
+        "answer": "m7GU0Kal (program) and eeFex1L5 (department) share a common ancestor: XCgkWsrU"
     },
     {
-        "question": "What is the relationship between m7GU0Kal and K1xIPGN8?",
-        "answer": "m7GU0Kal (program) and K1xIPGN8 (name) share a common ancestor: m7GU0Kal"
-    },
-    {
-        "question": "What is the relationship between y5GiriZT and 0qRli6yq?",
-        "answer": "y5GiriZT (name) and 0qRli6yq (name) share a common ancestor: XCgkWsrU"
-    },
-    {
-        "question": "What is the relationship between HFQcs6vc and 50zn6Nh4?",
-        "answer": "HFQcs6vc (department) and 50zn6Nh4 (course) share a common ancestor: XCgkWsrU"
-    },
-    {
-        "question": "What is the relationship between kd8iLssX and 71QV2RZN?",
-        "answer": "kd8iLssX (name) and 71QV2RZN (program) share a common ancestor: XCgkWsrU"
+        "question": "What is the relationship between XCgkWsrU and 50zn6Nh4?",
+        "answer": "XCgkWsrU (faculty) and 50zn6Nh4 (course) share a common ancestor: XCgkWsrU"
+=======
+        "question": "What is the relationship between 50zn6Nh4 and eeFex1L5?",
+        "answer": "50zn6Nh4 (course) and eeFex1L5 (department) share a common ancestor: eeFex1L5"
     },
     {
         "question": "What is the relationship between 0qRli6yq and eeFex1L5?",
         "answer": "0qRli6yq (name) and eeFex1L5 (department) share a common ancestor: XCgkWsrU"
+>>>>>>> origin/main
     },
     {
-        "question": "What is the relationship between 50zn6Nh4 and 71QV2RZN?",
-        "answer": "50zn6Nh4 (course) and 71QV2RZN (program) share a common ancestor: 71QV2RZN"
+        "question": "What is the relationship between XCgkWsrU and K1xIPGN8?",
+        "answer": "XCgkWsrU (faculty) and K1xIPGN8 (name) share a common ancestor: XCgkWsrU"
     },
     {
-        "question": "What is the relationship between K1xIPGN8 and 50zn6Nh4?",
-        "answer": "K1xIPGN8 (name) and 50zn6Nh4 (course) share a common ancestor: XCgkWsrU"
+<<<<<<< HEAD
+        "question": "What is the relationship between gPM94KHF and y5GiriZT?",
+        "answer": "gPM94KHF (name) and y5GiriZT (name) share a common ancestor: 71QV2RZN"
     },
     {
-        "question": "What is the relationship between 4TupuOZp and kd8iLssX?",
-        "answer": "4TupuOZp (course) and kd8iLssX (name) share a common ancestor: m7GU0Kal"
+        "question": "What is the relationship between 4TupuOZp and ujkVtW7z?",
+        "answer": "4TupuOZp (course) and ujkVtW7z (name) share a common ancestor: 4TupuOZp"
+    },
+    {
+        "question": "What is the relationship between eeFex1L5 and y5GiriZT?",
+        "answer": "eeFex1L5 (department) and y5GiriZT (name) share a common ancestor: eeFex1L5"
+    },
+    {
+        "question": "What is the relationship between gPM94KHF and 50zn6Nh4?",
+        "answer": "gPM94KHF (name) and 50zn6Nh4 (course) share a common ancestor: 71QV2RZN"
+    },
+    {
+        "question": "What is the relationship between kd8iLssX and K1xIPGN8?",
+        "answer": "kd8iLssX (name) and K1xIPGN8 (name) share a common ancestor: m7GU0Kal"
+    },
+    {
+        "question": "What is the relationship between 1EsbG2Hy and kd8iLssX?",
+        "answer": "1EsbG2Hy (course) and kd8iLssX (name) share a common ancestor: m7GU0Kal"
+=======
+        "question": "What is the relationship between kd8iLssX and ujkVtW7z?",
+        "answer": "kd8iLssX (name) and ujkVtW7z (name) share a common ancestor: m7GU0Kal"
+    },
+    {
+        "question": "What is the relationship between 0qRli6yq and HFQcs6vc?",
+        "answer": "0qRli6yq (name) and HFQcs6vc (department) share a common ancestor: HFQcs6vc"
+    },
+    {
+        "question": "What is the relationship between kd8iLssX and HFQcs6vc?",
+        "answer": "kd8iLssX (name) and HFQcs6vc (department) share a common ancestor: HFQcs6vc"
+    },
+    {
+        "question": "What is the relationship between 1EsbG2Hy and 50zn6Nh4?",
+        "answer": "1EsbG2Hy (course) and 50zn6Nh4 (course) share a common ancestor: XCgkWsrU"
+    },
+    {
+        "question": "What is the relationship between kd8iLssX and m7GU0Kal?",
+        "answer": "kd8iLssX (name) and m7GU0Kal (program) share a common ancestor: m7GU0Kal"
+    },
+    {
+        "question": "What is the relationship between XCgkWsrU and 71QV2RZN?",
+        "answer": "XCgkWsrU (faculty) and 71QV2RZN (program) share a common ancestor: XCgkWsrU"
+    },
+    {
+        "question": "What is the relationship between K1xIPGN8 and 4TupuOZp?",
+        "answer": "K1xIPGN8 (name) and 4TupuOZp (course) share a common ancestor: m7GU0Kal"
+    },
+    {
+        "question": "What is the relationship between m7GU0Kal and 0qRli6yq?",
+        "answer": "m7GU0Kal (program) and 0qRli6yq (name) share a common ancestor: m7GU0Kal"
+    },
+    {
+        "question": "What is the relationship between eeFex1L5 and 1EsbG2Hy?",
+        "answer": "eeFex1L5 (department) and 1EsbG2Hy (course) share a common ancestor: XCgkWsrU"
+    },
+    {
+        "question": "What is the relationship between 1EsbG2Hy and 0qRli6yq?",
+        "answer": "1EsbG2Hy (course) and 0qRli6yq (name) share a common ancestor: 1EsbG2Hy"
+>>>>>>> origin/main
     }
 ]

@@ -122,11 +122,12 @@ class LLMModel:
         
         model_map = {
             "gpt-3.5-turbo" : "gpt-35-turbo",
+            "gpt-4-turbo" : "gpt-4-turbo-2024-0409"
         }
         model_engine = model_map[self.model_id] if self.model_id in model_map else self.model_id
         endpoint = os.getenv("ENDPOINT_URL", self.endpoint)  
         deployment = os.getenv("DEPLOYMENT_NAME", model_engine)  
-        subscription_key = os.getenv("AZURE_OPENAI_API_KEY", self.api_key)  
+        subscription_key = os.getenv("AZURE_OPENAI_API_KEY", self.api_key)
 
         # 使用基于密钥的身份验证初始化 Azure OpenAI 服务客户端    
         client = AzureOpenAI(  
@@ -150,7 +151,9 @@ class LLMModel:
             stream=False
         )
         
-        return res1['choices'][0]['message']['content'].strip('\n')
+        # return res1['choices'][0]['message']['content'].strip('\n')
+        # print(res1)
+        return res1.choices[0].message.content.strip('\n')
     
     def call_api(self, system_setting, prompt, api_platform="fireworks"):
         if api_platform == "fireworks":
@@ -255,13 +258,14 @@ if __name__ == "__main__":
     # model_id = "baichuan-inc/Baichuan-7B"
     # model_id = "baichuan-inc/Baichuan2-7B-Chat"
     # model_id = "microsoft/Phi-3.5-mini-instruct"
-    model_id = "internlm/internlm2_5-7b-chat"
+    # model_id = "internlm/internlm2_5-7b-chat"
     # model_id = "mistralai/Mistral-7B-Instruct-v0.3"
     # model_id = "Qwen/Qwen2.5-0.5B-Instruct"
     # model_id = "meta-llama/Meta-Llama-3.1-8B-Instruct"
     # model_id = "Qwen/Qwen2.5-72B-Instruct"
+    model_id = "gpt-4-turbo"
     system_setting = "You are a helpful assistant."
-    prompt = "please introduction the China? "
+    prompt = "hello? "
     llm = LLMModel(model_id, api_key=None)
     ans = llm.get_response(system_setting, prompt)
     print(ans)    

@@ -1,6 +1,7 @@
 [
     {
-        "question": "How many Students are there in y5GiriZT?",
+<<<<<<< HEAD
+        "question": "How many Students are there in ujkVtW7z?",
         "answer": "0"
     },
     {
@@ -8,15 +9,27 @@
         "answer": "1"
     },
     {
-        "question": "How many Lecturers are there in 1EsbG2Hy?",
+        "question": "How many Courses are there in 71QV2RZN?",
+=======
+        "question": "How many Lecturers are there in 4TupuOZp?",
         "answer": "1"
     },
     {
-        "question": "How many Departments are there in XCgkWsrU?",
+        "question": "How many Lecturers are there in 50zn6Nh4?",
+>>>>>>> origin/main
+        "answer": "1"
+    },
+    {
+        "question": "How many Students are there in y5GiriZT?",
+        "answer": "0"
+    },
+    {
+        "question": "How many Courses are there in m7GU0Kal?",
         "answer": "2"
     },
     {
-        "question": "How many Courses are there in 71QV2RZN?",
+<<<<<<< HEAD
+        "question": "How many Lecturers are there in 1EsbG2Hy?",
         "answer": "1"
     },
     {
@@ -24,23 +37,38 @@
         "answer": "0"
     },
     {
-        "question": "How many Students are there in ujkVtW7z?",
+        "question": "How many Lecturers are there in 4TupuOZp?",
+        "answer": "1"
+    },
+    {
+        "question": "How many Departments are there in XCgkWsrU?",
+=======
+        "question": "How many Students are there in y5GiriZT?",
         "answer": "0"
+    },
+    {
+        "question": "How many Courses are there in m7GU0Kal?",
+>>>>>>> origin/main
+        "answer": "2"
     },
     {
         "question": "How many Programs are there in eeFex1L5?",
         "answer": "1"
     },
     {
-        "question": "How many Lecturers are there in 4TupuOZp?",
-        "answer": "1"
-    },
-    {
-        "question": "How many Courses are there in m7GU0Kal?",
-        "answer": "2"
-    },
-    {
         "question": "How many Programs are there in HFQcs6vc?",
         "answer": "1"
+    },
+    {
+        "question": "How many Courses are there in 71QV2RZN?",
+        "answer": "1"
+    },
+    {
+        "question": "How many Lecturers are there in 1EsbG2Hy?",
+        "answer": "1"
+    },
+    {
+        "question": "How many Students are there in 0qRli6yq?",
+        "answer": "0"
     }
 ]

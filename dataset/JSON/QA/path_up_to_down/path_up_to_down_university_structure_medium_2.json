@@ -1,0 +1,54 @@
+[
+    {
+        "question": "What is the path from Department of Electrical Engineering down to Doctor of Philosophy?",
+        "answer": "Department of Electrical Engineering -> Doctor of Philosophy"
+    },
+    {
+        "question": "What is the path from Faculty of Engineering down to Master of Business Administration?",
+        "answer": "Faculty of Engineering -> Department of Computer Engineering -> Master of Business Administration"
+    },
+    {
+        "question": "What is the path from Faculty of Engineering down to Master of Science?",
+        "answer": "Faculty of Engineering -> Department of Computer Engineering -> Master of Science"
+    },
+    {
+        "question": "What is the path from Department of Computer Engineering down to Master of Business Administration?",
+        "answer": "Department of Computer Engineering -> Master of Business Administration"
+    },
+    {
+        "question": "What is the path from Faculty of Engineering down to Bachelor of Business Administration?",
+        "answer": "Faculty of Engineering -> Department of Mechanical Engineering -> Bachelor of Business Administration"
+    },
+    {
+        "question": "What is the path from Faculty of Engineering down to Bachelor of Engineering?",
+        "answer": "Faculty of Engineering -> Department of Electrical Engineering -> Bachelor of Engineering"
+    },
+    {
+        "question": "What is the path from City University down to Master of Business Administration?",
+        "answer": "City University -> Faculty of Engineering -> Department of Computer Engineering -> Master of Business Administration"
+    },
+    {
+        "question": "What is the path from Department of Mechanical Engineering down to Bachelor of Business Administration?",
+        "answer": "Department of Mechanical Engineering -> Bachelor of Business Administration"
+    },
+    {
+        "question": "What is the path from City University down to Department of Electrical Engineering?",
+        "answer": "City University -> Faculty of Engineering -> Department of Electrical Engineering"
+    },
+    {
+        "question": "What is the path from Faculty of Engineering down to Doctor of Philosophy?",
+        "answer": "Faculty of Engineering -> Department of Electrical Engineering -> Doctor of Philosophy"
+    },
+    {
+        "question": "What is the path from City University down to Bachelor of Engineering?",
+        "answer": "City University -> Faculty of Engineering -> Department of Electrical Engineering -> Bachelor of Engineering"
+    },
+    {
+        "question": "What is the path from City University down to Master of Science?",
+        "answer": "City University -> Faculty of Engineering -> Department of Computer Engineering -> Master of Science"
+    },
+    {
+        "question": "What is the path from Faculty of Engineering down to Department of Electrical Engineering?",
+        "answer": "Faculty of Engineering -> Department of Electrical Engineering"
+    }
+]

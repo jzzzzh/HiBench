@@ -1,0 +1,54 @@
+[
+    {
+        "question": "What is the path from hy44QVkq down to DDn73D5P?",
+        "answer": "hy44QVkq -> RhIyMUpy -> DDn73D5P"
+    },
+    {
+        "question": "What is the path from 0uA0OvrC down to aPkmwYuZ?",
+        "answer": "0uA0OvrC -> 4qMs8IKh -> aPkmwYuZ"
+    },
+    {
+        "question": "What is the path from 4qMs8IKh down to QxLgi0KL?",
+        "answer": "4qMs8IKh -> aPkmwYuZ -> QxLgi0KL"
+    },
+    {
+        "question": "What is the path from aPkmwYuZ down to QxLgi0KL?",
+        "answer": "aPkmwYuZ -> QxLgi0KL"
+    },
+    {
+        "question": "What is the path from 4qMs8IKh down to T3VqTl8U?",
+        "answer": "4qMs8IKh -> aPkmwYuZ -> T3VqTl8U"
+    },
+    {
+        "question": "What is the path from 0uA0OvrC down to VEZiQqMw?",
+        "answer": "0uA0OvrC -> wIzBTNMa -> hy44QVkq -> VEZiQqMw"
+    },
+    {
+        "question": "What is the path from 0uA0OvrC down to wIzBTNMa?",
+        "answer": "0uA0OvrC -> wIzBTNMa"
+    },
+    {
+        "question": "What is the path from T3VqTl8U down to TTJBxEMN?",
+        "answer": "T3VqTl8U -> TTJBxEMN"
+    },
+    {
+        "question": "What is the path from DiNtnbut down to ZFyEOdN1?",
+        "answer": "DiNtnbut -> 0uA0OvrC -> wIzBTNMa -> hy44QVkq -> CCXyVyLw -> ZFyEOdN1"
+    },
+    {
+        "question": "What is the path from DiNtnbut down to T3VqTl8U?",
+        "answer": "DiNtnbut -> 0uA0OvrC -> 4qMs8IKh -> aPkmwYuZ -> T3VqTl8U"
+    },
+    {
+        "question": "What is the path from hy44QVkq down to ZFyEOdN1?",
+        "answer": "hy44QVkq -> CCXyVyLw -> ZFyEOdN1"
+    },
+    {
+        "question": "What is the path from DiNtnbut down to aPkmwYuZ?",
+        "answer": "DiNtnbut -> 0uA0OvrC -> 4qMs8IKh -> aPkmwYuZ"
+    },
+    {
+        "question": "What is the path from wIzBTNMa down to rDVTXEo0?",
+        "answer": "wIzBTNMa -> hy44QVkq -> rDVTXEo0"
+    }
+]

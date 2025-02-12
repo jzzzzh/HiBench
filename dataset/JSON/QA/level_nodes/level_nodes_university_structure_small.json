@@ -1,10 +1,6 @@
 [
     {
-        "question": "What are the names of the faculties in the university_structure_small?",
-        "answer": "Faculty of Business"
-    },
-    {
-        "question": "What are the names of the departments in the university_structure_small?",
-        "answer": "Department of Accounting, Department of Finance"
+        "question": "List all Program in the City University.",
+        "answer": "Department of Electrical Engineering, Department of Chemical Engineering"
     }
 ]

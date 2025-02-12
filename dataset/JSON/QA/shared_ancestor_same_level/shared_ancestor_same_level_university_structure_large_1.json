@@ -1,0 +1,54 @@
+[
+    {
+        "question": "What is the common ancestor of Department of Mechanical Engineering and Department of Electrical Engineering?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Bachelor of Engineering and Doctor of Philosophy?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Financial Accounting and Elena Carter?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Financial Accounting and Biochemistry?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Lecturer Elijah Brown and Associate Professor Jordan Baker?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Elena Carter and World History?",
+        "answer": "Doctor of Philosophy"
+    },
+    {
+        "question": "What is the common ancestor of Associate Professor Jordan Baker and Lecturer Elijah Brown?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Biochemistry and World History?",
+        "answer": "Doctor of Philosophy"
+    },
+    {
+        "question": "What is the common ancestor of Lecturer Elijah Brown and Lecturer Sebastian Rivera?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Doctor of Philosophy and Bachelor of Engineering?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Department of Electrical Engineering and Department of Mechanical Engineering?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Financial Accounting and Iris Ortiz?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Iris Ortiz and World History?",
+        "answer": "Doctor of Philosophy"
+    }
+]

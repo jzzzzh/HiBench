@@ -1,0 +1,54 @@
+[
+    {
+        "question": "What is the common ancestor of Faculty of Engineering and Doctor of Philosophy?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of City University and Master of Science?",
+        "answer": "City University"
+    },
+    {
+        "question": "What is the common ancestor of Department of Mechanical Engineering and Bachelor of Engineering?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of City University and Bachelor of Business Administration?",
+        "answer": "City University"
+    },
+    {
+        "question": "What is the common ancestor of Faculty of Engineering and Department of Computer Engineering?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Department of Electrical Engineering and Bachelor of Science?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Faculty of Engineering and Master of Business Administration?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Department of Mechanical Engineering and Bachelor of Business Administration?",
+        "answer": "Department of Mechanical Engineering"
+    },
+    {
+        "question": "What is the common ancestor of City University and Department of Electrical Engineering?",
+        "answer": "City University"
+    },
+    {
+        "question": "What is the common ancestor of City University and Department of Computer Engineering?",
+        "answer": "City University"
+    },
+    {
+        "question": "What is the common ancestor of City University and Faculty of Engineering?",
+        "answer": "City University"
+    },
+    {
+        "question": "What is the common ancestor of City University and Department of Mechanical Engineering?",
+        "answer": "City University"
+    },
+    {
+        "question": "What is the common ancestor of Department of Computer Engineering and Bachelor of Business Administration?",
+        "answer": "Faculty of Engineering"
+    }
+]

@@ -1,54 +1,104 @@
 [
     {
-        "question": "What is the relationship between Biochemistry and Lecturer Sebastian Rivera?",
-        "answer": "Biochemistry (course) and Lecturer Sebastian Rivera (name) share a common ancestor: Doctor of Philosophy"
+<<<<<<< HEAD
+        "question": "What is the relationship between Associate Professor Jordan Baker and Department of Mechanical Engineering?",
+        "answer": "Associate Professor Jordan Baker (name) and Department of Mechanical Engineering (department) share a common ancestor: Department of Mechanical Engineering"
     },
     {
-        "question": "What is the relationship between Bachelor of Engineering and Department of Electrical Engineering?",
-        "answer": "Bachelor of Engineering (program) and Department of Electrical Engineering (department) share a common ancestor: Department of Electrical Engineering"
+        "question": "What is the relationship between Department of Electrical Engineering and Doctor of Philosophy?",
+        "answer": "Department of Electrical Engineering (department) and Doctor of Philosophy (program) share a common ancestor: Faculty of Engineering"
     },
     {
-        "question": "What is the relationship between Lecturer Elijah Brown and Department of Mechanical Engineering?",
-        "answer": "Lecturer Elijah Brown (name) and Department of Mechanical Engineering (department) share a common ancestor: Faculty of Engineering"
+        "question": "What is the relationship between Doctor of Philosophy and Department of Electrical Engineering?",
+        "answer": "Doctor of Philosophy (program) and Department of Electrical Engineering (department) share a common ancestor: Faculty of Engineering"
     },
     {
-        "question": "What is the relationship between Doctor of Philosophy and Elena Carter?",
-        "answer": "Doctor of Philosophy (program) and Elena Carter (name) share a common ancestor: Doctor of Philosophy"
+        "question": "What is the relationship between World History and Faculty of Engineering?",
+        "answer": "World History (course) and Faculty of Engineering (faculty) share a common ancestor: Faculty of Engineering"
     },
     {
-        "question": "What is the relationship between Associate Professor Jordan Baker and Doctor of Philosophy?",
-        "answer": "Associate Professor Jordan Baker (name) and Doctor of Philosophy (program) share a common ancestor: Doctor of Philosophy"
+        "question": "What is the relationship between Associate Professor Jordan Baker and Lecturer Sebastian Rivera?",
+        "answer": "Associate Professor Jordan Baker (name) and Lecturer Sebastian Rivera (name) share a common ancestor: Doctor of Philosophy"
     },
     {
-        "question": "What is the relationship between Department of Electrical Engineering and Mila Reyes?",
-        "answer": "Department of Electrical Engineering (department) and Mila Reyes (name) share a common ancestor: Department of Electrical Engineering"
+        "question": "What is the relationship between Lecturer Elijah Brown and Elena Carter?",
+        "answer": "Lecturer Elijah Brown (name) and Elena Carter (name) share a common ancestor: Faculty of Engineering"
     },
     {
-        "question": "What is the relationship between Lecturer Elijah Brown and World History?",
-        "answer": "Lecturer Elijah Brown (name) and World History (course) share a common ancestor: Faculty of Engineering"
+        "question": "What is the relationship between Lecturer Elijah Brown and Financial Accounting?",
+        "answer": "Lecturer Elijah Brown (name) and Financial Accounting (course) share a common ancestor: Financial Accounting"
     },
     {
-        "question": "What is the relationship between Bachelor of Engineering and Lecturer Sebastian Rivera?",
-        "answer": "Bachelor of Engineering (program) and Lecturer Sebastian Rivera (name) share a common ancestor: Faculty of Engineering"
+        "question": "What is the relationship between Financial Accounting and Bachelor of Engineering?",
+        "answer": "Financial Accounting (course) and Bachelor of Engineering (program) share a common ancestor: Bachelor of Engineering"
     },
     {
-        "question": "What is the relationship between Department of Electrical Engineering and Lecturer Elijah Brown?",
-        "answer": "Department of Electrical Engineering (department) and Lecturer Elijah Brown (name) share a common ancestor: Department of Electrical Engineering"
+        "question": "What is the relationship between Financial Accounting and Department of Mechanical Engineering?",
+        "answer": "Financial Accounting (course) and Department of Mechanical Engineering (department) share a common ancestor: Faculty of Engineering"
+=======
+        "question": "What is the relationship between Department of Electrical Engineering and Department of Mechanical Engineering?",
+        "answer": "Department of Electrical Engineering (department) and Department of Mechanical Engineering (department) share a common ancestor: Faculty of Engineering"
     },
     {
-        "question": "What is the relationship between Iris Ortiz and Lecturer Elijah Brown?",
-        "answer": "Iris Ortiz (name) and Lecturer Elijah Brown (name) share a common ancestor: Faculty of Engineering"
+        "question": "What is the relationship between Doctor of Philosophy and Department of Mechanical Engineering?",
+        "answer": "Doctor of Philosophy (program) and Department of Mechanical Engineering (department) share a common ancestor: Department of Mechanical Engineering"
+>>>>>>> origin/main
     },
     {
-        "question": "What is the relationship between Lecturer Sebastian Rivera and Department of Electrical Engineering?",
-        "answer": "Lecturer Sebastian Rivera (name) and Department of Electrical Engineering (department) share a common ancestor: Faculty of Engineering"
+        "question": "What is the relationship between World History and Bachelor of Engineering?",
+        "answer": "World History (course) and Bachelor of Engineering (program) share a common ancestor: Faculty of Engineering"
     },
     {
-        "question": "What is the relationship between Lecturer Elijah Brown and Iris Ortiz?",
-        "answer": "Lecturer Elijah Brown (name) and Iris Ortiz (name) share a common ancestor: Faculty of Engineering"
+<<<<<<< HEAD
+        "question": "What is the relationship between Department of Electrical Engineering and Iris Ortiz?",
+        "answer": "Department of Electrical Engineering (department) and Iris Ortiz (name) share a common ancestor: Faculty of Engineering"
     },
     {
-        "question": "What is the relationship between Mila Reyes and Iris Ortiz?",
-        "answer": "Mila Reyes (name) and Iris Ortiz (name) share a common ancestor: Faculty of Engineering"
+        "question": "What is the relationship between World History and Elena Carter?",
+        "answer": "World History (course) and Elena Carter (name) share a common ancestor: Doctor of Philosophy"
+    },
+    {
+        "question": "What is the relationship between Department of Electrical Engineering and Lecturer Sebastian Rivera?",
+        "answer": "Department of Electrical Engineering (department) and Lecturer Sebastian Rivera (name) share a common ancestor: Faculty of Engineering"
+=======
+        "question": "What is the relationship between Department of Mechanical Engineering and Lecturer Sebastian Rivera?",
+        "answer": "Department of Mechanical Engineering (department) and Lecturer Sebastian Rivera (name) share a common ancestor: Department of Mechanical Engineering"
+    },
+    {
+        "question": "What is the relationship between Doctor of Philosophy and Department of Electrical Engineering?",
+        "answer": "Doctor of Philosophy (program) and Department of Electrical Engineering (department) share a common ancestor: Faculty of Engineering"
+    },
+    {
+        "question": "What is the relationship between World History and Bachelor of Engineering?",
+        "answer": "World History (course) and Bachelor of Engineering (program) share a common ancestor: Faculty of Engineering"
+    },
+    {
+        "question": "What is the relationship between Mila Reyes and Biochemistry?",
+        "answer": "Mila Reyes (name) and Biochemistry (course) share a common ancestor: Faculty of Engineering"
+    },
+    {
+        "question": "What is the relationship between World History and Department of Electrical Engineering?",
+        "answer": "World History (course) and Department of Electrical Engineering (department) share a common ancestor: Faculty of Engineering"
+    },
+    {
+        "question": "What is the relationship between Lecturer Sebastian Rivera and Department of Mechanical Engineering?",
+        "answer": "Lecturer Sebastian Rivera (name) and Department of Mechanical Engineering (department) share a common ancestor: Department of Mechanical Engineering"
+    },
+    {
+        "question": "What is the relationship between Bachelor of Engineering and Doctor of Philosophy?",
+        "answer": "Bachelor of Engineering (program) and Doctor of Philosophy (program) share a common ancestor: Faculty of Engineering"
+    },
+    {
+        "question": "What is the relationship between Biochemistry and Elena Carter?",
+        "answer": "Biochemistry (course) and Elena Carter (name) share a common ancestor: Doctor of Philosophy"
+    },
+    {
+        "question": "What is the relationship between Mila Reyes and Faculty of Engineering?",
+        "answer": "Mila Reyes (name) and Faculty of Engineering (faculty) share a common ancestor: Faculty of Engineering"
+    },
+    {
+        "question": "What is the relationship between Elena Carter and Associate Professor Jordan Baker?",
+        "answer": "Elena Carter (name) and Associate Professor Jordan Baker (name) share a common ancestor: Doctor of Philosophy"
+>>>>>>> origin/main
     }
 ]

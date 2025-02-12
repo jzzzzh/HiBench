@@ -1,0 +1,54 @@
+[
+    {
+        "question": "If someone wants to go from the program 'Bachelor of Engineering' to the department 'Department of Mechanical Engineering', what path should they take?",
+        "answer": "Bachelor of Engineering \u2192 Department of Electrical Engineering \u2192 Faculty of Engineering \u2192 Department of Mechanical Engineering"
+    },
+    {
+        "question": "If someone wants to go from the program 'Master of Science' to the department 'Department of Computer Engineering', what path should they take?",
+        "answer": "Master of Science \u2192 Department of Mechanical Engineering \u2192 Faculty of Engineering \u2192 Department of Computer Engineering"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Mechanical Engineering' to the program 'Bachelor of Engineering', what path should they take?",
+        "answer": "Department of Mechanical Engineering \u2192 Faculty of Engineering \u2192 Department of Electrical Engineering \u2192 Bachelor of Engineering"
+    },
+    {
+        "question": "If someone wants to go from the program 'Bachelor of Science' to the department 'Department of Mechanical Engineering', what path should they take?",
+        "answer": "Bachelor of Science \u2192 Department of Computer Engineering \u2192 Faculty of Engineering \u2192 Department of Mechanical Engineering"
+    },
+    {
+        "question": "If someone wants to go from the program 'Doctor of Philosophy' to the program 'Bachelor of Business Administration', what path should they take?",
+        "answer": "Doctor of Philosophy \u2192 Department of Electrical Engineering \u2192 Faculty of Engineering \u2192 Department of Mechanical Engineering \u2192 Bachelor of Business Administration"
+    },
+    {
+        "question": "If someone wants to go from the program 'Bachelor of Business Administration' to the program 'Master of Science', what path should they take?",
+        "answer": "Bachelor of Business Administration \u2192 Department of Mechanical Engineering \u2192 Master of Science"
+    },
+    {
+        "question": "If someone wants to go from the faculty 'Faculty of Engineering' to the program 'Bachelor of Science', what path should they take?",
+        "answer": "Faculty of Engineering \u2192 Department of Computer Engineering \u2192 Bachelor of Science"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Electrical Engineering' to the program 'Master of Business Administration', what path should they take?",
+        "answer": "Department of Electrical Engineering \u2192 Faculty of Engineering \u2192 Department of Computer Engineering \u2192 Master of Business Administration"
+    },
+    {
+        "question": "If someone wants to go from the program 'Bachelor of Business Administration' to the faculty 'Faculty of Engineering', what path should they take?",
+        "answer": "Bachelor of Business Administration \u2192 Department of Mechanical Engineering \u2192 Faculty of Engineering"
+    },
+    {
+        "question": "If someone wants to go from the department 'Department of Mechanical Engineering' to the department 'Department of Computer Engineering', what path should they take?",
+        "answer": "Department of Mechanical Engineering \u2192 Faculty of Engineering \u2192 Department of Computer Engineering"
+    },
+    {
+        "question": "If someone wants to go from the program 'Bachelor of Engineering' to the program 'Bachelor of Science', what path should they take?",
+        "answer": "Bachelor of Engineering \u2192 Department of Electrical Engineering \u2192 Faculty of Engineering \u2192 Department of Computer Engineering \u2192 Bachelor of Science"
+    },
+    {
+        "question": "If someone wants to go from the program 'Bachelor of Science' to the department 'Department of Electrical Engineering', what path should they take?",
+        "answer": "Bachelor of Science \u2192 Department of Computer Engineering \u2192 Faculty of Engineering \u2192 Department of Electrical Engineering"
+    },
+    {
+        "question": "If someone wants to go from the program 'Bachelor of Engineering' to the faculty 'Faculty of Engineering', what path should they take?",
+        "answer": "Bachelor of Engineering \u2192 Department of Electrical Engineering \u2192 Faculty of Engineering"
+    }
+]

@@ -1,10 +1,14 @@
 [
     {
-        "question": "How many Departments does Faculty of Business have?",
-        "answer": 2
+        "question": "How many Programs are there in Department of Chemical Engineering?",
+        "answer": "2"
     },
     {
-        "question": "How many Faculties does International University have?",
-        "answer": 1
+        "question": "How many Programs are there in Department of Electrical Engineering?",
+        "answer": "1"
+    },
+    {
+        "question": "How many Departments are there in Faculty of Engineering?",
+        "answer": "2"
     }
 ]

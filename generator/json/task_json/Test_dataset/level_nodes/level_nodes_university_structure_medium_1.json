@@ -1,6 +1,33 @@
 [
     {
-        "question": "List all Faculty in the City University.",
-        "answer": "City University"
+<<<<<<< HEAD
+        "question": "List all Lecturer in the City University.",
+        "answer": "Financial Accounting, Biochemistry, World History"
+    },
+    {
+=======
+>>>>>>> origin/main
+        "question": "List all Program in the City University.",
+        "answer": "Department of Electrical Engineering, Department of Mechanical Engineering"
+    },
+    {
+<<<<<<< HEAD
+        "question": "List all Student in the City University.",
+        "answer": "Lecturer Elijah Brown, Associate Professor Jordan Baker, Lecturer Sebastian Rivera"
+=======
+        "question": "List all Lecturer in the City University.",
+        "answer": "Financial Accounting, Biochemistry, World History"
+>>>>>>> origin/main
+    },
+    {
+        "question": "List all Course in the City University.",
+        "answer": "Bachelor of Engineering, Doctor of Philosophy"
+<<<<<<< HEAD
+=======
+    },
+    {
+        "question": "List all Student in the City University.",
+        "answer": "Lecturer Elijah Brown, Associate Professor Jordan Baker, Lecturer Sebastian Rivera"
+>>>>>>> origin/main
     }
 ]

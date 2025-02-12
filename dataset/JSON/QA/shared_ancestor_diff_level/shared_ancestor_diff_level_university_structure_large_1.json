@@ -1,0 +1,54 @@
+[
+    {
+        "question": "What is the common ancestor of City University and Department of Mechanical Engineering?",
+        "answer": "City University"
+    },
+    {
+        "question": "What is the common ancestor of City University and Faculty of Engineering?",
+        "answer": "City University"
+    },
+    {
+        "question": "What is the common ancestor of Doctor of Philosophy and Biochemistry?",
+        "answer": "Doctor of Philosophy"
+    },
+    {
+        "question": "What is the common ancestor of Faculty of Engineering and Financial Accounting?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Bachelor of Engineering and Mila Reyes?",
+        "answer": "Bachelor of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Department of Electrical Engineering and Doctor of Philosophy?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Faculty of Engineering and Iris Ortiz?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Department of Mechanical Engineering and Doctor of Philosophy?",
+        "answer": "Department of Mechanical Engineering"
+    },
+    {
+        "question": "What is the common ancestor of City University and Lecturer Elijah Brown?",
+        "answer": "City University"
+    },
+    {
+        "question": "What is the common ancestor of City University and Elena Carter?",
+        "answer": "City University"
+    },
+    {
+        "question": "What is the common ancestor of Department of Mechanical Engineering and Mila Reyes?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Elena Carter and Lecturer Elijah Brown?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Doctor of Philosophy and Lecturer Sebastian Rivera?",
+        "answer": "Doctor of Philosophy"
+    }
+]

@@ -1,0 +1,54 @@
+[
+    {
+        "question": "What is the path from City University down to Associate Professor Jordan Baker?",
+        "answer": "City University -> Faculty of Engineering -> Department of Mechanical Engineering -> Doctor of Philosophy -> Biochemistry -> Associate Professor Jordan Baker"
+    },
+    {
+        "question": "What is the path from Faculty of Engineering down to Associate Professor Jordan Baker?",
+        "answer": "Faculty of Engineering -> Department of Mechanical Engineering -> Doctor of Philosophy -> Biochemistry -> Associate Professor Jordan Baker"
+    },
+    {
+        "question": "What is the path from Department of Electrical Engineering down to Financial Accounting?",
+        "answer": "Department of Electrical Engineering -> Bachelor of Engineering -> Financial Accounting"
+    },
+    {
+        "question": "What is the path from Bachelor of Engineering down to Financial Accounting?",
+        "answer": "Bachelor of Engineering -> Financial Accounting"
+    },
+    {
+        "question": "What is the path from Department of Mechanical Engineering down to Associate Professor Jordan Baker?",
+        "answer": "Department of Mechanical Engineering -> Doctor of Philosophy -> Biochemistry -> Associate Professor Jordan Baker"
+    },
+    {
+        "question": "What is the path from Faculty of Engineering down to Doctor of Philosophy?",
+        "answer": "Faculty of Engineering -> Department of Mechanical Engineering -> Doctor of Philosophy"
+    },
+    {
+        "question": "What is the path from City University down to Department of Electrical Engineering?",
+        "answer": "City University -> Faculty of Engineering -> Department of Electrical Engineering"
+    },
+    {
+        "question": "What is the path from Biochemistry down to Associate Professor Jordan Baker?",
+        "answer": "Biochemistry -> Associate Professor Jordan Baker"
+    },
+    {
+        "question": "What is the path from Doctor of Philosophy down to Associate Professor Jordan Baker?",
+        "answer": "Doctor of Philosophy -> Biochemistry -> Associate Professor Jordan Baker"
+    },
+    {
+        "question": "What is the path from Faculty of Engineering down to Financial Accounting?",
+        "answer": "Faculty of Engineering -> Department of Electrical Engineering -> Bachelor of Engineering -> Financial Accounting"
+    },
+    {
+        "question": "What is the path from Bachelor of Engineering down to Lecturer Elijah Brown?",
+        "answer": "Bachelor of Engineering -> Financial Accounting -> Lecturer Elijah Brown"
+    },
+    {
+        "question": "What is the path from Faculty of Engineering down to Department of Mechanical Engineering?",
+        "answer": "Faculty of Engineering -> Department of Mechanical Engineering"
+    },
+    {
+        "question": "What is the path from City University down to Faculty of Engineering?",
+        "answer": "City University -> Faculty of Engineering"
+    }
+]

@@ -1,0 +1,54 @@
+[
+    {
+        "question": "What is the common ancestor of Faculty of Engineering and Department of Civil Engineering?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of City University and Bachelor of Science?",
+        "answer": "City University"
+    },
+    {
+        "question": "What is the common ancestor of City University and Faculty of Engineering?",
+        "answer": "City University"
+    },
+    {
+        "question": "What is the common ancestor of Department of Civil Engineering and Master of Arts?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Department of Mechanical Engineering and Bachelor of Arts?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Department of Mechanical Engineering and Bachelor of Science?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of City University and Department of Civil Engineering?",
+        "answer": "City University"
+    },
+    {
+        "question": "What is the common ancestor of Department of Chemical Engineering and Doctor of Philosophy?",
+        "answer": "Department of Chemical Engineering"
+    },
+    {
+        "question": "What is the common ancestor of City University and Master of Science?",
+        "answer": "City University"
+    },
+    {
+        "question": "What is the common ancestor of Faculty of Engineering and Doctor of Philosophy?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Faculty of Engineering and Department of Labor Law?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Faculty of Engineering and Master of Arts?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Department of Aerospace Engineering and Bachelor of Arts?",
+        "answer": "Faculty of Engineering"
+    }
+]

@@ -1,6 +1,32 @@
 [
     {
+<<<<<<< HEAD
         "question": "What is the name of the program in Department of Aerospace Engineering?",
+        "answer": "Bachelor of Engineering"
+=======
+        "question": "What is the name of the program in Department of Chemical Engineering?",
+        "answer": "Doctor of Philosophy"
+    },
+    {
+        "question": "What is the name of the program in Department of Aerospace Engineering?",
+        "answer": "Doctor of Philosophy"
+    },
+    {
+        "question": "What is the name of the program in Department of Mechanical Engineering?",
+        "answer": "Master of Science"
+>>>>>>> origin/main
+    },
+    {
+        "question": "What is the name of the program in Department of Environmental Law?",
+        "answer": "Master of Science"
+    },
+    {
+<<<<<<< HEAD
+        "question": "What is the name of the program in Department of Chemical Engineering?",
+        "answer": "Doctor of Philosophy"
+    },
+    {
+        "question": "What is the name of the program in Department of Mechanical Engineering?",
         "answer": "Bachelor of Science"
     },
     {
@@ -8,19 +34,15 @@
         "answer": "Master of Arts"
     },
     {
-        "question": "What is the name of the program in Department of Environmental Law?",
-        "answer": "Master of Science"
-    },
-    {
-        "question": "What is the name of the program in Department of Chemical Engineering?",
-        "answer": "Doctor of Philosophy"
-    },
-    {
         "question": "What is the name of the program in Department of Civil Engineering?",
-        "answer": "Bachelor of Arts"
+        "answer": "Master of Science"
+=======
+        "question": "What is the name of the program in Department of Civil Engineering?",
+        "answer": "Master of Science"
     },
     {
-        "question": "What is the name of the program in Department of Mechanical Engineering?",
-        "answer": "Master of Science"
+        "question": "What is the name of the program in Department of Labor Law?",
+        "answer": "Master of Engineering"
+>>>>>>> origin/main
     }
 ]
