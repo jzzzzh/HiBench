@@ -218,21 +218,25 @@ def main():
             logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
             logger = logging.getLogger(__name__)
             logger.info(f"\033[93mProcessing task: {Eval} | Model: {model} | Progress: {idx}/{length}\033[0m")
-            Hibenchdataloader = HibenchDataLoader(Eval)
-            if DUPLICATE_CHECK and Hibenchdataloader.is_data_exist(model, args=Eval):
+            try:
+                Hibenchdataloader = HibenchDataLoader(Eval)
+                if DUPLICATE_CHECK and Hibenchdataloader.is_data_exist(model, args=Eval):
+                    continue
+                if Eval['Task'] in need_sample_list:
+                    data = Hibenchdataloader.load_data(num_samples=num_samples)
+                else:
+                    data = Hibenchdataloader.load_data()
+                for i in tqdm(range(len(data))):
+                    SystemPrompt = data[i]['SystemPrompt']
+                    UserPrompt = data[i]['UserPrompt']
+                    TrueAnswer = data[i]['TrueAnswer']
+                    ans = llm.get_response(SystemPrompt, UserPrompt)
+                    data[i]['response'] = ans
+                Hibenchdataloader.save_data(data, model_name=model, args=Eval)
+                print(f"Completed task: {Eval}")
+            except Exception as e:
+                print(f"Error: {e}")
                 continue
-            if Eval['Task'] in need_sample_list:
-                data = Hibenchdataloader.load_data(num_samples=num_samples)
-            else:
-                data = Hibenchdataloader.load_data()
-            for i in tqdm(range(len(data))):
-                SystemPrompt = data[i]['SystemPrompt']
-                UserPrompt = data[i]['UserPrompt']
-                TrueAnswer = data[i]['TrueAnswer']
-                ans = llm.get_response(SystemPrompt, UserPrompt)
-                data[i]['response'] = ans
-            Hibenchdataloader.save_data(data, model_name=model, args=Eval)
-            print(f"Completed task: {Eval}")
             
 
 
