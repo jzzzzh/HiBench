@@ -679,19 +679,19 @@ class PaperPromptGenerator(PromptGenerator):
         if self.sub_task == 'contextual_qa':
             OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['Paper']['Task']['contextual_qa']['OutputFormatTemplate'])
             PromptTemplate = self.config['Paper']['Task']['contextual_qa']['PromptTemplate']
-            PromptTemplate = PromptTemplate.replace('<JSON>', structure)
+            # PromptTemplate = PromptTemplate.replace('<JSON>', structure)
             PromptTemplate = PromptTemplate.replace('<QUESTION>', data['question'])
             TrueAnswer = data['true_answer']
         elif self.sub_task == 'disordered_section':
             OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['Paper']['Task']['disordered_section']['OutputFormatTemplate'])
             PromptTemplate = self.config['Paper']['Task']['disordered_section']['PromptTemplate']
-            PromptTemplate = PromptTemplate.replace('<JSON>', structure)
+            # PromptTemplate = PromptTemplate.replace('<JSON>', structure)
             PromptTemplate = PromptTemplate.replace('<QUESTION>', data['question'])
             TrueAnswer = data['true_answer']
         elif self.sub_task == 'outline_extraction':
             OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['Paper']['Task']['outline_extraction']['OutputFormatTemplate'])
             PromptTemplate = self.config['Paper']['Task']['outline_extraction']['PromptTemplate']
-            PromptTemplate = PromptTemplate.replace('<JSON>', structure)
+            # PromptTemplate = PromptTemplate.replace('<JSON>', structure)
             PromptTemplate = PromptTemplate.replace('<QUESTION>', data['question'])
             TrueAnswer = data['true_answer']
         SystemPrompt = SystemTemplate
