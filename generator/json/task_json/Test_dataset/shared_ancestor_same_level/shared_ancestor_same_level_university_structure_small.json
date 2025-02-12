@@ -1,0 +1,34 @@
+[
+    {
+        "question": "What is the common ancestor of Department of Electrical Engineering and Department of Chemical Engineering?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Bachelor of Science and Master of Science?",
+        "answer": "Department of Chemical Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Bachelor of Engineering and Master of Science?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Bachelor of Science and Bachelor of Engineering?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Bachelor of Engineering and Bachelor of Science?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Department of Chemical Engineering and Department of Electrical Engineering?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Master of Science and Bachelor of Science?",
+        "answer": "Department of Chemical Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Master of Science and Bachelor of Engineering?",
+        "answer": "Faculty of Engineering"
+    }
+]

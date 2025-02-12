@@ -1,0 +1,54 @@
+[
+    {
+        "question": "What is the common ancestor of Department of Civil Engineering and Department of Mechanical Engineering?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Master of Arts and Master of Engineering?",
+        "answer": "Department of Labor Law"
+    },
+    {
+        "question": "What is the common ancestor of Bachelor of Science and Bachelor of Business Administration?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Bachelor of Engineering and Master of Engineering?",
+        "answer": "Department of Aerospace Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Department of Labor Law and Department of Mechanical Engineering?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Department of Chemical Engineering and Department of Labor Law?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Doctor of Philosophy and Doctor of Philosophy?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Bachelor of Business Administration and Bachelor of Arts?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Bachelor of Engineering and Bachelor of Science?",
+        "answer": "Department of Aerospace Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Bachelor of Arts and Bachelor of Arts?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Department of Environmental Law and Department of Labor Law?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Bachelor of Arts and Master of Engineering?",
+        "answer": "Department of Aerospace Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Department of Environmental Law and Department of Aerospace Engineering?",
+        "answer": "Faculty of Engineering"
+    }
+]

@@ -1,6 +1,18 @@
 [
     {
-        "question": "List all Faculty in the lmqKvj0m.",
-        "answer": "lmqKvj0m"
+        "question": "List all Course in the lmqKvj0m.",
+        "answer": "71QV2RZN, m7GU0Kal"
+    },
+    {
+        "question": "List all Lecturer in the lmqKvj0m.",
+        "answer": "50zn6Nh4, 4TupuOZp, 1EsbG2Hy"
+    },
+    {
+        "question": "List all Program in the lmqKvj0m.",
+        "answer": "eeFex1L5, HFQcs6vc"
+    },
+    {
+        "question": "List all Student in the lmqKvj0m.",
+        "answer": "y5GiriZT, ujkVtW7z, 0qRli6yq"
     }
 ]

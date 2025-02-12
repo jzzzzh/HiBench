@@ -1,0 +1,54 @@
+[
+    {
+        "question": "What is the common ancestor of City University and Bachelor of Engineering?",
+        "answer": "City University"
+    },
+    {
+        "question": "What is the common ancestor of Faculty of Engineering and Master of Science?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Faculty of Engineering and Bachelor of Science?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of City University and Department of Electrical Engineering?",
+        "answer": "City University"
+    },
+    {
+        "question": "What is the common ancestor of City University and Faculty of Engineering?",
+        "answer": "City University"
+    },
+    {
+        "question": "What is the common ancestor of Department of Electrical Engineering and Bachelor of Science?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Faculty of Engineering and Department of Electrical Engineering?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Faculty of Engineering and Department of Chemical Engineering?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Department of Chemical Engineering and Master of Science?",
+        "answer": "Department of Chemical Engineering"
+    },
+    {
+        "question": "What is the common ancestor of City University and Master of Science?",
+        "answer": "City University"
+    },
+    {
+        "question": "What is the common ancestor of Department of Electrical Engineering and Master of Science?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Department of Electrical Engineering and Bachelor of Engineering?",
+        "answer": "Department of Electrical Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Faculty of Engineering and Bachelor of Engineering?",
+        "answer": "Faculty of Engineering"
+    }
+]

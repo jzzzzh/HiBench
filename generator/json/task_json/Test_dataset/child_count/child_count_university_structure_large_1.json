@@ -1,11 +1,11 @@
 [
     {
-        "question": "How many Courses are there in Bachelor of Engineering?",
+        "question": "How many Lecturers are there in Financial Accounting?",
         "answer": "1"
     },
     {
-        "question": "How many Students are there in Lecturer Sebastian Rivera?",
-        "answer": "0"
+        "question": "How many Lecturers are there in Biochemistry?",
+        "answer": "1"
     },
     {
         "question": "How many Departments are there in Faculty of Engineering?",
@@ -16,8 +16,20 @@
         "answer": "1"
     },
     {
-        "question": "How many Lecturers are there in Biochemistry?",
+        "question": "How many Courses are there in Bachelor of Engineering?",
         "answer": "1"
+    },
+    {
+        "question": "How many Students are there in Lecturer Elijah Brown?",
+        "answer": "0"
+    },
+    {
+        "question": "How many Students are there in Lecturer Sebastian Rivera?",
+        "answer": "0"
+    },
+    {
+        "question": "How many Students are there in Associate Professor Jordan Baker?",
+        "answer": "0"
     },
     {
         "question": "How many Programs are there in Department of Electrical Engineering?",
@@ -28,19 +40,7 @@
         "answer": "2"
     },
     {
-        "question": "How many Students are there in Lecturer Elijah Brown?",
-        "answer": "0"
-    },
-    {
         "question": "How many Lecturers are there in World History?",
-        "answer": "1"
-    },
-    {
-        "question": "How many Students are there in Associate Professor Jordan Baker?",
-        "answer": "0"
-    },
-    {
-        "question": "How many Lecturers are there in Financial Accounting?",
         "answer": "1"
     }
 ]

@@ -24,10 +24,13 @@ def get_nodes_at_level(data, target_level, current_level=0):
     """Get all nodes at a specific level with their names"""
     nodes = []
     
+    # Special handling at the root: if the root contains "Faculties", use that
+    if current_level == 0 and isinstance(data, dict) and "Faculties" in data:
+        return get_nodes_at_level(data["Faculties"], target_level, current_level + 1)
+    
     if current_level == target_level:
         # Get node name based on level
         name_keys = {
-            0: 'University',
             1: 'Faculty Name',
             2: 'Department Name',
             3: 'Program Name',
@@ -39,31 +42,31 @@ def get_nodes_at_level(data, target_level, current_level=0):
         if key and key in data:
             nodes.append(data[key])
         return nodes
-        
+    
+    # Mapping for nodes in the subtree (starting from Faculty level)
+    subtree_keys = {
+        1: 'Departments',    # For a Faculty node, its children are in "Departments"
+        2: 'Programs',       # For a Department node, its children are in "Programs"
+        3: 'Courses',        # For a Program node, its children are in "Courses"
+        4: ['Lecturers', 'Students']  # For a Course node, its children are in these lists
+    }
+    
     if isinstance(data, dict):
-        # Map level numbers to their container keys
-        level_keys = {
-            0: 'University',
-            1: 'Faculties',
-            2: 'Departments',
-            3: 'Programs',
-            4: 'Courses',
-            5: ['Lecturers', 'Students']
-        }
-        
-        # Get the keys for the current level
-        current_keys = level_keys.get(current_level)
-        if isinstance(current_keys, list):
-            for key in current_keys:
+        current_key = subtree_keys.get(current_level)
+        if isinstance(current_key, list):
+            for key in current_key:
                 if key in data:
                     for item in data[key]:
                         nodes.extend(get_nodes_at_level(item, target_level, current_level + 1))
-        elif current_keys in data:
-            if isinstance(data[current_keys], list):
-                for item in data[current_keys]:
+        elif current_key and current_key in data:
+            if isinstance(data[current_key], list):
+                for item in data[current_key]:
                     nodes.extend(get_nodes_at_level(item, target_level, current_level + 1))
             else:
-                nodes.extend(get_nodes_at_level(data[current_keys], target_level, current_level + 1))
+                nodes.extend(get_nodes_at_level(data[current_key], target_level, current_level + 1))
+    elif isinstance(data, list):
+        for item in data:
+            nodes.extend(get_nodes_at_level(item, target_level, current_level))
     
     return nodes
 

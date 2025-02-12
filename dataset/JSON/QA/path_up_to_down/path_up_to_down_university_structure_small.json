@@ -1,0 +1,54 @@
+[
+    {
+        "question": "What is the path from Faculty of Engineering down to Bachelor of Engineering?",
+        "answer": "Faculty of Engineering -> Department of Electrical Engineering -> Bachelor of Engineering"
+    },
+    {
+        "question": "What is the path from Faculty of Engineering down to Master of Science?",
+        "answer": "Faculty of Engineering -> Department of Chemical Engineering -> Master of Science"
+    },
+    {
+        "question": "What is the path from City University down to Master of Science?",
+        "answer": "City University -> Faculty of Engineering -> Department of Chemical Engineering -> Master of Science"
+    },
+    {
+        "question": "What is the path from Faculty of Engineering down to Department of Chemical Engineering?",
+        "answer": "Faculty of Engineering -> Department of Chemical Engineering"
+    },
+    {
+        "question": "What is the path from Department of Chemical Engineering down to Bachelor of Science?",
+        "answer": "Department of Chemical Engineering -> Bachelor of Science"
+    },
+    {
+        "question": "What is the path from Department of Chemical Engineering down to Master of Science?",
+        "answer": "Department of Chemical Engineering -> Master of Science"
+    },
+    {
+        "question": "What is the path from City University down to Department of Chemical Engineering?",
+        "answer": "City University -> Faculty of Engineering -> Department of Chemical Engineering"
+    },
+    {
+        "question": "What is the path from City University down to Faculty of Engineering?",
+        "answer": "City University -> Faculty of Engineering"
+    },
+    {
+        "question": "What is the path from Faculty of Engineering down to Bachelor of Science?",
+        "answer": "Faculty of Engineering -> Department of Chemical Engineering -> Bachelor of Science"
+    },
+    {
+        "question": "What is the path from Department of Electrical Engineering down to Bachelor of Engineering?",
+        "answer": "Department of Electrical Engineering -> Bachelor of Engineering"
+    },
+    {
+        "question": "What is the path from Faculty of Engineering down to Department of Electrical Engineering?",
+        "answer": "Faculty of Engineering -> Department of Electrical Engineering"
+    },
+    {
+        "question": "What is the path from City University down to Bachelor of Engineering?",
+        "answer": "City University -> Faculty of Engineering -> Department of Electrical Engineering -> Bachelor of Engineering"
+    },
+    {
+        "question": "What is the path from City University down to Bachelor of Science?",
+        "answer": "City University -> Faculty of Engineering -> Department of Chemical Engineering -> Bachelor of Science"
+    }
+]
