@@ -1,0 +1,88 @@
+{
+    "University": "City University",
+    "Faculties": [
+        {
+            "Faculty Name": "Faculty of Engineering",
+            "Departments": [
+                {
+                    "Department Name": "Department of Civil Engineering",
+                    "Programs": [
+                        {
+                            "Program Name": "Master of Science"
+                        },
+                        {
+                            "Program Name": "Bachelor of Arts"
+                        }
+                    ]
+                },
+                {
+                    "Department Name": "Department of Chemical Engineering",
+                    "Programs": [
+                        {
+                            "Program Name": "Doctor of Philosophy"
+                        }
+                    ]
+                },
+                {
+                    "Department Name": "Department of Mechanical Engineering",
+                    "Programs": [
+                        {
+                            "Program Name": "Master of Science"
+                        },
+                        {
+                            "Program Name": "Bachelor of Science"
+                        }
+                    ]
+                },
+                {
+                    "Department Name": "Department of Aerospace Engineering",
+                    "Programs": [
+                        {
+                            "Program Name": "Bachelor of Business Administration"
+                        },
+                        {
+                            "Program Name": "Master of Engineering"
+                        },
+                        {
+                            "Program Name": "Bachelor of Science"
+                        },
+                        {
+                            "Program Name": "Doctor of Philosophy"
+                        },
+                        {
+                            "Program Name": "Bachelor of Engineering"
+                        },
+                        {
+                            "Program Name": "Bachelor of Arts"
+                        }
+                    ]
+                },
+                {
+                    "Department Name": "Department of Labor Law",
+                    "Programs": [
+                        {
+                            "Program Name": "Master of Arts"
+                        },
+                        {
+                            "Program Name": "Master of Engineering"
+                        },
+                        {
+                            "Program Name": "Doctor of Philosophy"
+                        }
+                    ]
+                },
+                {
+                    "Department Name": "Department of Environmental Law",
+                    "Programs": [
+                        {
+                            "Program Name": "Bachelor of Arts"
+                        },
+                        {
+                            "Program Name": "Master of Science"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

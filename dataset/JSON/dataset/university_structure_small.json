@@ -1,14 +1,27 @@
 {
-    "University": "International University",
+    "University": "City University",
     "Faculties": [
         {
-            "Faculty Name": "Faculty of Business",
+            "Faculty Name": "Faculty of Engineering",
             "Departments": [
                 {
-                    "Department Name": "Department of Accounting"
+                    "Department Name": "Department of Electrical Engineering",
+                    "Programs": [
+                        {
+                            "Program Name": "Bachelor of Engineering"
+                        }
+                    ]
                 },
                 {
-                    "Department Name": "Department of Finance"
+                    "Department Name": "Department of Chemical Engineering",
+                    "Programs": [
+                        {
+                            "Program Name": "Bachelor of Science"
+                        },
+                        {
+                            "Program Name": "Master of Science"
+                        }
+                    ]
                 }
             ]
         }

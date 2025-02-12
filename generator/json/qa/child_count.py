@@ -8,6 +8,7 @@ Direction: How many node N2 does node N1 have.
 import json
 import random
 import os
+import logging
 
 def read_json_file(file_path):
     """Read JSON file and return its contents"""
@@ -173,39 +174,268 @@ def select_random_node_by_layer_index(json_data, layer_index=None):
     
     return selected_node, info['parent_type'], info['sibling_count'], info['parent_name']
 
+def get_node_at_layer(data, target_layer, current_layer=0):
+    """Get all nodes at a specific layer"""
+    nodes = []
+    
+    if current_layer == target_layer:
+        logging.debug(f"Found node at target layer {target_layer}: {data}")
+        if isinstance(data, list):
+            return [d if isinstance(d, dict) else {"Name": d} for d in data]
+        elif isinstance(data, dict):
+            return [data]
+        elif isinstance(data, str):
+            return [{"Name": data}]
+        return [data]
+    
+    # Special handling at the root: if the root contains "Faculties", use that
+    if current_layer == 0 and isinstance(data, dict) and "Faculties" in data:
+        logging.debug("At root; recursing into 'Faculties' key.")
+        return get_node_at_layer(data["Faculties"], target_layer, current_layer)
 
-def gen_anwser_child_count(scenario: str, layer_index: int = None, with_answer: bool = True):
-    """
-    gen_anwser_child_count generates questions about counting children of a node
-    :param scenario: the scenario of the question
-    :param layer_index: the index of the layer (depth start with 0)
-    :return: question, answer
-    """
-    def gen_question(scenario, layer_index):
+    # Mapping for nodes in the subtree (starting from Faculty level)
+    subtree_keys = {
+        0: 'Departments',    # For a Faculty node, its children are in "Departments"
+        1: 'Programs',       # For a Department node, its children are in "Programs"
+        2: 'Courses',        # For a Program node, its children are in "Courses"
+        3: ['Lecturers', 'Students']  # For a Course node, its children are in these lists
+    }
 
-        file_path = os.path.join(
-        os.path.dirname(__file__), "..", "dataset", f"{scenario}.json")
-        json_data = read_json_file(file_path)
-
-        if isinstance(json_data, str) and not json_data.startswith("Error"):
-            # Specify the layer index (the function will show available layers)
-            _layer_index = layer_index  # Change this to select different layers
-            result = select_random_node_by_layer_index(json_data, _layer_index)
-
-        if isinstance(result, tuple):
-            selected_node, parent_type, sibling_count, parent_name = result
-            question = f"How many {parent_type} does {parent_name} have?"
-            if with_answer:
-                answer = sibling_count
+    if isinstance(data, dict):
+        # For nodes at current_layer >= 0 in the subtree, use the subtree mapping.
+        current_key = subtree_keys.get(current_layer)
+        logging.debug(f"Looking for key {current_key} at subtree layer {current_layer}")
+        if current_key:
+            if isinstance(current_key, list):
+                for key in current_key:
+                    if key in data:
+                        logging.debug(f"Found list key {key} at subtree layer {current_layer}")
+                        for item in data[key]:
+                            nodes.extend(get_node_at_layer(item, target_layer, current_layer + 1))
             else:
-                answer = None
+                if current_key in data:
+                    logging.debug(f"Found key {current_key} at subtree layer {current_layer}")
+                    if isinstance(data[current_key], list):
+                        for item in data[current_key]:
+                            nodes.extend(get_node_at_layer(item, target_layer, current_layer + 1))
+                    else:
+                        nodes.extend(get_node_at_layer(data[current_key], target_layer, current_layer + 1))
+    elif isinstance(data, list):
+        for item in data:
+            nodes.extend(get_node_at_layer(item, target_layer, current_layer))
+    return nodes
+
+def count_children(node, tree_level):
+    """Count direct children of a node when the node is at the given tree level.
+    Here tree_level is the actual level in the JSON tree.
+    Children are located at tree_level + 1"""
+    if isinstance(node, dict):
+        # Map tree-level numbers to their container keys
+        layer_keys = {
+            0: 'University',   # Level 0: University
+            1: 'Faculties',    # Level 1: Faculties
+            2: 'Departments',  # Level 2: Departments
+            3: 'Programs',     # Level 3: Programs
+            4: 'Courses',      # Level 4: Courses
+            5: ['Lecturers', 'Students']  # Level 5: People
+        }
+        
+        # Look for children at level tree_level + 1
+        target_keys = layer_keys.get(tree_level + 1)
+        if isinstance(target_keys, list):
+            total_count = 0
+            for key in target_keys:
+                if key in node and isinstance(node[key], list):
+                    total_count += len(node[key])
+            return total_count
+        elif target_keys in node:
+            if isinstance(node[target_keys], list):
+                return len(node[target_keys])
+            else:
+                return 1
+    return 0
+
+def get_nodes_at_level(data, target_level, current_level=0):
+    """
+    Recursively retrieve all nodes at a specified JSON tree level in our assumed structure.
+    Levels:
+      0: Root (data has keys "University" and "Faculties")
+      1: Faculty nodes (inside "Faculties")
+      2: Department nodes (inside "Departments")
+      3: Program nodes (inside "Programs")
+      4: Course nodes (inside "Courses")
+      5: People nodes (inside "Lecturers" and "Students") - not used here.
+    """
+    nodes = []
+    # If we are at the target level, return the current node(s)
+    if current_level == target_level:
+        if isinstance(data, list):
+            return data
         else:
-            print(json_data)
-            question, answer = None, None
+            return [data]
+    
+    # Special handling at the root: if the root contains "Faculties", then start there.
+    if current_level == 0 and isinstance(data, dict) and "Faculties" in data:
+        return get_nodes_at_level(data["Faculties"], target_level, current_level + 1)
+    
+    # Mapping from parent level to the key that holds its children
+    children_keys_map = {
+        1: "Departments",      # For Faculty nodes
+        2: "Programs",         # For Department nodes
+        3: "Courses",          # For Program nodes
+        4: ["Lecturers", "Students"]  # For Course nodes
+    }
+    
+    if isinstance(data, dict):
+        if current_level in children_keys_map:
+            key = children_keys_map[current_level]
+            if isinstance(key, str):
+                if key in data:
+                    return get_nodes_at_level(data[key], target_level, current_level + 1)
+            elif isinstance(key, list):
+                for k in key:
+                    if k in data:
+                        nodes.extend(get_nodes_at_level(data[k], target_level, current_level + 1))
+        else:
+            # Fall back: try any list-valued child
+            for value in data.values():
+                if isinstance(value, (dict, list)):
+                    nodes.extend(get_nodes_at_level(value, target_level, current_level + 1))
+    elif isinstance(data, list):
+        for item in data:
+            nodes.extend(get_nodes_at_level(item, target_level, current_level))
+    return nodes
+
+def count_children_in_node(parent_node, parent_json_level):
+    """
+    Count direct children of a parent node, using our fixed hierarchy.
+    Based on parent_json_level:
+      - If parent_json_level == 1 (Faculty node), count items in "Departments".
+      - If parent_json_level == 2 (Department node), count items in "Programs".
+      - If parent_json_level == 3 (Program node), count items in "Courses".
+      - If parent_json_level == 4 (Course node), count items in both "Lecturers" and "Students".
+    """
+    children_keys_map = {
+        1: "Departments",
+        2: "Programs",
+        3: "Courses",
+        4: ["Lecturers", "Students"]
+    }
+    key = children_keys_map.get(parent_json_level, None)
+    if key is None:
+        return 0
+    count = 0
+    if isinstance(key, str):
+        children = parent_node.get(key, [])
+        if isinstance(children, list):
+            count = len(children)
+        elif children:
+            count = 1
+    elif isinstance(key, list):
+        for k in key:
+            children = parent_node.get(k, [])
+            if isinstance(children, list):
+                count += len(children)
+            elif children:
+                count += 1
+    return count
+
+def gen_anwser_child_count(scenario: str, with_answer: bool = True, layer_index: int = None, get_available_layers_func=None):
+    """
+    Generate a child-count question based on the given scenario.
+    
+    The question is in the form:
+       "How many {child_type}s are there in {parent_name}?"
+    
+    Mapping:
+      - The scenario provides "layers" and "names". For example, if
+            layers = [0,1,2,3,4,5] and names = ['Faculty','Department','Program','Course','Lecturer','Student']
+        then user layer index 2 represents "Program" nodes.
+      - Since the JSON root is level 0 ("University"), user layer index i is found at JSON level = i + 1.
+      - The children of a node at JSON level (i+1) come from the appropriate key 
+        ("Departments" for Faculty, "Programs" for Department, "Courses" for Program, etc.)
+    """
+    try:
+        # Load the JSON file
+        file_path = os.path.join(
+            os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__)))),
+            "dataset", "JSON", "dataset",
+            f"{scenario}.json"
+        )
+        with open(file_path, 'r') as file:
+            data = json.load(file)
+        
+        # Get the scenario configuration (layers and names)
+        if get_available_layers_func is None:
+            logging.error("get_available_layers_func not provided")
+            return None, None
+        scenario_info = get_available_layers_func(scenario)
+        if not scenario_info:
+            logging.error(f"No layer information found for scenario: {scenario}")
+            return None, None
+        
+        available_layers = scenario_info["layers"]     # e.g. [0,1,2,3,4,5]
+        layer_names = scenario_info["names"]             # e.g. ['Faculty','Department','Program','Course','Lecturer','Student']
+        
+        # Validate layer_index: it must be less than the last layer because we want to count children
+        if layer_index is None:
+            valid_layers = [l for l in available_layers if l < len(available_layers) - 1]
+            if not valid_layers:
+                logging.error("No valid layers available for child counting")
+                return None, None
+            layer_index = random.choice(valid_layers)
+        elif layer_index >= len(available_layers) - 1:
+            logging.error("Provided layer_index is the last layer; cannot count children")
+            return None, None
+        
+        # Convert user layer index to JSON tree level.
+        # A user layer index of i corresponds to JSON level = i + 1.
+        parent_json_level = layer_index + 1
+        child_user_index = layer_index + 1  # Child type comes from this user index (child type = layer_names[layer_index+1])
+        
+        # Retrieve all parent nodes at JSON level (parent_json_level)
+        parent_nodes = get_nodes_at_level(data, parent_json_level)
+        if not parent_nodes:
+            logging.error(f"No nodes found at JSON level {parent_json_level} for {scenario}")
+            return None, None
+        
+        # Pick a random parent node
+        parent_node = random.choice(parent_nodes)
+        
+        # Retrieve the parent's name.
+        # Mapping of parent's JSON level to its name key:
+        name_key_map = {
+            1: "Faculty Name",
+            2: "Department Name",
+            3: "Program Name",
+            4: "Course Name"
+        }
+        parent_name = None
+        if parent_json_level in name_key_map:
+            parent_name = parent_node.get(name_key_map[parent_json_level])
+        if not parent_name:
+            # Try fallback keys
+            for key in ["Name", "Faculty Name", "Department Name", "Program Name", "Course Name"]:
+                if key in parent_node:
+                    parent_name = parent_node[key]
+                    break
+        if not parent_name:
+            logging.error(f"Could not find name for node at JSON level {parent_json_level}")
+            return None, None
+        
+        # Count children of the selected parent node using our mapping.
+        child_count = count_children_in_node(parent_node, parent_json_level)
+        
+        # Determine the child type from the scenario configuration.
+        child_type = layer_names[child_user_index]  # For example, if layer_index==2 then child_type = layer_names[3] == "Course"
+        question = f"How many {child_type}s are there in {parent_name}?"
+        answer = str(child_count) if with_answer else None
         
         return question, answer
         
-    return gen_question(scenario, layer_index)
+    except Exception as e:
+        logging.error(f"Error in gen_anwser_child_count: {str(e)}")
+        return None, None
 
 # Execute the function
 if __name__ == "__main__":
@@ -219,7 +449,7 @@ if __name__ == "__main__":
     #         q_file.write(question + "\n")
     #         q_file.write(str(answer) + "\n")
     #question, answer = gen_anwser_child_count(scenario="university", layer_index=5, with_answer=True)
-    question, answer =  gen_anwser_child_count(scenario="university_structure_medium_01", with_answer=True, layer_index=2)
+    question, answer =  gen_anwser_child_count(scenario="university_structure_medium_1", with_answer=True, layer_index=2)
     print(question, answer)
     """
     Available layers:

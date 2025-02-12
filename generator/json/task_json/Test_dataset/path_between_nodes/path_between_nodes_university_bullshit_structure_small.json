@@ -1,0 +1,54 @@
+[
+    {
+        "question": "If someone wants to go from the program 'SSyPQcsG' to the department 'Wk2SV8oJ', what path should they take?",
+        "answer": "SSyPQcsG \u2192 CFLmbmCC \u2192 BFWN6dPo \u2192 Wk2SV8oJ"
+    },
+    {
+        "question": "If someone wants to go from the program 'qQ2YAsqr' to the faculty 'BFWN6dPo', what path should they take?",
+        "answer": "qQ2YAsqr \u2192 CFLmbmCC \u2192 BFWN6dPo"
+    },
+    {
+        "question": "If someone wants to go from the program 'pz8dGiR8' to the department 'CFLmbmCC', what path should they take?",
+        "answer": "pz8dGiR8 \u2192 Wk2SV8oJ \u2192 BFWN6dPo \u2192 CFLmbmCC"
+    },
+    {
+        "question": "If someone wants to go from the faculty 'BFWN6dPo' to the program 'SSyPQcsG', what path should they take?",
+        "answer": "BFWN6dPo \u2192 CFLmbmCC \u2192 SSyPQcsG"
+    },
+    {
+        "question": "If someone wants to go from the department 'Wk2SV8oJ' to the department 'CFLmbmCC', what path should they take?",
+        "answer": "Wk2SV8oJ \u2192 BFWN6dPo \u2192 CFLmbmCC"
+    },
+    {
+        "question": "If someone wants to go from the faculty 'BFWN6dPo' to the program 'qQ2YAsqr', what path should they take?",
+        "answer": "BFWN6dPo \u2192 CFLmbmCC \u2192 qQ2YAsqr"
+    },
+    {
+        "question": "If someone wants to go from the program 'qQ2YAsqr' to the program 'pz8dGiR8', what path should they take?",
+        "answer": "qQ2YAsqr \u2192 CFLmbmCC \u2192 BFWN6dPo \u2192 Wk2SV8oJ \u2192 pz8dGiR8"
+    },
+    {
+        "question": "If someone wants to go from the program 'SSyPQcsG' to the faculty 'BFWN6dPo', what path should they take?",
+        "answer": "SSyPQcsG \u2192 CFLmbmCC \u2192 BFWN6dPo"
+    },
+    {
+        "question": "If someone wants to go from the program 'SSyPQcsG' to the program 'qQ2YAsqr', what path should they take?",
+        "answer": "SSyPQcsG \u2192 CFLmbmCC \u2192 qQ2YAsqr"
+    },
+    {
+        "question": "If someone wants to go from the program 'SSyPQcsG' to the program 'pz8dGiR8', what path should they take?",
+        "answer": "SSyPQcsG \u2192 CFLmbmCC \u2192 BFWN6dPo \u2192 Wk2SV8oJ \u2192 pz8dGiR8"
+    },
+    {
+        "question": "If someone wants to go from the program 'qQ2YAsqr' to the department 'Wk2SV8oJ', what path should they take?",
+        "answer": "qQ2YAsqr \u2192 CFLmbmCC \u2192 BFWN6dPo \u2192 Wk2SV8oJ"
+    },
+    {
+        "question": "If someone wants to go from the program 'pz8dGiR8' to the program 'SSyPQcsG', what path should they take?",
+        "answer": "pz8dGiR8 \u2192 Wk2SV8oJ \u2192 BFWN6dPo \u2192 CFLmbmCC \u2192 SSyPQcsG"
+    },
+    {
+        "question": "If someone wants to go from the department 'CFLmbmCC' to the program 'pz8dGiR8', what path should they take?",
+        "answer": "CFLmbmCC \u2192 BFWN6dPo \u2192 Wk2SV8oJ \u2192 pz8dGiR8"
+    }
+]

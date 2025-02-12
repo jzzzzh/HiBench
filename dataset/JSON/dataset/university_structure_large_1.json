@@ -1,0 +1,73 @@
+{
+    "University": "City University",
+    "Faculties": [
+        {
+            "Faculty Name": "Faculty of Engineering",
+            "Departments": [
+                {
+                    "Department Name": "Department of Electrical Engineering",
+                    "Programs": [
+                        {
+                            "Program Name": "Bachelor of Engineering",
+                            "Courses": [
+                                {
+                                    "Course Name": "Financial Accounting",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Lecturer Elijah Brown",
+                                            "Title": "Lecturer"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "Students": [
+                                {
+                                    "Name": "Mila Reyes",
+                                    "Student ID": "50165258"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Department Name": "Department of Mechanical Engineering",
+                    "Programs": [
+                        {
+                            "Program Name": "Doctor of Philosophy",
+                            "Courses": [
+                                {
+                                    "Course Name": "Biochemistry",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Associate Professor Jordan Baker",
+                                            "Title": "Associate Professor"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Course Name": "World History",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Lecturer Sebastian Rivera",
+                                            "Title": "Lecturer"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "Students": [
+                                {
+                                    "Name": "Iris Ortiz",
+                                    "Student ID": "87593586"
+                                },
+                                {
+                                    "Name": "Elena Carter",
+                                    "Student ID": "10679883"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

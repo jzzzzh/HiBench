@@ -7,6 +7,7 @@
 import json
 import random
 import os
+import logging
 
 
 def read_json_file(file_path):
@@ -170,38 +171,90 @@ def select_random_node_by_layer_index(json_data, layer_index=None):
     return selected_node, info['parent_type'], info['sibling_count'], info['parent_name'], info_layer,number_of_nodes
 
 
-def gen_anwser_level_count(scenario: str, layer_index: int = None, with_answer: bool = True):
-    """
-    gen_anwser_level_count generates questions about counting nodes at a specific level
-    :param scenario: the scenario of the question
-    :param layer_index: the index of the layer (depth start with 0)
-    :return: question, answer
-    """
-    def gen_question(scenario, layer_index):
-
-        file_path = os.path.join(
-        os.path.dirname(__file__), "..", "dataset", f"{scenario}.json")
-        json_data = read_json_file(file_path)
-
-        if isinstance(json_data, str) and not json_data.startswith("Error"):
-            # Specify the layer index (the function will show available layers)
-            _layer_index = layer_index  # Change this to select different layers
-            result = select_random_node_by_layer_index(json_data, _layer_index)
-#How many departments does a university has?
-        if isinstance(result, tuple):
-            selected_node, parent_type, sibling_count, parent_name, layer_name,number_of_nodes = result
-            question = f"How many {parent_type} does {scenario} have?"
-            if with_answer:
-                answer = number_of_nodes
+def get_nodes_at_level(data, target_level, current_level=0):
+    """Get all nodes at a specific level"""
+    nodes = []
+    
+    if current_level == target_level:
+        return [data]
+        
+    if isinstance(data, dict):
+        # Map level numbers to their container keys
+        level_keys = {
+            0: 'University',
+            1: 'Faculties',
+            2: 'Departments',
+            3: 'Programs',
+            4: 'Courses',
+            5: ['Lecturers', 'Students']
+        }
+        
+        # Get the keys for the current level
+        current_keys = level_keys.get(current_level)
+        if isinstance(current_keys, list):
+            for key in current_keys:
+                if key in data:
+                    for item in data[key]:
+                        nodes.extend(get_nodes_at_level(item, target_level, current_level + 1))
+        elif current_keys in data:
+            if isinstance(data[current_keys], list):
+                for item in data[current_keys]:
+                    nodes.extend(get_nodes_at_level(item, target_level, current_level + 1))
             else:
-                answer = None
-        else:
-            print(json_data)
-            question, answer = None, None
+                nodes.extend(get_nodes_at_level(data[current_keys], target_level, current_level + 1))
+    
+    return nodes
+
+def gen_anwser_level_count(scenario: str, with_answer: bool = True, layer_index: int = None, get_available_layers_func=None):
+    """Generate question about number of nodes at a specific level"""
+    try:
+        # Read the JSON file
+        file_path = os.path.join(
+            os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__)))),
+            "dataset",
+            "JSON",
+            "dataset",
+            f"{scenario}.json"
+        )
+        
+        with open(file_path, 'r') as file:
+            data = json.load(file)
+            
+        # Get available layers for this scenario
+        if get_available_layers_func is None:
+            logging.error("get_available_layers_func not provided")
+            return None, None
+            
+        scenario_info = get_available_layers_func(scenario)
+        if not scenario_info:
+            logging.error(f"No layer information found for scenario: {scenario}")
+            return None, None
+            
+        available_layers = scenario_info["layers"]
+        layer_names = scenario_info["names"]
+        
+        # If no layer_index provided, randomly select one
+        if layer_index is None:
+            layer_index = random.choice(available_layers)
+            
+        # Get all nodes at the selected level
+        nodes = get_nodes_at_level(data, layer_index)
+        if not nodes:
+            logging.error(f"No nodes found at level {layer_index} for {scenario}")
+            return None, None
+            
+        # Count nodes at this level
+        node_count = len(nodes)
+        
+        # Generate question
+        question = f"How many {layer_names[layer_index]} are there in total in the {data['University']}?"
+        answer = str(node_count) if with_answer else None
         
         return question, answer
         
-    return gen_question(scenario, layer_index)
+    except Exception as e:
+        logging.error(f"Error in gen_anwser_level_count: {str(e)}")
+        return None, None
 
 
 # Execute the function
