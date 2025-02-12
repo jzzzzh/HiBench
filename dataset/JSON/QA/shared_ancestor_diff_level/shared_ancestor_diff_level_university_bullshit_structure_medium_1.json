@@ -1,22 +1,14 @@
 [
     {
-        "question": "What is the common ancestor of eeFex1L5 (Department) and m7GU0Kal (Program)?",
-        "answer": "XCgkWsrU"
-    },
-    {
-        "question": "What is the common ancestor of kd8iLssX (Name) and eeFex1L5 (Department)?",
-        "answer": "XCgkWsrU"
-    },
-    {
-        "question": "What is the common ancestor of HFQcs6vc (Department) and gPM94KHF (Name)?",
-        "answer": "XCgkWsrU"
-    },
-    {
-        "question": "What is the common ancestor of K1xIPGN8 (Name) and 71QV2RZN (Program)?",
-        "answer": "XCgkWsrU"
-    },
-    {
         "question": "What is the common ancestor of eeFex1L5 (Department) and 4TupuOZp (Course)?",
+        "answer": "XCgkWsrU"
+    },
+    {
+        "question": "What is the common ancestor of HFQcs6vc (Department) and 71QV2RZN (Program)?",
+        "answer": "XCgkWsrU"
+    },
+    {
+        "question": "What is the common ancestor of 71QV2RZN (Program) and kd8iLssX (Name)?",
         "answer": "XCgkWsrU"
     },
     {
@@ -24,15 +16,19 @@
         "answer": "XCgkWsrU"
     },
     {
-        "question": "What is the common ancestor of 4TupuOZp (Course) and 71QV2RZN (Program)?",
+        "question": "What is the common ancestor of 4TupuOZp (Course) and eeFex1L5 (Department)?",
         "answer": "XCgkWsrU"
     },
     {
-        "question": "What is the common ancestor of 1EsbG2Hy (Course) and eeFex1L5 (Department)?",
+        "question": "What is the common ancestor of gPM94KHF (Name) and m7GU0Kal (Program)?",
         "answer": "XCgkWsrU"
     },
     {
-        "question": "What is the common ancestor of m7GU0Kal (Program) and eeFex1L5 (Department)?",
+        "question": "What is the common ancestor of kd8iLssX (Name) and eeFex1L5 (Department)?",
+        "answer": "XCgkWsrU"
+    },
+    {
+        "question": "What is the common ancestor of 71QV2RZN (Program) and HFQcs6vc (Department)?",
         "answer": "XCgkWsrU"
     }
 ]

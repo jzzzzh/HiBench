@@ -1,6 +1,18 @@
 [
     {
-        "question": "List all Faculty in the City University.",
-        "answer": "City University"
+        "question": "List all Program in the City University.",
+        "answer": "Department of Electrical Engineering, Department of Mechanical Engineering"
+    },
+    {
+        "question": "List all Lecturer in the City University.",
+        "answer": "Financial Accounting, Biochemistry, World History"
+    },
+    {
+        "question": "List all Course in the City University.",
+        "answer": "Bachelor of Engineering, Doctor of Philosophy"
+    },
+    {
+        "question": "List all Student in the City University.",
+        "answer": "Lecturer Elijah Brown, Associate Professor Jordan Baker, Lecturer Sebastian Rivera"
     }
 ]

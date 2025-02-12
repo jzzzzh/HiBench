@@ -1,38 +1,10 @@
 [
     {
-        "question": "What is the common ancestor of Bachelor of Engineering (Program) and Iris Ortiz (Name)?",
+        "question": "What is the common ancestor of Mila Reyes (Name) and Department of Mechanical Engineering (Department)?",
         "answer": "Faculty of Engineering"
     },
     {
-        "question": "What is the common ancestor of Doctor of Philosophy (Program) and Department of Electrical Engineering (Department)?",
-        "answer": "Faculty of Engineering"
-    },
-    {
-        "question": "What is the common ancestor of Financial Accounting (Course) and Department of Mechanical Engineering (Department)?",
-        "answer": "Faculty of Engineering"
-    },
-    {
-        "question": "What is the common ancestor of Department of Mechanical Engineering (Department) and Bachelor of Engineering (Program)?",
-        "answer": "Faculty of Engineering"
-    },
-    {
-        "question": "What is the common ancestor of World History (Course) and Department of Electrical Engineering (Department)?",
-        "answer": "Faculty of Engineering"
-    },
-    {
-        "question": "What is the common ancestor of Doctor of Philosophy (Program) and Financial Accounting (Course)?",
-        "answer": "Faculty of Engineering"
-    },
-    {
-        "question": "What is the common ancestor of Mila Reyes (Name) and Doctor of Philosophy (Program)?",
-        "answer": "Faculty of Engineering"
-    },
-    {
-        "question": "What is the common ancestor of Department of Electrical Engineering (Department) and Iris Ortiz (Name)?",
-        "answer": "Faculty of Engineering"
-    },
-    {
-        "question": "What is the common ancestor of Bachelor of Engineering (Program) and Department of Mechanical Engineering (Department)?",
+        "question": "What is the common ancestor of Bachelor of Engineering (Program) and World History (Course)?",
         "answer": "Faculty of Engineering"
     },
     {
@@ -40,11 +12,19 @@
         "answer": "Faculty of Engineering"
     },
     {
-        "question": "What is the common ancestor of Department of Electrical Engineering (Department) and Biochemistry (Course)?",
+        "question": "What is the common ancestor of Doctor of Philosophy (Program) and Mila Reyes (Name)?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Department of Electrical Engineering (Department) and Elena Carter (Name)?",
         "answer": "Faculty of Engineering"
     },
     {
         "question": "What is the common ancestor of Iris Ortiz (Name) and Department of Electrical Engineering (Department)?",
+        "answer": "Faculty of Engineering"
+    },
+    {
+        "question": "What is the common ancestor of Mila Reyes (Name) and Doctor of Philosophy (Program)?",
         "answer": "Faculty of Engineering"
     }
 ]

@@ -168,9 +168,6 @@ def generate_test_data_set(scenario: str, with_answer: bool = True, number_of_qu
     total_operations = len(valid_question_types) * number_of_questions
     progress_bar = tqdm(total=total_operations, desc=f"Generating dataset for {scenario}")
 
-    MAX_DUPLICATE_TRIES = 10  # Maximum attempts to generate a non-duplicate question
-    MAX_NULL_TRIES = 10      # Maximum attempts to generate a non-null question
-
     for question_type in valid_question_types:
         question_type_name = get_question_type_name(question_type)
         logging.info(f"Generating {question_type_name} questions for {scenario}")
@@ -178,52 +175,42 @@ def generate_test_data_set(scenario: str, with_answer: bool = True, number_of_qu
         questions_answers = []
         duplicate_count = 0
         null_count = 0
+        attempts = 0
+        max_attempts = number_of_questions * 3  # Allow more attempts to get required questions
 
-        for _ in range(number_of_questions):
+        while len(questions_answers) < number_of_questions and attempts < max_attempts:
+            attempts += 1
+            
             # Try to generate a valid, non-duplicate question
-            for attempt in range(MAX_DUPLICATE_TRIES):
-                # Try to generate a non-null question
-                for null_attempt in range(MAX_NULL_TRIES):
-                    question, answer = generate_question_answer(scenario, question_type, with_answer)
-                    if question is not None and answer is not None:
-                        break
-                    null_count += 1
-                    logging.debug(f"Null attempt {null_attempt} for {question_type_name}")
+            question, answer = generate_question_answer(scenario, question_type, with_answer)
+            
+            if question is None or answer is None:
+                null_count += 1
+                logging.debug(f"Null attempt {null_count} for {question_type_name}")
+                continue
                 
-                if question is None or answer is None:
-                    logging.error(f"Failed to generate valid question for type {question_type_name}")
-                    break
-                
-                if not is_duplicate_question(questions_answers, question):
-                    questions_answers.append({"question": question, "answer": answer})
-                    break
+            if not is_duplicate_question(questions_answers, question):
+                questions_answers.append({"question": question, "answer": answer})
+                progress_bar.update(1)
+            else:
                 duplicate_count += 1
                 
-            progress_bar.update(1)
-        
         # Log statistics for this question type
         logging.info(f"Generated {len(questions_answers)} questions for {question_type_name}")
         logging.info(f"Duplicate attempts: {duplicate_count}")
         logging.info(f"Null attempts: {null_count}")
+        logging.info(f"Total attempts: {attempts}")
 
-        # Create question type directory using descriptive name
+        # Create question type directory and save results
         question_type_path = os.path.join(base_path, question_type_name)
         os.makedirs(question_type_path, exist_ok=True)
-        logging.debug(f"Created question type directory: {question_type_path}")
-
-        # Create file path with descriptive name
-        file_name = os.path.join(question_type_path, f"{question_type_name}_{scenario}.json")
-        logging.debug(f"Will save to file: {file_name}")
         
-        # Write all questions to a single file, even if incomplete
-        if questions_answers:  # Only write if we have some questions
-            # Ensure directory exists
-            os.makedirs(os.path.dirname(file_name), exist_ok=True)
-            
-            logging.debug(f"Writing {len(questions_answers)} questions to {file_name}")
+        file_name = os.path.join(question_type_path, f"{question_type_name}_{scenario}.json")
+        
+        if questions_answers:
             with open(file_name, "w") as file:
                 json.dump(questions_answers, file, indent=4)
-            logging.debug(f"Successfully wrote file: {file_name}")
+            logging.info(f"Successfully wrote {len(questions_answers)} questions to {file_name}")
         else:
             logging.warning(f"No questions generated for type {question_type}, scenario {scenario}")
 

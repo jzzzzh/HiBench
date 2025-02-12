@@ -1,54 +1,38 @@
 [
     {
-        "question": "What is the path from XCgkWsrU down to HFQcs6vc?",
-        "answer": "XCgkWsrU -> XCgkWsrU -> HFQcs6vc"
-    },
-    {
-        "question": "What is the path from eeFex1L5 down to 50zn6Nh4?",
-        "answer": "eeFex1L5 -> eeFex1L5 -> 71QV2RZN -> 50zn6Nh4"
-    },
-    {
-        "question": "What is the path from XCgkWsrU down to gPM94KHF?",
-        "answer": "XCgkWsrU -> XCgkWsrU -> eeFex1L5 -> 71QV2RZN -> gPM94KHF"
-    },
-    {
-        "question": "What is the path from XCgkWsrU down to 1EsbG2Hy?",
-        "answer": "XCgkWsrU -> XCgkWsrU -> HFQcs6vc -> m7GU0Kal -> 1EsbG2Hy"
-    },
-    {
-        "question": "What is the path from XCgkWsrU down to K1xIPGN8?",
-        "answer": "XCgkWsrU -> XCgkWsrU -> HFQcs6vc -> m7GU0Kal -> K1xIPGN8"
-    },
-    {
-        "question": "What is the path from XCgkWsrU down to m7GU0Kal?",
-        "answer": "XCgkWsrU -> XCgkWsrU -> HFQcs6vc -> m7GU0Kal"
+        "question": "What is the path from XCgkWsrU down to 71QV2RZN?",
+        "answer": "XCgkWsrU -> XCgkWsrU -> eeFex1L5 -> 71QV2RZN"
     },
     {
         "question": "What is the path from XCgkWsrU down to eeFex1L5?",
         "answer": "XCgkWsrU -> XCgkWsrU -> eeFex1L5"
     },
     {
-        "question": "What is the path from XCgkWsrU down to 4TupuOZp?",
-        "answer": "XCgkWsrU -> XCgkWsrU -> HFQcs6vc -> m7GU0Kal -> 4TupuOZp"
+        "question": "What is the path from m7GU0Kal down to K1xIPGN8?",
+        "answer": "m7GU0Kal -> m7GU0Kal -> K1xIPGN8"
     },
     {
-        "question": "What is the path from XCgkWsrU down to kd8iLssX?",
-        "answer": "XCgkWsrU -> XCgkWsrU -> HFQcs6vc -> m7GU0Kal -> kd8iLssX"
+        "question": "What is the path from eeFex1L5 down to 71QV2RZN?",
+        "answer": "eeFex1L5 -> eeFex1L5 -> 71QV2RZN"
     },
     {
-        "question": "What is the path from m7GU0Kal down to 1EsbG2Hy?",
-        "answer": "m7GU0Kal -> m7GU0Kal -> 1EsbG2Hy"
+        "question": "What is the path from eeFex1L5 down to gPM94KHF?",
+        "answer": "eeFex1L5 -> eeFex1L5 -> 71QV2RZN -> gPM94KHF"
     },
     {
-        "question": "What is the path from HFQcs6vc down to m7GU0Kal?",
-        "answer": "HFQcs6vc -> HFQcs6vc -> m7GU0Kal"
+        "question": "What is the path from XCgkWsrU down to HFQcs6vc?",
+        "answer": "XCgkWsrU -> XCgkWsrU -> HFQcs6vc"
+    },
+    {
+        "question": "What is the path from m7GU0Kal down to kd8iLssX?",
+        "answer": "m7GU0Kal -> m7GU0Kal -> kd8iLssX"
     },
     {
         "question": "What is the path from XCgkWsrU down to 50zn6Nh4?",
         "answer": "XCgkWsrU -> XCgkWsrU -> eeFex1L5 -> 71QV2RZN -> 50zn6Nh4"
     },
     {
-        "question": "What is the path from m7GU0Kal down to K1xIPGN8?",
-        "answer": "m7GU0Kal -> m7GU0Kal -> K1xIPGN8"
+        "question": "What is the path from HFQcs6vc down to m7GU0Kal?",
+        "answer": "HFQcs6vc -> HFQcs6vc -> m7GU0Kal"
     }
 ]

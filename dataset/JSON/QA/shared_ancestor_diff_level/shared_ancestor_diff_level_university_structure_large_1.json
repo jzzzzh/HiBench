@@ -1,42 +1,10 @@
 [
     {
-        "question": "What is the common ancestor of Bachelor of Engineering (Program) and Elena Carter (Name)?",
-        "answer": "Faculty of Engineering"
-    },
-    {
-        "question": "What is the common ancestor of Financial Accounting (Course) and Department of Mechanical Engineering (Department)?",
-        "answer": "Faculty of Engineering"
-    },
-    {
-        "question": "What is the common ancestor of Iris Ortiz (Name) and Department of Electrical Engineering (Department)?",
-        "answer": "Faculty of Engineering"
-    },
-    {
-        "question": "What is the common ancestor of Bachelor of Engineering (Program) and Department of Mechanical Engineering (Department)?",
-        "answer": "Faculty of Engineering"
-    },
-    {
-        "question": "What is the common ancestor of Bachelor of Engineering (Program) and Biochemistry (Course)?",
-        "answer": "Faculty of Engineering"
-    },
-    {
-        "question": "What is the common ancestor of Iris Ortiz (Name) and Bachelor of Engineering (Program)?",
-        "answer": "Faculty of Engineering"
-    },
-    {
-        "question": "What is the common ancestor of Doctor of Philosophy (Program) and Mila Reyes (Name)?",
-        "answer": "Faculty of Engineering"
-    },
-    {
-        "question": "What is the common ancestor of Department of Mechanical Engineering (Department) and Bachelor of Engineering (Program)?",
-        "answer": "Faculty of Engineering"
-    },
-    {
         "question": "What is the common ancestor of Department of Mechanical Engineering (Department) and Mila Reyes (Name)?",
         "answer": "Faculty of Engineering"
     },
     {
-        "question": "What is the common ancestor of Department of Electrical Engineering (Department) and Biochemistry (Course)?",
+        "question": "What is the common ancestor of World History (Course) and Bachelor of Engineering (Program)?",
         "answer": "Faculty of Engineering"
     }
 ]
