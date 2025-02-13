@@ -218,7 +218,8 @@ def main():
     # model_list = ["meta-llama/Meta-Llama-3.1-8B-Instruct"] # ["Qwen/Qwen2.5-0.5B-Instruct"] #, "meta-llama/Meta-Llama-3.1-8B-Instruct"]
     # model_list = ["meta-llama/Meta-Llama-3.1-8B-Instruct", "meta-llama/Llama-3.2-1B-Instruct","meta-llama/Llama-3.2-3B-Instruct", "Qwen/Qwen2.5-0.5B-Instruct", "Qwen/Qwen2.5-1.5B-Instruct", "Qwen/Qwen2.5-3B-Instruct", "Qwen/Qwen2.5-7B-Instruct"]
     # model_list = ["Qwen/Qwen2.5-7B-Instruct"]# , "Qwen/Qwen2.5-0.5B-Instruct", "Qwen/Qwen2.5-1.5B-Instruct", "Qwen/Qwen2.5-3B-Instruct", "Qwen/Qwen2.5-7B-Instruct"]
-    model_list = ["meta-llama/Meta-Llama-3.1-8B-Instruct", "meta-llama/Llama-3.2-1B-Instruct","meta-llama/Llama-3.2-3B-Instruct", "THUDM/glm-4-9b-chat", "01-ai/Yi-1.5-9B-Chat"]
+    # model_list = ["meta-llama/Meta-Llama-3.1-8B-Instruct", "meta-llama/Llama-3.2-1B-Instruct","meta-llama/Llama-3.2-3B-Instruct"]
+    model_list = ["01-ai/Yi-1.5-9B-Chat"]
     # model_list = ['internlm/internlm2_5-7b-chat'] # 'microsoft/Phi-3.5-mini-instruct'] # ["baichuan-inc/Baichuan-7B"]
     DUPLICATE_CHECK = True
     for model in model_list:
