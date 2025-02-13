@@ -263,8 +263,7 @@ def gen_answer_node_relationship(scenario: str, with_answer: bool = True, get_av
                     common_ancestor_name = relationship['common_ancestor'][name_key]
                     break
                     
-            answer = (f"{node1_name} ({relationship['node1_type']}) and {node2_name} "
-                     f"({relationship['node2_type']}) share a common ancestor: {common_ancestor_name}")
+            answer = (f"({common_ancestor_name}")
         else:
             answer = None
             
