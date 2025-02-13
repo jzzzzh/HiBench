@@ -97,7 +97,9 @@ class BasicEvaluator(object):
         source = self._refine_answer(source)
         if source is None:
             return False
-        return source.strip() == target.strip()
+        source = re.sub(r"\D", "", source)
+        target = re.sub(r"\D", "", target)
+        return source == target
         
     def _extract_answer(self, string: str) -> str:
         string = string.lower()
