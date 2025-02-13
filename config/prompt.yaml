@@ -193,16 +193,6 @@ JSON:
           Answer2: "{\"answer\": 3}"
           Question3: "Given a JSON object {'Name': Peter, 'Animals':['cat':{'a', 'b'}, 'dog':{'c', 'd', 'g'}, 'fish':{'e', 'f'}, 'bird':{'h'}]}.How many birds does Peter have?"
           Answer3: "{\"answer\": 1}"
-    node_relationship:
-      PromptTemplate: "Given a JSON object <JSON>\n <QUESTION>."
-      OutputFormatTemplate: "{\"answer\": \"True\"}"
-      Example: 
-          Question1: "Given a JSON object {'Name': Peter, 'Animals':['cat':{'a', 'b'}, 'dog':{'c', 'd'}]}.Does cat belongs to Peter?"
-          Answer1: "{\"answer\": true}"
-          Question2: "Given a JSON object {'Name': Peter, 'Animals':['cat':{'a', 'b'}, 'dog':{'c', 'd', 'g'}, 'fish':{'e', 'f'}]}.Does Peter belongs to bird?"
-          Answer2: "{\"answer\": false}"
-          Question3: "Given a JSON object {'Name': Peter, 'Animals':['cat':{'a', 'b'}, 'dog':{'c', 'd', 'g'}, 'fish':{'e', 'f'}, 'bird':{'h'}]}.Does h belongs to bird?"
-          Answer3: "{\"answer\": true}"
     node_attribute:
       PromptTemplate: "Given a JSON object <JSON>\n <QUESTION>."
       OutputFormatTemplate: "{\"answer\": \"XXX\"}"

@@ -47,8 +47,7 @@ _Reasoning about textual context and organizing paper sections._
 ## **JSON**
 - **child_count** → **C** (_Structural Analysis_)  
 - **node_depth** → **B** (_Relationship Understanding_)  
-- **level_count** → **C** (_Structural Analysis_)  
-- **node_relationship** → **B** (_Relationship Understanding_)  
+- **level_count** → **C** (_Structural Analysis_) 
 - **node_attribute** → **C** (_Structural Analysis_)  
 - **level_nodes** → **C** (_Structural Analysis_)  
 - **path_down_to_up** → **B** (_Relationship Understanding_)  
