@@ -7,7 +7,6 @@ nohup.out
 *output*.*
 *temp*.*
 GLM
-
+json.txt
 dataset/JSON/QA/.DS_Store
-
 dataset_builder_debug.log
