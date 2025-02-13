@@ -869,10 +869,16 @@ def test_json_dataloader():
     
     # Test different dataset sizes
     domains = [
-        'university_structure_large_01',
-        'university_structure_medium_01',
-        'university_bullshit_structure_large_01',
-        'university_bullshit_structure_medium_01'
+        'university_structure_large_1',
+        'university_structure_medium_1',
+        'university_bullshit_structure_large_1',
+        'university_bullshit_structure_medium_1',
+        'university_structure_large_2',
+        'university_structure_medium_2',
+        'university_bullshit_structure_large_2',
+        'university_bullshit_structure_medium_2',
+        'university_structure_small',
+        'university_bullshit_structure_small'
     ]
     
     # Test different example types

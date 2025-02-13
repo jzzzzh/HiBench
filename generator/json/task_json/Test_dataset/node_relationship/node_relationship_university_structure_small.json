@@ -1,5 +1,9 @@
 [
     {
+<<<<<<< HEAD
+        "question": "What is the relationship between Bachelor of Engineering and Department of Chemical Engineering?",
+        "answer": "Bachelor of Engineering (program) and Department of Chemical Engineering (department) share a common ancestor: Faculty of Engineering"
+=======
         "question": "What is the relationship between Department of Chemical Engineering and Bachelor of Science?",
         "answer": "Department of Chemical Engineering (department) and Bachelor of Science (program) share a common ancestor: Department of Chemical Engineering"
     },
@@ -10,6 +14,7 @@
     {
         "question": "What is the relationship between Faculty of Engineering and Department of Chemical Engineering?",
         "answer": "Faculty of Engineering (faculty) and Department of Chemical Engineering (department) share a common ancestor: Faculty of Engineering"
+>>>>>>> origin/main
     },
     {
         "question": "What is the relationship between Department of Chemical Engineering and Bachelor of Engineering?",
@@ -20,6 +25,46 @@
         "answer": "Bachelor of Engineering (program) and Department of Electrical Engineering (department) share a common ancestor: Department of Electrical Engineering"
     },
     {
+<<<<<<< HEAD
+        "question": "What is the relationship between Bachelor of Engineering and Bachelor of Science?",
+        "answer": "Bachelor of Engineering (program) and Bachelor of Science (program) share a common ancestor: Faculty of Engineering"
+    },
+    {
+        "question": "What is the relationship between Department of Chemical Engineering and Master of Science?",
+        "answer": "Department of Chemical Engineering (department) and Master of Science (program) share a common ancestor: Department of Chemical Engineering"
+    },
+    {
+        "question": "What is the relationship between Faculty of Engineering and Bachelor of Engineering?",
+        "answer": "Faculty of Engineering (faculty) and Bachelor of Engineering (program) share a common ancestor: Faculty of Engineering"
+    },
+    {
+        "question": "What is the relationship between Department of Electrical Engineering and Department of Chemical Engineering?",
+        "answer": "Department of Electrical Engineering (department) and Department of Chemical Engineering (department) share a common ancestor: Faculty of Engineering"
+    },
+    {
+        "question": "What is the relationship between Bachelor of Science and Bachelor of Engineering?",
+        "answer": "Bachelor of Science (program) and Bachelor of Engineering (program) share a common ancestor: Faculty of Engineering"
+    },
+    {
+        "question": "What is the relationship between Bachelor of Engineering and Faculty of Engineering?",
+        "answer": "Bachelor of Engineering (program) and Faculty of Engineering (faculty) share a common ancestor: Faculty of Engineering"
+    },
+    {
+        "question": "What is the relationship between Bachelor of Science and Department of Chemical Engineering?",
+        "answer": "Bachelor of Science (program) and Department of Chemical Engineering (department) share a common ancestor: Department of Chemical Engineering"
+    },
+    {
+        "question": "What is the relationship between Department of Electrical Engineering and Master of Science?",
+        "answer": "Department of Electrical Engineering (department) and Master of Science (program) share a common ancestor: Faculty of Engineering"
+    },
+    {
+        "question": "What is the relationship between Faculty of Engineering and Department of Chemical Engineering?",
+        "answer": "Faculty of Engineering (faculty) and Department of Chemical Engineering (department) share a common ancestor: Faculty of Engineering"
+    },
+    {
+        "question": "What is the relationship between Bachelor of Science and Master of Science?",
+        "answer": "Bachelor of Science (program) and Master of Science (program) share a common ancestor: Department of Chemical Engineering"
+=======
         "question": "What is the relationship between Department of Electrical Engineering and Faculty of Engineering?",
         "answer": "Department of Electrical Engineering (department) and Faculty of Engineering (faculty) share a common ancestor: Faculty of Engineering"
     },
@@ -50,5 +95,6 @@
     {
         "question": "What is the relationship between Faculty of Engineering and Bachelor of Science?",
         "answer": "Faculty of Engineering (faculty) and Bachelor of Science (program) share a common ancestor: Faculty of Engineering"
+>>>>>>> origin/main
     }
 ]

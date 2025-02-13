@@ -1,5 +1,57 @@
 [
     {
+<<<<<<< HEAD
+        "question": "What is the path from City University down to World History?",
+        "answer": "City University -> Faculty of Engineering -> Department of Mechanical Engineering -> Doctor of Philosophy -> World History"
+    },
+    {
+        "question": "What is the path from Department of Mechanical Engineering down to Lecturer Sebastian Rivera?",
+        "answer": "Department of Mechanical Engineering -> Doctor of Philosophy -> World History -> Lecturer Sebastian Rivera"
+    },
+    {
+        "question": "What is the path from Faculty of Engineering down to Iris Ortiz?",
+        "answer": "Faculty of Engineering -> Department of Mechanical Engineering -> Doctor of Philosophy -> Iris Ortiz"
+    },
+    {
+        "question": "What is the path from City University down to Lecturer Elijah Brown?",
+        "answer": "City University -> Faculty of Engineering -> Department of Electrical Engineering -> Bachelor of Engineering -> Financial Accounting -> Lecturer Elijah Brown"
+    },
+    {
+        "question": "What is the path from Department of Mechanical Engineering down to World History?",
+        "answer": "Department of Mechanical Engineering -> Doctor of Philosophy -> World History"
+    },
+    {
+        "question": "What is the path from Faculty of Engineering down to Mila Reyes?",
+        "answer": "Faculty of Engineering -> Department of Electrical Engineering -> Bachelor of Engineering -> Mila Reyes"
+    },
+    {
+        "question": "What is the path from City University down to Lecturer Sebastian Rivera?",
+        "answer": "City University -> Faculty of Engineering -> Department of Mechanical Engineering -> Doctor of Philosophy -> World History -> Lecturer Sebastian Rivera"
+    },
+    {
+        "question": "What is the path from Doctor of Philosophy down to Elena Carter?",
+        "answer": "Doctor of Philosophy -> Elena Carter"
+    },
+    {
+        "question": "What is the path from City University down to Associate Professor Jordan Baker?",
+        "answer": "City University -> Faculty of Engineering -> Department of Mechanical Engineering -> Doctor of Philosophy -> Biochemistry -> Associate Professor Jordan Baker"
+    },
+    {
+        "question": "What is the path from Department of Electrical Engineering down to Lecturer Elijah Brown?",
+        "answer": "Department of Electrical Engineering -> Bachelor of Engineering -> Financial Accounting -> Lecturer Elijah Brown"
+    },
+    {
+        "question": "What is the path from Faculty of Engineering down to Biochemistry?",
+        "answer": "Faculty of Engineering -> Department of Mechanical Engineering -> Doctor of Philosophy -> Biochemistry"
+    },
+    {
+        "question": "What is the path from Faculty of Engineering down to Financial Accounting?",
+        "answer": "Faculty of Engineering -> Department of Electrical Engineering -> Bachelor of Engineering -> Financial Accounting"
+    },
+    {
+        "question": "What is the path from Bachelor of Engineering down to Lecturer Elijah Brown?",
+        "answer": "Bachelor of Engineering -> Financial Accounting -> Lecturer Elijah Brown"
+=======
         "question": "What is the path from Department of Electrical Engineering down to Bachelor of Engineering?",
         "answer": "Department of Electrical Engineering -> Department of Electrical Engineering -> Bachelor of Engineering"
     },
@@ -38,5 +90,6 @@
     {
         "question": "What is the path from Department of Mechanical Engineering down to Biochemistry?",
         "answer": "Department of Mechanical Engineering -> Department of Mechanical Engineering -> Doctor of Philosophy -> Biochemistry"
+>>>>>>> origin/main
     }
 ]

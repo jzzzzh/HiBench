@@ -30,7 +30,7 @@ Ye Jia†, Jiancheng Tu†
 [![LLM](https://img.shields.io/badge/Model-Yi-006600?logo=)](https://huggingface.co/01-ai) 
 [![LLM](https://img.shields.io/badge/Model-Baichuan-FF9E0F?logo=)](https://github.com/baichuan-inc/Baichuan2/) 
 [![LLM](https://img.shields.io/badge/Model-Mistral-FECC00?logo=)](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.3) 
-
+[![LLM](https://img.shields.io/badge/Model-Deepseek-783BF9?logo=)](https://chat.deepseek.com/) 
 
 </div>
 

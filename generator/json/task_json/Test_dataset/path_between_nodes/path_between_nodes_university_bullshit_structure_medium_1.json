@@ -1,5 +1,45 @@
 [
     {
+<<<<<<< HEAD
+        "question": "If someone wants to go from the name 'K1xIPGN8' to the program '71QV2RZN', what path should they take?",
+        "answer": "K1xIPGN8 \u2192 m7GU0Kal \u2192 HFQcs6vc \u2192 XCgkWsrU \u2192 eeFex1L5 \u2192 71QV2RZN"
+    },
+    {
+        "question": "If someone wants to go from the name 'gPM94KHF' to the name 'ujkVtW7z', what path should they take?",
+        "answer": "gPM94KHF \u2192 71QV2RZN \u2192 eeFex1L5 \u2192 XCgkWsrU \u2192 HFQcs6vc \u2192 m7GU0Kal \u2192 4TupuOZp \u2192 ujkVtW7z"
+    },
+    {
+        "question": "If someone wants to go from the name 'gPM94KHF' to the course '50zn6Nh4', what path should they take?",
+        "answer": "gPM94KHF \u2192 71QV2RZN \u2192 50zn6Nh4"
+    },
+    {
+        "question": "If someone wants to go from the course '50zn6Nh4' to the name '0qRli6yq', what path should they take?",
+        "answer": "50zn6Nh4 \u2192 71QV2RZN \u2192 eeFex1L5 \u2192 XCgkWsrU \u2192 HFQcs6vc \u2192 m7GU0Kal \u2192 1EsbG2Hy \u2192 0qRli6yq"
+    },
+    {
+        "question": "If someone wants to go from the name 'gPM94KHF' to the department 'eeFex1L5', what path should they take?",
+        "answer": "gPM94KHF \u2192 71QV2RZN \u2192 eeFex1L5"
+    },
+    {
+        "question": "If someone wants to go from the name 'ujkVtW7z' to the faculty 'XCgkWsrU', what path should they take?",
+        "answer": "ujkVtW7z \u2192 4TupuOZp \u2192 m7GU0Kal \u2192 HFQcs6vc \u2192 XCgkWsrU"
+    },
+    {
+        "question": "If someone wants to go from the name 'gPM94KHF' to the name 'K1xIPGN8', what path should they take?",
+        "answer": "gPM94KHF \u2192 71QV2RZN \u2192 eeFex1L5 \u2192 XCgkWsrU \u2192 HFQcs6vc \u2192 m7GU0Kal \u2192 K1xIPGN8"
+    },
+    {
+        "question": "If someone wants to go from the course '4TupuOZp' to the course '50zn6Nh4', what path should they take?",
+        "answer": "4TupuOZp \u2192 m7GU0Kal \u2192 HFQcs6vc \u2192 XCgkWsrU \u2192 eeFex1L5 \u2192 71QV2RZN \u2192 50zn6Nh4"
+    },
+    {
+        "question": "If someone wants to go from the faculty 'XCgkWsrU' to the course '50zn6Nh4', what path should they take?",
+        "answer": "XCgkWsrU \u2192 eeFex1L5 \u2192 71QV2RZN \u2192 50zn6Nh4"
+    },
+    {
+        "question": "If someone wants to go from the name '0qRli6yq' to the course '4TupuOZp', what path should they take?",
+        "answer": "0qRli6yq \u2192 1EsbG2Hy \u2192 m7GU0Kal \u2192 4TupuOZp"
+=======
         "question": "If someone wants to go from the name 'gPM94KHF' to the name 'y5GiriZT', what path should they take?",
         "answer": "gPM94KHF \u2192 71QV2RZN \u2192 50zn6Nh4 \u2192 y5GiriZT"
     },
@@ -14,12 +54,21 @@
     {
         "question": "If someone wants to go from the course '50zn6Nh4' to the faculty 'XCgkWsrU', what path should they take?",
         "answer": "50zn6Nh4 \u2192 71QV2RZN \u2192 eeFex1L5 \u2192 XCgkWsrU"
+>>>>>>> origin/main
     },
     {
-        "question": "If someone wants to go from the name 'kd8iLssX' to the department 'HFQcs6vc', what path should they take?",
-        "answer": "kd8iLssX \u2192 m7GU0Kal \u2192 HFQcs6vc"
+        "question": "If someone wants to go from the name 'gPM94KHF' to the course '4TupuOZp', what path should they take?",
+        "answer": "gPM94KHF \u2192 71QV2RZN \u2192 eeFex1L5 \u2192 XCgkWsrU \u2192 HFQcs6vc \u2192 m7GU0Kal \u2192 4TupuOZp"
     },
     {
+<<<<<<< HEAD
+        "question": "If someone wants to go from the name 'kd8iLssX' to the course '50zn6Nh4', what path should they take?",
+        "answer": "kd8iLssX \u2192 m7GU0Kal \u2192 HFQcs6vc \u2192 XCgkWsrU \u2192 eeFex1L5 \u2192 71QV2RZN \u2192 50zn6Nh4"
+    },
+    {
+        "question": "If someone wants to go from the program 'm7GU0Kal' to the name 'gPM94KHF', what path should they take?",
+        "answer": "m7GU0Kal \u2192 HFQcs6vc \u2192 XCgkWsrU \u2192 eeFex1L5 \u2192 71QV2RZN \u2192 gPM94KHF"
+=======
         "question": "If someone wants to go from the course '1EsbG2Hy' to the name 'gPM94KHF', what path should they take?",
         "answer": "1EsbG2Hy \u2192 m7GU0Kal \u2192 HFQcs6vc \u2192 XCgkWsrU \u2192 eeFex1L5 \u2192 71QV2RZN \u2192 gPM94KHF"
     },
@@ -50,5 +99,6 @@
     {
         "question": "If someone wants to go from the department 'HFQcs6vc' to the course '4TupuOZp', what path should they take?",
         "answer": "HFQcs6vc \u2192 m7GU0Kal \u2192 4TupuOZp"
+>>>>>>> origin/main
     }
 ]

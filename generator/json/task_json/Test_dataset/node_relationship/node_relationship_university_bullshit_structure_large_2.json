@@ -1,5 +1,57 @@
 [
     {
+<<<<<<< HEAD
+        "question": "What is the relationship between sqhV9R6m and EOI0cbYc?",
+        "answer": "sqhV9R6m (program) and EOI0cbYc (program) share a common ancestor: yKTl1xcC"
+    },
+    {
+        "question": "What is the relationship between sqhV9R6m and yKTl1xcC?",
+        "answer": "sqhV9R6m (program) and yKTl1xcC (faculty) share a common ancestor: yKTl1xcC"
+    },
+    {
+        "question": "What is the relationship between 21NZZkay and HvBfIiMK?",
+        "answer": "21NZZkay (program) and HvBfIiMK (program) share a common ancestor: yKTl1xcC"
+    },
+    {
+        "question": "What is the relationship between EOI0cbYc and DglKDdWv?",
+        "answer": "EOI0cbYc (program) and DglKDdWv (program) share a common ancestor: yKTl1xcC"
+    },
+    {
+        "question": "What is the relationship between yC7Sy36Z and yKTl1xcC?",
+        "answer": "yC7Sy36Z (program) and yKTl1xcC (faculty) share a common ancestor: yKTl1xcC"
+    },
+    {
+        "question": "What is the relationship between jwfzHuBJ and HvBfIiMK?",
+        "answer": "jwfzHuBJ (program) and HvBfIiMK (program) share a common ancestor: yKTl1xcC"
+    },
+    {
+        "question": "What is the relationship between OYXvstzT and Ra2AjBbJ?",
+        "answer": "OYXvstzT (program) and Ra2AjBbJ (program) share a common ancestor: 1ff3fAyp"
+    },
+    {
+        "question": "What is the relationship between Ra2AjBbJ and sqhV9R6m?",
+        "answer": "Ra2AjBbJ (program) and sqhV9R6m (program) share a common ancestor: yKTl1xcC"
+    },
+    {
+        "question": "What is the relationship between wwqSjKiL and ghMvE6PN?",
+        "answer": "wwqSjKiL (program) and ghMvE6PN (department) share a common ancestor: yKTl1xcC"
+    },
+    {
+        "question": "What is the relationship between mUvqUyKn and FCmrbVEa?",
+        "answer": "mUvqUyKn (program) and FCmrbVEa (department) share a common ancestor: yKTl1xcC"
+    },
+    {
+        "question": "What is the relationship between EOI0cbYc and ClSHek7I?",
+        "answer": "EOI0cbYc (program) and ClSHek7I (program) share a common ancestor: yKTl1xcC"
+    },
+    {
+        "question": "What is the relationship between 21NZZkay and jwfzHuBJ?",
+        "answer": "21NZZkay (program) and jwfzHuBJ (program) share a common ancestor: yKTl1xcC"
+    },
+    {
+        "question": "What is the relationship between EOI0cbYc and mUvqUyKn?",
+        "answer": "EOI0cbYc (program) and mUvqUyKn (program) share a common ancestor: ghMvE6PN"
+=======
         "question": "What is the relationship between XNRKqTxv and ClSHek7I?",
         "answer": "XNRKqTxv (program) and ClSHek7I (program) share a common ancestor: yKTl1xcC"
     },
@@ -50,5 +102,6 @@
     {
         "question": "What is the relationship between 21NZZkay and sDEvmlNN?",
         "answer": "21NZZkay (program) and sDEvmlNN (program) share a common ancestor: yKTl1xcC"
+>>>>>>> origin/main
     }
 ]

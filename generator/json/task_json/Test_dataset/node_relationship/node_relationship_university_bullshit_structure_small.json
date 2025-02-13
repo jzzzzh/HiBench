@@ -1,13 +1,46 @@
 [
     {
+<<<<<<< HEAD
+        "question": "What is the relationship between BFWN6dPo and pz8dGiR8?",
+        "answer": "BFWN6dPo (faculty) and pz8dGiR8 (program) share a common ancestor: BFWN6dPo"
+    },
+    {
+        "question": "What is the relationship between BFWN6dPo and qQ2YAsqr?",
+        "answer": "BFWN6dPo (faculty) and qQ2YAsqr (program) share a common ancestor: BFWN6dPo"
+    },
+    {
+        "question": "What is the relationship between CFLmbmCC and BFWN6dPo?",
+        "answer": "CFLmbmCC (department) and BFWN6dPo (faculty) share a common ancestor: BFWN6dPo"
+=======
         "question": "What is the relationship between pz8dGiR8 and BFWN6dPo?",
         "answer": "pz8dGiR8 (program) and BFWN6dPo (faculty) share a common ancestor: BFWN6dPo"
+>>>>>>> origin/main
     },
     {
         "question": "What is the relationship between qQ2YAsqr and pz8dGiR8?",
         "answer": "qQ2YAsqr (program) and pz8dGiR8 (program) share a common ancestor: BFWN6dPo"
     },
     {
+<<<<<<< HEAD
+        "question": "What is the relationship between pz8dGiR8 and Wk2SV8oJ?",
+        "answer": "pz8dGiR8 (program) and Wk2SV8oJ (department) share a common ancestor: Wk2SV8oJ"
+    },
+    {
+        "question": "What is the relationship between qQ2YAsqr and CFLmbmCC?",
+        "answer": "qQ2YAsqr (program) and CFLmbmCC (department) share a common ancestor: CFLmbmCC"
+    },
+    {
+        "question": "What is the relationship between pz8dGiR8 and CFLmbmCC?",
+        "answer": "pz8dGiR8 (program) and CFLmbmCC (department) share a common ancestor: BFWN6dPo"
+    },
+    {
+        "question": "What is the relationship between pz8dGiR8 and BFWN6dPo?",
+        "answer": "pz8dGiR8 (program) and BFWN6dPo (faculty) share a common ancestor: BFWN6dPo"
+    },
+    {
+        "question": "What is the relationship between qQ2YAsqr and pz8dGiR8?",
+        "answer": "qQ2YAsqr (program) and pz8dGiR8 (program) share a common ancestor: BFWN6dPo"
+=======
         "question": "What is the relationship between pz8dGiR8 and qQ2YAsqr?",
         "answer": "pz8dGiR8 (program) and qQ2YAsqr (program) share a common ancestor: BFWN6dPo"
     },
@@ -18,12 +51,25 @@
     {
         "question": "What is the relationship between CFLmbmCC and pz8dGiR8?",
         "answer": "CFLmbmCC (department) and pz8dGiR8 (program) share a common ancestor: BFWN6dPo"
+>>>>>>> origin/main
     },
     {
         "question": "What is the relationship between Wk2SV8oJ and SSyPQcsG?",
         "answer": "Wk2SV8oJ (department) and SSyPQcsG (program) share a common ancestor: BFWN6dPo"
     },
     {
+<<<<<<< HEAD
+        "question": "What is the relationship between BFWN6dPo and CFLmbmCC?",
+        "answer": "BFWN6dPo (faculty) and CFLmbmCC (department) share a common ancestor: BFWN6dPo"
+    },
+    {
+        "question": "What is the relationship between qQ2YAsqr and BFWN6dPo?",
+        "answer": "qQ2YAsqr (program) and BFWN6dPo (faculty) share a common ancestor: BFWN6dPo"
+    },
+    {
+        "question": "What is the relationship between CFLmbmCC and Wk2SV8oJ?",
+        "answer": "CFLmbmCC (department) and Wk2SV8oJ (department) share a common ancestor: BFWN6dPo"
+=======
         "question": "What is the relationship between CFLmbmCC and qQ2YAsqr?",
         "answer": "CFLmbmCC (department) and qQ2YAsqr (program) share a common ancestor: CFLmbmCC"
     },
@@ -50,5 +96,6 @@
     {
         "question": "What is the relationship between SSyPQcsG and BFWN6dPo?",
         "answer": "SSyPQcsG (program) and BFWN6dPo (faculty) share a common ancestor: BFWN6dPo"
+>>>>>>> origin/main
     }
 ]

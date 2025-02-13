@@ -176,7 +176,7 @@ def generate_test_data_set(scenario: str, with_answer: bool = True, number_of_qu
         duplicate_count = 0
         null_count = 0
         attempts = 0
-        max_attempts = number_of_questions * 3  # Allow more attempts to get required questions
+        max_attempts = number_of_questions * 100  # Allow more attempts to get required questions
 
         while len(questions_answers) < number_of_questions and attempts < max_attempts:
             attempts += 1

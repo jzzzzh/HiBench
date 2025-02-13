@@ -1,6 +1,6 @@
 # Dataset Demographics Report
 
-Generated on: 2025-02-12 20:50:58
+Generated on: 2025-02-12 22:57:11
 
 ## Detailed Statistics by Question Type and Scenario
 
@@ -76,18 +76,36 @@ Generated on: 2025-02-12 20:50:58
 | path_down_to_up | university_structure_large_2 | 8 |
 | path_down_to_up | university_structure_medium_2 | 6 |
 | path_down_to_up | university_bullshit_structure_small | 3 |
+| path_up_to_down | university_structure_medium_2 | 13 |
 | path_up_to_down | university_bullshit_structure_large_1 | 13 |
-| path_up_to_down | university_structure_large_1 | 10 |
-| path_up_to_down | university_bullshit_structure_medium_1 | 9 |
+| path_up_to_down | university_bullshit_structure_medium_2 | 13 |
+| path_up_to_down | university_structure_large_1 | 13 |
+| path_up_to_down | university_bullshit_structure_small | 13 |
+| path_up_to_down | university_structure_large_2 | 13 |
+| path_up_to_down | university_bullshit_structure_large_2 | 13 |
+| path_up_to_down | university_bullshit_structure_medium_1 | 13 |
+| path_up_to_down | university_structure_small | 13 |
 | path_up_to_down | university_structure_medium_1 | 13 |
+| shared_ancestor_same_level | university_structure_small | 8 |
 | shared_ancestor_same_level | university_bullshit_structure_medium_1 | 13 |
 | shared_ancestor_same_level | university_bullshit_structure_large_1 | 13 |
 | shared_ancestor_same_level | university_structure_medium_1 | 13 |
 | shared_ancestor_same_level | university_structure_large_1 | 13 |
-| shared_ancestor_diff_level | university_bullshit_structure_medium_1 | 8 |
-| shared_ancestor_diff_level | university_structure_large_1 | 2 |
-| shared_ancestor_diff_level | university_bullshit_structure_large_1 | 5 |
-| shared_ancestor_diff_level | university_structure_medium_1 | 7 |
+| shared_ancestor_same_level | university_structure_medium_2 | 13 |
+| shared_ancestor_same_level | university_structure_large_2 | 13 |
+| shared_ancestor_same_level | university_bullshit_structure_large_2 | 13 |
+| shared_ancestor_same_level | university_bullshit_structure_medium_2 | 13 |
+| shared_ancestor_same_level | university_bullshit_structure_small | 8 |
+| shared_ancestor_diff_level | university_bullshit_structure_medium_1 | 13 |
+| shared_ancestor_diff_level | university_bullshit_structure_large_2 | 13 |
+| shared_ancestor_diff_level | university_structure_medium_2 | 13 |
+| shared_ancestor_diff_level | university_structure_small | 13 |
+| shared_ancestor_diff_level | university_bullshit_structure_small | 13 |
+| shared_ancestor_diff_level | university_structure_large_1 | 13 |
+| shared_ancestor_diff_level | university_structure_large_2 | 13 |
+| shared_ancestor_diff_level | university_bullshit_structure_large_1 | 13 |
+| shared_ancestor_diff_level | university_structure_medium_1 | 13 |
+| shared_ancestor_diff_level | university_bullshit_structure_medium_2 | 13 |
 | path_between_nodes | university_structure_small | 13 |
 | path_between_nodes | university_structure_large_1 | 13 |
 | path_between_nodes | university_structure_medium_2 | 13 |
@@ -101,22 +119,22 @@ Generated on: 2025-02-12 20:50:58
 
 ## Summary Statistics
 
-Total number of questions: 729
+Total number of questions: 999
 
 ### Questions by Scenario
 
 | Scenario | Total Questions |
 |----------|----------------|
-| university_bullshit_structure_large_1 | 104 |
-| university_bullshit_structure_large_2 | 68 |
-| university_bullshit_structure_medium_1 | 103 |
-| university_bullshit_structure_medium_2 | 53 |
-| university_bullshit_structure_small | 43 |
-| university_structure_large_1 | 97 |
-| university_structure_large_2 | 62 |
-| university_structure_medium_1 | 104 |
-| university_structure_medium_2 | 52 |
-| university_structure_small | 43 |
+| university_bullshit_structure_large_1 | 113 |
+| university_bullshit_structure_large_2 | 107 |
+| university_bullshit_structure_medium_1 | 113 |
+| university_bullshit_structure_medium_2 | 93 |
+| university_bullshit_structure_small | 77 |
+| university_structure_large_1 | 113 |
+| university_structure_large_2 | 102 |
+| university_structure_medium_1 | 113 |
+| university_structure_medium_2 | 91 |
+| university_structure_small | 77 |
 
 ### Questions by Type
 
@@ -125,11 +143,11 @@ Total number of questions: 729
 | child_count | 69 |
 | level_count | 20 |
 | level_nodes | 22 |
-| node_attribute | 66 |
-| node_depth | 109 |
+| node_attribute | 70 |
+| node_depth | 111 |
 | node_relationship | 130 |
 | path_between_nodes | 130 |
 | path_down_to_up | 64 |
-| path_up_to_down | 45 |
-| shared_ancestor_diff_level | 22 |
-| shared_ancestor_same_level | 52 |
+| path_up_to_down | 130 |
+| shared_ancestor_diff_level | 130 |
+| shared_ancestor_same_level | 120 |
