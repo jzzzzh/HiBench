@@ -217,13 +217,18 @@ def main():
     need_sample_list = ['Formula']
     # model_list = ["meta-llama/Meta-Llama-3.1-8B-Instruct"] # ["Qwen/Qwen2.5-0.5B-Instruct"] #, "meta-llama/Meta-Llama-3.1-8B-Instruct"]
     # model_list = ["meta-llama/Meta-Llama-3.1-8B-Instruct", "meta-llama/Llama-3.2-1B-Instruct","meta-llama/Llama-3.2-3B-Instruct", "Qwen/Qwen2.5-0.5B-Instruct", "Qwen/Qwen2.5-1.5B-Instruct", "Qwen/Qwen2.5-3B-Instruct", "Qwen/Qwen2.5-7B-Instruct"]
+<<<<<<< Updated upstream
     # model_list = ["Qwen/Qwen2.5-7B-Instruct"]# , "Qwen/Qwen2.5-0.5B-Instruct", "Qwen/Qwen2.5-1.5B-Instruct", "Qwen/Qwen2.5-3B-Instruct", "Qwen/Qwen2.5-7B-Instruct"]
     # model_list = ["meta-llama/Meta-Llama-3.1-8B-Instruct", "meta-llama/Llama-3.2-1B-Instruct","meta-llama/Llama-3.2-3B-Instruct"]
     model_list = ["deepseek/deepseek-v3"]
+=======
+    model_list = ["Qwen/Qwen2.5-14B-Instruct"]# , "Qwen/Qwen2.5-0.5B-Instruct", "Qwen/Qwen2.5-1.5B-Instruct", "Qwen/Qwen2.5-3B-Instruct", "Qwen/Qwen2.5-7B-Instruct"]
+    # model_list = ["meta-llama/Meta-Llama-3.1-8B-Instruct", "meta-llama/Llama-3.2-1B-Instruct","meta-llama/Llama-3.2-3B-Instruct", "THUDM/glm-4-9b-chat", "01-ai/Yi-1.5-9B-Chat"]
+>>>>>>> Stashed changes
     # model_list = ['internlm/internlm2_5-7b-chat'] # 'microsoft/Phi-3.5-mini-instruct'] # ["baichuan-inc/Baichuan-7B"]
     DUPLICATE_CHECK = True
     for model in model_list:
-        llm = LLMModel(model, api_key=None, device_map='cuda:0')
+        llm = LLMModel(model, api_key="fw_3ZZZfYBYWqVkub35tPijudgh", device_map='cuda:0')
         length = len(EvalList)
         for idx, Eval in enumerate(EvalList):
             processed_question_num = 0
@@ -284,5 +289,10 @@ def Logo():
 if __name__ == '__main__':
     Logo()
     main()
+<<<<<<< Updated upstream
     # argument_generator = ArgumentGenerator()
     # argument_generator.test_dataloader(Task_list=['JSON'], num_samples=1)
+=======
+    #argument_generator = ArgumentGenerator()
+    #argument_generator.test_dataloader(Task_list=['JSON'], num_samples=1)
+>>>>>>> Stashed changes
