@@ -1,54 +1,54 @@
 [
     {
         "question": "If someone wants to go from the program 'Bachelor of Engineering' to the department 'Department of Mechanical Engineering', what path should they take?",
-        "answer": "Bachelor of Engineering \u2192 Department of Electrical Engineering \u2192 Faculty of Engineering \u2192 Department of Mechanical Engineering"
+        "answer": "Bachelor of Engineering -> Department of Electrical Engineering -> Faculty of Engineering -> Department of Mechanical Engineering"
     },
     {
         "question": "If someone wants to go from the program 'Master of Science' to the department 'Department of Computer Engineering', what path should they take?",
-        "answer": "Master of Science \u2192 Department of Mechanical Engineering \u2192 Faculty of Engineering \u2192 Department of Computer Engineering"
+        "answer": "Master of Science -> Department of Mechanical Engineering -> Faculty of Engineering -> Department of Computer Engineering"
     },
     {
         "question": "If someone wants to go from the department 'Department of Mechanical Engineering' to the program 'Bachelor of Engineering', what path should they take?",
-        "answer": "Department of Mechanical Engineering \u2192 Faculty of Engineering \u2192 Department of Electrical Engineering \u2192 Bachelor of Engineering"
+        "answer": "Department of Mechanical Engineering -> Faculty of Engineering -> Department of Electrical Engineering -> Bachelor of Engineering"
     },
     {
         "question": "If someone wants to go from the program 'Bachelor of Science' to the department 'Department of Mechanical Engineering', what path should they take?",
-        "answer": "Bachelor of Science \u2192 Department of Computer Engineering \u2192 Faculty of Engineering \u2192 Department of Mechanical Engineering"
+        "answer": "Bachelor of Science -> Department of Computer Engineering -> Faculty of Engineering -> Department of Mechanical Engineering"
     },
     {
         "question": "If someone wants to go from the program 'Doctor of Philosophy' to the program 'Bachelor of Business Administration', what path should they take?",
-        "answer": "Doctor of Philosophy \u2192 Department of Electrical Engineering \u2192 Faculty of Engineering \u2192 Department of Mechanical Engineering \u2192 Bachelor of Business Administration"
+        "answer": "Doctor of Philosophy -> Department of Electrical Engineering -> Faculty of Engineering -> Department of Mechanical Engineering -> Bachelor of Business Administration"
     },
     {
         "question": "If someone wants to go from the program 'Bachelor of Business Administration' to the program 'Master of Science', what path should they take?",
-        "answer": "Bachelor of Business Administration \u2192 Department of Mechanical Engineering \u2192 Master of Science"
+        "answer": "Bachelor of Business Administration -> Department of Mechanical Engineering -> Master of Science"
     },
     {
         "question": "If someone wants to go from the faculty 'Faculty of Engineering' to the program 'Bachelor of Science', what path should they take?",
-        "answer": "Faculty of Engineering \u2192 Department of Computer Engineering \u2192 Bachelor of Science"
+        "answer": "Faculty of Engineering -> Department of Computer Engineering -> Bachelor of Science"
     },
     {
         "question": "If someone wants to go from the department 'Department of Electrical Engineering' to the program 'Master of Business Administration', what path should they take?",
-        "answer": "Department of Electrical Engineering \u2192 Faculty of Engineering \u2192 Department of Computer Engineering \u2192 Master of Business Administration"
+        "answer": "Department of Electrical Engineering -> Faculty of Engineering -> Department of Computer Engineering -> Master of Business Administration"
     },
     {
         "question": "If someone wants to go from the program 'Bachelor of Business Administration' to the faculty 'Faculty of Engineering', what path should they take?",
-        "answer": "Bachelor of Business Administration \u2192 Department of Mechanical Engineering \u2192 Faculty of Engineering"
+        "answer": "Bachelor of Business Administration -> Department of Mechanical Engineering -> Faculty of Engineering"
     },
     {
         "question": "If someone wants to go from the department 'Department of Mechanical Engineering' to the department 'Department of Computer Engineering', what path should they take?",
-        "answer": "Department of Mechanical Engineering \u2192 Faculty of Engineering \u2192 Department of Computer Engineering"
+        "answer": "Department of Mechanical Engineering -> Faculty of Engineering -> Department of Computer Engineering"
     },
     {
         "question": "If someone wants to go from the program 'Bachelor of Engineering' to the program 'Bachelor of Science', what path should they take?",
-        "answer": "Bachelor of Engineering \u2192 Department of Electrical Engineering \u2192 Faculty of Engineering \u2192 Department of Computer Engineering \u2192 Bachelor of Science"
+        "answer": "Bachelor of Engineering -> Department of Electrical Engineering -> Faculty of Engineering -> Department of Computer Engineering -> Bachelor of Science"
     },
     {
         "question": "If someone wants to go from the program 'Bachelor of Science' to the department 'Department of Electrical Engineering', what path should they take?",
-        "answer": "Bachelor of Science \u2192 Department of Computer Engineering \u2192 Faculty of Engineering \u2192 Department of Electrical Engineering"
+        "answer": "Bachelor of Science -> Department of Computer Engineering -> Faculty of Engineering -> Department of Electrical Engineering"
     },
     {
         "question": "If someone wants to go from the program 'Bachelor of Engineering' to the faculty 'Faculty of Engineering', what path should they take?",
-        "answer": "Bachelor of Engineering \u2192 Department of Electrical Engineering \u2192 Faculty of Engineering"
+        "answer": "Bachelor of Engineering -> Department of Electrical Engineering -> Faculty of Engineering"
     }
 ]

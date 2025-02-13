@@ -1,54 +1,54 @@
 [
     {
         "question": "If someone wants to go from the name 'Mila Reyes' to the name 'Elena Carter', what path should they take?",
-        "answer": "Mila Reyes \u2192 Bachelor of Engineering \u2192 Department of Electrical Engineering \u2192 Faculty of Engineering \u2192 Department of Mechanical Engineering \u2192 Doctor of Philosophy \u2192 Elena Carter"
+        "answer": "Mila Reyes -> Bachelor of Engineering -> Department of Electrical Engineering -> Faculty of Engineering -> Department of Mechanical Engineering -> Doctor of Philosophy -> Elena Carter"
     },
     {
         "question": "If someone wants to go from the course 'Financial Accounting' to the name 'Lecturer Sebastian Rivera', what path should they take?",
-        "answer": "Financial Accounting \u2192 Bachelor of Engineering \u2192 Department of Electrical Engineering \u2192 Faculty of Engineering \u2192 Department of Mechanical Engineering \u2192 Doctor of Philosophy \u2192 World History \u2192 Lecturer Sebastian Rivera"
+        "answer": "Financial Accounting -> Bachelor of Engineering -> Department of Electrical Engineering -> Faculty of Engineering -> Department of Mechanical Engineering -> Doctor of Philosophy -> World History -> Lecturer Sebastian Rivera"
     },
     {
         "question": "If someone wants to go from the name 'Lecturer Sebastian Rivera' to the department 'Department of Electrical Engineering', what path should they take?",
-        "answer": "Lecturer Sebastian Rivera \u2192 World History \u2192 Doctor of Philosophy \u2192 Department of Mechanical Engineering \u2192 Faculty of Engineering \u2192 Department of Electrical Engineering"
+        "answer": "Lecturer Sebastian Rivera -> World History -> Doctor of Philosophy -> Department of Mechanical Engineering -> Faculty of Engineering -> Department of Electrical Engineering"
     },
     {
         "question": "If someone wants to go from the faculty 'Faculty of Engineering' to the program 'Bachelor of Engineering', what path should they take?",
-        "answer": "Faculty of Engineering \u2192 Department of Electrical Engineering \u2192 Bachelor of Engineering"
+        "answer": "Faculty of Engineering -> Department of Electrical Engineering -> Bachelor of Engineering"
     },
     {
         "question": "If someone wants to go from the department 'Department of Mechanical Engineering' to the name 'Associate Professor Jordan Baker', what path should they take?",
-        "answer": "Department of Mechanical Engineering \u2192 Doctor of Philosophy \u2192 Biochemistry \u2192 Associate Professor Jordan Baker"
+        "answer": "Department of Mechanical Engineering -> Doctor of Philosophy -> Biochemistry -> Associate Professor Jordan Baker"
     },
     {
         "question": "If someone wants to go from the name 'Associate Professor Jordan Baker' to the name 'Mila Reyes', what path should they take?",
-        "answer": "Associate Professor Jordan Baker \u2192 Biochemistry \u2192 Doctor of Philosophy \u2192 Department of Mechanical Engineering \u2192 Faculty of Engineering \u2192 Department of Electrical Engineering \u2192 Bachelor of Engineering \u2192 Mila Reyes"
+        "answer": "Associate Professor Jordan Baker -> Biochemistry -> Doctor of Philosophy -> Department of Mechanical Engineering -> Faculty of Engineering -> Department of Electrical Engineering -> Bachelor of Engineering -> Mila Reyes"
     },
     {
         "question": "If someone wants to go from the name 'Associate Professor Jordan Baker' to the name 'Lecturer Elijah Brown', what path should they take?",
-        "answer": "Associate Professor Jordan Baker \u2192 Biochemistry \u2192 Doctor of Philosophy \u2192 Department of Mechanical Engineering \u2192 Faculty of Engineering \u2192 Department of Electrical Engineering \u2192 Bachelor of Engineering \u2192 Financial Accounting \u2192 Lecturer Elijah Brown"
+        "answer": "Associate Professor Jordan Baker -> Biochemistry -> Doctor of Philosophy -> Department of Mechanical Engineering -> Faculty of Engineering -> Department of Electrical Engineering -> Bachelor of Engineering -> Financial Accounting -> Lecturer Elijah Brown"
     },
     {
         "question": "If someone wants to go from the name 'Iris Ortiz' to the name 'Lecturer Sebastian Rivera', what path should they take?",
-        "answer": "Iris Ortiz \u2192 Doctor of Philosophy \u2192 World History \u2192 Lecturer Sebastian Rivera"
+        "answer": "Iris Ortiz -> Doctor of Philosophy -> World History -> Lecturer Sebastian Rivera"
     },
     {
         "question": "If someone wants to go from the name 'Iris Ortiz' to the name 'Lecturer Elijah Brown', what path should they take?",
-        "answer": "Iris Ortiz \u2192 Doctor of Philosophy \u2192 Department of Mechanical Engineering \u2192 Faculty of Engineering \u2192 Department of Electrical Engineering \u2192 Bachelor of Engineering \u2192 Financial Accounting \u2192 Lecturer Elijah Brown"
+        "answer": "Iris Ortiz -> Doctor of Philosophy -> Department of Mechanical Engineering -> Faculty of Engineering -> Department of Electrical Engineering -> Bachelor of Engineering -> Financial Accounting -> Lecturer Elijah Brown"
     },
     {
         "question": "If someone wants to go from the name 'Mila Reyes' to the department 'Department of Electrical Engineering', what path should they take?",
-        "answer": "Mila Reyes \u2192 Bachelor of Engineering \u2192 Department of Electrical Engineering"
+        "answer": "Mila Reyes -> Bachelor of Engineering -> Department of Electrical Engineering"
     },
     {
         "question": "If someone wants to go from the faculty 'Faculty of Engineering' to the course 'World History', what path should they take?",
-        "answer": "Faculty of Engineering \u2192 Department of Mechanical Engineering \u2192 Doctor of Philosophy \u2192 World History"
+        "answer": "Faculty of Engineering -> Department of Mechanical Engineering -> Doctor of Philosophy -> World History"
     },
     {
         "question": "If someone wants to go from the department 'Department of Mechanical Engineering' to the name 'Iris Ortiz', what path should they take?",
-        "answer": "Department of Mechanical Engineering \u2192 Doctor of Philosophy \u2192 Iris Ortiz"
+        "answer": "Department of Mechanical Engineering -> Doctor of Philosophy -> Iris Ortiz"
     },
     {
         "question": "If someone wants to go from the name 'Lecturer Sebastian Rivera' to the name 'Associate Professor Jordan Baker', what path should they take?",
-        "answer": "Lecturer Sebastian Rivera \u2192 World History \u2192 Doctor of Philosophy \u2192 Biochemistry \u2192 Associate Professor Jordan Baker"
+        "answer": "Lecturer Sebastian Rivera -> World History -> Doctor of Philosophy -> Biochemistry -> Associate Professor Jordan Baker"
     }
 ]
