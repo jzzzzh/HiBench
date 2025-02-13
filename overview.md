@@ -1,20 +1,8 @@
 ## Task Category
 
-### Version #1
-**Essential**: **_plain structure (fundamental), JSON_**  
+
+**Fundamental**: **_Binary Tree, Multiple Tree, JSON_**  
 **Practical**: **_formula, code, paper_**
-
-### Version #2
-**Essential**: **_plain structure, JSON_**  
-**Intermediate**: **_formula, code_**  
-**Practical**: **_paper_**
-
-### Version #3
-**Essential**: **_plain structure, JSON_**  
-**Analytical**: **_formula, code_**  
-**Textual**: **_paper_**
-
-### Which category method is better? Your reason?
 
 ---
 
@@ -81,7 +69,7 @@ _Reasoning about textual context and organizing paper sections._
 ## **Code**
 - **SpaceComplexity** → **D** (_Analytical Reasoning_)  
 - **TimeComplexity** → **D** (_Analytical Reasoning_)  
-- **CodeMissing** → **E** (_Textual Reasoning_)  
+- **CodeMissing** → **E** (_Textual Reasoning_)  (Not Available)
 
 ---
 
