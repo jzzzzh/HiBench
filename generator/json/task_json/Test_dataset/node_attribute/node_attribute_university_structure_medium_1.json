@@ -1,75 +1,54 @@
 [
     {
-<<<<<<< HEAD
-        "question": "What is the Student ID of the student Elena Carter who is in Doctor of Philosophy in Department of Mechanical Engineering in Faculty of Engineering in City University?",
-        "answer": "10679883"
+        "question": "What is the Title of the lecturer Senior Lecturer Eliza Cross who is in International Human Rights Law in Bachelor of Technology in Department of Biochemistry in School of Natural Sciences in Horizon University?",
+        "answer": "Senior Lecturer"
     },
     {
-        "question": "What is the Name of the student 10679883 who is in Doctor of Philosophy in Department of Mechanical Engineering in Faculty of Engineering in City University?",
-        "answer": "Elena Carter"
-=======
-        "question": "What is the Name of the student 87593586 who is in Doctor of Philosophy in Department of Mechanical Engineering in Faculty of Engineering in City University?",
-        "answer": "Iris Ortiz"
->>>>>>> origin/main
+        "question": "What is the Title of the lecturer Teaching Fellow Sadie Oliver who is in Contemporary World Politics in Bachelor of Technology in Department of Immigration Law in School of Legal Studies in Horizon University?",
+        "answer": "Teaching Fellow"
     },
     {
-        "question": "What is the Student ID of the student Iris Ortiz who is in Doctor of Philosophy in Department of Mechanical Engineering in Faculty of Engineering in City University?",
-        "answer": "87593586"
+        "question": "What is the Name of the lecturer Visiting Professor who is in Contemporary World Politics in Bachelor of Technology in Department of Immigration Law in School of Legal Studies in Horizon University?",
+        "answer": "Visiting Professor Isabel Fordham"
     },
     {
-        "question": "What is the Title of the lecturer Lecturer Elijah Brown who is in Financial Accounting in Bachelor of Engineering in Department of Electrical Engineering in Faculty of Engineering in City University?",
-        "answer": "Lecturer"
+        "question": "What is the Student ID of the student Evangeline Maynard who is in Bachelor of Technology in Department of Immigration Law in School of Legal Studies in Horizon University?",
+        "answer": "17022379"
     },
     {
-<<<<<<< HEAD
-        "question": "What is the Name of the lecturer Lecturer who is in Financial Accounting in Bachelor of Engineering in Department of Electrical Engineering in Faculty of Engineering in City University?",
-        "answer": "Lecturer Elijah Brown"
+        "question": "What is the Title of the lecturer Visiting Professor Isabel Fordham who is in Contemporary World Politics in Bachelor of Technology in Department of Immigration Law in School of Legal Studies in Horizon University?",
+        "answer": "Visiting Professor"
     },
     {
-        "question": "What is the Title of the lecturer Lecturer Sebastian Rivera who is in World History in Doctor of Philosophy in Department of Mechanical Engineering in Faculty of Engineering in City University?",
-        "answer": "Lecturer"
+        "question": "What is the Student ID of the student Kaylee Banks who is in Master of Design in Department of Particle Physics in School of Natural Sciences in Horizon University?",
+        "answer": "54755530"
     },
     {
-        "question": "What is the Student ID of the student Mila Reyes who is in Bachelor of Engineering in Department of Electrical Engineering in Faculty of Engineering in City University?",
-        "answer": "50165258"
+        "question": "What is the Title of the lecturer Teaching Fellow Stella Henderson who is in Interior Space Planning in Master of Design in Department of Particle Physics in School of Natural Sciences in Horizon University?",
+        "answer": "Teaching Fellow"
     },
     {
-        "question": "What is the Name of the student 50165258 who is in Bachelor of Engineering in Department of Electrical Engineering in Faculty of Engineering in City University?",
-        "answer": "Mila Reyes"
+        "question": "What is the Name of the student 15400991 who is in Master of Public Administration in Department of Immigration Law in School of Legal Studies in Horizon University?",
+        "answer": "Carmen Fowler"
     },
     {
-=======
->>>>>>> origin/main
-        "question": "What is the Name of the lecturer Associate Professor who is in Biochemistry in Doctor of Philosophy in Department of Mechanical Engineering in Faculty of Engineering in City University?",
-        "answer": "Associate Professor Jordan Baker"
+        "question": "What is the Name of the lecturer Teaching Fellow who is in Interior Space Planning in Master of Design in Department of Particle Physics in School of Natural Sciences in Horizon University?",
+        "answer": "Teaching Fellow Stella Henderson"
     },
     {
-<<<<<<< HEAD
-        "question": "What is the Name of the lecturer Lecturer who is in World History in Doctor of Philosophy in Department of Mechanical Engineering in Faculty of Engineering in City University?",
-        "answer": "Lecturer Sebastian Rivera"
+        "question": "What is the Student ID of the student Kaylee Schroeder who is in Bachelor of Technology in Department of Biochemistry in School of Natural Sciences in Horizon University?",
+        "answer": "67835718"
     },
     {
-        "question": "What is the Name of the student 87593586 who is in Doctor of Philosophy in Department of Mechanical Engineering in Faculty of Engineering in City University?",
-        "answer": "Iris Ortiz"
-=======
-        "question": "What is the Title of the lecturer Lecturer Sebastian Rivera who is in World History in Doctor of Philosophy in Department of Mechanical Engineering in Faculty of Engineering in City University?",
-        "answer": "Lecturer"
+        "question": "What is the Name of the lecturer Senior Lecturer who is in Inorganic Chemistry in Bachelor of Technology in Department of Immigration Law in School of Legal Studies in Horizon University?",
+        "answer": "Senior Lecturer Arabella Stevens"
     },
     {
-        "question": "What is the Student ID of the student Elena Carter who is in Doctor of Philosophy in Department of Mechanical Engineering in Faculty of Engineering in City University?",
-        "answer": "10679883"
+        "question": "What is the Student ID of the student Adelaide Patterson who is in Master of Public Administration in Department of Immigration Law in School of Legal Studies in Horizon University?",
+        "answer": "09601061"
     },
     {
-        "question": "What is the Student ID of the student Mila Reyes who is in Bachelor of Engineering in Department of Electrical Engineering in Faculty of Engineering in City University?",
-        "answer": "50165258"
-    },
-    {
-        "question": "What is the Name of the student 10679883 who is in Doctor of Philosophy in Department of Mechanical Engineering in Faculty of Engineering in City University?",
-        "answer": "Elena Carter"
->>>>>>> origin/main
-    },
-    {
-        "question": "What is the Title of the lecturer Associate Professor Jordan Baker who is in Biochemistry in Doctor of Philosophy in Department of Mechanical Engineering in Faculty of Engineering in City University?",
-        "answer": "Associate Professor"
+        "question": "What is the Name of the lecturer Senior Lecturer who is in Interior Space Planning in Master of Public Administration in Department of Immigration Law in School of Legal Studies in Horizon University?",
+        "answer": "Senior Lecturer Brooklyn Bradley"
     }
 ]

@@ -1,54 +1,54 @@
 [
     {
-        "question": "What is the common ancestor of Department of Electrical Engineering and Department of Mechanical Engineering?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of School of Natural Sciences and School of Legal Studies?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of Bachelor of Business Administration and Master of Science?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Bachelor of Fine Arts and Bachelor of Technology?",
+        "answer": "School of Natural Sciences"
     },
     {
-        "question": "What is the common ancestor of Doctor of Philosophy and Master of Science?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of School of Design and Planning and School of Legal Studies?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of Department of Mechanical Engineering and Department of Electrical Engineering?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Bachelor of Technology and Doctor of Engineering?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of Master of Science and Bachelor of Science?",
-        "answer": "Department of Computer Engineering"
+        "question": "What is the common ancestor of Department of Immigration Law and Department of Marine Biology?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of Master of Science and Bachelor of Engineering?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Department of Marine Biology and Department of Biochemistry?",
+        "answer": "School of Natural Sciences"
     },
     {
-        "question": "What is the common ancestor of Department of Computer Engineering and Department of Mechanical Engineering?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Master of Technology and Bachelor of Design?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of Bachelor of Science and Doctor of Philosophy?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Bachelor of Management Studies and Bachelor of Technology?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of Bachelor of Business Administration and Bachelor of Science?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Department of Particle Physics and Department of Immigration Law?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of Department of Computer Engineering and Department of Electrical Engineering?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Department of Environmental Design and Department of Media and Entertainment Law?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of Department of Mechanical Engineering and Department of Computer Engineering?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of School of Legal Studies and School of Design and Planning?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of Doctor of Philosophy and Master of Business Administration?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Bachelor of Design and Doctor of Engineering?",
+        "answer": "School of Legal Studies"
     },
     {
-        "question": "What is the common ancestor of Master of Science and Doctor of Philosophy?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Doctor of Engineering and Master of Public Administration?",
+        "answer": "Horizon University"
     }
 ]

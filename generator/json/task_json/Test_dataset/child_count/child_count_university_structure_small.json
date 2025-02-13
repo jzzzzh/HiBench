@@ -1,24 +1,26 @@
 [
     {
-<<<<<<< HEAD
-=======
-        "question": "How many Programs are there in Department of Electrical Engineering?",
-        "answer": "1"
-    },
-    {
->>>>>>> origin/main
-        "question": "How many Programs are there in Department of Chemical Engineering?",
+        "question": "How many Departments are there in School of Humanities?",
         "answer": "2"
     },
     {
-<<<<<<< HEAD
-        "question": "How many Programs are there in Department of Electrical Engineering?",
+        "question": "How many Departments are there in School of Natural Sciences?",
+        "answer": "2"
+    },
+    {
+        "question": "How many Programs are there in Department of Particle Physics?",
         "answer": "1"
     },
     {
-=======
->>>>>>> origin/main
-        "question": "How many Departments are there in Faculty of Engineering?",
+        "question": "How many Programs are there in Department of Creative Writing?",
+        "answer": "1"
+    },
+    {
+        "question": "How many Programs are there in Department of Film Studies?",
+        "answer": "2"
+    },
+    {
+        "question": "How many Programs are there in Department of Climate Science?",
         "answer": "2"
     }
 ]

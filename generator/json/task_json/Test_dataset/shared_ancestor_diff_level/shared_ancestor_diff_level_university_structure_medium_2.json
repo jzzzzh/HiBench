@@ -1,54 +1,54 @@
 [
     {
-        "question": "What is the common ancestor of Faculty of Engineering and Doctor of Philosophy?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Horizon University and Department of Marine Biology?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of City University and Master of Science?",
-        "answer": "City University"
+        "question": "What is the common ancestor of Department of Urban Design and Master of Technology?",
+        "answer": "School of Design and Planning"
     },
     {
-        "question": "What is the common ancestor of Department of Mechanical Engineering and Bachelor of Engineering?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Horizon University and School of Design and Planning?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of City University and Bachelor of Business Administration?",
-        "answer": "City University"
+        "question": "What is the common ancestor of Department of Marine Biology and Doctor of Engineering?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of Faculty of Engineering and Department of Computer Engineering?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Department of Public Health and Bachelor of Management Studies?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of Department of Electrical Engineering and Bachelor of Science?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Department of Climate Science and Doctor of Engineering?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of Faculty of Engineering and Master of Business Administration?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of School of Natural Sciences and Department of Climate Science?",
+        "answer": "School of Natural Sciences"
     },
     {
-        "question": "What is the common ancestor of Department of Mechanical Engineering and Bachelor of Business Administration?",
-        "answer": "Department of Mechanical Engineering"
+        "question": "What is the common ancestor of School of Natural Sciences and Bachelor of Technology?",
+        "answer": "School of Natural Sciences"
     },
     {
-        "question": "What is the common ancestor of City University and Department of Electrical Engineering?",
-        "answer": "City University"
+        "question": "What is the common ancestor of School of Natural Sciences and Master of Design?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of City University and Department of Computer Engineering?",
-        "answer": "City University"
+        "question": "What is the common ancestor of Horizon University and Department of Climate Science?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of City University and Faculty of Engineering?",
-        "answer": "City University"
+        "question": "What is the common ancestor of Department of Urban Design and Bachelor of Management Studies?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of City University and Department of Mechanical Engineering?",
-        "answer": "City University"
+        "question": "What is the common ancestor of School of Design and Planning and Bachelor of Design?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of Department of Computer Engineering and Bachelor of Business Administration?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Horizon University and Bachelor of Technology?",
+        "answer": "Horizon University"
     }
 ]

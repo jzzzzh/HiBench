@@ -1,36 +1,46 @@
 [
     {
-        "question": "What is the depth of Department of Electrical Engineering in the City University? (starting from 0)",
+        "question": "What is the depth of Department of Creative Writing in the Horizon University? (starting from 0)",
         "answer": "2"
     },
     {
-<<<<<<< HEAD
-        "question": "What is the depth of Bachelor of Engineering in the City University? (starting from 0)",
-        "answer": "3"
-=======
-        "question": "What is the depth of Department of Chemical Engineering in the City University? (starting from 0)",
-        "answer": "2"
->>>>>>> origin/main
-    },
-    {
-        "question": "What is the depth of Faculty of Engineering in the City University? (starting from 0)",
+        "question": "What is the depth of School of Natural Sciences in the Horizon University? (starting from 0)",
         "answer": "1"
     },
     {
-<<<<<<< HEAD
-        "question": "What is the depth of Department of Chemical Engineering in the City University? (starting from 0)",
+        "question": "What is the depth of Master of Design in the Horizon University? (starting from 0)",
+        "answer": "3"
+    },
+    {
+        "question": "What is the depth of Bachelor of Management Studies in the Horizon University? (starting from 0)",
+        "answer": "3"
+    },
+    {
+        "question": "What is the depth of School of Humanities in the Horizon University? (starting from 0)",
+        "answer": "1"
+    },
+    {
+        "question": "What is the depth of Department of Climate Science in the Horizon University? (starting from 0)",
         "answer": "2"
-=======
-        "question": "What is the depth of Master of Science in the City University? (starting from 0)",
-        "answer": "3"
->>>>>>> origin/main
     },
     {
-        "question": "What is the depth of Bachelor of Science in the City University? (starting from 0)",
+        "question": "What is the depth of Department of Particle Physics in the Horizon University? (starting from 0)",
+        "answer": "2"
+    },
+    {
+        "question": "What is the depth of Bachelor of Design in the Horizon University? (starting from 0)",
         "answer": "3"
     },
     {
-        "question": "What is the depth of Bachelor of Engineering in the City University? (starting from 0)",
+        "question": "What is the depth of Master of Public Administration in the Horizon University? (starting from 0)",
+        "answer": "3"
+    },
+    {
+        "question": "What is the depth of Department of Film Studies in the Horizon University? (starting from 0)",
+        "answer": "2"
+    },
+    {
+        "question": "What is the depth of Doctor of Engineering in the Horizon University? (starting from 0)",
         "answer": "3"
     }
 ]

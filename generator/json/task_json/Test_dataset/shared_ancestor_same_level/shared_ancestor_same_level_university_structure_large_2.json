@@ -1,54 +1,54 @@
 [
     {
-        "question": "What is the common ancestor of Department of Civil Engineering and Department of Mechanical Engineering?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Bachelor of Technology and Doctor of Engineering?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of Master of Arts and Master of Engineering?",
-        "answer": "Department of Labor Law"
+        "question": "What is the common ancestor of School of Design and Planning and School of Health Sciences?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of Bachelor of Science and Bachelor of Business Administration?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of School of Natural Sciences and School of Design and Planning?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of Bachelor of Engineering and Master of Engineering?",
-        "answer": "Department of Aerospace Engineering"
+        "question": "What is the common ancestor of Bachelor of Design and Bachelor of Fine Arts?",
+        "answer": "School of Natural Sciences"
     },
     {
-        "question": "What is the common ancestor of Department of Labor Law and Department of Mechanical Engineering?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Department of Particle Physics and Department of Furniture Design?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of Department of Chemical Engineering and Department of Labor Law?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of School of Health Sciences and School of Design and Planning?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of Doctor of Philosophy and Doctor of Philosophy?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Master of Design and Master of Fine Arts?",
+        "answer": "School of Natural Sciences"
     },
     {
-        "question": "What is the common ancestor of Bachelor of Business Administration and Bachelor of Arts?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Department of Pure Mathematics and Department of Cardiology?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of Bachelor of Engineering and Bachelor of Science?",
-        "answer": "Department of Aerospace Engineering"
+        "question": "What is the common ancestor of School of Health Sciences and School of Natural Sciences?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of Bachelor of Arts and Bachelor of Arts?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Department of Nutrition and Dietetics and Department of Digital Architecture?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of Department of Environmental Law and Department of Labor Law?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Department of Nutrition and Dietetics and Department of Architectural Visualization?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of Bachelor of Arts and Master of Engineering?",
-        "answer": "Department of Aerospace Engineering"
+        "question": "What is the common ancestor of Department of Architectural Visualization and Department of Digital Architecture?",
+        "answer": "School of Design and Planning"
     },
     {
-        "question": "What is the common ancestor of Department of Environmental Law and Department of Aerospace Engineering?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Bachelor of Technology and Bachelor of Technology?",
+        "answer": "Horizon University"
     }
 ]

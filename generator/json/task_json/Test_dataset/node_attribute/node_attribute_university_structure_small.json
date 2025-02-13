@@ -1,10 +1,18 @@
 [
     {
-        "question": "What is the name of the program in Department of Chemical Engineering?",
-        "answer": "Bachelor of Science"
+        "question": "What is the name of the program in Department of Film Studies?",
+        "answer": "Bachelor of Management Studies"
     },
     {
-        "question": "What is the name of the program in Department of Electrical Engineering?",
-        "answer": "Bachelor of Engineering"
+        "question": "What is the name of the program in Department of Creative Writing?",
+        "answer": "Bachelor of Design"
+    },
+    {
+        "question": "What is the name of the program in Department of Particle Physics?",
+        "answer": "Master of Design"
+    },
+    {
+        "question": "What is the name of the program in Department of Climate Science?",
+        "answer": "Bachelor of Design"
     }
 ]

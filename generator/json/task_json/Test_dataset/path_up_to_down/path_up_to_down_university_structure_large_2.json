@@ -1,54 +1,54 @@
 [
     {
-        "question": "What is the path from Faculty of Engineering down to Doctor of Philosophy?",
-        "answer": "Faculty of Engineering -> Department of Chemical Engineering -> Doctor of Philosophy"
+        "question": "What is the path from Horizon University down to School of Design and Planning?",
+        "answer": "Horizon University -> School of Design and Planning"
     },
     {
-        "question": "What is the path from Department of Civil Engineering down to Bachelor of Arts?",
-        "answer": "Department of Civil Engineering -> Bachelor of Arts"
+        "question": "What is the path from School of Natural Sciences down to Master of Design?",
+        "answer": "School of Natural Sciences -> Department of Biochemistry -> Master of Design"
     },
     {
-        "question": "What is the path from Faculty of Engineering down to Bachelor of Arts?",
-        "answer": "Faculty of Engineering -> Department of Environmental Law -> Bachelor of Arts"
+        "question": "What is the path from Horizon University down to Bachelor of Fine Arts?",
+        "answer": "Horizon University -> School of Health Sciences -> Department of Nutrition and Dietetics -> Bachelor of Fine Arts"
     },
     {
-        "question": "What is the path from City University down to Bachelor of Science?",
-        "answer": "City University -> Faculty of Engineering -> Department of Aerospace Engineering -> Bachelor of Science"
+        "question": "What is the path from School of Natural Sciences down to Master of Fine Arts?",
+        "answer": "School of Natural Sciences -> Department of Climate Science -> Master of Fine Arts"
     },
     {
-        "question": "What is the path from Faculty of Engineering down to Bachelor of Engineering?",
-        "answer": "Faculty of Engineering -> Department of Aerospace Engineering -> Bachelor of Engineering"
+        "question": "What is the path from School of Health Sciences down to Bachelor of Fine Arts?",
+        "answer": "School of Health Sciences -> Department of Cardiology -> Bachelor of Fine Arts"
     },
     {
-        "question": "What is the path from Department of Labor Law down to Doctor of Philosophy?",
-        "answer": "Department of Labor Law -> Doctor of Philosophy"
+        "question": "What is the path from Department of Nutrition and Dietetics down to Bachelor of Design?",
+        "answer": "Department of Nutrition and Dietetics -> Bachelor of Design"
     },
     {
-        "question": "What is the path from City University down to Bachelor of Arts?",
-        "answer": "City University -> Faculty of Engineering -> Department of Aerospace Engineering -> Bachelor of Arts"
+        "question": "What is the path from School of Natural Sciences down to Bachelor of Fine Arts?",
+        "answer": "School of Natural Sciences -> Department of Biochemistry -> Bachelor of Fine Arts"
     },
     {
-        "question": "What is the path from Department of Aerospace Engineering down to Doctor of Philosophy?",
-        "answer": "Department of Aerospace Engineering -> Doctor of Philosophy"
+        "question": "What is the path from School of Design and Planning down to Bachelor of Fine Arts?",
+        "answer": "School of Design and Planning -> Department of Architectural Visualization -> Bachelor of Fine Arts"
     },
     {
-        "question": "What is the path from City University down to Master of Engineering?",
-        "answer": "City University -> Faculty of Engineering -> Department of Labor Law -> Master of Engineering"
+        "question": "What is the path from Horizon University down to Department of Architectural Visualization?",
+        "answer": "Horizon University -> School of Design and Planning -> Department of Architectural Visualization"
     },
     {
-        "question": "What is the path from Faculty of Engineering down to Master of Arts?",
-        "answer": "Faculty of Engineering -> Department of Labor Law -> Master of Arts"
+        "question": "What is the path from Horizon University down to Master of Public Administration?",
+        "answer": "Horizon University -> School of Design and Planning -> Department of Digital Architecture -> Master of Public Administration"
     },
     {
-        "question": "What is the path from Department of Labor Law down to Master of Arts?",
-        "answer": "Department of Labor Law -> Master of Arts"
+        "question": "What is the path from Department of Digital Architecture down to Bachelor of Design?",
+        "answer": "Department of Digital Architecture -> Bachelor of Design"
     },
     {
-        "question": "What is the path from Faculty of Engineering down to Master of Science?",
-        "answer": "Faculty of Engineering -> Department of Environmental Law -> Master of Science"
+        "question": "What is the path from Department of Climate Science down to Bachelor of Fine Arts?",
+        "answer": "Department of Climate Science -> Bachelor of Fine Arts"
     },
     {
-        "question": "What is the path from Faculty of Engineering down to Department of Civil Engineering?",
-        "answer": "Faculty of Engineering -> Department of Civil Engineering"
+        "question": "What is the path from School of Natural Sciences down to Department of Particle Physics?",
+        "answer": "School of Natural Sciences -> Department of Particle Physics"
     }
 ]

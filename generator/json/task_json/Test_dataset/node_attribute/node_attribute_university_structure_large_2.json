@@ -1,48 +1,42 @@
 [
     {
-<<<<<<< HEAD
-        "question": "What is the name of the program in Department of Aerospace Engineering?",
-        "answer": "Bachelor of Engineering"
-=======
-        "question": "What is the name of the program in Department of Chemical Engineering?",
-        "answer": "Doctor of Philosophy"
+        "question": "What is the name of the program in Department of Physiotherapy?",
+        "answer": "Bachelor of Technology"
     },
     {
-        "question": "What is the name of the program in Department of Aerospace Engineering?",
-        "answer": "Doctor of Philosophy"
+        "question": "What is the name of the program in Department of Pure Mathematics?",
+        "answer": "Master of Design"
     },
     {
-        "question": "What is the name of the program in Department of Mechanical Engineering?",
-        "answer": "Master of Science"
->>>>>>> origin/main
+        "question": "What is the name of the program in Department of Digital Architecture?",
+        "answer": "Master of Public Administration"
     },
     {
-        "question": "What is the name of the program in Department of Environmental Law?",
-        "answer": "Master of Science"
+        "question": "What is the name of the program in Department of Furniture Design?",
+        "answer": "Doctor of Engineering"
     },
     {
-<<<<<<< HEAD
-        "question": "What is the name of the program in Department of Chemical Engineering?",
-        "answer": "Doctor of Philosophy"
+        "question": "What is the name of the program in Department of Nutrition and Dietetics?",
+        "answer": "Bachelor of Fine Arts"
     },
     {
-        "question": "What is the name of the program in Department of Mechanical Engineering?",
-        "answer": "Bachelor of Science"
+        "question": "What is the name of the program in Department of Climate Science?",
+        "answer": "Bachelor of Design"
     },
     {
-        "question": "What is the name of the program in Department of Labor Law?",
-        "answer": "Master of Arts"
+        "question": "What is the name of the program in Department of Biochemistry?",
+        "answer": "Bachelor of Technology"
     },
     {
-        "question": "What is the name of the program in Department of Civil Engineering?",
-        "answer": "Master of Science"
-=======
-        "question": "What is the name of the program in Department of Civil Engineering?",
-        "answer": "Master of Science"
+        "question": "What is the name of the program in Department of Particle Physics?",
+        "answer": "Bachelor of Management Studies"
     },
     {
-        "question": "What is the name of the program in Department of Labor Law?",
-        "answer": "Master of Engineering"
->>>>>>> origin/main
+        "question": "What is the name of the program in Department of Architectural Visualization?",
+        "answer": "Doctor of Engineering"
+    },
+    {
+        "question": "What is the name of the program in Department of Cardiology?",
+        "answer": "Bachelor of Fine Arts"
     }
 ]

@@ -1,25 +1,49 @@
 {
-    "University": "City University",
+    "University": "Horizon University",
     "Faculties": [
         {
-            "Faculty Name": "Faculty of Engineering",
+            "Faculty Name": "School of Natural Sciences",
             "Departments": [
                 {
-                    "Department Name": "Department of Electrical Engineering",
+                    "Department Name": "Department of Particle Physics",
                     "Programs": [
                         {
-                            "Program Name": "Bachelor of Engineering"
+                            "Program Name": "Master of Design"
                         }
                     ]
                 },
                 {
-                    "Department Name": "Department of Chemical Engineering",
+                    "Department Name": "Department of Climate Science",
                     "Programs": [
                         {
-                            "Program Name": "Bachelor of Science"
+                            "Program Name": "Master of Public Administration"
                         },
                         {
-                            "Program Name": "Master of Science"
+                            "Program Name": "Bachelor of Design"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Faculty Name": "School of Humanities",
+            "Departments": [
+                {
+                    "Department Name": "Department of Creative Writing",
+                    "Programs": [
+                        {
+                            "Program Name": "Bachelor of Design"
+                        }
+                    ]
+                },
+                {
+                    "Department Name": "Department of Film Studies",
+                    "Programs": [
+                        {
+                            "Program Name": "Bachelor of Management Studies"
+                        },
+                        {
+                            "Program Name": "Doctor of Engineering"
                         }
                     ]
                 }

@@ -1,45 +1,34 @@
 [
     {
-<<<<<<< HEAD
-        "question": "What is the path from Bachelor of Business Administration up to the City University?",
-        "answer": "Bachelor of Business Administration -> Department of Mechanical Engineering -> Faculty of Engineering"
+        "question": "What is the path from Master of Public Administration up to the Horizon University?",
+        "answer": "Master of Public Administration -> Department of Climate Science -> School of Natural Sciences"
     },
     {
-=======
->>>>>>> origin/main
-        "question": "What is the path from Master of Science up to the City University?",
-        "answer": "Master of Science -> Department of Mechanical Engineering -> Faculty of Engineering"
+        "question": "What is the path from Bachelor of Design up to the Horizon University?",
+        "answer": "Bachelor of Design -> Department of Climate Science -> School of Natural Sciences"
     },
     {
-<<<<<<< HEAD
-=======
-        "question": "What is the path from Doctor of Philosophy up to the City University?",
-        "answer": "Doctor of Philosophy -> Department of Electrical Engineering -> Faculty of Engineering"
+        "question": "What is the path from Master of Design up to the Horizon University?",
+        "answer": "Master of Design -> Department of Particle Physics -> School of Natural Sciences"
     },
     {
->>>>>>> origin/main
-        "question": "What is the path from Bachelor of Science up to the City University?",
-        "answer": "Bachelor of Science -> Department of Computer Engineering -> Faculty of Engineering"
+        "question": "What is the path from Bachelor of Fine Arts up to the Horizon University?",
+        "answer": "Bachelor of Fine Arts -> Department of Climate Science -> School of Natural Sciences"
     },
     {
-<<<<<<< HEAD
-        "question": "What is the path from Doctor of Philosophy up to the City University?",
-        "answer": "Doctor of Philosophy -> Department of Electrical Engineering -> Faculty of Engineering"
+        "question": "What is the path from Doctor of Engineering up to the Horizon University?",
+        "answer": "Doctor of Engineering -> Department of Marine Biology -> School of Natural Sciences"
     },
     {
-        "question": "What is the path from Bachelor of Engineering up to the City University?",
-        "answer": "Bachelor of Engineering -> Department of Electrical Engineering -> Faculty of Engineering"
-=======
-        "question": "What is the path from Bachelor of Business Administration up to the City University?",
-        "answer": "Bachelor of Business Administration -> Department of Mechanical Engineering -> Faculty of Engineering"
->>>>>>> origin/main
+        "question": "What is the path from Bachelor of Technology up to the Horizon University?",
+        "answer": "Bachelor of Technology -> Department of Marine Biology -> School of Natural Sciences"
     },
     {
-        "question": "What is the path from Master of Business Administration up to the City University?",
-        "answer": "Master of Business Administration -> Department of Computer Engineering -> Faculty of Engineering"
+        "question": "What is the path from Master of Technology up to the Horizon University?",
+        "answer": "Master of Technology -> Department of Architectural Visualization -> School of Design and Planning"
     },
     {
-        "question": "What is the path from Bachelor of Engineering up to the City University?",
-        "answer": "Bachelor of Engineering -> Department of Electrical Engineering -> Faculty of Engineering"
+        "question": "What is the path from Bachelor of Management Studies up to the Horizon University?",
+        "answer": "Bachelor of Management Studies -> Department of Marine Biology -> School of Natural Sciences"
     }
 ]

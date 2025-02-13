@@ -1,32 +1,54 @@
 [
     {
-<<<<<<< HEAD
-        "question": "How many Programs are there in Department of Electrical Engineering?",
-        "answer": "2"
-    },
-    {
-        "question": "How many Programs are there in Department of Mechanical Engineering?",
-        "answer": "2"
-    },
-    {
-=======
->>>>>>> origin/main
-        "question": "How many Departments are there in Faculty of Engineering?",
+        "question": "How many Departments are there in School of Design and Planning?",
         "answer": "3"
     },
     {
-<<<<<<< HEAD
-=======
-        "question": "How many Programs are there in Department of Mechanical Engineering?",
-        "answer": "2"
+        "question": "How many Departments are there in School of Natural Sciences?",
+        "answer": "4"
     },
     {
-        "question": "How many Programs are there in Department of Electrical Engineering?",
-        "answer": "2"
-    },
-    {
->>>>>>> origin/main
-        "question": "How many Programs are there in Department of Computer Engineering?",
+        "question": "How many Departments are there in School of Legal Studies?",
         "answer": "3"
+    },
+    {
+        "question": "How many Programs are there in Department of Public Health?",
+        "answer": "4"
+    },
+    {
+        "question": "How many Programs are there in Department of Particle Physics?",
+        "answer": "1"
+    },
+    {
+        "question": "How many Programs are there in Department of Marine Biology?",
+        "answer": "4"
+    },
+    {
+        "question": "How many Programs are there in Department of Climate Science?",
+        "answer": "4"
+    },
+    {
+        "question": "How many Programs are there in Department of Immigration Law?",
+        "answer": "4"
+    },
+    {
+        "question": "How many Programs are there in Department of Environmental Design?",
+        "answer": "3"
+    },
+    {
+        "question": "How many Programs are there in Department of Media and Entertainment Law?",
+        "answer": "3"
+    },
+    {
+        "question": "How many Programs are there in Department of Biochemistry?",
+        "answer": "1"
+    },
+    {
+        "question": "How many Programs are there in Department of Architectural Visualization?",
+        "answer": "4"
+    },
+    {
+        "question": "How many Programs are there in Department of Urban Design?",
+        "answer": "2"
     }
 ]

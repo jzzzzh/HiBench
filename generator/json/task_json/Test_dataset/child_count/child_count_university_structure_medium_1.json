@@ -1,80 +1,54 @@
 [
     {
-<<<<<<< HEAD
-        "question": "How many Students are there in Associate Professor Jordan Baker?",
-        "answer": "0"
-    },
-    {
-        "question": "How many Lecturers are there in Biochemistry?",
+        "question": "How many Programs are there in Department of Particle Physics?",
         "answer": "1"
     },
     {
-        "question": "How many Students are there in Lecturer Sebastian Rivera?",
+        "question": "How many Lecturers are there in Interior Space Planning?",
+        "answer": "1"
+    },
+    {
+        "question": "How many Students are there in Teaching Fellow Stella Henderson?",
         "answer": "0"
     },
     {
-        "question": "How many Departments are there in Faculty of Engineering?",
+        "question": "How many Programs are there in Department of Immigration Law?",
         "answer": "2"
     },
     {
-        "question": "How many Programs are there in Department of Mechanical Engineering?",
-=======
-        "question": "How many Lecturers are there in World History?",
->>>>>>> origin/main
+        "question": "How many Departments are there in School of Legal Studies?",
         "answer": "1"
     },
     {
-        "question": "How many Programs are there in Department of Electrical Engineering?",
-        "answer": "1"
-    },
-    {
-<<<<<<< HEAD
-        "question": "How many Students are there in Lecturer Elijah Brown?",
+        "question": "How many Students are there in Teaching Fellow Sadie Oliver?",
         "answer": "0"
     },
     {
-        "question": "How many Courses are there in Doctor of Philosophy?",
-=======
-        "question": "How many Departments are there in Faculty of Engineering?",
->>>>>>> origin/main
+        "question": "How many Courses are there in Master of Public Administration?",
+        "answer": "1"
+    },
+    {
+        "question": "How many Students are there in Teaching Fellow Kinsley Bishop?",
+        "answer": "0"
+    },
+    {
+        "question": "How many Courses are there in Master of Design?",
         "answer": "2"
     },
     {
-        "question": "How many Lecturers are there in Financial Accounting?",
-        "answer": "1"
-<<<<<<< HEAD
-=======
-    },
-    {
-        "question": "How many Students are there in Lecturer Elijah Brown?",
-        "answer": "0"
->>>>>>> origin/main
-    },
-    {
-        "question": "How many Courses are there in Bachelor of Engineering?",
-        "answer": "1"
-    },
-    {
-        "question": "How many Programs are there in Department of Mechanical Engineering?",
-        "answer": "1"
-<<<<<<< HEAD
-=======
-    },
-    {
-        "question": "How many Lecturers are there in Biochemistry?",
-        "answer": "1"
-    },
-    {
-        "question": "How many Students are there in Lecturer Sebastian Rivera?",
-        "answer": "0"
-    },
-    {
-        "question": "How many Courses are there in Doctor of Philosophy?",
+        "question": "How many Departments are there in School of Natural Sciences?",
         "answer": "2"
     },
     {
-        "question": "How many Students are there in Associate Professor Jordan Baker?",
-        "answer": "0"
->>>>>>> origin/main
+        "question": "How many Courses are there in Bachelor of Technology?",
+        "answer": "2"
+    },
+    {
+        "question": "How many Lecturers are there in International Human Rights Law?",
+        "answer": "2"
+    },
+    {
+        "question": "How many Programs are there in Department of Biochemistry?",
+        "answer": "1"
     }
 ]

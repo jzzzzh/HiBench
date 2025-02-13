@@ -1,42 +1,156 @@
 {
-    "University": "City University",
+    "University": "Horizon University",
     "Faculties": [
         {
-            "Faculty Name": "Faculty of Engineering",
+            "Faculty Name": "School of Natural Sciences",
             "Departments": [
                 {
-                    "Department Name": "Department of Electrical Engineering",
+                    "Department Name": "Department of Particle Physics",
                     "Programs": [
                         {
-                            "Program Name": "Bachelor of Engineering"
-                        },
-                        {
-                            "Program Name": "Doctor of Philosophy"
+                            "Program Name": "Master of Design"
                         }
                     ]
                 },
                 {
-                    "Department Name": "Department of Mechanical Engineering",
+                    "Department Name": "Department of Climate Science",
                     "Programs": [
                         {
-                            "Program Name": "Master of Science"
+                            "Program Name": "Master of Public Administration"
                         },
                         {
-                            "Program Name": "Bachelor of Business Administration"
+                            "Program Name": "Bachelor of Design"
+                        },
+                        {
+                            "Program Name": "Bachelor of Fine Arts"
+                        },
+                        {
+                            "Program Name": "Bachelor of Fine Arts"
                         }
                     ]
                 },
                 {
-                    "Department Name": "Department of Computer Engineering",
+                    "Department Name": "Department of Marine Biology",
                     "Programs": [
                         {
-                            "Program Name": "Bachelor of Science"
+                            "Program Name": "Bachelor of Management Studies"
                         },
                         {
-                            "Program Name": "Master of Business Administration"
+                            "Program Name": "Doctor of Engineering"
                         },
                         {
-                            "Program Name": "Master of Science"
+                            "Program Name": "Bachelor of Technology"
+                        },
+                        {
+                            "Program Name": "Bachelor of Design"
+                        }
+                    ]
+                },
+                {
+                    "Department Name": "Department of Biochemistry",
+                    "Programs": [
+                        {
+                            "Program Name": "Bachelor of Technology"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Faculty Name": "School of Legal Studies",
+            "Departments": [
+                {
+                    "Department Name": "Department of Immigration Law",
+                    "Programs": [
+                        {
+                            "Program Name": "Bachelor of Design"
+                        },
+                        {
+                            "Program Name": "Master of Public Administration"
+                        },
+                        {
+                            "Program Name": "Master of Public Administration"
+                        },
+                        {
+                            "Program Name": "Bachelor of Management Studies"
+                        }
+                    ]
+                },
+                {
+                    "Department Name": "Department of Media and Entertainment Law",
+                    "Programs": [
+                        {
+                            "Program Name": "Doctor of Engineering"
+                        },
+                        {
+                            "Program Name": "Doctor of Engineering"
+                        },
+                        {
+                            "Program Name": "Bachelor of Design"
+                        }
+                    ]
+                },
+                {
+                    "Department Name": "Department of Public Health",
+                    "Programs": [
+                        {
+                            "Program Name": "Master of Design"
+                        },
+                        {
+                            "Program Name": "Bachelor of Technology"
+                        },
+                        {
+                            "Program Name": "Bachelor of Design"
+                        },
+                        {
+                            "Program Name": "Bachelor of Fine Arts"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Faculty Name": "School of Design and Planning",
+            "Departments": [
+                {
+                    "Department Name": "Department of Architectural Visualization",
+                    "Programs": [
+                        {
+                            "Program Name": "Bachelor of Fine Arts"
+                        },
+                        {
+                            "Program Name": "Master of Technology"
+                        },
+                        {
+                            "Program Name": "Doctor of Engineering"
+                        },
+                        {
+                            "Program Name": "Master of Public Administration"
+                        }
+                    ]
+                },
+                {
+                    "Department Name": "Department of Urban Design",
+                    "Programs": [
+                        {
+                            "Program Name": "Bachelor of Management Studies"
+                        },
+                        {
+                            "Program Name": "Bachelor of Technology"
+                        }
+                    ]
+                },
+                {
+                    "Department Name": "Department of Environmental Design",
+                    "Programs": [
+                        {
+                            "Program Name": "Master of Technology"
+                        },
+                        {
+                            "Program Name": "Doctor of Engineering"
+                        },
+                        {
+                            "Program Name": "Master of Design"
                         }
                     ]
                 }

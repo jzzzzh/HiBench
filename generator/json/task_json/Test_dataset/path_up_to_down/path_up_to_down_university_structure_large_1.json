@@ -1,95 +1,54 @@
 [
     {
-<<<<<<< HEAD
-        "question": "What is the path from City University down to World History?",
-        "answer": "City University -> Faculty of Engineering -> Department of Mechanical Engineering -> Doctor of Philosophy -> World History"
+        "question": "What is the path from School of Natural Sciences down to Senior Lecturer Aria Beck?",
+        "answer": "School of Natural Sciences -> Department of Particle Physics -> Master of Design -> Interior Space Planning -> Senior Lecturer Aria Beck"
     },
     {
-        "question": "What is the path from Department of Mechanical Engineering down to Lecturer Sebastian Rivera?",
-        "answer": "Department of Mechanical Engineering -> Doctor of Philosophy -> World History -> Lecturer Sebastian Rivera"
+        "question": "What is the path from Department of Immigration Law down to Senior Lecturer Brooklyn Bradley?",
+        "answer": "Department of Immigration Law -> Master of Public Administration -> Interior Space Planning -> Senior Lecturer Brooklyn Bradley"
     },
     {
-        "question": "What is the path from Faculty of Engineering down to Iris Ortiz?",
-        "answer": "Faculty of Engineering -> Department of Mechanical Engineering -> Doctor of Philosophy -> Iris Ortiz"
+        "question": "What is the path from School of Legal Studies down to Visiting Professor Isabel Fordham?",
+        "answer": "School of Legal Studies -> Department of Immigration Law -> Bachelor of Technology -> Contemporary World Politics -> Visiting Professor Isabel Fordham"
     },
     {
-        "question": "What is the path from City University down to Lecturer Elijah Brown?",
-        "answer": "City University -> Faculty of Engineering -> Department of Electrical Engineering -> Bachelor of Engineering -> Financial Accounting -> Lecturer Elijah Brown"
+        "question": "What is the path from Bachelor of Technology down to Evangeline Maynard?",
+        "answer": "Bachelor of Technology -> Evangeline Maynard"
     },
     {
-        "question": "What is the path from Department of Mechanical Engineering down to World History?",
-        "answer": "Department of Mechanical Engineering -> Doctor of Philosophy -> World History"
+        "question": "What is the path from Horizon University down to Interior Space Planning?",
+        "answer": "Horizon University -> School of Natural Sciences -> Department of Particle Physics -> Master of Design -> Interior Space Planning"
     },
     {
-        "question": "What is the path from Faculty of Engineering down to Mila Reyes?",
-        "answer": "Faculty of Engineering -> Department of Electrical Engineering -> Bachelor of Engineering -> Mila Reyes"
+        "question": "What is the path from Bachelor of Technology down to Senior Lecturer Arabella Stevens?",
+        "answer": "Bachelor of Technology -> Inorganic Chemistry -> Senior Lecturer Arabella Stevens"
     },
     {
-        "question": "What is the path from City University down to Lecturer Sebastian Rivera?",
-        "answer": "City University -> Faculty of Engineering -> Department of Mechanical Engineering -> Doctor of Philosophy -> World History -> Lecturer Sebastian Rivera"
+        "question": "What is the path from Horizon University down to Senior Lecturer Arabella Stevens?",
+        "answer": "Horizon University -> School of Legal Studies -> Department of Immigration Law -> Bachelor of Technology -> Inorganic Chemistry -> Senior Lecturer Arabella Stevens"
     },
     {
-        "question": "What is the path from Doctor of Philosophy down to Elena Carter?",
-        "answer": "Doctor of Philosophy -> Elena Carter"
+        "question": "What is the path from School of Natural Sciences down to Teaching Fellow Kinsley Bishop?",
+        "answer": "School of Natural Sciences -> Department of Particle Physics -> Master of Design -> Interior Space Planning -> Teaching Fellow Kinsley Bishop"
     },
     {
-        "question": "What is the path from City University down to Associate Professor Jordan Baker?",
-        "answer": "City University -> Faculty of Engineering -> Department of Mechanical Engineering -> Doctor of Philosophy -> Biochemistry -> Associate Professor Jordan Baker"
+        "question": "What is the path from Horizon University down to Skylar Tate?",
+        "answer": "Horizon University -> School of Legal Studies -> Department of Immigration Law -> Bachelor of Technology -> Skylar Tate"
     },
     {
-        "question": "What is the path from Department of Electrical Engineering down to Lecturer Elijah Brown?",
-        "answer": "Department of Electrical Engineering -> Bachelor of Engineering -> Financial Accounting -> Lecturer Elijah Brown"
+        "question": "What is the path from Master of Design down to Interior Space Planning?",
+        "answer": "Master of Design -> Interior Space Planning"
     },
     {
-        "question": "What is the path from Faculty of Engineering down to Biochemistry?",
-        "answer": "Faculty of Engineering -> Department of Mechanical Engineering -> Doctor of Philosophy -> Biochemistry"
+        "question": "What is the path from Bachelor of Technology down to Skylar Tate?",
+        "answer": "Bachelor of Technology -> Skylar Tate"
     },
     {
-        "question": "What is the path from Faculty of Engineering down to Financial Accounting?",
-        "answer": "Faculty of Engineering -> Department of Electrical Engineering -> Bachelor of Engineering -> Financial Accounting"
+        "question": "What is the path from Horizon University down to Department of Biochemistry?",
+        "answer": "Horizon University -> School of Natural Sciences -> Department of Biochemistry"
     },
     {
-        "question": "What is the path from Bachelor of Engineering down to Lecturer Elijah Brown?",
-        "answer": "Bachelor of Engineering -> Financial Accounting -> Lecturer Elijah Brown"
-=======
-        "question": "What is the path from Department of Electrical Engineering down to Bachelor of Engineering?",
-        "answer": "Department of Electrical Engineering -> Department of Electrical Engineering -> Bachelor of Engineering"
-    },
-    {
-        "question": "What is the path from Faculty of Engineering down to Doctor of Philosophy?",
-        "answer": "Faculty of Engineering -> Faculty of Engineering -> Department of Mechanical Engineering -> Doctor of Philosophy"
-    },
-    {
-        "question": "What is the path from Department of Mechanical Engineering down to World History?",
-        "answer": "Department of Mechanical Engineering -> Department of Mechanical Engineering -> Doctor of Philosophy -> World History"
-    },
-    {
-        "question": "What is the path from Faculty of Engineering down to Department of Mechanical Engineering?",
-        "answer": "Faculty of Engineering -> Faculty of Engineering -> Department of Mechanical Engineering"
-    },
-    {
-        "question": "What is the path from Faculty of Engineering down to Department of Electrical Engineering?",
-        "answer": "Faculty of Engineering -> Faculty of Engineering -> Department of Electrical Engineering"
-    },
-    {
-        "question": "What is the path from Doctor of Philosophy down to Iris Ortiz?",
-        "answer": "Doctor of Philosophy -> Doctor of Philosophy -> Iris Ortiz"
-    },
-    {
-        "question": "What is the path from Faculty of Engineering down to Biochemistry?",
-        "answer": "Faculty of Engineering -> Faculty of Engineering -> Department of Mechanical Engineering -> Doctor of Philosophy -> Biochemistry"
-    },
-    {
-        "question": "What is the path from Faculty of Engineering down to Bachelor of Engineering?",
-        "answer": "Faculty of Engineering -> Faculty of Engineering -> Department of Electrical Engineering -> Bachelor of Engineering"
-    },
-    {
-        "question": "What is the path from Faculty of Engineering down to Mila Reyes?",
-        "answer": "Faculty of Engineering -> Faculty of Engineering -> Department of Electrical Engineering -> Bachelor of Engineering -> Mila Reyes"
-    },
-    {
-        "question": "What is the path from Department of Mechanical Engineering down to Biochemistry?",
-        "answer": "Department of Mechanical Engineering -> Department of Mechanical Engineering -> Doctor of Philosophy -> Biochemistry"
->>>>>>> origin/main
+        "question": "What is the path from Department of Immigration Law down to Master of Public Administration?",
+        "answer": "Department of Immigration Law -> Master of Public Administration"
     }
 ]

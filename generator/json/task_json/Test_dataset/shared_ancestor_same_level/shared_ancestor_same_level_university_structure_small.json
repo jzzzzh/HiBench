@@ -1,34 +1,54 @@
 [
     {
-        "question": "What is the common ancestor of Department of Electrical Engineering and Department of Chemical Engineering?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of School of Natural Sciences and School of Humanities?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of Bachelor of Science and Master of Science?",
-        "answer": "Department of Chemical Engineering"
+        "question": "What is the common ancestor of Department of Particle Physics and Department of Climate Science?",
+        "answer": "School of Natural Sciences"
     },
     {
-        "question": "What is the common ancestor of Bachelor of Engineering and Master of Science?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Bachelor of Management Studies and Master of Design?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of Bachelor of Science and Bachelor of Engineering?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Master of Design and Doctor of Engineering?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of Bachelor of Engineering and Bachelor of Science?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Bachelor of Design and Master of Design?",
+        "answer": "School of Natural Sciences"
     },
     {
-        "question": "What is the common ancestor of Department of Chemical Engineering and Department of Electrical Engineering?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Master of Public Administration and Bachelor of Design?",
+        "answer": "Department of Climate Science"
     },
     {
-        "question": "What is the common ancestor of Master of Science and Bachelor of Science?",
-        "answer": "Department of Chemical Engineering"
+        "question": "What is the common ancestor of Department of Climate Science and Department of Particle Physics?",
+        "answer": "School of Natural Sciences"
     },
     {
-        "question": "What is the common ancestor of Master of Science and Bachelor of Engineering?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of School of Humanities and School of Natural Sciences?",
+        "answer": "Horizon University"
+    },
+    {
+        "question": "What is the common ancestor of Department of Film Studies and Department of Creative Writing?",
+        "answer": "School of Humanities"
+    },
+    {
+        "question": "What is the common ancestor of Department of Particle Physics and Department of Creative Writing?",
+        "answer": "Horizon University"
+    },
+    {
+        "question": "What is the common ancestor of Department of Creative Writing and Department of Particle Physics?",
+        "answer": "Horizon University"
+    },
+    {
+        "question": "What is the common ancestor of Department of Film Studies and Department of Particle Physics?",
+        "answer": "Horizon University"
+    },
+    {
+        "question": "What is the common ancestor of Bachelor of Management Studies and Bachelor of Design?",
+        "answer": "Horizon University"
     }
 ]

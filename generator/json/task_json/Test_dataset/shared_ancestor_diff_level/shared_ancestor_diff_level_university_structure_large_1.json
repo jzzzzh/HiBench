@@ -1,63 +1,54 @@
 [
     {
-<<<<<<< HEAD
-        "question": "What is the common ancestor of City University and Department of Mechanical Engineering?",
-        "answer": "City University"
+        "question": "What is the common ancestor of School of Legal Studies and Interior Space Planning?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of City University and Faculty of Engineering?",
-        "answer": "City University"
+        "question": "What is the common ancestor of Horizon University and Inorganic Chemistry?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of Doctor of Philosophy and Biochemistry?",
-        "answer": "Doctor of Philosophy"
+        "question": "What is the common ancestor of Bachelor of Technology and Kaylee Schroeder?",
+        "answer": "Bachelor of Technology"
     },
     {
-        "question": "What is the common ancestor of Faculty of Engineering and Financial Accounting?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Department of Biochemistry and Teaching Fellow Stella Henderson?",
+        "answer": "School of Natural Sciences"
     },
     {
-        "question": "What is the common ancestor of Bachelor of Engineering and Mila Reyes?",
-        "answer": "Bachelor of Engineering"
+        "question": "What is the common ancestor of Department of Particle Physics and Master of Public Administration?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of Department of Electrical Engineering and Doctor of Philosophy?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Horizon University and Bachelor of Technology?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of Faculty of Engineering and Iris Ortiz?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Horizon University and Department of Immigration Law?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of Department of Mechanical Engineering and Doctor of Philosophy?",
-        "answer": "Department of Mechanical Engineering"
+        "question": "What is the common ancestor of Horizon University and Interior Space Planning?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of City University and Lecturer Elijah Brown?",
-        "answer": "City University"
+        "question": "What is the common ancestor of Horizon University and School of Legal Studies?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of City University and Elena Carter?",
-        "answer": "City University"
+        "question": "What is the common ancestor of Department of Immigration Law and Senior Lecturer Brooklyn Bradley?",
+        "answer": "Department of Immigration Law"
     },
     {
-        "question": "What is the common ancestor of Department of Mechanical Engineering and Mila Reyes?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Horizon University and Master of Public Administration?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of Elena Carter and Lecturer Elijah Brown?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Department of Particle Physics and Bachelor of Technology?",
+        "answer": "School of Natural Sciences"
     },
     {
-        "question": "What is the common ancestor of Doctor of Philosophy and Lecturer Sebastian Rivera?",
-        "answer": "Doctor of Philosophy"
-=======
-        "question": "What is the common ancestor of Department of Mechanical Engineering (Department) and Mila Reyes (Name)?",
-        "answer": "Faculty of Engineering"
-    },
-    {
-        "question": "What is the common ancestor of World History (Course) and Bachelor of Engineering (Program)?",
-        "answer": "Faculty of Engineering"
->>>>>>> origin/main
+        "question": "What is the common ancestor of Department of Particle Physics and Teaching Fellow Stella Henderson?",
+        "answer": "Department of Particle Physics"
     }
 ]

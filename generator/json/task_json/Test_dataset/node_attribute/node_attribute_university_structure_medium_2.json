@@ -1,14 +1,42 @@
 [
     {
-        "question": "What is the name of the program in Department of Computer Engineering?",
-        "answer": "Bachelor of Science"
+        "question": "What is the name of the program in Department of Media and Entertainment Law?",
+        "answer": "Doctor of Engineering"
     },
     {
-        "question": "What is the name of the program in Department of Mechanical Engineering?",
-        "answer": "Master of Science"
+        "question": "What is the name of the program in Department of Immigration Law?",
+        "answer": "Bachelor of Design"
     },
     {
-        "question": "What is the name of the program in Department of Electrical Engineering?",
-        "answer": "Doctor of Philosophy"
+        "question": "What is the name of the program in Department of Climate Science?",
+        "answer": "Bachelor of Fine Arts"
+    },
+    {
+        "question": "What is the name of the program in Department of Marine Biology?",
+        "answer": "Bachelor of Design"
+    },
+    {
+        "question": "What is the name of the program in Department of Architectural Visualization?",
+        "answer": "Doctor of Engineering"
+    },
+    {
+        "question": "What is the name of the program in Department of Public Health?",
+        "answer": "Master of Design"
+    },
+    {
+        "question": "What is the name of the program in Department of Particle Physics?",
+        "answer": "Master of Design"
+    },
+    {
+        "question": "What is the name of the program in Department of Urban Design?",
+        "answer": "Bachelor of Technology"
+    },
+    {
+        "question": "What is the name of the program in Department of Biochemistry?",
+        "answer": "Bachelor of Technology"
+    },
+    {
+        "question": "What is the name of the program in Department of Environmental Design?",
+        "answer": "Master of Design"
     }
 ]

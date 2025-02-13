@@ -1,54 +1,54 @@
 [
     {
-        "question": "What is the common ancestor of Faculty of Engineering and Department of Civil Engineering?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of School of Design and Planning and Department of Biochemistry?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of City University and Bachelor of Science?",
-        "answer": "City University"
+        "question": "What is the common ancestor of School of Natural Sciences and Department of Digital Architecture?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of City University and Faculty of Engineering?",
-        "answer": "City University"
+        "question": "What is the common ancestor of School of Natural Sciences and Department of Architectural Visualization?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of Department of Civil Engineering and Master of Arts?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Department of Cardiology and Bachelor of Fine Arts?",
+        "answer": "School of Health Sciences"
     },
     {
-        "question": "What is the common ancestor of Department of Mechanical Engineering and Bachelor of Arts?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Horizon University and School of Design and Planning?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of Department of Mechanical Engineering and Bachelor of Science?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Horizon University and School of Health Sciences?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of City University and Department of Civil Engineering?",
-        "answer": "City University"
+        "question": "What is the common ancestor of School of Design and Planning and Department of Architectural Visualization?",
+        "answer": "School of Design and Planning"
     },
     {
-        "question": "What is the common ancestor of Department of Chemical Engineering and Doctor of Philosophy?",
-        "answer": "Department of Chemical Engineering"
+        "question": "What is the common ancestor of Department of Digital Architecture and Master of Public Administration?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of City University and Master of Science?",
-        "answer": "City University"
+        "question": "What is the common ancestor of School of Natural Sciences and Department of Nutrition and Dietetics?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of Faculty of Engineering and Doctor of Philosophy?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Department of Furniture Design and Bachelor of Fine Arts?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of Faculty of Engineering and Department of Labor Law?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Horizon University and Bachelor of Design?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of Faculty of Engineering and Master of Arts?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Department of Architectural Visualization and Bachelor of Fine Arts?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of Department of Aerospace Engineering and Bachelor of Arts?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of School of Natural Sciences and Master of Public Administration?",
+        "answer": "School of Natural Sciences"
     }
 ]

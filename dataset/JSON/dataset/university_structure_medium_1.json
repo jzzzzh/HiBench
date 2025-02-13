@@ -1,67 +1,142 @@
 {
-    "University": "City University",
+    "University": "Horizon University",
     "Faculties": [
         {
-            "Faculty Name": "Faculty of Engineering",
+            "Faculty Name": "School of Natural Sciences",
             "Departments": [
                 {
-                    "Department Name": "Department of Electrical Engineering",
+                    "Department Name": "Department of Particle Physics",
                     "Programs": [
                         {
-                            "Program Name": "Bachelor of Engineering",
+                            "Program Name": "Master of Design",
                             "Courses": [
                                 {
-                                    "Course Name": "Financial Accounting",
+                                    "Course Name": "Interior Space Planning",
                                     "Lecturers": [
                                         {
-                                            "Name": "Lecturer Elijah Brown",
-                                            "Title": "Lecturer"
+                                            "Name": "Teaching Fellow Kinsley Bishop",
+                                            "Title": "Teaching Fellow"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Course Name": "Interior Space Planning",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Teaching Fellow Stella Henderson",
+                                            "Title": "Teaching Fellow"
+                                        },
+                                        {
+                                            "Name": "Senior Lecturer Aria Beck",
+                                            "Title": "Senior Lecturer"
                                         }
                                     ]
                                 }
                             ],
                             "Students": [
                                 {
-                                    "Name": "Mila Reyes",
-                                    "Student ID": "50165258"
+                                    "Name": "Kaylee Banks",
+                                    "Student ID": "54755530"
                                 }
                             ]
                         }
                     ]
                 },
                 {
-                    "Department Name": "Department of Mechanical Engineering",
+                    "Department Name": "Department of Biochemistry",
                     "Programs": [
                         {
-                            "Program Name": "Doctor of Philosophy",
+                            "Program Name": "Bachelor of Technology",
                             "Courses": [
                                 {
-                                    "Course Name": "Biochemistry",
+                                    "Course Name": "International Human Rights Law",
                                     "Lecturers": [
                                         {
-                                            "Name": "Associate Professor Jordan Baker",
-                                            "Title": "Associate Professor"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "Course Name": "World History",
-                                    "Lecturers": [
+                                            "Name": "Senior Lecturer Eliza Cross",
+                                            "Title": "Senior Lecturer"
+                                        },
                                         {
-                                            "Name": "Lecturer Sebastian Rivera",
-                                            "Title": "Lecturer"
+                                            "Name": "Senior Lecturer Brielle Chapman",
+                                            "Title": "Senior Lecturer"
                                         }
                                     ]
                                 }
                             ],
                             "Students": [
                                 {
-                                    "Name": "Iris Ortiz",
-                                    "Student ID": "87593586"
+                                    "Name": "Kaylee Schroeder",
+                                    "Student ID": "67835718"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Faculty Name": "School of Legal Studies",
+            "Departments": [
+                {
+                    "Department Name": "Department of Immigration Law",
+                    "Programs": [
+                        {
+                            "Program Name": "Master of Public Administration",
+                            "Courses": [
+                                {
+                                    "Course Name": "Interior Space Planning",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Senior Lecturer Brooklyn Bradley",
+                                            "Title": "Senior Lecturer"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "Students": [
+                                {
+                                    "Name": "Adelaide Patterson",
+                                    "Student ID": "09601061"
                                 },
                                 {
-                                    "Name": "Elena Carter",
-                                    "Student ID": "10679883"
+                                    "Name": "Carmen Fowler",
+                                    "Student ID": "15400991"
+                                }
+                            ]
+                        },
+                        {
+                            "Program Name": "Bachelor of Technology",
+                            "Courses": [
+                                {
+                                    "Course Name": "Contemporary World Politics",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Visiting Professor Isabel Fordham",
+                                            "Title": "Visiting Professor"
+                                        },
+                                        {
+                                            "Name": "Teaching Fellow Sadie Oliver",
+                                            "Title": "Teaching Fellow"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Course Name": "Inorganic Chemistry",
+                                    "Lecturers": [
+                                        {
+                                            "Name": "Senior Lecturer Arabella Stevens",
+                                            "Title": "Senior Lecturer"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "Students": [
+                                {
+                                    "Name": "Skylar Tate",
+                                    "Student ID": "94548305"
+                                },
+                                {
+                                    "Name": "Evangeline Maynard",
+                                    "Student ID": "17022379"
                                 }
                             ]
                         }

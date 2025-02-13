@@ -1,42 +1,54 @@
 [
     {
-        "question": "What is the path from Associate Professor Jordan Baker up to the City University?",
-        "answer": "Associate Professor Jordan Baker -> Biochemistry -> Doctor of Philosophy -> Department of Mechanical Engineering -> Faculty of Engineering"
+        "question": "What is the path from Kaylee Banks up to the Horizon University?",
+        "answer": "Kaylee Banks -> Master of Design -> Department of Particle Physics -> School of Natural Sciences"
     },
     {
-<<<<<<< HEAD
-        "question": "What is the path from Lecturer Sebastian Rivera up to the City University?",
-        "answer": "Lecturer Sebastian Rivera -> World History -> Doctor of Philosophy -> Department of Mechanical Engineering -> Faculty of Engineering"
+        "question": "What is the path from Teaching Fellow Stella Henderson up to the Horizon University?",
+        "answer": "Teaching Fellow Stella Henderson -> Interior Space Planning -> Master of Design -> Department of Particle Physics -> School of Natural Sciences"
     },
     {
-        "question": "What is the path from Elena Carter up to the City University?",
-        "answer": "Elena Carter -> Doctor of Philosophy -> Department of Mechanical Engineering -> Faculty of Engineering"
+        "question": "What is the path from Teaching Fellow Sadie Oliver up to the Horizon University?",
+        "answer": "Teaching Fellow Sadie Oliver -> Contemporary World Politics -> Bachelor of Technology -> Department of Immigration Law -> School of Legal Studies"
     },
     {
-        "question": "What is the path from Iris Ortiz up to the City University?",
-        "answer": "Iris Ortiz -> Doctor of Philosophy -> Department of Mechanical Engineering -> Faculty of Engineering"
-=======
-        "question": "What is the path from Iris Ortiz up to the City University?",
-        "answer": "Iris Ortiz -> Doctor of Philosophy -> Department of Mechanical Engineering -> Faculty of Engineering"
+        "question": "What is the path from Senior Lecturer Eliza Cross up to the Horizon University?",
+        "answer": "Senior Lecturer Eliza Cross -> International Human Rights Law -> Bachelor of Technology -> Department of Biochemistry -> School of Natural Sciences"
     },
     {
-        "question": "What is the path from Elena Carter up to the City University?",
-        "answer": "Elena Carter -> Doctor of Philosophy -> Department of Mechanical Engineering -> Faculty of Engineering"
->>>>>>> origin/main
+        "question": "What is the path from Skylar Tate up to the Horizon University?",
+        "answer": "Skylar Tate -> Bachelor of Technology -> Department of Immigration Law -> School of Legal Studies"
     },
     {
-        "question": "What is the path from Mila Reyes up to the City University?",
-        "answer": "Mila Reyes -> Bachelor of Engineering -> Department of Electrical Engineering -> Faculty of Engineering"
+        "question": "What is the path from Senior Lecturer Brooklyn Bradley up to the Horizon University?",
+        "answer": "Senior Lecturer Brooklyn Bradley -> Interior Space Planning -> Master of Public Administration -> Department of Immigration Law -> School of Legal Studies"
     },
     {
-        "question": "What is the path from Lecturer Elijah Brown up to the City University?",
-        "answer": "Lecturer Elijah Brown -> Financial Accounting -> Bachelor of Engineering -> Department of Electrical Engineering -> Faculty of Engineering"
-<<<<<<< HEAD
-=======
+        "question": "What is the path from Kaylee Schroeder up to the Horizon University?",
+        "answer": "Kaylee Schroeder -> Bachelor of Technology -> Department of Biochemistry -> School of Natural Sciences"
     },
     {
-        "question": "What is the path from Lecturer Sebastian Rivera up to the City University?",
-        "answer": "Lecturer Sebastian Rivera -> World History -> Doctor of Philosophy -> Department of Mechanical Engineering -> Faculty of Engineering"
->>>>>>> origin/main
+        "question": "What is the path from Senior Lecturer Brielle Chapman up to the Horizon University?",
+        "answer": "Senior Lecturer Brielle Chapman -> International Human Rights Law -> Bachelor of Technology -> Department of Biochemistry -> School of Natural Sciences"
+    },
+    {
+        "question": "What is the path from Carmen Fowler up to the Horizon University?",
+        "answer": "Carmen Fowler -> Master of Public Administration -> Department of Immigration Law -> School of Legal Studies"
+    },
+    {
+        "question": "What is the path from Evangeline Maynard up to the Horizon University?",
+        "answer": "Evangeline Maynard -> Bachelor of Technology -> Department of Immigration Law -> School of Legal Studies"
+    },
+    {
+        "question": "What is the path from Senior Lecturer Arabella Stevens up to the Horizon University?",
+        "answer": "Senior Lecturer Arabella Stevens -> Inorganic Chemistry -> Bachelor of Technology -> Department of Immigration Law -> School of Legal Studies"
+    },
+    {
+        "question": "What is the path from Senior Lecturer Aria Beck up to the Horizon University?",
+        "answer": "Senior Lecturer Aria Beck -> Interior Space Planning -> Master of Design -> Department of Particle Physics -> School of Natural Sciences"
+    },
+    {
+        "question": "What is the path from Adelaide Patterson up to the Horizon University?",
+        "answer": "Adelaide Patterson -> Master of Public Administration -> Department of Immigration Law -> School of Legal Studies"
     }
 ]

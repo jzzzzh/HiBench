@@ -1,103 +1,54 @@
 [
     {
-<<<<<<< HEAD
-=======
-        "question": "What is the common ancestor of Department of Electrical Engineering and Department of Mechanical Engineering?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Master of Public Administration and Master of Design?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of Lecturer Sebastian Rivera and Lecturer Elijah Brown?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Teaching Fellow Stella Henderson and Senior Lecturer Arabella Stevens?",
+        "answer": "Horizon University"
     },
     {
->>>>>>> origin/main
-        "question": "What is the common ancestor of Department of Mechanical Engineering and Department of Electrical Engineering?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Bachelor of Technology and Bachelor of Technology?",
+        "answer": "Horizon University"
     },
     {
-<<<<<<< HEAD
-        "question": "What is the common ancestor of Associate Professor Jordan Baker and Lecturer Elijah Brown?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Department of Biochemistry and Department of Immigration Law?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of Department of Electrical Engineering and Department of Mechanical Engineering?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of School of Natural Sciences and School of Legal Studies?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of Iris Ortiz and Biochemistry?",
-        "answer": "Doctor of Philosophy"
+        "question": "What is the common ancestor of School of Legal Studies and School of Natural Sciences?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of Lecturer Sebastian Rivera and Lecturer Elijah Brown?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Senior Lecturer Arabella Stevens and Teaching Fellow Stella Henderson?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of Financial Accounting and Mila Reyes?",
-        "answer": "Bachelor of Engineering"
+        "question": "What is the common ancestor of Interior Space Planning and Carmen Fowler?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of World History and Mila Reyes?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Master of Public Administration and Bachelor of Technology?",
+        "answer": "Department of Immigration Law"
     },
     {
-        "question": "What is the common ancestor of Bachelor of Engineering and Doctor of Philosophy?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Bachelor of Technology and Master of Design?",
+        "answer": "School of Natural Sciences"
     },
     {
-        "question": "What is the common ancestor of Mila Reyes and Elena Carter?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Senior Lecturer Eliza Cross and Senior Lecturer Arabella Stevens?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of Lecturer Elijah Brown and Lecturer Sebastian Rivera?",
-        "answer": "Faculty of Engineering"
-=======
-        "question": "What is the common ancestor of Bachelor of Engineering and Doctor of Philosophy?",
-        "answer": "Faculty of Engineering"
+        "question": "What is the common ancestor of Department of Immigration Law and Department of Biochemistry?",
+        "answer": "Horizon University"
     },
     {
-        "question": "What is the common ancestor of Mila Reyes and Elena Carter?",
-        "answer": "Faculty of Engineering"
-    },
-    {
-        "question": "What is the common ancestor of Biochemistry and Iris Ortiz?",
-        "answer": "Doctor of Philosophy"
-    },
-    {
-        "question": "What is the common ancestor of Elena Carter and Mila Reyes?",
-        "answer": "Faculty of Engineering"
-    },
-    {
-        "question": "What is the common ancestor of Doctor of Philosophy and Bachelor of Engineering?",
-        "answer": "Faculty of Engineering"
-    },
-    {
-        "question": "What is the common ancestor of Associate Professor Jordan Baker and Lecturer Sebastian Rivera?",
-        "answer": "Doctor of Philosophy"
->>>>>>> origin/main
-    },
-    {
-        "question": "What is the common ancestor of World History and Financial Accounting?",
-        "answer": "Faculty of Engineering"
-    },
-    {
-        "question": "What is the common ancestor of Lecturer Elijah Brown and Lecturer Sebastian Rivera?",
-        "answer": "Faculty of Engineering"
-    },
-    {
-        "question": "What is the common ancestor of Lecturer Sebastian Rivera and Associate Professor Jordan Baker?",
-        "answer": "Doctor of Philosophy"
-    },
-    {
-<<<<<<< HEAD
-        "question": "What is the common ancestor of Biochemistry and Elena Carter?",
-        "answer": "Doctor of Philosophy"
-    },
-    {
-        "question": "What is the common ancestor of Lecturer Elijah Brown and Associate Professor Jordan Baker?",
-        "answer": "Faculty of Engineering"
-=======
-        "question": "What is the common ancestor of Iris Ortiz and World History?",
-        "answer": "Doctor of Philosophy"
->>>>>>> origin/main
+        "question": "What is the common ancestor of Senior Lecturer Brielle Chapman and Teaching Fellow Kinsley Bishop?",
+        "answer": "School of Natural Sciences"
     }
 ]

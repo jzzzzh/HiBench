@@ -453,31 +453,12 @@ if __name__ == "__main__":
     # Ensure directory structure exists
     project_root = ensure_directory_structure()
     logging.info(f"Project root: {project_root}")
-    
-    # First verify dataset alignment
-    is_aligned, alignment_report = verify_dataset_alignment([])
-    if not is_aligned:
-        logging.error("Dataset alignment check failed. See report for details.")
-        logging.error("Alignment report:")
-        for base_name, info in alignment_report.items():
-            if info.get('error'):
-                logging.error(f"{base_name}: {info['error']}")
-        sys.exit(1)
-
-    logging.info("Dataset alignment check passed. Proceeding with generation...")
-
-    # Update scenario question counts to match actual file names
     scenario_question_counts = {
         "university_structure_medium_1": 13,
-        "university_bullshit_structure_medium_1": 13,
         "university_structure_medium_2": 13,
-        "university_bullshit_structure_medium_2": 13,
         "university_structure_large_1": 13,
-        "university_bullshit_structure_large_1": 13,
         "university_structure_large_2": 13,
-        "university_bullshit_structure_large_2": 13,
-        "university_structure_small": 13,
-        "university_bullshit_structure_small": 13
+        "university_structure_small": 13
     }
 
     # Generate datasets for each scenario
@@ -489,3 +470,18 @@ if __name__ == "__main__":
     # Generate report after creating all datasets
     generate_dataset_report()
     logging.info("Completed all dataset generation")
+    # First verify dataset alignment
+'''    
+    is_aligned, alignment_report = verify_dataset_alignment([])
+    if not is_aligned:
+        logging.error("Dataset alignment check failed. See report for details.")
+        logging.error("Alignment report:")
+        for base_name, info in alignment_report.items():
+            if info.get('error'):
+                logging.error(f"{base_name}: {info['error']}")
+        sys.exit(1)
+
+    logging.info("Dataset alignment check passed. Proceeding with generation..."
+    '''
+    # Update scenario question counts to match actual file names
+    

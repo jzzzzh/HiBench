@@ -1,58 +1,54 @@
 [
     {
-<<<<<<< HEAD
-        "question": "How many Programs are there in Department of Civil Engineering?",
-        "answer": "2"
-    },
-    {
-=======
->>>>>>> origin/main
-        "question": "How many Departments are there in Faculty of Engineering?",
-        "answer": "6"
-    },
-    {
-<<<<<<< HEAD
-        "question": "How many Programs are there in Department of Chemical Engineering?",
-        "answer": "1"
-    },
-    {
-        "question": "How many Programs are there in Department of Mechanical Engineering?",
-        "answer": "2"
-    },
-    {
-        "question": "How many Programs are there in Department of Aerospace Engineering?",
-        "answer": "6"
-    },
-    {
-        "question": "How many Programs are there in Department of Labor Law?",
+        "question": "How many Departments are there in School of Design and Planning?",
         "answer": "3"
     },
     {
-        "question": "How many Programs are there in Department of Environmental Law?",
-        "answer": "2"
-=======
-        "question": "How many Programs are there in Department of Environmental Law?",
-        "answer": "2"
+        "question": "How many Programs are there in Department of Architectural Visualization?",
+        "answer": "4"
     },
     {
-        "question": "How many Programs are there in Department of Mechanical Engineering?",
-        "answer": "2"
-    },
-    {
-        "question": "How many Programs are there in Department of Labor Law?",
+        "question": "How many Departments are there in School of Health Sciences?",
         "answer": "3"
     },
     {
-        "question": "How many Programs are there in Department of Aerospace Engineering?",
+        "question": "How many Programs are there in Department of Nutrition and Dietetics?",
         "answer": "6"
     },
     {
-        "question": "How many Programs are there in Department of Civil Engineering?",
+        "question": "How many Programs are there in Department of Physiotherapy?",
+        "answer": "4"
+    },
+    {
+        "question": "How many Departments are there in School of Natural Sciences?",
+        "answer": "4"
+    },
+    {
+        "question": "How many Programs are there in Department of Biochemistry?",
+        "answer": "5"
+    },
+    {
+        "question": "How many Programs are there in Department of Furniture Design?",
         "answer": "2"
     },
     {
-        "question": "How many Programs are there in Department of Chemical Engineering?",
-        "answer": "1"
->>>>>>> origin/main
+        "question": "How many Programs are there in Department of Digital Architecture?",
+        "answer": "4"
+    },
+    {
+        "question": "How many Programs are there in Department of Pure Mathematics?",
+        "answer": "2"
+    },
+    {
+        "question": "How many Programs are there in Department of Cardiology?",
+        "answer": "2"
+    },
+    {
+        "question": "How many Programs are there in Department of Climate Science?",
+        "answer": "5"
+    },
+    {
+        "question": "How many Programs are there in Department of Particle Physics?",
+        "answer": "6"
     }
 ]

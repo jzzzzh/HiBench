@@ -1,28 +1,18 @@
 [
     {
-<<<<<<< HEAD
-=======
-        "question": "List all Course in the City University.",
-        "answer": "Bachelor of Engineering, Doctor of Philosophy"
+        "question": "List all Program in the Horizon University.",
+        "answer": "Department of Particle Physics, Department of Biochemistry, Department of Immigration Law"
     },
     {
->>>>>>> origin/main
-        "question": "List all Lecturer in the City University.",
-        "answer": "Financial Accounting, Biochemistry, World History"
+        "question": "List all Lecturer in the Horizon University.",
+        "answer": "Interior Space Planning, Interior Space Planning, International Human Rights Law, Interior Space Planning, Contemporary World Politics, Inorganic Chemistry"
     },
     {
-        "question": "List all Student in the City University.",
-        "answer": "Lecturer Elijah Brown, Associate Professor Jordan Baker, Lecturer Sebastian Rivera"
+        "question": "List all Student in the Horizon University.",
+        "answer": "Teaching Fellow Kinsley Bishop, Teaching Fellow Stella Henderson, Senior Lecturer Aria Beck, Senior Lecturer Eliza Cross, Senior Lecturer Brielle Chapman, Senior Lecturer Brooklyn Bradley, Visiting Professor Isabel Fordham, Teaching Fellow Sadie Oliver, Senior Lecturer Arabella Stevens"
     },
     {
-<<<<<<< HEAD
-        "question": "List all Course in the City University.",
-        "answer": "Bachelor of Engineering, Doctor of Philosophy"
-    },
-    {
-=======
->>>>>>> origin/main
-        "question": "List all Program in the City University.",
-        "answer": "Department of Electrical Engineering, Department of Mechanical Engineering"
+        "question": "List all Course in the Horizon University.",
+        "answer": "Master of Design, Bachelor of Technology, Master of Public Administration, Bachelor of Technology"
     }
 ]

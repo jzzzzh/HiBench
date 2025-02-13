@@ -1,90 +1,54 @@
 [
     {
-<<<<<<< HEAD
-=======
-        "question": "What is the depth of Bachelor of Engineering in the City University? (starting from 0)",
+        "question": "What is the depth of Master of Design in the Horizon University? (starting from 0)",
         "answer": "3"
     },
     {
->>>>>>> origin/main
-        "question": "What is the depth of Bachelor of Arts in the City University? (starting from 0)",
+        "question": "What is the depth of Master of Public Administration in the Horizon University? (starting from 0)",
         "answer": "3"
     },
     {
-<<<<<<< HEAD
-        "question": "What is the depth of Department of Mechanical Engineering in the City University? (starting from 0)",
-        "answer": "2"
-=======
-        "question": "What is the depth of Master of Science in the City University? (starting from 0)",
+        "question": "What is the depth of Bachelor of Management Studies in the Horizon University? (starting from 0)",
         "answer": "3"
     },
     {
-        "question": "What is the depth of Doctor of Philosophy in the City University? (starting from 0)",
+        "question": "What is the depth of Bachelor of Technology in the Horizon University? (starting from 0)",
         "answer": "3"
     },
     {
-        "question": "What is the depth of Bachelor of Business Administration in the City University? (starting from 0)",
-        "answer": "3"
->>>>>>> origin/main
-    },
-    {
-        "question": "What is the depth of Department of Environmental Law in the City University? (starting from 0)",
+        "question": "What is the depth of Department of Cardiology in the Horizon University? (starting from 0)",
         "answer": "2"
     },
     {
-        "question": "What is the depth of Bachelor of Engineering in the City University? (starting from 0)",
+        "question": "What is the depth of Doctor of Engineering in the Horizon University? (starting from 0)",
         "answer": "3"
     },
     {
-<<<<<<< HEAD
-        "question": "What is the depth of Doctor of Philosophy in the City University? (starting from 0)",
-        "answer": "3"
-    },
-    {
-        "question": "What is the depth of Department of Civil Engineering in the City University? (starting from 0)",
-=======
-        "question": "What is the depth of Master of Engineering in the City University? (starting from 0)",
-        "answer": "3"
-    },
-    {
-        "question": "What is the depth of Department of Chemical Engineering in the City University? (starting from 0)",
->>>>>>> origin/main
+        "question": "What is the depth of Department of Architectural Visualization in the Horizon University? (starting from 0)",
         "answer": "2"
     },
     {
-        "question": "What is the depth of Faculty of Engineering in the City University? (starting from 0)",
+        "question": "What is the depth of School of Natural Sciences in the Horizon University? (starting from 0)",
         "answer": "1"
     },
     {
-<<<<<<< HEAD
-        "question": "What is the depth of Department of Aerospace Engineering in the City University? (starting from 0)",
+        "question": "What is the depth of Bachelor of Design in the Horizon University? (starting from 0)",
+        "answer": "3"
+    },
+    {
+        "question": "What is the depth of Bachelor of Fine Arts in the Horizon University? (starting from 0)",
+        "answer": "3"
+    },
+    {
+        "question": "What is the depth of Department of Furniture Design in the Horizon University? (starting from 0)",
         "answer": "2"
     },
     {
-        "question": "What is the depth of Master of Science in the City University? (starting from 0)",
-        "answer": "3"
-    },
-    {
-        "question": "What is the depth of Master of Engineering in the City University? (starting from 0)",
-        "answer": "3"
-    },
-    {
-        "question": "What is the depth of Bachelor of Science in the City University? (starting from 0)",
-        "answer": "3"
-    },
-    {
-        "question": "What is the depth of Department of Labor Law in the City University? (starting from 0)",
-=======
-        "question": "What is the depth of Department of Civil Engineering in the City University? (starting from 0)",
+        "question": "What is the depth of Department of Physiotherapy in the Horizon University? (starting from 0)",
         "answer": "2"
     },
     {
-        "question": "What is the depth of Department of Mechanical Engineering in the City University? (starting from 0)",
->>>>>>> origin/main
+        "question": "What is the depth of Department of Biochemistry in the Horizon University? (starting from 0)",
         "answer": "2"
-    },
-    {
-        "question": "What is the depth of Master of Arts in the City University? (starting from 0)",
-        "answer": "3"
     }
 ]
