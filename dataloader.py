@@ -239,12 +239,6 @@ class JSONPromptGenerator(PromptGenerator):
             PromptTemplate = PromptTemplate.replace('<JSON>', structure)
             PromptTemplate = PromptTemplate.replace('<QUESTION>', data['question'])
             TrueAnswer = data['true_answer']
-        elif self.sub_task == 'node_relationship':
-            OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['JSON']['Task']['node_relationship']['OutputFormatTemplate'])
-            PromptTemplate = self.config['JSON']['Task']['node_relationship']['PromptTemplate']
-            PromptTemplate = PromptTemplate.replace('<JSON>', structure)
-            PromptTemplate = PromptTemplate.replace('<QUESTION>', data['question'])
-            TrueAnswer = data['true_answer']
         elif self.sub_task == 'node_attribute':
             OutputFormatTemplate = OutputFormatTemplate.replace('<OUTPUTFORMATE>', self.config['JSON']['Task']['node_attribute']['OutputFormatTemplate'])
             PromptTemplate = self.config['JSON']['Task']['node_attribute']['PromptTemplate']
@@ -858,7 +852,6 @@ def test_json_dataloader():
         'child_count',
         'node_depth',
         'level_count',
-        'node_relationship',
         'level_nodes',
         'path_down_to_up',
         'path_up_to_down',

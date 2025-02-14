@@ -36,16 +36,6 @@ Generated on: 2025-02-12 22:57:11
 | level_count | university_bullshit_structure_large_1 | 2 |
 | level_count | university_structure_large_2 | 2 |
 | level_count | university_bullshit_structure_small | 2 |
-| node_relationship | university_structure_large_2 | 13 |
-| node_relationship | university_structure_medium_2 | 13 |
-| node_relationship | university_bullshit_structure_large_1 | 13 |
-| node_relationship | university_bullshit_structure_medium_1 | 13 |
-| node_relationship | university_bullshit_structure_medium_2 | 13 |
-| node_relationship | university_bullshit_structure_large_2 | 13 |
-| node_relationship | university_bullshit_structure_small | 13 |
-| node_relationship | university_structure_medium_1 | 13 |
-| node_relationship | university_structure_large_1 | 13 |
-| node_relationship | university_structure_small | 13 |
 | node_attribute | university_structure_medium_1 | 9 |
 | node_attribute | university_structure_large_1 | 11 |
 | node_attribute | university_bullshit_structure_medium_1 | 12 |
@@ -145,7 +135,6 @@ Total number of questions: 999
 | level_nodes | 22 |
 | node_attribute | 70 |
 | node_depth | 111 |
-| node_relationship | 130 |
 | path_between_nodes | 130 |
 | path_down_to_up | 64 |
 | path_up_to_down | 130 |

@@ -23,7 +23,6 @@ sys.path.append(project_root)
 import qa.child_count as type_1
 import qa.node_depth as type_2
 import qa.level_count as type_3
-import qa.node_relationship as type_4
 import qa.node_attribute as type_5
 import qa.level_nodes as type_6
 import qa.path_down_to_up as type_7
@@ -40,8 +39,6 @@ def generate_question_answer(scenario: str, question_type: int, with_answer: boo
             return type_2.gen_anwser_node_depth(scenario=scenario, with_answer=with_answer, layer_index=layer_index, get_available_layers_func=get_available_layers)
         elif question_type == 3:
             return type_3.gen_anwser_level_count(scenario=scenario, with_answer=with_answer, layer_index=layer_index, get_available_layers_func=get_available_layers)
-        elif question_type == 4:
-            return type_4.gen_answer_node_relationship(scenario, with_answer=with_answer, get_available_layers_func=get_available_layers)
         elif question_type == 5:
             return type_5.gen_answer_node_attribute(scenario, with_answer=with_answer, get_available_layers_func=get_available_layers)
         elif question_type == 6:
@@ -126,7 +123,6 @@ def get_question_type_name(question_type: int) -> str:
         1: "child_count",
         2: "node_depth",
         3: "level_count",
-        4: "node_relationship",
         5: "node_attribute",
         6: "level_nodes",
         7: "path_down_to_up",
@@ -365,7 +361,7 @@ def generate_dataset_report():
 
     # Collect statistics
     question_types = [
-        'child_count', 'node_depth', 'level_count', 'node_relationship',
+        'child_count', 'node_depth', 'level_count',
         'node_attribute', 'level_nodes', 'path_down_to_up', 'path_up_to_down',
         'shared_ancestor_same_level', 'shared_ancestor_diff_level', 'path_between_nodes'
     ]

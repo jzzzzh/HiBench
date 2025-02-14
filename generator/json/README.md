@@ -27,14 +27,6 @@ def gen_anwser_level_count(scenario:str) -> str,int
   return question, anwser
 
 
-*NodeRelationship*: "Does Dr. Peter teach Student Jason?"
-*Direction*: Relationship between two nodes.
-python
-def gen_anwser_node_relationship(scenario:str) -> str,int
-  random Node_1
-  random Node_2 -> Node_1
-  return question, anwser
-
 
 *NodeAttribute*: "What is the university name?"
 *Direction*: What info is on leaf x.
