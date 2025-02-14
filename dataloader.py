@@ -916,12 +916,12 @@ def test_dataloader():
     # args = {'Task': 'Formula', 'SubTask': 'convert', 'Symbol_Mode': 'easy', 'Value_Mode':'easy', 'Length_Mode':'easy', 'format1':'infix', 'format2':'postfix', 'ExampleType':'FewShot'}
     #args = {'Task': 'Formula', 'SubTask': 'equivalent', 'Symbol_Mode': 'easy', 'Value_Mode':'easy', 'Length_Mode':'easy', 'format1':'infix', 'format2':'postfix', 'ExampleType':'FewShot'}
     # args = {'Task': 'Formula', 'SubTask': 'calculate', 'Symbol_Mode': 'easy', 'Value_Mode':'easy', 'Length_Mode':'easy', 'format':'infix', 'ExampleType':'FewShot'}
-    # args = {'Task': 'Paper', 'SubTask': 'contextual_qa', 'Mode': 'dev', 'ExampleType':'OneShot'}
+    args = {'Task': 'Paper', 'SubTask': 'contextual_qa', 'Mode': 'dev', 'ExampleType':'OneShot'}
     # args = {'Task': 'Fundamental', 'TreeType': 'binary', 'SubTask': 'infix_traversal', 'InputMode': 'hierarchy', 'balance': 'unbalanced', 'weight':'unweighted', 'difficulty':'easy', 'ExampleType':'FewShot'}
-    data_loader = HibenchDataLoder(args)
+    data_loader = HibenchDataLoader(args)
     data = data_loader.load_data()
     print(data[0])
-    test_json_dataset()
+    # test_json_dataset()
 
 if __name__ == '__main__':
     print("This is dataloader.py")
