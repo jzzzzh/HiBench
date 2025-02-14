@@ -226,7 +226,7 @@ def gen_all_datasets():
     value_complexity_list = ["easy", "easy_float", "medium", "medium_float", "hard", "hard_float"]
     length_list = ["easy", "medium", "hard"]
     num_samples = formula_config.formula_config["dataset_size"]
-    save_path = "./dataset/Formula/" 
+    save_path = "./dataset/Formula_tune/" 
     for symbol_complexity in symbol_complexity_list:
         for value_complexity in value_complexity_list:
             for length in length_list:

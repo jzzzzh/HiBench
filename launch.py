@@ -1,7 +1,7 @@
 import itertools
 import time
 import os
-
+import random
 import torch
 
 from dataloader import *
@@ -65,7 +65,7 @@ class ArgumentGenerator:
     def generate_json_eval(self, ExampleType='ALL', SubTask='ALL', Domain='ALL'):
         json_parameter = {
             'Task': 'JSON',
-            'SubTask': ['child_count', 'node_depth', 'level_count', 'node_relationship', 'node_attribute', 'level_nodes', 'path_down_to_up', 'path_up_to_down', 'shared_ancestor_same_level', 'shared_ancestor_diff_level', 'path_between_nodes'],
+            'SubTask': ['child_count', 'node_depth', 'level_count', 'node_attribute', 'level_nodes', 'path_down_to_up', 'path_up_to_down', 'shared_ancestor_same_level', 'shared_ancestor_diff_level', 'path_between_nodes'],
             'Domain': ['university_structure_large_1', 'university_structure_large_2', 'university_structure_medium_1', 'university_structure_medium_2', 'university_structure_small','university_bullshit_structure_large_1', 'university_bullshit_structure_medium_1', 'university_bullshit_structure_large_2', 'university_bullshit_structure_medium_2', 'university_bullshit_structure_small'],
             'ExampleType': ['ZeroShot', 'FewShot', 'OneShot']
         }
@@ -161,6 +161,7 @@ class ArgumentGenerator:
         return EvalList
     
     def test_dataloader(self, Task_list = ['Fundamental', 'Code', 'JSON', 'Formula', 'Paper'], num_samples=None):
+        question_num = 0
         logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
         logger = logging.getLogger(__name__)
         if 'Fundamental' in Task_list:
@@ -168,15 +169,18 @@ class ArgumentGenerator:
             logger.info("check fundamental dataloader")
             for Eval in tqdm(EvalList):
                 Hibenchdataloader = HibenchDataLoader(Eval)
-                Hibenchdataloader.load_data(num_samples=num_samples)
-                assert len(data) == num_samples
+                data = Hibenchdataloader.load_data(num_samples=num_samples)
+                question_num += len(data)
+                if num_samples is not None:
+                    assert len(data) == num_samples
             logger.info("fundamental pass")
         if 'Code' in Task_list:
-            EvalList = self.generate_code_eval(num_samples=num_samples)
+            EvalList = self.generate_code_eval()
             logger.info("check code dataloader")
             for Eval in tqdm(EvalList):
                 Hibenchdataloader = HibenchDataLoader(Eval)
                 data = Hibenchdataloader.load_data(num_samples=num_samples)
+                question_num += len(data)
                 if num_samples is not None:
                     assert len(data) == num_samples
             logger.info("code pass")
@@ -186,6 +190,7 @@ class ArgumentGenerator:
             for Eval in tqdm(EvalList):
                 Hibenchdataloader = HibenchDataLoader(Eval)
                 data = Hibenchdataloader.load_data(num_samples=num_samples)
+                question_num += len(data)
                 if num_samples is not None:
                     assert len(data) == num_samples
             logger.info("json pass")
@@ -195,6 +200,7 @@ class ArgumentGenerator:
             for Eval in tqdm(EvalList):
                 Hibenchdataloader = HibenchDataLoader(Eval)
                 data = Hibenchdataloader.load_data(num_samples=num_samples)
+                question_num += len(data)
                 if num_samples is not None:
                     assert len(data) == num_samples
             logger.info("formula pass")
@@ -204,10 +210,54 @@ class ArgumentGenerator:
             for Eval in tqdm(EvalList):
                 Hibenchdataloader = HibenchDataLoader(Eval)
                 data = Hibenchdataloader.load_data(num_samples=num_samples)
+                question_num += len(data)
                 if num_samples is not None:
                     assert len(data) == num_samples
             logger.info("paper pass")
+        logger.info(f"Total question number: {question_num}")
 
+    def gen_prompt_json_file(self, Task_list = ['Fundamental', 'Code', 'JSON', 'Formula', 'Paper'], num_samples=None, file_type = "finetune", filename='prompt.json', max_question_num=None):
+        data = list()
+        logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+        logger = logging.getLogger(__name__)
+        if 'Fundamental' in Task_list:
+            EvalList = self.generate_fundamental_eval()
+            for Eval in tqdm(EvalList):
+                Hibenchdataloader = HibenchDataLoader(Eval)
+                data += Hibenchdataloader.load_data(num_samples=num_samples)
+        if 'Code' in Task_list:
+            EvalList = self.generate_code_eval()
+            for Eval in tqdm(EvalList):
+                Hibenchdataloader = HibenchDataLoader(Eval)
+                data += Hibenchdataloader.load_data(num_samples=num_samples)
+        if 'JSON' in Task_list:
+            EvalList = self.generate_json_eval()
+            for Eval in tqdm(EvalList):
+                Hibenchdataloader = HibenchDataLoader(Eval)
+                data += Hibenchdataloader.load_data(num_samples=num_samples)
+        if 'Formula' in Task_list:
+            EvalList = self.generate_formula_eval()
+            for Eval in tqdm(EvalList):
+                Hibenchdataloader = HibenchDataLoader(Eval)
+                data += Hibenchdataloader.load_data(num_samples=num_samples)
+        if 'Paper' in Task_list:
+            EvalList = self.generate_paper_eval()
+            for Eval in tqdm(EvalList):
+                Hibenchdataloader = HibenchDataLoader(Eval)
+                data += Hibenchdataloader.load_data(num_samples=num_samples)
+        if file_type == "finetune":
+            finetune_list = list()
+            for da in data: 
+                finetune_list.append({"instruction": da['SystemPrompt']+da['UserPrompt'], "input":"" ,"output": "{\"answer\":" + da['TrueAnswer'] + "}"})
+            data = finetune_list
+        if max_question_num is not None:
+            random.shuffle(data)
+            data = data[:max_question_num]
+
+        with open(filename, 'w') as f:
+            json.dump(data, f)
+        logger.info(f"Prompt json file saved to {filename}")
+        
 def main():
     argument_generator = ArgumentGenerator()
     EvalList = argument_generator.generate_all_eval(Task_list = ['JSON'], ExampleType='ZeroShot')
@@ -254,11 +304,11 @@ def main():
                 continue
             Hibenchdataloader.save_data(data, model_name=model, args=Eval)
             print(f"Completed task: {Eval}")
-            
-            
-            
 
-None
+    return None
+            
+            
+        
 
 def Logo():
     colors = ["\033[91m", "\033[92m", "\033[93m", "\033[94m", "\033[95m"]
@@ -283,6 +333,6 @@ def Logo():
 
 if __name__ == '__main__':
     Logo()
-    main()
-    # argument_generator = ArgumentGenerator()
-    # argument_generator.test_dataloader(Task_list=['JSON'], num_samples=1)
+    # main()
+    argument_generator = ArgumentGenerator()
+    argument_generator.gen_prompt_json_file("Formula", max_question_num=100)

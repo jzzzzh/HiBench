@@ -20,6 +20,6 @@ formula_config = {
         "medium": 6,
         "hard": 9,
     },
-    "dataset_size": 31,
+    "dataset_size": 2,
 }
 
