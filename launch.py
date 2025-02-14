@@ -132,6 +132,7 @@ class ArgumentGenerator:
             'Task': 'Paper',
             'SubTask': ['contextual_qa', 'disordered_section', 'outline_extraction'],
             'Mode': ['dev', 'test'],
+            # 'Mode': ['train'],
             'ExampleType': ['ZeroShot', 'FewShot', 'OneShot']
         }
         if ExampleType != 'ALL':
@@ -248,9 +249,12 @@ class ArgumentGenerator:
         if file_type == "finetune":
             finetune_list = list()
             for da in data: 
-                finetune_list.append({"instruction": da['SystemPrompt']+da['UserPrompt'], "input":"" ,"output": "{\"answer\":" + da['TrueAnswer'] + "}"})
+                if "ans" in da['TrueAnswer']:
+                    finetune_list.append({"instruction": da['SystemPrompt']+da['UserPrompt'], "input":"" ,"output": da['TrueAnswer']})
+                else:
+                    finetune_list.append({"instruction": da['SystemPrompt']+da['UserPrompt'], "input":"" ,"output": "{\"answer\":" + da['TrueAnswer'] + "}"})
             data = finetune_list
-        if max_question_num is not None:
+        if max_question_num is not None and max_question_num < len(data):
             random.shuffle(data)
             data = data[:max_question_num]
 
@@ -335,4 +339,6 @@ def Logo():
 
 if __name__ == '__main__':
     Logo()
-    main()
+    # main()
+    argument_generator = ArgumentGenerator()
+    argument_generator.gen_prompt_json_file(Task_list = ['Paper'], filename='paper_prompt.json', max_question_num=100)
