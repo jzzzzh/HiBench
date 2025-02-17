@@ -23,9 +23,8 @@ def calculate_accuracy(result_path, task, subtask):
 
     
     result_path = os.path.join(result_path, task, subtask)
-    files = []# glob.glob(os.path.join(result_path, '*', '*', '*.json'))
+    files =  glob.glob(os.path.join(result_path, '*', '*', '*.json'))
     files += glob.glob(os.path.join(result_path, '*', '*.json'))
-    print(files)
     for file in files:
         eval_path = file.replace('.json', '.txt')
         with open(file, "r", encoding="utf-8") as f:
@@ -43,7 +42,6 @@ def calculate_accuracy(result_path, task, subtask):
             # <<<< Temp adaptation for represent_mode of fundamental tasks.
             correct_answers += float(evaluate(subtask, source=answer, target=ref, **kwargs))
         accuracy = correct_answers / total_questions if total_questions > 0 else 0
-
         with open(eval_path, "w", encoding="utf-8") as f:
             f.write(f"Total Questions: {total_questions}\n")
             f.write(f"Correct Answers: {correct_answers}\n")

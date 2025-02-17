@@ -54,6 +54,8 @@ class BasicEvaluator(object):
         if skip:
             source = re.sub(skip, '', source)
             target = re.sub(skip, '', target)
+        # print(source)
+        # print(target)
         if target == source or target in source:
             return True
         else:
