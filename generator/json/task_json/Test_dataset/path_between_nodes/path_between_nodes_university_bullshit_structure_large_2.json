@@ -2,103 +2,103 @@
     {
 <<<<<<< HEAD
         "question": "If someone wants to go from the program '21NZZkay' to the program 'T5my05vM', what path should they take?",
-        "answer": "21NZZkay \u2192 1ff3fAyp \u2192 yKTl1xcC \u2192 FCmrbVEa \u2192 T5my05vM"
+        "answer": "21NZZkay -> 1ff3fAyp -> yKTl1xcC -> FCmrbVEa -> T5my05vM"
     },
     {
         "question": "If someone wants to go from the program 'Ra2AjBbJ' to the program 'EOI0cbYc', what path should they take?",
-        "answer": "Ra2AjBbJ \u2192 1ff3fAyp \u2192 yKTl1xcC \u2192 ghMvE6PN \u2192 EOI0cbYc"
+        "answer": "Ra2AjBbJ -> 1ff3fAyp -> yKTl1xcC -> ghMvE6PN -> EOI0cbYc"
     },
     {
         "question": "If someone wants to go from the department 'rVWpI86u' to the program 'ClSHek7I', what path should they take?",
-        "answer": "rVWpI86u \u2192 yKTl1xcC \u2192 VRW0g2SB \u2192 ClSHek7I"
+        "answer": "rVWpI86u -> yKTl1xcC -> VRW0g2SB -> ClSHek7I"
     },
     {
         "question": "If someone wants to go from the program '21NZZkay' to the program 'sqhV9R6m', what path should they take?",
-        "answer": "21NZZkay \u2192 1ff3fAyp \u2192 yKTl1xcC \u2192 QJbIlBAY \u2192 sqhV9R6m"
+        "answer": "21NZZkay -> 1ff3fAyp -> yKTl1xcC -> QJbIlBAY -> sqhV9R6m"
     },
     {
         "question": "If someone wants to go from the faculty 'yKTl1xcC' to the program 'jwfzHuBJ', what path should they take?",
-        "answer": "yKTl1xcC \u2192 ghMvE6PN \u2192 jwfzHuBJ"
+        "answer": "yKTl1xcC -> ghMvE6PN -> jwfzHuBJ"
     },
     {
         "question": "If someone wants to go from the department 'QJbIlBAY' to the program 'OYXvstzT', what path should they take?",
-        "answer": "QJbIlBAY \u2192 yKTl1xcC \u2192 1ff3fAyp \u2192 OYXvstzT"
+        "answer": "QJbIlBAY -> yKTl1xcC -> 1ff3fAyp -> OYXvstzT"
     },
     {
         "question": "If someone wants to go from the program '21NZZkay' to the program 'HvBfIiMK', what path should they take?",
-        "answer": "21NZZkay \u2192 1ff3fAyp \u2192 yKTl1xcC \u2192 rVWpI86u \u2192 HvBfIiMK"
+        "answer": "21NZZkay -> 1ff3fAyp -> yKTl1xcC -> rVWpI86u -> HvBfIiMK"
     },
     {
         "question": "If someone wants to go from the department 'FCmrbVEa' to the program 'HvBfIiMK', what path should they take?",
-        "answer": "FCmrbVEa \u2192 yKTl1xcC \u2192 rVWpI86u \u2192 HvBfIiMK"
+        "answer": "FCmrbVEa -> yKTl1xcC -> rVWpI86u -> HvBfIiMK"
 =======
         "question": "If someone wants to go from the program 'jwfzHuBJ' to the faculty 'yKTl1xcC', what path should they take?",
-        "answer": "jwfzHuBJ \u2192 ghMvE6PN \u2192 yKTl1xcC"
+        "answer": "jwfzHuBJ -> ghMvE6PN -> yKTl1xcC"
     },
     {
         "question": "If someone wants to go from the program 'XNRKqTxv' to the department '1ff3fAyp', what path should they take?",
-        "answer": "XNRKqTxv \u2192 QJbIlBAY \u2192 yKTl1xcC \u2192 1ff3fAyp"
+        "answer": "XNRKqTxv -> QJbIlBAY -> yKTl1xcC -> 1ff3fAyp"
     },
     {
         "question": "If someone wants to go from the department 'QJbIlBAY' to the program 'wwqSjKiL', what path should they take?",
-        "answer": "QJbIlBAY \u2192 yKTl1xcC \u2192 1ff3fAyp \u2192 wwqSjKiL"
+        "answer": "QJbIlBAY -> yKTl1xcC -> 1ff3fAyp -> wwqSjKiL"
     },
     {
         "question": "If someone wants to go from the department 'rVWpI86u' to the program 'sqhV9R6m', what path should they take?",
-        "answer": "rVWpI86u \u2192 yKTl1xcC \u2192 QJbIlBAY \u2192 sqhV9R6m"
+        "answer": "rVWpI86u -> yKTl1xcC -> QJbIlBAY -> sqhV9R6m"
     },
     {
         "question": "If someone wants to go from the program 'jwfzHuBJ' to the department '1ff3fAyp', what path should they take?",
-        "answer": "jwfzHuBJ \u2192 ghMvE6PN \u2192 yKTl1xcC \u2192 1ff3fAyp"
+        "answer": "jwfzHuBJ -> ghMvE6PN -> yKTl1xcC -> 1ff3fAyp"
     },
     {
         "question": "If someone wants to go from the department 'FCmrbVEa' to the program 'yC7Sy36Z', what path should they take?",
-        "answer": "FCmrbVEa \u2192 yKTl1xcC \u2192 rVWpI86u \u2192 yC7Sy36Z"
+        "answer": "FCmrbVEa -> yKTl1xcC -> rVWpI86u -> yC7Sy36Z"
     },
     {
         "question": "If someone wants to go from the program 'yC7Sy36Z' to the program 'sqhV9R6m', what path should they take?",
-        "answer": "yC7Sy36Z \u2192 rVWpI86u \u2192 yKTl1xcC \u2192 QJbIlBAY \u2192 sqhV9R6m"
+        "answer": "yC7Sy36Z -> rVWpI86u -> yKTl1xcC -> QJbIlBAY -> sqhV9R6m"
     },
     {
         "question": "If someone wants to go from the program 'wwqSjKiL' to the faculty 'yKTl1xcC', what path should they take?",
-        "answer": "wwqSjKiL \u2192 1ff3fAyp \u2192 yKTl1xcC"
+        "answer": "wwqSjKiL -> 1ff3fAyp -> yKTl1xcC"
 >>>>>>> origin/main
     },
     {
         "question": "If someone wants to go from the department 'ghMvE6PN' to the program 'ClSHek7I', what path should they take?",
-        "answer": "ghMvE6PN \u2192 yKTl1xcC \u2192 VRW0g2SB \u2192 ClSHek7I"
+        "answer": "ghMvE6PN -> yKTl1xcC -> VRW0g2SB -> ClSHek7I"
     },
     {
 <<<<<<< HEAD
         "question": "If someone wants to go from the program 'sDEvmlNN' to the faculty 'yKTl1xcC', what path should they take?",
-        "answer": "sDEvmlNN \u2192 VRW0g2SB \u2192 yKTl1xcC"
+        "answer": "sDEvmlNN -> VRW0g2SB -> yKTl1xcC"
     },
     {
         "question": "If someone wants to go from the program 'Pkl9i2Y8' to the program 'jwfzHuBJ', what path should they take?",
-        "answer": "Pkl9i2Y8 \u2192 1ff3fAyp \u2192 yKTl1xcC \u2192 ghMvE6PN \u2192 jwfzHuBJ"
+        "answer": "Pkl9i2Y8 -> 1ff3fAyp -> yKTl1xcC -> ghMvE6PN -> jwfzHuBJ"
     },
     {
         "question": "If someone wants to go from the program 'XNRKqTxv' to the program 'jwfzHuBJ', what path should they take?",
-        "answer": "XNRKqTxv \u2192 QJbIlBAY \u2192 yKTl1xcC \u2192 ghMvE6PN \u2192 jwfzHuBJ"
+        "answer": "XNRKqTxv -> QJbIlBAY -> yKTl1xcC -> ghMvE6PN -> jwfzHuBJ"
     },
     {
         "question": "If someone wants to go from the faculty 'yKTl1xcC' to the program 'EOI0cbYc', what path should they take?",
-        "answer": "yKTl1xcC \u2192 ghMvE6PN \u2192 EOI0cbYc"
+        "answer": "yKTl1xcC -> ghMvE6PN -> EOI0cbYc"
 =======
         "question": "If someone wants to go from the program 'sqhV9R6m' to the program '21NZZkay', what path should they take?",
-        "answer": "sqhV9R6m \u2192 QJbIlBAY \u2192 yKTl1xcC \u2192 1ff3fAyp \u2192 21NZZkay"
+        "answer": "sqhV9R6m -> QJbIlBAY -> yKTl1xcC -> 1ff3fAyp -> 21NZZkay"
     },
     {
         "question": "If someone wants to go from the program 'sDEvmlNN' to the program 'DglKDdWv', what path should they take?",
-        "answer": "sDEvmlNN \u2192 VRW0g2SB \u2192 yKTl1xcC \u2192 1ff3fAyp \u2192 DglKDdWv"
+        "answer": "sDEvmlNN -> VRW0g2SB -> yKTl1xcC -> 1ff3fAyp -> DglKDdWv"
     },
     {
         "question": "If someone wants to go from the program 'XNRKqTxv' to the program 'sqhV9R6m', what path should they take?",
-        "answer": "XNRKqTxv \u2192 QJbIlBAY \u2192 sqhV9R6m"
+        "answer": "XNRKqTxv -> QJbIlBAY -> sqhV9R6m"
     },
     {
         "question": "If someone wants to go from the program 'sqhV9R6m' to the program 'ClSHek7I', what path should they take?",
-        "answer": "sqhV9R6m \u2192 QJbIlBAY \u2192 yKTl1xcC \u2192 VRW0g2SB \u2192 ClSHek7I"
+        "answer": "sqhV9R6m -> QJbIlBAY -> yKTl1xcC -> VRW0g2SB -> ClSHek7I"
 >>>>>>> origin/main
     }
 ]
