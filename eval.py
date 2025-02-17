@@ -23,7 +23,9 @@ def calculate_accuracy(result_path, task, subtask):
 
     
     result_path = os.path.join(result_path, task, subtask)
-    files = glob.glob(os.path.join(result_path, '*', '*', '*.json'))
+    files = []# glob.glob(os.path.join(result_path, '*', '*', '*.json'))
+    files += glob.glob(os.path.join(result_path, '*', '*.json'))
+    print(files)
     for file in files:
         eval_path = file.replace('.json', '.txt')
         with open(file, "r", encoding="utf-8") as f:
@@ -39,8 +41,7 @@ def calculate_accuracy(result_path, task, subtask):
             if subtask in ['add_node', 'remove_node', 'mirror_tree']:
                 kwargs = dict(represent_mode='edge') if 'InputMode_edge' in file else dict(represent_mode='hierarchy')
             # <<<< Temp adaptation for represent_mode of fundamental tasks.
-            if evaluate(subtask, source=answer, target=ref, **kwargs):
-                correct_answers += 1
+            correct_answers += float(evaluate(subtask, source=answer, target=ref, **kwargs))
         accuracy = correct_answers / total_questions if total_questions > 0 else 0
 
         with open(eval_path, "w", encoding="utf-8") as f:
