@@ -20,16 +20,17 @@
 
 ## Ability Dimensions
 
-### **Dimension A: Structural Modification**  
-_Adding, removing, or transforming nodes in a hierarchical structure._
-
-### **Dimension B: Relationship Awareness**  
+### **Dimension A: Relationship Awareness**  
 _Finding relationships or paths in a hierarchy._
 can be addressed by using partial structure information.
 
-### **Dimension C: Structural Understanding**  
+### **Dimension B: Structural Understanding**  
 _Traversing or comparing structures, checking properties, and enumerating._
 need to be addressed by using whole structure information, or cross structure.
+
+### **Dimension C: Structural Modification**  
+_Adding, removing, or transforming nodes in a hierarchical structure._
+
 
 ### **Dimension D: Analytical Reasoning**  
 _Performing mathematical or algorithmic complexity analyses._
@@ -40,35 +41,35 @@ _Reasoning about textual context and organizing paper sections._
 ---
 
 ## **Plain Structure (Fundamental)**
-- **add_node** → **A** (_Structural Modification_)  
-- **all_ancestor** → **B** (_Relationship Awareness_)  
-- **all_children** → **B** (_Relationship Awareness_)  
-- **common_ancestor** → **B** (_Relationship Awareness_)  
-- **isomorphic** → **C** (_Structural Understanding_)  
-- **remove_node** → **A** (_Structural Modification_)  
-- **node_depth** → **B** (_Relationship Awareness_)  
-- **leaf** → **B** (_Relationship Awareness_)  
-- **root** → **B** (_Relationship Awareness_)  
-- **balance** → **C** (_Structural Understanding_)  
-- **prefix_traversal** → **C** (_Structural Understanding_)  
-- **infix_traversal** → **C** (_Structural Understanding_)  
-- **postfix_traversal** → **C** (_Structural Understanding_)  
-- **traversal_order_verification** → **C** (_Structural Understanding_)  
-- **mirror_tree** → **A** (_Structural Modification_)  
+- **add_node** → **C** (_Structural Modification_)  
+- **all_ancestor** → **A** (_Relationship Awareness_)  
+- **all_children** → **A** (_Relationship Awareness_)  
+- **common_ancestor** → **A** (_Relationship Awareness_)  
+- **isomorphic** → **B** (_Structural Understanding_)  
+- **remove_node** → **C** (_Structural Modification_)  
+- **node_depth** → **A** (_Relationship Awareness_)  
+- **leaf** → **A** (_Relationship Awareness_)  
+- **root** → **A** (_Relationship Awareness_)  
+- **balance** → **B** (_Structural Understanding_)  
+- **prefix_traversal** → **B** (_Structural Understanding_)  
+- **infix_traversal** → **B** (_Structural Understanding_)  
+- **postfix_traversal** → **B** (_Structural Understanding_)  
+- **traversal_order_verification** → **B** (_Structural Understanding_)  
+- **mirror_tree** → **C** (_Structural Modification_)  
 
 ---
 
 ## **JSON**
-- **child_count** → **B** (_Relationship Awareness_)  
-- **node_depth** → **B** (_Relationship Awareness_)  
-- **level_count** → **C** (_Structural Understanding_)
-- **node_attribute** → **B** (_Relationship Awareness_)  
-- **level_nodes** → **C** (_Structural Understanding_)  
-- **path_down_to_up** → **B** (_Relationship Awareness_)  
-- **path_up_to_down** → **B** (_Relationship Awareness_)  
-- **shared_ancestor_same_level** → **B** (_Relationship Awareness_)  
-- **shared_ancestor_diff_level** → **B** (_Relationship Awareness_)  
-- **path_between_nodes** → **B** (_Relationship Awareness_)  
+- **child_count** → **A** (_Relationship Awareness_)  
+- **node_depth** → **A** (_Relationship Awareness_)  
+- **level_count** → **B** (_Structural Understanding_)
+- **node_attribute** → **A** (_Relationship Awareness_)  
+- **level_nodes** → **B** (_Structural Understanding_)  
+- **path_down_to_up** → **A** (_Relationship Awareness_)  
+- **path_up_to_down** → **A** (_Relationship Awareness_)  
+- **shared_ancestor_same_level** → **A** (_Relationship Awareness_)  
+- **shared_ancestor_diff_level** → **A** (_Relationship Awareness_)  
+- **path_between_nodes** → **A** (_Relationship Awareness_)  
 
 ### Task combine:
 - shared_ancestor_same_level → common ancestor
