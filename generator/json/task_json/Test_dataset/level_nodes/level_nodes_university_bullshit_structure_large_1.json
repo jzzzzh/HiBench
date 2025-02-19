@@ -1,28 +1,22 @@
 [
     {
-        "question": "List all Student in the DiNtnbut.",
+        "question": "List all Lecturers in the DiNtnbut.",
         "answer": "TTJBxEMN, ZFyEOdN1, DDn73D5P"
     },
     {
-<<<<<<< HEAD
-        "question": "List all Lecturer in the DiNtnbut.",
-        "answer": "T3VqTl8U, CCXyVyLw, RhIyMUpy"
-    },
-    {
-=======
->>>>>>> origin/main
-        "question": "List all Program in the DiNtnbut.",
+        "question": "List all Departments in the DiNtnbut.",
         "answer": "4qMs8IKh, wIzBTNMa"
     },
     {
-        "question": "List all Course in the DiNtnbut.",
-        "answer": "aPkmwYuZ, hy44QVkq"
-<<<<<<< HEAD
-=======
+        "question": "List all Courses in the DiNtnbut.",
+        "answer": "T3VqTl8U, CCXyVyLw, RhIyMUpy"
     },
     {
-        "question": "List all Lecturer in the DiNtnbut.",
-        "answer": "T3VqTl8U, CCXyVyLw, RhIyMUpy"
->>>>>>> origin/main
+        "question": "List all Students in the DiNtnbut.",
+        "answer": "QxLgi0KL, VEZiQqMw, rDVTXEo0"
+    },
+    {
+        "question": "List all Programs in the DiNtnbut.",
+        "answer": "aPkmwYuZ, hy44QVkq"
     }
 ]

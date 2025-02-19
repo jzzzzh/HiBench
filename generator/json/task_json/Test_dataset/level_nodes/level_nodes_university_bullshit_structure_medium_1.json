@@ -1,28 +1,22 @@
 [
     {
-        "question": "List all Course in the lmqKvj0m.",
+        "question": "List all Courses in the lmqKvj0m.",
+        "answer": "50zn6Nh4, 4TupuOZp, 1EsbG2Hy"
+    },
+    {
+        "question": "List all Programs in the lmqKvj0m.",
         "answer": "71QV2RZN, m7GU0Kal"
     },
     {
-<<<<<<< HEAD
-        "question": "List all Lecturer in the lmqKvj0m.",
-        "answer": "50zn6Nh4, 4TupuOZp, 1EsbG2Hy"
-    },
-    {
-=======
->>>>>>> origin/main
-        "question": "List all Program in the lmqKvj0m.",
+        "question": "List all Departments in the lmqKvj0m.",
         "answer": "eeFex1L5, HFQcs6vc"
     },
     {
-        "question": "List all Student in the lmqKvj0m.",
-        "answer": "y5GiriZT, ujkVtW7z, 0qRli6yq"
-<<<<<<< HEAD
-=======
+        "question": "List all Students in the lmqKvj0m.",
+        "answer": "gPM94KHF, kd8iLssX, K1xIPGN8"
     },
     {
-        "question": "List all Lecturer in the lmqKvj0m.",
-        "answer": "50zn6Nh4, 4TupuOZp, 1EsbG2Hy"
->>>>>>> origin/main
+        "question": "List all Lecturers in the lmqKvj0m.",
+        "answer": "y5GiriZT, ujkVtW7z, 0qRli6yq"
     }
 ]
