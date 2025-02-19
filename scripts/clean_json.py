@@ -14,27 +14,64 @@ def pluralize_content(text):
         "Student": "Students"
     }
     
-    # Split text into words
-    words = text.split()
+    # Convert text to lowercase for comparison
+    text_lower = text.lower()
+    result_words = []
     
-    # Process each word
-    for i, word in enumerate(words):
-        # Check if the word exactly matches any of our singular forms
+    for word in text.split():
+        word_lower = word.lower()
+        replaced = False
+        
         for singular, plural in replacements.items():
-            if word == singular:
-                words[i] = plural
+            if word_lower == singular.lower() or word_lower == plural.lower():
+                result_words.append(plural)
+                replaced = True
                 break
-            # Handle case where word starts with singular form (e.g., "Department of...")
-            elif word.startswith(singular) and not word.endswith('s'):
-                words[i] = word.replace(singular, plural, 1)
-                break
+        
+        if not replaced:
+            result_words.append(word)
     
-    # Rejoin the words
-    return ' '.join(words)
+    return ' '.join(result_words)
+def debug_question_matching(qa_path, results_path):
+    """Debug function to print normalized questions and their matches"""
+    # Read QA dataset
+    qa_data = {}
+    print("\nQA Dataset Questions:")
+    for filename in os.listdir(qa_path):
+        if filename.endswith('.json'):
+            with open(os.path.join(qa_path, filename), 'r', encoding='utf-8') as f:
+                qa_json = json.load(f)
+                for item in qa_json:
+                    if "question" in item:
+                        orig_question = item["question"]
+                        norm_question = normalize_question(orig_question)
+                        print(f"Original: {orig_question}")
+                        print(f"Normalized: {norm_question}")
+                        print(f"Answer: {item['answer']}\n")
+                        qa_data[norm_question] = item["answer"]
+
+    print("\nResults File Questions:")
+    for filename in os.listdir(results_path):
+        if filename.endswith('.json'):
+            with open(os.path.join(results_path, filename), 'r', encoding='utf-8') as f:
+                results_json = json.load(f)
+                for item in results_json:
+                    if "UserPrompt" in item:
+                        question = parse_question_from_user_prompt(item["UserPrompt"])
+                        if question:
+                            norm_question = normalize_question(question)
+                            print(f"Original: {question}")
+                            print(f"Normalized: {norm_question}")
+                            print(f"Found in QA: {norm_question in qa_data}")
+                            if norm_question in qa_data:
+                                print(f"QA Answer: {qa_data[norm_question]}\n")
 def normalize_question(question):
     """Normalize question by removing period, standardizing pluralization and whitespace"""
     # Remove trailing period and whitespace
     question = question.rstrip('.').strip()
+    
+    # Convert to lowercase for consistent matching
+    question = question.lower()
     
     # Standardize pluralization
     question = pluralize_content(question)
@@ -85,38 +122,129 @@ def check_question_matching_Results(qa_path, results_path):
                     return False
 
     return all_matched
-def extract_dataset_key(filename):
-    """Extract dataset key from filename"""
-    pattern = r"(university(?:_bullshit)?_structure_[^\.]+)"
-    match = re.search(pattern, filename)
-    if not match:
-        return None
+def extract_dataset_type(filename):
+    """Extract the dataset type from filename."""
+    # Pattern to match both regular files and task files
+    patterns = [
+        # For task files
+        r"Task_JSON_SubTask_(level_(?:count|nodes))_Domain_university(?:_bullshit)?_structure_(?:small|medium|large)(?:_\d+)?",
+        # For regular files
+        r"(level_(?:count|nodes))_university(?:_bullshit)?_structure_(?:small|medium|large)(?:_\d+)?"
+    ]
     
-    entire = match.group(1)
-    short_pattern = r"(university(?:_bullshit)?_structure_[a-zA-Z0-9]+)"
-    short_match = re.search(short_pattern, entire)
-    return short_match.group(1) if short_match else entire
+    for pattern in patterns:
+        match = re.search(pattern, filename)
+        if match:
+            # Get the type part (e.g., level_count_university_bullshit_structure_small)
+            base_match = match.group(1)
+            if "Domain_university" in filename:
+                # For task files, reconstruct the full type
+                structure_type = "bullshit_structure" if "bullshit" in filename else "structure"
+                size_match = re.search(r"structure_(small|medium|large(?:_\d+)?)", filename)
+                if size_match:
+                    size = size_match.group(1)
+                    return f"{base_match}_university_{structure_type}_{size}"
+            else:
+                # For regular files, use the full match
+                return match.group(0)
+    
+    # Add debug logging
+    logging.debug(f"No match found for filename: {filename}")
+    return None
+
+def test_extract_dataset_type():
+    """Test the dataset type extraction with various filenames"""
+    test_files = [
+        # Regular structure files
+        "level_count_university_structure_small.json",
+        "level_nodes_university_structure_medium_2.json",
+        "level_count_university_structure_large_2.json",
+        
+        # Bullshit structure files
+        "level_count_university_bullshit_structure_medium_2.json",
+        "level_nodes_university_bullshit_structure_small.json",
+        "level_count_university_bullshit_structure_large_2.json",
+        
+        # Task files - regular structure
+        "Task_JSON_SubTask_level_count_Domain_university_structure_small_ExampleType_ZeroShot_20250213_233628.json",
+        "Task_JSON_SubTask_level_nodes_Domain_university_structure_medium_2_ExampleType_ZeroShot_20250215_042943",
+        
+        # Task files - bullshit structure
+        "Task_JSON_SubTask_level_count_Domain_university_bullshit_structure_large_2_ExampleType_ZeroShot_20250215_042939.json",
+        "Task_JSON_SubTask_level_nodes_Domain_university_bullshit_structure_medium_2_ExampleType_ZeroShot_20250215_042943"
+    ]
+    
+    print("\nTesting dataset type extraction:")
+    for filename in test_files:
+        result = extract_dataset_type(filename)
+        print(f"\nFilename: {filename}")
+        print(f"Extracted type: {result}")
 
 def parse_question_from_user_prompt(user_prompt):
-    """Extract the question from UserPrompt"""
-    if "List " not in user_prompt:
-        return user_prompt
-        
-    start_marker = "List "
-    end_marker = "..\n"
+    """
+    Extract the question from UserPrompt in different formats.
 
-    start_index = user_prompt.find(start_marker)
-    if start_index == -1:
+    This function will:
+    1. Check if it's a "List all" question (e.g., "List all Program in the X..")
+    2. Otherwise, for question words like 'How many', 'What is', 'Who is', 'Where', etc.,
+       we look from that marker until we hit a question mark (?) or the string end.
+    3. We optionally allow a period and/or space or newline after the question mark.
+    4. Return the substring as the extracted question.
+    """
+    if not user_prompt:
         return None
+        
+    # -------------------------------
+    # 1) Check if it's a "List all" format
+    # -------------------------------
+    if "List " in user_prompt:
+        start_marker = "List "
+        # We'll accept up to TWO consecutive periods or the newline
+        potential_endings = ["..\n", "..", ".\n", "\n"]
+        
+        start_index = user_prompt.find(start_marker)
+        if start_index != -1:
+            # We'll try each potential ending in order
+            end_index = len(user_prompt)
+            for ending in potential_endings:
+                possible_end = user_prompt.find(ending, start_index)
+                if possible_end != -1:
+                    end_index = min(end_index, possible_end)
+            return user_prompt[start_index:end_index].strip(". \n")
 
-    end_index = user_prompt.find(end_marker, start_index)
-    if end_index == -1:
-        end_index = user_prompt.find(".", start_index)
+    # -------------------------------
+    # 2) Check for "How many" | "What is" | "Who is" | "Where" ...
+    # -------------------------------
+    question_markers = [
+        "How many", "What is", "Who is", "Which", "Where"
+    ]
+    for marker in question_markers:
+        if marker in user_prompt:
+            start_index = user_prompt.find(marker)
+            # We look for the question mark first
+            qm_index = user_prompt.find("?", start_index)
+            # If no question mark, fallback to period or end of string
+            if qm_index == -1:
+                qm_index = user_prompt.find(".", start_index)
+            if qm_index == -1:
+                qm_index = len(user_prompt)
+            
+            # Expand just beyond the question mark to catch a trailing period or space
+            end_index = qm_index + 1
+            if end_index < len(user_prompt) and user_prompt[end_index] in [".", " "]:
+                end_index += 1
+            
+            # If there's a newline afterwards, skip it too
+            if end_index < len(user_prompt) and user_prompt[end_index] in ["\n", "\r"]:
+                end_index += 1
+            
+            # Return the substring
+            return user_prompt[start_index:end_index].strip()
 
-    if end_index == -1:
-        end_index = len(user_prompt)
-
-    return user_prompt[start_index:end_index].strip()
+    # -------------------------------
+    # 3) Fallback if no recognized format
+    # -------------------------------
+    return None
 
 
 def load_folder_a_data(folder_a):
@@ -151,35 +279,48 @@ def update_results(qa_path, results_path, output_path):
     """Update TrueAnswer in results with answers from QA dataset"""
     logger = logging.getLogger()
     
-    # First check if all questions match
-    if not check_question_matching_Results(qa_path, results_path):
-        logger.error("Question matching check failed. Stopping update process.")
-        return False
-        
-    logger.info("All questions matched. Proceeding with updates...")
-    
     # Create output folder
     os.makedirs(output_path, exist_ok=True)
     
-    # Read QA dataset
+    # Read QA dataset organized by dataset type
     qa_data = {}
     for filename in os.listdir(qa_path):
         if filename.endswith('.json'):
-            with open(os.path.join(qa_path, filename), 'r', encoding='utf-8') as f:
-                qa_json = json.load(f)
-                for item in qa_json:
-                    if "question" in item:
-                        normalized_question = normalize_question(item["question"])
-                        qa_data[normalized_question] = item["answer"]
+            dataset_type = extract_dataset_type(filename)
+            if dataset_type:
+                logger.info(f"Loading QA data from {filename} with type {dataset_type}")
+                with open(os.path.join(qa_path, filename), 'r', encoding='utf-8') as f:
+                    qa_json = json.load(f)
+                    if dataset_type not in qa_data:
+                        qa_data[dataset_type] = {}
+                    
+                    for item in qa_json:
+                        if "question" in item:
+                            normalized_question = normalize_question(item["question"])
+                            qa_data[dataset_type][normalized_question] = item["answer"]
+            else:
+                logger.warning(f"Could not extract dataset type from QA file: {filename}")
 
     # Update results files
     for filename in os.listdir(results_path):
         if filename.endswith('.json'):
-            input_file = os.path.join(results_path, filename)
-            output_file = os.path.join(output_path, filename)
-            
-            with open(input_file, 'r', encoding='utf-8') as f:
-                results_json = json.load(f)
+            try:
+                dataset_type = extract_dataset_type(filename)
+                if not dataset_type:
+                    logger.warning(f"Could not extract dataset type from results file: {filename}")
+                    continue
+                
+                if dataset_type not in qa_data:
+                    logger.warning(f"No matching QA data found for dataset type: {dataset_type}")
+                    continue
+
+                input_file = os.path.join(results_path, filename)
+                output_file = os.path.join(output_path, filename)
+                
+                logger.info(f"Processing file {filename} with dataset type {dataset_type}")
+                
+                with open(input_file, 'r', encoding='utf-8') as f:
+                    results_json = json.load(f)
                 
                 # Update each result
                 for item in results_json:
@@ -187,13 +328,21 @@ def update_results(qa_path, results_path, output_path):
                         question = parse_question_from_user_prompt(item["UserPrompt"])
                         if question:
                             normalized_question = normalize_question(question)
-                            if normalized_question in qa_data:
-                                item["TrueAnswer"] = qa_data[normalized_question]
+                            if normalized_question in qa_data[dataset_type]:
+                                item["TrueAnswer"] = qa_data[dataset_type][normalized_question]
+                                logger.info(f"Updated question: {normalized_question}")
+                                logger.info(f"New TrueAnswer: {item['TrueAnswer']}")
+                            else:
+                                logger.warning(f"No match found for question '{normalized_question}' in dataset type {dataset_type}")
 
-            # Save updated results
-            with open(output_file, 'w', encoding='utf-8') as f:
-                json.dump(results_json, f, indent=4, ensure_ascii=False)
-            logger.info(f"Updated file saved: {output_file}")
+                # Save updated results
+                with open(output_file, 'w', encoding='utf-8') as f:
+                    json.dump(results_json, f, indent=4, ensure_ascii=False)
+                logger.info(f"Updated file saved: {output_file}")
+                
+            except Exception as e:
+                logger.error(f"Error processing file {filename}: {str(e)}")
+                continue
     
     return True
 
@@ -293,57 +442,76 @@ def process_nested_folders(qa_path, results_base_path, output_base_path):
     """Process all nested folders containing JSON files"""
     logger = logging.getLogger()
     
-    # Read QA dataset once
+    # Read QA dataset once, organized by dataset type
     qa_data = {}
     for filename in os.listdir(qa_path):
         if filename.endswith('.json'):
-            with open(os.path.join(qa_path, filename), 'r', encoding='utf-8') as f:
-                qa_json = json.load(f)
-                for item in qa_json:
-                    if "question" in item:
-                        normalized_question = normalize_question(item["question"])
-                        qa_data[normalized_question] = item["answer"]
-
-    def process_directory(current_path, relative_path=""):
-        """Recursively process directories and update JSON files"""
-        current_output_path = os.path.join(output_base_path, relative_path)
-        os.makedirs(current_output_path, exist_ok=True)
-        
-        for item in os.listdir(current_path):
-            item_path = os.path.join(current_path, item)
-            relative_item_path = os.path.join(relative_path, item)
-            
-            if os.path.isdir(item_path):
-                # Recursively process subdirectories
-                process_directory(item_path, relative_item_path)
-            elif item.endswith('.json'):
-                # Process JSON file
-                try:
-                    with open(item_path, 'r', encoding='utf-8') as f:
-                        results_json = json.load(f)
+            dataset_type = extract_dataset_type(filename)
+            if dataset_type:
+                logger.info(f"Loading QA data from {filename} with type {dataset_type}")
+                with open(os.path.join(qa_path, filename), 'r', encoding='utf-8') as f:
+                    qa_json = json.load(f)
+                    if dataset_type not in qa_data:
+                        qa_data[dataset_type] = {}
                     
-                    # Update each result
-                    for result_item in results_json:
-                        if "UserPrompt" in result_item:
-                            question = parse_question_from_user_prompt(result_item["UserPrompt"])
-                            if question:
-                                normalized_question = normalize_question(question)
-                                if normalized_question in qa_data:
-                                    result_item["TrueAnswer"] = qa_data[normalized_question]
-                                else:
-                                    logger.warning(f"No match found for question in {item_path}: {question}")
-                    
-                    # Save updated file
-                    output_file_path = os.path.join(current_output_path, item)
-                    with open(output_file_path, 'w', encoding='utf-8') as f:
-                        json.dump(results_json, f, indent=4, ensure_ascii=False)
-                    logger.info(f"Updated file saved: {output_file_path}")
-                    
-                except Exception as e:
-                    logger.error(f"Error processing file {item_path}: {str(e)}")
+                    for item in qa_json:
+                        if "question" in item:
+                            normalized_question = normalize_question(item["question"])
+                            qa_data[dataset_type][normalized_question] = item["answer"]
+            else:
+                logger.warning(f"Could not extract dataset type from QA file: {filename}")
 
     # Start processing from the base results path
-    process_directory(results_base_path)
+    process_directory(results_base_path, qa_data, output_base_path)
+
+def process_directory(current_path, qa_data, output_base_path, relative_path=""):
+    """Recursively process directories and update JSON files"""
+    logger = logging.getLogger()
+    current_output_path = os.path.join(output_base_path, relative_path)
+    os.makedirs(current_output_path, exist_ok=True)
+    
+    for item in os.listdir(current_path):
+        item_path = os.path.join(current_path, item)
+        relative_item_path = os.path.join(relative_path, item)
+        
+        if os.path.isdir(item_path):
+            process_directory(item_path, qa_data, output_base_path, relative_item_path)
+        elif item.endswith('.json'):
+            try:
+                dataset_type = extract_dataset_type(item)
+                if not dataset_type:
+                    logger.warning(f"Could not extract dataset type from results file: {item}")
+                    continue
+                
+                if dataset_type not in qa_data:
+                    logger.warning(f"No matching QA data found for dataset type: {dataset_type}")
+                    continue
+
+                logger.info(f"Processing file {item} with dataset type {dataset_type}")
+                
+                with open(item_path, 'r', encoding='utf-8') as f:
+                    results_json = json.load(f)
+                
+                for result_item in results_json:
+                    if "UserPrompt" in result_item:
+                        question = parse_question_from_user_prompt(result_item["UserPrompt"])
+                        if question:
+                            normalized_question = normalize_question(question)
+                            if normalized_question in qa_data[dataset_type]:
+                                result_item["TrueAnswer"] = qa_data[dataset_type][normalized_question]
+                                logger.info(f"Updated question: {normalized_question}")
+                                logger.info(f"New TrueAnswer: {result_item['TrueAnswer']}")
+                            else:
+                                logger.warning(f"No match found for question '{normalized_question}' in dataset type {dataset_type}")
+                
+                output_file_path = os.path.join(current_output_path, item)
+                with open(output_file_path, 'w', encoding='utf-8') as f:
+                    json.dump(results_json, f, indent=4, ensure_ascii=False)
+                logger.info(f"Updated file saved: {output_file_path}")
+                
+            except Exception as e:
+                logger.error(f"Error processing file {item_path}: {str(e)}")
+
 if __name__ == "__main__":
     logging.basicConfig(
         level=logging.INFO,
@@ -352,12 +520,17 @@ if __name__ == "__main__":
             logging.FileHandler('update_true_answers.log'),
             logging.StreamHandler()
         ]
-        )
-    corrected_QA_dataset_path = "/Users/youngj/Local/Project/HiBench/dataset/JSON/QA/level_nodes"
-    results_base_path = "/Users/youngj/Downloads/Results_3/JSON/level_nodes"
-    output_base_path = "/Users/youngj/Downloads/Results_3/JSON/updated_level_nodes"
+    )
+    
+    corrected_QA_dataset_path = "/Users/youngj/Local/Project/HiBench/dataset/JSON/QA/level_count"
+    results_base_path = "/Users/youngj/Downloads/Results_4/JSON/level_count"
+    output_base_path = "/Users/youngj/Downloads/Results_4/JSON/updated_level_count"
+    
+    # Add debug call before processing
+    #debug_question_matching(corrected_QA_dataset_path, results_base_path)
+    
     process_nested_folders(corrected_QA_dataset_path, results_base_path, output_base_path)
-
+    #update_results(corrected_QA_dataset_path, results_base_path, output_base_path)
     #correct_answers_QA_dataset(dataset_file_path, correct_QA, corrected_QA_dataset_path)
 
     #update_results(corrected_QA_dataset_path, result_file_path, output_results_folder_path)
