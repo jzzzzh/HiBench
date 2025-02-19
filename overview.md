@@ -20,11 +20,11 @@
 
 ## Ability Dimensions
 
-### **Dimension A: Relationship Awareness**  
+### **Dimension A: Local Relationship Awareness**  
 _Finding relationships or paths in a hierarchy._
 can be addressed by using partial structure information.
 
-### **Dimension B: Structural Understanding**  
+### **Dimension B: Global Relationship Awareness**  
 _Traversing or comparing structures, checking properties, and enumerating._
 need to be addressed by using whole structure information, or cross structure.
 
