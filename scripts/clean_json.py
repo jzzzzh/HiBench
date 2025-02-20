@@ -122,34 +122,24 @@ def check_question_matching_Results(qa_path, results_path):
                     return False
 
     return all_matched
-def extract_dataset_type(filename):
-    """Extract the dataset type from filename."""
-    # Pattern to match both regular files and task files
-    patterns = [
-        # For task files
-        r"Task_JSON_SubTask_(level_(?:count|nodes))_Domain_university(?:_bullshit)?_structure_(?:small|medium|large)(?:_\d+)?",
-        # For regular files
-        r"(level_(?:count|nodes))_university(?:_bullshit)?_structure_(?:small|medium|large)(?:_\d+)?"
-    ]
-    
-    for pattern in patterns:
-        match = re.search(pattern, filename)
-        if match:
-            # Get the type part (e.g., level_count_university_bullshit_structure_small)
-            base_match = match.group(1)
-            if "Domain_university" in filename:
-                # For task files, reconstruct the full type
-                structure_type = "bullshit_structure" if "bullshit" in filename else "structure"
-                size_match = re.search(r"structure_(small|medium|large(?:_\d+)?)", filename)
-                if size_match:
-                    size = size_match.group(1)
-                    return f"{base_match}_university_{structure_type}_{size}"
-            else:
-                # For regular files, use the full match
-                return match.group(0)
-    
-    # Add debug logging
-    logging.debug(f"No match found for filename: {filename}")
+def extract_dataset_info(filename):
+    """
+    Extract both the task type and dataset name from a filename.
+    Returns: tuple(task_type, dataset_name) or None if no match
+    """
+    # First try to match the task filename pattern
+    task_pattern = r"Task_JSON_SubTask_(level_(?:count|nodes))_Domain_(university(?:_bullshit)?_structure_(?:small|medium|large)(?:_\d+)?)"
+    match = re.search(task_pattern, filename)
+    if match:
+        return (match.group(1), match.group(2))
+        
+    # If not a task file, try to match the QA dataset pattern
+    qa_pattern = r"(level_(?:count|nodes))_(university(?:_bullshit)?_structure_(?:small|medium|large)(?:_\d+)?)"
+    match = re.search(qa_pattern, filename)
+    if match:
+        return (match.group(1), match.group(2))
+        
+    logging.warning(f"Could not extract dataset info from filename: {filename}")
     return None
 
 def test_extract_dataset_type():
@@ -442,75 +432,91 @@ def process_nested_folders(qa_path, results_base_path, output_base_path):
     """Process all nested folders containing JSON files"""
     logger = logging.getLogger()
     
-    # Read QA dataset once, organized by dataset type
-    qa_data = {}
+    # Read QA dataset once, organized by BOTH task type AND dataset name
+    qa_data = {}  # Structure: qa_data[task_type][dataset_name][normalized_question] = answer
     for filename in os.listdir(qa_path):
-        if filename.endswith('.json'):
-            dataset_type = extract_dataset_type(filename)
-            if dataset_type:
-                logger.info(f"Loading QA data from {filename} with type {dataset_type}")
-                with open(os.path.join(qa_path, filename), 'r', encoding='utf-8') as f:
-                    qa_json = json.load(f)
-                    if dataset_type not in qa_data:
-                        qa_data[dataset_type] = {}
+        if not filename.endswith('.json'):
+            continue
+            
+        dataset_info = extract_dataset_info(filename)
+        if not dataset_info:
+            logger.warning(f"Could not extract dataset info from QA file: {filename}")
+            continue
+            
+        task_type, dataset_name = dataset_info
+        if task_type not in qa_data:
+            qa_data[task_type] = {}
+        if dataset_name not in qa_data[task_type]:
+            qa_data[task_type][dataset_name] = {}
+            
+        # Load QA data
+        try:
+            with open(os.path.join(qa_path, filename), 'r', encoding='utf-8') as f:
+                qa_json = json.load(f)
+                for item in qa_json:
+                    if "question" in item:
+                        normalized_q = normalize_question(item["question"])
+                        qa_data[task_type][dataset_name][normalized_q] = item["answer"]
+                logger.info(f"Loaded QA data for {task_type}/{dataset_name} from {filename}")
+        except Exception as e:
+            logger.error(f"Error loading QA file {filename}: {str(e)}")
+
+    def process_directory(current_path, relative_path=""):
+        """Recursively process directories and update JSON files"""
+        current_output_path = os.path.join(output_base_path, relative_path)
+        os.makedirs(current_output_path, exist_ok=True)
+        
+        for item in os.listdir(current_path):
+            item_path = os.path.join(current_path, item)
+            relative_item_path = os.path.join(relative_path, item)
+            
+            if os.path.isdir(item_path):
+                process_directory(item_path, relative_item_path)
+            elif item.endswith('.json'):
+                try:
+                    # Extract both task type and dataset name
+                    dataset_info = extract_dataset_info(item)
+                    if not dataset_info:
+                        logger.warning(f"Could not extract dataset info from results file: {item}")
+                        continue
+                        
+                    task_type, dataset_name = dataset_info
+                    if task_type not in qa_data or dataset_name not in qa_data[task_type]:
+                        logger.warning(f"No QA data found for {task_type}/{dataset_name}")
+                        continue
+
+                    logger.info(f"Processing file {item} ({task_type}/{dataset_name})")
                     
-                    for item in qa_json:
-                        if "question" in item:
-                            normalized_question = normalize_question(item["question"])
-                            qa_data[dataset_type][normalized_question] = item["answer"]
-            else:
-                logger.warning(f"Could not extract dataset type from QA file: {filename}")
+                    # Process the results file
+                    with open(item_path, 'r', encoding='utf-8') as f:
+                        results_json = json.load(f)
+                    
+                    # Update each result
+                    for result_item in results_json:
+                        if "UserPrompt" in result_item:
+                            question = parse_question_from_user_prompt(result_item["UserPrompt"])
+                            if question:
+                                normalized_q = normalize_question(question)
+                                if normalized_q in qa_data[task_type][dataset_name]:
+                                    result_item["TrueAnswer"] = qa_data[task_type][dataset_name][normalized_q]
+                                    logger.info(f"Updated {task_type}/{dataset_name} question: {normalized_q}")
+                                    logger.info(f"New TrueAnswer: {result_item['TrueAnswer']}")
+                                else:
+                                    logger.warning(
+                                        f"No match for question in {task_type}/{dataset_name}: {normalized_q}"
+                                    )
+                    
+                    # Save updated file
+                    output_file_path = os.path.join(current_output_path, item)
+                    with open(output_file_path, 'w', encoding='utf-8') as f:
+                        json.dump(results_json, f, indent=4, ensure_ascii=False)
+                    logger.info(f"Saved updated file: {output_file_path}")
+                    
+                except Exception as e:
+                    logger.error(f"Error processing {item_path}: {str(e)}")
 
     # Start processing from the base results path
-    process_directory(results_base_path, qa_data, output_base_path)
-
-def process_directory(current_path, qa_data, output_base_path, relative_path=""):
-    """Recursively process directories and update JSON files"""
-    logger = logging.getLogger()
-    current_output_path = os.path.join(output_base_path, relative_path)
-    os.makedirs(current_output_path, exist_ok=True)
-    
-    for item in os.listdir(current_path):
-        item_path = os.path.join(current_path, item)
-        relative_item_path = os.path.join(relative_path, item)
-        
-        if os.path.isdir(item_path):
-            process_directory(item_path, qa_data, output_base_path, relative_item_path)
-        elif item.endswith('.json'):
-            try:
-                dataset_type = extract_dataset_type(item)
-                if not dataset_type:
-                    logger.warning(f"Could not extract dataset type from results file: {item}")
-                    continue
-                
-                if dataset_type not in qa_data:
-                    logger.warning(f"No matching QA data found for dataset type: {dataset_type}")
-                    continue
-
-                logger.info(f"Processing file {item} with dataset type {dataset_type}")
-                
-                with open(item_path, 'r', encoding='utf-8') as f:
-                    results_json = json.load(f)
-                
-                for result_item in results_json:
-                    if "UserPrompt" in result_item:
-                        question = parse_question_from_user_prompt(result_item["UserPrompt"])
-                        if question:
-                            normalized_question = normalize_question(question)
-                            if normalized_question in qa_data[dataset_type]:
-                                result_item["TrueAnswer"] = qa_data[dataset_type][normalized_question]
-                                logger.info(f"Updated question: {normalized_question}")
-                                logger.info(f"New TrueAnswer: {result_item['TrueAnswer']}")
-                            else:
-                                logger.warning(f"No match found for question '{normalized_question}' in dataset type {dataset_type}")
-                
-                output_file_path = os.path.join(current_output_path, item)
-                with open(output_file_path, 'w', encoding='utf-8') as f:
-                    json.dump(results_json, f, indent=4, ensure_ascii=False)
-                logger.info(f"Updated file saved: {output_file_path}")
-                
-            except Exception as e:
-                logger.error(f"Error processing file {item_path}: {str(e)}")
+    process_directory(results_base_path)
 
 if __name__ == "__main__":
     logging.basicConfig(
