@@ -33,8 +33,13 @@ def calculate_accuracy(result_path, task, subtask):
         correct_answers = 0
         for result in data:
             total_questions += 1
-            answer = str(result.get("response"))
-            ref    = str(result.get("TrueAnswer"))
+            answer = result.get("response", None)
+            ref    = result.get("TrueAnswer", None)
+            if answer:
+                answer = str(answer)
+                ref    = str(ref)
+            else:
+                continue
             # >>>> Temp adaptation for represent_mode of fundamental tasks.
             kwargs = dict()
             if subtask in ['add_node', 'remove_node', 'mirror_tree']:
