@@ -39,10 +39,13 @@ def collect(result_dir):
                     elif task == 'JSON':
                         params = {f'params_{i}': param_pairs[i] for i in range(0, len(param_pairs))}
                     elif task == 'Paper':
-                        params = dict()
-                        params['SubTask'] = '_'.join(param_pairs[1:3])
-                        params['Mode'] = param_pairs[4]
-                        params['Example'] = param_pairs[6]
+                        try:
+                            params = dict()
+                            params['SubTask'] = '_'.join(param_pairs[1:3])
+                            params['Mode'] = param_pairs[4]
+                            params['Example'] = param_pairs[6]
+                        except IndexError:
+                            params = {f'params_{i}': param_pairs[i] for i in range(0, len(param_pairs))}
                     elif task == 'Formula':
                         params = dict()
                         params['SubTask'] = param_pairs[1]
@@ -51,9 +54,11 @@ def collect(result_dir):
                         params['Length'] = param_pairs[10]
                         params['Format'] = '_'.join(param_pairs[11:-2])
                         params['Example'] = '_'.join(param_pairs[-2:])
-                    else:
+                    elif task == 'Code':
                         params = {param_pairs[i]: param_pairs[i + 1] for i in range(0, len(param_pairs), 2)}
                     # FUCK OFF
+                    else:
+                        raise ValueError(f'unknown task {task}')
                     accuracy = extract_accuracy(file_path)
                     entry = {
                         "Task": task,
