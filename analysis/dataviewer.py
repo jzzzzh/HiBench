@@ -2,11 +2,11 @@ import glob
 import os
 import pandas as pd
 
-files = glob.glob('./analysis/fine-results/*.csv')
+files = glob.glob('./analysis/format-results/*.csv')
 
 for file in files:
     print(f'processing: {file}')
-    save_path = file.replace('fine-results', 'dataview').replace('.csv', '.xlsx')
+    save_path = file.replace('format-results', 'dataview').replace('.csv', '.xlsx')
     
     os.makedirs(os.path.dirname(save_path), exist_ok=True)
     
