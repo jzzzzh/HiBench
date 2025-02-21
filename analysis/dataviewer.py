@@ -22,8 +22,8 @@ for file in files:
             if column != 'ExampleType':
                 df_temp = df[df['ExampleType'] == 'ZeroShot']
             if column != 'Accuracy' and unique_variants[column] > 1:
-                stats = df.groupby(column)['Accuracy'].agg(['mean', 'std'])
-                stats.columns = ['mean', 'std']
+                stats = df_temp.groupby(column)['Accuracy'].agg(['mean', 'std', 'count'])
+                stats.columns = ['mean', 'std', 'count']
                 param_stats[column] = stats
 
         for param, stats_df in param_stats.items():
