@@ -41,7 +41,13 @@ for file in files:
                 stats = df_temp.groupby(column)['Accuracy'].agg(['mean', 'std', 'count'])
                 stats.columns = ['mean', 'std', 'count']
                 param_stats[column] = stats
-        
+                # find maximum average accuracy per ModelFamily
+                if column == 'ModelFamily':
+                    avg_accuracy_per_model = df.groupby("ModelName")["Accuracy"].mean().reset_index()
+                    avg_accuracy_per_model = avg_accuracy_per_model.merge(df[["ModelName", "ModelFamily"]].drop_duplicates(), on="ModelName")
+                    avg_accuracy_per_model = avg_accuracy_per_model.groupby("ModelFamily")["Accuracy"].max().reset_index().rename(columns={'Accuracy': 'max'})
+                    param_stats[column] = param_stats[column].merge(avg_accuracy_per_model, on="ModelFamily")
+                    
         # Write each parameter's statistics to a separate sheet in the Excel file
         for param, stats_df in param_stats.items():
             stats_df.to_excel(writer, sheet_name=param, index=True)
