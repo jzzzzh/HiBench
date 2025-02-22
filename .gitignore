@@ -10,3 +10,7 @@ GLM
 json.txt
 dataset/JSON/QA/.DS_Store
 dataset_builder_debug.log
+finetune-results
+cot-results
+format-results
+Results-new
