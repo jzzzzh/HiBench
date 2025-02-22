@@ -31,7 +31,6 @@ need to be addressed by using whole structure information, or cross structure.
 ### **Dimension C: Structural Modification**  
 _Adding, removing, or transforming nodes in a hierarchical structure._
 
-
 ### **Dimension D: Analytical Reasoning**  
 _Performing mathematical or algorithmic complexity analyses._
 
@@ -42,34 +41,34 @@ _Reasoning about textual context and organizing paper sections._
 
 ## **Plain Structure (Fundamental)**
 - **add_node** → **C** (_Structural Modification_)  
-- **all_ancestor** → **A** (_Relationship Awareness_)  
-- **all_children** → **A** (_Relationship Awareness_)  
-- **common_ancestor** → **A** (_Relationship Awareness_)  
-- **isomorphic** → **B** (_Structural Understanding_)  
+- **all_ancestor** → **A** (_Local Relationship Awareness_)  
+- **all_children** → **A** (_Local Relationship Awareness_)  
+- **common_ancestor** → **A** (_Local Relationship Awareness_)  
+- **isomorphic** → **B** (_Global Structural Understanding_)  
 - **remove_node** → **C** (_Structural Modification_)  
-- **node_depth** → **A** (_Relationship Awareness_)  
-- **leaf** → **A** (_Relationship Awareness_)  
-- **root** → **A** (_Relationship Awareness_)  
-- **balance** → **B** (_Structural Understanding_)  
-- **prefix_traversal** → **B** (_Structural Understanding_)  
-- **infix_traversal** → **B** (_Structural Understanding_)  
-- **postfix_traversal** → **B** (_Structural Understanding_)  
-- **traversal_order_verification** → **B** (_Structural Understanding_)  
+- **node_depth** → **A** (_Local Relationship Awareness_)  
+- **leaf** → **A** (_Local Relationship Awareness_)  
+- **root** → **A** (_Local Relationship Awareness_)  
+- **balance** → **B** (_Global Structural Understanding_)  
+- **prefix_traversal** → **B** (_Global Structural Understanding_)  
+- **infix_traversal** → **B** (_Global Structural Understanding_)  
+- **postfix_traversal** → **B** (_Global Structural Understanding_)  
+- **traversal_order_verification** → **B** (_Global Structural Understanding_)  
 - **mirror_tree** → **C** (_Structural Modification_)  
 
 ---
 
 ## **JSON**
-- **child_count** → **A** (_Relationship Awareness_)  
-- **node_depth** → **A** (_Relationship Awareness_)  
-- **level_count** → **B** (_Structural Understanding_)
-- **node_attribute** → **A** (_Relationship Awareness_)  
-- **level_nodes** → **B** (_Structural Understanding_)  
-- **path_down_to_up** → **A** (_Relationship Awareness_)  
-- **path_up_to_down** → **A** (_Relationship Awareness_)  
-- **shared_ancestor_same_level** → **A** (_Relationship Awareness_)  
-- **shared_ancestor_diff_level** → **A** (_Relationship Awareness_)  
-- **path_between_nodes** → **A** (_Relationship Awareness_)  
+- **child_count** → **A** (_Local Relationship Awareness_)  
+- **node_depth** → **A** (_Local Relationship Awareness_)  
+- **level_count** → **B** (_Global Structural Understanding_)
+- **node_attribute** → **A** (_Local Relationship Awareness_)  
+- **level_nodes** → **B** (_Global Structural Understanding_)  
+- **path_down_to_up** → **A** (_Local Relationship Awareness_)  
+- **path_up_to_down** → **A** (_Local Relationship Awareness_)  
+- **shared_ancestor_same_level** → **A** (_Local Relationship Awareness_)  
+- **shared_ancestor_diff_level** → **A** (_Local Relationship Awareness_)  
+- **path_between_nodes** → **A** (_Local Relationship Awareness_)  
 
 ### Task combine:
 - shared_ancestor_same_level → common ancestor
