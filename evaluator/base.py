@@ -61,18 +61,18 @@ class BasicEvaluator(object):
         else:
             return False
         
-    def bool_match(self, source: str, target: str) -> bool:
-        source = source.lower()
-        target = target.lower()
-        source = self._extract_answer(source)
-        source = self._refine_string(source)
-        target = self._refine_string(target)
-        if source is None:
-            return False
-        if bool(target) == bool(source):
-            return True
-        else:
-            return False
+    # def string_match(self, source: str, target: str) -> bool:
+    #     source = source.lower()
+    #     target = target.lower()
+    #     source = self._extract_answer(source)
+    #     source = self._refine_string(source)
+    #     target = self._refine_string(target)
+    #     if source is None:
+    #         return False
+    #     if bool(target) == bool(source):
+    #         return True
+    #     else:
+    #         return False
         
     def list_match(self, source: str, target: str, sep: str, remove_blank: bool = True):
         source = source.lower()
@@ -162,7 +162,7 @@ class BasicEvaluator(object):
         string = string.lower()
         string = string.strip()
         string = re.sub(r'\s+', ' ', string)
-        string = re.sub(r'[^a-zA-Z0-9 ]', '', string)
+        string = re.sub(r'[^a-zA-Z0-9 ,]', '', string)
         for symbol in self.strip_symbols:
             string = string.strip(symbol)
         return string
@@ -194,22 +194,26 @@ if __name__ == '__main__':
     # Test Case 5: Match with boolean values
     source = "{ answer : true }"
     target = "True"
-    assert evaluator.bool_match(source, target) == True
+    assert evaluator.string_match(source, target) == True
 
     source = "{ answer : false }"
     target = "false"
-    assert evaluator.bool_match(source, target) == True
+    assert evaluator.string_match(source, target) == True
+    
+    source = "{ answer : false }"
+    target = "true"
+    assert evaluator.string_match(source, target) == False
 
     # Test Case 6: List match with unquoted values (order matters)
     source = "{ answer : 'apple, banana, cherry' }"
     target = "banana, apple, cherry"
-    sep = ', '
+    sep = ','
     assert evaluator.list_match(source, target, sep) == True
 
     # Test Case 7: List match with extra spaces (order doesn't matter)
     source = "{ answer : 'apple ,   banana, cherry ' }"
     target = " banana, apple, cherry "
-    sep = ', '
+    sep = ','
     assert evaluator.list_match(source, target, sep) == True
 
     # Test Case 8: Hierarchical structure match (matching unquoted content)
@@ -240,7 +244,7 @@ if __name__ == '__main__':
     # Test Case 13: Empty target value in list match
     source = "{ answer : 'apple, banana' }"
     target = ""
-    sep = ', '
+    sep = ','
     try:
         result = evaluator.list_match(source, target, sep)
     except ValueError as e:
@@ -249,7 +253,7 @@ if __name__ == '__main__':
     # Test Case 14: List match with one element
     source = "{ answer : 'apple ' }"
     target = " apple "
-    sep = ', '
+    sep = ','
     assert evaluator.list_match(source, target, sep) == True
 
     # Test Case 15: Number match
