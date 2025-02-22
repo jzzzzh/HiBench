@@ -1,28 +1,22 @@
 [
     {
-<<<<<<< HEAD
-=======
-        "question": "List all Course in the City University.",
-        "answer": "Bachelor of Engineering, Doctor of Philosophy"
+        "question": "List all Departments in the City University.",
+        "answer": "Department of Electrical Engineering, Department of Mechanical Engineering"
     },
     {
->>>>>>> origin/main
-        "question": "List all Lecturer in the City University.",
-        "answer": "Financial Accounting, Biochemistry, World History"
-    },
-    {
-        "question": "List all Student in the City University.",
+        "question": "List all Lecturers in the City University.",
         "answer": "Lecturer Elijah Brown, Associate Professor Jordan Baker, Lecturer Sebastian Rivera"
     },
     {
-<<<<<<< HEAD
-        "question": "List all Course in the City University.",
-        "answer": "Bachelor of Engineering, Doctor of Philosophy"
+        "question": "List all Students in the City University.",
+        "answer": "Mila Reyes, Iris Ortiz, Elena Carter"
     },
     {
-=======
->>>>>>> origin/main
-        "question": "List all Program in the City University.",
-        "answer": "Department of Electrical Engineering, Department of Mechanical Engineering"
+        "question": "List all Courses in the City University.",
+        "answer": "Financial Accounting, Biochemistry, World History"
+    },
+    {
+        "question": "List all Programs in the City University.",
+        "answer": "Bachelor of Engineering, Doctor of Philosophy"
     }
 ]

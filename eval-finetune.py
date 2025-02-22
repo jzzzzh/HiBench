@@ -1,5 +1,6 @@
 import glob
 import os
+import re
 import json
 
 import yaml
@@ -21,10 +22,7 @@ def calculate_accuracy(result_path, task, subtask):
     else:
         raise ValueError(f'unknown task {task}')
 
-    
-    result_path = os.path.join(result_path, task, subtask)
-    files =  glob.glob(os.path.join(result_path, '*', '*', '*.json'))
-    files += glob.glob(os.path.join(result_path, '*', '*.json'))
+    files = glob.glob(os.path.join(result_path, f'{task}_{subtask}_*.json'))
     for file in files:
         eval_path = file.replace('.json', '.txt')
         with open(file, "r", encoding="utf-8") as f:
@@ -33,20 +31,16 @@ def calculate_accuracy(result_path, task, subtask):
         correct_answers = 0
         for result in data:
             total_questions += 1
-            answer = result.get("response", None)
-            ref    = result.get("TrueAnswer", None)
-            if answer:
-                answer = str(answer)
-                ref    = str(ref)
-            else:
-                continue
-            # >>>> Temp adaptation for represent_mode of fundamental tasks.
+            answer = str(result.get("response"))
+            ref    = str(result.get("TrueAnswer"))
+            ref    = evaluate._extract_answer(ref) if task != 'Paper' else ref
             kwargs = dict()
             if subtask in ['add_node', 'remove_node', 'mirror_tree']:
                 kwargs = dict(represent_mode='edge') if 'InputMode_edge' in file else dict(represent_mode='hierarchy')
             # <<<< Temp adaptation for represent_mode of fundamental tasks.
             correct_answers += float(evaluate(subtask, source=answer, target=ref, **kwargs))
         accuracy = correct_answers / total_questions if total_questions > 0 else 0
+
         with open(eval_path, "w", encoding="utf-8") as f:
             f.write(f"Total Questions: {total_questions}\n")
             f.write(f"Correct Answers: {correct_answers}\n")
@@ -56,6 +50,7 @@ def calculate_accuracy(result_path, task, subtask):
         
         
 if __name__ == '__main__':
+    finetune_result_path = 'finetune-results'
     with open('./config/config.yaml', 'r') as file:
         configs = yaml.safe_load(file)
     for task in configs['Dataset']:
@@ -66,7 +61,7 @@ if __name__ == '__main__':
         for subtask in subtasks:
             print(f'{subtask = }')
             try:
-                calculate_accuracy(configs['Eval']['SaveDir'], task, subtask)
+                calculate_accuracy(finetune_result_path, task, subtask)
             except AttributeError as e:
                 print(f'subtask name error: {task} {subtask}')
                 print(e)

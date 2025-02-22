@@ -2,106 +2,106 @@
     {
 <<<<<<< HEAD
         "question": "If someone wants to go from the program 'Bachelor of Arts' to the department 'Department of Aerospace Engineering', what path should they take?",
-        "answer": "Bachelor of Arts \u2192 Department of Civil Engineering \u2192 Faculty of Engineering \u2192 Department of Aerospace Engineering"
+        "answer": "Bachelor of Arts -> Department of Civil Engineering -> Faculty of Engineering -> Department of Aerospace Engineering"
     },
     {
         "question": "If someone wants to go from the program 'Master of Science' to the program 'Bachelor of Arts', what path should they take?",
-        "answer": "Master of Science \u2192 Department of Civil Engineering \u2192 Bachelor of Arts"
+        "answer": "Master of Science -> Department of Civil Engineering -> Bachelor of Arts"
     },
     {
         "question": "If someone wants to go from the program 'Master of Engineering' to the department 'Department of Chemical Engineering', what path should they take?",
-        "answer": "Master of Engineering \u2192 Department of Aerospace Engineering \u2192 Faculty of Engineering \u2192 Department of Chemical Engineering"
+        "answer": "Master of Engineering -> Department of Aerospace Engineering -> Faculty of Engineering -> Department of Chemical Engineering"
     },
     {
         "question": "If someone wants to go from the program 'Bachelor of Science' to the program 'Bachelor of Arts', what path should they take?",
-        "answer": "Bachelor of Science \u2192 Department of Mechanical Engineering \u2192 Faculty of Engineering \u2192 Department of Civil Engineering \u2192 Bachelor of Arts"
+        "answer": "Bachelor of Science -> Department of Mechanical Engineering -> Faculty of Engineering -> Department of Civil Engineering -> Bachelor of Arts"
     },
     {
         "question": "If someone wants to go from the department 'Department of Labor Law' to the department 'Department of Aerospace Engineering', what path should they take?",
-        "answer": "Department of Labor Law \u2192 Faculty of Engineering \u2192 Department of Aerospace Engineering"
+        "answer": "Department of Labor Law -> Faculty of Engineering -> Department of Aerospace Engineering"
     },
     {
         "question": "If someone wants to go from the department 'Department of Chemical Engineering' to the department 'Department of Mechanical Engineering', what path should they take?",
-        "answer": "Department of Chemical Engineering \u2192 Faculty of Engineering \u2192 Department of Mechanical Engineering"
+        "answer": "Department of Chemical Engineering -> Faculty of Engineering -> Department of Mechanical Engineering"
     },
     {
         "question": "If someone wants to go from the program 'Bachelor of Engineering' to the department 'Department of Civil Engineering', what path should they take?",
-        "answer": "Bachelor of Engineering \u2192 Department of Aerospace Engineering \u2192 Faculty of Engineering \u2192 Department of Civil Engineering"
+        "answer": "Bachelor of Engineering -> Department of Aerospace Engineering -> Faculty of Engineering -> Department of Civil Engineering"
     },
     {
         "question": "If someone wants to go from the program 'Bachelor of Engineering' to the program 'Master of Engineering', what path should they take?",
-        "answer": "Bachelor of Engineering \u2192 Department of Aerospace Engineering \u2192 Master of Engineering"
+        "answer": "Bachelor of Engineering -> Department of Aerospace Engineering -> Master of Engineering"
     },
     {
         "question": "If someone wants to go from the department 'Department of Civil Engineering' to the department 'Department of Labor Law', what path should they take?",
-        "answer": "Department of Civil Engineering \u2192 Faculty of Engineering \u2192 Department of Labor Law"
+        "answer": "Department of Civil Engineering -> Faculty of Engineering -> Department of Labor Law"
     },
     {
         "question": "If someone wants to go from the program 'Master of Arts' to the program 'Master of Engineering', what path should they take?",
-        "answer": "Master of Arts \u2192 Department of Labor Law \u2192 Faculty of Engineering \u2192 Department of Aerospace Engineering \u2192 Master of Engineering"
+        "answer": "Master of Arts -> Department of Labor Law -> Faculty of Engineering -> Department of Aerospace Engineering -> Master of Engineering"
     },
     {
         "question": "If someone wants to go from the department 'Department of Civil Engineering' to the department 'Department of Environmental Law', what path should they take?",
-        "answer": "Department of Civil Engineering \u2192 Faculty of Engineering \u2192 Department of Environmental Law"
+        "answer": "Department of Civil Engineering -> Faculty of Engineering -> Department of Environmental Law"
     },
     {
         "question": "If someone wants to go from the program 'Master of Engineering' to the department 'Department of Mechanical Engineering', what path should they take?",
-        "answer": "Master of Engineering \u2192 Department of Aerospace Engineering \u2192 Faculty of Engineering \u2192 Department of Mechanical Engineering"
+        "answer": "Master of Engineering -> Department of Aerospace Engineering -> Faculty of Engineering -> Department of Mechanical Engineering"
     },
     {
         "question": "If someone wants to go from the faculty 'Faculty of Engineering' to the program 'Bachelor of Arts', what path should they take?",
-        "answer": "Faculty of Engineering \u2192 Department of Civil Engineering \u2192 Bachelor of Arts"
+        "answer": "Faculty of Engineering -> Department of Civil Engineering -> Bachelor of Arts"
 =======
         "question": "If someone wants to go from the program 'Master of Engineering' to the department 'Department of Mechanical Engineering', what path should they take?",
-        "answer": "Master of Engineering \u2192 Department of Aerospace Engineering \u2192 Faculty of Engineering \u2192 Department of Mechanical Engineering"
+        "answer": "Master of Engineering -> Department of Aerospace Engineering -> Faculty of Engineering -> Department of Mechanical Engineering"
     },
     {
         "question": "If someone wants to go from the program 'Bachelor of Arts' to the program 'Master of Science', what path should they take?",
-        "answer": "Bachelor of Arts \u2192 Department of Civil Engineering \u2192 Master of Science"
+        "answer": "Bachelor of Arts -> Department of Civil Engineering -> Master of Science"
     },
     {
         "question": "If someone wants to go from the department 'Department of Civil Engineering' to the program 'Master of Engineering', what path should they take?",
-        "answer": "Department of Civil Engineering \u2192 Faculty of Engineering \u2192 Department of Aerospace Engineering \u2192 Master of Engineering"
+        "answer": "Department of Civil Engineering -> Faculty of Engineering -> Department of Aerospace Engineering -> Master of Engineering"
     },
     {
         "question": "If someone wants to go from the program 'Master of Science' to the program 'Master of Arts', what path should they take?",
-        "answer": "Master of Science \u2192 Department of Civil Engineering \u2192 Faculty of Engineering \u2192 Department of Labor Law \u2192 Master of Arts"
+        "answer": "Master of Science -> Department of Civil Engineering -> Faculty of Engineering -> Department of Labor Law -> Master of Arts"
     },
     {
         "question": "If someone wants to go from the program 'Master of Science' to the program 'Bachelor of Science', what path should they take?",
-        "answer": "Master of Science \u2192 Department of Civil Engineering \u2192 Faculty of Engineering \u2192 Department of Mechanical Engineering \u2192 Bachelor of Science"
+        "answer": "Master of Science -> Department of Civil Engineering -> Faculty of Engineering -> Department of Mechanical Engineering -> Bachelor of Science"
     },
     {
         "question": "If someone wants to go from the program 'Doctor of Philosophy' to the program 'Bachelor of Science', what path should they take?",
-        "answer": "Doctor of Philosophy \u2192 Department of Chemical Engineering \u2192 Faculty of Engineering \u2192 Department of Mechanical Engineering \u2192 Bachelor of Science"
+        "answer": "Doctor of Philosophy -> Department of Chemical Engineering -> Faculty of Engineering -> Department of Mechanical Engineering -> Bachelor of Science"
     },
     {
         "question": "If someone wants to go from the program 'Doctor of Philosophy' to the program 'Bachelor of Business Administration', what path should they take?",
-        "answer": "Doctor of Philosophy \u2192 Department of Chemical Engineering \u2192 Faculty of Engineering \u2192 Department of Aerospace Engineering \u2192 Bachelor of Business Administration"
+        "answer": "Doctor of Philosophy -> Department of Chemical Engineering -> Faculty of Engineering -> Department of Aerospace Engineering -> Bachelor of Business Administration"
     },
     {
         "question": "If someone wants to go from the department 'Department of Chemical Engineering' to the department 'Department of Labor Law', what path should they take?",
-        "answer": "Department of Chemical Engineering \u2192 Faculty of Engineering \u2192 Department of Labor Law"
+        "answer": "Department of Chemical Engineering -> Faculty of Engineering -> Department of Labor Law"
     },
     {
         "question": "If someone wants to go from the department 'Department of Labor Law' to the program 'Master of Science', what path should they take?",
-        "answer": "Department of Labor Law \u2192 Faculty of Engineering \u2192 Department of Civil Engineering \u2192 Master of Science"
+        "answer": "Department of Labor Law -> Faculty of Engineering -> Department of Civil Engineering -> Master of Science"
     },
     {
         "question": "If someone wants to go from the program 'Bachelor of Science' to the program 'Master of Arts', what path should they take?",
-        "answer": "Bachelor of Science \u2192 Department of Mechanical Engineering \u2192 Faculty of Engineering \u2192 Department of Labor Law \u2192 Master of Arts"
+        "answer": "Bachelor of Science -> Department of Mechanical Engineering -> Faculty of Engineering -> Department of Labor Law -> Master of Arts"
     },
     {
         "question": "If someone wants to go from the program 'Master of Engineering' to the department 'Department of Chemical Engineering', what path should they take?",
-        "answer": "Master of Engineering \u2192 Department of Aerospace Engineering \u2192 Faculty of Engineering \u2192 Department of Chemical Engineering"
+        "answer": "Master of Engineering -> Department of Aerospace Engineering -> Faculty of Engineering -> Department of Chemical Engineering"
     },
     {
         "question": "If someone wants to go from the program 'Bachelor of Science' to the department 'Department of Chemical Engineering', what path should they take?",
-        "answer": "Bachelor of Science \u2192 Department of Mechanical Engineering \u2192 Faculty of Engineering \u2192 Department of Chemical Engineering"
+        "answer": "Bachelor of Science -> Department of Mechanical Engineering -> Faculty of Engineering -> Department of Chemical Engineering"
     },
     {
         "question": "If someone wants to go from the program 'Bachelor of Engineering' to the department 'Department of Mechanical Engineering', what path should they take?",
-        "answer": "Bachelor of Engineering \u2192 Department of Aerospace Engineering \u2192 Faculty of Engineering \u2192 Department of Mechanical Engineering"
+        "answer": "Bachelor of Engineering -> Department of Aerospace Engineering -> Faculty of Engineering -> Department of Mechanical Engineering"
 >>>>>>> origin/main
     }
 ]

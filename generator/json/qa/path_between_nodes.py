@@ -156,7 +156,7 @@ def gen_answer_path_between_nodes(scenario: str, with_answer: bool = True, get_a
                 
                 # Form question and answer
                 question = f"If someone wants to go from the {node1_type} '{node1_name}' to the {node2_type} '{node2_name}', what path should they take?"
-                answer = " → ".join(path) if with_answer else None
+                answer = " -> ".join(path) if with_answer else None
                 
                 return question, answer
         

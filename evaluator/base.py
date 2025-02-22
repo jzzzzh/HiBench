@@ -33,9 +33,11 @@ class BasicEvaluator(object):
         source = source.lower()
         target = target.lower()
         source = self._extract_answer(source)
-        source = self._refine_answer(source)
+        source = self._refine_string(source)
+        target = self._refine_string(target)
         if source is None:
             return False
+        
         if target == str(source):
             return True
         else:
@@ -45,12 +47,15 @@ class BasicEvaluator(object):
         source = source.lower()
         target = target.lower()
         source = self._extract_answer(source)
-        source = self._refine_answer(source)
+        source = self._refine_string(source)
+        target = self._refine_string(target)
         if source is None:
             return False
         if skip:
             source = re.sub(skip, '', source)
             target = re.sub(skip, '', target)
+        # print(source)
+        # print(target)
         if target == source or target in source:
             return True
         else:
@@ -60,7 +65,8 @@ class BasicEvaluator(object):
         source = source.lower()
         target = target.lower()
         source = self._extract_answer(source)
-        source = self._refine_answer(source)
+        source = self._refine_string(source)
+        target = self._refine_string(target)
         if source is None:
             return False
         if bool(target) == bool(source):
@@ -72,13 +78,13 @@ class BasicEvaluator(object):
         source = source.lower()
         target = target.lower()
         source = self._extract_answer(source)
-        source = self._refine_answer(source)
+        source = self._refine_string(source)
+        target = self._refine_string(target)
         if source is None:
             return False
         if remove_blank:
             source = re.sub(r'\s+', '', source)
             target = re.sub(r'\s+', '', target)
-            sep = re.sub(r'\s+', '', sep)
         source = source.split(sep)
         target = target.split(sep)
         if not source:
@@ -94,12 +100,37 @@ class BasicEvaluator(object):
         source = source.lower()
         target = target.lower()
         source = self._extract_answer(source)
-        source = self._refine_answer(source)
+        source = self._refine_string(source)
+        target = self._refine_string(target)
         if source is None:
             return False
         source = re.sub(r"\D", "", source)
         target = re.sub(r"\D", "", target)
         return source == target
+    
+    def hit_rate(self, source: str, target: str, sep: str, remove_blank: bool = True) -> float:
+        source = source.lower()
+        target = target.lower()
+        source = self._extract_answer(source)
+        target = self._extract_answer(target)
+        if source is None:
+            return 0.
+        if remove_blank:
+            source = re.sub(r'\s+', '', source)
+            target = re.sub(r'\s+', '', target)
+        source = source.split(sep)
+        target = target.split(sep)
+        source = [self._refine_string(s) for s in  source]
+        target = [self._refine_string(s) for s in  target]
+        if not source:
+            return 0.
+        if not target:
+            raise ValueError('empty target value.')
+        hit = 0.
+        for i in target:
+            if i in source:
+                hit += 1
+        return hit / len(target)
         
     def _extract_answer(self, string: str) -> str:
         string = string.lower()
@@ -124,18 +155,19 @@ class BasicEvaluator(object):
                 return ret.strip()
             else:
                 return None
-
-    def _refine_answer(self, string: str):
+    
+    def _refine_string(self, string: str):
         if string is None:
             return None
         string = string.lower()
         string = string.strip()
-        re.sub(r'\s+', ' ', string)
+        string = re.sub(r'\s+', ' ', string)
+        string = re.sub(r'[^a-zA-Z0-9 ]', '', string)
         for symbol in self.strip_symbols:
             string = string.strip(symbol)
         return string
     
-            
+    
 if __name__ == '__main__':
     evaluator = BasicEvaluator()
 

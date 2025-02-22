@@ -16,13 +16,13 @@
     },
     {
         "question_no": 4,
-        "time": "O(sqrt(n))",
+        "time": "O(sqrt(n)",
         "space": "O(1)"
     },
     {
         "question_no": 5,
-        "time": "O(n^3 * 4^n) = O(1), n = 4",
-        "space": "O(n^2) = O(1)"
+        "time": "O(n^3 * 4^n)",
+        "space": "O(n^2)"
     },
     {
         "question_no": 6,
@@ -36,7 +36,7 @@
     },
     {
         "question_no": 8,
-        "time": "O(n^2), n is the number of disctinct A[i]",
+        "time": "O(n^2)",
         "space": "O(n)"
     },
     {
@@ -76,7 +76,7 @@
     },
     {
         "question_no": 16,
-        "time": "O(nlogn), n is the number of total emails, and the max length of email is 320, p.s. {64}@{255}",
+        "time": "O(nlogn)",
         "space": "O(n)"
     },
     {
@@ -86,7 +86,7 @@
     },
     {
         "question_no": 18,
-        "time": "O(n * d * l), l is the average string length",
+        "time": "O(n * d * l)",
         "space": "O(n)"
     },
     {
@@ -187,7 +187,7 @@
     {
         "question_no": 38,
         "time": "O(n)",
-        "space": "O(|V|+|E|) = O(26 + 26^2) = O(1)"
+        "space": "O(|V|+|E|)"
     },
     {
         "question_no": 39,
@@ -216,13 +216,13 @@
     },
     {
         "question_no": 44,
-        "time": "O(p + r * n), p is the count of all the possible paths in graph,",
+        "time": "O(p + r * n)",
         "space": "O(n)"
     },
     {
         "question_no": 45,
-        "time": "O(n * 4^n / n^(3/2)) ~= sum of Catalan numbers from 1 .. N",
-        "space": "O(n * 4^n / n^(3/2)) ~= sum of Catalan numbers from 1 .. N"
+        "time": "O(n * 4^n / n^(3/2)",
+        "space": "O(n * 4^n / n^(3/2)"
     },
     {
         "question_no": 46,
@@ -266,7 +266,7 @@
     },
     {
         "question_no": 54,
-        "time": "O(nlogr), r is the max position",
+        "time": "O(nlogr)",
         "space": "O(r)"
     },
     {
@@ -321,7 +321,7 @@
     },
     {
         "question_no": 65,
-        "time": "O(nlogr), r = max(nums)",
+        "time": "O(nlogr)",
         "space": "O(logr)"
     },
     {
@@ -356,8 +356,8 @@
     },
     {
         "question_no": 72,
-        "time": "O(sqrt(r) + n * (logr + pi(sqrt(r))) + klogn) = O(sqrt(r) + n * (logr + sqrt(r)/log(sqrt(r))) + klogn), m is max(k for _, k in queries), pi(n) = number of primes in a range [1, n] = O(n/logn) by prime number theorem, see https",
-        "space": "O(sqrt(r) + n)"
+        "time": "O(sqrt(r)",
+        "space": "O(sqrt(r)"
     },
     {
         "question_no": 73,
@@ -396,7 +396,7 @@
     },
     {
         "question_no": 80,
-        "time": "O(r), r is the range size of the integers",
+        "time": "O(r)",
         "space": "O(r)"
     },
     {
@@ -406,7 +406,7 @@
     },
     {
         "question_no": 82,
-        "time": "O(n) ~ O(n^2), O(n) on average",
+        "time": "O(n)",
         "space": "O(1)"
     },
     {

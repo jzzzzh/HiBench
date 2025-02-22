@@ -17,7 +17,7 @@ class JsonEvaluator(BasicEvaluator):
         return self.string_match(source, target)
     
     def level_nodes(self, source, target):
-        return self.string_match(source, target)
+        return self.list_match(source, target, sep=',')
     
     def path_between_nodes(self, source, target):
         return self.string_match(source, target)
@@ -31,5 +31,5 @@ class JsonEvaluator(BasicEvaluator):
     def shared_ancestor_same_level(self, source, target):
         return self.string_match(source, target)
     
-    def shared_ancestor_different_level(self, source, target):
+    def shared_ancestor_diff_level(self, source, target):
         return self.string_match(source, target)
