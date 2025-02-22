@@ -10,3 +10,9 @@ GLM
 json.txt
 dataset/JSON/QA/.DS_Store
 dataset_builder_debug.log
+*eval*/
+*lora*/
+*output*/
+*Result*/
+*cache*/
+prompt/

@@ -39,7 +39,7 @@ class LLMModel:
     def __init__(self, model_id, api_key=None, endpoint=None, device_map='auto'):
         self.model_id = model_id
         self.model_list = ["meta-llama/Meta-Llama-3.1-8B-Instruct", "meta-llama/Llama-3.2-1B-Instruct","meta-llama/Llama-3.2-3B-Instruct", "Qwen/Qwen2.5-0.5B-Instruct", "Qwen/Qwen2.5-1.5B-Instruct", "Qwen/Qwen2.5-3B-Instruct", "Qwen/Qwen2.5-7B-Instruct", "Qwen/Qwen2.5-14B-Instruct",  "Qwen/Qwen2.5-32B-Instruct"]
-        self.Large_language_model_list = ["Qwen/Qwen2.5-72B-Instruct", "meta-llama/Llama-3.1-70B-Instruct", "meta-llama/Llama-3.1-405B-Instruct", "deepseek/deepseek-v3", "deepseek/deepseek-R1"]
+        self.Large_language_model_list = ["Qwen/QwQ-32B","Qwen/Qwen2.5-72B-Instruct", "meta-llama/Llama-3.1-70B-Instruct", "meta-llama/Llama-3.1-405B-Instruct", "deepseek/deepseek-v3", "deepseek/deepseek-R1"]
         self.openai_list = ["gpt-3.5-turbo", "gpt-3.5-turbo-davinci", "gpt-3.5-turbo-davinci-codex", "gpt-3.5-turbo-davinci-instruct", "gpt-3.5-turbo-davinci-codex-instruct", "gpt-3.5-turbo-davinci-codex-instruct-turbo", "gpt-4o", "gpt-4o-mini", "gpt-4-turbo"]
         self.old_model_list = ["THUDM/glm-4-9b-chat", "01-ai/Yi-1.5-9B-Chat","baichuan-inc/Baichuan-7B", "baichuan-inc/Baichuan2-7B-Chat", "microsoft/Phi-3.5-mini-instruct", "internlm/internlm2_5-7b-chat", "mistralai/Mistral-7B-Instruct-v0.3"]
         self.api_key = api_key
@@ -70,7 +70,7 @@ class LLMModel:
                 trust_remote_code=True
             ).to(self.device).eval()
             # self.gen_kwargs = {"max_length": 3000, "do_sample": True, "top_k": 1}
-            self.gen_kwargs = {"max_new_tokens": 256, "do_sample": True, "top_k": 1}
+            self.gen_kwargs = {"max_new_tokens": 1024, "do_sample": True, "top_k": 1}
     
     def get_response_fireworks(self, system_prompt, question):
         fireworks_model_id = self.transfer_to_fireworks(self.model_id)
@@ -81,7 +81,7 @@ class LLMModel:
             payload = {
                 "model": f"accounts/fireworks/models/{fireworks_model_id}",
                 # "model": f"accounts/fireworks/models/llama-v3p1-8b-instruct",
-                "max_tokens": 4096,
+                "max_tokens": 10240,
                 "top_p": 1,
                 "top_k": 40,
                 "presence_penalty": 0,
@@ -172,6 +172,8 @@ class LLMModel:
             return "deepseek-v3"
         elif model_name == "deepseek/deepseek-R1":
             return "deepseek-r1"
+        elif model_name == "Qwen/QwQ-32B":
+            return "qwen-qwq-32b-preview"
         else:
             return model_name
 
@@ -184,7 +186,7 @@ class LLMModel:
         if company_name == "meta-llama":
             outputs = self.pipeline(
                 messages,
-                max_new_tokens=256,
+                max_new_tokens=1024,
                 eos_token_id=self.terminators,
                 do_sample=True,
                 temperature=0.6,
@@ -194,7 +196,7 @@ class LLMModel:
         else:
             outputs = self.pipeline(
             messages,
-            max_new_tokens=256,
+            max_new_tokens=1024,
             )
         return outputs[0]["generated_text"][-1]["content"]
 

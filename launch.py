@@ -147,6 +147,7 @@ class ArgumentGenerator:
                 for example_type in paper_parameter['ExampleType']:
                     EvalList.append({'Task': 'Paper', 'SubTask':subtask, 'Mode': mode, 'ExampleType': example_type})
         return EvalList
+    
     def generate_all_eval(self, Task_list = ['Fundamental', 'Code', 'JSON', 'Formula', 'Paper'], ExampleType='ALL'):
         EvalList = list()
         if 'Fundamental' in Task_list:
@@ -217,7 +218,7 @@ class ArgumentGenerator:
             logger.info("paper pass")
         logger.info(f"Total question number: {question_num}")
 
-    def gen_prompt_json_file(self, Task_list = ['Fundamental', 'Code', 'JSON', 'Formula', 'Paper'], num_samples=None, file_type = "finetune", filename='prompt.json', max_question_num=None):
+    def gen_fintune_json_file(self, Task_list = ['Fundamental', 'Code', 'JSON', 'Formula', 'Paper'], num_samples=None, file_type = "finetune", filename='prompt.json', max_question_num=None):
         data = list()
         logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
         logger = logging.getLogger(__name__)
@@ -249,10 +250,10 @@ class ArgumentGenerator:
         if file_type == "finetune":
             finetune_list = list()
             for da in data: 
-                if "ans" in da['TrueAnswer']:
-                    finetune_list.append({"instruction": da['SystemPrompt']+da['UserPrompt'], "input":"" ,"output": da['TrueAnswer']})
+                if "ans" in str(da['TrueAnswer']):
+                    finetune_list.append({"instruction": da['SystemPrompt']+da['UserPrompt'], "input":"" ,"response": str(da['TrueAnswer'])})
                 else:
-                    finetune_list.append({"instruction": da['SystemPrompt']+da['UserPrompt'], "input":"" ,"output": "{\"answer\":" + da['TrueAnswer'] + "}"})
+                    finetune_list.append({"instruction": da['SystemPrompt']+da['UserPrompt'], "input":"" ,"response": "{\"answer\":" + str(da['TrueAnswer']) + "}"})
             data = finetune_list
         if max_question_num is not None and max_question_num < len(data):
             random.shuffle(data)
@@ -262,9 +263,70 @@ class ArgumentGenerator:
             json.dump(data, f)
         logger.info(f"Prompt json file saved to {filename}")
         
+    def gen_eval_prompt_file(self, EvalList, num_samples = None ,file_dir = "./eval_prompt/"):
+        for Eval in EvalList:
+            Hibenchdataloader = HibenchDataLoader(Eval)
+            data = Hibenchdataloader.load_data(num_samples=num_samples)
+            os.makedirs(file_dir, exist_ok=True)
+            name = "_".join([str(Eval[key]) for key in Eval])
+            filename = file_dir + name + ".json"
+            finetune_list = list()
+            for da in data: 
+                if "ans" in str(da['TrueAnswer']):
+                    finetune_list.append({"instruction": da['SystemPrompt']+da['UserPrompt'], "input":"" ,"true_ans": str(da['TrueAnswer'])})
+                else:
+                    finetune_list.append({"instruction": da['SystemPrompt']+da['UserPrompt'], "input":"" ,"true_ans": "{\"answer\":" + str(da['TrueAnswer']) + "}"})
+            data = finetune_list
+            with open(filename, 'w') as f:
+                json.dump(data, f)
+            print(f"Prompt json file saved to {filename}")
+
+    def cal_each_task_num(self, Task_list = ['Fundamental', 'Code', 'JSON', 'Formula', 'Paper'], ExampleType = 'ALL'):
+        logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+        logger = logging.getLogger(__name__)
+        EvalList = list()
+        tmp = 0
+        if 'Fundamental' in Task_list:
+            EvalList += self.generate_fundamental_eval(ExampleType=ExampleType)
+            logger.info(f"Fundamental task number: {len(EvalList)-tmp}")
+            tmp = len(EvalList)
+        if 'Code' in Task_list:
+            EvalList += self.generate_code_eval(ExampleType=ExampleType)
+            logger.info(f"Code task number: {len(EvalList)-tmp}")
+            tmp = len(EvalList)
+        if 'JSON' in Task_list:
+            EvalList += self.generate_json_eval(ExampleType=ExampleType)
+            logger.info(f"JSON task number: {len(EvalList)-tmp}")
+            tmp = len(EvalList)
+        if 'Formula' in Task_list:
+            EvalList += self.generate_formula_eval(ExampleType=ExampleType)
+            logger.info(f"Formula task number: {len(EvalList)-tmp}")
+            tmp = len(EvalList)
+        if 'Paper' in Task_list:
+            EvalList += self.generate_paper_eval(ExampleType=ExampleType)
+            logger.info(f"Paper task number: {len(EvalList)-tmp}")
+            tmp = len(EvalList)
+        logger.info(f"Total task number: {len(EvalList)}")
+        num_count = {}
+        for Eval in tqdm(EvalList):
+                Hibenchdataloader = HibenchDataLoader(Eval)
+                data = Hibenchdataloader.load_data()
+                Task_name = Eval['Task'] + "_" + Eval['SubTask']
+                main_Task_name = Eval['Task']
+                if main_Task_name not in num_count:
+                    num_count[main_Task_name] = 0
+                num_count[main_Task_name] += len(data)
+                if Task_name not in num_count:
+                    num_count[Task_name] = 0
+                num_count[Task_name] += len(data)
+        for key in num_count:
+            print(f"{key}: {num_count[key]}")
+        return None
+
 def main():
     argument_generator = ArgumentGenerator()
-    EvalList = argument_generator.generate_all_eval(Task_list = ['JSON'], ExampleType='ZeroShot')
+    EvalList = argument_generator.generate_all_eval(Task_list = ['Code', 'JSON', 'Formula', 'Paper'], ExampleType='FewShot')
+    EvalList += argument_generator.generate_all_eval(Task_list = ['Code', 'JSON', 'Formula', 'Paper'], ExampleType='OneShot')
     # EvalList = argument_generator.generate_all_eval(Task_list = ['Paper'], ExampleType='ZeroShot')
     num_samples = 13
     min_question_num = 7
@@ -273,8 +335,9 @@ def main():
     # model_list = ["meta-llama/Meta-Llama-3.1-8B-Instruct", "meta-llama/Llama-3.2-1B-Instruct","meta-llama/Llama-3.2-3B-Instruct", "Qwen/Qwen2.5-0.5B-Instruct", "Qwen/Qwen2.5-1.5B-Instruct", "Qwen/Qwen2.5-3B-Instruct", "Qwen/Qwen2.5-7B-Instruct"]
     # model_list = ["Qwen/Qwen2.5-7B-Instruct"]# , "Qwen/Qwen2.5-0.5B-Instruct", "Qwen/Qwen2.5-1.5B-Instruct", "Qwen/Qwen2.5-3B-Instruct", "Qwen/Qwen2.5-7B-Instruct"]
     # model_list = ["meta-llama/Meta-Llama-3.1-8B-Instruct", "meta-llama/Llama-3.2-1B-Instruct","meta-llama/Llama-3.2-3B-Instruct"]
-    model_list = ["deepseek/deepseek-v3"]
-    model_list = ["Qwen/Qwen2.5-14B-Instruct"]# , "Qwen/Qwen2.5-0.5B-Instruct", "Qwen/Qwen2.5-1.5B-Instruct", "Qwen/Qwen2.5-3B-Instruct", "Qwen/Qwen2.5-7B-Instruct"]
+    # model_list = ["deepseek/deepseek-v3"]
+    # model_list = ["Qwen/Qwen2.5-7B-Instruct"]# , "Qwen/Qwen2.5-0.5B-Instruct", "Qwen/Qwen2.5-1.5B-Instruct", "Qwen/Qwen2.5-3B-Instruct", "Qwen/Qwen2.5-7B-Instruct"]
+    model_list = ["THUDM/glm-4-9b-chat"]
     # model_list = ["meta-llama/Meta-Llama-3.1-8B-Instruct", "meta-llama/Llama-3.2-1B-Instruct","meta-llama/Llama-3.2-3B-Instruct", "THUDM/glm-4-9b-chat", "01-ai/Yi-1.5-9B-Chat"]
     # model_list = ['internlm/internlm2_5-7b-chat'] # 'microsoft/Phi-3.5-mini-instruct'] # ["baichuan-inc/Baichuan-7B"]
     DUPLICATE_CHECK = True
@@ -339,6 +402,8 @@ def Logo():
 
 if __name__ == '__main__':
     Logo()
-    # main()
-    argument_generator = ArgumentGenerator()
-    argument_generator.gen_prompt_json_file(Task_list = ['Paper'], filename='paper_prompt.json', max_question_num=100)
+    main()
+    # argument_generator = ArgumentGenerator()
+    # EvalList = argument_generator.generate_all_eval(Task_list = ['Fundamental', 'Code', 'JSON', 'Formula', 'Paper'], ExampleType='ZeroShot')
+    # argument_generator.gen_eval_prompt_file(EvalList, file_dir="./eval_prompt/")
+    # argument_generator.cal_each_task_num(Task_list=["Formula"], ExampleType="ZeroShot")
