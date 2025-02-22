@@ -21,6 +21,11 @@ for file in files:
         param_stats = {}
         
         for column in df.columns:
+            # skip bullshit in JSON analysis.
+            if 'JSON' in file:
+                if column == 'Mode':
+                    continue
+                df_temp = df[df['Mode'] != 'bullshit']
             # only static ZeroShot performance if the control parameter is not 'ExampleType'.
             if column != 'ExampleType':
                 df_temp = df[df['ExampleType'] == 'ZeroShot']
