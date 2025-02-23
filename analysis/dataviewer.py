@@ -4,6 +4,9 @@ import pandas as pd
 
 files = glob.glob('./analysis/format-results/*.csv')
 
+
+example_llama_family = ['Meta-Llama-3.1-8B-Instruct', 'Llama-3.2-1B-Instruct', 'Llama-3.2-3B-Instruct']
+
 for file in files:
     print(f'processing: {file}')
     save_path = file.replace('format-results', 'dataview').replace('.csv', '.xlsx')
@@ -12,7 +15,6 @@ for file in files:
     
     with pd.ExcelWriter(save_path, engine='xlsxwriter') as writer:
         df = pd.read_csv(file)
-        
         # get unique variants for each parameter
         unique_variants = df.drop(columns=['Accuracy']).nunique()
         unique_variants_df = pd.DataFrame(unique_variants, columns=['Unique Variants'])
@@ -31,12 +33,15 @@ for file in files:
                 df_temp = df[df['ExampleType'] == 'ZeroShot']
             # only static performance of models who have zeroshot, oneshot, and fewshot results, if the control parameter is 'ExampleType'.
             else:
-                zero_shot_models = df['ModelName'][df['ExampleType'] == 'ZeroShot']
-                one_shot_models  = df['ModelName'][df['ExampleType'] == 'OneShot']
-                few_shot_models  = df['ModelName'][df['ExampleType'] == 'FewShot']
-                model_union = set(zero_shot_models) & set(one_shot_models) & set(few_shot_models) - set(['Yi-1.5-9B-Chat'])
-                df_temp     = df[df['ModelName'].isin(model_union)]
-                print(f'ExampleType model list: {model_union}')
+                if column != 'Accuracy' and unique_variants[column] > 1:
+                    zero_shot_models = df['ModelName'][df['ExampleType'] == 'ZeroShot']
+                    one_shot_models  = df['ModelName'][df['ExampleType'] == 'OneShot']
+                    few_shot_models  = df['ModelName'][df['ExampleType'] == 'FewShot']
+                    model_union = set(zero_shot_models) & set(one_shot_models) & set(few_shot_models) - set(['Yi-1.5-9B-Chat'] + example_llama_family)
+                    df_temp     = df[df['ModelName'].isin(model_union)]
+                    print(f'ExampleType model list: {model_union}')
+
+            # skip accuracy.
             if column != 'Accuracy' and unique_variants[column] > 1:
                 stats = df_temp.groupby(column)['Accuracy'].agg(['mean', 'std', 'count'])
                 stats.columns = ['mean', 'std', 'count']
