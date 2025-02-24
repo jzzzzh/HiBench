@@ -28,7 +28,7 @@ class FundamentalEvaluator(BasicEvaluator):
         return self.string_match(source, target)
     
     def isomorphic(self, source, target):
-        return self.bool_match(source, target)
+        return self.string_match(source, target)
     
     def remove_node(self, source, target, represent_mode, sep: str = ',', remove_blank: bool = True):
         if target == 'No edges':
@@ -43,13 +43,13 @@ class FundamentalEvaluator(BasicEvaluator):
         return self.string_match(source, target)
     
     def leaf(self, source, target):
-        return self.bool_match(source, target)
+        return self.string_match(source, target)
     
     def root(self, source, target):
-        return self.bool_match(source, target)
+        return self.string_match(source, target)
     
     def balance(self, source, target):
-        return self.bool_match(source, target)
+        return self.string_match(source, target)
     
     def prefix_traversal(self, source, target, sep: str = ',', remove_blank: bool = True):
         return self.list_match(source, target, sep, remove_blank)

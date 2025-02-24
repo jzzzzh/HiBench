@@ -16,3 +16,7 @@ dataset_builder_debug.log
 *Result*/
 *cache*/
 prompt/
+finetune-results
+cot-results
+format-results
+Results-new
