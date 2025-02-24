@@ -1624,9 +1624,6 @@ add_node,medium,ZeroShot,hierarchy,Qwen,Qwen2.5-32B-Instruct,88.89
 add_node,hard,ZeroShot,hierarchy,Qwen,Qwen2.5-32B-Instruct,88.89
 add_node,medium,ZeroShot,edge,Qwen,Qwen2.5-32B-Instruct,84.72
 add_node,hard,ZeroShot,edge,Qwen,Qwen2.5-32B-Instruct,84.72
-add_node,easy,ZeroShot,hierarchy,Qwen,Qwen2.5-14B-Instruct,0
-add_node,easy,ZeroShot,edge,Qwen,Qwen2.5-14B-Instruct,0
-add_node,medium,ZeroShot,edge,Qwen,Qwen2.5-14B-Instruct,0
 add_node,easy,ZeroShot,hierarchy,Qwen,Qwen2.5-3B-Instruct,24.24
 add_node,easy,OneShot,hierarchy,Qwen,Qwen2.5-3B-Instruct,60.61
 add_node,hard,OneShot,hierarchy,Qwen,Qwen2.5-3B-Instruct,36.11
