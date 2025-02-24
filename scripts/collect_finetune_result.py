@@ -37,5 +37,5 @@ def collect(result_dir):
         
 
 if __name__ == '__main__':
-    result_directory = "./finetune-results"
+    result_directory = "/home/zhuohang/disk/finetune code/23neweval"
     collect(result_directory)

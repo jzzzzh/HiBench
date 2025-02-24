@@ -81,7 +81,7 @@ class LLMModel:
             payload = {
                 "model": f"accounts/fireworks/models/{fireworks_model_id}",
                 # "model": f"accounts/fireworks/models/llama-v3p1-8b-instruct",
-                "max_tokens": 10240,
+                "max_tokens": 4096,
                 "top_p": 1,
                 "top_k": 40,
                 "presence_penalty": 0,
@@ -186,7 +186,7 @@ class LLMModel:
         if company_name == "meta-llama":
             outputs = self.pipeline(
                 messages,
-                max_new_tokens=1024,
+                max_new_tokens=32,
                 eos_token_id=self.terminators,
                 do_sample=True,
                 temperature=0.6,
