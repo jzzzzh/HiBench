@@ -24,13 +24,14 @@ for file in files:
         
         for column in df.columns:
             # skip bullshit in JSON analysis.
+            df_temp = df
             if 'JSON' in file:
                 if column == 'Mode':
                     continue
                 df_temp = df[df['Mode'] != 'bullshit']
             # only static ZeroShot performance if the control parameter is not 'ExampleType'.
             if column != 'ExampleType':
-                df_temp = df[df['ExampleType'] == 'ZeroShot']
+                df_temp = df_temp[df_temp['ExampleType'] == 'ZeroShot']
             # only static performance of models who have zeroshot, oneshot, and fewshot results, if the control parameter is 'ExampleType'.
             else:
                 if column != 'Accuracy' and unique_variants[column] > 1:
