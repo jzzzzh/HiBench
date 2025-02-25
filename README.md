@@ -37,8 +37,8 @@ Ye Jia†, Jiancheng Tu†，Chen Li，Peter H.F. Ng，Qing Li*
 ## Overview
 **Welcome to 👋HiBench, the First Comprehensive Hierarchical Structure Understanding Benchmark of LLMs.**
 - To our best knowledge, it is the **first benchmark** specifically designed to evaluate the hierarchical reasoning abilities of LLMs, encompassing tasks of varying scales and complexities for comprehensive evaluation.
-- We evaluate **15 LLMs** and reveal that even the most advanced LLMs struggle with performance, offering new insights into hierarchical reasoning.
-- We propose a synthetic hierarchical dataset for task-specific fine-tuning, which enhanced LLM's ability on hierarchical reasoning, surpassing **GPT4** by **0.35\%** throughout all tasks.
+- We evaluate **20 LLMs** and reveal that even the most advanced LLMs struggle with performance, offering new insights into hierarchical reasoning.
+- We propose a synthetic hierarchical dataset for task-specific fine-tuning, which enhanced LLM's ability on hierarchical reasoning, surpassing **GPT4** by **6.53\%** throughout all tasks.
 - Cite and star if you feel helpful. This will encourage us a lot 🥰.
 
 <div align="center">
