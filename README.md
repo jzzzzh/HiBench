@@ -571,6 +571,17 @@ We sincerely appreciate [Prof. Hongxia Yang](https://scholar.google.com/citation
 
 ## Citation
 If you find our work valuable and it has contributed to your research or projects, we kindly request that you cite our paper. Your recognition is a driving force for our continuous improvement and innovation🤗.
+```
+@misc{jiang2025hibenchbenchmarkingllmscapability,
+      title={HiBench: Benchmarking LLMs Capability on Hierarchical Structure Reasoning}, 
+      author={Zhuohang Jiang and Pangjing Wu and Ziran Liang and Peter Q. Chen and Xu Yuan and Ye Jia and Jiancheng Tu and Chen Li and Peter H. F. Ng and Qing Li},
+      year={2025},
+      eprint={2503.00912},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2503.00912}, 
+}
+```
 
 ## Star History
 
