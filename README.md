@@ -586,3 +586,5 @@ If you find our work valuable and it has contributed to your research or project
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=jzzzzh/HiBench&type=Date)](https://star-history.com/#jzzzzh/HiBench&Date)
+
+<a href="https://info.flagcounter.com/HxyP"><img src="https://s01.flagcounter.com/count2/HxyP/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
