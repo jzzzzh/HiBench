@@ -1,7 +1,7 @@
-# 👋HiBench: Challenging LLMs Capability on Hierarchical Structure Understanding
+# 👋HiBench: Benchmarking LLMs Capability on Hierarchical Structure Reasoning
 <div align="center">
 Zhuohang Jiang†, Pangjing Wu†, Ziran Liang†, Xu Yuan†, Qi Chen†,
-Ye Jia†, Jiancheng Tu†，Chen Li，Peter H.F. Ng，Wenqi Fan，Qing Li*
+Ye Jia†, Jiancheng Tu†，Chen Li，Peter H.F. Ng，Qing Li*
 
 </div>  
 <div align="center"><span style="font-size: smaller;">
@@ -37,27 +37,28 @@ Ye Jia†, Jiancheng Tu†，Chen Li，Peter H.F. Ng，Wenqi Fan，Qing Li*
 ## Overview
 **Welcome to 👋HiBench, the First Comprehensive Hierarchical Structure Understanding Benchmark of LLMs.**
 - To our best knowledge, it is the **first benchmark** specifically designed to evaluate the hierarchical reasoning abilities of LLMs, encompassing tasks of varying scales and complexities for comprehensive evaluation.
-- We evaluate **15 LLMs** and reveal that even the most advanced LLMs struggle with performance, offering new insights into hierarchical reasoning.
-- We propose a synthetic hierarchical dataset for task-specific fine-tuning, which enhanced LLM's ability on hierarchical reasoning, surpassing **GPT4** by **0.35\%** throughout all tasks.
+- We evaluate **20 LLMs** and reveal that even the most advanced LLMs struggle with performance, offering new insights into hierarchical reasoning.
+- We propose a synthetic hierarchical dataset for task-specific fine-tuning, which enhanced LLM's ability on hierarchical reasoning, surpassing **GPT4** by **6.53\%** throughout all tasks.
 - Cite and star if you feel helpful. This will encourage us a lot 🥰.
 
 <div align="center">
-    <img src="Images/Hibench-outline.png" alt="Hibench Outline" />
+    <img src="Images/codebase.jpg" alt="Hibench Outline" />
     <p style="font-size: 1.2em;"><strong>Figure 1: </strong>Overview of the paradigm for HiBench.</p>
 </div>
 
 ## Task Definition
 HiBench includes a range of tasks from basic to advanced levels, specifically comprising 7 fundamental hierarchical understanding tasks at the Fundamental level, 5 JSON structure understanding tasks, and 3 formula structure understanding tasks at the Intermedia level; 2 code structure understanding tasks and 3 scientific paper understanding tasks at the Advanced level, totaling **20** tasks covering **15,852** problems.
-
-<div align="center">
-    <img src="Images/Tasks.png" alt="Task" width="43.6%" />
-    <img src="Images/radar_chart.png" alt="Radar chat" width="54%" />
-</div>
-<div style = "display: flex">
-<div align="center" style="width: 43%;" >
+<img src="Images/task.jpg" alt="Task" width="100%" />
+<div align="center" style="width: 100%;" >
     <p style="font-size: 1.2em;"><strong>Figure 2: </strong>Task definition in Hibench. Hibench contains 3 levels of evaluation, 5 types of tasks, and 20 subtasks.</p>
 </div>
-<div align="center" style="width: 54%; ">
+<div align="center">
+    <img src="Images/radar.jpg" alt="Radar chat" width="54%" />
+</div>
+    
+<div style = "display: flex">
+
+<div align="center" style="width: 100%; ">
     <p style="font-size: 1.2em;"><strong>Figure 3: </strong>Performance comparison of the best models from different families on multiple hierarchical tasks.</p>
 </div>
 </div>
@@ -68,7 +69,7 @@ This repository has completed evaluating Qwen Family, Llama Family, GPT Family a
 
 However, more LLMs are currently being evaluated for improved our experiment.Moreover, we will increase more Benchmark Dataset to evaluating LLMs ability of Hierarchical understanding. Updates will be rolled out frequently. 
 
-- [ ] Tested on HiBench for Phi[![LLM](https://img.shields.io/badge/Model-Phi-0854C1?logo=)](https://huggingface.co/microsoft/Phi-3.5-mini-instruct) , InternLM
+- [x] Tested on HiBench for Phi[![LLM](https://img.shields.io/badge/Model-Phi-0854C1?logo=)](https://huggingface.co/microsoft/Phi-3.5-mini-instruct) , InternLM
 [![LLM](https://img.shields.io/badge/Model-InternLM-002B56?logo=)](https://huggingface.co/internlm) , Yi 
 [![LLM](https://img.shields.io/badge/Model-Yi-006600?logo=)](https://huggingface.co/01-ai) 
 ,baichuan
@@ -90,15 +91,15 @@ python ./launch.py
 
 ## Result
 <div align="center">
-    <img src="Images/task_1_ScallingLaw-1.png" alt="Performance of different LLMs in Fundamental Task" />
-    <p style="font-size: 1.2em;"><strong>Figure 4: </strong>LLM Performance over Fundamental Tasks in HiBench.</p>
+    <img src="Images/mainresult.jpg" alt="Performance of different LLMs in HiBench" />
+    <p style="font-size: 1.2em;"><strong>Figure 4: </strong>Performance of different LLMs in HiBench.</p>
 </div>
 
 
 <br>
 
 
-<div align="center">
+<!-- <div align="center">
 <p style="font-size: 1.2em;"><strong>Table 1: </strong>LLM Performance over Fundamental Tasks in HiBench.</p>
 
 <table class="tg"><thead>
@@ -553,7 +554,7 @@ python ./launch.py
   </tr>
 </tbody></table>
 </div>
-<!-- ## Quick Start -->
+## Quick Start -->
 
 
 ## About
@@ -570,7 +571,20 @@ We sincerely appreciate [Prof. Hongxia Yang](https://scholar.google.com/citation
 
 ## Citation
 If you find our work valuable and it has contributed to your research or projects, we kindly request that you cite our paper. Your recognition is a driving force for our continuous improvement and innovation🤗.
+```
+@misc{jiang2025hibenchbenchmarkingllmscapability,
+      title={HiBench: Benchmarking LLMs Capability on Hierarchical Structure Reasoning}, 
+      author={Zhuohang Jiang and Pangjing Wu and Ziran Liang and Peter Q. Chen and Xu Yuan and Ye Jia and Jiancheng Tu and Chen Li and Peter H. F. Ng and Qing Li},
+      year={2025},
+      eprint={2503.00912},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2503.00912}, 
+}
+```
 
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=jzzzzh/HiBench&type=Date)](https://star-history.com/#jzzzzh/HiBench&Date)
+<div align="center">
+<a href="https://info.flagcounter.com/HxyP"><img src="https://s01.flagcounter.com/count2/HxyP/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0"></a></div>
