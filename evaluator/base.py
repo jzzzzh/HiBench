@@ -61,7 +61,7 @@ class BasicEvaluator(object):
         else:
             return False
         
-    # def string_match(self, source: str, target: str) -> bool:
+    # def bool_match(self, source: str, target: str) -> bool:
     #     source = source.lower()
     #     target = target.lower()
     #     source = self._extract_answer(source)

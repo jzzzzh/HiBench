@@ -50,7 +50,7 @@ def calculate_accuracy(result_path, task, subtask):
         
         
 if __name__ == '__main__':
-    finetune_result_path = 'finetune-results'
+    finetune_result_path = './finetune-results/qwen_0221'
     with open('./config/config.yaml', 'r') as file:
         configs = yaml.safe_load(file)
     for task in configs['Dataset']:

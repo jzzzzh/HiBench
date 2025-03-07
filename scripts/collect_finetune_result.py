@@ -37,5 +37,5 @@ def collect(result_dir):
         
 
 if __name__ == '__main__':
-    result_directory = "./finetune-results"
+    result_directory = "./finetune-results/qwen_0221"
     collect(result_directory)

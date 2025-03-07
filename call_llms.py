@@ -69,8 +69,8 @@ class LLMModel:
                 low_cpu_mem_usage=True,
                 trust_remote_code=True
             ).to(self.device).eval()
-            # self.gen_kwargs = {"max_length": 3000, "do_sample": True, "top_k": 1}
-            self.gen_kwargs = {"max_new_tokens": 256, "do_sample": True, "top_k": 1}
+        # self.gen_kwargs = {"max_length": 3000, "do_sample": True, "top_k": 1}
+        self.gen_kwargs = {"max_new_tokens": 256, "do_sample": True, "top_k": 1}
     
     def get_response_fireworks(self, system_prompt, question):
         fireworks_model_id = self.transfer_to_fireworks(self.model_id)
@@ -81,12 +81,12 @@ class LLMModel:
             payload = {
                 "model": f"accounts/fireworks/models/{fireworks_model_id}",
                 # "model": f"accounts/fireworks/models/llama-v3p1-8b-instruct",
-                "max_tokens": 4096,
+                "max_tokens": self.gen_kwargs["max_new_tokens"],
                 "top_p": 1,
                 "top_k": 40,
                 "presence_penalty": 0,
                 "frequency_penalty": 0,
-                "temperature": 0.6,
+                "temperature": 0.0,
                 "messages": [
                     {
                         "role": "system",
@@ -142,8 +142,8 @@ class LLMModel:
                             {"role": "system", "content": system_setting},
                             {"role": "user", "content": prompt},
                         ],
-            max_tokens=4096,  
-            temperature=0.7,  
+            max_tokens=self.gen_kwargs["max_new_tokens"],  
+            temperature=0.0,  
             top_p=0.95,  
             frequency_penalty=0,  
             presence_penalty=0,
@@ -184,17 +184,17 @@ class LLMModel:
         if company_name == "meta-llama":
             outputs = self.pipeline(
                 messages,
-                max_new_tokens=256,
+                max_new_tokens=self.gen_kwargs["max_new_tokens"],
                 eos_token_id=self.terminators,
                 do_sample=True,
-                temperature=0.6,
+                temperature=0.0,
                 top_p=0.9,
                 pad_token_id = self.pipeline.tokenizer.eos_token_id
             )
         else:
             outputs = self.pipeline(
             messages,
-            max_new_tokens=256,
+            max_new_tokens=self.gen_kwargs["max_new_tokens"],
             )
         return outputs[0]["generated_text"][-1]["content"]
 
