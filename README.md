@@ -78,6 +78,7 @@ However, more LLMs are currently being evaluated for improved our experiment.Mor
 - [x] Check all datasets and add binary datasets
 
 ## Quick Start
+Huggingface dir: https://huggingface.co/datasets/zhuohang/HiBench
 ### Install HiBench
 ```
 conda create -n HiBench python=3.11
