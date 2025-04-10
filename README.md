@@ -35,7 +35,7 @@ Ye Jia†, Jiancheng Tu†，Chen Li，Peter H.F. Ng，Qing Li*
 </div>
 
 ## News
-- **[2025-04-06]** We are excited to announce that the HiBench dataset is now available on 🤗[Hugging Face](https://huggingface.co/datasets/zhuohang/HiBench)! 🎉 Explore and use it to benchmark your models' hierarchical reasoning capabilities. 🚀
+- **[2025-04-06]** We are excited to announce that the HiBench dataset is now available on 🤗 [Hugging Face](https://huggingface.co/datasets/zhuohang/HiBench)! 🎉 Explore and use it to benchmark your models' hierarchical reasoning capabilities. 🚀
 - **[2025-03-02]** We are thrilled to announce that our paper *HiBench: Benchmarking LLMs Capability on Hierarchical Structure Reasoning* is now available on [arXiv](https://arxiv.org/abs/2503.00912)! 📄 Dive into the details of our benchmark and findings. 🌟
 
 
