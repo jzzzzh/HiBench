@@ -34,6 +34,11 @@ Ye Jia†, Jiancheng Tu†，Chen Li，Peter H.F. Ng，Qing Li*
 
 </div>
 
+## News
+- **[2025-04-06]** We are excited to announce that the HiBench dataset is now available on [Hugging Face](https://huggingface.co/datasets/zhuohang/HiBench)! 🎉 Explore and use it to benchmark your models' hierarchical reasoning capabilities. 🚀
+- **[2025-03-02]** We are thrilled to announce that our paper *HiBench: Benchmarking LLMs Capability on Hierarchical Structure Reasoning* is now available on [arXiv](https://arxiv.org/abs/2503.00912)! 📄 Dive into the details of our benchmark and findings. 🌟
+
+
 ## Overview
 **Welcome to 👋HiBench, the First Comprehensive Hierarchical Structure Understanding Benchmark of LLMs.**
 - To our best knowledge, it is the **first benchmark** specifically designed to evaluate the hierarchical reasoning abilities of LLMs, encompassing tasks of varying scales and complexities for comprehensive evaluation.
@@ -78,7 +83,6 @@ However, more LLMs are currently being evaluated for improved our experiment.Mor
 - [x] Check all datasets and add binary datasets
 
 ## Quick Start
-Huggingface dir: https://huggingface.co/datasets/zhuohang/HiBench
 ### Install HiBench
 ```
 conda create -n HiBench python=3.11
