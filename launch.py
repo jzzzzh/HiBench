@@ -289,8 +289,6 @@ class ArgumentGenerator:
         if 'Fundamental' in Task_list:
             EvalList += self.generate_fundamental_eval(ExampleType=ExampleType)
             logger.info(f"Fundamental task number: {len(EvalList)-tmp}")
-            logger.info(f"Normal task number: {len([Eval for Eval in EvalList if Eval['TreeType'] == 'Normal'])}")
-            logger.info(f"Binary task number: {len([Eval for Eval in EvalList if Eval['TreeType'] == 'Binary'])}")
             tmp = len(EvalList)
         if 'Code' in Task_list:
             EvalList += self.generate_code_eval(ExampleType=ExampleType)
@@ -310,7 +308,6 @@ class ArgumentGenerator:
             tmp = len(EvalList)
         logger.info(f"Total task number: {len(EvalList)}")
         num_count = {}
-        all_count = 0
         for Eval in tqdm(EvalList):
                 Hibenchdataloader = HibenchDataLoader(Eval)
                 data = Hibenchdataloader.load_data()
@@ -322,27 +319,23 @@ class ArgumentGenerator:
                 if Task_name not in num_count:
                     num_count[Task_name] = 0
                 num_count[Task_name] += len(data)
-                all_count += len(data)
-        print(f"Total question number: {all_count}")
         for key in num_count:
             print(f"{key}: {num_count[key]}")
         return None
 
 def main():
     argument_generator = ArgumentGenerator()
-    EvalList = argument_generator.generate_all_eval(Task_list = ['Code', 'JSON', 'Formula', 'Paper'], ExampleType='FewShot')
-    EvalList += argument_generator.generate_all_eval(Task_list = ['Code', 'JSON', 'Formula', 'Paper'], ExampleType='OneShot')
-    # EvalList = argument_generator.generate_all_eval(Task_list = ['Paper'], ExampleType='ZeroShot')
+    EvalList = argument_generator.generate_all_eval(Task_list = ['Code', 'JSON', 'Formula'], ExampleType='ZeroShot')
     num_samples = 13
     min_question_num = 7
     need_sample_list = ['Formula']
     # model_list = ["meta-llama/Meta-Llama-3.1-8B-Instruct"] # ["Qwen/Qwen2.5-0.5B-Instruct"] #, "meta-llama/Meta-Llama-3.1-8B-Instruct"]
     # model_list = ["meta-llama/Meta-Llama-3.1-8B-Instruct", "meta-llama/Llama-3.2-1B-Instruct","meta-llama/Llama-3.2-3B-Instruct", "Qwen/Qwen2.5-0.5B-Instruct", "Qwen/Qwen2.5-1.5B-Instruct", "Qwen/Qwen2.5-3B-Instruct", "Qwen/Qwen2.5-7B-Instruct"]
-    # model_list = ["Qwen/Qwen2.5-7B-Instruct"]# , "Qwen/Qwen2.5-0.5B-Instruct", "Qwen/Qwen2.5-1.5B-Instruct", "Qwen/Qwen2.5-3B-Instruct", "Qwen/Qwen2.5-7B-Instruct"]
+    model_list = ["Qwen/Qwen2.5-7B-Instruct"]# , "Qwen/Qwen2.5-0.5B-Instruct", "Qwen/Qwen2.5-1.5B-Instruct", "Qwen/Qwen2.5-3B-Instruct", "Qwen/Qwen2.5-7B-Instruct"]
     # model_list = ["meta-llama/Meta-Llama-3.1-8B-Instruct", "meta-llama/Llama-3.2-1B-Instruct","meta-llama/Llama-3.2-3B-Instruct"]
     # model_list = ["deepseek/deepseek-v3"]
     # model_list = ["Qwen/Qwen2.5-7B-Instruct"]# , "Qwen/Qwen2.5-0.5B-Instruct", "Qwen/Qwen2.5-1.5B-Instruct", "Qwen/Qwen2.5-3B-Instruct", "Qwen/Qwen2.5-7B-Instruct"]
-    model_list = ["Qwen/Qwen2.5-0.5B-Instruct"]
+    # model_list = ["THUDM/glm-4-9b-chat"]
     # model_list = ["meta-llama/Meta-Llama-3.1-8B-Instruct", "meta-llama/Llama-3.2-1B-Instruct","meta-llama/Llama-3.2-3B-Instruct", "THUDM/glm-4-9b-chat", "01-ai/Yi-1.5-9B-Chat"]
     # model_list = ['internlm/internlm2_5-7b-chat'] # 'microsoft/Phi-3.5-mini-instruct'] # ["baichuan-inc/Baichuan-7B"]
     DUPLICATE_CHECK = True
@@ -407,8 +400,8 @@ def Logo():
 
 if __name__ == '__main__':
     Logo()
-    # main()
-    argument_generator = ArgumentGenerator()
-    EvalList = argument_generator.generate_all_eval(Task_list = ['Fundamental', 'Code', 'JSON', 'Formula', 'Paper'], ExampleType='ALL')
-    # argument_generator.gen_eval_prompt_file(EvalList, file_dir="./all_eval_prompt/")
-    argument_generator.cal_each_task_num()
+    main()
+    # argument_generator = ArgumentGenerator()
+    # EvalList = argument_generator.generate_all_eval(Task_list = ['Fundamental', 'Code', 'JSON', 'Formula', 'Paper'], ExampleType='ZeroShot')
+    # argument_generator.gen_eval_prompt_file(EvalList, file_dir="./eval_prompt/")
+    # argument_generator.cal_each_task_num(Task_list=["Formula"], ExampleType="ZeroShot")

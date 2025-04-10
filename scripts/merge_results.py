@@ -19,6 +19,6 @@ def merge_folders(src, dst):
                 print(f"file exist: {dst_file}")
 
 dst = "./Results" 
-src = "./temp/Results-llama70b405b-qwen72b"
+src = "./Results-new"
 
 merge_folders(src, dst)

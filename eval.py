@@ -66,7 +66,8 @@ if __name__ == '__main__':
         for subtask in subtasks:
             print(f'{subtask = }')
             try:
-                calculate_accuracy(configs['Eval']['SaveDir'], task, subtask)
+                calculate_accuracy('cot-results', task, subtask)
+                # calculate_accuracy(configs['Eval']['SaveDir'], task, subtask)
             except AttributeError as e:
                 print(f'subtask name error: {task} {subtask}')
                 print(e)

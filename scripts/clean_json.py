@@ -528,9 +528,9 @@ if __name__ == "__main__":
         ]
     )
     
-    corrected_QA_dataset_path = "/Users/youngj/Local/Project/HiBench/dataset/JSON/QA/level_count"
-    results_base_path = "/Users/youngj/Downloads/Results_4/JSON/level_count"
-    output_base_path = "/Users/youngj/Downloads/Results_4/JSON/updated_level_count"
+    corrected_QA_dataset_path = "./dataset/JSON/QA/level_count"
+    results_base_path = "./Results/JSON/level_count"
+    output_base_path = "./Results/JSON/level_count_new"
     
     # Add debug call before processing
     #debug_question_matching(corrected_QA_dataset_path, results_base_path)
