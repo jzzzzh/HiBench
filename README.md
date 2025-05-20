@@ -1,6 +1,6 @@
 # \[KDD'25\]👋HiBench: Benchmarking LLMs Capability on Hierarchical Structure Reasoning
 <div align="center">
-Zhuohang Jiang†, Pangjing Wu†, Ziran Liang†, Xu Yuan†, Qi Chen†,
+Zhuohang Jiang†, Pangjing Wu†, Ziran Liang†,  Qi Chen†, Xu Yuan†,
 Ye Jia†, Jiancheng Tu†，Chen Li，Peter H.F. Ng，Qing Li*
 
 </div>  
